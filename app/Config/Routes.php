@@ -17,9 +17,9 @@ $routes->group('admin', function ($routes) {
 });
 
 // Rutas para el controlador Maestros
-$routes->get('/index', 'Maestros::index');
-$routes->get('/maestros/create', 'Maestros::create');
-$routes->post('/maestros/store', 'Maestros::store');
+$routes->get('prueba', 'Maestros::index');
+$routes->get('create', 'Maestros::create');
+$routes->post('/store', 'Maestros::store');
 $routes->get('/maestros/edit/(:num)', 'Maestros::edit/$1');
 $routes->post('/maestros/update/(:num)', 'Maestros::update/$1');
 $routes->get('/maestros/delete/(:num)', 'Maestros::delete/$1');

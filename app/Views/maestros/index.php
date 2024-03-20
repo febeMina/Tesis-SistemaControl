@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <div class="container-fluid">
     <h1 class="mt-4">Maestros</h1>
-    <a href="/maestros/create" class="btn btn-primary mb-4">Agregar Maestro</a>
+    <a href="<?= site_url('create') ?>" class="btn btn-primary mb-4">Agregar Maestro</a>
     <div class="card mb-4">
         <div class="card-body">
             <div class="table-responsive">
@@ -29,8 +29,8 @@
                                 <td><?= $maestro['fecha_ingreso'] ?></td>
                                 <td><?= $maestro['estado'] ?></td>
                                 <td>
-                                    <a href="/maestros/edit/<?= $maestro['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
-                                    <a href="/maestros/delete/<?= $maestro['id'] ?>" class="btn btn-sm btn-danger">Eliminar</a>
+                                    <a href="edit/<?= $maestro['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
+                                    <a href="delete/<?= $maestro['id'] ?>" class="btn btn-sm btn-danger">Eliminar</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

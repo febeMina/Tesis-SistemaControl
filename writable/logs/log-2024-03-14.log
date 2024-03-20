@@ -1,0 +1,1343 @@
+ERROR - 2024-03-14 15:16:55 --> mysqli_sql_exception: Unknown column 'nombre_completo' in 'field list' in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(24): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#9 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#10 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-14 15:16:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nombre_completo' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Maestros.php(24): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:16:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nombre_completo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Maestros.php(24): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:16:56 --> [Caused by] mysqli_sql_exception: Unknown column 'nombre_completo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Maestros.php(24): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:49:11 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:49:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:49:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:49:11 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:56:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('create', [], true)
+ 3 APPPATH\Controllers\Maestros.php(23): view('create')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:56:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('create', [], true)
+ 3 APPPATH\Controllers\Maestros.php(23): view('create')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('create', [], true)
+ 3 APPPATH\Controllers\Maestros.php(23): view('create')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:57:05 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->index()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:57:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 2 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 4 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:05 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `docente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 5 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:57:07 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->index()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:57:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 2 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 4 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:07 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `docente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 5 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:57:19 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->index()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:57:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 2 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 4 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:19 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `docente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 5 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:57:24 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->index()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:57:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 2 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 4 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:24 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `docente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `docente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `docente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `docente`', [], false)
+ 5 APPPATH\Controllers\Maestros.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:57:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('create', [], true)
+ 3 APPPATH\Controllers\Maestros.php(23): view('create')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:58:11 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:58:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:58:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:58:11 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:58:34 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:58:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:58:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:58:34 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 15:59:07 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 15:59:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:59:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 15:59:07 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:24:27 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:24:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:24:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:24:27 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:24:35 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:24:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:24:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:24:35 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:25:24 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:25:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:25:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:25:24 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:30:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('create', [], true)
+ 3 APPPATH\Controllers\Maestros.php(23): view('create')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:30:36 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:30:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:30:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:30:36 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:32:14 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:32:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:32:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:32:14 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:33:54 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:33:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:33:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:33:54 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:35:17 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:35:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:35:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:35:17 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:41:15 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:41:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:41:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:41:15 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:46:37 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:46:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:46:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:46:37 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:47:00 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:47:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:47:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:47:00 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:50:21 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:50:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:50:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:50:21 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 16:54:32 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 16:54:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:54:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 16:54:32 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 17:30:40 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 17:30:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 17:30:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 17:30:40 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 17:42:51 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 17:42:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 17:42:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 17:42:51 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 17:47:11 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 17:47:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 17:47:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 17:47:11 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-14 20:09:35 --> mysqli_sql_exception: Table 'prueba.docente' doesn't exist in C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\sistema_control\app\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Maestros->store()
+#6 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#7 C:\laragon\www\prueba\sistema_control\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\sistema_control\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-14 20:09:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:09:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:09:35 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:12:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:21:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:22:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:23:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:24:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:27:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:27:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:28:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:28:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('create', [], true)
+ 3 APPPATH\Controllers\Maestros.php(24): view('create')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:29:18 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\maestros\index.php on line 25.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 4 APPPATH\Controllers\Maestros.php(17): view('maestros/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:35:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:35:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:36:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:37:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:40:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:40:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:40:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 20:42:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('create', [], true)
+ 3 APPPATH\Controllers\Maestros.php(24): view('create')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 21:33:55 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\maestros\create.php(89): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 21:36:51 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\maestros\create.php(89): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 21:36:58 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\maestros\create.php(89): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 21:36:59 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\maestros\create.php(89): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 21:37:09 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\maestros\create.php(89): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-14 21:37:34 --> RuntimeException: View themes, no current section.
+in SYSTEMPATH\View\View.php on line 425.
+ 1 APPPATH\Views\maestros\create.php(89): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
