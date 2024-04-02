@@ -1,0 +1,20 @@
+CRITICAL - 2024-04-02 02:53:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../layouts/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../layouts/default.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('../layouts/default', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 4 APPPATH\Controllers\Maestros.php(24): view('maestros/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-02 02:53:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../layouts/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../layouts/default.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('../layouts/default', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 4 APPPATH\Controllers\Maestros.php(24): view('maestros/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

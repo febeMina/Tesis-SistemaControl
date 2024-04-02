@@ -1,0 +1,51 @@
+CRITICAL - 2024-04-01 03:59:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../layouts/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../layouts/default.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('../layouts/default', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 4 APPPATH\Controllers\Maestros.php(17): view('maestros/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 04:00:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../layouts/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../layouts/default.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('../layouts/default', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 4 APPPATH\Controllers\Maestros.php(17): view('maestros/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 04:00:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../layouts/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../layouts/default.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('../layouts/default', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 4 APPPATH\Controllers\Maestros.php(23): view('maestros/create')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 04:01:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../../layouts/default.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../../layouts/default.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('../../layouts/default', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 4 APPPATH\Controllers\Maestros.php(23): view('maestros/create')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-01 05:30:43 --> ErrorException: Undefined variable $maestros
+in APPPATH\Views\padres\index.php on line 39.
+ 1 APPPATH\Views\padres\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\padres\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(17): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -46,32 +46,19 @@
                 <div class="row w-100 mx-0 custom-container">
                     <div class="col-lg-4 mx-auto custom-form">
                         <h2 class="custom-title">CENTRO ESCOLAR BARRIO LAS DELICIAS</h2>
-                        <div class="brand-logo">
-                            
-                        </div>
-                        <h4>Hello! let's get started</h4>
-                        <h6 class="font-weight-light">Sign in to continue.</h6>
-                        <form class="pt-3">
+                        <div class="brand-logo"></div>
+                        <h6 class="font-weight-light">Inicia sesión para continuar.</h6>
+                        <form action="<?= base_url() . route_to('login') ?>" method="post" class="pt-3">
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                                <label for="exampleInputEmail1">Correo electrónico</label>
+                                <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1" placeholder="Correo electrónico">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                                <label for="exampleInputPassword1">Contraseña</label>
+                                <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Contraseña">
                             </div>
                             <div class="mt-3">
-                                <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" href="#">SIGN IN</a>
-                            </div>
-                            <div class="my-2 d-flex justify-content-between align-items-center">
-                                <div class="form-check">
-                                    <label class="form-check-label text-muted">
-                                        <input type="checkbox" class="form-check-input">
-                                        Keep me signed in
-                                    </label>
-                                </div>
-                                <a href="#" class="auth-link text-black">Forgot password?</a>
-                            </div>
-                            <div class="text-center mt-4 font-weight-light">
-                                Don't have an account? <a href="register.html" class="text-primary">Create</a>
+                                <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">INICIAR SESIÓN</button>
                             </div>
                         </form>
                     </div>
@@ -79,5 +66,18 @@
             </div>
         </div>
     </div>
+    <!-- jquery latest version -->
+    <script src="../public/js/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="../public/js/popper.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/owl.carousel.min.js"></script>
+    <script src="../public/js/metisMenu.min.js"></script>
+    <script src="../public/js/jquery.slimscroll.min.js"></script>
+    <script src="../public/js/jquery.slicknav.min.js"></script>
+
+    <!-- others plugins -->
+    <script src="../public/js/plugins.js"></script>
+    <script src="../public/js/scripts.js"></script>
 </body>
 </html>

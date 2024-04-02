@@ -1,0 +1,72 @@
+CRITICAL - 2024-03-29 16:23:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-29 16:23:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-29 16:26:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-29 16:26:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-29 16:28:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-29 16:36:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-29 16:36:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-29 16:38:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

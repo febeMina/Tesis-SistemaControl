@@ -1,0 +1,99 @@
+CRITICAL - 2024-03-31 04:16:52 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\configuracionC/MenuController::index"
+in SYSTEMPATH\Router\Router.php on line 479.
+ 1 SYSTEMPATH\Router\Router.php(479): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\configuracionC/MenuController::index')
+ 2 SYSTEMPATH\Router\Router.php(186): CodeIgniter\Router\Router->checkRoutes('menus')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('menus')
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 04:17:17 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\configuracionC/RolController::index"
+in SYSTEMPATH\Router\Router.php on line 479.
+ 1 SYSTEMPATH\Router\Router.php(479): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\configuracionC/RolController::index')
+ 2 SYSTEMPATH\Router\Router.php(186): CodeIgniter\Router\Router->checkRoutes('roles')
+ 3 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('roles')
+ 4 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 04:54:28 --> ErrorException: Undefined variable $maestros
+in APPPATH\Views\maestros\create.php on line 80.
+ 1 APPPATH\Views\maestros\create.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 04:54:31 --> ErrorException: Undefined variable $maestros
+in APPPATH\Views\maestros\create.php on line 80.
+ 1 APPPATH\Views\maestros\create.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 04:58:52 --> ErrorException: Undefined variable $maestros
+in APPPATH\Views\maestros\create.php on line 80.
+ 1 APPPATH\Views\maestros\create.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 05:01:03 --> ErrorException: Undefined variable $maestros
+in APPPATH\Views\maestros\create.php on line 80.
+ 1 APPPATH\Views\maestros\create.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 05:01:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 05:01:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 05:22:36 --> ErrorException: Undefined variable $maestros
+in APPPATH\Views\maestros\create.php on line 80.
+ 1 APPPATH\Views\maestros\create.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\maestros\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
+ 5 APPPATH\Controllers\Maestros.php(24): view('maestros/create')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-31 05:37:39 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\maestros\index.php on line 33.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 4 APPPATH\Controllers\Maestros.php(17): view('maestros/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

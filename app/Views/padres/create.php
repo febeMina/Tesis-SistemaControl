@@ -3,28 +3,28 @@
 <?= $this->section('content') ?>
 <div class="container">
     <div class="d-flex justify-content-between mb-3">
-        <h1 class="mt-4">Agregar Nuevo Maestro</h1>
-        <button href="<?= site_url('/') ?>" class="btn btn-primary">Volver</button>
+        <h1 class="mt-4">Agregar Nuevo Padre</h1>
+        <a href="<?= site_url('/') ?>" class="btn btn-primary">Volver</a>
     </div>
     <div class="card mb-4">
         <div class="card-body">
-            <!-- Formulario para agregar un nuevo maestro -->
-            <form action="<?= site_url('store') ?>" method="post">
+            <!-- Formulario para agregar un nuevo padre -->
+            <form action="<?= site_url('padres/store') ?>" method="post">
                 <div class="form-group">
                     <label for="nombre_completo">Nombre Completo</label>
                     <input type="text" class="form-control form-control-md" id="nombre_completo" name="nombre_completo" required>
                 </div>
                 <div class="form-group">
-                    <label for="nip">NIP</label>
-                    <input type="text" class="form-control form-control-md" id="nip" name="nip" required>
+                    <label for="sexo">Sexo</label>
+                    <input type="text" class="form-control form-control-md" id="sexo" name="sexo" required>
                 </div>
                 <div class="form-group">
-                    <label for="escalafon">Escalafón</label>
-                    <input type="text" class="form-control form-control-md" id="escalafon" name="escalafon" required>
+                    <label for="dui">DUI</label>
+                    <input type="text" class="form-control form-control-md" id="dui" name="dui" required>
                 </div>
                 <div class="form-group">
-                    <label for="fecha_ingreso">Fecha de Ingreso</label>
-                    <input type="date" class="form-control form-control-md" id="fecha_ingreso" name="fecha_ingreso" required>
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" class="form-control form-control-md" id="telefono" name="telefono" required>
                 </div>
                 <div class="form-group">
                     <label for="estado">Estado</label>
@@ -33,8 +33,12 @@
                         <option value="Inactivo">Inactivo</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="idAlumno">ID del Alumno</label>
+                    <input type="number" class="form-control form-control-md" id="idAlumno" name="idAlumno" required>
+                </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Agregar Maestro</button>
+                    <button type="submit" class="btn btn-primary">Agregar Padre</button>
                 </div>
             </form>
         </div>
@@ -52,7 +56,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                El maestro ha sido creado exitosamente.
+                El padre ha sido creado exitosamente.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -73,7 +77,7 @@
             // Evitar que el formulario se envíe automáticamente
             event.preventDefault();
 
-            // Enviar la solicitud AJAX para guardar el maestro
+            // Enviar la solicitud AJAX para guardar el padre
             $.ajax({
                 url: $(this).attr('action'),
                 method: 'POST',
