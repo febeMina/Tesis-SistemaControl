@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public $baseURL = 'http://localhost/prueba/sistema_control/public/';
+    public $baseURL = 'http://localhost/tesis/SistemaControl/public/';
 
 
     /**

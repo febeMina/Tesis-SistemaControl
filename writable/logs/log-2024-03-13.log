@@ -1,7 +1,7 @@
 CRITICAL - 2024-03-13 22:56:50 --> ErrorException: Undefined variable $maestros
 in APPPATH\Views\maestros\create.php on line 23.
- 1 APPPATH\Views\maestros\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php', 23)
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 1 APPPATH\Views\maestros\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\tesis\\SistemaControl\\app\\Views\\maestros\\create.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\tesis\\SistemaControl\\app\\Views\\maestros\\create.php')
  3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
  5 APPPATH\Controllers\Maestros.php(18): view('maestros/create')
@@ -11,8 +11,8 @@ in APPPATH\Views\maestros\create.php on line 23.
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-13 22:56:54 --> ErrorException: Undefined variable $maestros
 in APPPATH\Views\maestros\create.php on line 23.
- 1 APPPATH\Views\maestros\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php', 23)
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\sistema_control\\app\\Views\\maestros\\create.php')
+ 1 APPPATH\Views\maestros\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\tesis\\SistemaControl\\app\\Views\\maestros\\create.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\tesis\\SistemaControl\\app\\Views\\maestros\\create.php')
  3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/create', [], true)
  5 APPPATH\Controllers\Maestros.php(18): view('maestros/create')

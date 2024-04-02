@@ -40,8 +40,8 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-04-01 05:30:43 --> ErrorException: Undefined variable $maestros
 in APPPATH\Views\padres\index.php on line 39.
- 1 APPPATH\Views\padres\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\padres\\index.php', 39)
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\prueba_proyecto\\app\\Views\\padres\\index.php')
+ 1 APPPATH\Views\padres\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\tesis\\SistemaControl\\app\\Views\\padres\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\tesis\\SistemaControl\\app\\Views\\padres\\index.php')
  3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
  5 APPPATH\Controllers\Padres.php(17): view('padres/index', [...])
