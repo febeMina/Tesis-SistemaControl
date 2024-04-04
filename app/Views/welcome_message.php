@@ -25,8 +25,8 @@
   <body>
     <div class="container-scroller">
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #090066 !important;">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: #090066 !important;">
           <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
@@ -105,7 +105,7 @@
               <li class="nav-item"><a href="#" class="nav-link">Roles</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Accesos</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Alumnos</a></li>
-              <li class="nav-item"><a href="/tesis/o/public/create" class="nav-link">Docentes</a></li>
+              <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Docentes</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Tipos de Licencias</a></li>
               </ul>
             </div>
@@ -155,7 +155,7 @@
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
-        <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: #1202B4 !important;">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
             <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
           </div>
@@ -166,7 +166,7 @@
             <ul class="navbar-nav w-100">
               <li class="nav-item w-100">
                 <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-                  <input type="text" class="form-control" placeholder="Search goal">
+                  <input type="text" class="form-control" style="background-color: #f0f0f0 !important;" placeholder="Search goal">
                 </form>
               </li>
             </ul>
@@ -215,7 +215,7 @@
         </nav>
                 <!-- partial -->
                 <div class="main-panel">
-          <div class="content-wrapper">
+          <div class="content-wrapper" style="background-color: #f0f0f0 !important;">
             <div class="row">
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
@@ -237,7 +237,7 @@
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
-          <footer class="footer">
+          <footer class="footer" style="background-color: #f0f0f0 !important;">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
               <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © UCAD 2024</span>
             </div>

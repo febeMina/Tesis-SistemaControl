@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public $baseURL = 'http://localhost/tesis/SistemaControl/public/';
+    public $baseURL = 'http://localhost/prueba/SistemaControl/';
 
 
     /**
@@ -41,7 +41,7 @@ class App extends BaseConfig
      * something else. If you are using mod_rewrite to remove the page set this
      * variable so that it is blank.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = 'public';
 
     /**
      * --------------------------------------------------------------------------

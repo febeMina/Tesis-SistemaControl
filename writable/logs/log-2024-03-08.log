@@ -1,7 +1,7 @@
 CRITICAL - 2024-03-08 01:21:55 --> RuntimeException: View themes, no current section.
 in SYSTEMPATH\View\View.php on line 425.
  1 APPPATH\Views\maestros\index.php(53): CodeIgniter\View\View->endSection()
- 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\tesis\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
  3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
  5 APPPATH\Controllers\Maestros.php(13): view('maestros/index', [...])

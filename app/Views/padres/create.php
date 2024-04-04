@@ -1,119 +1,75 @@
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
-<div class="container">
-    <div class="d-flex justify-content-between mb-3">
-        <h1 class="mt-4">Agregar Nuevo Padre</h1>
-        <a href="<?= site_url('/') ?>" class="btn btn-primary">Volver</a>
-    </div>
-    <div class="card mb-4">
-        <div class="card-body">
-            <!-- Formulario para agregar un nuevo padre -->
-            <form action="<?= site_url('padres/store') ?>" method="post">
-                <div class="form-group">
-                    <label for="nombre_completo">Nombre Completo</label>
-                    <input type="text" class="form-control form-control-md" id="nombre_completo" name="nombre_completo" required>
+    <!-- Contenido de la página -->
+    <div class="container-scroller">
+        <!-- Partial para la barra lateral y la barra de navegación -->
+        <!-- Aquí va el código para la barra lateral y la barra de navegación -->
+        
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <!-- Aquí va el código para el contenido de la página -->
+                    <div class="conteiner">
+                        <div class="main-content-inner">
+                            <!-- data table start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        <h4 class="header-title text-center">PADRES</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <br>
+                                        </div>   
+                                        <div class="col-lg-12 col-ml-12 mt-5">
+                                            <div class="data-tables">
+                                                <table id="example" class="text-center">
+                                                    <thead class="bg-primary text-capitalize text-white">
+                                                        <tr>
+                                                            <th>Nombre Completo</th>
+                                                            <th>DUI</th>
+                                                            <th>Teléfono</th>
+                                                            <th>Estado</th>
+                                                            <th>Opciones</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach($padres as $padre): ?>
+                                                        <tr>
+                                                            <td class="col-4"><?= $padre->nombreCompleto; ?></td>
+                                                            <td class="col-2"><?= $padre->DUI; ?></td>
+                                                            <td class="col-2"><?= $padre->telefono; ?></td>
+                                                            <td class="col-1"><?= $padre->estado; ?></td>
+                                                            <td>
+                                                                <div class="row">
+                                                                    <div class="col-1"></div>
+                                                                    <div class="col-2">
+                                                                        <button type="submit" class="btn btn-warning">
+                                                                            <i class="fa fa-pencil-square-o"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="col-1"></div>
+                                                                    <div class="col-2">
+                                                                        <button type="submit" class="btn btn-danger">
+                                                                            <i class="fa fa-trash-o"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <?php endforeach;?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="sexo">Sexo</label>
-                    <input type="text" class="form-control form-control-md" id="sexo" name="sexo" required>
-                </div>
-                <div class="form-group">
-                    <label for="dui">DUI</label>
-                    <input type="text" class="form-control form-control-md" id="dui" name="dui" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="text" class="form-control form-control-md" id="telefono" name="telefono" required>
-                </div>
-                <div class="form-group">
-                    <label for="estado">Estado</label>
-                    <select class="form-control form-control-md" id="estado" name="estado" required>
-                        <option value="Activo">Activo</option>
-                        <option value="Inactivo">Inactivo</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="idAlumno">ID del Alumno</label>
-                    <input type="number" class="form-control form-control-md" id="idAlumno" name="idAlumno" required>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Agregar Padre</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-</div>
-
-<!-- Modal de confirmación -->
-<div class="modal fade" id="confirmacionModal" tabindex="-1" role="dialog" aria-labelledby="confirmacionModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirmacionModalLabel">Confirmación de Creación</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                El padre ha sido creado exitosamente.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Cargar jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Tu script JavaScript -->
-<script>
-    // Esperar a que se cargue el documento
-    $(document).ready(function() {
-        // Escuchar el evento submit del formulario
-        $('form').submit(function(event) {
-            // Evitar que el formulario se envíe automáticamente
-            event.preventDefault();
-
-            // Enviar la solicitud AJAX para guardar el padre
-            $.ajax({
-                url: $(this).attr('action'),
-                method: 'POST',
-                data: $(this).serialize(),
-                success: function(response) {
-                    console.log(response); // Verificar la respuesta en la consola del navegador
-                    if (response.success) {
-                        // Mostrar la modal de confirmación
-                        $('#confirmacionModal').modal('show');
-                    }
-                }
-            });
-        });
-    });
-</script>
-<?= $this->endSection() ?>
-
-<?= $this->section('styles') ?>
-    <!-- Enlace a los estilos de la plantilla de Corona Admin -->
-    <link href="<?= base_url('/assets/vendors/mdi/css/materialdesignicons.min.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('/assets/vendors/css/vendor.bundle.base.css') ?>" rel="stylesheet">
-    <!-- Estilos personalizados -->
-    <link href="<?= base_url('/assets/css/style.css') ?>" rel="stylesheet">
-    <!-- Icono de la página -->
-    <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.png') ?>" />
-<?= $this->endSection() ?>
-
-<?= $this->section('scripts') ?>
-    <!-- Enlace a los archivos JavaScript -->
-    <script src="<?= base_url('/assets/vendors/js/vendor.bundle.base.js') ?>"></script>
-    <!-- Scripts personalizados -->
-    <script src="<?= base_url('/assets/js/off-canvas.js') ?>"></script>
-    <script src="<?= base_url('/assets/js/hoverable-collapse.js') ?>"></script>
-    <script src="<?= base_url('/assets/js/misc.js') ?>"></script>
-    <script src="<?= base_url('/assets/js/settings.js') ?>"></script>
-    <script src="<?= base_url('/assets/js/todolist.js') ?>"></script>
-    <!-- Scripts adicionales para la plantilla -->
-    <!-- Por ejemplo, si hay algún script específico de la plantilla Corona Admin -->
 <?= $this->endSection() ?>

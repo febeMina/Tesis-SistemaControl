@@ -51,52 +51,53 @@ class Maestros extends Controller
     }
 
     public function edit($id)
-    {
-        // Aquí deberías cargar los datos del maestro a editar desde la base de datos
-        $db = \Config\Database::connect();
-        $builder = $db->table('docente');
-        $maestro = $builder->getWhere(['idDocente' => $id])->getRow();
+{
+    // Cargar los datos del maestro a editar desde la base de datos
+    $db = \Config\Database::connect();
+    $builder = $db->table('docente');
+    $maestro = $builder->getWhere(['idDocente' => $id])->getRow();
 
-        // Puedes pasar los datos a la vista de edición
-        return view('maestros/edit', ['maestro' => $maestro]);
-    }
+    // Pasar los datos a la vista de edición
+    return view('maestros/edit', ['maestro' => $maestro]);
+}
 
-    public function update($id)
-    {
-        // Capturar los datos del formulario de edición
-        $request = \Config\Services::request();
-        $nombre_completo = $request->getVar('nombre_completo');
-        $nip = $request->getVar('nip');
-        $escalafon = $request->getVar('escalafon');
-        $fecha_ingreso = $request->getVar('fecha_ingreso');
-        $estado = $request->getVar('estado');
+public function update($id)
+{
+    // Capturar los datos del formulario de edición
+    $request = \Config\Services::request();
+    $nombre_completo = $request->getVar('nombre_completo');
+    $nip = $request->getVar('nip');
+    $escalafon = $request->getVar('escalafon');
+    $fecha_ingreso = $request->getVar('fecha_ingreso');
+    $estado = $request->getVar('estado');
     
-        // Actualizar los datos en la base de datos
-        $db = \Config\Database::connect();
-        $builder = $db->table('docente');
-        $data = [
-            'nombre_completo' => $nombre_completo,
-            'nip' => $nip,
-            'escalafon' => $escalafon,
-            'fecha_ingreso' => $fecha_ingreso,
-            'estado' => $estado
-        ];
-        $builder->where('idDocente', $id);
-        $builder->update($data);
+    // Actualizar los datos en la base de datos
+    $db = \Config\Database::connect();
+    $builder = $db->table('docente');
+    $data = [
+        'nombre_completo' => $nombre_completo,
+        'nip' => $nip,
+        'escalafon' => $escalafon,
+        'fecha_ingreso' => $fecha_ingreso,
+        'estado' => $estado
+    ];
+    $builder->where('idDocente', $id);
+    $builder->update($data);
     
-        // Redireccionar a la página principal o mostrar un mensaje de éxito
-        return redirect()->to('/');
-    }
+    // Redireccionar a la página principal o mostrar un mensaje de éxito
+    return redirect()->to(site_url('maestros'));
+}
 
-    public function delete($id)
-    {
-        // Eliminar el maestro de la base de datos
-        $db = \Config\Database::connect();
-        $builder = $db->table('docente');
-        $builder->where('idDocente', $id);
-        $builder->delete();
+public function delete($id)
+{
+    // Eliminar el maestro de la base de datos
+    $db = \Config\Database::connect();
+    $builder = $db->table('docente');
+    $builder->where('idDocente', $id);
+    $builder->delete();
 
-        // Redireccionar a la página principal o mostrar un mensaje de éxito
-        return redirect()->to('/');
-    }
+    // Redireccionar a la página principal o mostrar un mensaje de éxito
+    return redirect()->to(site_url('maestros'));
+}
+
 }
