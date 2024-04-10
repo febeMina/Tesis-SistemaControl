@@ -78,7 +78,13 @@
             border: 2px solid #000;
             border-radius: 5px;
             padding: 10px;
-            border: 2px solid #000;
+        }
+
+        .form-control:focus {
+            background-color: #fff;
+            border-color: #ff7f0f; /* Cambiamos el color del contorno a naranja cuando se selecciona */
+            outline: none; /* Eliminamos el contorno adicional */
+            box-shadow: 0 0 0 2px #ff7f0f; /* Añadimos un efecto de sombra naranja cuando se selecciona */
         }
     </style>
 </head>
