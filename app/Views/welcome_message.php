@@ -104,7 +104,7 @@
               <li class="nav-item"><a href="#" class="nav-link">Usuarios</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Roles</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Accesos</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Alumnos</a></li>
+              <li class="nav-item"><a href="<?= site_url('padres/create') ?>" class="nav-link">Padres</a></li>
               <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Docentes</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Tipos de Licencias</a></li>
               </ul>

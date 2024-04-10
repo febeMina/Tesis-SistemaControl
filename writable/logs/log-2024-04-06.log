@@ -1,0 +1,11 @@
+CRITICAL - 2024-04-06 01:18:23 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\padres\index.php on line 35.
+ 1 APPPATH\Views\padres\index.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(20): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

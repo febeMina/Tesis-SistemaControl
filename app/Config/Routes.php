@@ -9,6 +9,7 @@ $routes->get('/', 'Home::index');
 $routes->get('maestros', 'Maestros::index');
 $routes->get('padres', 'Padres::index');
 $routes->get('login', 'Auth::login');
+$routes->post('login', 'Auth::doLogin');
 $routes->group('admin', function ($routes) {
     $routes->get('licencias', 'AdminLicencias::index');
     $routes->get('licencias/create', 'AdminLicencias::create');

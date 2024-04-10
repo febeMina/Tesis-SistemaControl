@@ -15,20 +15,25 @@ class Auth extends BaseController
     public function doLogin()
     {
         $userModel = new UserModel();
-        $username = $this->request->getPost('username');
+        $username = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-
-        $user = $userModel->where('username', $username)->first();
-
-        if ($user !== null && isset($user['password']) && is_string($password) && password_verify($password, $user['password'])) {
-            // Usuario autenticado, guardar datos en sesión o redirigir a otra página
-            return redirect()->to('ruta/a/otra/pagina');
+    
+        if ($username && $password) {
+            $user = $userModel->where('usuario', $username)->first();
+    
+            if ($user !== null && isset($user['clave']) && is_string($password) && password_verify($password, $user['clave'])) {
+                // Usuario autenticado, guardar datos en sesión o redirigir a otra página
+                return redirect()->to('');
+            } else {
+                // Usuario no autenticado, mostrar mensaje de error o redirigir al formulario de inicio de sesión
+                return redirect()->back()->withInput()->with('error', 'Credenciales inválidas');
+            }
         } else {
-            // Usuario no autenticado, mostrar mensaje de error o redirigir al formulario de inicio de sesión
-            return redirect()->back()->withInput()->with('error', 'Credenciales inválidas');
+            // Datos de usuario no enviados correctamente, redirigir al formulario de inicio de sesión
+            return redirect()->back()->withInput()->with('error', 'Por favor ingresa el usuario y la contraseña');
         }
     }
-
+    
     public function logout()
     {
         // Aquí se manejará la lógica de cierre de sesión

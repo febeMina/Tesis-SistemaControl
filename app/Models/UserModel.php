@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'users';
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['username', 'password', 'email'];
+    protected $table = 'usuarios'; // Nombre de la tabla en la base de datos
+    protected $primaryKey = 'idUsuarios'; // Nombre de la clave primaria
+    protected $allowedFields = ['idDocente', 'usuario', 'clave', 'estado', 'idRol']; // Campos permitidos para la asignación masiva
 
     // Puedes agregar métodos para manejar la autenticación aquí
 }

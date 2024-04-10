@@ -99,5 +99,4 @@ public function delete($id)
     // Redireccionar a la página principal o mostrar un mensaje de éxito
     return redirect()->to(site_url('maestros'));
 }
-
 }
