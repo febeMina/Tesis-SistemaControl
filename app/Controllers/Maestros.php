@@ -84,9 +84,11 @@ public function update($id)
     $builder->where('idDocente', $id);
     $builder->update($data);
     
-    // Redireccionar a la página principal o mostrar un mensaje de éxito
-    return redirect()->to(site_url('maestros'));
+  // Redireccionar a la página principal con un mensaje de éxito
+return redirect()->to('/maestros')->with('success', 'El maestro ha sido actualizado exitosamente.');
+
 }
+
 
 public function delete($id)
 {

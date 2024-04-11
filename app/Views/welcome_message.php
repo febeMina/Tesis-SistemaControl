@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+     <!-- Enlace a la biblioteca de Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
@@ -21,6 +23,48 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
+    
+    <style>
+        /* Estilos para la barra lateral */
+        .sidebar-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 260px; /* Ancho de la barra lateral */
+            background-color: #090066 !important;
+            font-size: 16px; /* Tamaño de fuente para el menú */
+        }
+
+        /* Estilos para el contenido principal */
+        .main-content {
+            margin-left: 260px; /* Ancho de la barra lateral */
+            padding: 20px; /* Espaciado interior del contenido principal */
+        }
+
+        /* Estilos para hacer que el contenido sea scrollable si es necesario */
+        .main-content {
+            overflow-y: auto;
+            height: calc(100vh - 20px); /* Altura total de la ventana menos el padding */
+        }
+
+        /* Estilos para el texto del menú */
+        .nav-link {
+            color: #ffffff; /* Color del texto del menú */
+            font-weight: 500; /* Peso de la fuente */
+            transition: all 0.3s ease; /* Transición suave al cambiar el estilo */
+        }
+
+        /* Estilos para el icono del menú */
+        .menu-icon {
+            margin-right: 10px; /* Espaciado a la derecha del icono */
+        }
+
+        /* Estilos para el título del menú */
+        .menu-title {
+            margin-right: 10px; /* Espaciado a la derecha del título */
+        }
+    </style>
   </head>
   <body>
     <div class="container-scroller">

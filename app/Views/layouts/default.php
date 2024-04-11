@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="<?= base_url('/public/assets/vendors/css/vendor.bundle.base.css') ?>">
     <link rel="stylesheet" href="<?= base_url('/public/assets/css/style.css') ?>">
     <link rel="shortcut icon" href="<?= base_url('/public/assets/images/favicon.png') ?>" />
-
+    <!-- Enlace a la biblioteca de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('node_modules/sweetalert2/dist/sweetalert2.min.css') ?>">
     <style>
         /* Estilos para la barra lateral */
@@ -21,6 +22,7 @@
             bottom: 0;
             width: 260px; /* Ancho de la barra lateral */
             background-color: #090066 !important;
+            font-size: 16px; /* Tamaño de fuente para el menú */
         }
 
         /* Estilos para el contenido principal */
@@ -33,6 +35,23 @@
         .main-content {
             overflow-y: auto;
             height: calc(100vh - 20px); /* Altura total de la ventana menos el padding */
+        }
+
+        /* Estilos para el texto del menú */
+        .nav-link {
+            color: #ffffff; /* Color del texto del menú */
+            font-weight: 500; /* Peso de la fuente */
+            transition: all 0.3s ease; /* Transición suave al cambiar el estilo */
+        }
+
+        /* Estilos para el icono del menú */
+        .menu-icon {
+            margin-right: 10px; /* Espaciado a la derecha del icono */
+        }
+
+        /* Estilos para el título del menú */
+        .menu-title {
+            margin-right: 10px; /* Espaciado a la derecha del título */
         }
     </style>
 </head>

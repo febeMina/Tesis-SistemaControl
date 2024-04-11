@@ -1,29 +1,77 @@
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
+<style>
+    body {
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        border-radius: 15px;
+        border: 2px solid #090066;
+    }
+
+    .card-header {
+        border-radius: 15px 15px 0 0;
+        background-color: #090066 !important;
+    }
+
+    .form-control {
+        background-color: #dee2e6;
+        color: #000;
+        border-radius: 10px;
+        padding: 10px;
+        border: 2px solid #000;
+        position: relative;
+    }
+
+    .form-control:focus {
+        background-color: #dee2e6;
+        border-color: #ff7f0f;
+        outline: none;
+        box-shadow: 0 0 0 2px #ff7f0f;
+    }
+
+    .btn-primary {
+        border-radius: 15px;
+        padding: 12px 30px; /* Ajustar el tamaño del padding para hacer el botón más grande */
+        font-size: 16px; /* Ajustar el tamaño de la fuente */
+        background-color: #090066; /* Cambiar el color de fondo del botón */
+        border-color: #090066; /* Cambiar el color del borde del botón */
+    }
+
+    .btn-primary:hover {
+        background-color: #003366; /* Cambiar el color de fondo del botón al pasar el mouse */
+        border-color: #003366; /* Cambiar el color del borde del botón al pasar el mouse */
+    }
+</style>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white">
                     <h3 class="text-center">Agregar Nuevo Padre</h3>
                 </div>
                 <div class="card-body">
                     <form action="<?= site_url('padres/store') ?>" method="post">
                         <div class="form-group">
-                            <label for="nombre_completo">Nombre Completo</label>
+                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
                             <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" required>
                         </div>
                         <div class="form-group">
-                            <label for="dui">DUI</label>
+                            <label for="dui" style="color: #000;"><i class="fas fa-id-card"></i> DUI</label>
                             <input type="text" class="form-control" id="dui" name="dui" required>
                         </div>
                         <div class="form-group">
-                            <label for="telefono">Teléfono</label>
+                            <label for="telefono" style="color: #000;"><i class="fas fa-phone"></i> Teléfono</label>
                             <input type="text" class="form-control" id="telefono" name="telefono" required>
                         </div>
                         <div class="form-group">
-                            <label for="estado">Estado</label>
+                            <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
                                 <option value="Activo">Activo</option>
                                 <option value="Inactivo">Inactivo</option>

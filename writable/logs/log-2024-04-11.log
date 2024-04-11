@@ -1,0 +1,20 @@
+CRITICAL - 2024-04-11 04:06:23 --> ErrorException: Undefined variable $i
+in APPPATH\Views\maestros\index.php on line 41.
+ 1 APPPATH\Views\maestros\index.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(17): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-11 04:06:56 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\maestros\index.php on line 71.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 3 APPPATH\Controllers\Maestros.php(17): view('maestros/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
