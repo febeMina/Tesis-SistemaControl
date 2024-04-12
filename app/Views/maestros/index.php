@@ -45,11 +45,11 @@
                                         <td><?= $maestro->estado; ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="<?= site_url('maestros/edit/' . $maestro->idDocente) ?>" class="btn btn-warning">
+                                                <a href="<?= site_url('maestros/edit/' . $maestro->idDocente) ?>" class="btn btn-primary" style="background-color: #007bff;">
                                                     <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
                                                 <!-- Agregar margen entre los botones -->
-                                                <a href="<?= site_url('maestros/delete/' . $maestro->idDocente) ?>" class="btn btn-danger ml-1">
+                                                <a href="<?= site_url('maestros/delete/' . $maestro->idDocente) ?>" class="btn btn-danger" style="background-color: #dc3545;">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
                                                 <!-- Fin de la separación -->

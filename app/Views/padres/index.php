@@ -3,45 +3,106 @@
 <?= $this->section('content') ?>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header" style="background-color: #090066; border-radius: 15px;">
                     <h3 class="text-center">Padres Registrados</h3>
                 </div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Nombre Completo</th>
-                                <th>DUI</th>
-                                <th>Teléfono</th>
-                                <th>Estado</th>
-                                <th>Sexo</th>
-                                <th>ID del Alumno</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($padres as $padre): ?>
+                <div class="card-body" style="background-color: #f0f0f0;">
+                 <!-- Mensaje de éxito -->
+                 <?php if (session()->getFlashdata('success')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('success') ?>
+                        </div>
+                    <?php endif; ?>
+                    <!-- Botón para agregar un nuevo padre -->
+                    <div class="mb-3">
+                        <a href="<?= site_url('padres/create') ?>" class="btn btn-primary">
+                            <i class="mdi mdi-plus"></i> Agregar<!-- Icono de Material Design Icons -->
+                        </a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" style="color: #000;">
+                            <thead>
                                 <tr>
-                                    <td><?= $padre['nombreCompleto'] ?></td>
-                                    <td><?= $padre['DUI'] ?></td>
-                                    <td><?= $padre['telefono'] ?></td>
-                                    <td><?= $padre['estado'] ?></td>
-                                    <td><?= $padre['Sexo'] ?></td>
-                                    <!-- Asegúrate de que la columna 'idAlumno' existe en el array $padre -->
-                                    <td><?= $padre['idAlumno'] ?></td>
-                                    <td>
-                                        <a href="<?= site_url('padres/edit/' . $padre['id']) ?>" class="btn btn-primary btn-sm">Editar</a>
-                                        <a href="<?= site_url('padres/delete/' . $padre['id']) ?>" class="btn btn-danger btn-sm">Eliminar</a>
-                                    </td>
+                                    <th>Nombre Completo</th>
+                                    <th>DUI</th>
+                                    <th>Teléfono</th>
+                                    <th>Estado</th>
+                                    <th>Sexo</th>
+                                    <th>ID del Alumno</th>
+                                    <th>Acciones</th>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($padres as $padre): ?>
+                                    <tr>
+                                        <td><?= $padre['nombreCompleto'] ?></td>
+                                        <td><?= $padre['DUI'] ?></td>
+                                        <td><?= $padre['telefono'] ?></td>
+                                        <td><?= $padre['estado'] ?></td>
+                                        <td><?= $padre['Sexo'] ?></td>
+                                        <td><?= $padre['idAlumno'] ?></td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Acciones">
+                                                <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-primary" style="background-color: #007bff;">
+                                                    <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
+                                                </a>
+                                                <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-danger" style="background-color: #dc3545;">
+                                                    <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
+                                                </a>
+                                                <button class="btn btn-info" onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" style="background-color: #17a2b8;">
+                                                    <i class="mdi mdi-account-multiple"></i> <!-- Icono de Material Design Icons -->
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal para mostrar los alumnos asociados al padre -->
+<div class="modal fade" id="alumnosModal" tabindex="-1" role="dialog" aria-labelledby="alumnosModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #007bff; color: white;">
+                <h5 class="modal-title" id="alumnosModalLabel">Alumnos Asociados al Padre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="background-color: #f0f0f0;">
+                <div id="alumnosContainer"></div>
+            </div>
+            <div class="modal-footer" style="background-color: #007bff;">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Función para mostrar el modal con la información de los alumnos asociados al padre
+    function showAlumnosModal(padreId) {
+        // Realizar una petición AJAX para obtener la información de los alumnos asociados al padre
+        $.ajax({
+            url: '<?= site_url('padres/getAlumnos/') ?>' + padreId,
+            type: 'GET',
+            success: function(response) {
+                // Mostrar la información de los alumnos en el modal
+                $('#alumnosContainer').html(response);
+                $('#alumnosModal').modal('show');
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+</script>
 <?= $this->endSection() ?>

@@ -77,12 +77,12 @@
                                 <option value="Inactivo">Inactivo</option>
                             </select>
                         </div>
-                        <!-- Campo oculto para capturar el idAlumno -->
-                        <input type="hidden" id="idAlumno" name="idAlumno" value="">
+                        <!-- Campo oculto para capturar los datos de los alumnos -->
+                        <input type="hidden" id="alumnos" name="alumnos">
                         <!-- Tabla para agregar, editar y eliminar alumnos -->
                         <div class="mt-4">
                             <h4 class="text-center">Alumnos Asociados</h4>
-                            <table class="table">
+                            <table class="table" id="tabla-alumnos">
                                 <thead>
                                     <tr>
                                         <th>Nombre Completo</th>
@@ -96,10 +96,10 @@
                                     <!-- Aquí se mostrarán los datos de los alumnos -->
                                 </tbody>
                             </table>
-                            <button type="button" class="btn btn-success btn-sm" id="addAlumno">Agregar Alumno</button>
+                            <button type="button" class="btn btn-primary" id="addAlumno"><i class="mdi mdi-plus"></i> Agregar</button>
                         </div>
                         <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-primary">Agregar Padre</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i> Agregar Padre</button>
                         </div>
                     </form>
                 </div>
@@ -110,7 +110,6 @@
 
 <!-- Script para manejar la lógica de agregar, editar y eliminar alumnos -->
 <script>
-    // Arreglo para almacenar los datos de los alumnos
     let alumnos = [];
 
     // Función para agregar un nuevo alumno a la tabla
@@ -119,13 +118,10 @@
         const sexo = prompt("Ingrese el sexo del alumno (M/F):");
         const nie = prompt("Ingrese el NIE del alumno:");
         const estado = prompt("Ingrese el estado del alumno (Activo/Inactivo):");
-        const idAlumno = prompt("Ingrese el ID del alumno:");
 
-        if (nombreCompleto && sexo && nie && estado && idAlumno) {
+        if (nombreCompleto && sexo && nie && estado) {
             // Agregar el alumno al arreglo de alumnos
             alumnos.push({ nombreCompleto, sexo, nie, estado });
-            // Actualizar el valor del campo oculto idAlumno
-            document.getElementById("idAlumno").value = idAlumno;
             // Actualizar la tabla de alumnos
             renderAlumnos();
         } else {
@@ -135,7 +131,7 @@
 
     // Función para renderizar los datos de los alumnos en la tabla
     function renderAlumnos() {
-        const tbody = document.querySelector("tbody");
+        const tbody = document.querySelector("#tabla-alumnos tbody");
         tbody.innerHTML = "";
 
         alumnos.forEach((alumno, index) => {
@@ -146,13 +142,16 @@
                     <td>${alumno.nie}</td>
                     <td>${alumno.estado}</td>
                     <td>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="editAlumno(${index})">Editar</button>
-                        <button type="button" class="btn btn-danger btn-sm" onclick="deleteAlumno(${index})">Eliminar</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="editAlumno(${index})"><i class="mdi mdi-pencil"></i> </button>
+                        <button type="button" class="btn btn-danger btn-sm" onclick="deleteAlumno(${index})"><i class="mdi mdi-delete"></i> </button>
                     </td>
                 </tr>
             `;
             tbody.innerHTML += row;
         });
+
+        // Actualizar el campo oculto con los datos de los alumnos
+        document.getElementById("alumnos").value = JSON.stringify(alumnos);
     }
 
     // Función para editar los datos de un alumno

@@ -15,22 +15,23 @@ class Auth extends BaseController
     public function doLogin()
     {
         $userModel = new UserModel();
-        $username = $this->request->getPost('email');
+        $username = $this->request->getPost('username'); // Corregido el nombre del campo
         $password = $this->request->getPost('password');
     
-        if ($username && $password) {
-            $user = $userModel->where('usuario', $username)->first();
-    
-            if ($user !== null && isset($user['clave']) && is_string($password) && password_verify($password, $user['clave'])) {
-                // Usuario autenticado, guardar datos en sesión o redirigir a otra página
-                return redirect()->to('');
-            } else {
-                // Usuario no autenticado, mostrar mensaje de error o redirigir al formulario de inicio de sesión
-                return redirect()->back()->withInput()->with('error', 'Credenciales inválidas');
-            }
-        } else {
-            // Datos de usuario no enviados correctamente, redirigir al formulario de inicio de sesión
+        // Validar que se hayan enviado tanto el usuario como la contraseña
+        if (empty($username) || empty($password)) {
             return redirect()->back()->withInput()->with('error', 'Por favor ingresa el usuario y la contraseña');
+        }
+
+        $user = $userModel->where('usuario', $username)->first();
+
+        // Verificar si el usuario existe y la contraseña es correcta
+        if ($user !== null && isset($user['clave']) && is_string($password) && password_verify($password, $user['clave'])) {
+            // Usuario autenticado, guardar datos en sesión o redirigir a otra página
+            return redirect()->to('');
+        } else {
+            // Usuario no autenticado, mostrar mensaje de error o redirigir al formulario de inicio de sesión
+            return redirect()->back()->withInput()->with('error', 'Credenciales inválidas');
         }
     }
     

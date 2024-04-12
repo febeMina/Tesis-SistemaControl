@@ -3,26 +3,21 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Models\PadreModel; // Importa el modelo de padres
+use App\Models\PadreModel; 
+use App\Models\AlumnoModel;
 
 class Padres extends Controller
 {
     public function index()
     {
-        // Cargar todos los padres desde la base de datos
-        $padreModel = new PadreModel(); // Instancia el modelo de padres
-        $padres = $padreModel->findAll(); // Obtiene todos los padres
+        $padreModel = new PadreModel(); 
+        $padres = $padreModel->findAll(); 
     
-        // Cargar todos los alumnos desde el modelo de padres
-        $alumnos = $padreModel->getAlumnos();
-    
-        // Pasar los datos a la vista de index
-        return view('padres/index', ['padres' => $padres, 'alumnos' => $alumnos]);
+        return view('padres/index', ['padres' => $padres]);
     }
 
     public function create()
     {
-        // Mostrar el formulario para crear un nuevo padre
         return view('padres/create');
     }
 
@@ -36,10 +31,16 @@ class Padres extends Controller
         $estado = $request->getVar('estado');
         $sexo = $request->getVar('sexo');
         $idAlumno = $request->getVar('idAlumno');
-
-        // Guardar los datos en la base de datos
+    
+        // Verificar si se recibió el valor de idAlumno
+        if ($idAlumno === null) {
+            // Si idAlumno es nulo, mostrar un mensaje de error o realizar alguna acción adecuada
+            return redirect()->back()->withInput()->with('error', 'No se recibió el ID del alumno asociado al padre.');
+        }
+    
+        // Guardar los datos del padre en la base de datos
         $padreModel = new PadreModel(); // Instancia el modelo de padres
-        $data = [
+        $dataPadre = [
             'nombreCompleto' => $nombre_completo,
             'DUI' => $DUI,
             'telefono' => $telefono,
@@ -47,25 +48,39 @@ class Padres extends Controller
             'Sexo' => $sexo,
             'idAlumno' => $idAlumno
         ];
-        $padreModel->insert($data);
-
-        // Devolver una respuesta JSON
-        return $this->response->setJSON(['success' => true]);
+        $padreId = $padreModel->insert($dataPadre);
+    
+        // Guardar los datos de los alumnos asociados al padre en la base de datos
+        $alumnos = $request->getVar('alumnos'); // Obtener los datos de los alumnos del formulario
+        $alumnosData = []; // Arreglo para almacenar los datos de los alumnos
+        foreach ($alumnos as $alumno) {
+            $alumnosData[] = [
+                'nombreCompleto' => $alumno['nombreCompleto'],
+                'Sexo' => $alumno['sexo'],
+                'NIE' => $alumno['nie'],
+                'estado' => $alumno['estado'],
+                'idPadre' => $padreId // Asociar el alumno al padre recién creado
+            ];
+        }
+        // Guardar los datos de los alumnos en la base de datos
+        $alumnoModel = new AlumnoModel(); // Instancia el modelo de alumnos
+        $alumnoModel->insertBatch($alumnosData);
+    
+        // Redireccionar al index de padres
+        return redirect()->to(site_url('padres'));
     }
+    
 
     public function edit($id)
     {
-        // Cargar los datos del padre a editar desde la base de datos
-        $padreModel = new PadreModel(); // Instancia el modelo de padres
+        $padreModel = new PadreModel(); 
         $padre = $padreModel->find($id);
 
-        // Pasar los datos a la vista de edición
         return view('padres/edit', ['padre' => $padre]);
     }
 
     public function update($id)
     {
-        // Capturar los datos del formulario de edición
         $request = \Config\Services::request();
         $nombre_completo = $request->getVar('nombre_completo');
         $DUI = $request->getVar('dui');
@@ -74,8 +89,7 @@ class Padres extends Controller
         $sexo = $request->getVar('sexo');
         $idAlumno = $request->getVar('idAlumno');
     
-        // Actualizar los datos en la base de datos
-        $padreModel = new PadreModel(); // Instancia el modelo de padres
+        $padreModel = new PadreModel(); 
         $data = [
             'nombreCompleto' => $nombre_completo,
             'DUI' => $DUI,
@@ -86,17 +100,22 @@ class Padres extends Controller
         ];
         $padreModel->update($id, $data);
     
-        // Redireccionar a la página principal o mostrar un mensaje de éxito
         return redirect()->to(site_url('padres'));
     }
 
     public function delete($id)
     {
-        // Eliminar el padre de la base de datos
-        $padreModel = new PadreModel(); // Instancia el modelo de padres
+        $padreModel = new PadreModel(); 
         $padreModel->delete($id);
 
-        // Redireccionar a la página principal o mostrar un mensaje de éxito
         return redirect()->to(site_url('padres'));
+    }
+    
+    public function getAlumnosAjax($padreId)
+    {
+        $alumnoModel = new AlumnoModel(); 
+        $alumnos = $alumnoModel->getAlumnosByPadreId($padreId); 
+        
+        return view('padres/alumnos_partial', ['alumnos' => $alumnos]);
     }
 }

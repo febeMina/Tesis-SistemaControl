@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Corona Admin</title>
-    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="<?= site_url('assets/vendors/mdi/css/materialdesignicons.min.css') ?>">
+    <link rel="stylesheet" href="<?= site_url('assets/vendors/css/vendor.bundle.base.css') ?>">
+    <link rel="stylesheet" href="<?= site_url('assets/css/style.css') ?>">
+    <link rel="shortcut icon" href="<?= site_url('assets/images/favicon.png') ?>" />
     <!-- Estilos  -->
     <style>
         body {
@@ -96,41 +96,43 @@
                 <div class="row w-100 mx-0 custom-container">
                     <div class="col-lg-4 mx-auto custom-form">
                         <div class="logo-container d-flex justify-content-center mb-3">
-                            <img src="assets/images/img_cebd/logo.cebd.jpg" class="rounded-logo">
+                            <img src="<?= site_url('assets/images/img_cebd/logo.cebd.jpg') ?>" class="rounded-logo">
                         </div>
                         <h2 class="custom-title">CENTRO ESCOLAR BARRIO LAS DELICIAS</h2>
                         <h3 class="small-title">San Salvador, Mejicanos</h3>
-                        <form action="<?= site_url('login') ?>" method="post" class="pt-3">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Usuario</label>
-                                <input type="text" class="form-control form-control-lg" name="username" id="exampleInputEmail1" placeholder="Usuario">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Contraseña</label>
-                                <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Contraseña">
-                            </div>
-                            <div class="mt-3">
-                                <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">INICIAR SESIÓN</button>
-                            </div>
-                        </form>
+                        <!-- Formulario de inicio de sesión -->
+                            <form action="<?= site_url('login') ?>" method="post" class="pt-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Usuario</label>
+                                    <input type="text" class="form-control form-control-lg" name="username" id="exampleInputEmail1" placeholder="Usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Contraseña</label>
+                                    <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Contraseña">
+                                </div>
+                                <div class="mt-3">
+                                    <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">INICIAR SESIÓN</button>
+                                </div>
+                            </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- jquery latest version -->
-    <script src="../public/js/jquery-2.2.4.min.js"></script>
+    <script src="../public/assets/js/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
-    <script src="../public/js/popper.min.js"></script>
-    <script src="../public/js/bootstrap.min.js"></script>
-    <script src="../public/js/owl.carousel.min.js"></script>
-    <script src="../public/js/metisMenu.min.js"></script>
-    <script src="../public/js/jquery.slimscroll.min.js"></script>
-    <script src="../public/js/jquery.slicknav.min.js"></script>
+    <script src="../public/assets/js/popper.min.js"></script>
+    <script src="../public/assets/js/bootstrap.min.js"></script>
+    <script src="../public/assets/js/owl.carousel.min.js"></script>
+    <script src="../public/assets/js/metisMenu.min.js"></script>
+    <script src="../public/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="../public/assets/js/jquery.slicknav.min.js"></script>
 
     <!-- others plugins -->
-    <script src="../public/js/plugins.js"></script>
-    <script src="../public/js/scripts.js"></script>
+    <script src="../public/assets/js/plugins.js"></script>
+    <script src="../public/assets/js/scripts.js"></script>
 </body>
 
 </html>
