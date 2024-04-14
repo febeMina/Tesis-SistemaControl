@@ -1,0 +1,9 @@
+CRITICAL - 2024-04-14 02:55:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "maestros.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('maestros.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros', [], true)
+ 3 APPPATH\Controllers\Auth.php(12): view('maestros')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

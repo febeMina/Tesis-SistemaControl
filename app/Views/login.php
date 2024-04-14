@@ -11,9 +11,8 @@
     <link rel="shortcut icon" href="<?= site_url('assets/images/favicon.png') ?>" />
     <!-- Estilos  -->
     <style>
-        body {
-            height: 100vh;
-            overflow: hidden;
+        body,
+        .container-scroller {
             margin: 0;
             padding: 0;
         }
@@ -22,7 +21,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: 100vh;
             background-image: url('assets/images/img_cebd/estudiantes.jpeg');
             background-size: cover;
             background-position: center;
@@ -45,10 +44,7 @@
             background-color: #225195;
             color: #000;
             margin-top: 20px;
-            width: 80%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%; /* Modificado para ocupar todo el ancho */
             border-radius: 25px;
             border: 2px solid #000;
         }
@@ -82,9 +78,9 @@
 
         .form-control:focus {
             background-color: #fff;
-            border-color: #ff7f0f; /* Cambiamos el color del contorno a naranja cuando se selecciona */
-            outline: none; /* Eliminamos el contorno adicional */
-            box-shadow: 0 0 0 2px #ff7f0f; /* Añadimos un efecto de sombra naranja cuando se selecciona */
+            border-color: #ff7f0f;
+            outline: none;
+            box-shadow: 0 0 0 2px #ff7f0f;
         }
     </style>
 </head>
@@ -92,7 +88,6 @@
 <body class="login-page">
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="content-wrapper">
                 <div class="row w-100 mx-0 custom-container">
                     <div class="col-lg-4 mx-auto custom-form">
                         <div class="logo-container d-flex justify-content-center mb-3">
@@ -101,14 +96,14 @@
                         <h2 class="custom-title">CENTRO ESCOLAR BARRIO LAS DELICIAS</h2>
                         <h3 class="small-title">San Salvador, Mejicanos</h3>
                         <!-- Formulario de inicio de sesión -->
-                            <form action="<?= site_url('login') ?>" method="post" class="pt-3">
+                            <form action="<?= site_url('/') ?>" method="post" class="pt-3">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Usuario</label>
-                                    <input type="text" class="form-control form-control-lg" name="username" id="exampleInputEmail1" placeholder="Usuario">
+                                    <input type="text" class="form-control form-control-lg" name="username" id="exampleInputEmail1" placeholder="Usuario" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Contraseña</label>
-                                    <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Contraseña">
+                                    <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Contraseña" required>
                                 </div>
                                 <div class="mt-3">
                                     <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">INICIAR SESIÓN</button>
@@ -117,7 +112,6 @@
 
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     <!-- jquery latest version -->
@@ -133,6 +127,17 @@
     <!-- others plugins -->
     <script src="../public/assets/js/plugins.js"></script>
     <script src="../public/assets/js/scripts.js"></script>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('exampleInputEmail1').value;
+            var password = document.getElementById('exampleInputPassword1').value;
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Por favor ingresa el usuario y la contraseña.');
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@ class Auth extends BaseController
     public function doLogin()
     {
         $userModel = new UserModel();
-        $username = $this->request->getPost('username'); // Corregido el nombre del campo
+        $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
     
         // Validar que se hayan enviado tanto el usuario como la contraseña
