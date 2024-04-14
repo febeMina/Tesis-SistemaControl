@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('maestros', 'Maestros::index');
 $routes->get('padres', 'Padres::index');
+$routes->get('tipo_permiso', 'TipoPermiso::index');
 $routes->get('login', 'Auth::login');
 $routes->post('login', 'Auth::doLogin');
 $routes->group('admin', function ($routes) {
@@ -32,3 +33,11 @@ $routes->post('padres/store', 'Padres::store');
 $routes->get('padres/edit/(:num)', 'Padres::edit/$1');
 $routes->post('padres/update/(:num)', 'Padres::update/$1');
 $routes->get('padres/delete/(:num)', 'Padres::delete/$1');
+
+// Rutas para el controlador Tipos de permisos
+
+$routes->get('tipo_permiso/create', 'TipoPermiso::create');
+$routes->post('tipo_permiso/store', 'TipoPermiso::store');
+$routes->get('tipo_permiso/edit/(:num)', 'TipoPermiso::edit/$1');
+$routes->post('tipo_permiso/update', 'TipoPermiso::update');
+$routes->get('tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
