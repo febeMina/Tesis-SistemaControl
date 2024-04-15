@@ -29,14 +29,10 @@ class Padres extends Controller
         $DUI = $request->getVar('dui');
         $telefono = $request->getVar('telefono');
         $estado = $request->getVar('estado');
-        $sexo = $request->getVar('sexo');
-        $idAlumno = $request->getVar('idAlumno');
-    
-        // Verificar si se recibió el valor de idAlumno
-        if ($idAlumno === null) {
-            // Si idAlumno es nulo, mostrar un mensaje de error o realizar alguna acción adecuada
-            return redirect()->back()->withInput()->with('error', 'No se recibió el ID del alumno asociado al padre.');
-        }
+        $alumno_nombre_completo = $request->getVar('alumno_nombre_completo');
+        $alumno_sexo = $request->getVar('alumno_sexo');
+        $alumno_nie = $request->getVar('alumno_nie');
+        $alumno_estado = $request->getVar('alumno_estado');
     
         // Guardar los datos del padre en la base de datos
         $padreModel = new PadreModel(); // Instancia el modelo de padres
@@ -45,20 +41,17 @@ class Padres extends Controller
             'DUI' => $DUI,
             'telefono' => $telefono,
             'estado' => $estado,
-            'Sexo' => $sexo,
-            'idAlumno' => $idAlumno
         ];
         $padreId = $padreModel->insert($dataPadre);
     
         // Guardar los datos de los alumnos asociados al padre en la base de datos
-        $alumnos = $request->getVar('alumnos'); // Obtener los datos de los alumnos del formulario
         $alumnosData = []; // Arreglo para almacenar los datos de los alumnos
-        foreach ($alumnos as $alumno) {
+        foreach ($alumno_nombre_completo as $key => $nombreCompleto) {
             $alumnosData[] = [
-                'nombreCompleto' => $alumno['nombreCompleto'],
-                'Sexo' => $alumno['sexo'],
-                'NIE' => $alumno['nie'],
-                'estado' => $alumno['estado'],
+                'nombreCompleto' => $nombreCompleto,
+                'Sexo' => $alumno_sexo[$key],
+                'NIE' => $alumno_nie[$key],
+                'estado' => $alumno_estado[$key],
                 'idPadre' => $padreId // Asociar el alumno al padre recién creado
             ];
         }
@@ -69,7 +62,6 @@ class Padres extends Controller
         // Redireccionar al index de padres
         return redirect()->to(site_url('padres'));
     }
-    
 
     public function edit($id)
     {

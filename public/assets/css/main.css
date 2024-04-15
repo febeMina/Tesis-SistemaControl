@@ -1,0 +1,123 @@
+/* Estilos para la barra lateral */
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px; /* Ancho de la barra lateral */
+    background-color: #090066 !important;
+    font-size: 16px; /* Tamaño de fuente para el menú */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+    margin-left: 260px; /* Ancho de la barra lateral */
+    padding: 20px; /* Espaciado interior del contenido principal */
+}
+
+/* Estilos para hacer que el contenido sea scrollable si es necesario */
+.main-content {
+    overflow-y: auto;
+    height: calc(100vh - 20px); /* Altura total de la ventana menos el padding */
+}
+
+/* Estilos para el texto del menú */
+.nav-link {
+    color: #ffffff; /* Color del texto del menú */
+    font-weight: 500; /* Peso de la fuente */
+    transition: all 0.3s ease; /* Transición suave al cambiar el estilo */
+}
+
+/* Estilos para el icono del menú */
+.menu-icon {
+    margin-right: 10px; /* Espaciado a la derecha del icono */
+}
+
+/* Estilos para el título del menú */
+.menu-title {
+    margin-right: 10px; /* Espaciado a la derecha del título */
+}
+
+
+.card {
+    overflow: hidden; /* Ocultar el scroll en el card */
+    border-radius: 15px;
+    border: 2px solid #090066;
+}
+
+.form-control {
+    background-color: #dee2e6;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #000;
+    position: relative;
+}
+
+
+.form-control:focus {
+    background-color: #dee2e6;
+    border-color: #ff7f0f;
+    outline: none;
+    box-shadow: 0 0 0 2px #ff7f0f;
+}
+
+
+body {
+
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.card-header {
+    border-radius: 15px 15px 0 0;
+    background-color: #090066 !important;
+}
+
+
+.btn-primary {
+    border-radius: 15px;
+    padding: 12px 30px; /* Ajustar el tamaño del padding para hacer el botón más grande */
+    font-size: 16px; /* Ajustar el tamaño de la fuente */
+    background-color: #090066; /* Cambiar el color de fondo del botón */
+    border-color: #090066; /* Cambiar el color del borde del botón */
+}
+
+.btn-primary:hover {
+    background-color: #003366; /* Cambiar el color de fondo del botón al pasar el mouse */
+    border-color: #003366; /* Cambiar el color del borde del botón al pasar el mouse */
+}
+
+/* Estilos para los botones de edición y eliminación */
+.btn-edit,
+.btn-delete {
+    border-radius: 5px; /* Redondear los bordes */
+    padding: 5px 10px; /* Ajustar el espacio dentro del botón */
+    margin-right: 5px; /* Ajustar el espacio entre los botones */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para el botón de edición */
+.btn-edit {
+    background-color: #007bff; /* Color de fondo para el botón de editar */
+    border-color: #007bff; /* Color del borde para el botón de editar */
+}
+
+/* Estilos para el botón de eliminación */
+.btn-delete {
+    background-color: #dc3545; /* Color de fondo para el botón de eliminar */
+    border-color: #dc3545; /* Color del borde para el botón de eliminar */
+}
+
+/* Estilos para el botón AddAlumno */
+.btn-add-alumno {
+    border-radius: 5px; /* Redondear los bordes */
+    padding: 5px 10px; /* Ajustar el espacio dentro del botón */
+    margin-right: 5px; /* Ajustar el espacio entre los botones */
+    color: #fff; /* Color del texto */
+    background-color: #28a745; /* Color de fondo para el botón AddAlumno */
+    border-color: #28a745; /* Color del borde para el botón AddAlumno */
+}

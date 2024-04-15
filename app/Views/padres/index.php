@@ -9,8 +9,8 @@
                     <h3 class="text-center">Padres Registrados</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
-                 <!-- Mensaje de éxito -->
-                 <?php if (session()->getFlashdata('success')) : ?>
+                    <!-- Mensaje de éxito -->
+                    <?php if (session()->getFlashdata('success')) : ?>
                         <div class="alert alert-success" role="alert">
                             <?= session()->getFlashdata('success') ?>
                         </div>
@@ -45,13 +45,13 @@
                                         <td><?= $padre['idAlumno'] ?></td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Acciones">
-                                                <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-primary" style="background-color: #007bff;">
+                                                <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
                                                     <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
-                                                <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-danger" style="background-color: #dc3545;">
+                                                <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-delete">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
-                                                <button class="btn btn-info" onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" style="background-color: #17a2b8;">
+                                                <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">
                                                     <i class="mdi mdi-account-multiple"></i> <!-- Icono de Material Design Icons -->
                                                 </button>
                                             </div>

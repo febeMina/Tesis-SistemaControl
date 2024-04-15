@@ -1,36 +1,7 @@
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
-<style>
-    body {
-        height: 100vh;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
 
-    .form-control {
-        background-color: #dee2e6;
-        color: #000;
-        border-radius: 10px;
-        padding: 10px;
-        border: 2px solid #000;
-        position: relative;
-    }
-
-    .form-control:focus {
-        background-color: #dee2e6;
-        border-color: #ff7f0f;
-        outline: none;
-        box-shadow: 0 0 0 2px #ff7f0f;
-    }
-
-    .btn-primary {
-        border-radius: 15px;
-        padding: 12px 30px; /* Ajustar el tamaño del padding para hacer el botón más grande */
-        font-size: 16px; /* Ajustar el tamaño de la fuente */
-    }
-</style>
 
 <div class="container">
     <div class="row justify-content-center">

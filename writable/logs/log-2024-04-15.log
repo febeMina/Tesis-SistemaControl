@@ -1,0 +1,33 @@
+CRITICAL - 2024-04-15 05:08:00 --> ErrorException: Attempt to read property "idPadre" on array
+in APPPATH\Views\padres\edit.php on line 12.
+ 1 APPPATH\Views\padres\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idPadre" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/edit', [], true)
+ 5 APPPATH\Controllers\Padres.php(79): view('padres/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 05:32:50 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\padres\index.php on line 53.
+ 1 APPPATH\Views\padres\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(16): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-15 05:49:19 --> ErrorException: Attempt to read property "idPadre" on array
+in APPPATH\Views\padres\edit.php on line 12.
+ 1 APPPATH\Views\padres\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idPadre" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/edit', [], true)
+ 5 APPPATH\Controllers\Padres.php(79): view('padres/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
