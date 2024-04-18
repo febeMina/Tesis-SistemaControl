@@ -46,9 +46,9 @@
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Acciones">
                                                 <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
-                                                    <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
+                                                    <i class="mdi mdi-pencil"></i>
                                                 </a>
-                                                <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-delete">
+                                                <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este padre?')">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
                                                 <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">

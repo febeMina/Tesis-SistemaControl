@@ -41,3 +41,9 @@ $routes->post('tipo_permiso/store', 'TipoPermiso::store');
 $routes->get('tipo_permiso/edit/(:num)', 'TipoPermiso::edit/$1');
 $routes->post('tipo_permiso/update', 'TipoPermiso::update');
 $routes->get('tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
+
+
+// Rutas para el módulo de permisos magisteriales
+$routes->get('permiso_magisterial', 'PermisoMagisterial::index');
+$routes->get('permiso_magisterial/registrar', 'PermisoMagisterial::registrar_permiso');
+$routes->post('permiso_magisterial/registrar', 'PermisoMagisterial::registrar_permiso'); // Asegúrate de que esté definido para POST también

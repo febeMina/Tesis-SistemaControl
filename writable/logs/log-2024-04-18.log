@@ -1,0 +1,33 @@
+CRITICAL - 2024-04-18 03:42:07 --> ErrorException: Undefined variable $saldos_docentes
+in APPPATH\Views\permiso_magisterial\index.php on line 18.
+ 1 APPPATH\Views\permiso_magisterial\index.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldos_docentes', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\index.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(25): view('permiso_magisterial/index', [])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 03:43:07 --> ErrorException: Undefined variable $saldos_docentes
+in APPPATH\Views\permiso_magisterial\index.php on line 18.
+ 1 APPPATH\Views\permiso_magisterial\index.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldos_docentes', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\index.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(25): view('permiso_magisterial/index', [])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-18 03:44:00 --> ErrorException: Undefined variable $saldos_docentes
+in APPPATH\Views\permiso_magisterial\index.php on line 18.
+ 1 APPPATH\Views\permiso_magisterial\index.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldos_docentes', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\index.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(25): view('permiso_magisterial/index', [])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

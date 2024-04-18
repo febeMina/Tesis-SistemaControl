@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white">
                     <h3 class="text-center">Agregar Nuevo Padre</h3>
@@ -31,31 +31,23 @@
                             </select>
                         </div>
                         <!-- Campos para agregar alumnos asociados al padre -->
-                        <div class="mt-4">
-                            <h4 class="text-center">Alumnos Asociados</h4>
-                            <div id="alumnosForm">
-                                <div class="form-group">
-                                <label for="alumno_nombre_completo" style="color: #000;"><i class="fas fa-user"></i>Nombre Completo</label>
-                                    <input type="text" class="form-control" id="alumno_nombre_completo" name="alumno_nombre_completo[]" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="alumno_sexo">Sexo</label>
-                                    <select class="form-control" id="alumno_sexo" name="alumno_sexo[]" required>
-                                        <option value="M">Masculino</option>
-                                        <option value="F">Femenino</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="alumno_nie">NIE</label>
-                                    <input type="text" class="form-control" id="alumno_nie" name="alumno_nie[]" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="alumno_estado">Estado</label>
-                                    <select class="form-control" id="alumno_estado" name="alumno_estado[]" required>
-                                        <option value="Activo">Activo</option>
-                                        <option value="Inactivo">Inactivo</option>
-                                    </select>
-                                </div>
+                        <div class="mt-12">
+                            <h4 class="text-center" style="color: #000;">Alumnos Asociados</h4>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre Completo</th>
+                                            <th>Sexo</th>
+                                            <th>NIE</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="alumnosTableBody">
+                                        <!-- Aquí se agregarán dinámicamente los alumnos -->
+                                    </tbody>
+                                </table>
                             </div>
                             <button type="button" class="btn btn-primary" id="addAlumno"><i class="mdi mdi-plus"></i> Agregar Alumno</button>
                         </div>
@@ -73,42 +65,50 @@
 <script>
     // Función para agregar un nuevo campo de alumno al formulario
     function addAlumno() {
-        const alumnosForm = document.getElementById('alumnosForm');
+        const alumnosTableBody = document.getElementById('alumnosTableBody');
 
-        // Crear elementos de formulario para el nuevo alumno
-        const newAlumno = document.createElement('div');
-        newAlumno.classList.add('mt-4');
-        newAlumno.innerHTML = `
-            <div class="form-group">
-                <label for="alumno_nombre_completo">Nombre Completo</label>
-                <input type="text" class="form-control" name="alumno_nombre_completo[]" required>
-            </div>
-            <div class="form-group">
-                <label for="alumno_sexo">Sexo</label>
+        // Crear una nueva fila para el alumno
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td><input type="text" class="form-control" name="alumno_nombre_completo[]" required></td>
+            <td>
                 <select class="form-control" name="alumno_sexo[]" required>
                     <option value="M">Masculino</option>
                     <option value="F">Femenino</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="alumno_nie">NIE</label>
-                <input type="text" class="form-control" name="alumno_nie[]" required>
-            </div>
-            <div class="form-group">
-                <label for="alumno_estado">Estado</label>
+            </td>
+            <td>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="alumno_nie[]" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                    </div>
+                </div>
+            </td>
+            <td>
                 <select class="form-control" name="alumno_estado[]" required>
                     <option value="Activo">Activo</option>
                     <option value="Inactivo">Inactivo</option>
                 </select>
-            </div>
+            </td>
+            <td>
+                <button type="button" class="btn btn-delete"><i class="fas fa-trash-alt"></i></button>
+            </td>
         `;
 
-        // Agregar el nuevo campo de alumno al formulario
-        alumnosForm.appendChild(newAlumno);
-    }
+       // Agregar la nueva fila a la tabla
+       alumnosTableBody.appendChild(newRow);
 
-    // Agregar evento click al botón "Agregar Alumno"
-    document.getElementById('addAlumno').addEventListener('click', addAlumno);
+// Agregar evento click al botón de eliminar en la nueva fila
+const deleteButton = newRow.querySelector('.btn-delete');
+deleteButton.addEventListener('click', function() {
+    // Eliminar la fila actual del alumno
+    newRow.remove();
+});
+}
+
+// Agregar evento click al botón "Agregar Alumno"
+document.getElementById('addAlumno').addEventListener('click', addAlumno);
 </script>
 
 <?= $this->endSection() ?>

@@ -11,8 +11,9 @@ class AlumnoModel extends Model
     protected $allowedFields = ['nombreCompleto', 'Sexo', 'NIE', 'estado']; 
 
     public function getAlumnosByPadreId($padreId)
-    {
-        return $this->where('idPadre', $padreId)->findAll();
-    }
+{
+    return $this->where('idAlumno', $padreId)->findAll();
+}
+
 }
 

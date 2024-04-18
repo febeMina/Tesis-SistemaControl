@@ -26,6 +26,7 @@ class Padres extends Controller
         // Capturar los datos del formulario de creación
         $request = \Config\Services::request();
         $nombre_completo = $request->getVar('nombre_completo');
+        $Sexo = $request->getVar('Sexo');
         $DUI = $request->getVar('dui');
         $telefono = $request->getVar('telefono');
         $estado = $request->getVar('estado');
@@ -38,6 +39,7 @@ class Padres extends Controller
         $padreModel = new PadreModel(); // Instancia el modelo de padres
         $dataPadre = [
             'nombreCompleto' => $nombre_completo,
+            'Sexo' => $Sexo,
             'DUI' => $DUI,
             'telefono' => $telefono,
             'estado' => $estado,
@@ -65,36 +67,66 @@ class Padres extends Controller
 
     public function edit($id)
     {
-        $padreModel = new PadreModel(); 
-        $padre = $padreModel->find($id);
-
-        return view('padres/edit', ['padre' => $padre]);
+        // Carga el modelo de la tabla de datos_responsable
+        $datosResponsableModel = new PadreModel();
+    
+        // Busca al padre por su ID
+        $padre = $datosResponsableModel->find($id);
+    
+        // Verifica si se encontró al padre
+        if ($padre === null) {
+            // Maneja el caso en el que no se encuentra al padre
+            // Por ejemplo, muestra un mensaje de error o redirige a otra página
+        }
+    
+        // Obtiene los alumnos asociados a este padre
+        $alumnos = $datosResponsableModel->where('idDatosResponsable', $padre['idDatosResponsable'])->findAll();
+    
+        // Carga la vista de edición con los datos del padre y los alumnos asociados
+        return view('padres/edit', ['padre' => $padre, 'alumnos' => $alumnos]);
     }
-
+    
+    
     public function update($id)
     {
         $request = \Config\Services::request();
         $nombre_completo = $request->getVar('nombre_completo');
+        $Sexo = $request->getVar('Sexo');
         $DUI = $request->getVar('dui');
         $telefono = $request->getVar('telefono');
         $estado = $request->getVar('estado');
-        $sexo = $request->getVar('sexo');
-        $idAlumno = $request->getVar('idAlumno');
+        $alumno_nombre_completo = $request->getVar('alumno_nombre_completo');
+        $alumno_sexo = $request->getVar('alumno_sexo');
+        $alumno_nie = $request->getVar('alumno_nie');
+        $alumno_estado = $request->getVar('alumno_estado');
     
         $padreModel = new PadreModel(); 
-        $data = [
+        $dataPadre = [
             'nombreCompleto' => $nombre_completo,
+            'Sexo' => $Sexo,
             'DUI' => $DUI,
             'telefono' => $telefono,
             'estado' => $estado,
-            'Sexo' => $sexo,
-            'idAlumno' => $idAlumno
         ];
-        $padreModel->update($id, $data);
+        $padreModel->update($id, $dataPadre);
+    
+        // Actualizar los datos de los alumnos asociados al padre
+        $alumnoModel = new AlumnoModel();
+        foreach ($alumno_nombre_completo as $key => $nombreCompleto) {
+            $alumnoId = $request->getVar('alumno_id')[$key]; // Nuevo campo hidden con el ID del alumno
+            $dataAlumno = [
+                'nombreCompleto' => $nombreCompleto,
+                'Sexo' => $alumno_sexo[$key],
+                'NIE' => $alumno_nie[$key],
+                'estado' => $alumno_estado[$key],
+            ];
+            $alumnoModel->update($alumnoId, $dataAlumno);
+        }
     
         return redirect()->to(site_url('padres'));
     }
-
+    
+    
     public function delete($id)
     {
         $padreModel = new PadreModel(); 
