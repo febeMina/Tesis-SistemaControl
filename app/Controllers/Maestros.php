@@ -6,6 +6,13 @@ use CodeIgniter\Controller;
 
 class Maestros extends Controller
 {
+    public function __construct(){
+        helper('url');
+        if (!session()->get('isLoggedIn')) {
+            redirect()->to(base_url('public/login'))->send();
+            exit;
+        }
+    }
     public function index()
     {
         // Aquí puedes cargar todos los maestros desde la base de datos

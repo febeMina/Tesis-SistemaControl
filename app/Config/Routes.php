@@ -5,12 +5,15 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', function () {
+    return redirect()->to('/home');
+});
+
+$routes->get('/home', 'Home::index');
 $routes->get('maestros', 'Maestros::index');
 $routes->get('padres', 'Padres::index');
 $routes->get('tipo_permiso', 'TipoPermiso::index');
-$routes->get('login', 'Auth::login');
-$routes->post('login', 'Auth::doLogin');
+
 $routes->group('admin', function ($routes) {
     $routes->get('licencias', 'AdminLicencias::index');
     $routes->get('licencias/create', 'AdminLicencias::create');
@@ -47,3 +50,8 @@ $routes->get('tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
 $routes->get('permiso_magisterial', 'PermisoMagisterial::index');
 $routes->get('permiso_magisterial/registrar', 'PermisoMagisterial::registrar_permiso');
 $routes->post('permiso_magisterial/registrar', 'PermisoMagisterial::registrar_permiso'); // Asegúrate de que esté definido para POST también
+
+//LOGIN
+$routes->get('login', 'Login::index');
+$routes->post('login/signin', 'Login::signIn');
+$routes->post('login/logout', 'Login::logout');

@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public $baseURL = 'http://localhost/prueba/SistemaControl/';
+    public $baseURL = 'http://localhost/Tesis-SistemaControl/';
 
 
     /**
@@ -175,4 +175,17 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+
+    /**
+     * SESSION CONFIGURATION 
+     */
+
+    public $sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler';
+    public $sessionCookieName = 'ci_session';
+    public $sessionExpiration = 7200;
+    public $sessionSavePath = WRITEPATH . 'session';
+    public $sessionMatchIP = false;
+    public $sessionTimeToUpdate = 300;
+    public $sessionRegenerateDestroy = false;
+    public $cookieSameSite = 'None';
 }
