@@ -16,3 +16,4 @@
 <!-- endinject -->
 <!-- Custom js for this page -->
 <script src="<?= base_url('public/assets/js/dashboard.js') ?>"></script>
+<script src="<?= base_url('public/assets/js/main.js') ?>"></script>
