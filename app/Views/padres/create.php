@@ -24,6 +24,13 @@
                             <input type="text" class="form-control" id="telefono" name="telefono" required>
                         </div>
                         <div class="form-group">
+                        <label for="sexo" style="color: #000;"><i class="fas fa-venus-mars"></i> Sexo</label>
+                            <select class="form-control" name="sexo" required>
+                                <option value="M">Masculino</option>
+                                <option value="F">Femenino</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
                                 <option value="Activo">Activo</option>

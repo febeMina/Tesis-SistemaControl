@@ -14,22 +14,26 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Nombre del Docente</th>
                                     <th>NIP</th>
-                                    <th>Escalafón</th>
-                                    <th>Fecha de Ingreso</th>
-                                    <th>Saldo de Días de Permiso</th>
+                                    <th>Nombre del Docente</th>
+                                    <th>Fecha de Solicitud</th>
+                                    <th>Tipo de Permiso</th>
+                                    <th>Días Ocupados</th>
+                                    <th>Días Disponibles</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($saldos_docentes as $saldo): ?>
-                                    <tr>
-                                        <td><?= $saldo->nombre_completo ?></td>
-                                        <td><?= $saldo->nip ?></td>
-                                        <td><?= $saldo->escalafon ?></td>
-                                        <td><?= $saldo->fecha_ingreso ?></td>
-                                        <td><?= $saldo->saldo_total_dias ?></td>
-                                    </tr>
+                                    <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle_saldo): ?>
+                                        <tr>
+                                            <td><?= $saldo['nip'] ?></td>
+                                            <td><?= $saldo['nombre_completo'] ?></td>
+                                            <td><?= $saldo['fecha_solicitud'] ?></td>
+                                            <td><?= $detalle_saldo['tipo_permiso'] ?></td>
+                                            <td>0</td> <!-- Ajustar estos valores -->
+                                            <td><?= $detalle_saldo['dias_disponibles'] ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

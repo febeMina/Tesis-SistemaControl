@@ -38,18 +38,18 @@
                             <tbody>
                                 <?php foreach ($maestros as $maestro) : ?>
                                     <tr>
-                                        <td><?= $maestro->nombre_completo; ?></td>
-                                        <td><?= $maestro->nip; ?></td>
-                                        <td><?= $maestro->escalafon; ?></td>
-                                        <td><?= $maestro->fecha_ingreso; ?></td>
-                                        <td><?= $maestro->estado; ?></td>
+                                        <td><?= $maestro['nombre_completo']; ?></td>
+                                        <td><?= $maestro['nip']; ?></td>
+                                        <td><?= $maestro['escalafon']; ?></td>
+                                        <td><?= $maestro['fecha_ingreso']; ?></td>
+                                        <td><?= $maestro['estado']; ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="<?= site_url('maestros/edit/' . $maestro->idDocente) ?>" class="btn btn-edit">
+                                                <a href="<?= site_url('maestros/edit/' . $maestro['idDocente']) ?>" class="btn btn-edit">
                                                     <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
                                                 <!-- Agregar margen entre los botones -->
-                                                <a href="<?= site_url('maestros/delete/' . $maestro->idDocente) ?>" class="btn btn-delete">
+                                                <a href="<?= site_url('maestros/delete/' . $maestro['idDocente']) ?>" class="btn btn-delete">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
                                                 <!-- Fin de la separación -->

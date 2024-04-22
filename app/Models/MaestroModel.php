@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class MaestroModel extends Model
 {
-    protected $table = 'maestros';
-    protected $primaryKey = 'id';
+    protected $table = 'docente'; 
+    protected $primaryKey = 'idDocente'; 
     protected $allowedFields = ['nombre_completo', 'nip', 'escalafon', 'fecha_ingreso', 'estado'];
 }

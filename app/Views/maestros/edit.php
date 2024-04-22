@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
+        <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
                     <h3 class="text-center">Editar Maestro</h3>
                 </div>

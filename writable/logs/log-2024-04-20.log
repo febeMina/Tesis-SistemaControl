@@ -1,0 +1,528 @@
+ERROR - 2024-04-20 03:51:24 --> mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-20 03:51:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:51:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:51:24 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `maestros`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 03:56:04 --> mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-20 03:56:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:56:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:56:04 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `maestros`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 03:58:32 --> mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-20 03:58:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:58:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 03:58:33 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `maestros`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 04:00:10 --> mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-04-20 04:00:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:00:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:00:10 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.maestros' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `maestros`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `maestros`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `maestros`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `maestros`', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PermisoMagisterial.php(24): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:06:44 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\permiso_magisterial\create.php on line 19.
+ 1 APPPATH\Views\permiso_magisterial\create.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php', 19)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(29): view('permiso_magisterial/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:07:43 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\permiso_magisterial\create.php on line 30.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/create', [], true)
+ 4 APPPATH\Controllers\PermisoMagisterial.php(29): view('permiso_magisterial/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:09:09 --> ErrorException: Attempt to read property "idDocente" on array
+in APPPATH\Views\permiso_magisterial\create.php on line 23.
+ 1 APPPATH\Views\permiso_magisterial\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDocente" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(29): view('permiso_magisterial/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:11:13 --> ErrorException: Attempt to read property "idDocente" on array
+in APPPATH\Views\permiso_magisterial\create.php on line 23.
+ 1 APPPATH\Views\permiso_magisterial\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDocente" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('permiso_magisterial/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:12:52 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\permiso_magisterial\create.php on line 23.
+ 1 APPPATH\Views\permiso_magisterial\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('permiso_magisterial/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:14:32 --> ErrorException: Attempt to read property "idDocente" on array
+in APPPATH\Views\permiso_magisterial\create.php on line 23.
+ 1 APPPATH\Views\permiso_magisterial\create.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDocente" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permiso_magisterial\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permiso_magisterial/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('permiso_magisterial/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 04:41:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(52): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-20 04:41:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PermisoMagisterial.php(52): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:41:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\PermisoMagisterial.php(52): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:41:03 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PermisoMagisterial.php(52): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 04:43:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-20 04:43:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:43:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:43:04 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 04:43:10 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(716): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-04-20 04:43:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:43:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:43:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(716): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-20 04:49:52 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(53): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-04-20 04:49:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:49:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:49:52 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (\'16\', \'1\', 5)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PermisoMagisterial.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-20 04:55:09 --> ErrorException: Attempt to read property "nombre_completo" on array
+in APPPATH\Views\maestros\index.php on line 41.
+ 1 APPPATH\Views\maestros\index.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre_completo" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(16): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

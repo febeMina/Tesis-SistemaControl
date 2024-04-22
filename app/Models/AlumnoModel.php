@@ -12,8 +12,10 @@ class AlumnoModel extends Model
 
     public function getAlumnosByPadreId($padreId)
 {
-    return $this->where('idAlumno', $padreId)->findAll();
+    return $this->where('idDatosResponsable', $padreId)->findAll();
 }
+
+    
 
 }
 

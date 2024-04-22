@@ -30,7 +30,6 @@
                                     <th>Teléfono</th>
                                     <th>Estado</th>
                                     <th>Sexo</th>
-                                    <th>ID del Alumno</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -41,21 +40,24 @@
                                         <td><?= $padre['DUI'] ?></td>
                                         <td><?= $padre['telefono'] ?></td>
                                         <td><?= $padre['estado'] ?></td>
-                                        <td><?= $padre['Sexo'] ?></td>
-                                        <td><?= $padre['idAlumno'] ?></td>
-                                        <td>
-                                            <div class="btn-group" role="group" aria-label="Acciones">
-                                                <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
-                                                    <i class="mdi mdi-pencil"></i>
-                                                </a>
-                                                <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este padre?')">
-                                                    <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
-                                                </a>
-                                                <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">
-                                                    <i class="mdi mdi-account-multiple"></i> <!-- Icono de Material Design Icons -->
-                                                </button>
-                                            </div>
-                                        </td>
+                                        <td><?= $padre['Sexo'] === 'M' ? 'Masculino' : 'Femenino' ?></td> <!-- Modificación aquí -->
+                                        <td><?= $padre['idAlumno']=== '0' ? 'Activo' : 'Inactivo' ?></td>
+                                        
+                                            <td>
+                                                <div class="btn-group" role="group" aria-label="Acciones">
+                                                    <!-- Agrega el botón de editar -->
+                                                    <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
+                                                        <i class="mdi mdi-pencil"></i>
+                                                    </a>
+                                                    <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este padre?')">
+                                                        <i class="mdi mdi-delete"></i>
+                                                    </a>
+                                                    <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">
+                                                        <i class="mdi mdi-account-multiple"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
