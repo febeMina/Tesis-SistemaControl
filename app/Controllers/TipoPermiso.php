@@ -9,9 +9,13 @@ class TipoPermiso extends BaseController
 {
     public function index()
     {
-        $model = new TipoPermisoModel();
-        $data['tipos_permisos'] = $model->findAll();
-        
+        $tipoPermisoModel = new TipoPermisoModel();
+        $tipos_permisos = $tipoPermisoModel->findAll();
+
+        $data = [
+            'tipos_permisos' => $tipos_permisos,
+        ];
+
         return view('tipo_permiso/index', $data);
     }
 

@@ -11,28 +11,28 @@
                     <h3 class="text-center">Editar Maestro</h3>
                 </div>
                 <div class="card-body">
-                    <form id="updateForm" action="<?= site_url('maestros/update/'.$maestro->idDocente) ?>" method="post">
+                <form id="updateForm" action="<?= site_url('maestros/update/'. ($maestro['idDocente'] ?? '')) ?>" method="post">
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
-                            <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" value="<?= $maestro->nombre_completo ?>" required>
+                            <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" value="<?= $maestro['nombre_completo'] ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="nip" style="color: #000;"><i class="fas fa-key"></i> NIP</label>
-                            <input type="text" class="form-control" id="nip" name="nip" value="<?= $maestro->nip ?>" required>
+                            <input type="text" class="form-control" id="nip" name="nip" value="<?= $maestro['nip'] ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="escalafon" style="color: #000;"><i class="fas fa-user-tie"></i> Escalafón</label>
-                            <input type="text" class="form-control" id="escalafon" name="escalafon" value="<?= $maestro->escalafon ?>" required>
+                            <input type="text" class="form-control" id="escalafon" name="escalafon" value="<?= $maestro['escalafon'] ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="fecha_ingreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de Ingreso</label>
-                            <input type="date" class="form-control" id="fecha_ingreso" name="fecha_ingreso" value="<?= $maestro->fecha_ingreso ?>" required>
+                            <input type="date" class="form-control" id="fecha_ingreso" name="fecha_ingreso" value="<?= $maestro['fecha_ingreso'] ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
-                                <option value="Activo" <?= ($maestro->estado == 'Activo') ? 'selected' : '' ?>>Activo</option>
-                                <option value="Inactivo" <?= ($maestro->estado == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
+                                <option value="Activo" <?= ($maestro['estado'] == 'Activo') ? 'selected' : '' ?>>Activo</option>
+                                <option value="Inactivo" <?= ($maestro['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
                             </select>
                         </div>
                         <div class="text-center">

@@ -152,4 +152,8 @@ class Padres extends Controller
         
         return view('padres/alumnos_partial', ['alumnos' => $alumnos]);
     }
+    
+
+
+
 }

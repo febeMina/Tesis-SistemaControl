@@ -15,25 +15,37 @@
                             <thead>
                                 <tr>
                                     <th>NIP</th>
-                                    <th>Nombre del Docente</th>
+                                    <th>Nombre del Maestro</th>
                                     <th>Fecha de Solicitud</th>
-                                    <th>Tipo de Permiso</th>
-                                    <th>Días Ocupados</th>
-                                    <th>Días Disponibles</th>
+                                    <?php foreach ($tipos_permisos as $tipo_permiso): ?>
+                                        <th><?= $tipo_permiso['nombre'] ?></th>
+                                    <?php endforeach; ?>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($saldos_docentes as $saldo): ?>
-                                    <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle_saldo): ?>
-                                        <tr>
-                                            <td><?= $saldo['nip'] ?></td>
-                                            <td><?= $saldo['nombre_completo'] ?></td>
-                                            <td><?= $saldo['fecha_solicitud'] ?></td>
-                                            <td><?= $detalle_saldo['tipo_permiso'] ?></td>
-                                            <td>0</td> <!-- Ajustar estos valores -->
-                                            <td><?= $detalle_saldo['dias_disponibles'] ?></td>
-                                        </tr>
-                                    <?php endforeach; ?>
+                                    <tr>
+                                        <td><?= $saldo['nip'] ?></td>
+                                        <td><?= $saldo['nombre_completo'] ?></td>
+                                        <td><?= $saldo['fecha_solicitud'] ?></td>
+                                        <?php foreach ($tipos_permisos as $tipo_permiso): ?>
+                                            <?php
+                                            $dias_disponibles = 0;
+                                            $dias_ocupados = 0;
+                                            foreach ($saldo['detalle_saldos_permiso'] as $detalle_saldo) {
+                                                if ($detalle_saldo['idTipoPermiso'] == $tipo_permiso['idTipoPermiso']) {
+                                                    $dias_disponibles = isset($detalle_saldo['saldo']) ? $detalle_saldo['saldo'] : 0;
+                                                    $dias_ocupados = isset($detalle_saldo['dias_ocupados']) ? $detalle_saldo['dias_ocupados'] : 0;
+                                                    break;
+                                                }
+                                            }
+                                            ?>
+                                            <td>
+                                                <div>Días Ocupados: <?= $dias_ocupados ?></div>
+                                                <div>Días Disponibles: <?= $dias_disponibles ?></div>
+                                            </td>
+                                        <?php endforeach; ?>
+                                    </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

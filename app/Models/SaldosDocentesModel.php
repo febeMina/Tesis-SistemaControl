@@ -17,5 +17,11 @@ class SaldosDocentesModel extends Model
 
     protected $useTimestamps = false;
 
+    protected $validationRules = [
+        'idDocente' => 'required',
+        'idDetallePermiso' => 'required',
+        'saldo_total_dias' => 'required'
+    ];
+
     // Otras configuraciones...
 }

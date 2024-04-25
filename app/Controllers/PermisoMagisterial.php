@@ -22,12 +22,9 @@ class PermisoMagisterial extends BaseController
 
     public function store()
     {
-        $modelSaldosDocentes = new SaldosDocentesModel();
-        $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
-    
         // Validación de datos
         $rules = [
-            'id_docente' => 'required',
+            'id_maestro' => 'required',
             'id_tipo_permiso' => 'required',
             'fecha_inicio' => 'required',
             'fecha_fin' => 'required'
@@ -38,71 +35,80 @@ class PermisoMagisterial extends BaseController
         }
     
         // Procesamiento de datos
-        $idDocente = $this->request->getVar('id_docente');
+        $idMaestro = $this->request->getVar('id_maestro');
         $idTipoPermiso = $this->request->getVar('id_tipo_permiso');
         $fechaInicio = $this->request->getVar('fecha_inicio');
         $fechaFin = $this->request->getVar('fecha_fin');
     
+        // Guardar el permiso
+        $modelSaldosDocentes = new SaldosDocentesModel();
+        $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
+
         // Verificar si el idDetallePermiso existe
         $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso->find($idTipoPermiso);
         if (!$detalleSaldosTipoPermiso) {
             return redirect()->back()->withInput()->with('error', 'El tipo de permiso seleccionado no es válido.');
         }
-    
-        $data = [
-            'idDocente' => $idDocente,
+
+        // Insertar en la tabla 'saldos_docentes'
+        $dataSaldosDocentes = [
+            'idDocente' => $idMaestro,
             'idDetallePermiso' => $idTipoPermiso,
-            'saldo_total_dias' => 5 // Este dato debe ser modificado según tu lógica de negocio
+            'saldo_total_dias' => $detalleSaldosTipoPermiso['cantidad_dias'] ?? 0
         ];
-    
-        $modelSaldosDocentes->save($data);
-    
-        $data = [
+        $modelSaldosDocentes->insert($dataSaldosDocentes);
+
+        // Insertar en la tabla 'detalle_saldos_tipopermiso'
+        $dataDetalleSaldosTipoPermiso = [
             'anio' => date('Y'),
             'idTipoPermiso' => $idTipoPermiso,
-            'saldo' => 5 // Este dato debe ser modificado según tu lógica de negocio
+            'saldo' => $detalleSaldosTipoPermiso['cantidad_dias'] ?? 0
         ];
-    
-        $modelDetalleSaldosTipoPermiso->save($data);
-    
-        return redirect()->to(base_url('permiso_magisterial/index'));
+        $modelDetalleSaldosTipoPermiso->insert($dataDetalleSaldosTipoPermiso);
+
+        return redirect()->to(base_url('permiso_magisterial/index'))->with('success', 'El permiso magisterial ha sido creado exitosamente.');
     }
-    
 
     public function index()
     {
         $modelSaldosDocentes = new SaldosDocentesModel();
         $saldos_docentes = $modelSaldosDocentes->findAll();
 
+        $modelTipoPermiso = new TipoPermisoModel();
+        $tipos_permisos = $modelTipoPermiso->findAll();
+
         $data['saldos_docentes'] = [];
 
         foreach ($saldos_docentes as $saldo) {
             $modelMaestro = new MaestroModel();
-            $maestro = $modelMaestro->find($saldo->idDocente);
-
-            $modelTipoPermiso = new TipoPermisoModel();
-            $tipos_permisos = $modelTipoPermiso->findAll();
+            $maestro = $modelMaestro->find($saldo['idDocente'] ?? null);
 
             $detalle_saldos_permiso = [];
             foreach ($tipos_permisos as $tipo_permiso) {
                 $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
-                $detalle_saldo_permiso = $modelDetalleSaldosTipoPermiso->where('idTipoPermiso', $tipo_permiso->idTipoPermiso)->where('anio', date('Y'))->first();
+                $detalle_saldo_permiso = $modelDetalleSaldosTipoPermiso
+                    ->where('idTipoPermiso', $tipo_permiso['idTipoPermiso'])
+                    ->where('anio', date('Y'))
+                    ->first();
 
                 $detalle_saldos_permiso[] = [
-                    'tipo_permiso' => $tipo_permiso->nombre,
-                    'dias_disponibles' => $detalle_saldo_permiso ? $detalle_saldo_permiso->saldo : 0,
+                    'dias_ocupados' => 0, // Establecer a 0 por defecto
+                    'dias_disponibles' => $detalle_saldo_permiso ? $detalle_saldo_permiso['saldo'] : 0,
+                    'idTipoPermiso' => $detalle_saldo_permiso ? $detalle_saldo_permiso['idTipoPermiso'] : null,
                 ];
             }
 
             $data['saldos_docentes'][] = [
-                'nombre_completo' => $maestro->nombre_completo,
-                'nip' => $maestro->nip,
-                'fecha_solicitud' => date('Y-m-d'), // Fecha de solicitud (debe ser reemplazada por la fecha real de solicitud)
+                'nombre_completo' => $maestro['nombre_completo'] ?? '',
+                'nip' => $maestro['nip'] ?? '',
+                'fecha_solicitud' => date('Y-m-d'), // Fecha de solicitud (debe ser modificada según tu lógica de negocio)
                 'detalle_saldos_permiso' => $detalle_saldos_permiso,
-                'saldo_total_dias' => $saldo->saldo_total_dias
             ];
         }
+
+        $data['tipos_permisos'] = $tipos_permisos;
 
         return view('permiso_magisterial/index', $data);
     }
 }
+

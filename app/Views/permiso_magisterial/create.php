@@ -16,8 +16,8 @@
 
                     <form action="<?= site_url('permiso_magisterial/store') ?>" method="post">
                         <div class="form-group">
-                            <label for="id_docente" style="color: #000;"><i class="fas fa-chalkboard-teacher"></i> Docente</label>
-                            <select name="id_docente" id="id_docente" class="form-control">
+                            <label for="id_maestro" style="color: #000;"><i class="fas fa-chalkboard-teacher"></i> Maestro</label>
+                            <select name="id_maestro" id="id_maestro" class="form-control">
                                 <?php foreach ($maestros as $maestro): ?>
                                     <option value="<?= $maestro['idDocente'] ?>"><?= $maestro['nombre_completo'] ?></option>
                                 <?php endforeach; ?>
@@ -28,7 +28,7 @@
                             <label for="id_tipo_permiso" style="color: #000;"><i class="fas fa-clipboard"></i> Tipo de Permiso</label>
                             <select name="id_tipo_permiso" id="id_tipo_permiso" class="form-control">
                                 <?php foreach ($tipos_permisos as $tipo_permiso): ?>
-                                    <option value="<?= $tipo_permiso->idTipoPermiso ?>"><?= $tipo_permiso->nombre ?></option>
+                                    <option value="<?= $tipo_permiso['idTipoPermiso'] ?>"><?= $tipo_permiso['nombre'] ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>

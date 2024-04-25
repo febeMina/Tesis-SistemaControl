@@ -41,23 +41,22 @@
                                         <td><?= $padre['telefono'] ?></td>
                                         <td><?= $padre['estado'] ?></td>
                                         <td><?= $padre['Sexo'] === 'M' ? 'Masculino' : 'Femenino' ?></td> <!-- Modificación aquí -->
-                                        <td><?= $padre['idAlumno']=== '0' ? 'Activo' : 'Inactivo' ?></td>
-                                        
-                                            <td>
-                                                <div class="btn-group" role="group" aria-label="Acciones">
-                                                    <!-- Agrega el botón de editar -->
-                                                    <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
-                                                        <i class="mdi mdi-pencil"></i>
-                                                    </a>
-                                                    <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este padre?')">
-                                                        <i class="mdi mdi-delete"></i>
-                                                    </a>
-                                                    <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">
-                                                        <i class="mdi mdi-account-multiple"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
+                                        <td><?= $padre['idAlumno'] === '0' ? 'Activo' : 'Inactivo' ?></td>
 
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Acciones">
+                                                <!-- Agrega el botón de editar -->
+                                                <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
+                                                    <i class="mdi mdi-pencil"></i>
+                                                </a>
+                                                <a href="<?= site_url('padres/delete/' . $padre['idDatosResponsable']) ?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este padre?')">
+                                                    <i class="mdi mdi-delete"></i>
+                                                </a>
+                                                <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">
+                                                    <i class="mdi mdi-account-multiple"></i>
+                                                </button>
+                                            </div>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
@@ -73,7 +72,7 @@
 <div class="modal fade" id="alumnosModal" tabindex="-1" role="dialog" aria-labelledby="alumnosModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header" style="background-color: #007bff; color: white;">
+            <div class="modal-header" style="background-color: #090066; color: white;">
                 <h5 class="modal-title" id="alumnosModalLabel">Alumnos Asociados al Padre</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -82,7 +81,7 @@
             <div class="modal-body" style="background-color: #f0f0f0;">
                 <div id="alumnosContainer"></div>
             </div>
-            <div class="modal-footer" style="background-color: #007bff;">
+            <div class="modal-footer" style="background-color: #090066;">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
         </div>

@@ -34,24 +34,23 @@
                             </thead>
                             <tbody>
                             <?php foreach ($tipos_permisos as $tipo_permiso) : ?>
-    <tr>
-        <td><?= $tipo_permiso->nombre; ?></td>
-        <td><?= $tipo_permiso->cantidad_dias; ?></td>
-        <td>
-            <div class="btn-group">
-                <a href="<?= site_url('tipo_permiso/edit/' . $tipo_permiso->idTipoPermiso) ?>"class="btn btn-edit">
-                    <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
-                </a>
-                <!-- Agregar margen entre los botones -->
-                <a href="<?= site_url('tipo_permiso/delete/' . $tipo_permiso->idTipoPermiso) ?>" class="btn btn-delete">
-                    <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
-                </a>
-                <!-- Fin de la separación -->
-            </div>
-        </td>
-    </tr>
-<?php endforeach; ?>
-
+                                <tr>
+                                    <td><?= $tipo_permiso['nombre']; ?></td>
+                                    <td><?= $tipo_permiso['cantidad_dias']; ?></td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="<?= site_url('tipo_permiso/edit/' . $tipo_permiso['idTipoPermiso']) ?>" class="btn btn-edit">
+                                                <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
+                                            </a>
+                                            <!-- Agregar margen entre los botones -->
+                                            <a href="<?= site_url('tipo_permiso/delete/' . $tipo_permiso['idTipoPermiso']) ?>" class="btn btn-delete">
+                                                <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
+                                            </a>
+                                            <!-- Fin de la separación -->
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

@@ -9,7 +9,7 @@ $routes->get('/', function () {
     return redirect()->to('/home');
 });
 
-$routes->get('/home', 'Home::index');
+$routes->get('home', 'Home::index');
 $routes->get('maestros', 'Maestros::index');
 $routes->get('padres', 'Padres::index');
 $routes->get('tipo_permiso', 'TipoPermiso::index');
@@ -36,6 +36,9 @@ $routes->post('padres/store', 'Padres::store');
 $routes->get('padres/edit/(:num)', 'Padres::edit/$1');
 $routes->post('padres/update/(:num)', 'Padres::update/$1');
 $routes->get('padres/delete/(:num)', 'Padres::delete/$1');
+$routes->get('padres/getAlumnos/(:num)', 'Padres::getAlumnosAjax/$1');
+
+
 
 // Rutas para el controlador Tipos de permisos
 

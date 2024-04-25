@@ -17,5 +17,11 @@ class DetalleSaldosTipoPermisoModel extends Model
 
     protected $useTimestamps = false;
 
+    protected $validationRules = [
+        'anio' => 'required',
+        'idTipoPermiso' => 'required',
+        'saldo' => 'required'
+    ];
+
     // Otras configuraciones...
 }
