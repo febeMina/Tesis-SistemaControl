@@ -2,7 +2,6 @@
 
 <?= $this->section('content') ?>
 
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -11,14 +10,16 @@
                     <h3 class="text-center">Editar Tipo de Permiso</h3>
                 </div>
                 <div class="card-body">
-                    <form id="updateForm" action="<?= site_url('tipo_permiso/update/'.$tipo_permiso->idTipoPermiso) ?>" method="post">
+                    <form id="updateForm" action="<?= site_url('tipo_permiso/update') ?>" method="post">
+                        <!-- Agrega un campo oculto para almacenar el ID del tipo de permiso -->
+                        <input type="hidden" name="id" value="<?= $tipo_permiso['idTipoPermiso'] ?>">
                         <div class="form-group">
                             <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $tipo_permiso->nombre ?>" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $tipo_permiso['nombre'] ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="cantidad_dias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>
-                            <input type="number" class="form-control" id="cantidad_dias" name="cantidad_dias" value="<?= $tipo_permiso->cantidad_dias ?>" required>
+                            <input type="number" class="form-control" id="cantidad_dias" name="cantidad_dias" value="<?= $tipo_permiso['cantidad_dias'] ?>" required>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Actualizar</button>
@@ -37,25 +38,22 @@
 <script>
     // Esperar a que se cargue el documento
     $(document).ready(function() {
-        // Escuchar el evento submit del formulario
         $('#updateForm').submit(function(event) {
-            // Evitar que el formulario se envíe automáticamente
             event.preventDefault();
 
-            // Enviar la solicitud AJAX para actualizar el tipo de permiso
             $.ajax({
+                // Asegúrate de que la URL esté construida correctamente
                 url: $(this).attr('action'),
                 method: 'POST',
-                data: $(this).serialize(),
+                data: $(this).serialize(), // Serializar el formulario
                 success: function(response) {
-                    console.log(response); // Verificar la respuesta en la consola del navegador
+                    console.log(response);
                     if (response.success) {
-                        // Redirigir al índice de tipos de permiso
                         window.location.href = "<?= site_url('tipo_permiso') ?>";
                     }
                 },
                 error: function(xhr, status, error) {
-                    console.error(error); // Imprimir cualquier error en la consola
+                    console.error(error);
                 }
             });
         });

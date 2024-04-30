@@ -19,6 +19,7 @@ class App extends BaseConfig
     public $baseURL = 'http://localhost/prueba/SistemaControl';
 
 
+
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.

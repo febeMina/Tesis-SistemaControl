@@ -50,34 +50,28 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php foreach ($alumnos as $alumno): ?>
-                                            <tr>
-                                                <td><input type="text" class="form-control" name="alumno_nombre_completo[]" value="<?= $alumno['nombreCompleto'] ?>" required></td>
-                                                <td>
-                                                    <select class="form-control" name="alumno_sexo[]" required>
-                                                        <option value="Masculino" <?= ($alumno['Sexo'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
-                                                        <option value="Femenino" <?= ($alumno['Sexo'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
-                                                    </select>
-                                                </td>
-                                                <td>
-                                                    <?php if (isset($alumno['NIE'])): ?>
-                                                        <input type="text" class="form-control" name="alumno_nie[]" value="<?= $alumno['NIE'] ?>" required>
-                                                    <?php else: ?>
-                                                        <!-- Coloca aquí el valor predeterminado o un mensaje de error -->
-                                                    <?php endif; ?>
+                                            <?php foreach ($alumnos as $alumno): ?>
+                                                <tr>
+                                                    <td><input type="text" class="form-control" name="alumno_nombre_completo[]" value="<?= $alumno['nombreAlumno'] ?>" required></td>
+                                                    <td>
+                                                        <select class="form-control" name="alumno_sexo[]" required>
+                                                            <option value="Masculino" <?= ($alumno['Sexo'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
+                                                            <option value="Femenino" <?= ($alumno['Sexo'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><input type="text" class="form-control" name="alumno_nie[]" value="<?= $alumno['NIE'] ?>" required></td>
+                                                    <td>
+                                                        <select class="form-control" name="alumno_estado[]" required>
+                                                            <option value="Activo" <?= ($alumno['estado'] == 'Activo') ? 'selected' : '' ?>>Activo</option>
+                                                            <option value="Inactivo" <?= ($alumno['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
+                                                        </select>
+                                                    </td>
                                                     <!-- Agregar campo oculto para el ID del alumno -->
                                                     <input type="hidden" name="alumno_id[]" value="<?= $alumno['idAlumno'] ?>">
-                                                </td>
-                                                <td>
-                                                    <select class="form-control" name="alumno_estado[]" required>
-                                                        <option value="Activo" <?= ($alumno['estado'] == 'Activo') ? 'selected' : '' ?>>Activo</option>
-                                                        <option value="Inactivo" <?= ($alumno['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                            
+                                                </tr>
+                                            <?php endforeach; ?>
                                         </tbody>
+
                                     </table>
                                 </div>
                             </div>

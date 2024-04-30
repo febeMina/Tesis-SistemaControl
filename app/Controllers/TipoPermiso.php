@@ -40,17 +40,31 @@ class TipoPermiso extends BaseController
 
     public function edit($id = null)
     {
+        if ($id === null) {
+            return redirect()->to('/tipo_permiso');
+        }
+
         $model = new TipoPermisoModel();
-        $data['tipo_permiso'] = $model->find($id);
+        $tipo_permiso = $model->find($id);
+
+        if ($tipo_permiso === null) {
+            return redirect()->to('/tipo_permiso');
+        }
+
+        $data['tipo_permiso'] = $tipo_permiso;
 
         return view('tipo_permiso/edit', $data);
     }
 
     public function update()
     {
-        $model = new TipoPermisoModel();
-
         $id = $this->request->getPost('id');
+
+        if ($id === null) {
+            return redirect()->to('/tipo_permiso');
+        }
+
+        $model = new TipoPermisoModel();
 
         $data = [
             'nombre' => $this->request->getPost('nombre'),

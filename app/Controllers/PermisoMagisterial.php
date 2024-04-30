@@ -17,57 +17,58 @@ class PermisoMagisterial extends BaseController
         $modelTipoPermiso = new TipoPermisoModel();
         $data['tipos_permisos'] = $modelTipoPermiso->findAll();
 
-        return view('permiso_magisterial/create', $data);
+        return view('Permisos/create', $data);
     }
 
     public function store()
-    {
-        // Validación de datos
-        $rules = [
-            'id_maestro' => 'required',
-            'id_tipo_permiso' => 'required',
-            'fecha_inicio' => 'required',
-            'fecha_fin' => 'required'
-        ];
-    
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('validation', $this->validator);
-        }
-    
-        // Procesamiento de datos
-        $idMaestro = $this->request->getVar('id_maestro');
-        $idTipoPermiso = $this->request->getVar('id_tipo_permiso');
-        $fechaInicio = $this->request->getVar('fecha_inicio');
-        $fechaFin = $this->request->getVar('fecha_fin');
-    
-        // Guardar el permiso
-        $modelSaldosDocentes = new SaldosDocentesModel();
-        $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
+{
+    // Validación de datos
+    $rules = [
+        'id_maestro' => 'required',
+        'id_tipo_permiso' => 'required',
+        'fecha_inicio' => 'required',
+        'fecha_fin' => 'required'
+    ];
 
-        // Verificar si el idDetallePermiso existe
-        $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso->find($idTipoPermiso);
-        if (!$detalleSaldosTipoPermiso) {
-            return redirect()->back()->withInput()->with('error', 'El tipo de permiso seleccionado no es válido.');
-        }
-
-        // Insertar en la tabla 'saldos_docentes'
-        $dataSaldosDocentes = [
-            'idDocente' => $idMaestro,
-            'idDetallePermiso' => $idTipoPermiso,
-            'saldo_total_dias' => $detalleSaldosTipoPermiso['cantidad_dias'] ?? 0
-        ];
-        $modelSaldosDocentes->insert($dataSaldosDocentes);
-
-        // Insertar en la tabla 'detalle_saldos_tipopermiso'
-        $dataDetalleSaldosTipoPermiso = [
-            'anio' => date('Y'),
-            'idTipoPermiso' => $idTipoPermiso,
-            'saldo' => $detalleSaldosTipoPermiso['cantidad_dias'] ?? 0
-        ];
-        $modelDetalleSaldosTipoPermiso->insert($dataDetalleSaldosTipoPermiso);
-
-        return redirect()->to(base_url('permiso_magisterial/index'))->with('success', 'El permiso magisterial ha sido creado exitosamente.');
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('validation', $this->validator);
     }
+
+    // Procesamiento de datos
+    $idMaestro = $this->request->getVar('id_maestro');
+    $idTipoPermiso = $this->request->getVar('id_tipo_permiso');
+    $fechaInicio = $this->request->getVar('fecha_inicio');
+    $fechaFin = $this->request->getVar('fecha_fin');
+
+    // Guardar el permiso
+    $modelSaldosDocentes = new SaldosDocentesModel();
+    $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
+
+    // Verificar si el idDetallePermiso existe
+    $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso->find($idTipoPermiso);
+    if (!$detalleSaldosTipoPermiso) {
+        return redirect()->back()->withInput()->with('error', 'El tipo de permiso seleccionado no es válido.');
+    }
+
+    // Insertar en la tabla 'saldos_docentes'
+    $dataSaldosDocentes = [
+        'idDocente' => $idMaestro,
+        'idDetallePermiso' => $idTipoPermiso,
+        'saldo_total_dias' => $detalleSaldosTipoPermiso['cantidad_dias'] ?? 0
+    ];
+    $modelSaldosDocentes->insert($dataSaldosDocentes);
+
+    // Insertar en la tabla 'detalle_saldos_tipopermiso'
+    $dataDetalleSaldosTipoPermiso = [
+        'anio' => date('Y'),
+        'idTipoPermiso' => $idTipoPermiso,
+        'saldo' => $detalleSaldosTipoPermiso['cantidad_dias'] ?? 0
+    ];
+    $modelDetalleSaldosTipoPermiso->insert($dataDetalleSaldosTipoPermiso);
+
+    return redirect()->to(base_url('public/permiso_magisterial'))->with('success', 'El permiso magisterial ha sido creado exitosamente.');
+}
+
 
     public function index()
     {
@@ -108,7 +109,7 @@ class PermisoMagisterial extends BaseController
 
         $data['tipos_permisos'] = $tipos_permisos;
 
-        return view('permiso_magisterial/index', $data);
+        return view('Permisos/index', $data);
     }
 }
 
