@@ -31,31 +31,29 @@ class Login extends Controller
             'message' => '',
             'data' => []
         ];
-
+    
         $user = $jsonUser->username;
         $password = $jsonUser->password;
-
+    
         if (empty($user) || empty($password)) {
             $response['message'] = 'Por favor ingresa el usuario y la contraseña';
         } else {
             $username = $userModel->where('usuario', $user)->first();
             if ($username !== null && isset($username['clave']) && isset($username['usuario'])) {
-                if ($username['usuario'] == $user && $username['clave'] == $password) {
+                // Verificar la contraseña encriptada
+                if (password_verify($password, $username['clave'])) {
                     $response['status'] = true;
-                    $response['message'] = 'Sesion iniciada correctamente';
-                    /* $response['data'] = [
-                        'usuario' => $username['usuario'],
-                        'clave' => $username['clave']
-                    ]; */
-
+                    $response['message'] = 'Sesión iniciada correctamente';
+    
+                    // Obtener información del usuario
                     $userInfo = $userModel
                         ->select('rol.nombreRol, docente.nombre_completo')
                         ->join('rol', 'rol.idRol = usuarios.idRol', 'inner')
                         ->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner')
                         ->where('usuario', $user)
                         ->first();
-
-                    //Crear sesion de usuario
+    
+                    // Crear sesión de usuario
                     $session = session();
                     $userData = [
                         'usuario' => $username['usuario'],
@@ -63,7 +61,7 @@ class Login extends Controller
                         'docente' => $userInfo['nombre_completo'],
                         'isLoggedIn' => true
                     ];
-
+    
                     $session->set($userData);
                 } else {
                     $response['message'] = 'Credenciales inválidas';
@@ -72,7 +70,7 @@ class Login extends Controller
                 $response['message'] = 'Credenciales inválidas';
             }
         }
-
+    
         return $this->response->setJSON($response);
     }
 

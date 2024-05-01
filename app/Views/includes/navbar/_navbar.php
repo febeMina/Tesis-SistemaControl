@@ -81,7 +81,7 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a href="<?= site_url('usuario/tabla') ?>" class="nav-link">Usuarios</a></li>
+                    <li class="nav-item"><a href="<?= site_url('usuario') ?>" class="nav-link">Usuarios</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Roles</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Accesos</a></li>
                     <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Padres</a></li>

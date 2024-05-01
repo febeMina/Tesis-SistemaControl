@@ -13,6 +13,7 @@ $routes->get('home', 'Home::index');
 $routes->get('maestros', 'Maestros::index');
 $routes->get('padres', 'Padres::index');
 $routes->get('tipo_permiso', 'TipoPermiso::index');
+$routes->get('usuario', 'Usuario::index');
 
 $routes->group('admin', function ($routes) {
     $routes->get('licencias', 'AdminLicencias::index');
@@ -58,3 +59,10 @@ $routes->post('permiso_magisterial/store', 'PermisoMagisterial::store'); // Ruta
 $routes->get('login', 'Login::index');
 $routes->post('login/signin', 'Login::signIn');
 $routes->post('login/logout', 'Login::logout');
+
+// Rutas para el controlador Usuario
+$routes->get('usuario/create', 'Usuario::create');
+$routes->post('usuario/store', 'Usuario::store');
+$routes->get('usuario/edit/(:num)', 'Usuario::edit/$1');
+$routes->post('usuario/update/(:num)', 'Usuario::update/$1');
+$routes->get('usuario/delete/(:num)', 'Usuario::delete/$1');
