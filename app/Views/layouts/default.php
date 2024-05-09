@@ -22,6 +22,13 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper" style="background-color: #f0f0f0 !important;">
+                             <!-- Botón para regresar -->
+                    <div class="mb-3">
+                        <a href="<?= previous_url() ?>" class="btn btn-secondary" style="border-radius: 10px; padding: 10px 20px;">
+                            <i class="mdi mdi-arrow-left"></i> Regresar
+                        </a>
+                    </div>
+                    
                     <?= $this->renderSection('content') ?>
                 </div>
                 <!-- content-wrapper ends -->

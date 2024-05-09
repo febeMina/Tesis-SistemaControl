@@ -68,6 +68,7 @@
                                                     </td>
                                                     <!-- Agregar campo oculto para el ID del alumno -->
                                                     <input type="hidden" name="alumno_id[]" value="<?= $alumno['idAlumno'] ?>">
+
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>

@@ -9,6 +9,7 @@
                 <div class="card-header bg-primary text-white">
                     <h3 class="text-center">Crear Permiso Magisterial</h3>
                 </div>
+
                 <div class="card-body">
                     <?php if (isset($validation)): ?>
                         <div class="alert alert-danger"><?= $validation->listErrors() ?></div>

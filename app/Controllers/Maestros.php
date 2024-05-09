@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\BitacoraModel;
 use CodeIgniter\Controller;
 
 class Maestros extends Controller
@@ -85,6 +86,7 @@ class Maestros extends Controller
         ];
         $modelMaestro->update($id, $data);
 
+        return $this->response->setJSON(['success' => true]);
         // Redireccionar a la página principal con un mensaje de éxito
         return redirect()->to('/maestros')->with('success', 'El maestro ha sido actualizado exitosamente.');
     }

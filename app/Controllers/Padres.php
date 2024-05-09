@@ -41,6 +41,9 @@ class Padres extends Controller
         $alumno_sexo = $request->getVar('alumno_sexo');
         $alumno_nie = $request->getVar('alumno_nie');
         $alumno_estado = $request->getVar('alumno_estado');
+        
+        // Debugging: verificar los datos del formulario
+        var_dump($alumno_nombre_completo, $alumno_sexo, $alumno_nie, $alumno_estado);
     
         // Guardar los datos del padre en la base de datos
         $padreModel = new PadreModel(); // Instancia el modelo de padres
@@ -56,27 +59,30 @@ class Padres extends Controller
         // Guardar los datos de los alumnos asociados al padre en la base de datos
         $alumnosData = []; // Arreglo para almacenar los datos de los alumnos
         foreach ($alumno_nombre_completo as $key => $nombreAlumno) {
-            $alumnosData[] = [
+            // Guardar cada alumno asociado al padre
+            $alumnoModel = new AlumnoModel(); // Instancia el modelo de alumnos
+            $dataAlumno = [
                 'nombreAlumno' => $nombreAlumno,
                 'Sexo' => $alumno_sexo[$key],
                 'NIE' => $alumno_nie[$key],
                 'estado' => $alumno_estado[$key],
                 'idPadre' => $padreId // Asociar el alumno al padre recién creado
             ];
+            var_dump($dataAlumno); // Debugging: verificar los datos del alumno antes de insertarlos
+            $alumnoModel->insert($dataAlumno); // Insertar el alumno en la base de datos
         }
-        // Guardar los datos de los alumnos en la base de datos
-        $alumnoModel = new AlumnoModel(); // Instancia el modelo de alumnos
-        $alumnoModel->insertBatch($alumnosData);
     
         // Redireccionar al index de padres
         return redirect()->to(site_url('padres'));
     }
+      
 
     public function edit($id)
     {
-        // Carga el modelo de la tabla de datos_responsable
+        // Carga el modelo del Padre y del Alumno
         $padreModel = new PadreModel();
-        
+        $alumnoModel = new AlumnoModel();
+    
         // Busca al padre por su ID
         $padre = $padreModel->find($id);
         
@@ -87,15 +93,15 @@ class Padres extends Controller
         }
         
         // Obtiene los alumnos asociados a este padre
-        $alumnoModel = new AlumnoModel();
-        $alumnos = $alumnoModel->where('idAlumno', $padre['idAlumno'])->findAll();
+        $alumnos = $alumnoModel->getAlumnosByPadreId($id);
         
         // Carga la vista de edición con los datos del padre y los alumnos asociados
         return view('padres/edit', ['padre' => $padre, 'alumnos' => $alumnos]);
     }
     
-
     
+    
+
     
 public function update($id)
 {
@@ -161,8 +167,10 @@ public function update($id)
         $alumnoModel = new AlumnoModel(); 
         $alumnos = $alumnoModel->getAlumnosByPadreId($padreId); 
         
+        // Carga la vista parcial de los alumnos asociados
         return view('padres/alumnos_partial', ['alumnos' => $alumnos]);
     }
+    
     
 
 

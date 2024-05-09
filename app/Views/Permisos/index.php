@@ -6,9 +6,21 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Saldo de Permiso Magisterial</h4>
+                    <h4 class="header-title text-center">Permiso Magisterial</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
+                    <!-- Mensaje de éxito -->
+                    <?php if (session()->getFlashdata('success')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('success') ?>
+                        </div>
+                    <?php endif; ?>
+                    <!-- Botón para agregar un nuevo tipo de permiso -->
+                    <div class="mb-3">
+                        <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-primary">
+                            <i class="mdi mdi-plus"></i> Agregar <!-- Icono de Material Design Icons -->
+                        </a>
+                    </div>
                     <!-- Tabla de saldos de permiso -->
                     <div class="table-responsive">
                         <table class="table" style="color: #000;">
@@ -28,25 +40,20 @@
                                         <td><?= $saldo['nip'] ?></td>
                                         <td><?= $saldo['nombre_completo'] ?></td>
                                         <td><?= $saldo['fecha_solicitud'] ?></td>
-                                        <?php foreach ($tipos_permisos as $tipo_permiso): ?>
-                                            <?php
-                                            $dias_disponibles = 0;
-                                            $dias_ocupados = 0;
-                                            foreach ($saldo['detalle_saldos_permiso'] as $detalle_saldo) {
-                                                if ($detalle_saldo['idTipoPermiso'] == $tipo_permiso['idTipoPermiso']) {
-                                                    $dias_disponibles = isset($detalle_saldo['saldo']) ? $detalle_saldo['saldo'] : 0;
-                                                    $dias_ocupados = isset($detalle_saldo['dias_ocupados']) ? $detalle_saldo['dias_ocupados'] : 0;
-                                                    break;
-                                                }
-                                            }
-                                            ?>
+                                        <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle_saldo): ?>
                                             <td>
-                                                <div>Días Ocupados: <?= $dias_ocupados ?></div>
-                                                <div>Días Disponibles: <?= $dias_disponibles ?></div>
+                                                <!-- Mostrar los días ocupados y disponibles con coloración -->
+                                                <div>
+                                                    <strong>Días Ocupados:</strong> <?= $detalle_saldo['dias_ocupados'] ?>
+                                                </div>
+                                                <div>
+                                                    <strong>Días Disponibles:</strong> <?= $detalle_saldo['dias_disponibles'] ?>
+                                                </div>
                                             </td>
                                         <?php endforeach; ?>
                                     </tr>
                                 <?php endforeach; ?>
+
                             </tbody>
                         </table>
                     </div>

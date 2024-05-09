@@ -10,7 +10,13 @@
                     <h3 class="text-center">Nuevo Maestro</h3>
                 </div>
                 <div class="card-body">
-                    <form action="<?= site_url('maestros/store') ?>" method="post">
+                    <!-- Mensaje de éxito -->
+                    <?php if (session()->getFlashdata('success')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('success') ?>
+                        </div>
+                    <?php endif; ?>
+                    <form id="createForm" action="<?= site_url('maestros/store') ?>" method="post">
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
                             <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" required>
@@ -52,7 +58,7 @@
     // Esperar a que se cargue el documento
     $(document).ready(function() {
         // Escuchar el evento submit del formulario
-        $('form').submit(function(event) {
+        $('#createForm').submit(function(event) {
             // Evitar que el formulario se envíe automáticamente
             event.preventDefault();
 
@@ -71,7 +77,7 @@
                         alert += '<span aria-hidden="true">&times;</span>';
                         alert += '</button>';
                         alert += '</div>';
-                        $(alert).insertBefore($('form'));
+                        $(alert).insertBefore($('#createForm'));
                     }
                 }
             });

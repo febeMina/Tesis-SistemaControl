@@ -11,6 +11,12 @@
                     <h3 class="text-center">Editar Maestro</h3>
                 </div>
                 <div class="card-body">
+                <!-- Mensaje de éxito -->
+                <?php if (session()->getFlashdata('success')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?= session()->getFlashdata('success') ?>
+                    </div>
+                <?php endif; ?>
                 <form id="updateForm" action="<?= site_url('maestros/update/'. ($maestro['idDocente'] ?? '')) ?>" method="post">
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
@@ -65,8 +71,14 @@
                 success: function(response) {
                     console.log(response); // Verificar la respuesta en la consola del navegador
                     if (response.success) {
-                        // Redirigir al índice de maestros
-                        window.location.href = "<?= site_url('maestros') ?>";
+                        // Mostrar el alert de confirmación
+                        var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
+                        alert += 'El maestro ha sido actualizado exitosamente.';
+                        alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                        alert += '<span aria-hidden="true">&times;</span>';
+                        alert += '</button>';
+                        alert += '</div>';
+                        $(alert).insertBefore($('#updateForm'));
                     }
                 },
                 error: function(xhr, status, error) {

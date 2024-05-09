@@ -15,8 +15,5 @@ class AlumnoModel extends Model
     return $this->where('idAlumno', $padreId)->findAll();
 }
 
-
-    
-
 }
 

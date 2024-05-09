@@ -37,7 +37,7 @@ $routes->post('padres/store', 'Padres::store');
 $routes->get('padres/edit/(:num)', 'Padres::edit/$1');
 $routes->post('padres/update/(:num)', 'Padres::update/$1');
 $routes->get('padres/delete/(:num)', 'Padres::delete/$1');
-$routes->get('padres/getAlumnos/(:num)', 'Padres::getAlumnosAjax/$1');
+$routes->get('padres/getAlumnosAjax/(:num)', 'Padres::getAlumnosAjax/$1');
 
 
 
@@ -66,3 +66,5 @@ $routes->post('usuario/store', 'Usuario::store');
 $routes->get('usuario/edit/(:num)', 'Usuario::edit/$1');
 $routes->post('usuario/update/(:num)', 'Usuario::update/$1');
 $routes->get('usuario/delete/(:num)', 'Usuario::delete/$1');
+
+$routes->get('bitacora', 'Bitacora::index');

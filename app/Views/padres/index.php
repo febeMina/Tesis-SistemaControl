@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header" style="background-color: #090066; border-radius: 15px;">
                     <h3 class="text-center">Padres Registrados</h3>
@@ -53,8 +53,9 @@
                                                     <i class="mdi mdi-delete"></i>
                                                 </a>
                                                 <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">
-                                                    <i class="mdi mdi-account-multiple"></i>
+                                                    <i class="mdi mdi-account-multiple"></i> 
                                                 </button>
+
                                             </div>
                                         </td>
                                     </tr>
@@ -89,14 +90,11 @@
 </div>
 
 <script>
-    // Función para mostrar el modal con la información de los alumnos asociados al padre
     function showAlumnosModal(padreId) {
-        // Realizar una petición AJAX para obtener la información de los alumnos asociados al padre
         $.ajax({
-            url: '<?= site_url('padres/getAlumnos/') ?>' + padreId,
+            url: '<?= site_url('padres/getAlumnosAjax/') ?>' + padreId, // Cambiado a 'getAlumnosAjax'
             type: 'GET',
             success: function(response) {
-                // Mostrar la información de los alumnos en el modal
                 $('#alumnosContainer').html(response);
                 $('#alumnosModal').modal('show');
             },
@@ -106,4 +104,5 @@
         });
     }
 </script>
+
 <?= $this->endSection() ?>
