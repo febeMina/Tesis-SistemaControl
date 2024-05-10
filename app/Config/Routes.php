@@ -68,3 +68,19 @@ $routes->post('usuario/update/(:num)', 'Usuario::update/$1');
 $routes->get('usuario/delete/(:num)', 'Usuario::delete/$1');
 
 $routes->get('bitacora', 'Bitacora::index');
+
+// Rutas para el controlador Tipos de producto
+$routes->get('tipo_producto', 'TipoProducto::index');
+$routes->get('tipo_producto/create', 'TipoProducto::create');
+$routes->post('tipo_producto/store', 'TipoProducto::store');
+$routes->get('tipo_producto/edit/(:num)', 'TipoProducto::edit/$1');
+$routes->post('tipo_producto/update/(:num)', 'TipoProducto::update/$1');
+$routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
+
+// Rutas para el controlador Unidades de Medida
+$routes->get('unidadesmedida', 'UnidadesMedida::index');
+$routes->get('unidadesmedida/create', 'UnidadesMedida::create');
+$routes->post('unidadesmedida/store', 'UnidadesMedida::store');
+$routes->get('unidadesmedida/edit/(:num)', 'UnidadesMedida::edit/$1');
+$routes->post('unidadesmedida/update/(:num)', 'UnidadesMedida::update/$1');
+$routes->get('unidadesmedida/delete/(:num)', 'UnidadesMedida::delete/$1');

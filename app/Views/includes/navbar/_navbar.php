@@ -1,30 +1,27 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #090066 !important;">
-    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top"
-        style="background-color: #090066 !important;">
-        <a class="sidebar-brand brand-logo" href="index.html"><img src="<?=base_url('public/assets/images/logo.svg') ?>" alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?=base_url('public/assets/images/logo-mini.svg')?>"
-                alt="logo" /></a>
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: #090066 !important;">
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('public/assets/images/logo.svg') ?>" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-mini.svg') ?>" alt="logo" /></a>
     </div>
     <ul class="nav">
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="<?=base_url('public/assets/images/faces/face15.jpg')?>" alt="">
+                        <img class="img-xs rounded-circle " src="<?= base_url('public/assets/images/faces/face15.jpg') ?>" alt="">
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
-                    <h5 class="mb-0 font-weight-normal">
-                            <?=session()->get('usuario')?>
+                        <h5 class="mb-0 font-weight-normal">
+                            <?= session()->get('usuario') ?>
                         </h5>
                         <span>
-                            <?=session()->get('rol')?>
+                            <?= session()->get('rol') ?>
                         </span>
                     </div>
                 </div>
                 <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
-                <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list"
-                    aria-labelledby="profile-dropdown">
+                <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
                     <a href="#" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
@@ -107,14 +104,24 @@
             </a>
         </li>
 
+        <!-- Menú para el apartado de Productos -->
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" data-toggle="collapse" href="#alimentacion" aria-expanded="false" aria-controls="alimentacion">
                 <span class="menu-icon">
                     <i class="mdi mdi-food"></i>
                 </span>
-                <span class="menu-title">Alimentacion</span>
+                <span class="menu-title">Alimentación</span>
+                <i class="menu-arrow"></i>
             </a>
+            <div class="collapse" id="alimentacion">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>
+                    <li class="nav-item"><a href="<?= site_url('unidadesmedida') ?>" class="nav-link">Unidades de Medida</a></li>
+                </ul>
+            </div>
         </li>
+
+
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                 <span class="menu-icon">
