@@ -78,80 +78,83 @@ class Padres extends Controller
       
 
     public function edit($id)
-    {
-        // Carga el modelo del Padre y del Alumno
-        $padreModel = new PadreModel();
-        $alumnoModel = new AlumnoModel();
-    
-        // Busca al padre por su ID
-        $padre = $padreModel->find($id);
-        
-        // Verifica si se encontró al padre
-        if ($padre === null) {
-            // Maneja el caso en el que no se encuentra al padre
-            // Por ejemplo, muestra un mensaje de error o redirige a otra página
-        }
-        
-        // Obtiene los alumnos asociados a este padre
-        $alumnos = $alumnoModel->getAlumnosByPadreId($id);
-        
-        // Carga la vista de edición con los datos del padre y los alumnos asociados
-        return view('padres/edit', ['padre' => $padre, 'alumnos' => $alumnos]);
-    }
-    
-    
-    
-
-    
-public function update($id)
 {
-    $request = \Config\Services::request();
-    $nombre_completo = $request->getVar('nombre_completo');
-    $sexo = $request->getVar('sexo'); // Cambiar a minúscula 'sexo'
-    $dui = $request->getVar('dui'); // Cambiar a minúscula 'dui'
-    $telefono = $request->getVar('telefono');
-    $estado = $request->getVar('estado');
-    $alumno_nombre_completo = $request->getVar('alumno_nombre_completo');
-    $alumno_sexo = $request->getVar('alumno_sexo');
-    $alumno_nie = $request->getVar('alumno_nie');
-    $alumno_estado = $request->getVar('alumno_estado');
-    $alumno_id = $request->getVar('alumno_id');
-    
-    $padreModel = new PadreModel(); 
-    $dataPadre = [
-        'nombreCompleto' => $nombre_completo,
-        'Sexo' => $sexo, // Usar la variable $sexo en minúscula
-        'DUI' => $dui, // Usar la variable $dui en minúscula
-        'telefono' => $telefono,
-        'estado' => $estado,
-    ];
-    $padreModel->update($id, $dataPadre);
+    $padreModel = new PadreModel();
+    $alumnoModel = new AlumnoModel();
 
-    // Verificar si los datos de los alumnos existen antes de intentar acceder a ellos
-    if (!empty($alumno_nombre_completo) && is_array($alumno_nombre_completo)) {
-        $alumnoModel = new AlumnoModel();
-        foreach ($alumno_nombre_completo as $key => $nombreAlumno) {
-            // Verificar si los datos del alumno en esta posición existen antes de acceder a ellos
-            if (isset($alumno_sexo[$key], $alumno_nie[$key], $alumno_estado[$key], $alumno_id[$key])) {
-                $dataAlumno = [
-                    'nombreAlumno' => $nombreAlumno,
-                    'Sexo' => $alumno_sexo[$key],
-                    'NIE' => $alumno_nie[$key],
-                    'estado' => $alumno_estado[$key],
-                ];
-                // Actualizar el alumno utilizando el ID del alumno correspondiente
-                $alumnoModel->update($alumno_id[$key], $dataAlumno);
-            } else {
-                // Manejar el caso de datos faltantes o nulos
-                // Puedes mostrar un mensaje de error o manejarlo según sea necesario
-            }
-        }
+    $padre = $padreModel->find($id);
+
+    if ($padre === null) {
+        // Manejar el caso en el que no se encuentra al padre
     }
 
-    // Redireccionar al index de padres
-    return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido actualizado exitosamente.');
+    $alumnos = $alumnoModel->getAlumnosByPadreId($id);
+
+    // Modificamos el nombre del campo 'Sexo' a 'sexo_padre' para evitar conflictos
+    $padre['sexo_padre'] = $padre['Sexo'];
+
+    // Renombrar el campo 'Sexo' de los alumnos para evitar conflictos
+    foreach ($alumnos as &$alumno) {
+        $alumno['sexo_alumno'] = $alumno['Sexo_alumno'];
+    }
+
+    return view('padres/edit', ['padre' => $padre, 'alumnos' => $alumnos]);
 }
 
+    
+    
+    
+
+    
+    public function update($id)
+    {
+        $request = \Config\Services::request();
+        $nombre_completo = $request->getVar('nombre_completo');
+        $sexo = $request->getVar('Sexo'); // Cambiar a mayúscula 'Sexo' si así está definido en tu formulario
+        $dui = $request->getVar('dui'); // Cambiar a minúscula 'dui' si así está definido en tu formulario
+        $telefono = $request->getVar('telefono');
+        $estado = $request->getVar('estado');
+        $alumno_nombre_completo = $request->getVar('alumno_nombre_completo');
+        $alumno_sexo = $request->getVar('alumno_sexo');
+        $alumno_nie = $request->getVar('alumno_nie');
+        $alumno_estado = $request->getVar('alumno_estado');
+        $alumno_id = $request->getVar('alumno_id');
+        
+        $padreModel = new PadreModel(); 
+        $dataPadre = [
+            'nombreCompleto' => $nombre_completo,
+            'Sexo' => $sexo,
+            'DUI' => $dui,
+            'telefono' => $telefono,
+            'estado' => $estado,
+        ];
+        $padreModel->update($id, $dataPadre);
+    
+        // Verificar si los datos de los alumnos existen antes de intentar acceder a ellos
+        if (!empty($alumno_nombre_completo) && is_array($alumno_nombre_completo)) {
+            $alumnoModel = new AlumnoModel();
+            foreach ($alumno_nombre_completo as $key => $nombreAlumno) {
+                // Verificar si los datos del alumno en esta posición existen antes de acceder a ellos
+                if (isset($alumno_sexo[$key], $alumno_nie[$key], $alumno_estado[$key], $alumno_id[$key])) {
+                    $dataAlumno = [
+                        'nombreAlumno' => $nombreAlumno,
+                        'Sexo_alumno' => $alumno_sexo[$key],
+                        'NIE' => $alumno_nie[$key],
+                        'estado' => $alumno_estado[$key],
+                    ];
+                    // Actualizar el alumno utilizando el ID del alumno correspondiente
+                    $alumnoModel->update($alumno_id[$key], $dataAlumno);
+                } else {
+                    // Manejar el caso de datos faltantes o nulos
+                    // Puedes mostrar un mensaje de error o manejarlo según sea necesario
+                }
+            }
+        }
+    
+        // Redireccionar al index de padres
+        return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido actualizado exitosamente.');
+    }
+    
 
     
     public function delete($id)

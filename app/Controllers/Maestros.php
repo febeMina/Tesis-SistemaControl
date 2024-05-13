@@ -39,7 +39,7 @@ class Maestros extends Controller
         $escalafon = $request->getVar('escalafon');
         $fecha_ingreso = $request->getVar('fecha_ingreso');
         $estado = $request->getVar('estado');
-
+    
         // Guardar los datos en la base de datos
         $modelMaestro = new \App\Models\MaestroModel();
         $data = [
@@ -47,13 +47,14 @@ class Maestros extends Controller
             'nip' => $nip,
             'escalafon' => $escalafon,
             'fecha_ingreso' => $fecha_ingreso,
-            'estado' => $estado
+            'estado' => $estado  // Aquí se almacena el estado correctamente
         ];
         $modelMaestro->insert($data);
-
+    
         // Devolver una respuesta JSON
         return $this->response->setJSON(['success' => true]);
     }
+    
 
     public function edit($id)
     {
@@ -74,7 +75,7 @@ class Maestros extends Controller
         $escalafon = $request->getVar('escalafon');
         $fecha_ingreso = $request->getVar('fecha_ingreso');
         $estado = $request->getVar('estado');
-
+    
         // Actualizar los datos en la base de datos
         $modelMaestro = new \App\Models\MaestroModel();
         $data = [
@@ -82,14 +83,15 @@ class Maestros extends Controller
             'nip' => $nip,
             'escalafon' => $escalafon,
             'fecha_ingreso' => $fecha_ingreso,
-            'estado' => $estado
+            'estado' => $estado  // Aquí se actualiza el estado correctamente
         ];
         $modelMaestro->update($id, $data);
-
-        return $this->response->setJSON(['success' => true]);
-        // Redireccionar a la página principal con un mensaje de éxito
-        return redirect()->to('/maestros')->with('success', 'El maestro ha sido actualizado exitosamente.');
+    
+        // Establecer una respuesta JSON de éxito
+        return $this->response->setJSON(['success' => true, 'redirect' => site_url('maestros')]);
     }
+    
+
 
     public function delete($id)
     {

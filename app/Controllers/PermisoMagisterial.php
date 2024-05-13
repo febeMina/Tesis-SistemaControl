@@ -10,15 +10,16 @@ use App\Models\TipoPermisoModel;
 class PermisoMagisterial extends BaseController
 {
     public function create()
-    {
-        $modelMaestro = new MaestroModel();
-        $data['maestros'] = $modelMaestro->findAll();
+{
+    $modelMaestro = new MaestroModel();
+    $data['maestros'] = $modelMaestro->findAll();
 
-        $modelTipoPermiso = new TipoPermisoModel();
-        $data['tipos_permisos'] = $modelTipoPermiso->findAll();
+    $modelTipoPermiso = new TipoPermisoModel();
+    $data['tipos_permisos'] = $modelTipoPermiso->findAll();
 
-        return view('Permisos/create', $data);
-    }
+    return view('Permisos/create', $data);
+}
+
 
     public function store()
     {

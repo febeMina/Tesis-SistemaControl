@@ -30,7 +30,7 @@
                                     <th>Nombre del Maestro</th>
                                     <th>Fecha de Solicitud</th>
                                     <?php foreach ($tipos_permisos as $tipo_permiso): ?>
-                                        <th><?= $tipo_permiso['nombre'] ?></th>
+                                        <th><?= $tipo_permiso['nombre'] ?> (<?= $tipo_permiso['cantidad_dias'] ?>)</th>
                                     <?php endforeach; ?>
                                 </tr>
                             </thead>

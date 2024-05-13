@@ -40,8 +40,9 @@
                                         <td><?= $padre['DUI'] ?></td>
                                         <td><?= $padre['telefono'] ?></td>
                                         <td><?= $padre['estado'] ?></td>
-                                        <td><?= $padre['Sexo'] === 'M' ? 'Masculino' : 'Femenino' ?></td> <!-- Modificación aquí -->
-                                        <td><?= $padre['idAlumno'] === '0' ? 'Activo' : 'Inactivo' ?></td>
+                                        <td><?= $padre['Sexo'] === 'M' ? 'Masculino' : 'Femenino' ?></td>
+                                        
+
 
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Acciones">

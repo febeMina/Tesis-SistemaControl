@@ -79,6 +79,9 @@
                         alert += '</button>';
                         alert += '</div>';
                         $(alert).insertBefore($('#updateForm'));
+                        
+                        // Redirigir al índice después de actualizar
+                        window.location.replace(response.redirect);
                     }
                 },
                 error: function(xhr, status, error) {

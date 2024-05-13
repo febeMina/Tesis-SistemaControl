@@ -1,3 +1,4 @@
+<!-- edit.php -->
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
@@ -9,7 +10,7 @@
                     <h3 class="text-center">Editar Padre</h3>
                 </div>
                 <div class="card-body">
-                <form action="<?= site_url('padres/update/'.$padre['idDatosResponsable']) ?>" method="post">
+                    <form action="<?= site_url('padres/update/'.$padre['idDatosResponsable']) ?>" method="post">
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
                             <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" value="<?= $padre['nombreCompleto'] ?>" required>
@@ -23,10 +24,10 @@
                             <input type="text" class="form-control" id="telefono" name="telefono" value="<?= $padre['telefono'] ?>" required>
                         </div>
                         <div class="form-group">
-                        <label for="sexo" style="color: #000;"><i class="fas fa-venus-mars"></i> Sexo</label>
-                            <select class="form-control" name="sexo" required>
-                                <option value="Masculino" <?= ($padre['Sexo'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
-                                <option value="Femenino"  <?= ($padre['Sexo'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
+                            <label for="sexo" style="color: #000;"><i class="fas fa-venus-mars"></i> Sexo</label>
+                            <select class="form-control" name="padre_sexo" required>
+                                <option value="Masculino" <?= ($padre['sexo_padre'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
+                                <option value="Femenino" <?= ($padre['sexo_padre'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -36,48 +37,45 @@
                                 <option value="Inactivo" <?= ($padre['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
                             </select>
                         </div>
-                            <!-- Campos para editar los alumnos asociados al padre -->
-                            <div class="mt-12">
-                                <h4 class="text-center" style="color: #000;">Alumnos Asociados</h4>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
+                        <!-- Campos para editar los alumnos asociados al padre -->
+                        <div class="mt-12">
+                            <h4 class="text-center" style="color: #000;">Alumnos Asociados</h4>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre Completo</th>
+                                            <th>Sexo</th>
+                                            <th>NIE</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($alumnos as $alumno): ?>
                                             <tr>
-                                                <th>Nombre Completo</th>
-                                                <th>Sexo</th>
-                                                <th>NIE</th>
-                                                <th>Estado</th>
+                                                <td><input type="text" class="form-control" name="alumno_nombre_completo[]" value="<?= $alumno['nombreAlumno'] ?>" required></td>
+                                                <td>
+                                                <select class="form-control" name="alumno_sexo[]" required>
+                                                    <option value="Masculino" <?= ($alumno['sexo_alumno'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
+                                                    <option value="Femenino" <?= ($alumno['sexo_alumno'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
+                                                </select>
+                                                </td>
+                                                <td><input type="text" class="form-control" name="alumno_nie[]" value="<?= $alumno['NIE'] ?>" required></td>
+                                                <td>
+                                                    <select class="form-control" name="alumno_estado[]" required>
+                                                        <option value="Activo" <?= ($alumno['estado'] == 'Activo') ? 'selected' : '' ?>>Activo</option>
+                                                        <option value="Inactivo" <?= ($alumno['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
+                                                    </select>
+                                                </td>
+                                                <!-- Agregar campo oculto para el ID del alumno -->
+                                                <input type="hidden" name="alumno_id[]" value="<?= $alumno['idAlumno'] ?>">
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($alumnos as $alumno): ?>
-                                                <tr>
-                                                    <td><input type="text" class="form-control" name="alumno_nombre_completo[]" value="<?= $alumno['nombreAlumno'] ?>" required></td>
-                                                    <td>
-                                                        <select class="form-control" name="alumno_sexo[]" required>
-                                                            <option value="Masculino" <?= ($alumno['Sexo'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
-                                                            <option value="Femenino" <?= ($alumno['Sexo'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
-                                                        </select>
-                                                    </td>
-                                                    <td><input type="text" class="form-control" name="alumno_nie[]" value="<?= $alumno['NIE'] ?>" required></td>
-                                                    <td>
-                                                        <select class="form-control" name="alumno_estado[]" required>
-                                                            <option value="Activo" <?= ($alumno['estado'] == 'Activo') ? 'selected' : '' ?>>Activo</option>
-                                                            <option value="Inactivo" <?= ($alumno['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
-                                                        </select>
-                                                    </td>
-                                                    <!-- Agregar campo oculto para el ID del alumno -->
-                                                    <input type="hidden" name="alumno_id[]" value="<?= $alumno['idAlumno'] ?>">
-
-                                                </tr>
-                                            <?php endforeach; ?>
-                                        </tbody>
-
-                                    </table>
-                                </div>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- Fin de campos para editar alumnos -->
-
+                        </div>
+                        <!-- Fin de campos para editar alumnos -->
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-primary">Actualizar Padre</button>
                         </div>

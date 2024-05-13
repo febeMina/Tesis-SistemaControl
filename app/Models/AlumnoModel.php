@@ -8,7 +8,7 @@ class AlumnoModel extends Model
 {
     protected $table = 'datos_alumnos'; 
     protected $primaryKey = 'idAlumno'; 
-    protected $allowedFields = ['nombreAlumno', 'Sexo', 'NIE', 'estado']; 
+    protected $allowedFields = ['nombreAlumno', 'Sexo_alumno', 'NIE', 'estado']; 
 
     public function getAlumnosByPadreId($padreId)
 {
