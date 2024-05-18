@@ -24,8 +24,8 @@
                             <input type="text" class="form-control" id="telefono" name="telefono" required>
                         </div>
                         <div class="form-group">
-                        <label for="sexo" style="color: #000;"><i class="fas fa-venus-mars"></i> Sexo</label>
-                            <select class="form-control" name="sexo" required>
+                        <label for="genero" style="color: #000;"><i class="fas fa-venus-mars"></i> Genero</label>
+                            <select class="form-control" name="genero" required>
                                 <option value="M">Masculino</option>
                                 <option value="F">Femenino</option>
                             </select>
@@ -45,7 +45,7 @@
                                     <thead>
                                         <tr>
                                             <th>Nombre Completo</th>
-                                            <th>Sexo</th>
+                                            <th>Genero</th>
                                             <th>NIE</th>
                                             <th>Estado</th>
                                             <th>Acciones</th>

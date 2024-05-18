@@ -29,7 +29,7 @@
                                     <th>DUI</th>
                                     <th>Teléfono</th>
                                     <th>Estado</th>
-                                    <th>Sexo</th>
+                                    <th>Genero</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -40,7 +40,7 @@
                                         <td><?= $padre['DUI'] ?></td>
                                         <td><?= $padre['telefono'] ?></td>
                                         <td><?= $padre['estado'] ?></td>
-                                        <td><?= $padre['Sexo'] === 'M' ? 'Masculino' : 'Femenino' ?></td>
+                                        <td><?= $padre['Genero'] === 'M' ? 'Masculino' : 'Femenino' ?></td>
                                         
 
 

@@ -24,7 +24,7 @@
                             <input type="text" class="form-control" id="telefono" name="telefono" value="<?= $padre['telefono'] ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="sexo" style="color: #000;"><i class="fas fa-venus-mars"></i> Sexo</label>
+                            <label for="genero" style="color: #000;"><i class="fas fa-venus-mars"></i> Genero</label>
                             <select class="form-control" name="padre_sexo" required>
                                 <option value="Masculino" <?= ($padre['sexo_padre'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
                                 <option value="Femenino" <?= ($padre['sexo_padre'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
@@ -45,7 +45,7 @@
                                     <thead>
                                         <tr>
                                             <th>Nombre Completo</th>
-                                            <th>Sexo</th>
+                                            <th>Genero</th>
                                             <th>NIE</th>
                                             <th>Estado</th>
                                         </tr>

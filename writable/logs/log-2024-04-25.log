@@ -304,9 +304,9 @@ in APPPATH\Views\padres\alumnos_partial.php on line 5.
  7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-04-25 05:28:22 --> ErrorException: Undefined variable $Sexo
+CRITICAL - 2024-04-25 05:28:22 --> ErrorException: Undefined variable $Genero
 in APPPATH\Views\padres\alumnos_partial.php on line 5.
- 1 APPPATH\Views\padres\alumnos_partial.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Sexo', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\alumnos_partial.php', 5)
+ 1 APPPATH\Views\padres\alumnos_partial.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Genero', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\alumnos_partial.php', 5)
  2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\alumnos_partial.php')
  3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/alumnos_partial', [], true)
@@ -315,9 +315,9 @@ in APPPATH\Views\padres\alumnos_partial.php on line 5.
  7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-04-25 05:28:25 --> ErrorException: Undefined variable $Sexo
+CRITICAL - 2024-04-25 05:28:25 --> ErrorException: Undefined variable $Genero
 in APPPATH\Views\padres\alumnos_partial.php on line 5.
- 1 APPPATH\Views\padres\alumnos_partial.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Sexo', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\alumnos_partial.php', 5)
+ 1 APPPATH\Views\padres\alumnos_partial.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Genero', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\alumnos_partial.php', 5)
  2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\alumnos_partial.php')
  3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/alumnos_partial', [], true)
