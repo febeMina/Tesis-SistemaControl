@@ -33,7 +33,7 @@ class Padres extends Controller
         // Capturar los datos del formulario de creación
         $request = \Config\Services::request();
         $nombre_completo = $request->getVar('nombre_completo');
-        $Sexo = $request->getVar('Sexo');
+        $Genero = $request->getVar('Genero');
         $DUI = $request->getVar('dui');
         $telefono = $request->getVar('telefono');
         $estado = $request->getVar('estado');
@@ -49,7 +49,7 @@ class Padres extends Controller
         $padreModel = new PadreModel(); // Instancia el modelo de padres
         $dataPadre = [
             'nombreCompleto' => $nombre_completo,
-            'Sexo' => $Sexo,
+            'Genero' => $Genero,
             'DUI' => $DUI,
             'telefono' => $telefono,
             'estado' => $estado,
@@ -63,7 +63,7 @@ class Padres extends Controller
             $alumnoModel = new AlumnoModel(); // Instancia el modelo de alumnos
             $dataAlumno = [
                 'nombreAlumno' => $nombreAlumno,
-                'Sexo' => $alumno_sexo[$key],
+                'Genero' => $alumno_sexo[$key],
                 'NIE' => $alumno_nie[$key],
                 'estado' => $alumno_estado[$key],
                 'idPadre' => $padreId // Asociar el alumno al padre recién creado
@@ -90,10 +90,10 @@ class Padres extends Controller
 
     $alumnos = $alumnoModel->getAlumnosByPadreId($id);
 
-    // Modificamos el nombre del campo 'Sexo' a 'sexo_padre' para evitar conflictos
-    $padre['sexo_padre'] = $padre['Sexo'];
+    // Modificamos el nombre del campo 'Genero' a 'sexo_padre' para evitar conflictos
+    $padre['sexo_padre'] = $padre['Genero'];
 
-    // Renombrar el campo 'Sexo' de los alumnos para evitar conflictos
+    // Renombrar el campo 'Genero' de los alumnos para evitar conflictos
     foreach ($alumnos as &$alumno) {
         $alumno['sexo_alumno'] = $alumno['Sexo_alumno'];
     }
@@ -102,15 +102,11 @@ class Padres extends Controller
 }
 
     
-    
-    
-
-    
     public function update($id)
     {
         $request = \Config\Services::request();
         $nombre_completo = $request->getVar('nombre_completo');
-        $sexo = $request->getVar('Sexo'); // Cambiar a mayúscula 'Sexo' si así está definido en tu formulario
+        $genero = $request->getVar('Genero'); // Cambiar a mayúscula 'Genero' si así está definido en tu formulario
         $dui = $request->getVar('dui'); // Cambiar a minúscula 'dui' si así está definido en tu formulario
         $telefono = $request->getVar('telefono');
         $estado = $request->getVar('estado');
@@ -123,7 +119,7 @@ class Padres extends Controller
         $padreModel = new PadreModel(); 
         $dataPadre = [
             'nombreCompleto' => $nombre_completo,
-            'Sexo' => $sexo,
+            'Genero' => $genero,
             'DUI' => $dui,
             'telefono' => $telefono,
             'estado' => $estado,

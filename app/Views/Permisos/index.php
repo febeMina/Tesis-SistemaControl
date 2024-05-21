@@ -15,12 +15,24 @@
                             <?= session()->getFlashdata('success') ?>
                         </div>
                     <?php endif; ?>
-                    <!-- Botón para agregar un nuevo tipo de permiso -->
-                    <div class="mb-3">
-                        <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar <!-- Icono de Material Design Icons -->
-                        </a>
-                    </div>
+                    <!-- Formulario de filtros -->
+                    <form action="<?= site_url('permiso_magisterial/index') ?>" method="get">
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre del Maestro">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" name="nip" class="form-control" placeholder="NIP">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Solicitud">
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+                                <a href="<?= site_url('permiso_magisterial/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
+                            </div>
+                        </div>
+                    </form>
                     <!-- Tabla de saldos de permiso -->
                     <div class="table-responsive">
                         <table class="table" style="color: #000;">
@@ -53,7 +65,6 @@
                                         <?php endforeach; ?>
                                     </tr>
                                 <?php endforeach; ?>
-
                             </tbody>
                         </table>
                     </div>

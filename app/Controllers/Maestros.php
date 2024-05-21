@@ -2,27 +2,41 @@
 
 namespace App\Controllers;
 
-use App\Models\BitacoraModel;
+use App\Models\MaestroModel;
 use CodeIgniter\Controller;
 
 class Maestros extends Controller
 {
-    public function __construct(){
+    protected $maestroModel;
+
+    public function __construct()
+    {
         helper('url');
-        if (!session()->get('isLoggedIn')) {
-            redirect()->to(base_url('public/login'))->send();
-            exit;
-        }
+        $this->maestroModel = new MaestroModel();
     }
+
     public function index()
     {
-        // Cargar todos los maestros desde la base de datos
-        $modelMaestro = new \App\Models\MaestroModel();
-        $maestros = $modelMaestro->findAll();
+        $request = service('request');
 
-        // Pasar los datos a la vista de index
-        return view('maestros/index', ['maestros' => $maestros]);
+        // Obtener los datos de filtro del formulario
+        $filters = [
+            'nombre_completo' => $request->getVar('nombre_completo'),
+            'nip' => $request->getVar('nip'),
+            'escalafon' => $request->getVar('escalafon'),
+            'fecha_ingreso' => $request->getVar('fecha_ingreso'),
+            'estado' => $request->getVar('estado')
+        ];
+
+        // Obtener los datos filtrados
+        $maestrosData = $this->maestroModel->filter($filters);
+
+        // Pasar los datos a la vista
+        return view('maestros/index', ['maestros' => $maestrosData]);
     }
+    
+
+    
 
     public function create()
     {
@@ -41,7 +55,6 @@ class Maestros extends Controller
         $estado = $request->getVar('estado');
     
         // Guardar los datos en la base de datos
-        $modelMaestro = new \App\Models\MaestroModel();
         $data = [
             'nombre_completo' => $nombre_completo,
             'nip' => $nip,
@@ -49,7 +62,7 @@ class Maestros extends Controller
             'fecha_ingreso' => $fecha_ingreso,
             'estado' => $estado  // Aquí se almacena el estado correctamente
         ];
-        $modelMaestro->insert($data);
+        $this->maestroModel->insert($data);
     
         // Devolver una respuesta JSON
         return $this->response->setJSON(['success' => true]);
@@ -59,8 +72,7 @@ class Maestros extends Controller
     public function edit($id)
     {
         // Cargar los datos del maestro a editar desde la base de datos
-        $modelMaestro = new \App\Models\MaestroModel();
-        $maestro = $modelMaestro->find($id);
+        $maestro = $this->maestroModel->find($id);
 
         // Pasar los datos a la vista de edición
         return view('maestros/edit', ['maestro' => $maestro]);
@@ -77,7 +89,6 @@ class Maestros extends Controller
         $estado = $request->getVar('estado');
     
         // Actualizar los datos en la base de datos
-        $modelMaestro = new \App\Models\MaestroModel();
         $data = [
             'nombre_completo' => $nombre_completo,
             'nip' => $nip,
@@ -85,7 +96,7 @@ class Maestros extends Controller
             'fecha_ingreso' => $fecha_ingreso,
             'estado' => $estado  // Aquí se actualiza el estado correctamente
         ];
-        $modelMaestro->update($id, $data);
+        $this->maestroModel->update($id, $data);
     
         // Establecer una respuesta JSON de éxito
         return $this->response->setJSON(['success' => true, 'redirect' => site_url('maestros')]);
@@ -96,8 +107,7 @@ class Maestros extends Controller
     public function delete($id)
     {
         // Eliminar el maestro de la base de datos
-        $modelMaestro = new \App\Models\MaestroModel();
-        $modelMaestro->delete($id);
+        $this->maestroModel->delete($id);
 
         // Redireccionar a la página principal o mostrar un mensaje de éxito
         return redirect()->to(site_url('maestros'));

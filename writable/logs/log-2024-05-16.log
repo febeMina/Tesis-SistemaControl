@@ -1,0 +1,79 @@
+CRITICAL - 2024-05-16 04:20:13 --> ErrorException: Undefined variable $maestros
+in APPPATH\Views\maestros\index.php on line 66.
+ 1 APPPATH\Views\maestros\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestros', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(36): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 04:31:27 --> ErrorException: Undefined variable $maestrosData
+in APPPATH\Views\maestros\index.php on line 66.
+ 1 APPPATH\Views\maestros\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestrosData', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(42): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 04:36:29 --> ErrorException: Undefined array key "idDocente"
+in APPPATH\Views\maestros\index.php on line 75.
+ 1 APPPATH\Views\maestros\index.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDocente"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 75)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(43): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 04:40:58 --> ErrorException: Undefined variable $pager
+in APPPATH\Views\maestros\index.php on line 92.
+ 1 APPPATH\Views\maestros\index.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 92)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(43): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 16:54:01 --> TypeError: Unsupported operand types: array * int
+in APPPATH\Models\MaestroModel.php on line 64.
+ 1 APPPATH\Controllers\Maestros.php(39): App\Models\MaestroModel->getPaginatedData([...], 1, 10)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 17:01:44 --> TypeError: Unsupported operand types: array * int
+in APPPATH\Models\MaestroModel.php on line 64.
+ 1 APPPATH\Controllers\Maestros.php(39): App\Models\MaestroModel->getPaginatedData([...], 1, 10)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 17:11:28 --> TypeError: Unsupported operand types: array * int
+in APPPATH\Models\MaestroModel.php on line 64.
+ 1 APPPATH\Controllers\Maestros.php(39): App\Models\MaestroModel->getPaginatedData([...], 1, 10)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 17:14:46 --> TypeError: Unsupported operand types: array * int
+in APPPATH\Models\MaestroModel.php on line 64.
+ 1 APPPATH\Controllers\Maestros.php(39): App\Models\MaestroModel->getPaginatedData([...], 1, 10)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-16 17:16:01 --> TypeError: Unsupported operand types: array * int
+in APPPATH\Models\MaestroModel.php on line 64.
+ 1 APPPATH\Controllers\Maestros.php(39): App\Models\MaestroModel->getPaginatedData([...], 1, 10)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

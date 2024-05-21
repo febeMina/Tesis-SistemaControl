@@ -35,7 +35,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-04-11 21:21:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'idAlumno' cannot be null
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (:nombreCompleto:, :DUI:, :telefono:, :estado:, :Sexo:, :idAlumno:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (:nombreCompleto:, :DUI:, :telefono:, :estado:, :Genero:, :idAlumno:)', [...], false)
  2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
@@ -46,9 +46,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-04-11 21:21:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'idAlumno' cannot be null
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (:nombreCompleto:, :DUI:, :telefono:, :estado:, :Sexo:, :idAlumno:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (:nombreCompleto:, :DUI:, :telefono:, :estado:, :Genero:, :idAlumno:)', [...], false)
  4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
@@ -59,10 +59,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-04-11 21:21:47 --> [Caused by] mysqli_sql_exception: Column 'idAlumno' cannot be null
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Sexo`, `idAlumno`) VALUES (:nombreCompleto:, :DUI:, :telefono:, :estado:, :Sexo:, :idAlumno:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (\'Gabriel Mauricio\', \'452456735\', \'76353562\', \'Activo\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `DUI`, `telefono`, `estado`, `Genero`, `idAlumno`) VALUES (:nombreCompleto:, :DUI:, :telefono:, :estado:, :Genero:, :idAlumno:)', [...], false)
  5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)

@@ -29,11 +29,14 @@ $routes->group('admin', function ($routes) {
 });
 
 // Rutas para el controlador Maestros
+$routes->get('maestros', 'Maestros::index');
+$routes->match(['get', 'post'], 'maestros/index', 'Maestros::index');
 $routes->get('maestros/create', 'Maestros::create');
 $routes->post('maestros/store', 'Maestros::store');
-$routes->get('maestros/edit/(:num)', 'Maestros::edit/$1');
-$routes->post('maestros/update/(:num)', 'Maestros::update/$1');
-$routes->get('maestros/delete/(:num)', 'Maestros::delete/$1');
+$routes->get('maestros/edit/(:segment)', 'Maestros::edit/$1');
+$routes->post('maestros/update/(:segment)', 'Maestros::update/$1');
+$routes->get('maestros/delete/(:segment)', 'Maestros::delete/$1');
+
 
 // Rutas para el controlador Padres
 $routes->get('padres/create', 'Padres::create');

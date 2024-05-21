@@ -8,7 +8,7 @@ class PadreModel extends Model
 {
     protected $table = 'datos_responsable';
     protected $primaryKey = 'idDatosResponsable';
-    protected $allowedFields = ['nombreCompleto', 'Sexo', 'DUI', 'telefono', 'estado', 'idAlumno'];
+    protected $allowedFields = ['nombreCompleto', 'Genero', 'DUI', 'telefono', 'estado', 'idAlumno'];
 
    public function getAlumnosAsociados($idDatosResponsable)
 {

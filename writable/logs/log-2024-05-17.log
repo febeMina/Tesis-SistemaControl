@@ -1,0 +1,55 @@
+CRITICAL - 2024-05-17 05:22:57 --> ErrorException: Undefined array key "idDocente"
+in APPPATH\Views\maestros\index.php on line 75.
+ 1 APPPATH\Views\maestros\index.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDocente"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 75)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(36): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-17 05:30:37 --> ErrorException: Attempt to read property "idDocente" on array
+in APPPATH\Views\maestros\index.php on line 75.
+ 1 APPPATH\Views\maestros\index.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDocente" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 75)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(36): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-17 05:41:11 --> ErrorException: Undefined array key "idDocente"
+in APPPATH\Views\maestros\index.php on line 76.
+ 1 APPPATH\Views\maestros\index.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDocente"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(36): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-17 05:43:30 --> ErrorException: Undefined array key "idDocente"
+in APPPATH\Views\maestros\index.php on line 76.
+ 1 APPPATH\Views\maestros\index.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDocente"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(36): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-17 06:20:37 --> ErrorException: Undefined array key "nip"
+in APPPATH\Views\Permisos\index.php on line 52.
+ 1 APPPATH\Views\Permisos\index.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nip"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(128): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
