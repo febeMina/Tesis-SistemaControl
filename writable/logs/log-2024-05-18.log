@@ -41,3 +41,33 @@ WHERE `usuario` = :usuario:
  7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-18 05:35:49 --> Error: Class "App\Controllers\RolesModel" not found
+in APPPATH\Controllers\Roles.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-18 05:41:30 --> Error: Class "App\Controllers\RolesModel" not found
+in APPPATH\Controllers\Roles.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-18 18:33:41 --> Error: Class "App\Controllers\ProyectosModel" not found
+in APPPATH\Controllers\Proyectos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-18 18:33:48 --> Error: Class "App\Controllers\RolesModel" not found
+in APPPATH\Controllers\Roles.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-18 18:43:35 --> Error: Class "App\Controllers\RolesModel" not found
+in APPPATH\Controllers\Roles.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,13 +1,12 @@
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
-<!-- Contenido de la página -->
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de Roles</h4>
+                    <h4 class="header-title text-center">Listado de Proyectos Institucionales</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Mensaje de éxito -->
@@ -16,37 +15,40 @@
                             <?= session()->getFlashdata('success') ?>
                         </div>
                     <?php endif; ?>
-
-                    <!-- Botón para agregar un nuevo Rol -->
+                    <!-- Botón para agregar un nuevo tipo de producto -->
                     <div class="mb-3">
-                        <a href="<?= site_url('roles/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar<!-- Icono de Material Design Icons -->
+                        <a href="<?= site_url('proyectos/create') ?>" class="btn btn-primary">
+                            <i class="mdi mdi-plus"></i> Agregar Proyecto
                         </a>
                     </div>
-                    
-                    <!-- Tabla de maestros -->
+                    <!-- Tabla de tipos de producto -->
                     <div class="table-responsive">
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Nombre Rol</th>
+                                    <th>Nombre de Proyecto</th>
+                                    <th>Descripción</th>
+                                    <th>Meta Economica</th>
+                                    <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($roles as $rol) : ?>
+                                <?php foreach ($proyectos as $proyect) : ?>
                                     <tr>
-                                        <td><?= $rol['nombreRol']; ?></td>
+                                        <td><?= $proyect['nombre']; ?></td>
+                                        <td><?= $proyect['descripcion']; ?></td>
+                                        <td><?= $proyect['estado']; ?></td>
+                                        <td><?= $proyect['meta']; ?></td>
+                                        <td><?= $proyect['Acciones']; ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="<?= site_url('' . $rol['idRol']) ?>" class="btn btn-edit">
-                                                    <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
+                                                <a href="<?= site_url('proyecto/edit/' . $proyect['idProyecto']) ?>" class="btn btn-edit">
+                                                    <i class="mdi mdi-pencil"></i> <!-- Icono de edición -->
                                                 </a>
-                                                <!-- Agregar margen entre los botones -->
-                                                <a href="<?= site_url('' . $rol['idRol']) ?>" class="btn btn-delete">
-                                                    <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
+                                                <a href="<?= site_url('proyecto/delete/' . $proyect['idProyecto']) ?>" class="btn btn-delete">
+                                                    <i class="mdi mdi-delete"></i> <!-- Icono de eliminación -->
                                                 </a>
-                                                <!-- Fin de la separación -->
                                             </div>
                                         </td>
                                     </tr>

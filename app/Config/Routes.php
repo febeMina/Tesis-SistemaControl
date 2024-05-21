@@ -13,7 +13,11 @@ $routes->get('home', 'Home::index');
 $routes->get('maestros', 'Maestros::index');
 $routes->get('padres', 'Padres::index');
 $routes->get('tipo_permiso', 'TipoPermiso::index');
+$routes->get('roles', 'Roles::index');
+$routes->get('accesos', 'Acceso::index');
 $routes->get('usuario', 'Usuario::index');
+$routes->get('donaciones', 'Donaciones::index');
+$routes->get('proyectos', 'Proyectos::index');
 
 $routes->group('admin', function ($routes) {
     $routes->get('licencias', 'AdminLicencias::index');
@@ -60,6 +64,15 @@ $routes->get('login', 'Login::index');
 $routes->post('login/signin', 'Login::signIn');
 $routes->post('login/logout', 'Login::logout');
 
+// Rutas para el controlador Roles
+$routes->get('roles/create', 'Roles::create');
+$routes->post('roles/store', 'Roles::store');
+
+
+// Rutas para el controlador accesos
+$routes->get('accesos', 'Acceso::index');
+
+
 // Rutas para el controlador Usuario
 $routes->get('usuario/create', 'Usuario::create');
 $routes->post('usuario/store', 'Usuario::store');
@@ -76,6 +89,16 @@ $routes->post('tipo_producto/store', 'TipoProducto::store');
 $routes->get('tipo_producto/edit/(:num)', 'TipoProducto::edit/$1');
 $routes->post('tipo_producto/update/(:num)', 'TipoProducto::update/$1');
 $routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
+
+//Rutas donaciones
+$routes->get('donaciones', 'Donaciones::index');
+
+
+//Rutas proyectos
+$routes->get('proyectos', 'Proyectos::index');
+$routes->post('proyectos/store', 'Proyectos::store');
+$routes->get('proyectos/create', 'Proyectos::create');
+
 
 // Rutas para el controlador Unidades de Medida
 $routes->get('unidadesmedida', 'UnidadesMedida::index');

@@ -3,8 +3,6 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Models\UserModel; 
-use App\Models\RolesModel;
 
 class Padres extends Controller
 {
@@ -17,12 +15,21 @@ class Padres extends Controller
     }
     public function index()
     {
-        $tipoAcceso = new UserModel(); 
-        $accesos = $tipoAcceso->findAll(); 
-    
-        return view('accesos/index', ['accesos' => $accesos]);
+        $db = \Config\Database::connect();
+        $builder = $db->table('usuarios');
+        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, rol.nombreRol, docente.nombre_completo');
+        $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
+        $builder->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner');
+        $accesos = $builder->get()->getResult();
+        return view('acceso/index', ['usuarios' => $accesos]);
     }
+    
+    public function store()
+    {
+    
+    
 
+    }
     
     public function delete($id)
     {
