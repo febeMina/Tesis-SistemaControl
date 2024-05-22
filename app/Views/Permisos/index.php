@@ -27,9 +27,12 @@
                             <div class="col-md-4">
                                 <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Solicitud">
                             </div>
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
-                                <a href="<?= site_url('permiso_magisterial/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
+                            <div class="col-md-12 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+                                    <a href="<?= site_url('permiso_magisterial/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
+                                </div>
+                                <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-success mt-3">Agregar Permiso</a>
                             </div>
                         </div>
                     </form>

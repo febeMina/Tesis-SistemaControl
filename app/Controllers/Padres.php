@@ -17,12 +17,22 @@ class Padres extends Controller
     }
     public function index()
     {
-        $padreModel = new PadreModel(); 
-        $padres = $padreModel->findAll(); 
-    
-        return view('padres/index', ['padres' => $padres]);
-    }
+        $padreModel = new PadreModel();
+        
+        $request = \Config\Services::request();
+        $filters = [
+            'nombre_completo' => $request->getVar('nombre_completo'),
+            'dui' => $request->getVar('dui'),
+            'telefono' => $request->getVar('telefono'),
+            'estado' => $request->getVar('estado'),
+            'genero' => $request->getVar('genero')
+        ];
+        
+        // Filtrar los padres según los parámetros
+        $padres = $padreModel->getFilteredPadres($filters);
 
+        return view('padres/index', ['padres' => $padres, 'filters' => $filters]);
+    }
     public function create()
     {
         return view('padres/create');

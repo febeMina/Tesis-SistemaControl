@@ -19,7 +19,7 @@
                     <!-- Botón para agregar un nuevo maestro -->
                     <div class="mb-3">
                         <a href="<?= site_url('maestros/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> <!-- Icono de Material Design Icons -->
+                            <i class="mdi mdi-plus"> Agregar</i> <!-- Icono de Material Design Icons -->
                         </a>
                     </div>
                     <!-- Formulario de filtros -->

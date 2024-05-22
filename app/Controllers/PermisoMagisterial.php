@@ -98,54 +98,105 @@ class PermisoMagisterial extends BaseController
     
 
     public function index()
-{
-    $modelSaldosDocentes = new SaldosDocentesModel();
-    $saldos_docentes = $modelSaldosDocentes->findAll();
+    {
+        $request = service('request');
+        $filters = [
+            'nip' => $request->getVar('nip'),
+            'nombre_completo' => $request->getVar('nombre_completo'),
+            'fecha_solicitud' => $request->getVar('fecha_solicitud')
+        ];
 
-    $modelTipoPermiso = new TipoPermisoModel();
-    $tipos_permisos = $modelTipoPermiso->findAll();
-
-    $data['saldos_docentes'] = [];
-
-    foreach ($saldos_docentes as $saldo) {
+        $modelSaldosDocentes = new SaldosDocentesModel();
+        $modelTipoPermiso = new TipoPermisoModel();
         $modelMaestro = new MaestroModel();
-        $maestro = $modelMaestro->find($saldo['idDocente'] ?? null);
 
-        $detalle_saldos_permiso = [];
-        foreach ($tipos_permisos as $tipo_permiso) {
-            $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
-            $detalle_saldo_permiso = $modelDetalleSaldosTipoPermiso
-                ->where('idTipoPermiso', $tipo_permiso['idTipoPermiso'])
-                ->where('anio', date('Y'))
-                ->first();
+        // Obtener todos los saldos docentes
+        $saldos_docentes = $modelSaldosDocentes->findAll();
 
-            // Calcular días ocupados y disponibles
-            $dias_ocupados = 0; // Inicializar días ocupados en 0
-            $dias_disponibles = $detalle_saldo_permiso ? $detalle_saldo_permiso['saldo'] : 0; // Inicializar días disponibles con el saldo
+        // Filtrar los saldos docentes según los filtros
+        if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_solicitud'])) {
+            $saldos_docentes = $this->filterSaldosDocentes($saldos_docentes, $filters);
+        }
 
-            // Aquí debes realizar los cálculos para los días ocupados
-            // Puedes obtener los datos necesarios para calcularlos desde la base de datos o cualquier otra fuente de datos
+        $tipos_permisos = $modelTipoPermiso->findAll();
 
-            // Agregar los detalles al array
-            $detalle_saldos_permiso[] = [
-                'dias_ocupados' => $dias_ocupados,
-                'dias_disponibles' => $dias_disponibles,
-                'idTipoPermiso' => $detalle_saldo_permiso ? $detalle_saldo_permiso['idTipoPermiso'] : null,
-                'limite_dias' => $tipo_permiso['cantidad_dias'], // Aquí deberías obtener el límite de días del tipo de permiso
+        $data['saldos_docentes'] = [];
+
+        foreach ($saldos_docentes as $saldo) {
+            $maestro = $modelMaestro->find($saldo['idDocente'] ?? null);
+
+            $detalle_saldos_permiso = [];
+            foreach ($tipos_permisos as $tipo_permiso) {
+                $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
+                $detalle_saldo_permiso = $modelDetalleSaldosTipoPermiso
+                    ->where('idTipoPermiso', $tipo_permiso['idTipoPermiso'])
+                    ->where('anio', date('Y'))
+                    ->first();
+
+                // Calcular días ocupados y disponibles
+                $dias_ocupados = 0;
+                $dias_disponibles = $detalle_saldo_permiso ? $detalle_saldo_permiso['saldo'] : 0;
+
+                // Agregar los detalles al array
+                $detalle_saldos_permiso[] = [
+                    'dias_ocupados' => $dias_ocupados,
+                    'dias_disponibles' => $dias_disponibles,
+                    'idTipoPermiso' => $detalle_saldo_permiso ? $detalle_saldo_permiso['idTipoPermiso'] : null,
+                    'limite_dias' => $tipo_permiso['cantidad_dias'],
+                ];
+            }
+
+            // Verifica que las claves 'nombre_completo' y 'nip' existan antes de usarlas
+            $data['saldos_docentes'][] = [
+                'nombre_completo' => $maestro['nombre_completo'] ?? '',
+                'nip' => $maestro['nip'] ?? '',
+                'fecha_solicitud' => date('Y-m-d'),
+                'detalle_saldos_permiso' => $detalle_saldos_permiso,
             ];
         }
 
-        $data['saldos_docentes'][] = [
-            'nombre_completo' => $maestro['nombre_completo'] ?? '',
-            'nip' => $maestro['nip'] ?? '',
-            'fecha_solicitud' => date('Y-m-d'), // Fecha de solicitud (debe ser modificada según tu lógica de negocio)
-            'detalle_saldos_permiso' => $detalle_saldos_permiso,
-        ];
+        $data['tipos_permisos'] = $tipos_permisos;
+
+        return view('Permisos/index', $data);
     }
 
-    $data['tipos_permisos'] = $tipos_permisos;
-
-    return view('Permisos/index', $data);
-}
-
+    private function filterSaldosDocentes($saldos_docentes, $filters)
+    {
+        $filtered = [];
+    
+        foreach ($saldos_docentes as $saldo) {
+            $include = true;
+    
+            if (!empty($filters['nip'])) {
+                if (!isset($saldo['nip']) || strpos($saldo['nip'], $filters['nip']) === false) {
+                    $include = false;
+                }
+            }
+    
+            if (!empty($filters['nombre_completo'])) {
+                $modelMaestro = new MaestroModel();
+                $maestro = $modelMaestro->find($saldo['idDocente']);
+                if (!isset($maestro['nombre_completo']) || strpos($maestro['nombre_completo'], $filters['nombre_completo']) === false) {
+                    $include = false;
+                }
+            }
+    
+            if (!empty($filters['fecha_solicitud'])) {
+                if (!isset($saldo['fecha_solicitud']) || $filters['fecha_solicitud'] != date('Y-m-d', strtotime($saldo['fecha_solicitud']))) {
+                    $include = false;
+                }
+            }
+    
+            if ($include) {
+                error_log("Incluido: " . print_r($saldo, true)); // Depuración
+                $filtered[] = $saldo;
+            } else {
+                error_log("Excluido: " . print_r($saldo, true)); // Depuración
+            }
+        }
+    
+        return $filtered;
+    }
+    
+    
 }

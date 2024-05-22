@@ -57,6 +57,7 @@ $routes->get('tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
 $routes->get('permiso_magisterial', 'PermisoMagisterial::index');
 $routes->get('permiso_magisterial/create', 'PermisoMagisterial::create');
 $routes->post('permiso_magisterial/store', 'PermisoMagisterial::store'); // Ruta para el método store
+$routes->get('permiso_magisterial/index', 'PermisoMagisterial::index');
 
 //LOGIN
 $routes->get('login', 'Login::index');
