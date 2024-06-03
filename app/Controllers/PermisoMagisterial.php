@@ -10,16 +10,15 @@ use App\Models\TipoPermisoModel;
 class PermisoMagisterial extends BaseController
 {
     public function create()
-{
-    $modelMaestro = new MaestroModel();
-    $data['maestros'] = $modelMaestro->findAll();
+    {
+        $modelMaestro = new MaestroModel();
+        $data['maestros'] = $modelMaestro->findAll();
 
-    $modelTipoPermiso = new TipoPermisoModel();
-    $data['tipos_permisos'] = $modelTipoPermiso->findAll();
+        $modelTipoPermiso = new TipoPermisoModel();
+        $data['tipos_permisos'] = $modelTipoPermiso->findAll();
 
-    return view('Permisos/create', $data);
-}
-
+        return view('Permisos/create', $data);
+    }
 
     public function store()
     {
@@ -41,90 +40,94 @@ class PermisoMagisterial extends BaseController
         $fechaInicio = $this->request->getVar('fecha_inicio');
         $fechaFin = $this->request->getVar('fecha_fin');
     
-        // Calcular los días ocupados
+        // Calcular la diferencia en días
         $fechaInicio = new \DateTime($fechaInicio);
         $fechaFin = new \DateTime($fechaFin);
-        $diasOcupados = $fechaInicio->diff($fechaFin)->days;
+        $intervalo = $fechaInicio->diff($fechaFin);
+    
+        $diasOcupados = $intervalo->days;
     
         // Obtener la cantidad de días definida en el tipo de permiso
         $modelTipoPermiso = new TipoPermisoModel();
         $tipoPermiso = $modelTipoPermiso->find($idTipoPermiso);
-        
+    
         if (!$tipoPermiso) {
             return redirect()->back()->withInput()->with('error', 'El tipo de permiso no es válido.');
         }
-
+    
         $cantidadDias = $tipoPermiso['cantidad_dias'];
     
         // Calcular los días disponibles
         $diasDisponibles = $cantidadDias - $diasOcupados;
     
-        // Verificar la existencia del idDetallePermiso
+        // Obtener el detalle de saldos de tipo de permiso
         $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
-        $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso->find($idTipoPermiso);
+        $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso
+            ->where('idTipoPermiso', $idTipoPermiso)
+            ->where('anio', date('Y'))
+            ->first();
     
-        // Si el detalle_saldos_tipopermiso no existe, mostrar un mensaje de error
+        // Si el detalle_saldos_tipopermiso no existe, crear uno nuevo
         if (!$detalleSaldosTipoPermiso) {
-            return redirect()->back()->withInput()->with('error', 'El idDetallePermiso no es válido.');
+            $detalleSaldosTipoPermiso = [
+                'anio' => date('Y'),
+                'idTipoPermiso' => $idTipoPermiso,
+                'saldo' => 0
+            ];
+            $modelDetalleSaldosTipoPermiso->insert($detalleSaldosTipoPermiso);
+            $detalleSaldosTipoPermiso['idDetallePermiso'] = $modelDetalleSaldosTipoPermiso->getInsertID();
         }
     
-        // Insertar en la tabla saldos_docentes
+        // Actualizar o insertar en la tabla saldos_docentes
         $modelSaldosDocentes = new SaldosDocentesModel();
-        $saldoTotalDias = $diasOcupados;
-        $inserted = $modelSaldosDocentes->insert([
+    
+        // Insertar un nuevo registro
+        $modelSaldosDocentes->insert([
             'idDocente' => $idMaestro,
-            'idDetallePermiso' => $idTipoPermiso,
-            'saldo_total_dias' => $saldoTotalDias
+            'idDetallePermiso' => $detalleSaldosTipoPermiso['idDetallePermiso'],
+            'saldo_total_dias' => $diasOcupados,
+            'fecha_creacion' => date('Y-m-d H:i:s')
         ]);
-
-        if (!$inserted) {
-            return redirect()->back()->withInput()->with('error', 'Error al insertar en la tabla saldos_docentes.');
-        }
     
-        // Insertar en la tabla detalle_saldos_tipopermiso
-        $dataDetalleSaldosTipoPermiso = [
-            'anio' => date('Y'),
-            'idTipoPermiso' => $idTipoPermiso,
-            'saldo' => $diasDisponibles // Guardar los días disponibles
-        ];
-        $insertedDetalle = $modelDetalleSaldosTipoPermiso->insert($dataDetalleSaldosTipoPermiso);
-
-        if (!$insertedDetalle) {
-            return redirect()->back()->withInput()->with('error', 'Error al insertar en la tabla detalle_saldos_tipopermiso.');
-        }
-    
-        return redirect()->to(base_url('public/permiso_magisterial/index'))->with('success', 'El permiso magisterial ha sido creado exitosamente.');
+        return redirect()->to(site_url('permiso_magisterial/index'))->with('success', 'El permiso magisterial ha sido creado exitosamente.');
     }
     
-
+    
+    
+    
     public function index()
     {
         $request = service('request');
         $filters = [
             'nip' => $request->getVar('nip'),
             'nombre_completo' => $request->getVar('nombre_completo'),
-            'fecha_solicitud' => $request->getVar('fecha_solicitud')
+            'fecha_creacion' => $request->getVar('fecha_creacion')
         ];
-
+    
         $modelSaldosDocentes = new SaldosDocentesModel();
         $modelTipoPermiso = new TipoPermisoModel();
         $modelMaestro = new MaestroModel();
-
+        $data['tipos_permisos'] = $modelTipoPermiso->findAll(); // Aquí obtenemos todos los tipos de permiso
         // Obtener todos los saldos docentes
         $saldos_docentes = $modelSaldosDocentes->findAll();
-
+    
         // Filtrar los saldos docentes según los filtros
-        if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_solicitud'])) {
+        if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_creacion'])) {
             $saldos_docentes = $this->filterSaldosDocentes($saldos_docentes, $filters);
         }
-
+    
         $tipos_permisos = $modelTipoPermiso->findAll();
-
+    
         $data['saldos_docentes'] = [];
-
+    
         foreach ($saldos_docentes as $saldo) {
             $maestro = $modelMaestro->find($saldo['idDocente'] ?? null);
-
+        
+            // Verifica que las claves 'nombre_completo', 'nip' y 'fecha_creacion' existan antes de usarlas
+            $nombre_completo = $maestro['nombre_completo'] ?? '';
+            $nip = $maestro['nip'] ?? '';
+            $fecha_creacion = isset($saldo['fecha_creacion']) ? $saldo['fecha_creacion'] : '';
+        
             $detalle_saldos_permiso = [];
             foreach ($tipos_permisos as $tipo_permiso) {
                 $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
@@ -132,11 +135,25 @@ class PermisoMagisterial extends BaseController
                     ->where('idTipoPermiso', $tipo_permiso['idTipoPermiso'])
                     ->where('anio', date('Y'))
                     ->first();
+        
+                    // Calcular días, horas y minutos ocupados y disponibles para el maestro actual
+                    $dias_ocupados = 0;
+                    $dias_disponibles = $tipo_permiso['cantidad_dias'];
+                    
+                    if ($detalle_saldo_permiso) {
+                        $modelSaldosDocentes = new SaldosDocentesModel();
+                        $saldo_docente = $modelSaldosDocentes
+                            ->where('idDocente', $maestro['idDocente'])
+                            ->where('idDetallePermiso', $detalle_saldo_permiso['idDetallePermiso'])
+                            ->first();
+                    
+                        if ($saldo_docente) {
+                            $dias_ocupados = $saldo_docente['saldo_total_dias'];
+                            $dias_disponibles = $tipo_permiso['cantidad_dias'] - $dias_ocupados;
+                        }
+                    }
 
-                // Calcular días ocupados y disponibles
-                $dias_ocupados = 0;
-                $dias_disponibles = $detalle_saldo_permiso ? $detalle_saldo_permiso['saldo'] : 0;
-
+        
                 // Agregar los detalles al array
                 $detalle_saldos_permiso[] = [
                     'dias_ocupados' => $dias_ocupados,
@@ -145,21 +162,22 @@ class PermisoMagisterial extends BaseController
                     'limite_dias' => $tipo_permiso['cantidad_dias'],
                 ];
             }
-
-            // Verifica que las claves 'nombre_completo' y 'nip' existan antes de usarlas
+        
             $data['saldos_docentes'][] = [
-                'nombre_completo' => $maestro['nombre_completo'] ?? '',
-                'nip' => $maestro['nip'] ?? '',
-                'fecha_solicitud' => date('Y-m-d'),
+                'nombre_completo' => $nombre_completo,
+                'nip' => $nip,
+                'fecha_creacion' => $fecha_creacion,
                 'detalle_saldos_permiso' => $detalle_saldos_permiso,
             ];
         }
-
+    
         $data['tipos_permisos'] = $tipos_permisos;
-
+    
         return view('Permisos/index', $data);
     }
-
+    
+    
+    
     private function filterSaldosDocentes($saldos_docentes, $filters)
     {
         $filtered = [];
@@ -181,22 +199,17 @@ class PermisoMagisterial extends BaseController
                 }
             }
     
-            if (!empty($filters['fecha_solicitud'])) {
-                if (!isset($saldo['fecha_solicitud']) || $filters['fecha_solicitud'] != date('Y-m-d', strtotime($saldo['fecha_solicitud']))) {
+            if (!empty($filters['fecha_creacion'])) {
+                if (!isset($saldo['fecha_creacion']) || $filters['fecha_creacion'] != date('Y-m-d', strtotime($saldo['fecha_creacion']))) {
                     $include = false;
                 }
             }
     
             if ($include) {
-                error_log("Incluido: " . print_r($saldo, true)); // Depuración
                 $filtered[] = $saldo;
-            } else {
-                error_log("Excluido: " . print_r($saldo, true)); // Depuración
             }
         }
     
         return $filtered;
-    }
-    
-    
+    }    
 }

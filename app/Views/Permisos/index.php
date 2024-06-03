@@ -38,15 +38,12 @@
                     </form>
                     <!-- Tabla de saldos de permiso -->
                     <div class="table-responsive">
-                        <table class="table" style="color: #000;">
+                        <table class="table table-sm" style="color: #000; font-size: 0.9rem;">
                             <thead>
                                 <tr>
                                     <th>NIP</th>
                                     <th>Nombre del Maestro</th>
                                     <th>Fecha de Solicitud</th>
-                                    <?php foreach ($tipos_permisos as $tipo_permiso): ?>
-                                        <th><?= $tipo_permiso['nombre'] ?> (<?= $tipo_permiso['cantidad_dias'] ?>)</th>
-                                    <?php endforeach; ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,18 +51,37 @@
                                     <tr>
                                         <td><?= $saldo['nip'] ?></td>
                                         <td><?= $saldo['nombre_completo'] ?></td>
-                                        <td><?= $saldo['fecha_solicitud'] ?></td>
-                                        <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle_saldo): ?>
-                                            <td>
-                                                <!-- Mostrar los días ocupados y disponibles con coloración -->
-                                                <div>
-                                                    <strong>Días Ocupados:</strong> <?= $detalle_saldo['dias_ocupados'] ?>
-                                                </div>
-                                                <div>
-                                                    <strong>Días Disponibles:</strong> <?= $detalle_saldo['dias_disponibles'] ?>
-                                                </div>
-                                            </td>
-                                        <?php endforeach; ?>
+                                        <td><?= $saldo['fecha_creacion'] ?></td>
+                                        <td>
+                                            <table class="table table-bordered table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tipo de Permiso</th>
+                                                        <th>Días Ocupados</th>
+                                                        <th>Días Disponibles</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle): ?>
+                                                        <?php
+                                                        // Buscar el nombre del tipo de permiso usando el idTipoPermiso
+                                                        $nombreTipoPermiso = '';
+                                                        foreach ($tipos_permisos as $tipo_permiso) {
+                                                            if ($tipo_permiso['idTipoPermiso'] == $detalle['idTipoPermiso']) {
+                                                                $nombreTipoPermiso = $tipo_permiso['nombre'] . ' (' . $tipo_permiso['cantidad_dias'] . ' días)';
+                                                                break;
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <tr>
+                                                            <td><?= $nombreTipoPermiso ?></td>
+                                                            <td><?= $detalle['dias_ocupados'] ?></td>
+                                                            <td><?= $detalle['dias_disponibles'] ?></td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </tbody>
+                                            </table>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

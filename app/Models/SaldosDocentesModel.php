@@ -8,7 +8,7 @@ class SaldosDocentesModel extends Model
 {
     protected $table = 'saldos_docentes';
     protected $primaryKey = 'idSaldoDocentes';
-    protected $allowedFields = ['idDocente', 'idDetallePermiso', 'saldo_total_dias'];
+    protected $allowedFields = ['idDocente', 'idDetallePermiso', 'saldo_total_dias', 'fecha_creacion'];
 
     protected $useAutoIncrement = true;
 

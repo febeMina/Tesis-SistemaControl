@@ -88,3 +88,7 @@ $routes->post('unidadesmedida/store', 'UnidadesMedida::store');
 $routes->get('unidadesmedida/edit/(:num)', 'UnidadesMedida::edit/$1');
 $routes->post('unidadesmedida/update/(:num)', 'UnidadesMedida::update/$1');
 $routes->get('unidadesmedida/delete/(:num)', 'UnidadesMedida::delete/$1');
+
+
+//Rutas para reporte de permiso magisterial
+$routes->get('permiso_magisterial/report', 'PermisoMagisterial::report');
