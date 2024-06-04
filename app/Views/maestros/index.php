@@ -1,7 +1,6 @@
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
-<!-- Contenido de la página -->
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-12">
@@ -19,7 +18,7 @@
                     <!-- Botón para agregar un nuevo maestro -->
                     <div class="mb-3">
                         <a href="<?= site_url('maestros/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"> Agregar</i> <!-- Icono de Material Design Icons -->
+                            <i class="mdi mdi-plus"> Agregar</i>
                         </a>
                     </div>
                     <!-- Formulario de filtros -->
@@ -46,10 +45,10 @@
                             </div>
                             <div class="col-md-2 d-flex align-items-start">
                                 <button type="submit" class="btn btn-primary me-2 btn-icon">
-                                    <i class="mdi mdi-filter"></i> <!-- Icono de Material Design Icons -->
+                                    <i class="mdi mdi-filter"></i>
                                 </button>
                                 <a href="<?= site_url('maestros/index') ?>" class="btn btn-secondary btn-icon">
-                                    <i class="mdi mdi-close"></i> <!-- Icono de Material Design Icons -->
+                                    <i class="mdi mdi-close"></i>
                                 </a>
                             </div>
                         </div>
@@ -80,10 +79,10 @@
                                             <?php if (isset($maestro['idDocente'])): ?>
                                                 <div class="btn-group">
                                                     <a href="<?= site_url('maestros/edit/' . esc($maestro['idDocente'])) ?>" class="btn btn-edit">
-                                                        <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
+                                                        <i class="mdi mdi-pencil"></i>
                                                     </a>
-                                                    <a href="<?= site_url('maestros/delete/' . esc($maestro['idDocente'])) ?>" class="btn btn-delete" onclick="return confirm('¿Está seguro de que desea eliminar este maestro?');">
-                                                        <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
+                                                    <a href="<?= site_url('maestros/delete/' . esc($maestro['idDocente'])) ?>" class="btn btn-delete" onclick="return confirm('¿Está seguro de que desea marcar este maestro como inactivo?');">
+                                                        <i class="mdi mdi-delete"></i>
                                                     </a>
                                                 </div>
                                             <?php endif; ?>

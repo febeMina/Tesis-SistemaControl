@@ -2,7 +2,6 @@
 
 <?= $this->section('content') ?>
 
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -27,22 +26,25 @@
                             <input type="text" class="form-control" id="nip" name="nip" value="<?= $maestro['nip'] ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="escalafon" style="color: #000;"><i class="fas fa-user-tie"></i> Escalafón</label>
+                            <label for="escalafon" style="color: #000;"><i class="fas fa-chart-line"></i> Escalafón</label>
                             <input type="text" class="form-control" id="escalafon" name="escalafon" value="<?= $maestro['escalafon'] ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="fecha_ingreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de Ingreso</label>
+                            <label for="fecha_ingreso" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha de Ingreso</label>
                             <input type="date" class="form-control" id="fecha_ingreso" name="fecha_ingreso" value="<?= $maestro['fecha_ingreso'] ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
-                                <option value="Activo" <?= ($maestro['estado'] == 'Activo') ? 'selected' : '' ?>>Activo</option>
-                                <option value="Inactivo" <?= ($maestro['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
+                                <option value="Activo" <?= $maestro['estado'] === 'Activo' ? 'selected' : '' ?>>Activo</option>
+                                <option value="Inactivo" <?= $maestro['estado'] === 'Inactivo' ? 'selected' : '' ?>>Inactivo</option>
                             </select>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary" style="background-color: #090066;">Actualizar</button>
+                            <button type="submit" class="btn btn-primary btn-lg mt-4">
+                                <i class="fas fa-save"></i> Guardar Cambios
+                            </button>
+                            <a href="<?= site_url('maestros/index') ?>" class="btn btn-secondary btn-lg mt-4"><i class="fas fa-times"></i> Cancelar</a>
                         </div>
                     </form>
                 </div>

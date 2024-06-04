@@ -18,7 +18,7 @@ class Maestros extends Controller
     public function index()
     {
         $request = service('request');
-
+    
         // Obtener los datos de filtro del formulario
         $filters = [
             'nombre_completo' => $request->getVar('nombre_completo'),
@@ -27,15 +27,14 @@ class Maestros extends Controller
             'fecha_ingreso' => $request->getVar('fecha_ingreso'),
             'estado' => $request->getVar('estado')
         ];
-
+    
         // Obtener los datos filtrados
         $maestrosData = $this->maestroModel->filter($filters);
-
+    
         // Pasar los datos a la vista
         return view('maestros/index', ['maestros' => $maestrosData]);
     }
     
-
     
 
     public function create()
@@ -103,13 +102,23 @@ class Maestros extends Controller
     }
     
 
-
     public function delete($id)
-    {
-        // Eliminar el maestro de la base de datos
-        $this->maestroModel->delete($id);
-
-        // Redireccionar a la página principal o mostrar un mensaje de éxito
-        return redirect()->to(site_url('maestros'));
+{
+    // Verificar si el ID existe
+    $maestro = $this->maestroModel->find($id);
+    if (!$maestro) {
+        return redirect()->to(site_url('maestros'))->with('error', 'Maestro no encontrado.');
     }
+
+    // Marcar el registro como inactivo
+    $data = ['estado' => 'Inactivo'];
+    if ($this->maestroModel->update($id, $data)) {
+        // Recargar la vista sin el maestro eliminado
+        return redirect()->to(site_url('maestros'))->with('success', 'El maestro ha sido marcado como inactivo.');
+    } else {
+        return redirect()->to(site_url('maestros'))->with('error', 'No se pudo marcar el maestro como inactivo.');
+    }
+}
+
+
 }
