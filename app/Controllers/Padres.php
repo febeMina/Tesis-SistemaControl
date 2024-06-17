@@ -101,65 +101,84 @@ class Padres extends Controller
     $alumnos = $alumnoModel->getAlumnosByPadreId($id);
 
     // Modificamos el nombre del campo 'Genero' a 'sexo_padre' para evitar conflictos
-    $padre['sexo_padre'] = $padre['Genero'];
+    $padre['genero_padre'] = $padre['Genero'];
 
     // Renombrar el campo 'Genero' de los alumnos para evitar conflictos
     foreach ($alumnos as &$alumno) {
-        $alumno['sexo_alumno'] = $alumno['Sexo_alumno'];
+        $alumno['genero_alumno'] = $alumno['Genero_alumno'];
     }
 
     return view('padres/edit', ['padre' => $padre, 'alumnos' => $alumnos]);
 }
 
     
-    public function update($id)
-    {
-        $request = \Config\Services::request();
-        $nombre_completo = $request->getVar('nombre_completo');
-        $genero = $request->getVar('Genero'); // Cambiar a mayúscula 'Genero' si así está definido en tu formulario
-        $dui = $request->getVar('dui'); // Cambiar a minúscula 'dui' si así está definido en tu formulario
-        $telefono = $request->getVar('telefono');
-        $estado = $request->getVar('estado');
-        $alumno_nombre_completo = $request->getVar('alumno_nombre_completo');
-        $alumno_sexo = $request->getVar('alumno_sexo');
-        $alumno_nie = $request->getVar('alumno_nie');
-        $alumno_estado = $request->getVar('alumno_estado');
-        $alumno_id = $request->getVar('alumno_id');
-        
-        $padreModel = new PadreModel(); 
-        $dataPadre = [
-            'nombreCompleto' => $nombre_completo,
-            'Genero' => $genero,
-            'DUI' => $dui,
-            'telefono' => $telefono,
-            'estado' => $estado,
-        ];
-        $padreModel->update($id, $dataPadre);
+public function update($id)
+{
+    // Captura los datos del formulario
+    $request = \Config\Services::request();
+    $nombre_completo = $request->getVar('nombre_completo');
+    $genero = $request->getVar('genero');
+    $dui = $request->getVar('dui');
+    $telefono = $request->getVar('telefono');
+    $estado = $request->getVar('estado');
+    $alumno_nombre_completo = $request->getVar('alumno_nombre_completo');
+    $alumno_sexo = $request->getVar('alumno_sexo');
+    $alumno_nie = $request->getVar('alumno_nie');
+    $alumno_estado = $request->getVar('alumno_estado');
+    $alumno_id = $request->getVar('alumno_id');
+    $nuevo_alumno_nombre_completo = $request->getVar('nuevo_alumno_nombre_completo');
+    $nuevo_alumno_sexo = $request->getVar('nuevo_alumno_sexo');
+    $nuevo_alumno_nie = $request->getVar('nuevo_alumno_nie');
+    $nuevo_alumno_estado = $request->getVar('nuevo_alumno_estado');
     
-        // Verificar si los datos de los alumnos existen antes de intentar acceder a ellos
-        if (!empty($alumno_nombre_completo) && is_array($alumno_nombre_completo)) {
-            $alumnoModel = new AlumnoModel();
-            foreach ($alumno_nombre_completo as $key => $nombreAlumno) {
-                // Verificar si los datos del alumno en esta posición existen antes de acceder a ellos
-                if (isset($alumno_sexo[$key], $alumno_nie[$key], $alumno_estado[$key], $alumno_id[$key])) {
-                    $dataAlumno = [
-                        'nombreAlumno' => $nombreAlumno,
-                        'Sexo_alumno' => $alumno_sexo[$key],
-                        'NIE' => $alumno_nie[$key],
-                        'estado' => $alumno_estado[$key],
-                    ];
-                    // Actualizar el alumno utilizando el ID del alumno correspondiente
-                    $alumnoModel->update($alumno_id[$key], $dataAlumno);
-                } else {
-                    // Manejar el caso de datos faltantes o nulos
-                    // Puedes mostrar un mensaje de error o manejarlo según sea necesario
-                }
+    // Actualiza los datos del padre
+    $padreModel = new PadreModel(); 
+    $dataPadre = [
+        'nombreCompleto' => $nombre_completo,
+        'Genero' => $genero,
+        'DUI' => $dui,
+        'telefono' => $telefono,
+        'estado' => $estado,
+    ];
+    $padreModel->update($id, $dataPadre);
+
+    // Actualiza los datos de los alumnos existentes
+    if (!empty($alumno_nombre_completo) && is_array($alumno_nombre_completo)) {
+        $alumnoModel = new AlumnoModel();
+        foreach ($alumno_nombre_completo as $key => $nombreAlumno) {
+            // Verifica si los datos del alumno existen antes de intentar acceder a ellos
+            if (isset($alumno_sexo[$key], $alumno_nie[$key], $alumno_estado[$key], $alumno_id[$key])) {
+                $dataAlumno = [
+                    'nombreAlumno' => $nombreAlumno,
+                    'Genero_alumno' => $alumno_sexo[$key],
+                    'NIE' => $alumno_nie[$key],
+                    'estado' => $alumno_estado[$key],
+                ];
+                // Actualiza el alumno utilizando el ID del alumno correspondiente
+                $alumnoModel->update($alumno_id[$key], $dataAlumno);
             }
         }
-    
-        // Redireccionar al index de padres
-        return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido actualizado exitosamente.');
     }
+
+    // Inserta nuevos alumnos asociados al padre
+    if (!empty($nuevo_alumno_nombre_completo) && is_array($nuevo_alumno_nombre_completo)) {
+        foreach ($nuevo_alumno_nombre_completo as $key => $nombreAlumno) {
+            $dataNuevoAlumno = [
+                'nombreAlumno' => $nombreAlumno,
+                'Genero_alumno' => $nuevo_alumno_sexo[$key],
+                'NIE' => $nuevo_alumno_nie[$key],
+                'estado' => $nuevo_alumno_estado[$key],
+                'idPadre' => $id,
+            ];
+            // Inserta el nuevo alumno
+            $alumnoModel->insert($dataNuevoAlumno);
+        }
+    }
+
+    // Redirecciona al index de padres
+    return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido actualizado exitosamente.');
+}
+
     
 
     

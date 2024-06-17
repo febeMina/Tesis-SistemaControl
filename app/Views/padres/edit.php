@@ -1,4 +1,3 @@
-<!-- edit.php -->
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
@@ -24,10 +23,10 @@
                             <input type="text" class="form-control" id="telefono" name="telefono" value="<?= $padre['telefono'] ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="genero" style="color: #000;"><i class="fas fa-venus-mars"></i> Genero</label>
-                            <select class="form-control" name="padre_sexo" required>
-                                <option value="Masculino" <?= ($padre['sexo_padre'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
-                                <option value="Femenino" <?= ($padre['sexo_padre'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
+                            <label for="genero" style="color: #000;"><i class="fas fa-venus-mars"></i> Género</label>
+                            <select class="form-control" name="genero" required>
+                                <option value="Masculino" <?= ($padre['genero_padre'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
+                                <option value="Femenino" <?= ($padre['genero_padre'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -45,7 +44,7 @@
                                     <thead>
                                         <tr>
                                             <th>Nombre Completo</th>
-                                            <th>Genero</th>
+                                            <th>Género</th>
                                             <th>NIE</th>
                                             <th>Estado</th>
                                         </tr>
@@ -55,10 +54,10 @@
                                             <tr>
                                                 <td><input type="text" class="form-control" name="alumno_nombre_completo[]" value="<?= $alumno['nombreAlumno'] ?>" required></td>
                                                 <td>
-                                                <select class="form-control" name="alumno_sexo[]" required>
-                                                    <option value="Masculino" <?= ($alumno['sexo_alumno'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
-                                                    <option value="Femenino" <?= ($alumno['sexo_alumno'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
-                                                </select>
+                                                    <select class="form-control" name="alumno_sexo[]" required>
+                                                        <option value="Masculino" <?= ($alumno['genero_alumno'] == 'Masculino') ? 'selected' : '' ?>>Masculino</option>
+                                                        <option value="Femenino" <?= ($alumno['genero_alumno'] == 'Femenino') ? 'selected' : '' ?>>Femenino</option>
+                                                    </select>
                                                 </td>
                                                 <td><input type="text" class="form-control" name="alumno_nie[]" value="<?= $alumno['NIE'] ?>" required></td>
                                                 <td>
@@ -67,7 +66,7 @@
                                                         <option value="Inactivo" <?= ($alumno['estado'] == 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
                                                     </select>
                                                 </td>
-                                                <!-- Agregar campo oculto para el ID del alumno -->
+                                                <!-- Campo oculto para el ID del alumno -->
                                                 <input type="hidden" name="alumno_id[]" value="<?= $alumno['idAlumno'] ?>">
                                             </tr>
                                         <?php endforeach; ?>
@@ -76,6 +75,43 @@
                             </div>
                         </div>
                         <!-- Fin de campos para editar alumnos -->
+
+                        <!-- Campos para agregar nuevos alumnos -->
+                        <div class="mt-12">
+                            <h4 class="text-center" style="color: #000;">Agregar Nuevo Alumno</h4>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre Completo</th>
+                                            <th>Género</th>
+                                            <th>NIE</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" name="nuevo_alumno_nombre_completo[]" required></td>
+                                            <td>
+                                                <select class="form-control" name="nuevo_alumno_sexo[]" required>
+                                                    <option value="Masculino">Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="text" class="form-control" name="nuevo_alumno_nie[]" required></td>
+                                            <td>
+                                                <select class="form-control" name="nuevo_alumno_estado[]" required>
+                                                    <option value="Activo">Activo</option>
+                                                    <option value="Inactivo">Inactivo</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Fin de campos para agregar nuevos alumnos -->
+
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-primary">Actualizar Padre</button>
                         </div>
@@ -85,4 +121,5 @@
         </div>
     </div>
 </div>
+
 <?= $this->endSection() ?>

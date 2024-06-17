@@ -1,0 +1,55 @@
+CRITICAL - 2024-06-13 20:59:20 --> ErrorException: Undefined array key "idMaestro"
+in APPPATH\Views\Permisos\create.php on line 22.
+ 1 APPPATH\Views\Permisos\create.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idMaestro"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('Permisos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-13 21:01:02 --> ErrorException: Undefined array key "idMaestro"
+in APPPATH\Views\Permisos\create.php on line 22.
+ 1 APPPATH\Views\Permisos\create.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idMaestro"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('Permisos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-13 21:01:14 --> ErrorException: Undefined array key "idMaestro"
+in APPPATH\Views\Permisos\create.php on line 22.
+ 1 APPPATH\Views\Permisos\create.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idMaestro"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('Permisos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-13 21:01:23 --> ErrorException: Undefined array key "idMaestro"
+in APPPATH\Views\Permisos\create.php on line 22.
+ 1 APPPATH\Views\Permisos\create.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idMaestro"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('Permisos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-13 21:01:29 --> ErrorException: Undefined array key "idMaestro"
+in APPPATH\Views\Permisos\create.php on line 22.
+ 1 APPPATH\Views\Permisos\create.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idMaestro"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(20): view('Permisos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

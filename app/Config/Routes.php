@@ -54,10 +54,16 @@ $routes->get('tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
 
 
 // Rutas para el módulo de permisos magisteriales
-$routes->get('permiso_magisterial', 'PermisoMagisterial::index');
-$routes->get('permiso_magisterial/create', 'PermisoMagisterial::create');
-$routes->post('permiso_magisterial/store', 'PermisoMagisterial::store'); // Ruta para el método store
+
 $routes->get('permiso_magisterial/index', 'PermisoMagisterial::index');
+$routes->post('permiso_magisterial/store', 'PermisoMagisterial::store');
+$routes->get('permiso_magisterial/create', 'PermisoMagisterial::create');
+$routes->get('report', 'ReportController::index');
+
+$routes->get('permiso_magisterial/generarReportePDF', 'PermisoMagisterial::generarReportePDF');
+$routes->get('permiso_magisterial/generarReporteExcel', 'PermisoMagisterial::generarReporteExcel');
+
+
 
 //LOGIN
 $routes->get('login', 'Login::index');
@@ -90,5 +96,3 @@ $routes->post('unidadesmedida/update/(:num)', 'UnidadesMedida::update/$1');
 $routes->get('unidadesmedida/delete/(:num)', 'UnidadesMedida::delete/$1');
 
 
-//Rutas para reporte de permiso magisterial
-$routes->get('permiso_magisterial/report', 'PermisoMagisterial::report');

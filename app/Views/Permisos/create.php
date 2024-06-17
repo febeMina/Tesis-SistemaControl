@@ -32,16 +32,21 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
-
+                    
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="fecha_inicio" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha y Hora de Inicio</label>
-                                <input type="datetime-local" name="fecha_inicio" id="fecha_inicio" class="form-control form-control-sm">
+                                <label for="fecha_inicio" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha de Inicio</label>
+                                <input type="date" name="fecha_inicio" id="fecha_inicio" class="form-control form-control-sm" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="fecha_fin" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha y Hora de Fin</label>
-                                <input type="datetime-local" name="fecha_fin" id="fecha_fin" class="form-control form-control-sm">
+                                <label for="fecha_fin" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha de Fin</label>
+                                <input type="date" name="fecha_fin" id="fecha_fin" class="form-control form-control-sm" required>
                             </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="horas_ocupadas" style="color: #000;"><i class="fas fa-clock"></i> Horas Ocupadas</label>
+                            <input type="number" name="horas_ocupadas" id="horas_ocupadas" class="form-control form-control-sm" placeholder="Ingrese el total de horas ocupadas">
                         </div>
 
                         <div class="text-center mt-4">
