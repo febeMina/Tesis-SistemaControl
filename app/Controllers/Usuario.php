@@ -12,7 +12,7 @@ class Usuario extends Controller
         if (!session()->get('isLoggedIn')) {
             redirect()->to(base_url('public/login'))->send();
             exit;
-        }
+        } 
     }
 
     public function index()
@@ -75,7 +75,7 @@ class Usuario extends Controller
             'usuarioModifica' => session()->get('usuario'), // Inicialmente el mismo usuario que crea
             'fechaModifica' => date('Y-m-d H:i:s') // Inicialmente la misma fecha y hora que crea
         ];
-
+ 
         $builder->insert($data);
 
         // Devolver una respuesta JSON indicando éxito

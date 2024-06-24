@@ -4,11 +4,12 @@
         <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-mini.svg') ?>" alt="logo" /></a>
     </div>
     <ul class="nav">
+        
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="<?= base_url('public/assets/images/faces/face15.jpg') ?>" alt="">
+                        <img class="img-xs rounded-circle " src="<?= base_url('public/assets/images/faces/admin.png') ?>" alt="">
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
@@ -81,7 +82,7 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('usuario') ?>" class="nav-link">Usuarios</a></li>
                     <li class="nav-item"><a href="<?= site_url('roles') ?>" class="nav-link">Roles</a></li>
-                    <li class="nav-item"><a href="<?= site_url('accesos') ?>" class="nav-link">Accesos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('acceso') ?>" class="nav-link">Accesos</a></li>
                     <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Padres</a></li>
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Docentes</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
@@ -100,7 +101,7 @@
               <div class="collapse" id="donaciones">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('proyectos') ?>" class="nav-link">Proyectos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('') ?>" class="nav-link">Listado de Donaciones</a></li>
+                    <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Listado de Donaciones</a></li>
                 </ul>
             </div>
         </li>

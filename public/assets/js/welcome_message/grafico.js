@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Inicialización de la gráfica de metas
+
+  
   const ctx = document.getElementById('goalsChart').getContext('2d');
   const goalsChart = new Chart(ctx, {
     type: 'bar',
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1
-      }]
+      }] 
     },
     options: {
       scales: {

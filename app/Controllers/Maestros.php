@@ -36,7 +36,6 @@ class Maestros extends Controller
     }
     
 
-    
 
     public function create()
     {
@@ -102,8 +101,6 @@ class Maestros extends Controller
         return $this->response->setJSON(['success' => true, 'redirect' => site_url('maestros')]);
     }
     
-
-
     public function delete($id)
     {
         // Eliminar el maestro de la base de datos

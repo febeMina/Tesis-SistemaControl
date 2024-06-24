@@ -7,21 +7,27 @@ use CodeIgniter\Controller;
 
 class Proyectos extends Controller
 {
-    public function index()
-    {
-        $model = new ProyectosModel();
-        $data['proyectos'] = $model->findAll();
-
-        return view('proyectos/index', $data);
+    public function __construct(){
+        helper('url');
+        if (!session()->get('isLoggedIn')) {
+            redirect()->to(base_url('public/login'))->send();
+            exit;
+        }
     }
 
-    public function __construct()
-    {
-        helper('form');
+    public function index()
+    { 
+        $db = \Config\Database::connect();
+        $projectBuilder = $db->table('proyectos');
+        $proyectos = $projectBuilder->select('idProyectos', 'nombreProyecto', 'descripcion', 'estado', 'meta')->get()->getResult();
+    
+        return view('proyectos/index', $proyectos);
     }
 
     public function create()
     {
+
+        
         return view('proyectos/create');
     }
 
@@ -45,32 +51,32 @@ class Proyectos extends Controller
     public function update($id)
     {
         $request = \Config\Services::request();
-        $unidadModel = new UnidadesMedidaModel();
+        $proyectModel = new ProyectoModel();
 
         $data = [
-            'nombre' => $request->getVar('nombre'),
-            'abreviatura' => $request->getVar('abreviatura'),
-            'descripción' => $request->getVar('descripción'), // Corregido aquí
-            'estado' => $request->getVar('estado')
+            'nombreProyecto' => $request->getVar('nombreProyecto'),
+            'descripción' => $request->getVar('descripcion'), // Corregido aquí
+            'estado' => $request->getVar('estado'),
+            'meta' => $request->getVar('meta')
         ];
 
-        $unidadModel->update($id, $data);
+        $proyectModel->update($id, $data);
 
-        return redirect()->to(site_url('unidadesmedida'));
+        return redirect()->to(site_url('proyectos'));
     }
 
     public function edit($id)
     {
-        $unidadModel = new UnidadesMedidaModel();
-        $unidad = $unidadModel->find($id);
+        $proyectModel = new ProyectoModel();
+        $proyecto = $proyectModel->find($id);
 
-        return view('unidades_medida/edit', ['unidad' => $unidad]);
+        return view('proyecto/edit', ['proyecto' => $proyecto]);
     }
 
     public function delete($id)
     {
-        $model = new UnidadesMedidaModel();
-        $model->delete($id);
-        return redirect()->to(site_url('unidadesmedida'));
+        $proyectModel = new ProyectoModel();
+        $proyectModel->delete($id);
+        return redirect()->to(site_url('proyecto'));
     }
 }

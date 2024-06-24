@@ -42,7 +42,8 @@ class Roles extends Controller
         $db = \Config\Database::connect();
         $builder = $db->table('rol');
         $data = [
-            'nombreRol' => $nombreRol
+            'nombreRol' => $nombreRol,
+            'estado'=> "Activo"
         ];
         $builder->insert($data);
 
@@ -93,11 +94,3 @@ public function delete($id)
     return redirect()->to(site_url('roles'));
 }
 }
-
-
-
-
-
-
-
-

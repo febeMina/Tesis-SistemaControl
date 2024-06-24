@@ -12,9 +12,22 @@
 
 <body>
     <div class="container-scroller">
-        <!-- partial:partials/_sidebar.html -->
-        <?=$this->include('includes/navbar/_navbar') ?>
+       
+    <!-- partial:partials/_sidebar.html -->
 
+    <!-- VALIDACIÓN SEGUN ROL INICIO -->
+    <?php if (session()->get('rol')=="Administrador"): ?>
+            <?=$this->include('includes/navbar/_navbar') ?>
+     <?php endif; ?>
+    <?php if (session()->get('rol')=="Tesoreria"): ?>
+            <?=$this->include('includes/navbar/_navbar3') ?>
+    <?php endif; ?>
+    <?php if (session()->get('rol')=="Cocina"): ?>
+    <?=$this->include('includes/navbar/_navbar2') ?>
+
+    <?php endif; ?>
+    
+ <!-- VALIDACIÓN SEGUN ROL FIN -->
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_navbar.html -->

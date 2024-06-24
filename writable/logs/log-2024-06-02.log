@@ -1,0 +1,22 @@
+CRITICAL - 2024-06-02 18:01:49 --> ErrorException: Undefined variable $rol
+in APPPATH\Views\Accesos\index.php on line 44.
+ 1 APPPATH\Views\Accesos\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rol', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\TipoAccesos.php(26): view('accesos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-02 18:01:55 --> ErrorException: Undefined variable $rol
+in APPPATH\Views\Accesos\index.php on line 44.
+ 1 APPPATH\Views\Accesos\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rol', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\TipoAccesos.php(26): view('accesos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

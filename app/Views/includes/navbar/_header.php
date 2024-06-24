@@ -28,7 +28,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
                     aria-labelledby="profileDropdown">
-                    <h6 class="p-3 mb-0">Profile</h6>
+                    <h6 class="p-3 mb-0">Perfil</h6>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="preview-item-content">
-                            <p class="preview-subject mb-1">Settings</p>
+                            <p class="preview-subject mb-1">Ajustes</p>
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
@@ -52,7 +52,7 @@
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <p class="p-3 mb-0 text-center">Advanced settings</p>
+                    <p class="p-3 mb-0 text-center">Configuraciones Avanzadas</p>
                 </div>
             </li>
         </ul>

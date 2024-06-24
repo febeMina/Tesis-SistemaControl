@@ -1,0 +1,417 @@
+CRITICAL - 2024-06-10 17:41:45 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\TipoAccesos.php(22): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 17:50:51 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Accesos.php(22): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Accesos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Accesos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 17:57:43 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Acceso.php(20): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 17:58:18 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Acceso.php(20): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 17:59:06 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Acceso.php(20): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 18:00:46 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Acceso.php(20): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 18:18:05 --> ErrorException: Undefined variable $user
+in APPPATH\Views\Accesos\index.php on line 33.
+ 1 APPPATH\Views\Accesos\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Acceso.php(20): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 18:19:23 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 33.
+ 1 APPPATH\Views\Accesos\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Acceso.php(20): view('accesos/index')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 18:30:25 --> ErrorException: Undefined variable $acceso
+in APPPATH\Views\Accesos\index.php on line 39.
+ 1 APPPATH\Views\Accesos\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $acceso', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\Acceso.php(32): view('accesos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 19:31:13 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\proyectos\index.php on line 39.
+ 1 APPPATH\Views\proyectos\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 19:31:29 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\proyectos\index.php on line 39.
+ 1 APPPATH\Views\proyectos\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 19:34:31 --> ErrorException: Undefined variable $data
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 19:34:33 --> ErrorException: Undefined variable $data
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 19:34:37 --> ErrorException: Undefined variable $data
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 19:41:43 --> ErrorException: Undefined variable $data
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 19:47:04 --> ErrorException: Undefined array key "Genero"
+in APPPATH\Views\padres\index.php on line 43.
+ 1 APPPATH\Views\padres\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Genero"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(23): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:04:28 --> ErrorException: Undefined variable $data
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:10:36 --> ErrorException: Undefined variable $data
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(15): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:15:49 --> ErrorException: Undefined variable $data
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(23): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:16:19 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\Proyectos.php on line 22.
+ 1 APPPATH\Controllers\Proyectos.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:18:07 --> Error: Call to undefined function form_open()
+in APPPATH\Views\proyectos\create.php on line 12.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/create', [], true)
+ 4 APPPATH\Controllers\Proyectos.php(27): view('proyectos/create')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:24:08 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:24:11 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:24:12 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:28:34 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:30:36 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:31:11 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:32:47 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:33:27 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:39:10 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:44:03 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Proyectos.php on line 20.
+ 1 APPPATH\Controllers\Proyectos.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Proyectos.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:48:19 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(25): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:50:02 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(25): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:50:18 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(25): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:50:19 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(25): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:50:20 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(25): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:50:21 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(25): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:55:24 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(25): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:59:50 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(24): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:59:52 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(24): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:59:53 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(24): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-10 23:59:53 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\proyectos\index.php on line 37.
+ 1 APPPATH\Views\proyectos\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\proyectos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('proyectos/index', [], true)
+ 5 APPPATH\Controllers\Proyectos.php(24): view('proyectos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Proyectos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proyectos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

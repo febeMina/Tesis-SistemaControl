@@ -14,7 +14,7 @@ $routes->get('maestros', 'Maestros::index');
 $routes->get('padres', 'Padres::index');
 $routes->get('tipo_permiso', 'TipoPermiso::index');
 $routes->get('roles', 'Roles::index');
-$routes->get('accesos', 'Acceso::index');
+$routes->get('acceso', 'Acceso::index');
 $routes->get('usuario', 'Usuario::index');
 $routes->get('donaciones', 'Donaciones::index');
 $routes->get('proyectos', 'Proyectos::index');
@@ -73,7 +73,10 @@ $routes->post('roles/store', 'Roles::store');
 
 
 // Rutas para el controlador accesos
-$routes->get('accesos', 'Acceso::index');
+$routes->post('acceso/update/(:num)', 'Acceso::update/$1');
+$routes->get('acceso/delete/(:num)', 'Acceso::delete/$1');
+$routes->post('acceso/store', 'Acceso::store');
+$routes->get('acceso/edit/(:num)', 'Acceso::edit/$1');
 
 
 // Rutas para el controlador Usuario
@@ -94,13 +97,16 @@ $routes->post('tipo_producto/update/(:num)', 'TipoProducto::update/$1');
 $routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
 
 //Rutas donaciones
-$routes->get('donaciones', 'Donaciones::index');
+$routes->post('donaciones/store', 'Donaciones::store');
+$routes->get('donaciones/create', 'Donaciones::create');
 
 
 //Rutas proyectos
-$routes->get('proyectos', 'Proyectos::index');
 $routes->post('proyectos/store', 'Proyectos::store');
 $routes->get('proyectos/create', 'Proyectos::create');
+$routes->get('proyectos/edit/(:num)', 'Proyectos::edit/$1');
+$routes->get('proyectos/delete/(:num)', 'Proyectos::delete/$1');
+$routes->post('proyectos/update', 'Proyectos::update/$1');
 
 
 // Rutas para el controlador Unidades de Medida

@@ -27,7 +27,7 @@
                                     <option value="<?= $docente->idDocente ?>" <?= ($docente->idDocente == $usuario->idDocente) ? 'selected' : '' ?>>
                                         <?= $docente->nombre_completo ?>
                                     </option>
-                                <?php endforeach; ?>
+                                <?php endforeach; ?> 
                             </select>
                         </div>
                         <div class="form-group">

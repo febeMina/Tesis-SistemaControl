@@ -1,0 +1,65 @@
+ERROR - 2024-06-11 00:42:45 --> mysqli_sql_exception: Unknown column 'docente.nombre_completo' in 'field list' in C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `usuario...', 0)
+#1 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\laragon\www\Tesis-SistemaControl\app\Controllers\Acceso.php(69): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Acceso->edit('1')
+#6 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+#7 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Tesis-SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-06-11 00:42:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'docente.nombre_completo' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = :idUsuarios:', [...], false)
+ 2 APPPATH\Controllers\Acceso.php(69): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->edit('1')
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 00:42:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'docente.nombre_completo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = :idUsuarios:', [...], false)
+ 4 APPPATH\Controllers\Acceso.php(69): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-11 00:42:45 --> [Caused by] mysqli_sql_exception: Unknown column 'docente.nombre_completo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `usuarios`.`idDocente`, `usuarios`.`idRol`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+WHERE `idUsuarios` = :idUsuarios:', [...], false)
+ 5 APPPATH\Controllers\Acceso.php(69): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Acceso->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acceso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

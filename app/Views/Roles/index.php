@@ -18,11 +18,7 @@
                     <?php endif; ?>
 
                     <!-- Botón para agregar un nuevo Rol -->
-                    <div class="mb-3">
-                        <a href="<?= site_url('roles/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar<!-- Icono de Material Design Icons -->
-                        </a>
-                    </div>
+                 
                     
                     <!-- Tabla de maestros -->
                     <div class="table-responsive">
@@ -30,6 +26,7 @@
                             <thead>
                                 <tr>
                                     <th>Nombre Rol</th>
+                                    <th>Accesos</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -37,6 +34,7 @@
                                 <?php foreach ($roles as $rol) : ?>
                                     <tr>
                                         <td><?= $rol['nombreRol']; ?></td>
+                                        <td><?= $rol['descripcion']; ?></td>
                                         <td>
                                             <div class="btn-group">
                                                 <a href="<?= site_url('' . $rol['idRol']) ?>" class="btn btn-edit">
