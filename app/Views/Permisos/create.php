@@ -16,7 +16,7 @@
 
                     <form action="<?= site_url('permiso_magisterial/store') ?>" method="post">
                         <div class="form-group">
-                            <label for="id_maestro" style="color: #000;"><i class="fas fa-chalkboard-teacher"></i> Maestro</label>
+                            <label for="id_maestro" style="color: #000;"><i class="fas fa-chalkboard-teacher"></i> Nombre</label>
                             <select name="id_maestro" id="id_maestro" class="form-control">
                                 <?php foreach ($maestros as $maestro): ?>
                                     <option value="<?= $maestro['idDocente'] ?>"><?= $maestro['nombre_completo'] ?></option>
@@ -32,7 +32,10 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                    
+
+                        <!-- Campo oculto para la fecha de solicitud -->
+                        <input type="text" name="fecha_solicitud" value="<?= $fechaSolicitud ?>" />
+
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="fecha_inicio" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha de Inicio</label>
@@ -43,11 +46,12 @@
                                 <input type="date" name="fecha_fin" id="fecha_fin" class="form-control form-control-sm" required>
                             </div>
                         </div>
-                    
+
                         <div class="form-group">
                             <label for="horas_ocupadas" style="color: #000;"><i class="fas fa-clock"></i> Horas Ocupadas</label>
-                            <input type="number" name="horas_ocupadas" id="horas_ocupadas" class="form-control form-control-sm" placeholder="Ingrese el total de horas ocupadas">
+                            <input type="number" name="horas_ocupadas" id="horas_ocupadas" class="form-control form-control-sm" placeholder="Ingrese el total de horas ocupadas opcionalmente">
                         </div>
+
 
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>

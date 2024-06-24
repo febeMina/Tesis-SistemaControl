@@ -24,7 +24,7 @@
                             <input type="text" class="form-control" id="telefono" name="telefono" required>
                         </div>
                         <div class="form-group">
-                        <label for="genero" style="color: #000;"><i class="fas fa-venus-mars"></i> Genero</label>
+                            <label for="genero" style="color: #000;"><i class="fas fa-venus-mars"></i> Género</label>
                             <select class="form-control" name="genero" required>
                                 <option value="M">Masculino</option>
                                 <option value="F">Femenino</option>
@@ -38,14 +38,14 @@
                             </select>
                         </div>
                         <!-- Campos para agregar alumnos asociados al padre -->
-                        <div class="mt-12">
+                        <div class="mt-4">
                             <h4 class="text-center" style="color: #000;">Alumnos Asociados</h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>Nombre Completo</th>
-                                            <th>Genero</th>
+                                            <th>Género</th>
                                             <th>NIE</th>
                                             <th>Estado</th>
                                             <th>Acciones</th>
@@ -103,19 +103,19 @@
             </td>
         `;
 
-       // Agregar la nueva fila a la tabla
-       alumnosTableBody.appendChild(newRow);
+        // Agregar la nueva fila a la tabla
+        alumnosTableBody.appendChild(newRow);
 
-// Agregar evento click al botón de eliminar en la nueva fila
-const deleteButton = newRow.querySelector('.btn-delete');
-deleteButton.addEventListener('click', function() {
-    // Eliminar la fila actual del alumno
-    newRow.remove();
-});
-}
+        // Agregar evento click al botón de eliminar en la nueva fila
+        const deleteButton = newRow.querySelector('.btn-delete');
+        deleteButton.addEventListener('click', function() {
+            // Eliminar la fila actual del alumno
+            newRow.remove();
+        });
+    }
 
-// Agregar evento click al botón "Agregar Alumno"
-document.getElementById('addAlumno').addEventListener('click', addAlumno);
+    // Agregar evento click al botón "Agregar Alumno"
+    document.getElementById('addAlumno').addEventListener('click', addAlumno);
 </script>
 
 <?= $this->endSection() ?>

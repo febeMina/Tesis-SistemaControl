@@ -8,7 +8,7 @@ class MaestroModel extends Model
 {
     protected $table = 'docente';
     protected $primaryKey = 'idDocente';
-    protected $allowedFields = ['nombre_completo', 'nip', 'escalafon', 'fecha_ingreso', 'estado', 'deleted'];
+    protected $allowedFields = ['nombre_completo', 'nip', 'escalafon', 'fecha_ingreso', 'estado', 'deleted', 'tipo', 'cargo'];
 
     protected $useAutoIncrement = true;
     protected $returnType = 'array';
@@ -20,7 +20,9 @@ class MaestroModel extends Model
         'nip' => 'required',
         'escalafon' => 'required',
         'fecha_ingreso' => 'required',
-        'estado' => 'required'
+        'estado' => 'required',
+        'tipo' => 'required',
+        'cargo' => 'permit_empty'
     ];
 
     public function __construct()
@@ -54,7 +56,15 @@ class MaestroModel extends Model
         if (!empty($filters['estado']) && $filters['estado'] !== 'Inactivo') {
             $builder->where('estado', $filters['estado']);
         }
-    
+        if (!empty($filters['tipo'])) {
+            $builder->where('tipo', $filters['tipo']);
+        }
+        // Incluir siempre el estado en el filtro
+        $builder->where('estado !=', 'Eliminado');
+            
+        $query = $builder->get();
+        return $query->getResultArray();
+
         // Excluir los maestros inactivos si no se está filtrando por estado inactivo
         if (empty($filters['estado']) || $filters['estado'] !== 'Inactivo') {
             $builder->where('estado !=', 'Inactivo');
@@ -62,6 +72,7 @@ class MaestroModel extends Model
     
         // Retornar resultados
         return $builder->get()->getResultArray();
+        
+        
     }
-    
 }

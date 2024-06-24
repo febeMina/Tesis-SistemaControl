@@ -14,40 +14,57 @@ use TCPDF;
 class PermisoMagisterial extends BaseController
 {
     public function create()
-    {
-        $modelMaestro = new MaestroModel();
-        $data['maestros'] = $modelMaestro->findAll();
+{
+    $modelMaestro = new MaestroModel();
+    $data['maestros'] = $modelMaestro->where('estado', 'Activo')->findAll(); // Filtrar por estado activo
 
-        $modelTipoPermiso = new TipoPermisoModel();
-        $data['tipos_permisos'] = $modelTipoPermiso->findAll();
+    $modelTipoPermiso = new TipoPermisoModel();
+    $data['tipos_permisos'] = $modelTipoPermiso->findAll();
 
-        return view('Permisos/create', $data);
-    }
+    // Obtener la fecha actual del sistema
+    $data['fechaSolicitud'] = date('Y-m-d'); // Incluir fecha de solicitud en los datos
+
+    return view('Permisos/create', $data); // Pasar directamente $data a la vista
+}
+
+
 
     public function store()
     {
+        // Definir las reglas de validación
         $rules = [
             'id_maestro' => 'required',
             'id_tipo_permiso' => 'required',
             'fecha_inicio' => 'required|valid_date',
             'fecha_fin' => 'required|valid_date',
-            'horas_ocupadas' => 'required|numeric'
         ];
     
+        // Agregar validación para horas_ocupadas solo si se proporciona un valor
+        if ($this->request->getVar('horas_ocupadas')) {
+            $rules['horas_ocupadas'] = 'numeric';
+        }
+    
         if (!$this->validate($rules)) {
+            log_message('error', 'Validation failed: ' . json_encode($this->validator->getErrors()));
             return redirect()->back()->withInput()->with('validation', $this->validator);
         }
     
+        // Obtener datos del formulario
         $idMaestro = $this->request->getVar('id_maestro');
         $idTipoPermiso = $this->request->getVar('id_tipo_permiso');
         $fechaInicio = $this->request->getVar('fecha_inicio');
         $fechaFin = $this->request->getVar('fecha_fin');
         $horasOcupadas = (int)$this->request->getVar('horas_ocupadas');
     
+        // Generar fecha de solicitud (fecha actual)
+        $fechaSolicitud = date('Y-m-d'); // Puedes ajustar el formato según sea necesario
+    
+        // Calcular días totales
         $fechaInicioDate = new \DateTime($fechaInicio);
         $fechaFinDate = new \DateTime($fechaFin);
         $diasTotales = $fechaInicioDate->diff($fechaFinDate)->days + 1;
     
+        // Obtener el tipo de permiso
         $modelTipoPermiso = new TipoPermisoModel();
         $tipoPermiso = $modelTipoPermiso->find($idTipoPermiso);
     
@@ -55,17 +72,20 @@ class PermisoMagisterial extends BaseController
             return redirect()->back()->withInput()->with('error', 'El tipo de permiso no es válido.');
         }
     
+        // Calcular días y horas ocupados
         $cantidadDias = $tipoPermiso['cantidad_dias'];
         $diasOcupados = floor($horasOcupadas / 5); // Considerar horas completas como días ocupados
         $horasRestantes = $horasOcupadas % 5; // Horas que no alcanzan a completar un día
     
+        // Calcular días disponibles
         $diasDisponibles = $cantidadDias - $diasTotales - $diasOcupados;
-        $horasDisponibles = 5 - $horasRestantes;
     
+        // Validar disponibilidad de días
         if ($diasDisponibles < 0) {
             return redirect()->back()->withInput()->with('error', 'No hay suficientes días disponibles.');
         }
     
+        // Buscar o crear detalle de saldos de tipo de permiso
         $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
         $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso
             ->where('idTipoPermiso', $idTipoPermiso)
@@ -82,25 +102,26 @@ class PermisoMagisterial extends BaseController
             $detalleSaldosTipoPermiso['idDetallePermiso'] = $modelDetalleSaldosTipoPermiso->getInsertID();
         }
     
+        // Insertar en la tabla de saldos docentes
         $modelSaldosDocentes = new SaldosDocentesModel();
         $inserted = $modelSaldosDocentes->insert([
             'idDocente' => $idMaestro,
             'idDetallePermiso' => $detalleSaldosTipoPermiso['idDetallePermiso'],
             'saldo_total_dias' => $diasTotales + $diasOcupados,
-            'saldo_total_horas' => $horasOcupadas,
+            'saldo_total_horas' => $horasRestantes,
             'fecha_inicio' => $fechaInicio,
             'fecha_fin' => $fechaFin,
-            'fecha_creacion' => date('Y-m-d H:i:s')
+            'fecha_solicitud' => $fechaSolicitud, // Agregar la fecha de solicitud generada
+            'estado' => 'Pendiente'
         ]);
     
-        if (!$inserted) {
-            return redirect()->back()->withInput()->with('error', 'Error al insertar en la tabla saldos_docentes.');
+        if ($inserted) {
+            log_message('info', 'Data stored successfully');
+            return redirect()->to('/permiso_magisterial')->with('success', 'Permiso creado correctamente.');
+        } else {
+            log_message('error', 'Failed to store data');
+            return redirect()->back()->withInput()->with('error', 'No se pudo crear el permiso.');
         }
-    
-        $detalleSaldosTipoPermiso['saldo'] += $diasTotales + $diasOcupados;
-        $modelDetalleSaldosTipoPermiso->update($detalleSaldosTipoPermiso['idDetallePermiso'], $detalleSaldosTipoPermiso);
-    
-        return redirect()->to(site_url('permiso_magisterial/index'))->with('success', 'El permiso magisterial ha sido creado exitosamente.');
     }
 
     public function index()

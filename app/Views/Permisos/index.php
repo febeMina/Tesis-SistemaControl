@@ -18,7 +18,7 @@
                     <form action="<?= site_url('permiso_magisterial/index') ?>" method="get">
                         <div class="row mb-3">
                             <div class="col-md-4">
-                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre del Maestro">
+                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" name="nip" class="form-control" placeholder="NIP">
@@ -26,15 +26,15 @@
                             <div class="col-md-4">
                                 <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Solicitud">
                             </div>
+                            
                             <div class="col-md-12 d-flex justify-content-between align-items-center">
                                 <div>
                                     <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
                                     <a href="<?= site_url('permiso_magisterial/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
                                 </div>
                                 <div>
-                                    <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-success mt-3">Agregar Permiso</a>
-                                    <a href="<?= site_url('permiso_magisterial/generarReportePDF') ?>" class="btn btn-info mt-3 ms-2">Generar Reporte PDF</a>
-                                    <a href="<?= site_url('permiso_magisterial/generarReporteExcel') ?>" class="btn btn-success mt-3 ms-2">Generar Reporte Excel</a>
+                                    <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-primary"><i class="mdi mdi-plus"> Agregar</i></a>
+                                    <a href="<?= site_url('permiso_magisterial/generarReportePDF') ?>" class="btn btn-info">Generar Reporte PDF</a>
 
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                             <thead>
                                 <tr>
                                     <th>NIP</th>
-                                    <th>Nombre del Maestro</th>
+                                    <th>Nombre</th>
                                     <th>Fecha de Solicitud</th>
                                     <th>Detalles de Permisos</th>
                                 </tr>

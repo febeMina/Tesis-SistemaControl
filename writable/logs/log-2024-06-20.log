@@ -1,0 +1,33 @@
+CRITICAL - 2024-06-20 03:39:06 --> ErrorException: Undefined array key "rol"
+in APPPATH\Views\maestros\index.php on line 80.
+ 1 APPPATH\Views\maestros\index.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rol"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(33): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 03:39:40 --> ErrorException: Undefined array key "rol"
+in APPPATH\Views\maestros\index.php on line 80.
+ 1 APPPATH\Views\maestros\index.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rol"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(33): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-20 04:43:51 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\Permisos\create.php on line 15.
+ 1 APPPATH\Views\Permisos\create.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php', 15)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/create', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(24): view('Permisos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
