@@ -15,6 +15,7 @@ $routes->get('padres', 'Padres::index');
 $routes->get('tipo_permiso', 'TipoPermiso::index');
 $routes->get('usuario', 'Usuario::index');
 
+
 $routes->group('admin', function ($routes) {
     $routes->get('licencias', 'AdminLicencias::index');
     $routes->get('licencias/create', 'AdminLicencias::create');
@@ -76,6 +77,9 @@ $routes->post('usuario/store', 'Usuario::store');
 $routes->get('usuario/edit/(:num)', 'Usuario::edit/$1');
 $routes->post('usuario/update/(:num)', 'Usuario::update/$1');
 $routes->get('usuario/delete/(:num)', 'Usuario::delete/$1');
+// En app/Config/Routes.php
+$routes->get('usuario/configuracion', 'Usuario::configuracion'); // Reemplaza 'configuracion' con el método que maneja la configuración del usuario
+
 
 $routes->get('bitacora', 'Bitacora::index');
 

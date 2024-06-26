@@ -1,0 +1,132 @@
+CRITICAL - 2024-06-25 05:16:24 --> ErrorException: Undefined array key "idTipoPermiso"
+in APPPATH\Controllers\PermisoMagisterial.php on line 191.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idTipoPermiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:16:36 --> ErrorException: Undefined array key "idTipoPermiso"
+in APPPATH\Controllers\PermisoMagisterial.php on line 191.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idTipoPermiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:19:43 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\PermisoMagisterial.php(128): CodeIgniter\Model->update(77, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:23:15 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\PermisoMagisterial.php(128): CodeIgniter\Model->update(78, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:28:03 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\PermisoMagisterial.php(131): CodeIgniter\Model->update(79, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:29:11 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\PermisoMagisterial.php(131): CodeIgniter\Model->update(80, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:40:06 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Controllers\PermisoMagisterial.php on line 198.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 198)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:43:46 --> ErrorException: Undefined array key "detalle_saldos_permiso"
+in APPPATH\Views\Permisos\index.php on line 68.
+ 1 APPPATH\Views\Permisos\index.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_saldos_permiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(223): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 05:49:25 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\PermisoMagisterial.php(128): CodeIgniter\Model->update(82, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 06:01:17 --> ErrorException: Undefined array key "fecha_inicio"
+in APPPATH\Views\Permisos\index.php on line 80.
+ 1 APPPATH\Views\Permisos\index.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_inicio"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(254): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 06:03:30 --> ErrorException: Undefined array key "idDetallePermiso"
+in APPPATH\Views\Permisos\index.php on line 80.
+ 1 APPPATH\Views\Permisos\index.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDetallePermiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(254): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 06:03:39 --> ErrorException: Undefined array key "idDetallePermiso"
+in APPPATH\Views\Permisos\index.php on line 80.
+ 1 APPPATH\Views\Permisos\index.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDetallePermiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 80)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(254): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 06:13:53 --> ErrorException: Undefined array key "fecha_inicio"
+in APPPATH\Views\Permisos\index.php on line 71.
+ 1 APPPATH\Views\Permisos\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_inicio"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(256): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 07:00:04 --> ErrorException: Undefined variable $nombreTipoPermiso
+in APPPATH\Views\Permisos\index.php on line 70.
+ 1 APPPATH\Views\Permisos\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreTipoPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(209): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

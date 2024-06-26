@@ -1,0 +1,301 @@
+CRITICAL - 2024-06-26 05:41:05 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:09 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:11 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:12 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:13 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:13 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:13 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:13 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:13 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:14 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:15 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:15 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:16 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:16 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:18 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:41:19 --> ErrorException: Undefined array key "intentos_fallidos"
+in APPPATH\Controllers\Login.php on line 70.
+ 1 APPPATH\Controllers\Login.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intentos_fallidos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:14 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:15 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:16 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:16 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:16 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:16 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:17 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:17 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:17 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:17 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:45:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(71): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:46:37 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Controllers\Login.php(73): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:47:39 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(73): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:47:50 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(73): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:51:26 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(97): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:55:01 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(85): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 05:57:08 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 973.
+ 1 SYSTEMPATH\BaseModel.php(973): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Login.php(85): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

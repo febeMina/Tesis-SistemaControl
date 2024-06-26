@@ -8,8 +8,7 @@ class SolicitudPermisoModel extends Model
 {
     protected $table = 'solicitud_permiso';
     protected $primaryKey = 'idSolicitudPermiso';
-    protected $allowedFields = ['id_maestro', 'id_tipo_permiso', 'fecha_inicio', 'fecha_fin', 'dias_ocupados', 'horas_ocupadas', 'fecha_creacion'];
-
+    protected $allowedFields = ['idDocente', 'idTipoPermiso', 'fecha_inicio', 'fecha_fin', 'dias_ocupados', 'horas_ocupadas', 'fecha_creacion'];
 
     protected $useAutoIncrement = true;
     protected $returnType = 'array';
@@ -17,16 +16,31 @@ class SolicitudPermisoModel extends Model
     protected $useTimestamps = false;
 
     protected $validationRules = [
-        'idDocente' => 'required',
-        'idTipoPermiso' => 'required',
-        'fecha_inicio' => 'required',
-        'fecha_fin' => 'required',
-        'dias_ocupados' => 'required',
-        'fecha_creacion' => 'required'
+        'idDocente' => 'required|integer',
+        'idTipoPermiso' => 'required|integer',
+        'fecha_inicio' => 'required|valid_date',
+        'fecha_fin' => 'required|valid_date',
+        'dias_ocupados' => 'required|integer',
+        'horas_ocupadas' => 'permit_empty|integer',
+        'fecha_creacion' => 'required|valid_date'
     ];
-    
+
     public function getSolicitudesByMaestro($idMaestro)
     {
-        return $this->where('id_maestro', $idMaestro)->findAll();
+        return $this->where('idDocente', $idMaestro)->findAll();
+    }
+
+    public function createSolicitud($data)
+    {
+        return $this->insert($data);
+    }
+
+    public function findAllWithDetails()
+    {
+        // Ejemplo de consulta para obtener detalles de permisos
+        return $this->select('solicitud_permiso.*, maestro.nombre_completo, tipo_permiso.nombre')
+                    ->join('maestro', 'maestro.idDocente = solicitud_permiso.idDocente')
+                    ->join('tipo_permiso', 'tipo_permiso.idTipoPermiso = solicitud_permiso.idTipoPermiso')
+                    ->findAll();
     }
 }

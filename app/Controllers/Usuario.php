@@ -166,4 +166,16 @@ class Usuario extends Controller
 
         return redirect()->to(base_url('public/usuario'))->with('success', 'Usuario eliminado correctamente.');
     }
+    
+    public function configuracion()
+    {
+        // Obtener el ID del usuario actualmente logueado
+        $userId = session()->get('idUsuarios'); // Asegúrate de usar el nombre correcto del campo
+    
+        // Redirigir al usuario a su propia página de edición
+        return redirect()->to(base_url("public/usuario/edit/{$userId}"));
+    }
+    
+    
+
 }

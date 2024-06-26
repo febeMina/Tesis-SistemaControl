@@ -64,15 +64,16 @@ class Login extends Controller
     
                     $session->set($userData);
                 } else {
-                    $response['message'] = 'Credenciales inválidas';
+                    $response['message'] = 'Usuario o contraseña incorrecta';
                 }
             } else {
-                $response['message'] = 'Credenciales inválidas';
+                $response['message'] = 'Usuario o contraseña incorrecta';
             }
         }
     
         return $this->response->setJSON($response);
     }
+    
 
     public function logout()
     {
