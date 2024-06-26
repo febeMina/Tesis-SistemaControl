@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/default') ?>
 
 <?= $this->section('content') ?>
+
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-12">
@@ -9,17 +10,15 @@
                     <h4 class="header-title text-center">Permiso Magisterial</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
-                    <!-- Mensaje de éxito -->
                     <?php if (session()->getFlashdata('success')) : ?>
                         <div class="alert alert-success" role="alert">
                             <?= session()->getFlashdata('success') ?>
                         </div>
                     <?php endif; ?>
-                    <!-- Formulario de filtros -->
                     <form action="<?= site_url('permiso_magisterial/index') ?>" method="get">
                         <div class="row mb-3">
                             <div class="col-md-4">
-                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre del Maestro">
+                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" name="nip" class="form-control" placeholder="NIP">
@@ -27,50 +26,86 @@
                             <div class="col-md-4">
                                 <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Solicitud">
                             </div>
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
-                                <a href="<?= site_url('permiso_magisterial/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
+                            
+                            <div class="col-md-12 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+                                    <a href="<?= site_url('permiso_magisterial/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
+                                </div>
+                                <div>
+                                    <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-primary"><i class="mdi mdi-plus"> Agregar</i></a>
+                                    <a href="<?= site_url('permiso_magisterial/generarReportePDF') ?>" class="btn btn-info">Generar Reporte PDF</a>
+
+                                </div>
                             </div>
                         </div>
                     </form>
-                    <!-- Tabla de saldos de permiso -->
                     <div class="table-responsive">
-                        <table class="table" style="color: #000;">
+                        <table class="table table-sm" style="color: #000; font-size: 0.9rem;">
                             <thead>
                                 <tr>
                                     <th>NIP</th>
-                                    <th>Nombre del Maestro</th>
+                                    <th>Nombre</th>
                                     <th>Fecha de Solicitud</th>
-                                    <?php foreach ($tipos_permisos as $tipo_permiso): ?>
-                                        <th><?= $tipo_permiso['nombre'] ?> (<?= $tipo_permiso['cantidad_dias'] ?>)</th>
-                                    <?php endforeach; ?>
+                                    <th>Detalles de Permisos</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($saldos_docentes as $saldo): ?>
                                     <tr>
-                                        <td><?= $saldo['nip'] ?></td>
-                                        <td><?= $saldo['nombre_completo'] ?></td>
-                                        <td><?= $saldo['fecha_solicitud'] ?></td>
-                                        <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle_saldo): ?>
-                                            <td>
-                                                <!-- Mostrar los días ocupados y disponibles con coloración -->
-                                                <div>
-                                                    <strong>Días Ocupados:</strong> <?= $detalle_saldo['dias_ocupados'] ?>
-                                                </div>
-                                                <div>
-                                                    <strong>Días Disponibles:</strong> <?= $detalle_saldo['dias_disponibles'] ?>
-                                                </div>
-                                            </td>
-                                        <?php endforeach; ?>
+                                        <td><?= esc($saldo['nip']) ?></td>
+                                        <td><?= esc($saldo['nombre_completo']) ?></td>
+                                        <td><?= esc($saldo['fecha_creacion']) ?></td>
+                                        <td>
+                                            <table class="table table-bordered table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tipo de Permiso</th>
+                                                        <th>Fecha Inicio</th>
+                                                        <th>Fecha Fin</th>
+                                                        <th>Días Ocupados</th>
+                                                        <th>Horas Ocupadas</th>
+                                                        <th>Días Disponibles</th>
+                                                        <th>Horas Disponibles</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle): ?>
+                                                        <?php
+                                                        $nombreTipoPermiso = '';
+                                                        foreach ($tipos_permisos as $tipo_permiso) {
+                                                            if ($tipo_permiso['idTipoPermiso'] == $detalle['idTipoPermiso']) {
+                                                                $nombreTipoPermiso = $tipo_permiso['nombre'] . ' (' . $tipo_permiso['cantidad_dias'] . ' días)';
+                                                                break;
+                                                            }
+                                                        }
+                                                        ?>
+                                                        <tr>
+                                                            <td><?= esc($nombreTipoPermiso) ?></td>
+                                                            <td><?= esc($saldo['fecha_inicio']) ?></td>
+                                                            <td><?= esc($saldo['fecha_fin']) ?></td>
+                                                            <td><?= esc($detalle['dias_ocupados']) ?></td>
+                                                            <td><?= esc($detalle['horas_ocupadas']) ?></td>
+                                                            <td><?= esc($detalle['dias_disponibles']) ?></td>
+                                                            <td><?= esc($detalle['horas_disponibles']) ?></td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </tbody>
+                                            </table>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
+                    </div>
+                    <!-- Enlaces de paginación -->
+                    <div class="d-flex justify-content-center">
+                        <?= $pager->links('group1', 'bootstrap_pagination') ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <?= $this->endSection() ?>

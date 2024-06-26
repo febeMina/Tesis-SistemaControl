@@ -61,7 +61,7 @@ class TipoPermiso extends BaseController
         $id = $this->request->getPost('id');
 
         if ($id === null) {
-            return redirect()->to('/tipo_permiso');
+            return $this->response->setJSON(['success' => false, 'message' => 'ID no encontrado.']);
         }
 
         $model = new TipoPermisoModel();
@@ -73,7 +73,11 @@ class TipoPermiso extends BaseController
 
         $model->update($id, $data);
 
-        return redirect()->to('/tipo_permiso');
+        // Establecer mensaje flash
+        session()->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
+
+        // Respuesta JSON para AJAX
+        return $this->response->setJSON(['success' => true]);
     }
 
     public function delete($id = null)

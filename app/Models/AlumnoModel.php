@@ -6,14 +6,16 @@ use CodeIgniter\Model;
 
 class AlumnoModel extends Model
 {
-    protected $table = 'datos_alumnos'; 
-    protected $primaryKey = 'idAlumno'; 
-    protected $allowedFields = ['nombreAlumno', 'Sexo_alumno', 'NIE', 'estado']; 
+    protected $table = 'datos_alumnos';
+    protected $primaryKey = 'idAlumno';
+    protected $allowedFields = ['nombreAlumno', 'Genero_alumno', 'NIE', 'estado'];
 
-    public function getAlumnosByPadreId($padreId)
-{
-    return $this->where('idAlumno', $padreId)->findAll();
+    public function getAlumnosAsociados($padreId)
+    {
+        return $this->db->table('responsable_alumno')
+            ->where('idDatosResponsable', $padreId)
+            ->join('datos_alumnos', 'responsable_alumno.idAlumno = datos_alumnos.idAlumno')
+            ->get()
+            ->getResultArray();
+    }
 }
-
-}
-

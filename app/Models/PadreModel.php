@@ -8,20 +8,31 @@ class PadreModel extends Model
 {
     protected $table = 'datos_responsable';
     protected $primaryKey = 'idDatosResponsable';
-    protected $allowedFields = ['nombreCompleto', 'Genero', 'DUI', 'telefono', 'estado', 'idAlumno'];
+    protected $allowedFields = ['nombreCompleto', 'Genero', 'DUI', 'telefono', 'estado'];
 
-   public function getAlumnosAsociados($idDatosResponsable)
-{
-    return $this->db->table('padre_alumno')
-                    ->select('datos_alumnos.*')
-                    ->join('datos_alumnos', 'datos_alumnos.idAlumno = padre_alumno.idAlumno')
-                    ->where('padre_alumno.idDatosResponsable', $idDatosResponsable)
-                    ->get()
-                    ->getResultArray();
-}
+    public function getFilteredPadres($filters)
+    {
+        $builder = $this->builder();
 
-    
-    
+        if (!empty($filters['nombre_completo'])) {
+            $builder->like('nombreCompleto', $filters['nombre_completo']);
+        }
+        if (!empty($filters['dui'])) {
+            $builder->like('DUI', $filters['dui']);
+        }
+        if (!empty($filters['genero'])) {
+            $builder->where('Genero', $filters['genero']);
+        }
 
-    // Otros métodos del modelo
+        return $builder->get()->getResultArray();
+    }
+
+    public function getAlumnosAsociados($padreId)
+    {
+        return $this->db->table('responsable_alumno')
+            ->where('idDatosResponsable', $padreId)
+            ->join('datos_alumnos', 'responsable_alumno.idAlumno = datos_alumnos.idAlumno')
+            ->get()
+            ->getResultArray();
+    }
 }

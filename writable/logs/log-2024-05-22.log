@@ -1,0 +1,40 @@
+CRITICAL - 2024-05-22 20:36:32 --> ErrorException: Undefined array key "nip"
+in APPPATH\Controllers\PermisoMagisterial.php on line 169.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nip"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 169)
+ 2 APPPATH\Controllers\PermisoMagisterial.php(118): App\Controllers\PermisoMagisterial->filterSaldosDocentes([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 20:36:43 --> ErrorException: Undefined array key "nip"
+in APPPATH\Controllers\PermisoMagisterial.php on line 169.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nip"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 169)
+ 2 APPPATH\Controllers\PermisoMagisterial.php(118): App\Controllers\PermisoMagisterial->filterSaldosDocentes([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 20:37:06 --> ErrorException: Undefined array key "nip"
+in APPPATH\Controllers\PermisoMagisterial.php on line 169.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nip"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 169)
+ 2 APPPATH\Controllers\PermisoMagisterial.php(118): App\Controllers\PermisoMagisterial->filterSaldosDocentes([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 20:38:04 --> ErrorException: Undefined array key "fecha_solicitud"
+in APPPATH\Controllers\PermisoMagisterial.php on line 181.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_solicitud"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 181)
+ 2 APPPATH\Controllers\PermisoMagisterial.php(118): App\Controllers\PermisoMagisterial->filterSaldosDocentes([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-22 20:41:00 --> ErrorException: Undefined array key "nip"
+in APPPATH\Controllers\PermisoMagisterial.php on line 172.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nip"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 172)
+ 2 APPPATH\Controllers\PermisoMagisterial.php(118): App\Controllers\PermisoMagisterial->filterSaldosDocentes([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

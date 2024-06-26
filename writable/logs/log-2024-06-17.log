@@ -1,0 +1,150 @@
+CRITICAL - 2024-06-17 02:37:31 --> ErrorException: Undefined array key "dias_ocupados"
+in APPPATH\Controllers\PermisoMagisterial.php on line 364.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(364): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dias_ocupados"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 364)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-17 02:38:17 --> ErrorException: Undefined array key "dias_ocupados"
+in APPPATH\Controllers\PermisoMagisterial.php on line 272.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(272): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dias_ocupados"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 272)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReporteExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-17 02:52:01 --> ErrorException: Undefined array key "detalle_saldos_permiso"
+in APPPATH\Controllers\PermisoMagisterial.php on line 362.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(362): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detalle_saldos_permiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 362)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-17 05:41:41 --> BadMethodCallException: Call to undefined method App\Models\SaldosDocentesModel::findAllWithDetalleSaldosPermiso
+in SYSTEMPATH\Model.php on line 879.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(324): CodeIgniter\Model->__call('findAllWithDetalleSaldosPermiso', [])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-17 05:43:33 --> mysqli_sql_exception: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `saldos_...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saldos_...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saldos_...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-17 05:43:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', [], false)
+ 2 APPPATH\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-17 05:43:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', [], false)
+ 4 APPPATH\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-17 05:43:33 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', [], false)
+ 5 APPPATH\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-17 05:43:40 --> mysqli_sql_exception: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `saldos_...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saldos_...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saldos_...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-17 05:43:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', [], false)
+ 2 APPPATH\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-17 05:43:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', [], false)
+ 4 APPPATH\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-17 05:43:40 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.detalle_saldos_tipo_permiso' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `saldos_docentes`.*, `detalle_saldos_tipo_permiso`.*
+FROM `saldos_docentes`
+JOIN `detalle_saldos_tipo_permiso` ON `detalle_saldos_tipo_permiso`.`idDetallePermiso` = `saldos_docentes`.`idDetallePermiso`', [], false)
+ 5 APPPATH\Models\SaldosDocentesModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PermisoMagisterial.php(324): App\Models\SaldosDocentesModel->findAllWithDetalleSaldosPermiso()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

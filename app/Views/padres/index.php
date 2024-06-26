@@ -15,12 +15,40 @@
                             <?= session()->getFlashdata('success') ?>
                         </div>
                     <?php endif; ?>
-                    <!-- Botón para agregar un nuevo padre -->
-                    <div class="mb-3">
-                        <a href="<?= site_url('padres/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar<!-- Icono de Material Design Icons -->
-                        </a>
-                    </div>
+
+                    <!-- Formulario de filtros -->
+                    <form method="get" action="<?= site_url('padres') ?>" class="mb-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre Completo" value="<?= isset($filters['nombre_completo']) ? $filters['nombre_completo'] : '' ?>">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" name="dui" class="form-control" placeholder="DUI" value="<?= isset($filters['dui']) ? $filters['dui'] : '' ?>">
+                            </div>
+                            <div class="col-md-4">
+                                <select name="genero" class="form-control">
+                                    <option value="">Género</option>
+                                    <option value="M" <?= isset($filters['genero']) && $filters['genero'] == 'M' ? 'selected' : '' ?>>Masculino</option>
+                                    <option value="F" <?= isset($filters['genero']) && $filters['genero'] == 'F' ? 'selected' : '' ?>>Femenino</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Filtrar</button>
+                                    <a href="<?= site_url('padres') ?>" class="btn btn-secondary ms-2">Limpiar</a>
+                                </div>
+                                <div>
+                                    <a href="<?= site_url('padres/create') ?>" class="btn btn-primary">
+                                        <i class="mdi mdi-plus"> Agregar</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Tabla de padres -->
                     <div class="table-responsive">
                         <table class="table" style="color: #000;">
                             <thead>
@@ -29,24 +57,20 @@
                                     <th>DUI</th>
                                     <th>Teléfono</th>
                                     <th>Estado</th>
-                                    <th>Genero</th>
+                                    <th>Género</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($padres as $padre): ?>
                                     <tr>
-                                        <td><?= $padre['nombreCompleto'] ?></td>
-                                        <td><?= $padre['DUI'] ?></td>
-                                        <td><?= $padre['telefono'] ?></td>
-                                        <td><?= $padre['estado'] ?></td>
-                                        <td><?= $padre['Genero'] === 'M' ? 'Masculino' : 'Femenino' ?></td>
-                                        
-
-
+                                        <td><?= esc($padre['nombreCompleto']) ?></td>
+                                        <td><?= esc($padre['DUI']) ?></td>
+                                        <td><?= esc($padre['telefono']) ?></td>
+                                        <td><?= esc($padre['estado']) ?></td>
+                                        <td><?= esc($padre['Genero']) === 'M' ? 'Masculino' : 'Femenino' ?></td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Acciones">
-                                                <!-- Agrega el botón de editar -->
                                                 <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
                                                     <i class="mdi mdi-pencil"></i>
                                                 </a>
@@ -54,9 +78,8 @@
                                                     <i class="mdi mdi-delete"></i>
                                                 </a>
                                                 <button onclick="showAlumnosModal(<?= $padre['idDatosResponsable'] ?>)" class="btn btn-add-alumno">
-                                                    <i class="mdi mdi-account-multiple"></i> 
+                                                    <i class="mdi mdi-account-multiple"></i>
                                                 </button>
-
                                             </div>
                                         </td>
                                     </tr>
@@ -76,24 +99,21 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color: #090066; color: white;">
                 <h5 class="modal-title" id="alumnosModalLabel">Alumnos Asociados al Padre</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <!-- Botón de cerrar -->
+                
             </div>
             <div class="modal-body" style="background-color: #f0f0f0;">
                 <div id="alumnosContainer"></div>
-            </div>
-            <div class="modal-footer" style="background-color: #090066;">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
 </div>
 
+
 <script>
     function showAlumnosModal(padreId) {
         $.ajax({
-            url: '<?= site_url('padres/getAlumnosAjax/') ?>' + padreId, // Cambiado a 'getAlumnosAjax'
+            url: '<?= site_url('padres/getAlumnosAjax/') ?>' + padreId,
             type: 'GET',
             success: function(response) {
                 $('#alumnosContainer').html(response);

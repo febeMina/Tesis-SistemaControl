@@ -84,7 +84,7 @@
                     <li class="nav-item"><a href="<?= site_url('roles') ?>" class="nav-link">Roles</a></li>
                     <li class="nav-item"><a href="<?= site_url('acceso') ?>" class="nav-link">Accesos</a></li>
                     <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Padres</a></li>
-                    <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Docentes</a></li>
+                    <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
                 </ul>
             </div>
@@ -108,7 +108,7 @@
 
 
         <li class="nav-item menu-items">
-            <a class="nav-link" href="<?= site_url('permiso_magisterial') ?>">
+            <a class="nav-link" href="<?= site_url('permiso_magisterial/index') ?>">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document"></i>
                 </span>
@@ -144,7 +144,7 @@
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a href="#" class="nav-link">Reporte de movimiento de productos</a>
+                <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de donaciones</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de inasistencias</a></li>
