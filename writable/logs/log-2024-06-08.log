@@ -1,0 +1,44 @@
+CRITICAL - 2024-06-08 16:13:11 --> ErrorException: Undefined property: stdClass::$usuarios
+in APPPATH\Views\Accesos\index.php on line 40.
+ 1 APPPATH\Views\Accesos\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 40)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\TipoAccesos.php(27): view('accesos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 16:22:19 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\TipoAccesos.php(27): view('accesos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 16:22:52 --> ErrorException: Undefined variable $usuarios
+in APPPATH\Views\Accesos\index.php on line 38.
+ 1 APPPATH\Views\Accesos\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Accesos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('accesos/index', [], true)
+ 5 APPPATH\Controllers\TipoAccesos.php(27): view('accesos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-08 16:58:36 --> ErrorException: Undefined array key "Genero"
+in APPPATH\Views\padres\index.php on line 43.
+ 1 APPPATH\Views\padres\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Genero"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(23): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

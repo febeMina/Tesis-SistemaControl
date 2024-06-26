@@ -1,0 +1,84 @@
+CRITICAL - 2024-05-21 00:05:10 --> Error: Class "App\Controllers\RolesModel" not found
+in APPPATH\Controllers\Roles.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 00:06:51 --> ErrorException: Undefined variable $maestro
+in APPPATH\Views\Roles\index.php on line 39.
+ 1 APPPATH\Views\Roles\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestro', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Roles\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Roles\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('roles/index', [], true)
+ 5 APPPATH\Controllers\Roles.php(26): view('roles/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 00:15:31 --> ErrorException: Undefined variable $maestro
+in APPPATH\Views\Roles\index.php on line 39.
+ 1 APPPATH\Views\Roles\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $maestro', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Roles\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Roles\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('roles/index', [], true)
+ 5 APPPATH\Controllers\Roles.php(27): view('roles/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 03:35:18 --> ErrorException: Cannot redeclare App\Controllers\Roles::__construct()
+in APPPATH\Controllers\Roles.php on line 29.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-21 03:35:33 --> ErrorException: Cannot redeclare App\Controllers\Roles::__construct()
+in APPPATH\Controllers\Roles.php on line 29.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-21 03:38:31 --> ErrorException: Undefined array key "nombreRol"
+in APPPATH\Views\Roles\index.php on line 39.
+ 1 APPPATH\Views\Roles\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreRol"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Roles\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\Roles\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('roles/index', [], true)
+ 5 APPPATH\Controllers\Roles.php(26): view('roles/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Roles->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 23:03:27 --> ErrorException: include(../Controllers/AccesoSesion): Failed to open stream: No such file or directory
+in APPPATH\Views\layouts\default.php on line 16.
+ 1 APPPATH\Views\layouts\default.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../Controllers/AccesoSesion): Failed to open stream: No such file or directory', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\layouts\\default.php', 16)
+ 2 APPPATH\Views\layouts\default.php(16): include()
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\layouts\\default.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layouts/default', [], true)
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome_message', [], true)
+ 7 APPPATH\Controllers\Home.php(18): view('welcome_message')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 23:08:29 --> ErrorException: include(includes/navbar/_navbar2): Failed to open stream: No such file or directory
+in APPPATH\Views\layouts\default.php on line 20.
+ 1 APPPATH\Views\layouts\default.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(includes/navbar/_navbar2): Failed to open stream: No such file or directory', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\layouts\\default.php', 20)
+ 2 APPPATH\Views\layouts\default.php(20): include()
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\layouts\\default.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layouts/default', [], true)
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome_message', [], true)
+ 7 APPPATH\Controllers\Home.php(18): view('welcome_message')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 23:08:31 --> ErrorException: include(includes/navbar/_navbar2): Failed to open stream: No such file or directory
+in APPPATH\Views\layouts\default.php on line 20.
+ 1 APPPATH\Views\layouts\default.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(includes/navbar/_navbar2): Failed to open stream: No such file or directory', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\layouts\\default.php', 20)
+ 2 APPPATH\Views\layouts\default.php(20): include()
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\layouts\\default.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('layouts/default', [], true)
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome_message', [], true)
+ 7 APPPATH\Controllers\Home.php(18): view('welcome_message')
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

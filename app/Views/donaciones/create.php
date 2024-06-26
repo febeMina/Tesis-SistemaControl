@@ -17,22 +17,37 @@
                             <?= session()->getFlashdata('success') ?>
                         </div>
                     <?php endif; ?>
+                    
                     <form id="createForm" action="<?= site_url('donaciones/store') ?>" method="post">
                           <!-- Datos de la personas -->
-                    <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
-                            <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" required>
+                      <div class="form-group">
+                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Responsable</label>
+                            <input type="text" class="form-control" id="nombre_completo" name="nombre_responsable" required>
                         </div>
-                        <div class="form-group">
+                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Cantidad</label>
-                            <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" required>
+                            <input type="number" class="form-control" id="cantidad" name="cantidad" required>
                         </div>
                         <div class="form-group">
-                            <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
-                            <select class="form-control" id="estado" name="estado" required>
-                                <option value="Activo">Activo</option>
-                                <option value="Inactivo">Inactivo</option>
-                            </select>
+                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Cantidad en letras</label>
+                            <input type="text" class="form-control" id="cantidadLetras" name="cantidadLetras" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Concepto</label>
+                            <input type="text" class="form-control" id="concepto" name="concepto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Fecha de Donación</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="form-group">
+                        <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Proyectos</label>
+                            <select class="form-control" id="idProyecto" name="idProyecto" required>
+                                <?php foreach ($proyectos as $proyecto) : ?>
+                                    <option value="<?= $proyecto->idProyectos ?>"> <?= $proyecto->nombreProyecto ?></option>
+                                <?php endforeach; ?>
+                             </select>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
@@ -66,7 +81,7 @@
                     if (response.success) {
                         // Mostrar el alert de confirmación
                         var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                        alert += 'Ha sido creado exitosamente.';
+                        alert += 'La donación ha sido registrada exitosamente.';
                         alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
                         alert += '<span aria-hidden="true">&times;</span>';
                         alert += '</button>';

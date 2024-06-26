@@ -1,6 +1,9 @@
 <?php
+
 namespace App\Controllers;
 
+
+use App\Models\RolesModel;
 use CodeIgniter\Controller;
 
 class Roles extends Controller
@@ -15,22 +18,17 @@ class Roles extends Controller
     }
 
     public function index()
-    {
-        // Cargar todos los maestros desde la base de datos
-        $modelrol = new RolesModel();
-        $roles = $modelrol->findAll();
-      
+    {    
+        $model = new RolesModel();
+        $data['roles'] = $model->findAll();
 
-        // Pasar los datos a la vista de index
-        return view('roles/index', ['roles' => $roles]);
+        return view('roles/index', $data);
     }
     
-
+     
     public function create()
     {
-        // Muestra el formulario para crear un nuevo rol
-        $data['base_url'] = base_url();
-        return view('roles/create', $data);
+        return view('roles/create');
     }
 
     public function store()
@@ -44,7 +42,8 @@ class Roles extends Controller
         $db = \Config\Database::connect();
         $builder = $db->table('rol');
         $data = [
-            'nombreRol' => $nombreRol
+            'nombreRol' => $nombreRol,
+            'estado'=> "Activo"
         ];
         $builder->insert($data);
 
@@ -95,11 +94,3 @@ public function delete($id)
     return redirect()->to(site_url('roles'));
 }
 }
-
-
-
-
-
-
-
-

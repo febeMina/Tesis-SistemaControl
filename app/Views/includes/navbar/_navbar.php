@@ -4,11 +4,12 @@
         <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-mini.svg') ?>" alt="logo" /></a>
     </div>
     <ul class="nav">
+        
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="<?= base_url('public/assets/images/faces/face15.jpg') ?>" alt="">
+                        <img class="img-xs rounded-circle " src="<?= base_url('public/assets/images/faces/admin.png') ?>" alt="">
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
@@ -29,7 +30,7 @@
                             </div>
                         </div>
                         <div class="preview-item-content">
-                            <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                            <p class="preview-subject ellipsis mb-1 text-small">Configuración de Cuenta</p>
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
@@ -57,6 +58,7 @@
                 </div>
             </div>
         </li>
+        
         <li class="nav-item nav-category">
             <span class="nav-link">Menu</span>
         </li>
@@ -79,22 +81,32 @@
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('usuario') ?>" class="nav-link">Usuarios</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Roles</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Accesos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('roles') ?>" class="nav-link">Roles</a></li>
+                    <li class="nav-item"><a href="<?= site_url('acceso') ?>" class="nav-link">Accesos</a></li>
                     <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Padres</a></li>
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
                 </ul>
             </div>
         </li>
+        <!-- Menú para el donaciones -->
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+        <a class="nav-link" data-toggle="collapse" href="#donaciones" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
                     <i class="mdi mdi-currency-usd"></i>
                 </span>
                 <span class="menu-title">Donaciones</span>
+                <i class="menu-arrow"></i>
             </a>
+              <div class="collapse" id="donaciones">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a href="<?= site_url('proyectos') ?>" class="nav-link">Proyectos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Listado de Donaciones</a></li>
+                </ul>
+            </div>
         </li>
+
+
         <li class="nav-item menu-items">
             <a class="nav-link" href="<?= site_url('permiso_magisterial/index') ?>">
                 <span class="menu-icon">
@@ -115,7 +127,7 @@
             </a>
             <div class="collapse" id="alimentacion">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>
+                    <li class="nav-item"><a href="<?= site_url('tipo_proyectos') ?>" class="nav-link">Tipo de producto</a></li>
                     <li class="nav-item"><a href="<?= site_url('unidadesmedida') ?>" class="nav-link">Unidades de Medida</a></li>
                 </ul>
             </div>
@@ -139,5 +151,6 @@
                 </ul>
             </div>
         </li>
+         
     </ul>
 </nav>

@@ -1,0 +1,128 @@
+CRITICAL - 2024-06-01 00:28:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(24): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 00:30:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(19): view('acceso/index')
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 00:36:21 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(24): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 02:22:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(25): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 02:23:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(25): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 02:23:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(25): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 02:23:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(25): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 02:23:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(25): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 02:23:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(25): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 03:03:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(26): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 03:05:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(26): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 03:05:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "acceso/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acceso/index.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('acceso/index', [], true)
+ 3 APPPATH\Controllers\TipoAccesos.php(26): view('acceso/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoAccesos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoAccesos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 03:08:05 --> ParseError: syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\TipoAccesos.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\TipoAccesos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\TipoAccesos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\TipoAccesos')
+ 4 SYSTEMPATH\CodeIgniter.php(901): class_exists('\\App\\Controllers\\TipoAccesos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-01 04:09:20 --> ErrorException: Undefined array key "Genero"
+in APPPATH\Views\padres\index.php on line 43.
+ 1 APPPATH\Views\padres\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Genero"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(23): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

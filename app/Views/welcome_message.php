@@ -8,7 +8,7 @@
             <div class="card-body">
                 <h4 class="card-title">Metas</h4>
                 <canvas id="goalsChart" height="200"></canvas>
-            </div>
+            </div> 
         </div>
     </div>
     <div class="col-lg-6 grid-margin stretch-card">

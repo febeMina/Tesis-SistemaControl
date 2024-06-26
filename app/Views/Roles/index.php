@@ -17,12 +17,8 @@
                         </div>
                     <?php endif; ?>
 
-                    <!-- Botón para agregar un nuevo maestro -->
-                    <div class="mb-3">
-                        <a href="<?= site_url('') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar<!-- Icono de Material Design Icons -->
-                        </a>
-                    </div>
+                    <!-- Botón para agregar un nuevo Rol -->
+                 
                     
                     <!-- Tabla de maestros -->
                     <div class="table-responsive">
@@ -30,13 +26,15 @@
                             <thead>
                                 <tr>
                                     <th>Nombre Rol</th>
+                                    <th>Accesos</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($roles as $rol) : ?>
                                     <tr>
-                                        <td><?= $maestro['nombreRol']; ?></td>
+                                        <td><?= $rol['nombreRol']; ?></td>
+                                        <td><?= $rol['descripcion']; ?></td>
                                         <td>
                                             <div class="btn-group">
                                                 <a href="<?= site_url('' . $rol['idRol']) ?>" class="btn btn-edit">

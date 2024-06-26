@@ -17,12 +17,8 @@
                         </div>
 
                     <?php endif; ?>
-                    <!-- Botón para agregar un nuevo tipo de permiso -->
-                    <div class="mb-3">
-                        <a href="<?= site_url(' ') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar <!-- Icono de Material Design Icons -->
-                        </a>
-                    </div>
+                   
+        
                     <!-- Tabla de tipos de permiso -->
                     <div class="table-responsive">
                         <table class="table" style="color: #000;">
@@ -34,25 +30,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-
-                            <?php foreach ($accesos  as $acceso) : ?>
-    <tr>
-        <td><?= $acceso->usuario; ?></td>
-        <td><?= $acceso->idRol; ?></td>
-        <td>
-            <div class="btn-group">
-                <a href="<?= site_url('' . $acceso->idUsuarios) ?>"class="btn btn-edit">
-                    <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
-                </a>
+                      <?php foreach ($usuario as $user) : ?>
+                                <tr>
+                            <td><?= $user->usuario; ?></td>
+                            <td><?= $user->nombreRol; ?></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="<?= site_url('acceso/edit/' . $user->idUsuarios) ?>"class="btn btn-edit">
+                                    <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
+                                    </a>
                 <!-- Agregar margen entre los botones -->
-                <a href="<?= site_url('' . $acceso->idUsuarios) ?>" class="btn btn-delete">
-                    <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
-                </a>
+                                    <a href="<?= site_url('acceso/delete/' . $user->idUsuarios) ?>" class="btn btn-delete">
+                                        <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
+                                    </a>
                 <!-- Fin de la separación -->
-            </div>
-        </td>
-    </tr>
-<?php endforeach; ?>
+                                </div>
+                            </td>
+                           
+                        </tr>
+                            
+                    <?php endforeach; ?>
 
                             </tbody>
                         </table>

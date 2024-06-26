@@ -1,0 +1,234 @@
+CRITICAL - 2024-06-22 21:44:55 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:46:57 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:46:58 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:40 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:41 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:42 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:43 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:44 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:44 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:45 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:45 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:45 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 21:51:51 --> ErrorException: Undefined variable $proyectos
+in APPPATH\Views\donaciones\create.php on line 47.
+ 1 APPPATH\Views\donaciones\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proyectos', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/create', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(27): view('donaciones/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:21:46 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:22:39 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:24:52 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:24:54 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:24:55 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:24:55 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:24:56 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:24:56 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:26:31 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:26:32 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:26:34 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:26:34 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-22 22:26:35 --> ErrorException: Undefined variable $db
+in APPPATH\Controllers\Donaciones.php on line 22.
+ 1 APPPATH\Controllers\Donaciones.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->create()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
