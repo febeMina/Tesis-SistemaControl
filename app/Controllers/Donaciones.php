@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\DonacionesModel;
 
 class Donaciones extends Controller
 {

@@ -28,7 +28,7 @@
                     aria-labelledby="profileDropdown">
                     <h6 class="p-3 mb-0">Profile</h6>
                     <div class="dropdown-divider"></div>
-                    <a href="<?= base_url('public/usuario/edit/' . session()->get('idUsuario')) ?>" class="dropdown-item preview-item">
+                    <a href="<?= base_url('public/usuario/edit/' . session()->get('idUsuarios')) ?>" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
                                 <i class="mdi mdi-settings text-success"></i>

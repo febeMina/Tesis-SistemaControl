@@ -65,11 +65,10 @@ $routes->post('permiso_magisterial/store', 'PermisoMagisterial::store');
 $routes->get('permiso_magisterial/create', 'PermisoMagisterial::create');
 $routes->get('report', 'ReportController::index');
 
-$routes->get('permiso_magisterial/generarReportePDF', 'PermisoMagisterial::generarReportePDF');
-$routes->get('permiso_magisterial/generarReporteExcel', 'PermisoMagisterial::generarReporteExcel');
 
-
-
+// Rutas para los reportes de permisos magisteriales
+$routes->get('reportes/permisos_magisteriales_reporte', 'ReportesController::permisos_magisteriales_reporte');
+$routes->post('reportes/generate_report', 'PermisoMagisterialController::generate_report');
 //LOGIN
 $routes->get('login', 'Login::index');
 $routes->post('login/signin', 'Login::signIn');
@@ -129,3 +128,24 @@ $routes->post('unidadesmedida/update/(:num)', 'UnidadesMedida::update/$1');
 $routes->get('unidadesmedida/delete/(:num)', 'UnidadesMedida::delete/$1');
 
 
+//Consumo por productos
+$routes->group('consumo', function ($routes) {
+    $routes->get('/', 'Consumo::index');          // Listar consumos
+    $routes->get('create', 'Consumo::create');    // Mostrar formulario de creación
+    $routes->post('store', 'Consumo::store');     // Guardar nuevo consumo
+    $routes->get('edit/(:num)', 'Consumo::edit/$1');  // Mostrar formulario de edición
+    $routes->post('update/(:num)', 'Consumo::update/$1'); // Actualizar consumo existente
+    $routes->get('delete/(:num)', 'Consumo::delete/$1');  // Eliminar consumo existente
+});
+
+
+
+// Requisicion de productos
+$routes->group('solicitudproductos', function ($routes) {
+    $routes->get('/', 'SolicitudProductos::index');            // Listar solicitudes de productos
+    $routes->get('create', 'SolicitudProductos::create');      // Mostrar formulario de creación de solicitud
+    $routes->post('store', 'SolicitudProductos::store');       // Guardar nueva solicitud de productos
+    $routes->get('edit/(:num)', 'SolicitudProductos::edit/$1');   // Mostrar formulario de edición de solicitud
+    $routes->post('update/(:num)', 'SolicitudProductos::update/$1'); // Actualizar solicitud de productos existente
+    $routes->get('delete/(:num)', 'SolicitudProductos::delete/$1'); // Eliminar solicitud de productos existente
+});

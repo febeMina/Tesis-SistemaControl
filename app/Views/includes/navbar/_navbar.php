@@ -129,6 +129,8 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('tipo_proyectos') ?>" class="nav-link">Tipo de producto</a></li>
                     <li class="nav-item"><a href="<?= site_url('unidadesmedida') ?>" class="nav-link">Unidades de Medida</a></li>
+                    <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Consumo por productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Requisición de productos</a></li>
                 </ul>
             </div>
         </li>

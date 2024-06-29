@@ -234,5 +234,57 @@ class PermisoMagisterial extends BaseController
         }
         return $filtered;
     }
+    
+    public function generate_report()
+    {
+        // Lógica para generar el reporte y configurar los datos en la sesión flash
+        $idMaestro = $this->request->getVar('id_maestro');
+        $fechaInicio = $this->request->getVar('fecha_inicio');
+        $fechaFin = $this->request->getVar('fecha_fin');
+        $idTipoPermiso = $this->request->getVar('id_tipo_permiso');
+
+        $modelSaldosDocentes = new SaldosDocentesModel();
+        $modelMaestro = new MaestroModel();
+        $modelTipoPermiso = new TipoPermisoModel();
+
+        // Obtener detalles del maestro
+        $maestro = $modelMaestro->find($idMaestro);
+
+        if (!$maestro) {
+            return redirect()->back()->withInput()->with('error', 'Maestro no encontrado.');
+        }
+
+        // Obtener nombre completo del maestro
+        $nombreMaestro = $maestro['nombre_completo'];
+
+        // Obtener detalles del tipo de permiso
+        $tipoPermiso = $modelTipoPermiso->find($idTipoPermiso);
+
+        if (!$tipoPermiso) {
+            return redirect()->back()->withInput()->with('error', 'Tipo de permiso no encontrado.');
+        }
+
+        // Obtener los registros de saldos docentes filtrados
+        $saldosDocentes = $modelSaldosDocentes
+            ->where('idDocente', $idMaestro)
+            ->where('idDetallePermiso', $idTipoPermiso)
+            ->where('fecha_inicio >=', $fechaInicio)
+            ->where('fecha_fin <=', $fechaFin)
+            ->findAll();
+
+                // Configurar los datos en la sesión flash
+            $session = session();
+            $session->setFlashdata('report_data', [
+                'nombre_maestro' => $nombreMaestro,
+                'tipo_permiso' => $tipoPermiso['nombre_tipo_permiso'],
+                'fecha_inicio' => $fechaInicio,
+                'fecha_fin' => $fechaFin,
+                'saldos_docentes' => $saldosDocentes
+            ]);
+            $session->remove('report_data');
+            // Redirigir a la vista de reporte
+            return redirect()->to(site_url('reportes/permisos_magisteriales_reporte'));
+        }
+            
 }
 ?>

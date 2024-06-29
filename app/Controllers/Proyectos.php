@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\ProyectosModel;
 use CodeIgniter\Controller;
 
+
 class Proyectos extends Controller
 {
     public function __construct(){
@@ -51,7 +52,7 @@ class Proyectos extends Controller
     public function update($id)
     {
         $request = \Config\Services::request();
-        $proyectModel = new ProyectoModel();
+        $proyectModel = new ProyectosModel();
 
         $data = [
             'nombreProyecto' => $request->getVar('nombreProyecto'),
@@ -67,7 +68,7 @@ class Proyectos extends Controller
 
     public function edit($id)
     {
-        $proyectModel = new ProyectoModel();
+        $proyectModel = new ProyectosModel();
         $proyecto = $proyectModel->find($id);
 
         return view('proyecto/edit', ['proyecto' => $proyecto]);
@@ -75,7 +76,7 @@ class Proyectos extends Controller
 
     public function delete($id)
     {
-        $proyectModel = new ProyectoModel();
+        $proyectModel = new ProyectosModel();
         $proyectModel->delete($id);
         return redirect()->to(site_url('proyecto'));
     }
