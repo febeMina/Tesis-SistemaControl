@@ -98,14 +98,6 @@ $routes->get('usuario/configuracion', 'Usuario::configuracion'); // Reemplaza 'c
 
 $routes->get('bitacora', 'Bitacora::index');
 
-// Rutas para el controlador Tipos de producto
-$routes->get('tipo_producto', 'TipoProducto::index');
-$routes->get('tipo_producto/create', 'TipoProducto::create');
-$routes->post('tipo_producto/store', 'TipoProducto::store');
-$routes->get('tipo_producto/edit/(:num)', 'TipoProducto::edit/$1');
-$routes->post('tipo_producto/update/(:num)', 'TipoProducto::update/$1');
-$routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
-
 //Rutas donaciones
 $routes->post('donaciones/store', 'Donaciones::store');
 $routes->get('donaciones/create', 'Donaciones::create');
@@ -149,3 +141,32 @@ $routes->group('solicitudproductos', function ($routes) {
     $routes->post('update/(:num)', 'SolicitudProductos::update/$1'); // Actualizar solicitud de productos existente
     $routes->get('delete/(:num)', 'SolicitudProductos::delete/$1'); // Eliminar solicitud de productos existente
 });
+
+// Rutas para el controlador Tipos de producto ------------- 03/07/2024
+$routes->get('tipo_producto', 'TipoProducto::index');
+$routes->get('tipo_producto/create', 'TipoProducto::create');
+$routes->post('tipo_producto/store', 'TipoProducto::store');
+$routes->get('tipo_producto/edit/(:num)', 'TipoProducto::edit/$1');
+$routes->post('tipo_producto/update/(:num)', 'TipoProducto::update/$1');
+$routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
+// Rutas para Unidades de Medida Individual ------------- 03/07/2024
+$routes->get('unidadesindividuales', 'UnidadesIndividuales::index');
+$routes->get('unidadesindividuales/create', 'UnidadesIndividuales::create');
+$routes->post('unidadesindividuales/store', 'UnidadesIndividuales::store');
+$routes->get('unidadesindividuales/edit/(:num)', 'UnidadesIndividuales::edit/$1');
+$routes->post('unidadesindividuales/update/(:num)', 'UnidadesIndividuales::update/$1');
+$routes->get('unidadesindividuales/delete/(:num)', 'UnidadesIndividuales::delete/$1');
+// Rutas para el controlador UnidadesPorCaja ------------- 03/07/2024
+$routes->get('unidadesporcaja', 'UnidadesPorCaja::index');
+$routes->get('unidadesporcaja/create', 'UnidadesPorCaja::create');
+$routes->post('unidadesporcaja/store', 'UnidadesPorCaja::store');
+$routes->get('unidadesporcaja/edit/(:num)', 'UnidadesPorCaja::edit/$1');
+$routes->post('unidadesporcaja/update/(:num)', 'UnidadesPorCaja::update/$1');
+$routes->get('unidadesporcaja/delete/(:num)', 'UnidadesPorCaja::delete/$1');
+// Rutas para el controlador Productos ------------- 03/07/2024
+$routes->get('productos', 'Productos::index');
+$routes->get('productos/create', 'Productos::create');
+$routes->post('productos/store', 'Productos::store');
+$routes->get('productos/edit/(:num)', 'Productos::edit/$1');
+$routes->post('productos/update/(:num)', 'Productos::update/$1');
+$routes->get('productos/delete/(:num)', 'Productos::delete/$1');

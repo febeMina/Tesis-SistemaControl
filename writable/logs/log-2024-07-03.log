@@ -1,0 +1,380 @@
+INFO - 2024-07-03 04:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 04:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 04:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 04:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-03 05:17:54 --> mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause' in C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `usuario...', 0)
+#1 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\laragon\www\Tesis-SistemaControl\app\Controllers\Usuario.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usuario->index()
+#6 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Tesis-SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-03 05:17:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', [], false)
+ 2 APPPATH\Controllers\Usuario.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:17:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', [], false)
+ 4 APPPATH\Controllers\Usuario.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:17:55 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', [], false)
+ 5 APPPATH\Controllers\Usuario.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-03 05:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-03 05:48:08 --> mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause' in C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `usuario...', 0)
+#1 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\laragon\www\Tesis-SistemaControl\app\Controllers\Usuario.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Usuario->index()
+#6 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Tesis-SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-03 05:48:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', [], false)
+ 2 APPPATH\Controllers\Usuario.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:48:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', [], false)
+ 4 APPPATH\Controllers\Usuario.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:48:08 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `usuarios`.`idUsuarios`, `usuarios`.`estado`, `usuarios`.`usuario`, `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`', [], false)
+ 5 APPPATH\Controllers\Usuario.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Usuario->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-03 05:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-03 05:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-03 05:50:26 --> mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause' in C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rol`.`n...', 0)
+#1 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rol`.`n...')
+#2 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rol`.`n...')
+#3 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`n...', Array, false)
+#4 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\Tesis-SistemaControl\app\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Login->signIn()
+#8 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Tesis-SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-03 05:50:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = :usuario:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:50:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = :usuario:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:50:26 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = :usuario:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-03 05:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-03 05:50:33 --> mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause' in C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rol`.`n...', 0)
+#1 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rol`.`n...')
+#2 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rol`.`n...')
+#3 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`n...', Array, false)
+#4 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(679): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\Tesis-SistemaControl\app\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Login->signIn()
+#8 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\Tesis-SistemaControl\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-03 05:50:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = :usuario:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:50:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = :usuario:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-03 05:50:33 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarios.idDocente' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = \'norman\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`nombreRol`, `docente`.`nombre_completo`
+FROM `usuarios`
+INNER JOIN `rol` ON `rol`.`idRol` = `usuarios`.`idRol`
+INNER JOIN `docente` ON `docente`.`idDocente` = `usuarios`.`idDocente`
+WHERE `usuario` = :usuario:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(271): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Login.php(54): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
