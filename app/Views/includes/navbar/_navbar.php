@@ -131,6 +131,8 @@
                     <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); background-color: 0f1015;">
                     <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>
                     <li class="nav-item"><a href="<?= site_url('unidadesporcaja') ?>" class="nav-link">Tipo de unidades</a></li>
+                    <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Consumo por productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Requisicion</a></li>
                     </div>
                 </ul>
             </div>

@@ -70,9 +70,9 @@ if (! function_exists('_list')) {
                 $out .= $val;
             } else {
                 $out .= $key
-                    . "\n"
-                    . _list($type, $val, '', $depth + 4)
-                    . str_repeat(' ', $depth + 2);
+                        . "\n"
+                        . _list($type, $val, '', $depth + 4)
+                        . str_repeat(' ', $depth + 2);
             }
 
             $out .= "</li>\n";
@@ -195,7 +195,7 @@ if (! function_exists('script_tag')) {
     function script_tag($src = '', bool $indexPage = false): string
     {
         $cspNonce = csp_script_nonce();
-        $cspNonce = $cspNonce !== '' ? ' ' . $cspNonce : $cspNonce;
+        $cspNonce = $cspNonce ? ' ' . $cspNonce : $cspNonce;
         $script   = '<script' . $cspNonce . ' ';
         if (! is_array($src)) {
             $src = ['src' => $src];

@@ -296,7 +296,7 @@ class Email
     /**
      * Raw debug messages
      *
-     * @var list<string>
+     * @var string[]
      */
     private array $debugMessageRaw = [];
 
@@ -1665,9 +1665,7 @@ class Email
     /**
      * Strip line-breaks via callback
      *
-     * @used-by unwrapSpecials()
-     *
-     * @param list<string> $matches
+     * @param string $matches
      *
      * @return string
      */

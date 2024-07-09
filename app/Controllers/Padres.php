@@ -41,7 +41,7 @@ class Padres extends Controller
     public function store()
     {
         $request = \Config\Services::request();
-
+    
         // Datos del padre
         $dataPadre = [
             'nombreCompleto' => $request->getVar('nombre_completo'),
@@ -50,24 +50,40 @@ class Padres extends Controller
             'telefono' => $request->getVar('telefono'),
             'estado' => $request->getVar('estado'),
         ];
-
+    
         $padreModel = new PadreModel();
         $padreId = $padreModel->insert($dataPadre);
-
+    
         // Asociar alumnos
-        if (!empty($request->getVar('alumnos'))) {
+        if (!empty($request->getVar('alumno_nombre_completo'))) {
             $responsableAlumnoModel = new ResponsableAlumnoModel();
-
-            foreach ($request->getVar('alumnos') as $alumno) {
+            $alumnoModel = new AlumnoModel();
+    
+            $nombres = $request->getVar('alumno_nombre_completo');
+            $generos = $request->getVar('alumno_sexo');
+            $nies = $request->getVar('alumno_nie');
+            $estados = $request->getVar('alumno_estado');
+    
+            foreach ($nombres as $index => $nombre) {
+                $dataAlumno = [
+                    'nombreAlumno' => $nombre,
+                    'Genero_alumno' => $generos[$index],
+                    'NIE' => $nies[$index],
+                    'estado' => $estados[$index],
+                ];
+    
+                $alumnoId = $alumnoModel->insert($dataAlumno);
+    
                 $responsableAlumnoModel->save([
                     'idDatosResponsable' => $padreId,
-                    'idAlumno' => $alumno['id'],
+                    'idAlumno' => $alumnoId,
                 ]);
             }
         }
-
-        return redirect()->to(site_url('padres'));
+    
+        return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido creado exitosamente.');
     }
+    
 
     public function edit($id)
     {

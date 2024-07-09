@@ -22,8 +22,6 @@ class Routing extends BaseConfig
      * found taking precedence.
      *
      * Default: APPPATH . 'Config/Routes.php'
-     *
-     * @var list<string>
      */
     public array $routeFiles = [
         APPPATH . 'Config/Routes.php',
@@ -63,12 +61,13 @@ class Routing extends BaseConfig
 
     /**
      * Sets the class/method that should be called if routing doesn't
-     * find a match. It can be the controller/method name like: Users::index
+     * find a match. It can be either a closure or the controller/method
+     * name exactly like a route is defined: Users::index
      *
      * This setting is passed to the Router class and handled there.
      *
      * If you want to use a closure, you will have to set it in the
-     * routes file by calling:
+     * class constructor or the routes file by calling:
      *
      * $routes->set404Override(function() {
      *    // Do something here
@@ -106,7 +105,7 @@ class Routing extends BaseConfig
      *       'blog' => 'Acme\Blog\Controllers',
      *   ]
      *
-     * @var array<string, string>
+     * @var array [ uri_segment => namespace ]
      */
     public array $moduleRoutes = [];
 }

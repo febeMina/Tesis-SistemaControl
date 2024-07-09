@@ -61,7 +61,7 @@ class Autoloader
     /**
      * Stores namespaces as key, and path as values.
      *
-     * @var array<string, list<string>>
+     * @var array<string, array<string>>
      */
     protected $prefixes = [];
 
@@ -280,13 +280,11 @@ class Autoloader
         }
 
         foreach ($this->prefixes as $namespace => $directories) {
-            if (strpos($class, $namespace) === 0) {
-                $relativeClassPath = str_replace('\\', DIRECTORY_SEPARATOR, substr($class, strlen($namespace)));
+            foreach ($directories as $directory) {
+                $directory = rtrim($directory, '\\/');
 
-                foreach ($directories as $directory) {
-                    $directory = rtrim($directory, '\\/');
-
-                    $filePath = $directory . $relativeClassPath . '.php';
+                if (strpos($class, $namespace) === 0) {
+                    $filePath = $directory . str_replace('\\', DIRECTORY_SEPARATOR, substr($class, strlen($namespace))) . '.php';
                     $filename = $this->includeFile($filePath);
 
                     if ($filename) {
@@ -346,7 +344,11 @@ class Autoloader
             );
         }
         if ($result === false) {
-            $message = PHP_VERSION_ID >= 80000 ? preg_last_error_msg() : 'Regex error. error code: ' . preg_last_error();
+            if (version_compare(PHP_VERSION, '8.0.0', '>=')) {
+                $message = preg_last_error_msg();
+            } else {
+                $message = 'Regex error. error code: ' . preg_last_error();
+            }
 
             throw new RuntimeException($message . '. filename: "' . $filename . '"');
         }

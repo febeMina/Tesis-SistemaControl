@@ -280,7 +280,7 @@ class Table
     /**
      * Creates the new table based on our current fields.
      *
-     * @return bool
+     * @return mixed
      */
     protected function createTable()
     {
@@ -374,7 +374,7 @@ class Table
      *
      * @param array|bool $fields
      *
-     * @return         mixed
+     * @return mixed
      * @phpstan-return ($fields is array ? array : mixed)
      */
     protected function formatFields($fields)
@@ -392,24 +392,6 @@ class Table
                 'null'    => $field->nullable,
             ];
 
-            if ($field->default === null) {
-                // `null` means that the default value is not defined.
-                unset($return[$field->name]['default']);
-            } elseif ($field->default === 'NULL') {
-                // 'NULL' means that the default value is NULL.
-                $return[$field->name]['default'] = null;
-            } else {
-                $default = trim($field->default, "'");
-
-                if ($this->isIntegerType($field->type)) {
-                    $default = (int) $default;
-                } elseif ($this->isNumericType($field->type)) {
-                    $default = (float) $default;
-                }
-
-                $return[$field->name]['default'] = $default;
-            }
-
             if ($field->primary_key) {
                 $this->keys['primary'] = [
                     'fields' => [$field->name],
@@ -422,39 +404,19 @@ class Table
     }
 
     /**
-     * Is INTEGER type?
-     *
-     * @param string $type SQLite data type (case-insensitive)
-     *
-     * @see https://www.sqlite.org/datatype3.html
-     */
-    private function isIntegerType(string $type): bool
-    {
-        return strpos(strtoupper($type), 'INT') !== false;
-    }
-
-    /**
-     * Is NUMERIC type?
-     *
-     * @param string $type SQLite data type (case-insensitive)
-     *
-     * @see https://www.sqlite.org/datatype3.html
-     */
-    private function isNumericType(string $type): bool
-    {
-        return in_array(strtoupper($type), ['NUMERIC', 'DECIMAL'], true);
-    }
-
-    /**
      * Converts keys retrieved from the database to
      * the format needed to create later.
      *
-     * @param array<string, stdClass> $keys
+     * @param mixed $keys
      *
-     * @return array<string, array{fields: string, type: string}>
+     * @return mixed
      */
     protected function formatKeys($keys)
     {
+        if (! is_array($keys)) {
+            return $keys;
+        }
+
         $return = [];
 
         foreach ($keys as $name => $key) {

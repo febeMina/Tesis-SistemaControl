@@ -643,7 +643,7 @@ class ContentSecurityPolicy
     /**
      * DRY method to add an string or array to a class property.
      *
-     * @param list<string>|string $options
+     * @param array|string $options
      *
      * @return void
      */

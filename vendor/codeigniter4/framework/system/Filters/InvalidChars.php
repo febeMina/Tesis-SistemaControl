@@ -45,7 +45,7 @@ class InvalidChars implements FilterInterface
     /**
      * Check invalid characters.
      *
-     * @param list<string>|null $arguments
+     * @param array|null $arguments
      *
      * @return void
      */
@@ -72,7 +72,7 @@ class InvalidChars implements FilterInterface
     /**
      * We don't have anything to do here.
      *
-     * @param list<string>|null $arguments
+     * @param array|null $arguments
      *
      * @return void
      */

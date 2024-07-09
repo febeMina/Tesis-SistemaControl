@@ -78,29 +78,29 @@
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
             <td><input type="text" class="form-control" name="alumno_nombre_completo[]" required></td>
-            <td>
-                <select class="form-control" name="alumno_sexo[]" required>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
-                </select>
-            </td>
-            <td>
-                <div class="input-group">
-                    <input type="text" class="form-control" name="alumno_nie[]" required>
-                    <div class="input-group-append">
-                        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                <td>
+                    <select class="form-control" name="alumno_sexo[]" required>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="alumno_nie[]" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                        </div>
                     </div>
-                </div>
-            </td>
-            <td>
-                <select class="form-control" name="alumno_estado[]" required>
-                    <option value="Activo">Activo</option>
-                    <option value="Inactivo">Inactivo</option>
-                </select>
-            </td>
-            <td>
-                <button type="button" class="btn btn-delete"><i class="fas fa-trash-alt"></i></button>
-            </td>
+                </td>
+                <td>
+                    <select class="form-control" name="alumno_estado[]" required>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-delete"><i class="fas fa-trash-alt"></i></button>
+                </td>
         `;
 
         // Agregar la nueva fila a la tabla
