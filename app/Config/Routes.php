@@ -34,9 +34,10 @@ $routes->get('maestros', 'Maestros::index');
 $routes->match(['get', 'post'], 'maestros/index', 'Maestros::index');
 $routes->get('maestros/create', 'Maestros::create');
 $routes->post('maestros/store', 'Maestros::store');
-$routes->get('maestros/edit/(:segment)', 'Maestros::edit/$1');
-$routes->post('maestros/update/(:segment)', 'Maestros::update/$1');
+$routes->get('maestros/edit/(:num)', 'Maestros::edit/$1');
+$routes->post('maestros/update/(:num)', 'Maestros::update/$1');
 $routes->get('maestros/delete/(:segment)', 'Maestros::delete/$1');
+
 
 
 // Rutas para el controlador Padres
@@ -51,11 +52,13 @@ $routes->get('padres/getAlumnosAjax/(:num)', 'Padres::getAlumnosAjax/$1');
 
 // Rutas para el controlador Tipos de permisos
 
-$routes->get('tipo_permiso/create', 'TipoPermiso::create');
-$routes->post('tipo_permiso/store', 'TipoPermiso::store');
-$routes->get('tipo_permiso/edit/(:num)', 'TipoPermiso::edit/$1');
-$routes->post('tipo_permiso/update', 'TipoPermiso::update');
-$routes->get('tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
+$routes->get('/tipo_permiso', 'TipoPermiso::index');
+$routes->get('/tipo_permiso/create', 'TipoPermiso::create');
+$routes->post('/tipo_permiso/store', 'TipoPermiso::store');
+$routes->get('/tipo_permiso/edit/(:num)', 'TipoPermiso::edit/$1');
+$routes->post('/tipo_permiso/update', 'TipoPermiso::update');
+$routes->get('/tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
+
 
 
 // Rutas para el módulo de permisos magisteriales

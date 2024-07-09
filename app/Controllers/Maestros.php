@@ -34,8 +34,6 @@ class Maestros extends Controller
         // Pasar los datos a la vista
         return view('maestros/index', ['maestros' => $maestrosData]);
     }
-    
-
 
     public function create()
     {
@@ -52,21 +50,41 @@ class Maestros extends Controller
         $escalafon = $request->getVar('escalafon');
         $fecha_ingreso = $request->getVar('fecha_ingreso');
         $estado = $request->getVar('estado');
-    
+        $tipo = $request->getVar('tipo');
+        $cargo = '';
+
+    if ($tipo === 'Administrativo') {
+        $cargo = $request->getVar('rol');
+    }
+
         // Guardar los datos en la base de datos
         $data = [
             'nombre_completo' => $nombre_completo,
             'nip' => $nip,
             'escalafon' => $escalafon,
             'fecha_ingreso' => $fecha_ingreso,
-            'estado' => $estado  // Aquí se almacena el estado correctamente
+            'estado' => $estado,
+            'tipo' => $tipo,
+            'cargo' => $cargo,
         ];
-        $this->maestroModel->insert($data);
-    
-        // Devolver una respuesta JSON
-        return $this->response->setJSON(['success' => true]);
+        
+        log_message('debug', 'Datos de maestro insertados: ' . print_r($data, true));
+
+        $inserted = $this->maestroModel->insert($data);
+
+        if ($inserted) {
+            $response = [
+                'success' => true,
+                'redirect' => site_url('maestros')
+            ];
+        } else {
+            $response = [
+                'success' => false
+            ];
+        }
+
+        return $this->response->setJSON($response);
     }
-    
 
     public function edit($id)
     {
@@ -78,29 +96,46 @@ class Maestros extends Controller
     }
 
     public function update($id)
-    {
-        // Capturar los datos del formulario de edición
-        $request = \Config\Services::request();
-        $nombre_completo = $request->getVar('nombre_completo');
-        $nip = $request->getVar('nip');
-        $escalafon = $request->getVar('escalafon');
-        $fecha_ingreso = $request->getVar('fecha_ingreso');
-        $estado = $request->getVar('estado');
-    
-        // Actualizar los datos en la base de datos
-        $data = [
-            'nombre_completo' => $nombre_completo,
-            'nip' => $nip,
-            'escalafon' => $escalafon,
-            'fecha_ingreso' => $fecha_ingreso,
-            'estado' => $estado  // Aquí se actualiza el estado correctamente
+{
+    // Capturar los datos del formulario de edición
+    $request = \Config\Services::request();
+    $nombre_completo = $request->getVar('nombre_completo');
+    $nip = $request->getVar('nip');
+    $escalafon = $request->getVar('escalafon');
+    $fecha_ingreso = $request->getVar('fecha_ingreso');
+    $estado = $request->getVar('estado');
+    $tipo = $request->getVar('tipo');
+    $cargo = ($tipo === 'Administrativo') ? $request->getVar('rol') : '';
+
+    // Actualizar los datos en la base de datos
+    $data = [
+        'nombre_completo' => $nombre_completo,
+        'nip' => $nip,
+        'escalafon' => $escalafon,
+        'fecha_ingreso' => $fecha_ingreso,
+        'estado' => $estado,
+        'tipo' => $tipo,
+        'cargo' => $cargo,
+    ];
+
+    $updated = $this->maestroModel->update($id, $data);
+
+    if ($updated) {
+        $response = [
+            'success' => true,
+            'redirect' => site_url('maestros')
         ];
-        $this->maestroModel->update($id, $data);
-    
-        // Establecer una respuesta JSON de éxito
-        return $this->response->setJSON(['success' => true, 'redirect' => site_url('maestros')]);
+    } else {
+        $response = [
+            'success' => false
+        ];
     }
+
+    return $this->response->setJSON($response);
+}
+
     
+
     public function delete($id)
     {
         // Eliminar el maestro de la base de datos

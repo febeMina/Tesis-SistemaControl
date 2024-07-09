@@ -53,6 +53,7 @@
                                 <option value="Otro">Otro</option>
                             </select>
                         </div>
+
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
                         </div>
@@ -68,48 +69,49 @@
 
 <!-- Tu script JavaScript -->
 <script>
-    // Esperar a que se cargue el documento
-    $(document).ready(function() {
-        // Mostrar u ocultar el campo de rol según el tipo seleccionado
-        $('#tipo').change(function() {
-            var tipo = $(this).val();
-            if (tipo === 'Administrativo') {
-                $('#rol-group').show();
-            } else {
-                $('#rol-group').hide();
+$(document).ready(function() {
+    $('#tipo').change(function() {
+        var tipo = $(this).val();
+        if (tipo === 'Administrativo') {
+            $('#rol-group').show();
+        } else {
+            $('#rol-group').hide();
+            $('#rol').val(''); // Limpiar el valor de rol si se oculta
+        }
+    });
+
+    $('#createForm').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+            url: $(this).attr('action'),
+            method: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+                console.log(response); // Verificar la respuesta en la consola
+
+                if (response.success) {
+                    var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
+                    alert += 'Maestro creado con éxito.';
+                    alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                    alert += '<span aria-hidden="true">&times;</span>';
+                    alert += '</button>';
+                    alert += '</div>';
+                    $('#successMessage').html(alert);
+                    
+                    setTimeout(function() {
+                        window.location.href = response.redirect;
+                    }, 1500);
+                } else {
+                    alert('Hubo un error al crear el maestro.');
+                }
+            },
+            error: function() {
+                alert('Error de comunicación con el servidor. Inténtalo de nuevo.');
             }
         });
-
-        // Escuchar el evento submit del formulario
-        $('#createForm').submit(function(event) {
-            // Evitar que el formulario se envíe automáticamente
-            event.preventDefault();
-
-            // Enviar la solicitud AJAX para guardar el maestro
-            $.ajax({
-                url: $(this).attr('action'),
-                method: 'POST',
-                data: $(this).serialize(),
-                success: function(response) {
-                    console.log(response); // Verificar la respuesta en la consola del navegador
-                    if (response.success) {
-                        // Mostrar el alert de confirmación
-                        var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                        alert += response.message;
-                        alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-                        alert += '<span aria-hidden="true">&times;</span>';
-                        alert += '</button>';
-                        alert += '</div>';
-                        $('#successMessage').html(alert);
-                        // Redirigir a la vista de índice después de un breve retraso
-                        setTimeout(function() {
-                            window.location.href = response.redirect;
-                        }, 1500); // Retraso de 1.5 segundos
-                    }
-                }
-            });
-        });
     });
+});
 </script>
+
 
 <?= $this->endSection() ?>

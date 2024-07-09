@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\TipoPermisoModel;
-use CodeIgniter\Controller;
 
 class TipoPermiso extends BaseController
 {
@@ -33,7 +32,13 @@ class TipoPermiso extends BaseController
             'cantidad_dias' => $this->request->getPost('cantidad_dias'),
         ];
 
-        $model->insert($data);
+        if ($model->insert($data)) {
+            // Establecer mensaje flash de éxito
+            $this->session->setFlashdata('success', 'Tipo de permiso creado exitosamente.');
+        } else {
+            // Establecer mensaje flash de error
+            $this->session->setFlashdata('error', 'Error al crear el tipo de permiso.');
+        }
 
         return redirect()->to('/tipo_permiso');
     }
@@ -74,7 +79,7 @@ class TipoPermiso extends BaseController
         $model->update($id, $data);
 
         // Establecer mensaje flash
-        session()->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
+        $this->session->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
 
         // Respuesta JSON para AJAX
         return $this->response->setJSON(['success' => true]);
@@ -85,6 +90,7 @@ class TipoPermiso extends BaseController
         $model = new TipoPermisoModel();
         $model->delete($id);
 
+        $this->session->setFlashdata('success', 'Tipo de permiso eliminado exitosamente.');
         return redirect()->to('/tipo_permiso');
     }
 }

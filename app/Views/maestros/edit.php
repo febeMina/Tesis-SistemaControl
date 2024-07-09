@@ -15,7 +15,12 @@
                         <div class="alert alert-success" role="alert">
                             <?= session()->getFlashdata('success') ?>
                         </div>
+                    <?php elseif (session()->getFlashdata('error')) : ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= session()->getFlashdata('error') ?>
+                        </div>
                     <?php endif; ?>
+
                     <form id="updateForm" action="<?= site_url('maestros/update/' . ($maestro['idDocente'] ?? '')) ?>" method="post">
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
@@ -98,27 +103,20 @@
                 method: 'POST',
                 data: $(this).serialize(),
                 success: function(response) {
-                    console.log(response); // Verificar la respuesta en la consola del navegador
+                    console.log(response); // Verifica la respuesta en la consola del navegador
                     if (response.success) {
-                        // Mostrar el alert de confirmación
-                        var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                        alert += 'El maestro ha sido actualizado exitosamente.';
-                        alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-                        alert += '<span aria-hidden="true">&times;</span>';
-                        alert += '</button>';
-                        alert += '</div>';
-                        $(alert).insertBefore($('#updateForm'));
-                        
                         // Redirigir al índice después de actualizar
                         window.location.replace(response.redirect);
                     }
                 },
                 error: function(xhr, status, error) {
-                    console.error(error); // Imprimir cualquier error en la consola
+                    console.error(error); // Imprime cualquier error en la consola
                 }
             });
+
         });
     });
 </script>
+
 
 <?= $this->endSection() ?>

@@ -15,6 +15,11 @@
                             <?= session()->getFlashdata('success') ?>
                         </div>
                     <?php endif; ?>
+                    <?php if (session()->getFlashdata('error')) : ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= session()->getFlashdata('error') ?>
+                        </div>
+                    <?php endif; ?>
                     <div class="mb-3">
                         <a href="<?= site_url('tipo_permiso/create') ?>" class="btn btn-primary">
                             <i class="mdi mdi-plus"></i> Agregar
@@ -54,4 +59,5 @@
         </div>
     </div>
 </div>
+
 <?= $this->endSection() ?>
