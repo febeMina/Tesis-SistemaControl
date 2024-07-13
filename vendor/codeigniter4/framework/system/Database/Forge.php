@@ -39,7 +39,7 @@ class Forge
     /**
      * List of keys.
      *
-     * @var list<array{fields?: string[], keyName?: string}>
+     * @var list<array{fields?: list<string>, keyName?: string}>
      */
     protected $keys = [];
 
@@ -53,7 +53,7 @@ class Forge
     /**
      * Primary keys.
      *
-     * @var array{fields?: string[], keyName?: string}
+     * @var array{fields?: list<string>, keyName?: string}
      */
     protected $primaryKeys = [];
 
@@ -399,8 +399,8 @@ class Forge
     /**
      * Add Foreign Key
      *
-     * @param string|string[] $fieldName
-     * @param string|string[] $tableField
+     * @param list<string>|string $fieldName
+     * @param list<string>|string $tableField
      *
      * @throws DatabaseException
      */
@@ -831,7 +831,7 @@ class Forge
      * @param array|string          $processedFields Processed column definitions
      *                                               or column names to DROP
      *
-     * @return false|list<string>|string|null SQL string
+     * @return         false|list<string>|string|null                            SQL string
      * @phpstan-return ($alterType is 'DROP' ? string : list<string>|false|null)
      */
     protected function _alterTable(string $alterType, string $table, $processedFields)
