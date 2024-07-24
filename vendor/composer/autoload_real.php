@@ -24,16 +24,6 @@ class ComposerAutoloaderInitd2b43001f1fdf6c321cf5b64dba72714
 
         require __DIR__ . '/platform_check.php';
 
-        spl_autoload_register(array('ComposerAutoloaderInitaf08fd9c007b12469fed1216266ea297', 'loadClassLoader'), true, true);
-        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
-        spl_autoload_unregister(array('ComposerAutoloaderInitaf08fd9c007b12469fed1216266ea297', 'loadClassLoader'));
-
-        require __DIR__ . '/autoload_static.php';
-        call_user_func(\Composer\Autoload\ComposerStaticInitaf08fd9c007b12469fed1216266ea297::getInitializer($loader));
-
-        $loader->register(true);
-
-        $filesToLoad = \Composer\Autoload\ComposerStaticInitaf08fd9c007b12469fed1216266ea297::$files;
         spl_autoload_register(array('ComposerAutoloaderInitd2b43001f1fdf6c321cf5b64dba72714', 'loadClassLoader'), true, true);
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInitd2b43001f1fdf6c321cf5b64dba72714', 'loadClassLoader'));
