@@ -98,7 +98,7 @@
                 <span class="menu-title">Donaciones</span>
                 <i class="menu-arrow"></i>
             </a>
-              <div class="collapse" id="donaciones">
+            <div class="collapse" id="donaciones">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('proyectos') ?>" class="nav-link">Proyectos</a></li>
                     <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Listado de Donaciones</a></li>
@@ -156,6 +156,21 @@
                 </ul>
             </div>
         </li>
-         
+
+
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-icon">
+                    <i class="mdi mdi-file-document"></i>
+                </span>
+                <span class="menu-title">Bitácora 🔏</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a href="<?= site_url('bitacora') ?>" class="nav-link">Listado de Bitácora</a></li>
+                </ul>
+            </div>
+        </li>
     </ul>
 </nav>

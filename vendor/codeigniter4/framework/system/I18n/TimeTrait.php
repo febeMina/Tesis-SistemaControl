@@ -266,7 +266,8 @@ trait TimeTrait
     public static function createFromTimestamp(int $timestamp, $timezone = null, ?string $locale = null)
     {
         $time = new self(gmdate('Y-m-d H:i:s', $timestamp), 'UTC', $locale);
-        $timezone ??= 'UTC';
+
+        $timezone ??= date_default_timezone_get();
 
         return $time->setTimezone($timezone);
     }
@@ -1068,8 +1069,21 @@ trait TimeTrait
      */
     public function difference($testTime, ?string $timezone = null)
     {
-        $testTime = $this->getUTCObject($testTime, $timezone);
-        $ourTime  = $this->getUTCObject($this);
+        if (is_string($testTime)) {
+            $timezone = ($timezone !== null) ? new DateTimeZone($timezone) : $this->timezone;
+            $testTime = new DateTime($testTime, $timezone);
+        } elseif ($testTime instanceof self) {
+            $testTime = $testTime->toDateTime();
+        }
+
+        assert($testTime instanceof DateTime);
+
+        if ($this->timezone->getOffset($this) !== $testTime->getTimezone()->getOffset($this)) {
+            $testTime = $this->getUTCObject($testTime, $timezone);
+            $ourTime  = $this->getUTCObject($this);
+        } else {
+            $ourTime = $this->toDateTime();
+        }
 
         return new TimeDifference($ourTime, $testTime);
     }
@@ -1152,7 +1166,7 @@ trait TimeTrait
      *
      * @param string $name
      *
-     * @return array|bool|DateTimeInterface|DateTimeZone|int|intlCalendar|self|string|null
+     * @return array|bool|DateTimeInterface|DateTimeZone|int|IntlCalendar|self|string|null
      */
     public function __get($name)
     {
