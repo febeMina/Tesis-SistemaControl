@@ -1,0 +1,149 @@
+CRITICAL - 2024-07-19 17:37:57 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 APPPATH\Views\solicitud_productos\create.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(45): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-19 17:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 17:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-19 18:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
+(
+    [0] => Array
+        (
+            [idProducto] => 2
+            [idtipoProducto] => 3
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-21
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [1] => Array
+        (
+            [idProducto] => 3
+            [idtipoProducto] => 2
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-29
+            [n_unidades_Caja] => 2
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 2
+            [total] => 42
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [2] => Array
+        (
+            [idProducto] => 4
+            [idtipoProducto] => 4
+            [codigo_lote] => r432fdewr
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-30
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [3] => Array
+        (
+            [idProducto] => 5
+            [idtipoProducto] => 3
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-08
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [4] => Array
+        (
+            [idProducto] => 6
+            [idtipoProducto] => 4
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-25
+            [n_unidades_Caja] => 3
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 61
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [5] => Array
+        (
+            [idProducto] => 7
+            [idtipoProducto] => 3
+            [codigo_lote] => 2243
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-13
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 3
+            [total] => 3
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [6] => Array
+        (
+            [idProducto] => 8
+            [idtipoProducto] => 4
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-14
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+)
+
+INFO - 2024-07-19 19:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -36,65 +36,55 @@
                         </div>
                     </form>
                     <div class="table-responsive">
-                    <table class="table table-sm" style="color: #000; font-size: 0.9rem;">
-                        <thead>
-                            <tr>
-                                <th>NIP</th>
-                                <th>Nombre del Maestro</th>
-                                <th>Fecha de Solicitud</th>
-                                <th>Detalles de Permisos</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($saldos_docentes as $saldo): ?>
+                        <table class="table table-sm" style="color: #000; font-size: 0.9rem;">
+                            <thead>
                                 <tr>
-                                    <td><?= esc($saldo['nip']) ?></td>
-                                    <td><?= esc($saldo['nombre_completo']) ?></td>
-                                    <td><?= esc($saldo['fecha_creacion']) ?></td>
-                                    <td>
-                                        <table class="table table-bordered table-sm">
-                                            <thead>
-                                                <tr>
-                                                    <th>Tipo de Permiso</th>
-                                                    <th>Fecha Inicio</th>
-                                                    <th>Fecha Fin</th>
-                                                    <th>Días Ocupados</th>
-                                                    <th>Horas Ocupadas</th>
-                                                    <th>Días Disponibles</th>
-                                                    <th>Horas Disponibles</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle): ?>
-                                                    <?php
-                                                    $nombreTipoPermiso = '';
-                                                    foreach ($tipos_permisos as $tipo_permiso) {
-                                                        if ($tipo_permiso['idTipoPermiso'] == $detalle['idTipoPermiso']) {
-                                                            $nombreTipoPermiso = $tipo_permiso['nombre'] . ' (' . $tipo_permiso['cantidad_dias'] . ' días)';
-                                                            break;
-                                                        }
-                                                    }
-                                                    ?>
-                                                    <tr>
-                                                        <td><?= esc($nombreTipoPermiso) ?></td>
-                                                        <td><?= ($detalle['fecha_inicio'] !== null) ? esc($detalle['fecha_inicio']) : '' ?></td>
-                                                        <td><?= ($detalle['fecha_fin'] !== null) ? esc($detalle['fecha_fin']) : '' ?></td>      
-                                                        <td><?= esc($detalle['dias_ocupados']) ?></td>
-                                                        <td><?= esc($detalle['horas_ocupadas']) ?></td>
-                                                        <td><?= esc($detalle['dias_disponibles']) ?></td>
-                                                        <td><?= esc($detalle['horas_disponibles']) ?></td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            </tbody>
-                                        </table>
-                                    </td>
+                                    <th>NIP</th>
+                                    <th>Nombre del Maestro</th>
+                                    <th>Fecha de Solicitud</th>
+                                    <th>Detalles de Permisos</th>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($saldos_docentes as $saldo): ?>
+                                    <tr>
+                                        <td><?= esc($saldo['nip']) ?></td>
+                                        <td><?= esc($saldo['nombre_completo']) ?></td>
+                                        <td><?= esc($saldo['fecha_creacion']) ?></td>
+                                        <td>
+                                            <table class="table table-bordered table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Tipo de Permiso</th>
+                                                        <th>Fecha Inicio</th>
+                                                        <th>Fecha Fin</th>
+                                                        <th>Días Ocupados</th>
+                                                        <th>Horas Ocupadas</th>
+                                                        <th>Días Disponibles</th>
+                                                        <th>Horas Disponibles</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($saldo['detalle_saldos_permiso'] as $detalle): ?>
+                                                        <tr>
+                                                            <td><?= esc($detalle['nombre_tipo_permiso']) ?></td>
+                                                            <td><?= !empty($detalle['fecha_inicio']) ? esc($detalle['fecha_inicio']) : '' ?></td>
+                                                            <td><?= !empty($detalle['fecha_fin']) ? esc($detalle['fecha_fin']) : '' ?></td>
+                                                            <td><?= esc($detalle['dias_ocupados']) ?></td>
+                                                            <td><?= esc($detalle['horas_ocupadas']) ?></td>
+                                                            <td><?= esc($detalle['dias_disponibles']) ?></td>
+                                                            <td><?= esc($detalle['horas_disponibles']) ?></td>
+                                                        </tr>
+                                                    <?php endforeach; ?>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- Enlaces de paginación -->
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-end">
                         <?= $pager->links('group1', 'bootstrap_pagination') ?>
                     </div>
                 </div>

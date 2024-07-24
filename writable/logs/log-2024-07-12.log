@@ -1,0 +1,281 @@
+INFO - 2024-07-12 04:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 04:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 04:32:11 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 29.
+ 1 APPPATH\Views\Consumo\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(19): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 04:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 04:38:47 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 29.
+ 1 APPPATH\Views\Consumo\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(19): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 05:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 05:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-12 05:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 05:02:10 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 29.
+ 1 APPPATH\Views\Consumo\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(19): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 05:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 05:15:40 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 29.
+ 1 APPPATH\Views\Consumo\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(19): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 05:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 05:20:19 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 29.
+ 1 APPPATH\Views\Consumo\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(19): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-12 05:31:31 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumo...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumo...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumo...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumo...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Consumo.php(16): App\Models\ConsumoModel->getConsumos()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Consumo->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-12 05:31:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Consumo.php(16): App\Models\ConsumoModel->getConsumos()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-12 05:31:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Consumo.php(16): App\Models\ConsumoModel->getConsumos()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-12 05:31:31 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Consumo.php(16): App\Models\ConsumoModel->getConsumos()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-12 05:38:48 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumo...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumo...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumo...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumo...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Consumo.php(17): App\Models\ConsumoModel->getConsumos()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Consumo->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-12 05:38:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Consumo.php(17): App\Models\ConsumoModel->getConsumos()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-12 05:38:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Consumo.php(17): App\Models\ConsumoModel->getConsumos()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-12 05:38:48 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `nombre_producto`, `productos`.`fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ConsumoModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Consumo.php(17): App\Models\ConsumoModel->getConsumos()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 05:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 05:54:10 --> ErrorException: Undefined variable $productos
+in APPPATH\Views\Consumo\index.php on line 28.
+ 1 APPPATH\Views\Consumo\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(20): view('consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 05:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 05:57:10 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 30.
+ 1 APPPATH\Views\Consumo\index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(26): view('consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 06:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 06:03:11 --> ErrorException: Undefined array key "nombre_producto"
+in APPPATH\Views\Consumo\index.php on line 30.
+ 1 APPPATH\Views\Consumo\index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_producto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(26): view('consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 06:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 06:06:06 --> ErrorException: Undefined array key "nombre_producto"
+in APPPATH\Views\Consumo\index.php on line 30.
+ 1 APPPATH\Views\Consumo\index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_producto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(26): view('consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 06:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 06:07:46 --> ErrorException: Undefined array key "nombre_producto"
+in APPPATH\Views\Consumo\index.php on line 30.
+ 1 APPPATH\Views\Consumo\index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_producto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(26): view('consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-12 06:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-12 06:10:33 --> ErrorException: Undefined array key "nombre_producto"
+in APPPATH\Views\Consumo\index.php on line 30.
+ 1 APPPATH\Views\Consumo\index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_producto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(26): view('consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

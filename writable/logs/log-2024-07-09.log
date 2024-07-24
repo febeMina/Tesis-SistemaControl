@@ -189,3 +189,238 @@ INFO - 2024-07-09 05:56:34 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-07-09 05:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-09 05:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-09 05:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 15:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 15:46:46 --> CodeIgniter\Pager\Exceptions\PagerException: "custom_pagination" is not a valid Pager template.
+in SYSTEMPATH\Pager\Pager.php on line 122.
+ 1 SYSTEMPATH\Pager\Pager.php(122): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('custom_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(85): CodeIgniter\Pager\Pager->displayLinks('group1', 'custom_pagination')
+ 3 APPPATH\Views\Permisos\index.php(88): CodeIgniter\Pager\Pager->links('group1', 'custom_pagination')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 7 APPPATH\Controllers\PermisoMagisterial.php(217): view('Permisos/index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 15:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 15:47:40 --> CodeIgniter\Pager\Exceptions\PagerException: "custom_pagination" is not a valid Pager template.
+in SYSTEMPATH\Pager\Pager.php on line 122.
+ 1 SYSTEMPATH\Pager\Pager.php(122): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('custom_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(85): CodeIgniter\Pager\Pager->displayLinks('group1', 'custom_pagination')
+ 3 APPPATH\Views\Permisos\index.php(88): CodeIgniter\Pager\Pager->links('group1', 'custom_pagination')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 7 APPPATH\Controllers\PermisoMagisterial.php(217): view('Permisos/index', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 15:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 15:50:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "App\Views\Pager\custom_pagination.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('App\\Views\\Pager\\custom_pagination.php')
+ 2 SYSTEMPATH\Pager\Pager.php(128): CodeIgniter\View\View->render('App\\Views\\Pager\\custom_pagination')
+ 3 SYSTEMPATH\Pager\Pager.php(85): CodeIgniter\Pager\Pager->displayLinks('group1', 'custom_pagination')
+ 4 APPPATH\Views\Permisos\index.php(88): CodeIgniter\Pager\Pager->links('group1', 'custom_pagination')
+ 5 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 8 APPPATH\Controllers\PermisoMagisterial.php(217): view('Permisos/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 15:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 15:51:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "App\Views\Pager\custom_pagination.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('App\\Views\\Pager\\custom_pagination.php')
+ 2 SYSTEMPATH\Pager\Pager.php(128): CodeIgniter\View\View->render('App\\Views\\Pager\\custom_pagination')
+ 3 SYSTEMPATH\Pager\Pager.php(85): CodeIgniter\Pager\Pager->displayLinks('group1', 'custom_pagination')
+ 4 APPPATH\Views\Permisos\index.php(88): CodeIgniter\Pager\Pager->links('group1', 'custom_pagination')
+ 5 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 8 APPPATH\Controllers\PermisoMagisterial.php(217): view('Permisos/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 15:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 15:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 15:58:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 15:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 15:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 15:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 16:21:15 --> Error: Call to a member function format() on null
+in APPPATH\Views\Permisos\index.php on line 71.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 4 APPPATH\Controllers\PermisoMagisterial.php(223): view('Permisos/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 16:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 16:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 16:53:32 --> ErrorException: Undefined variable $tipo_permiso
+in APPPATH\Views\Permisos\index.php on line 71.
+ 1 APPPATH\Views\Permisos\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo_permiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(213): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 17:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 17:01:26 --> ErrorException: Undefined variable $tipo_permiso
+in APPPATH\Views\Permisos\index.php on line 71.
+ 1 APPPATH\Views\Permisos\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo_permiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(213): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 17:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 17:07:02 --> ErrorException: Undefined variable $tipo_permiso
+in APPPATH\Views\Permisos\index.php on line 71.
+ 1 APPPATH\Views\Permisos\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo_permiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(213): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 17:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 17:09:13 --> ErrorException: Undefined variable $saldos_docentes
+in APPPATH\Views\Permisos\index.php on line 49.
+ 1 APPPATH\Views\Permisos\index.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldos_docentes', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(214): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 17:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 17:09:24 --> ErrorException: Undefined variable $tipo_permiso
+in APPPATH\Views\Permisos\index.php on line 71.
+ 1 APPPATH\Views\Permisos\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo_permiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(213): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 17:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-09 17:09:33 --> ErrorException: Undefined variable $tipo_permiso
+in APPPATH\Views\Permisos\index.php on line 71.
+ 1 APPPATH\Views\Permisos\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo_permiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(213): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 17:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 17:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 17:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-09 21:26:47 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\Donaciones.php(15): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-09 21:26:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-09 21:26:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-09 21:26:47 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-09 21:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-09 21:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

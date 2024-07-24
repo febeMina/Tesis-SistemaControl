@@ -129,9 +129,11 @@ $routes->group('consumo', function ($routes) {
     $routes->get('create', 'Consumo::create');    // Mostrar formulario de creación
     $routes->post('store', 'Consumo::store');     // Guardar nuevo consumo
     $routes->get('edit/(:num)', 'Consumo::edit/$1');  // Mostrar formulario de edición
-    $routes->post('update/(:num)', 'Consumo::update/$1'); // Actualizar consumo existente
+    $routes->post('update/(:num)', 'Consumo::update/$1');    // Actualizar consumo existente
     $routes->get('delete/(:num)', 'Consumo::delete/$1');  // Eliminar consumo existente
+    $routes->get('getSaldoInicial/(:num)', 'Consumo::getSaldoInicial/$1'); // Obtener saldo inicial
 });
+
 
 
 

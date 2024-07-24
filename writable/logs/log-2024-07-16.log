@@ -1,0 +1,328 @@
+INFO - 2024-07-16 01:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 01:14:15 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:16:01 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:16:17 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:16:46 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:16:52 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:17:00 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:17:12 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:17:23 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 01:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 01:46:59 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:47:10 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:47:20 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:47:27 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:47:40 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 01:47:47 --> ErrorException: Undefined array key "idtipoProducto"
+in APPPATH\Controllers\Consumo.php on line 22.
+ 1 APPPATH\Controllers\Consumo.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idtipoProducto"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 01:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 01:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 02:01:57 --> ErrorException: Undefined variable $pager
+in APPPATH\Views\Consumo\index.php on line 91.
+ 1 APPPATH\Views\Consumo\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(33): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 02:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 02:03:01 --> ErrorException: Undefined variable $pager
+in APPPATH\Views\Consumo\index.php on line 91.
+ 1 APPPATH\Views\Consumo\index.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 91)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(33): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 02:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:05:54 --> Datos de consumos antes de agregar descripción: [{"idConsumo":"1","fecha":"2024-07-13","producto_id":"3","descripcion":null,"fecha_vencimiento":"2024-10-29","saldo_inicial":"60","salidas":"0","nombre_producto":"Cereal frutas","descripcion_producto":"cereal omoa"},{"idConsumo":"18","fecha":"0000-00-00","producto_id":"7","descripcion":null,"fecha_vencimiento":"2024-11-13","saldo_inicial":"10","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"16","fecha":"0000-00-00","producto_id":"2","descripcion":null,"fecha_vencimiento":"2024-11-21","saldo_inicial":"0","salidas":"5","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"15","fecha":"0000-00-00","producto_id":"5","descripcion":null,"fecha_vencimiento":"2024-11-08","saldo_inicial":"50","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"17","fecha":"0000-00-00","producto_id":"6","descripcion":null,"fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"0","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"},{"idConsumo":"12","fecha":"0000-00-00","producto_id":"6","descripcion":null,"fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"5","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"}]
+INFO - 2024-07-16 02:05:54 --> Datos de consumos después de agregar descripción: [{"idConsumo":"1","fecha":"2024-07-13","producto_id":"3","descripcion":"Descripci\u00f3n no disponible","fecha_vencimiento":"2024-10-29","saldo_inicial":"60","salidas":"0","nombre_producto":"Cereal frutas","descripcion_producto":"cereal omoa"},{"idConsumo":"18","fecha":"0000-00-00","producto_id":"7","descripcion":"Descripci\u00f3n no disponible","fecha_vencimiento":"2024-11-13","saldo_inicial":"10","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"16","fecha":"0000-00-00","producto_id":"2","descripcion":"Descripci\u00f3n no disponible","fecha_vencimiento":"2024-11-21","saldo_inicial":"0","salidas":"5","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"15","fecha":"0000-00-00","producto_id":"5","descripcion":"Descripci\u00f3n no disponible","fecha_vencimiento":"2024-11-08","saldo_inicial":"50","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"17","fecha":"0000-00-00","producto_id":"6","descripcion":"Descripci\u00f3n no disponible","fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"0","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"},{"idConsumo":"12","fecha":"0000-00-00","producto_id":"6","descripcion":"Descripci\u00f3n no disponible","fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"5","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"}]
+INFO - 2024-07-16 02:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:06:26 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa"},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol"},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol"},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol"},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco"},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco"},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco"}]
+INFO - 2024-07-16 02:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:06:47 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa"},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol"},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol"},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol"},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco"},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco"},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco"}]
+INFO - 2024-07-16 02:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 02:10:10 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Controllers\Consumo.php on line 48.
+ 1 APPPATH\Controllers\Consumo.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 02:10:16 --> Datos de consumos antes de agregar descripción: [{"idConsumo":"1","fecha":"2024-07-13","producto_id":"3","descripcion":null,"fecha_vencimiento":"2024-10-29","saldo_inicial":"60","salidas":"0","nombre_producto":"Cereal frutas","descripcion_producto":"cereal omoa"},{"idConsumo":"18","fecha":"0000-00-00","producto_id":"7","descripcion":null,"fecha_vencimiento":"2024-11-13","saldo_inicial":"10","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"16","fecha":"0000-00-00","producto_id":"2","descripcion":null,"fecha_vencimiento":"2024-11-21","saldo_inicial":"0","salidas":"5","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"15","fecha":"0000-00-00","producto_id":"5","descripcion":null,"fecha_vencimiento":"2024-11-08","saldo_inicial":"50","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"17","fecha":"0000-00-00","producto_id":"6","descripcion":null,"fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"0","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"},{"idConsumo":"12","fecha":"0000-00-00","producto_id":"6","descripcion":null,"fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"5","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"}]
+CRITICAL - 2024-07-16 02:10:16 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Controllers\Consumo.php on line 26.
+ 1 APPPATH\Controllers\Consumo.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 02:11:01 --> Datos de consumos antes de agregar descripción: [{"idConsumo":"1","fecha":"2024-07-13","producto_id":"3","descripcion":null,"fecha_vencimiento":"2024-10-29","saldo_inicial":"60","salidas":"0","nombre_producto":"Cereal frutas","descripcion_producto":"cereal omoa"},{"idConsumo":"18","fecha":"0000-00-00","producto_id":"7","descripcion":null,"fecha_vencimiento":"2024-11-13","saldo_inicial":"10","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"16","fecha":"0000-00-00","producto_id":"2","descripcion":null,"fecha_vencimiento":"2024-11-21","saldo_inicial":"0","salidas":"5","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"15","fecha":"0000-00-00","producto_id":"5","descripcion":null,"fecha_vencimiento":"2024-11-08","saldo_inicial":"50","salidas":"0","nombre_producto":"frijol ","descripcion_producto":"don frijol"},{"idConsumo":"17","fecha":"0000-00-00","producto_id":"6","descripcion":null,"fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"0","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"},{"idConsumo":"12","fecha":"0000-00-00","producto_id":"6","descripcion":null,"fecha_vencimiento":"2024-11-25","saldo_inicial":"100","salidas":"5","nombre_producto":"Arroz precocido","descripcion_producto":"arroz san francisco"}]
+CRITICAL - 2024-07-16 02:11:01 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Controllers\Consumo.php on line 26.
+ 1 APPPATH\Controllers\Consumo.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 02:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 02:21:14 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Controllers\Consumo.php on line 24.
+ 1 APPPATH\Controllers\Consumo.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 02:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:28 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 02:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 02:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 03:02:54 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 03:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 03:08:37 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 03:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 03:09:49 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 03:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 03:25:27 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 03:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 03:27:09 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 03:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 03:35:35 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 03:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 04:03:57 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 04:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 04:41:42 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 04:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 04:45:13 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 04:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 05:09:28 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 05:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-16 05:19:12 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 05:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 05:19:39 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Controllers\Consumo.php on line 93.
+ 1 APPPATH\Controllers\Consumo.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 93)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 05:50:05 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 05:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 05:50:36 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Controllers\Consumo.php on line 93.
+ 1 APPPATH\Controllers\Consumo.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 93)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 05:55:47 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 05:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 05:56:00 --> BadMethodCallException: Call to undefined method App\Models\ProductoModel::obtenerSaldoInicial
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(93): CodeIgniter\Model->__call('obtenerSaldoInicial', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 06:07:48 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 06:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 06:08:08 --> BadMethodCallException: Call to undefined method App\Models\ProductoModel::obtenerSaldoInicial
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(93): CodeIgniter\Model->__call('obtenerSaldoInicial', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 06:08:55 --> Datos de productos en create: [{"idProducto":"3","idtipoProducto":"2","nombre":"Cereal frutas","fecha_vencimiento":"2024-10-29","unidades_extras":"2","descripcion":"cereal omoa.."},{"idProducto":"2","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-21","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"5","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-08","unidades_extras":"1","descripcion":"don frijol.."},{"idProducto":"7","idtipoProducto":"3","nombre":"frijol ","fecha_vencimiento":"2024-11-13","unidades_extras":"3","descripcion":"don frijol.."},{"idProducto":"4","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-10-30","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"6","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-25","unidades_extras":"1","descripcion":"arroz san francisco.."},{"idProducto":"8","idtipoProducto":"4","nombre":"Arroz precocido","fecha_vencimiento":"2024-11-14","unidades_extras":"1","descripcion":"arroz san francisco.."}]
+INFO - 2024-07-16 06:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 06:09:18 --> BadMethodCallException: Call to undefined method App\Models\ProductoModel::obtenerSaldoInicial
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(93): CodeIgniter\Model->__call('obtenerSaldoInicial', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 06:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 06:18:39 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Controllers\Consumo.php on line 55.
+ 1 APPPATH\Controllers\Consumo.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Consumo.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 06:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 06:21:35 --> BadMethodCallException: Call to undefined method App\Models\ProductoModel::obtenerSaldoInicial
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(54): CodeIgniter\Model->__call('obtenerSaldoInicial', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 06:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 06:22:11 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 59.
+ 1 APPPATH\Views\solicitud_productos\create.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(31): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 06:27:05 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 59.
+ 1 APPPATH\Views\solicitud_productos\create.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(35): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 06:33:49 --> Exception: El producto no tiene un nombre definido
+in APPPATH\Controllers\SolicitudProductos.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-16 06:39:37 --> Exception: El producto no tiene un nombre definido
+in APPPATH\Controllers\SolicitudProductos.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-16 06:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-16 06:39:49 --> Exception: El producto no tiene un nombre definido
+in APPPATH\Controllers\SolicitudProductos.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

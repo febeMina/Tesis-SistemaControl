@@ -5,43 +5,43 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
-                <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
+            <div class="card">
+                <div class="card-header">
                     <h3 class="text-center">Nuevo Consumo por Producto</h3>
                 </div>
-                <div class="card-body">
-                    <form action="<?= site_url('consumo/store') ?>" method="post">
+                <div class="card-body" style="background-color: #f0f0f0">
+                <form method="post" action="<?= site_url('consumo/store') ?>">
                         <div class="form-group">
-                            <label for="fecha" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha</label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            <label for="fecha" style="color: #000;">Fecha:</label>
+                            <input type="date" name="fecha" id="fecha" class="form-control" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="producto" style="color: #000;"><i class="fas fa-box"></i> Producto</label>
-                            <select class="form-control" id="producto" name="producto" required>
+                            <label for="idProducto" style="color: #000;">Producto - Descripción - Fecha vencimiento:</label>
+                            <select name="idProducto" id="idProducto" class="form-control" required>
                                 <?php foreach ($productos as $producto): ?>
-                                    <option value="<?= $producto['id'] ?>"><?= $producto['nombre'] ?></option>
+                                    <option value="<?= $producto['idProducto'] ?>" data-descripcion="<?= esc($producto['descripcion']) ?>" data-vencimiento="<?= esc($producto['fecha_vencimiento']) ?>">
+                                        <?= esc($producto['nombre']) ?> - <?= esc($producto['descripcion']) ?> (<?= esc($producto['fecha_vencimiento']) ?>)
+                                    </option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
+
                         <div class="form-group">
-                            <label for="descripcion" style="color: #000;"><i class="fas fa-info-circle"></i> Descripción</label>
-                            <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+                            <label for="saldo_inicial" style="color: #000;">Saldo inicial:</label>
+                            <input type="number" name="saldo_inicial" id="saldo_inicial" class="form-control">
                         </div>
+
                         <div class="form-group">
-                            <label for="fecha_vencimiento" style="color: #000;"><i class="fas fa-calendar-alt"></i> Fecha de Vencimiento</label>
-                            <input type="date" class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" required>
+                            <label for="salidas" style="color: #000;">Salidas:</label>
+                            <input type="number" name="salidas" id="salidas" class="form-control">
                         </div>
+
                         <div class="form-group">
-                            <label for="saldo_inicial" style="color: #000;"><i class="fas fa-balance-scale"></i> Saldo Inicial</label>
-                            <input type="number" class="form-control" id="saldo_inicial" name="saldo_inicial" required>
+                            <label for="saldo" style="color: #000;">Saldo:</label>
+                            <input type="number" name="saldo" id="saldo" class="form-control" readonly>
                         </div>
-                        <div class="form-group">
-                            <label for="salidas" style="color: #000;"><i class="fas fa-arrow-up"></i> Salidas</label>
-                            <input type="number" class="form-control" id="salidas" name="salidas" required>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
-                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
                 </div>
             </div>
@@ -54,28 +54,40 @@
 
 <!-- Tu script JavaScript -->
 <script>
-    $(document).ready(function() {
-        $('form').submit(function(event) {
-            event.preventDefault();
-            $.ajax({
-                url: $(this).attr('action'),
-                method: 'POST',
-                data: $(this).serialize(),
-                success: function(response) {
-                    console.log(response);
-                    if (response.success) {
-                        var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                        alert += 'El consumo por producto ha sido creado exitosamente.';
-                        alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-                        alert += '<span aria-hidden="true">&times;</span>';
-                        alert += '</button>';
-                        alert += '</div>';
-                        $(alert).insertBefore($('form'));
-                    }
-                }
-            });
+$(document).ready(function() {
+    function updateSaldo() {
+        var saldo_inicial = parseInt($('#saldo_inicial').val()) || 0;
+        var salidas = parseInt($('#salidas').val()) || 0;
+        var saldo = saldo_inicial - salidas;
+        $('#saldo').val(saldo);
+    }
+
+    $('#saldo_inicial, #salidas').on('input', function() {
+        updateSaldo();
+    });
+
+    $('#idProducto').change(function() {
+        var idProducto = $(this).val();
+
+        // Limpiar campos al cambiar de producto
+        $('#saldo_inicial').val('');
+        $('#salidas').val('');
+        $('#saldo').val('');
+
+        // Obtener saldo inicial del producto seleccionado
+        $.ajax({
+            url: '<?= site_url('consumo/getSaldoInicial/') ?>' + idProducto,
+            method: 'GET',
+            success: function(response) {
+                $('#saldo_inicial').val(response.saldo_inicial);
+                updateSaldo();
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+            }
         });
     });
+});
 </script>
 
 <?= $this->endSection() ?>

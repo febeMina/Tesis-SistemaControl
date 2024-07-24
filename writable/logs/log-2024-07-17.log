@@ -1,0 +1,448 @@
+INFO - 2024-07-17 20:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 20:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 20:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 20:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 20:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 20:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 20:43:59 --> Exception: El producto no tiene un nombre definido
+in APPPATH\Controllers\SolicitudProductos.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 20:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-17 20:55:09 --> mysqli_sql_exception: Table 'sistema_control.productos_solicitados' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(72): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-17 20:55:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.productos_solicitados' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(72): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 20:55:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.productos_solicitados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (1, \'2\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (1, \'2\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(72): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 20:55:09 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.productos_solicitados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (1, \'2\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (1, \'2\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (1, \'2\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(72): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 20:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 21:23:18 --> ErrorException: Undefined variable $productos
+in APPPATH\Views\Consumo\index.php on line 26.
+ 1 APPPATH\Views\Consumo\index.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(100): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 21:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 21:23:47 --> ErrorException: Undefined variable $productos
+in APPPATH\Views\Consumo\index.php on line 26.
+ 1 APPPATH\Views\Consumo\index.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(100): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 21:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 21:24:02 --> ErrorException: Undefined variable $productos
+in APPPATH\Views\Consumo\index.php on line 26.
+ 1 APPPATH\Views\Consumo\index.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(103): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:24:09 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:24:15 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:24:20 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:24:43 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:24:49 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:24:56 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:25:01 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:25:06 --> BadMethodCallException: Call to undefined method App\Models\ConsumoModel::getConsumos
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Consumo.php(17): CodeIgniter\Model->__call('getConsumos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 21:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 21:25:33 --> ErrorException: Undefined variable $productos
+in APPPATH\Views\Consumo\index.php on line 26.
+ 1 APPPATH\Views\Consumo\index.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(100): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 21:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 21:28:38 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 28.
+ 1 APPPATH\Views\Consumo\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(106): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 21:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-17 21:35:24 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\Consumo\index.php on line 28.
+ 1 APPPATH\Views\Consumo\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Consumo\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Consumo/index', [], true)
+ 5 APPPATH\Controllers\Consumo.php(107): view('Consumo/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 21:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 21:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-17 21:48:43 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumo...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumo...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumo...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumo...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Consumo->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-17 21:48:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:48:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:48:43 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`descripcion` as `producto_descripcion`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `productos` ON `productos`.`idProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-17 21:51:28 --> mysqli_sql_exception: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumo...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumo...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumo...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumo...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Consumo->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-17 21:51:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:51:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:51:28 --> [Caused by] mysqli_sql_exception: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-17 21:52:10 --> mysqli_sql_exception: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumo...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumo...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumo...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumo...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Consumo->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-17 21:52:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:52:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-17 21:52:10 --> [Caused by] mysqli_sql_exception: Unknown column 'tipo_producto.fecha_vencimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `consumos`.*, `tipo_producto`.`nombre` as `producto_nombre`, `tipo_producto`.`descripcion` as `producto_descripcion`, `tipo_producto`.`fecha_vencimiento` as `producto_fecha_vencimiento`
+FROM `consumos`
+JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `consumos`.`producto_id`
+ORDER BY `consumos`.`fecha` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ConsumoModel.php(23): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Consumo.php(98): App\Models\ConsumoModel->obtenerConsumosConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Consumo->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Consumo))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-17 22:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 22:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 22:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 22:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 22:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 22:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 22:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 23:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 23:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 23:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 23:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 23:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 23:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-17 23:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

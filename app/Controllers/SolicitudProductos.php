@@ -4,106 +4,132 @@ namespace App\Controllers;
 
 use App\Models\SolicitudProductosModel;
 use App\Models\ProductoModel;
+use App\Models\ConsumoModel;
 use CodeIgniter\Controller;
 
 class SolicitudProductos extends Controller
 {
     protected $db;
+    protected $request;
+    protected $SolicitudProductosModel;
+    protected $ProductosModel;
 
     public function __construct()
     {
-        $this->db = db_connect(); // Cargar la base de datos en el constructor
+        $this->db = db_connect();
+        $this->request = service('request');
+        $this->SolicitudProductosModel = new SolicitudProductosModel();
+        $this->ProductosModel = new ProductoModel();
     }
 
     public function index()
     {
-        $solicitudModel = new SolicitudProductosModel();
-        $data['solicitudes'] = $solicitudModel->findAll();
+        $model = new SolicitudProductosModel();
+        $solicitudes = $model->obtenerSolicitudesConDetalles();
 
+        $data['solicitudes'] = $solicitudes;
         return view('solicitud_productos/index', $data);
     }
 
     public function create()
-    {
-        $productoModel = new ProductoModel();
-        $data['productos'] = $productoModel->findAll();
+{
+    $consumoModel = new \App\Models\ConsumoModel();
+    $consumos = $consumoModel->getConsumos(); // Obtener todos los datos de consumo
 
-        return view('solicitud_productos/create', $data);
+    // Log para verificar los datos obtenidos
+    log_message('info', 'Datos de consumo obtenidos: ' . print_r($consumos, true));
+
+    $data = [
+        'consumos' => $consumos,
+        // Otros datos necesarios para el formulario
+    ];
+
+    return view('solicitud_productos/create', $data);
+}
+
+public function store()
+{
+    $model = new SolicitudProductosModel();
+    $request = \Config\Services::request();
+    
+    // Validación de datos
+    $validation = \Config\Services::validation();
+    $validation->setRules([
+        'Fecha_solicitud' => 'required|valid_date',
+        'Comida_a_preparar' => 'required|string',
+        'productos.*.idProducto' => 'required|integer',
+        'productos.*.cantidad' => 'required|integer',
+        'responsable_entrega' => 'required|string',
+        'responsable_recibir' => 'required|string',
+    ]);
+    
+    if (!$validation->withRequest($this->request)->run()) {
+        return redirect()->back()->withInput()->with('errors', $validation->getErrors());
     }
-
-    public function store()
-    {
-        $solicitudModel = new SolicitudProductosModel();
-
+    
+    // Obtener los datos del formulario
+    $fecha_solicitud = $request->getPost('Fecha_solicitud');
+    $comida_a_preparar = $request->getPost('Comida_a_preparar');
+    $productos = $request->getPost('productos');
+    $responsable_entrega = $request->getPost('responsable_entrega');
+    $responsable_recibir = $request->getPost('responsable_recibir');
+    
+    foreach ($productos as $producto) {
+        // Preparar los datos para guardar
         $data = [
-            'Fecha_solicitud' => $this->request->getPost('Fecha_solicitud'),
-            'Comida_a_preparar' => $this->request->getPost('Comida_a_preparar'),
-            'responsable_entrega' => $this->request->getPost('responsable_entrega'),
-            'responsable_recibir' => $this->request->getPost('responsable_recibir'),
+            'Fecha_solicitud' => $fecha_solicitud,
+            'Comida_a_preparar' => $comida_a_preparar,
+            'idProducto' => $producto['idProducto'],
+            'cantidad' => (int) $producto['cantidad'],
+            'responsable_entrega' => $responsable_entrega,
+            'responsable_recibir' => $responsable_recibir,
         ];
 
-        // Guardar solicitud
-        $solicitudModel->save($data);
-        $idSolicitudProductos = $solicitudModel->insertID();
-
-        // Guardar productos solicitados
-        $productos = $this->request->getPost('productos');
-        foreach ($productos as $producto) {
-            // Guardar en la tabla de relación productos_solicitados
-            $this->db->table('productos_solicitados')->insert([
-                'idSolicitudProductos' => $idSolicitudProductos,
-                'idProducto' => $producto['idProducto'],
-                'cantidad' => $producto['cantidad'],
-            ]);
+        // Guardar los datos en la base de datos
+        if (!$model->insert($data)) {
+            return redirect()->back()->withInput()->with('error', 'Hubo un problema al guardar la solicitud de producto.');
         }
 
-        return redirect()->to('/solicitud_productos');
+        // Registrar la salida en la tabla de consumos
+        $this->registrarSalida($producto['idProducto'], $producto['cantidad'], $fecha_solicitud);
     }
+    
+    return redirect()->to(site_url('solicitud_productos'))->with('success', '¡La solicitud de producto se guardó correctamente!');
+}
+
 
     public function edit($id)
     {
         $solicitudModel = new SolicitudProductosModel();
         $productoModel = new ProductoModel();
+        $consumoModel = new ConsumoModel();
 
         $data['solicitud'] = $solicitudModel->find($id);
-        $data['productos'] = $productoModel->findAll();
-
-        // Obtener productos solicitados
-        $data['productos_solicitados'] = $this->db->table('productos_solicitados')
-            ->where('idSolicitudProductos', $id)
-            ->get()
-            ->getResultArray();
+        $data['productos'] = $productoModel->getProductosConDetalles();
+        $data['solicitud_productos'] = $solicitudModel->obtenerSolicitudesConDetalles();
 
         return view('solicitud_productos/edit', $data);
     }
 
     public function update($id)
     {
+        $request = $this->request;
         $solicitudModel = new SolicitudProductosModel();
 
         $data = [
-            'Fecha_solicitud' => $this->request->getPost('Fecha_solicitud'),
-            'Comida_a_preparar' => $this->request->getPost('Comida_a_preparar'),
-            'responsable_entrega' => $this->request->getPost('responsable_entrega'),
-            'responsable_recibir' => $this->request->getPost('responsable_recibir'),
+            'Fecha_solicitud' => $request->getPost('Fecha_solicitud'),
+            'Comida_a_preparar' => $request->getPost('Comida_a_preparar'),
+            'responsable_entrega' => $request->getPost('responsable_entrega'),
+            'responsable_recibir' => $request->getPost('responsable_recibir'),
         ];
 
-        // Actualizar solicitud
         $solicitudModel->update($id, $data);
 
-        // Actualizar productos solicitados
-        $productos = $this->request->getPost('productos');
-        $this->db->table('productos_solicitados')->where('idSolicitudProductos', $id)->delete();
-        foreach ($productos as $producto) {
-            // Guardar en la tabla de relación productos_solicitados
-            $this->db->table('productos_solicitados')->insert([
-                'idSolicitudProductos' => $id,
-                'idProducto' => $producto['idProducto'],
-                'cantidad' => $producto['cantidad'],
-            ]);
-        }
+        $this->db->table('solicitud_productos')
+            ->where('idSolicitudProductos', $id)
+            ->update($data);
 
-        return redirect()->to('/solicitud_productos');
+        return redirect()->to(site_url('solicitud_productos'))->with('success', '¡La solicitud de producto se actualizó correctamente!');
     }
 
     public function delete($id)
@@ -111,9 +137,20 @@ class SolicitudProductos extends Controller
         $solicitudModel = new SolicitudProductosModel();
         $solicitudModel->delete($id);
 
-        // Eliminar productos solicitados
-        $this->db->table('productos_solicitados')->where('idSolicitudProductos', $id)->delete();
+        return redirect()->to(site_url('solicitud_productos'))->with('success', '¡La solicitud de producto se eliminó correctamente!');
+    }
 
-        return redirect()->to('/solicitud_productos');
+    protected function registrarSalida($idProducto, $cantidad, $fecha)
+    {
+        $consumoModel = new ConsumoModel();
+
+        $data = [
+            'idProducto' => $idProducto,
+            'cantidad' => $cantidad,
+            'fecha' => $fecha,
+            'tipo' => 'salida'
+        ];
+
+        $consumoModel->insert($data);
     }
 }

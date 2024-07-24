@@ -1,0 +1,1791 @@
+INFO - 2024-07-24 02:14:06 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [producto_id] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+)
+
+INFO - 2024-07-24 02:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-24 02:30:20 --> mysqli_sql_exception: Unknown column 'productos.cantidad' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-24 02:30:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.cantidad' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', [], false)
+ 2 APPPATH\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-24 02:30:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', [], false)
+ 4 APPPATH\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-24 02:30:20 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', [], false)
+ 5 APPPATH\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-24 02:30:51 --> mysqli_sql_exception: Unknown column 'productos.cantidad' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-24 02:30:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.cantidad' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', [], false)
+ 2 APPPATH\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-24 02:30:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', [], false)
+ 4 APPPATH\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-24 02:30:52 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`idProducto`, `productos`.`cantidad`
+FROM `solicitud_productos`
+LEFT JOIN `productos` ON `productos`.`idSolicitudProductos` = `solicitud_productos`.`idSolicitudProductos`', [], false)
+ 5 APPPATH\Models\SolicitudProductosModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->getAllSolicitudes()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-24 02:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:37:42 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [producto_id] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+)
+
+INFO - 2024-07-24 02:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:50:08 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [producto_id] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+)
+
+INFO - 2024-07-24 02:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:50:11 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [producto_id] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+)
+
+INFO - 2024-07-24 02:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 02:51:01 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [producto_id] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [producto_id] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [producto_id] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+)
+
+INFO - 2024-07-24 02:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-24 02:51:31 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`consumos`, CONSTRAINT `consumos_ibfk_1` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`idProducto`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(150): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(91): App\Controllers\SolicitudProductos->registrarSalida('6', '2', '2024-07-24')
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-07-24 02:51:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`consumos`, CONSTRAINT `consumos_ibfk_1` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`idProducto`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `consumos` (`fecha`) VALUES (:fecha:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(150): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\SolicitudProductos.php(91): App\Controllers\SolicitudProductos->registrarSalida('6', '2', '2024-07-24')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-24 02:51:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`consumos`, CONSTRAINT `consumos_ibfk_1` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`idProducto`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `consumos` (`fecha`) VALUES (\'2024-07-24\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `consumos` (`fecha`) VALUES (\'2024-07-24\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `consumos` (`fecha`) VALUES (:fecha:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\SolicitudProductos.php(150): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\SolicitudProductos.php(91): App\Controllers\SolicitudProductos->registrarSalida('6', '2', '2024-07-24')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-24 02:51:31 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`consumos`, CONSTRAINT `consumos_ibfk_1` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`idProducto`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `consumos` (`fecha`) VALUES (\'2024-07-24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `consumos` (`fecha`) VALUES (\'2024-07-24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `consumos` (`fecha`) VALUES (\'2024-07-24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `consumos` (`fecha`) VALUES (:fecha:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\SolicitudProductos.php(150): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\SolicitudProductos.php(91): App\Controllers\SolicitudProductos->registrarSalida('6', '2', '2024-07-24')
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-24 03:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:12:21 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:12:43 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:17:55 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:18:22 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:41:18 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:42:29 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [fecha_vencimiento] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:47:23 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [fecha_vencimiento] => 2024-10-29
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:52:48 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [fecha_vencimiento] => 2024-10-29
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:52:59 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [fecha_vencimiento] => 2024-10-29
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+)
+
+INFO - 2024-07-24 03:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 03:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:01:59 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [fecha_vencimiento] => 2024-10-29
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [7] => Array
+        (
+            [idConsumo] => 32
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [8] => Array
+        (
+            [idConsumo] => 33
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+)
+
+INFO - 2024-07-24 04:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:03:52 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [fecha_vencimiento] => 2024-10-29
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [7] => Array
+        (
+            [idConsumo] => 32
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [8] => Array
+        (
+            [idConsumo] => 33
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+)
+
+INFO - 2024-07-24 04:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-24 04:03:58 --> ErrorException: Undefined array key "Comida_a_preparar"
+in APPPATH\Views\solicitud_productos\index.php on line 28.
+ 1 APPPATH\Views\solicitud_productos\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Comida_a_preparar"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/index', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(31): view('solicitud_productos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-24 04:04:23 --> ErrorException: Undefined array key "Comida_a_preparar"
+in APPPATH\Views\solicitud_productos\index.php on line 28.
+ 1 APPPATH\Views\solicitud_productos\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Comida_a_preparar"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/index', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(31): view('solicitud_productos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-24 04:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:17:46 --> Datos de consumo obtenidos: Array
+(
+    [0] => Array
+        (
+            [idConsumo] => 24
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 15
+            [salidas] => 2
+            [saldo] => 13
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [1] => Array
+        (
+            [idConsumo] => 25
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 13
+            [salidas] => 2
+            [saldo] => 11
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+    [2] => Array
+        (
+            [idConsumo] => 26
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 0
+            [saldo] => 200
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [3] => Array
+        (
+            [idConsumo] => 27
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 200
+            [salidas] => 10
+            [saldo] => 190
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [4] => Array
+        (
+            [idConsumo] => 28
+            [idProducto] => 3
+            [descripcion] => 
+            [saldo_inicial] => 10
+            [salidas] => 0
+            [saldo] => 10
+            [fecha_vencimiento] => 2024-10-29
+            [producto_nombre] => Cereal frutas
+            [producto_descripcion] => cereal omoa..
+        )
+
+    [5] => Array
+        (
+            [idConsumo] => 30
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [6] => Array
+        (
+            [idConsumo] => 31
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [7] => Array
+        (
+            [idConsumo] => 32
+            [idProducto] => 6
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-25
+            [producto_nombre] => Arroz precocido
+            [producto_descripcion] => arroz san francisco..
+        )
+
+    [8] => Array
+        (
+            [idConsumo] => 33
+            [idProducto] => 2
+            [descripcion] => 
+            [saldo_inicial] => 
+            [salidas] => 
+            [saldo] => 
+            [fecha_vencimiento] => 2024-11-21
+            [producto_nombre] => frijol 
+            [producto_descripcion] => don frijol..
+        )
+
+)
+
+INFO - 2024-07-24 04:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-24 04:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

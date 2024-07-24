@@ -1,0 +1,453 @@
+ERROR - 2024-07-22 22:14:07 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-22 22:14:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:14:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:14:08 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-22 22:30:18 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-22 22:30:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:30:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:30:18 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-22 22:33:15 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-22 22:33:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:33:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:33:15 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-22 22:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 22:43:38 --> Entrando en el método index() de SolicitudProductos.
+INFO - 2024-07-22 22:43:38 --> Entrando en obtenerSolicitudesConDetalles()
+ERROR - 2024-07-22 22:43:38 --> No se obtuvieron resultados de la consulta.
+ERROR - 2024-07-22 22:43:38 --> No se obtuvieron solicitudes.
+INFO - 2024-07-22 22:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 22:49:47 --> Entrando en el método index() de SolicitudProductos.
+INFO - 2024-07-22 22:49:48 --> Entrando en obtenerSolicitudesConDetalles()
+ERROR - 2024-07-22 22:49:48 --> No se obtuvieron resultados de la consulta.
+ERROR - 2024-07-22 22:49:48 --> No se obtuvieron solicitudes.
+INFO - 2024-07-22 22:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-22 22:52:32 --> Entrando en el método index() de SolicitudProductos.
+INFO - 2024-07-22 22:52:32 --> Entrando en obtenerSolicitudesConDetalles()
+ERROR - 2024-07-22 22:52:32 --> No se obtuvieron resultados de la consulta.
+ERROR - 2024-07-22 22:52:32 --> No se obtuvieron solicitudes.
+INFO - 2024-07-22 22:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-22 22:55:11 --> ErrorException: Undefined property: App\Controllers\SolicitudProductos::$solicitudProductosModel
+in APPPATH\Controllers\SolicitudProductos.php on line 24.
+ 1 APPPATH\Controllers\SolicitudProductos.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\SolicitudProductos::$solicitudProductosModel', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\SolicitudProductos.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-22 22:59:27 --> mysqli_sql_exception: Table 'sistema_control.solicitud_detalle' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sp`.`id...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`id...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`id...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`id...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-22 22:59:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.solicitud_detalle' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', [], false)
+ 2 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:59:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.solicitud_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', [], false)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 22:59:27 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.solicitud_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', [], false)
+ 5 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-22 23:00:14 --> mysqli_sql_exception: Table 'sistema_control.solicitud_detalle' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sp`.`id...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`id...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`id...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`id...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-22 23:00:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.solicitud_detalle' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', [], false)
+ 2 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 23:00:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.solicitud_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', [], false)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 23:00:14 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.solicitud_detalle' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`, `sd`.`cantidad`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `solicitud_detalle` `sd` ON `sp`.`idSolicitudProductos` = `sd`.`idSolicitudProductos`
+LEFT JOIN `productos` `p` ON `sd`.`idProducto` = `p`.`idProducto`', [], false)
+ 5 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(28): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-22 23:11:57 --> mysqli_sql_exception: Unknown column 'p.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sp`.`id...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`id...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`id...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`id...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(29): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-22 23:11:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`', [], false)
+ 2 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(29): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 23:11:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'p.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`', [], false)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(29): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-22 23:11:57 --> [Caused by] mysqli_sql_exception: Unknown column 'p.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sp`.`idSolicitudProductos`, `sp`.`Fecha_solicitud`, `sp`.`Comida_a_preparar`, `sp`.`responsable_entrega`, `sp`.`responsable_recibir`, `p`.`nombre` AS `producto_nombre`, `p`.`descripcion` AS `producto_descripcion`, `p`.`fecha_vencimiento` AS `producto_fecha_vencimiento`
+FROM `solicitud_productos` `sp`
+LEFT JOIN `productos` `p` ON `sp`.`idProducto` = `p`.`idProducto`', [], false)
+ 5 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(29): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

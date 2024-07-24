@@ -110,122 +110,110 @@ class PermisoMagisterial extends BaseController
     
    
 
-    public function index()
-    {
-        // Inicializar $fecha_inicio con un valor por defecto
-        $fecha_inicio = $this->request->getVar('fecha_inicio') ?? date('Y-m-d'); // Valor predeterminado: fecha actual
-    
-        // Resto del código del método
-        $request = service('request');
-        $filters = [
-            'nip' => $request->getVar('nip'),
-            'nombre_completo' => $request->getVar('nombre_completo'),
-            'fecha_creacion' => $request->getVar('fecha_creacion')
-        ];
-    
-        $fecha_inicio = $request->getVar('fecha_inicio');
-        $fecha_fin = $request->getVar('fecha_fin');
-    
-        // Inicialización de $fecha_fin si no está definida
-        if (empty($fecha_fin)) {
-            $fecha_fin = date('Y-m-d'); // O cualquier valor predeterminado que necesites
-        }
-        $modelSaldosDocentes = new SaldosDocentesModel();
-        $modelTipoPermiso = new TipoPermisoModel();
-        $modelMaestro = new MaestroModel();
-        $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
-    
-        // Configuración de la paginación
-        $perPage = 10; // Número de registros por página
-    
-        // Obtener los saldos docentes con paginación
-        $saldos_docentes = $modelSaldosDocentes->paginate($perPage, 'group1');
-    
-        // Obtener el paginador
-        $pager = $modelSaldosDocentes->pager;
-    
-        if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_creacion'])) {
-            $saldos_docentes = $this->filterSaldosDocentes($saldos_docentes, $filters);
-        }
-    
-        $tipos_permisos = $modelTipoPermiso->findAll();
-    
-        $data['saldos_docentes'] = [];
-    
-        foreach ($saldos_docentes as $saldo) {
-            $maestro = $modelMaestro->find($saldo['idDocente'] ?? null);
-    
-            $nombre_completo = $maestro['nombre_completo'] ?? '';
-            $nip = $maestro['nip'] ?? '';
-            $fecha_creacion = isset($saldo['fecha_creacion']) ? $saldo['fecha_creacion'] : '';
-    
-            // Inicializamos las fechas de inicio y fin como null
-            $fecha_inicio = $saldo['fecha_inicio'] ?? null;
-            $fecha_fin = $saldo['fecha_fin'] ?? null;
-    
-            $detalle_saldos_permiso = [];
-            foreach ($tipos_permisos as $tipo_permiso) {
-                // Obtén el detalle del saldo del tipo de permiso actual
-                $detalle_saldo_permiso = $modelDetalleSaldosTipoPermiso
-                    ->where('idTipoPermiso', $tipo_permiso['idTipoPermiso'])
-                    ->where('anio', date('Y'))
-                    ->first();
-    
-                $dias_ocupados = 0;
-                $horas_ocupadas = 0;
-                $dias_disponibles = $tipo_permiso['cantidad_dias'];
-                $horas_disponibles = 0; // Inicializamos a 0 horas disponibles
-    
-                if ($detalle_saldo_permiso) {
-                    $saldo_docente = $modelSaldosDocentes
-                        ->where('idDocente', $maestro['idDocente'])
-                        ->where('idDetallePermiso', $detalle_saldo_permiso['idDetallePermiso'])
+            public function index()
+        {
+            $request = service('request');
+            $filters = [
+                'nip' => $request->getVar('nip'),
+                'nombre_completo' => $request->getVar('nombre_completo'),
+                'fecha_creacion' => $request->getVar('fecha_creacion')
+            ];
+        
+            $fecha_inicio = $request->getVar('fecha_inicio');
+            $fecha_fin = $request->getVar('fecha_fin');
+        
+            if (empty($fecha_fin)) {
+                $fecha_fin = date('Y-m-d');
+            }
+        
+            $modelSaldosDocentes = new SaldosDocentesModel();
+            $modelTipoPermiso = new TipoPermisoModel();
+            $modelMaestro = new MaestroModel();
+            $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
+        
+            $perPage = 10;
+        
+            $saldos_docentes = $modelSaldosDocentes->paginate($perPage, 'group1');
+        
+            $pager = $modelSaldosDocentes->pager;
+        
+            if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_creacion'])) {
+                $saldos_docentes = $this->filterSaldosDocentes($saldos_docentes, $filters);
+            }
+        
+            $tipos_permisos = $modelTipoPermiso->findAll();
+        
+            $data['saldos_docentes'] = [];
+        
+            foreach ($saldos_docentes as $saldo) {
+                $maestro = $modelMaestro->find($saldo['idDocente'] ?? null);
+        
+                $nombre_completo = $maestro['nombre_completo'] ?? '';
+                $nip = $maestro['nip'] ?? '';
+                $fecha_creacion = isset($saldo['fecha_creacion']) ? $saldo['fecha_creacion'] : '';
+        
+                $detalle_saldos_permiso = [];
+                foreach ($tipos_permisos as $tipo_permiso) {
+                    $detalle_saldo_permiso = $modelDetalleSaldosTipoPermiso
+                        ->where('idTipoPermiso', $tipo_permiso['idTipoPermiso'])
+                        ->where('anio', date('Y'))
                         ->first();
-    
-                    if ($saldo_docente) {
-                        $dias_ocupados = $saldo_docente['saldo_total_dias'];
-                        $horas_ocupadas = $saldo_docente['saldo_total_horas'];
-                        $dias_disponibles = $tipo_permiso['cantidad_dias'] - $dias_ocupados;
-                        $horas_disponibles = 5 - $horas_ocupadas;
-    
-                        if ($horas_ocupadas > 0 && $horas_ocupadas < 5) {
-                            $dias_disponibles -= 1;
+        
+                    $dias_ocupados = 0;
+                    $horas_ocupadas = 0;
+                    $dias_disponibles = $tipo_permiso['cantidad_dias'];
+                    $horas_disponibles = 0;
+        
+                    if ($detalle_saldo_permiso) {
+                        $saldo_docente = $modelSaldosDocentes
+                            ->where('idDocente', $maestro['idDocente'])
+                            ->where('idDetallePermiso', $detalle_saldo_permiso['idDetallePermiso'])
+                            ->first();
+        
+                        if ($saldo_docente) {
+                            $dias_ocupados = $saldo_docente['saldo_total_dias'];
+                            $horas_ocupadas = $saldo_docente['saldo_total_horas'];
+                            $dias_disponibles = $tipo_permiso['cantidad_dias'] - $dias_ocupados;
+                            $horas_disponibles = 5 - $horas_ocupadas;
+        
+                            if ($horas_ocupadas > 0 && $horas_ocupadas < 5) {
+                                $dias_disponibles -= 1;
+                            }
                         }
                     }
+        
+                    $detalle_saldos_permiso[] = [
+                        'idTipoPermiso' => $tipo_permiso['idTipoPermiso'],
+                        'nombre_tipo_permiso' => $tipo_permiso['nombre'],
+                        'cantidad_dias' => $tipo_permiso['cantidad_dias'],
+                        'dias_ocupados' => $dias_ocupados,
+                        'horas_ocupadas' => $horas_ocupadas,
+                        'dias_disponibles' => $dias_disponibles,
+                        'horas_disponibles' => $horas_disponibles,
+                        'fecha_inicio' => ($tipo_permiso['idTipoPermiso'] == $saldo['idDetallePermiso']) ? $saldo['fecha_inicio'] : null,
+                        'fecha_fin' => ($tipo_permiso['idTipoPermiso'] == $saldo['idDetallePermiso']) ? $saldo['fecha_fin'] : null,
+                    ];
                 }
-    
-                $detalle_saldos_permiso[] = [
-                    'idTipoPermiso' => $tipo_permiso['idTipoPermiso'],
-                    'nombre_tipo_permiso' => $tipo_permiso['nombre'],
-                    'cantidad_dias' => $tipo_permiso['cantidad_dias'],
-                    'dias_ocupados' => $dias_ocupados,
-                    'horas_ocupadas' => $horas_ocupadas,
-                    'dias_disponibles' => $dias_disponibles,
-                    'horas_disponibles' => $horas_disponibles,
-                    'fecha_inicio' => ($tipo_permiso['idTipoPermiso'] == $saldo['idDetallePermiso']) ? $fecha_inicio : null,
-                    'fecha_fin' => ($tipo_permiso['idTipoPermiso'] == $saldo['idDetallePermiso']) ? $fecha_fin : null,
+        
+                $data['saldos_docentes'][] = [
+                    'nombre_completo' => $nombre_completo,
+                    'nip' => $nip,
+                    'fecha_creacion' => $fecha_creacion,
+                    'detalle_saldos_permiso' => $detalle_saldos_permiso,
                 ];
             }
-    
-            $data['saldos_docentes'][] = [
-                'nombre_completo' => $nombre_completo,
-                'nip' => $nip,
-                'fecha_creacion' => $fecha_creacion,
-                'fecha_inicio' => $fecha_inicio,
-                'fecha_fin' => $fecha_fin,
-                'detalle_saldos_permiso' => $detalle_saldos_permiso,
-            ];
+        
+            $data['tipos_permisos'] = $tipos_permisos;
+            $data['pager'] = $pager;
+            $data['fecha_inicio'] = $fecha_inicio;
+            $data['fecha_fin'] = $fecha_fin;
+            $data['validation'] = \Config\Services::validation();
+        
+            // Pasar los datos a la vista
+            return view('Permisos/index', $data);
         }
     
-        $data['tipos_permisos'] = $tipos_permisos;
-        $data['pager'] = $pager; // Pasar el paginador a la vista
-        $data['fecha_inicio'] = $fecha_inicio; // Agregar la fecha de inicio al array de datos
-        $data['fecha_fin'] = $fecha_fin; // Agregar la fecha de fin al array de datos
-        $data['validation'] = \Config\Services::validation();
-    
-        return view('Permisos/index', $data);
-    }
-    
+   
     
 
     protected function filterSaldosDocentes($saldos_docentes, $filters)

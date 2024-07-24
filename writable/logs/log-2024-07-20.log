@@ -1,0 +1,1571 @@
+DEBUG - 2024-07-20 02:33:45 --> Productos cargados: Array
+(
+    [0] => Array
+        (
+            [idProducto] => 2
+            [idtipoProducto] => 3
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-21
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [1] => Array
+        (
+            [idProducto] => 3
+            [idtipoProducto] => 2
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-29
+            [n_unidades_Caja] => 2
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 2
+            [total] => 42
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [2] => Array
+        (
+            [idProducto] => 4
+            [idtipoProducto] => 4
+            [codigo_lote] => r432fdewr
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-30
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [3] => Array
+        (
+            [idProducto] => 5
+            [idtipoProducto] => 3
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-08
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [4] => Array
+        (
+            [idProducto] => 6
+            [idtipoProducto] => 4
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-25
+            [n_unidades_Caja] => 3
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 61
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [5] => Array
+        (
+            [idProducto] => 7
+            [idtipoProducto] => 3
+            [codigo_lote] => 2243
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-13
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 3
+            [total] => 3
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [6] => Array
+        (
+            [idProducto] => 8
+            [idtipoProducto] => 4
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-14
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+)
+
+CRITICAL - 2024-07-20 02:33:45 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 51.
+ 1 APPPATH\Views\solicitud_productos\create.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 51)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(39): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-07-20 02:34:04 --> Productos cargados: Array
+(
+    [0] => Array
+        (
+            [idProducto] => 2
+            [idtipoProducto] => 3
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-21
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [1] => Array
+        (
+            [idProducto] => 3
+            [idtipoProducto] => 2
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-29
+            [n_unidades_Caja] => 2
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 2
+            [total] => 42
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [2] => Array
+        (
+            [idProducto] => 4
+            [idtipoProducto] => 4
+            [codigo_lote] => r432fdewr
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-30
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [3] => Array
+        (
+            [idProducto] => 5
+            [idtipoProducto] => 3
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-08
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [4] => Array
+        (
+            [idProducto] => 6
+            [idtipoProducto] => 4
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-25
+            [n_unidades_Caja] => 3
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 61
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [5] => Array
+        (
+            [idProducto] => 7
+            [idtipoProducto] => 3
+            [codigo_lote] => 2243
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-13
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 3
+            [total] => 3
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [6] => Array
+        (
+            [idProducto] => 8
+            [idtipoProducto] => 4
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-14
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+)
+
+CRITICAL - 2024-07-20 02:34:04 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 APPPATH\Views\solicitud_productos\create.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(39): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-07-20 02:34:26 --> Productos cargados: Array
+(
+    [0] => Array
+        (
+            [idProducto] => 2
+            [idtipoProducto] => 3
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-21
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [1] => Array
+        (
+            [idProducto] => 3
+            [idtipoProducto] => 2
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-29
+            [n_unidades_Caja] => 2
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 2
+            [total] => 42
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [2] => Array
+        (
+            [idProducto] => 4
+            [idtipoProducto] => 4
+            [codigo_lote] => r432fdewr
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-30
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [3] => Array
+        (
+            [idProducto] => 5
+            [idtipoProducto] => 3
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-08
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [4] => Array
+        (
+            [idProducto] => 6
+            [idtipoProducto] => 4
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-25
+            [n_unidades_Caja] => 3
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 61
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [5] => Array
+        (
+            [idProducto] => 7
+            [idtipoProducto] => 3
+            [codigo_lote] => 2243
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-13
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 3
+            [total] => 3
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [6] => Array
+        (
+            [idProducto] => 8
+            [idtipoProducto] => 4
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-14
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+)
+
+CRITICAL - 2024-07-20 02:34:26 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 APPPATH\Views\solicitud_productos\create.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(39): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-07-20 02:41:10 --> Productos cargados: Array
+(
+    [0] => Array
+        (
+            [idProducto] => 2
+            [idtipoProducto] => 3
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-21
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [1] => Array
+        (
+            [idProducto] => 3
+            [idtipoProducto] => 2
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-29
+            [n_unidades_Caja] => 2
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 2
+            [total] => 42
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [2] => Array
+        (
+            [idProducto] => 4
+            [idtipoProducto] => 4
+            [codigo_lote] => r432fdewr
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-30
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [3] => Array
+        (
+            [idProducto] => 5
+            [idtipoProducto] => 3
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-08
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [4] => Array
+        (
+            [idProducto] => 6
+            [idtipoProducto] => 4
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-25
+            [n_unidades_Caja] => 3
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 61
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [5] => Array
+        (
+            [idProducto] => 7
+            [idtipoProducto] => 3
+            [codigo_lote] => 2243
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-13
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 3
+            [total] => 3
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [6] => Array
+        (
+            [idProducto] => 8
+            [idtipoProducto] => 4
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-14
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+)
+
+CRITICAL - 2024-07-20 02:41:10 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 97.
+ 1 APPPATH\Views\solicitud_productos\create.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 97)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(39): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-07-20 02:47:23 --> Productos cargados: Array
+(
+    [0] => Array
+        (
+            [idProducto] => 2
+            [idtipoProducto] => 3
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-21
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [1] => Array
+        (
+            [idProducto] => 3
+            [idtipoProducto] => 2
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-29
+            [n_unidades_Caja] => 2
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 2
+            [total] => 42
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [2] => Array
+        (
+            [idProducto] => 4
+            [idtipoProducto] => 4
+            [codigo_lote] => r432fdewr
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-10-30
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [3] => Array
+        (
+            [idProducto] => 5
+            [idtipoProducto] => 3
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-08
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [4] => Array
+        (
+            [idProducto] => 6
+            [idtipoProducto] => 4
+            [codigo_lote] => Y3BBS
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-25
+            [n_unidades_Caja] => 3
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 61
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [5] => Array
+        (
+            [idProducto] => 7
+            [idtipoProducto] => 3
+            [codigo_lote] => 2243
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-13
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 3
+            [total] => 3
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+    [6] => Array
+        (
+            [idProducto] => 8
+            [idtipoProducto] => 4
+            [codigo_lote] => hg009
+            [fecha_ingreso] => 2024-07-04
+            [fecha_vencimiento] => 2024-11-14
+            [n_unidades_Caja] => 1
+            [idUnidadesPorCaja] => 1
+            [idUnidades_individuales] => 2
+            [unidades_extras] => 1
+            [total] => 21
+            [idPrioridad] => 
+            [idDetalleSolicitados] => 
+            [estado] => 
+        )
+
+)
+
+CRITICAL - 2024-07-20 02:47:23 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 97.
+ 1 APPPATH\Views\solicitud_productos\create.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 97)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(39): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 02:56:20 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 39.
+ 1 APPPATH\Views\solicitud_productos\create.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(43): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 02:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 03:00:33 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 39.
+ 1 APPPATH\Views\solicitud_productos\create.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 39)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(43): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 03:01:18 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 97.
+ 1 APPPATH\Views\solicitud_productos\create.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 97)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(43): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 03:18:33 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 APPPATH\Views\solicitud_productos\create.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(38): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 03:26:11 --> ErrorException: Undefined array key "nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 APPPATH\Views\solicitud_productos\create.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(38): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 03:48:05 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 45.
+ 1 APPPATH\Views\solicitud_productos\create.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 45)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(38): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 03:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 03:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 04:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 04:07:54 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 45.
+ 1 APPPATH\Views\solicitud_productos\create.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 45)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(38): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 04:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 04:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 04:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 04:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 04:38:13 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 100.
+ 1 APPPATH\Views\solicitud_productos\create.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 100)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(38): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 04:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 04:50:09 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 99.
+ 1 APPPATH\Views\solicitud_productos\create.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 99)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(38): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 04:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 04:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-07-20 05:02:41 --> Productos obtenidos para creación de solicitud: Array
+(
+    [0] => Array
+        (
+            [idProducto] => 3
+            [idtipoProducto] => 2
+            [nombre] => Cereal frutas
+            [fecha_vencimiento] => 2024-10-29
+            [unidades_extras] => 2
+        )
+
+    [1] => Array
+        (
+            [idProducto] => 2
+            [idtipoProducto] => 3
+            [nombre] => frijol 
+            [fecha_vencimiento] => 2024-11-21
+            [unidades_extras] => 1
+        )
+
+    [2] => Array
+        (
+            [idProducto] => 5
+            [idtipoProducto] => 3
+            [nombre] => frijol 
+            [fecha_vencimiento] => 2024-11-08
+            [unidades_extras] => 1
+        )
+
+    [3] => Array
+        (
+            [idProducto] => 7
+            [idtipoProducto] => 3
+            [nombre] => frijol 
+            [fecha_vencimiento] => 2024-11-13
+            [unidades_extras] => 3
+        )
+
+    [4] => Array
+        (
+            [idProducto] => 4
+            [idtipoProducto] => 4
+            [nombre] => Arroz precocido
+            [fecha_vencimiento] => 2024-10-30
+            [unidades_extras] => 1
+        )
+
+    [5] => Array
+        (
+            [idProducto] => 6
+            [idtipoProducto] => 4
+            [nombre] => Arroz precocido
+            [fecha_vencimiento] => 2024-11-25
+            [unidades_extras] => 1
+        )
+
+    [6] => Array
+        (
+            [idProducto] => 8
+            [idtipoProducto] => 4
+            [nombre] => Arroz precocido
+            [fecha_vencimiento] => 2024-11-14
+            [unidades_extras] => 1
+        )
+
+)
+
+INFO - 2024-07-20 05:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 05:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-20 05:12:51 --> mysqli_sql_exception: Table 'sistema_control.productos_solicitados' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 05:12:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.productos_solicitados' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:12:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.productos_solicitados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (4, \'6\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (4, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:12:51 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.productos_solicitados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (4, \'6\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (4, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (4, \'6\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos_solicitados` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 05:19:41 --> mysqli_sql_exception: Unknown column 'idProducto' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 05:19:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:19:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (5, \'6\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (5, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:19:41 --> [Caused by] mysqli_sql_exception: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (5, \'6\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (5, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (5, \'6\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 05:20:48 --> mysqli_sql_exception: Unknown column 'idProducto' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 05:20:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:20:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (6, \'6\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (6, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:20:48 --> [Caused by] mysqli_sql_exception: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (6, \'6\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (6, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (6, \'6\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 05:28:54 --> mysqli_sql_exception: Unknown column 'idProducto' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 05:28:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:28:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (7, \'6\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (7, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:28:54 --> [Caused by] mysqli_sql_exception: Unknown column 'idProducto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (7, \'6\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (7, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (7, \'6\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `idProducto`, `cantidad`) VALUES (:idSolicitudProductos:, :idProducto:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(88): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:38:02 --> ErrorException: Undefined array key "producto_id"
+in APPPATH\Controllers\SolicitudProductos.php on line 86.
+ 1 APPPATH\Controllers\SolicitudProductos.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\SolicitudProductos.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:40:32 --> ErrorException: Undefined array key "producto_id"
+in APPPATH\Controllers\SolicitudProductos.php on line 86.
+ 1 APPPATH\Controllers\SolicitudProductos.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\SolicitudProductos.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 05:44:27 --> Datos del producto incompletos: Array
+(
+    [idProducto] => 6
+    [cantidad] => 5
+)
+
+ERROR - 2024-07-20 05:44:27 --> Datos del producto incompletos: Array
+(
+    [idProducto] => 2
+    [cantidad] => 2
+)
+
+INFO - 2024-07-20 05:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 05:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 05:49:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "solicitudproductos/create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('solicitudproductos/create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitudproductos/create', [], true)
+ 3 APPPATH\Controllers\SolicitudProductos.php(43): view('solicitudproductos/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 05:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-20 05:50:07 --> mysqli_sql_exception: Duplicate entry '11' for key 'solicitud_productos.PRIMARY' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(91): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 05:50:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(91): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:50:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '11' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (11, \'2\', \'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (11, \'2\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(91): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:50:07 --> [Caused by] mysqli_sql_exception: Duplicate entry '11' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (11, \'2\', \'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (11, \'2\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (11, \'2\', \'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(91): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 05:58:18 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-20 05:58:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudProductosModel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:58:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudProductosModel.php(42): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:58:18 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudProductosModel.php(42): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 05:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 05:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-20 05:58:57 --> mysqli_sql_exception: Duplicate entry '12' for key 'solicitud_productos.PRIMARY' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 05:58:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '12' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:58:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '12' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (12, \'6\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (12, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 05:58:57 --> [Caused by] mysqli_sql_exception: Duplicate entry '12' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (12, \'6\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (12, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (12, \'6\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 06:08:09 --> mysqli_sql_exception: Duplicate entry '14' for key 'solicitud_productos.PRIMARY' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 06:08:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '14' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:08:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '14' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (14, \'6\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (14, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:08:09 --> [Caused by] mysqli_sql_exception: Duplicate entry '14' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (14, \'6\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (14, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (14, \'6\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 06:09:22 --> mysqli_sql_exception: Duplicate entry '15' for key 'solicitud_productos.PRIMARY' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 06:09:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '15' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:09:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '15' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (15, \'6\', \'5\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (15, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:09:22 --> [Caused by] mysqli_sql_exception: Duplicate entry '15' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (15, \'6\', \'5\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (15, \'6\', \'5\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (15, \'6\', \'5\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 06:09:28 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-20 06:09:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:09:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:09:28 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 06:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-20 06:10:09 --> mysqli_sql_exception: Duplicate entry '16' for key 'solicitud_productos.PRIMARY' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-07-20 06:10:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '16' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 2 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:10:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '16' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (16, \'2\', \'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (16, \'2\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 4 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:10:09 --> [Caused by] mysqli_sql_exception: Duplicate entry '16' for key 'solicitud_productos.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (16, \'2\', \'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (16, \'2\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (16, \'2\', \'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `solicitud_productos` (`idSolicitudProductos`, `producto_id`, `cantidad`) VALUES (:idSolicitudProductos:, :producto_id:, :cantidad:)', [...], false)
+ 5 APPPATH\Controllers\SolicitudProductos.php(104): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 06:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 06:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 06:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 06:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-20 06:15:17 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-20 06:15:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:15:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:15:17 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 06:18:51 --> mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-20 06:18:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:18:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 06:18:51 --> [Caused by] mysqli_sql_exception: Unknown column 'productos.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_productos`.*, `productos`.`nombre` as `producto_nombre`, `productos`.`fecha_vencimiento` as `producto_fecha_vencimiento`, `productos`.`saldo` as `producto_saldo`
+FROM `solicitud_productos`
+JOIN `productos` ON `productos`.`idProducto` = `solicitud_productos`.`producto_id`
+ORDER BY `solicitud_productos`.`Fecha_solicitud` DESC', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudProductosModel.php(47): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SolicitudProductos.php(26): App\Models\SolicitudProductosModel->obtenerSolicitudesConDetalles()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SolicitudProductos->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

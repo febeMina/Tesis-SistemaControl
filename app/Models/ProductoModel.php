@@ -12,6 +12,7 @@ class ProductoModel extends Model
         'idtipoProducto', 'codigo_lote', 'fecha_ingreso', 'fecha_vencimiento', 'n_unidades_Caja', 'idUnidadesPorCaja', 'idUnidades_individuales', 'unidades_extras', 'total', 'idMovimiento', 'idPrioridad', 'idDetalleSolicitados', 'estado'
     ];
 
+    
     public function getTiposProducto()
     {
         return $this->db->table('tipo_producto')->get()->getResult();
@@ -74,10 +75,43 @@ class ProductoModel extends Model
     }
 
     public function eliminarMovimiento($idProducto)
+    {
+        return $this->db->table('movimiento')
+            ->where('productos_idProducto', $idProducto)
+            ->delete();
+    }
+
+    public function getProductosParaConsumo()
 {
-    return $this->db->table('movimiento')
-        ->where('productos_idProducto', $idProducto)
-        ->delete();
+    return $this->select('productos.idProducto, productos.idtipoProducto, tipo_producto.nombre, productos.fecha_vencimiento, productos.unidades_extras')
+                ->join('tipo_producto', 'productos.idtipoProducto = tipo_producto.idtipoProducto')
+                ->findAll();
 }
+
     
+    public function obtenerDescripcionProducto($idtipoProducto)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('tipo_producto');
+        $builder->select('descripcion');
+        $builder->where('idtipoProducto', $idtipoProducto);
+        $result = $builder->get()->getRowArray();
+        
+        return $result ? $result['descripcion'] : null;
+    }
+    
+    public function getProductosConTipo()
+{
+    return $this->select('productos.idProducto, tipo_producto.nombre, tipo_producto.descripcion')
+                ->join('tipo_producto', 'productos.idtipoProducto = tipo_producto.idtipoProducto')
+                ->findAll();
+}
+// Método para obtener productos con detalles
+public function getProductosConDetalles()
+    {
+        return $this->select('productos.*, tipo_producto.nombre AS tipo_nombre, tipo_producto.descripcion AS tipo_descripcion')
+                    ->join('tipo_producto', 'tipo_producto.idtipoProducto = productos.idtipoProducto')
+                    ->findAll();
+    }
+
 }
