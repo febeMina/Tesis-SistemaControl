@@ -4,75 +4,71 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h3 class="text-center">Nueva Solicitud de Productos</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
-                    <form method="post" action="<?= site_url('solicitudproductos/store') ?>">
+                    <form action="<?= base_url('public/solicitudproductos/store') ?>" method="post">
+                        <?= csrf_field() ?>
+                    
                         <div class="form-group">
-                            <label for="Fecha_solicitud" style="color: #000;">Fecha de Solicitud:</label>
-                            <input type="date" name="Fecha_solicitud" id="Fecha_solicitud" class="form-control" required>
+                            <label for="fecha_solicitud" style="color: #000;">Fecha de Solicitud:</label>
+                            <input type="date" name="Fecha_solicitud" id="fecha_solicitud" class="form-control" required>
                         </div>
-
+                    
                         <div class="form-group">
-                            <label for="Comida_a_preparar" style="color: #000;">Comida a Preparar:</label>
-                            <input type="text" name="Comida_a_preparar" id="Comida_a_preparar" class="form-control" required>
+                            <label for="comida_preparar" style="color: #000;">Comida a Preparar:</label>
+                            <input type="text" name="Comida_a_preparar" id="comida_preparar" class="form-control" required>
                         </div>
-
-
+                    
                         <div class="form-group">
                             <label for="responsable_entrega" style="color: #000;">Responsable de Entrega:</label>
                             <input type="text" name="responsable_entrega" id="responsable_entrega" class="form-control" required>
                         </div>
-
+                    
                         <div class="form-group">
                             <label for="responsable_recibir" style="color: #000;">Responsable de Recibir:</label>
                             <input type="text" name="responsable_recibir" id="responsable_recibir" class="form-control" required>
                         </div>
-
-                        <div class="form-group">
-                            <label for="productos" style="color: #000;">Productos:</label>
-                            <div id="productos-container">
-                                <!-- Aquí solo es necesario un bloque de producto para mostrar el select inicial -->
-                                <div class="producto">
-                                    <div class="form-group">
-                                        <label for="producto_0" style="color: #000;">Producto:</label>
-                                        <select name="productos[0][idProducto]" id="producto_0" class="form-control producto-select" required>
-                                            <option value="">Selecciona un producto</option>
-                                            <?php foreach ($consumos as $consumo) : ?>
-                                                <option value="<?= $consumo['idProducto'] ?>"
-                                                        data-descripcion="<?= $consumo['producto_descripcion'] ?>"
-                                                        data-fecha_vencimiento="<?= $consumo['fecha_vencimiento'] ?>"
-                                                        data-saldo="<?= $consumo['saldo'] ?>">
-                                                    <?= $consumo['producto_nombre'] ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cantidad_0" style="color: #000;">Cantidad:</label>
-                                        <input type="number" name="productos[0][cantidad]" id="cantidad_0" class="form-control" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="descripcion_0" style="color: #000;">Descripción:</label>
-                                        <input type="text" id="descripcion_0" class="form-control" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="fecha_vencimiento_0" style="color: #000;">Fecha de Vencimiento:</label>
-                                        <input type="text" id="fecha_vencimiento_0" class="form-control" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="saldo_0" style="color: #000;">Saldo:</label>
-                                        <input type="text" id="saldo_0" class="form-control" readonly>
-                                    </div>
+                    
+                        <div id="productos-container">
+                            <div class="producto mt-3">
+                                <div class="form-group">
+                                    <label for="producto_0" style="color: #000;">Producto:</label>
+                                    <select name="productos[0][idProducto]" id="producto_0" class="form-control producto-select" required>
+                                        <option value="">Selecciona un producto</option>
+                                        <?php foreach ($productos as $producto) : ?>
+                                            <option value="<?= $producto['idProducto'] ?>"
+                                                data-descripcion="<?= isset($producto['descripcion']) ? esc($producto['descripcion']) : '' ?>"
+                                                data-saldo="<?= esc($producto['producto_saldo']) ?>"
+                                                data-vencimiento="<?= esc($producto['fecha_vencimiento']) ?>">
+                                                <?= esc($producto['producto_nombre']) ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="producto_cantidad_0" style="color: #000;">Cantidad:</label>
+                                    <input type="number" name="productos[0][cantidad]" id="producto_cantidad_0" class="form-control producto-cantidad" min="1" required>
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="producto_vencimiento_0" style="color: #000;">Fecha de Vencimiento:</label>
+                                    <input type="date" name="productos[0][vencimiento]" id="producto_vencimiento_0" class="form-control producto-vencimiento" readonly>
+                                </div>
+                    
+                                <div class="form-group">
+                                    <label for="producto_saldo_0" style="color: #000;">Saldo:</label>
+                                    <input type="text" name="productos[0][saldo]" id="producto_saldo_0" class="form-control producto-saldo" readonly>
                                 </div>
                             </div>
-                            <button type="button" id="add-product" class="btn btn-primary">Añadir otro producto</button>
                         </div>
-
-                        <button type="submit" class="btn btn-success">Guardar Solicitud</button>
+                        
+                        <button type="button" class="btn btn-primary mt-2" id="agregar-producto">Agregar Producto</button>
+                        <button type="submit" class="btn btn-success mt-3">Guardar Solicitud</button>
                     </form>
                 </div>
             </div>
@@ -81,62 +77,64 @@
 </div>
 
 <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('productos-container').addEventListener('change', function(event) {
-        if (event.target.matches('.producto-select')) {
-            let select = event.target;
-            let selectedOption = select.options[select.selectedIndex];
-            let index = select.id.split('_')[1];
+    document.addEventListener('DOMContentLoaded', function() {
+        const agregarProductoBtn = document.getElementById('agregar-producto');
+        const productosContainer = document.getElementById('productos-container');
+        let productoIndex = 1;
 
-            console.log('Descripción:', selectedOption.getAttribute('data-descripcion'));
-            console.log('Fecha de Vencimiento:', selectedOption.getAttribute('data-fecha_vencimiento'));
-            console.log('Saldo:', selectedOption.getAttribute('data-saldo'));
+        agregarProductoBtn.addEventListener('click', function() {
+            const nuevoProducto = document.createElement('div');
+            nuevoProducto.className = 'producto mt-3';
 
-            document.getElementById('descripcion_' + index).value = selectedOption.getAttribute('data-descripcion');
-            document.getElementById('fecha_vencimiento_' + index).value = selectedOption.getAttribute('data-fecha_vencimiento');
-            document.getElementById('saldo_' + index).value = selectedOption.getAttribute('data-saldo');
-        }
-    });
+            nuevoProducto.innerHTML = `
+                <div class="form-group">
+                    <label for="producto_${productoIndex}" style="color: #000;">Producto:</label>
+                    <select name="productos[${productoIndex}][idProducto]" id="producto_${productoIndex}" class="form-control producto-select" required>
+                        <option value="">Selecciona un producto</option>
+                        <?php foreach ($productos as $producto) : ?>
+                            <option value="<?= $producto['idProducto'] ?>"
+                                data-descripcion="<?= isset($producto['descripcion']) ? esc($producto['descripcion']) : '' ?>"
+                                data-saldo="<?= esc($producto['producto_saldo']) ?>"
+                                data-vencimiento="<?= esc($producto['fecha_vencimiento']) ?>">
+                                <?= esc($producto['producto_nombre']) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
 
-    document.getElementById('add-product').addEventListener('click', function() {
-        let container = document.getElementById('productos-container');
-        let index = container.querySelectorAll('.producto').length;
-        let newProduct = document.createElement('div');
-        newProduct.classList.add('producto');
-        newProduct.innerHTML = `
-            <div class="form-group">
-                <label for="producto_${index}" style="color: #000;">Producto:</label>
-                <select name="productos[${index}][idProducto]" id="producto_${index}" class="form-control producto-select" required>
-                    <option value="">Selecciona un producto</option>
-                    <?php foreach ($consumos as $consumo) : ?>
-                        <option value="<?= $consumo['idProducto'] ?>"
-                                data-descripcion="<?= $consumo['producto_descripcion'] ?>"
-                                data-fecha_vencimiento="<?= $consumo['fecha_vencimiento'] ?>"
-                                data-saldo="<?= $consumo['saldo'] ?>">
-                            <?= $consumo['producto_nombre'] ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="cantidad_${index}" style="color: #000;">Cantidad:</label>
-                <input type="number" name="productos[${index}][cantidad]" id="cantidad_${index}" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="descripcion_${index}" style="color: #000;">Descripción:</label>
-                <input type="text" id="descripcion_${index}" class="form-control" readonly>
-            </div>
-            <div class="form-group">
-                <label for="fecha_vencimiento_${index}" style="color: #000;">Fecha de Vencimiento:</label>
-                <input type="text" id="fecha_vencimiento_${index}" class="form-control" readonly>
-            </div>
-            <div class="form-group">
-                <label for="saldo_${index}" style="color: #000;">Saldo:</label>
-                <input type="text" id="saldo_${index}" class="form-control" readonly>
-            </div>
-        `;
-        container.appendChild(newProduct);
-    });
+                <div class="form-group">
+                    <label for="producto_cantidad_${productoIndex}" style="color: #000;">Cantidad:</label>
+                    <input type="number" name="productos[${productoIndex}][cantidad]" id="producto_cantidad_${productoIndex}" class="form-control producto-cantidad" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="producto_vencimiento_${productoIndex}" style="color: #000;">Fecha de Vencimiento:</label>
+                    <input type="date" name="productos[${productoIndex}][vencimiento]" id="producto_vencimiento_${productoIndex}" class="form-control producto-vencimiento" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="producto_saldo_${productoIndex}" style="color: #000;">Saldo:</label>
+                    <input type="text" name="productos[${productoIndex}][saldo]" id="producto_saldo_${productoIndex}" class="form-control producto-saldo" readonly>
+                </div>
+            `;
+
+            productosContainer.appendChild(nuevoProducto);
+            productoIndex++;
+        });
+
+        productosContainer.addEventListener('change', function(event) {
+            if (event.target.classList.contains('producto-select')) {
+                const selectedOption = event.target.selectedOptions[0];
+                const descripcion = selectedOption.dataset.descripcion;
+                const saldo = selectedOption.dataset.saldo;
+                const vencimiento = selectedOption.dataset.vencimiento;
+
+                const productoContainer = event.target.closest('.producto');
+                productoContainer.querySelector('.producto-cantidad').value = '';
+                productoContainer.querySelector('.producto-vencimiento').value = vencimiento;
+                productoContainer.querySelector('.producto-saldo').value = saldo;
+            }
+        });
     });
 </script>
 

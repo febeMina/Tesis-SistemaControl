@@ -1,0 +1,628 @@
+INFO - 2024-07-27 03:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 03:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-07-27 04:53:36 --> getSaldoInicial called with idProducto: 4
+INFO - 2024-07-27 04:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 04:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 05:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-27 05:12:17 --> mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-27 05:12:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 2 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:12:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 4 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:12:17 --> [Caused by] mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 5 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-27 05:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 05:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 05:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-27 05:18:44 --> mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-27 05:18:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 2 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:18:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 4 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:18:44 --> [Caused by] mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 5 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-27 05:18:57 --> mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-27 05:18:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 2 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:18:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 4 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:18:57 --> [Caused by] mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 5 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-27 05:19:11 --> mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-27 05:19:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 2 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:19:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 4 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:19:11 --> [Caused by] mysqli_sql_exception: Expression #5 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'sistema_control.consumos.saldo' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`, IFNULL(consumos.saldo, 0) as saldo_actual
+FROM `productos`
+LEFT JOIN (SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo ON `productos`.`idProducto` = `ultimo_consumo`.`idProducto`
+LEFT JOIN `consumos` ON `productos`.`idProducto` = `consumos`.`idProducto` AND `consumos`.`fecha` = `ultimo_consumo`.`max_fecha`
+LEFT JOIN `tipo_producto` ON `tipo_producto`.`idtipoProducto` = `productos`.`idtipoProducto`
+GROUP BY `productos`.`idProducto`, `tipo_producto`.`nombre`, `tipo_producto`.`descripcion`, `productos`.`fecha_vencimiento`', [], false)
+ 5 APPPATH\Models\ConsumoModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SolicitudProductos.php(44): App\Models\ConsumoModel->getSaldoProductos()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-27 05:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-27 05:28:19 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Views\solicitud_productos\create.php on line 44.
+ 1 APPPATH\Views\solicitud_productos\create.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:30:27 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Views\solicitud_productos\create.php on line 44.
+ 1 APPPATH\Views\solicitud_productos\create.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:30:53 --> ErrorException: Undefined array key "producto_nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 47.
+ 1 APPPATH\Views\solicitud_productos\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:31:08 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Views\solicitud_productos\create.php on line 44.
+ 1 APPPATH\Views\solicitud_productos\create.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-27 05:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-27 05:33:42 --> ErrorException: Undefined array key "producto_nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 47.
+ 1 APPPATH\Views\solicitud_productos\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:33:49 --> ErrorException: Undefined variable $consumos
+in APPPATH\Views\solicitud_productos\create.php on line 42.
+ 1 APPPATH\Views\solicitud_productos\create.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $consumos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:33:55 --> ErrorException: Undefined variable $consumos
+in APPPATH\Views\solicitud_productos\create.php on line 42.
+ 1 APPPATH\Views\solicitud_productos\create.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $consumos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:34:08 --> ErrorException: Undefined variable $consumos
+in APPPATH\Views\solicitud_productos\create.php on line 42.
+ 1 APPPATH\Views\solicitud_productos\create.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $consumos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-27 05:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 05:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-27 05:37:58 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 46.
+ 1 APPPATH\Views\solicitud_productos\create.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 46)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(50): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:38:06 --> ErrorException: Undefined array key "producto_nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 47.
+ 1 APPPATH\Views\solicitud_productos\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(50): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:38:25 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 4 APPPATH\Controllers\SolicitudProductos.php(56): view('solicitud_productos/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:38:32 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 4 APPPATH\Controllers\SolicitudProductos.php(56): view('solicitud_productos/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:38:42 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Views\solicitud_productos\create.php on line 43.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 4 APPPATH\Controllers\SolicitudProductos.php(56): view('solicitud_productos/create', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:38:53 --> ErrorException: Undefined array key "producto_nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 111.
+ 1 APPPATH\Views\solicitud_productos\create.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 111)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(56): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-27 05:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-27 05:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-27 05:39:54 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 47.
+ 1 APPPATH\Views\solicitud_productos\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(50): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:40:02 --> ErrorException: Undefined array key "saldo"
+in APPPATH\Views\solicitud_productos\create.php on line 46.
+ 1 APPPATH\Views\solicitud_productos\create.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "saldo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 46)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(50): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:40:09 --> ErrorException: Undefined array key "producto_nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 47.
+ 1 APPPATH\Views\solicitud_productos\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(50): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:40:25 --> ErrorException: Undefined array key "producto_nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 111.
+ 1 APPPATH\Views\solicitud_productos\create.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 111)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(56): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:40:38 --> ErrorException: Undefined variable $consumos
+in APPPATH\Views\solicitud_productos\create.php on line 42.
+ 1 APPPATH\Views\solicitud_productos\create.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $consumos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:40:56 --> ErrorException: Undefined array key "descripcion"
+in APPPATH\Views\solicitud_productos\create.php on line 44.
+ 1 APPPATH\Views\solicitud_productos\create.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-27 05:41:06 --> ErrorException: Undefined array key "producto_nombre"
+in APPPATH\Views\solicitud_productos\create.php on line 47.
+ 1 APPPATH\Views\solicitud_productos\create.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\solicitud_productos\\create.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('solicitud_productos/create', [], true)
+ 5 APPPATH\Controllers\SolicitudProductos.php(42): view('solicitud_productos/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\SolicitudProductos->create()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-27 05:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

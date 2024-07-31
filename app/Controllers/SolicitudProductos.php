@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\SolicitudProductosModel;
 use App\Models\ProductoModel;
 use App\Models\ConsumoModel;
+use App\Models\SolicitudProductoDetalleModel;
 use CodeIgniter\Controller;
 
 class SolicitudProductos extends Controller
@@ -13,6 +14,8 @@ class SolicitudProductos extends Controller
     protected $request;
     protected $SolicitudProductosModel;
     protected $ProductosModel;
+    protected $SolicitudProductoDetalleModel;
+    protected $ConsumoModel;
 
     public function __construct()
     {
@@ -20,137 +23,173 @@ class SolicitudProductos extends Controller
         $this->request = service('request');
         $this->SolicitudProductosModel = new SolicitudProductosModel();
         $this->ProductosModel = new ProductoModel();
+        $this->SolicitudProductoDetalleModel = new SolicitudProductoDetalleModel();
+        $this->ConsumoModel = new ConsumoModel();
+        $this->logger = \Config\Services::logger(); // Agregar logger
     }
 
     public function index()
     {
         $model = new SolicitudProductosModel();
-        $solicitudes = $model->obtenerSolicitudesConDetalles();
 
-        $data['solicitudes'] = $solicitudes;
+        // Configurar la paginación
+        $data = [
+            'solicitudes' => $model->paginate(10), // 10 es el número de elementos por página
+            'pager' => $model->pager,
+        ];
+
         return view('solicitud_productos/index', $data);
     }
-
+    
     public function create()
-{
-    $consumoModel = new \App\Models\ConsumoModel();
-    $consumos = $consumoModel->getConsumos(); // Obtener todos los datos de consumo
-
-    // Log para verificar los datos obtenidos
-    log_message('info', 'Datos de consumo obtenidos: ' . print_r($consumos, true));
-
-    $data = [
-        'consumos' => $consumos,
-        // Otros datos necesarios para el formulario
-    ];
-
-    return view('solicitud_productos/create', $data);
-}
-
-public function store()
-{
-    $model = new SolicitudProductosModel();
-    $request = \Config\Services::request();
-    
-    // Validación de datos
-    $validation = \Config\Services::validation();
-    $validation->setRules([
-        'Fecha_solicitud' => 'required|valid_date',
-        'Comida_a_preparar' => 'required|string',
-        'productos.*.idProducto' => 'required|integer',
-        'productos.*.cantidad' => 'required|integer',
-        'responsable_entrega' => 'required|string',
-        'responsable_recibir' => 'required|string',
-    ]);
-    
-    if (!$validation->withRequest($this->request)->run()) {
-        return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+    {
+        $productos = $this->SolicitudProductosModel->getProductosConsumo();
+        
+        return view('solicitud_productos/create', [
+            'productos' => $productos,
+        ]);
     }
-    
-    // Obtener los datos del formulario
-    $fecha_solicitud = $request->getPost('Fecha_solicitud');
-    $comida_a_preparar = $request->getPost('Comida_a_preparar');
-    $productos = $request->getPost('productos');
-    $responsable_entrega = $request->getPost('responsable_entrega');
-    $responsable_recibir = $request->getPost('responsable_recibir');
-    
-    foreach ($productos as $producto) {
-        // Preparar los datos para guardar
-        $data = [
+
+    public function store()
+    {
+        $request = \Config\Services::request();
+        
+        // Validación
+        $validation = \Config\Services::validation();
+        $validation->setRules([
+            'Fecha_solicitud' => 'required|valid_date',
+            'Comida_a_preparar' => 'required|string',
+            'productos.*.idProducto' => 'required|integer',
+            'productos.*.cantidad' => 'required|integer',
+            'responsable_entrega' => 'required|string',
+            'responsable_recibir' => 'required|string',
+        ]);
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
+        // Recoger los datos del formulario
+        $fecha_solicitud = $request->getPost('Fecha_solicitud');
+        $comida_a_preparar = $request->getPost('Comida_a_preparar');
+        $productos = $request->getPost('productos');
+        $responsable_entrega = $request->getPost('responsable_entrega');
+        $responsable_recibir = $request->getPost('responsable_recibir');
+
+        $solicitudData = [
             'Fecha_solicitud' => $fecha_solicitud,
             'Comida_a_preparar' => $comida_a_preparar,
-            'idProducto' => $producto['idProducto'],
-            'cantidad' => (int) $producto['cantidad'],
             'responsable_entrega' => $responsable_entrega,
             'responsable_recibir' => $responsable_recibir,
         ];
 
-        // Guardar los datos en la base de datos
-        if (!$model->insert($data)) {
+        // Insertar la solicitud
+        $idSolicitudProductos = $this->SolicitudProductosModel->insert($solicitudData, true);
+
+        if ($idSolicitudProductos) {
+            $detalles = [];
+            foreach ($productos as $producto) {
+                $idProducto = $producto['idProducto'];
+                $cantidad = (int) $producto['cantidad'];
+                
+                $ultimoConsumo = $this->ConsumoModel->obtenerUltimoConsumo($idProducto);
+                $saldo_inicial = $ultimoConsumo ? $ultimoConsumo['saldo'] : 0;
+                $saldo = $saldo_inicial - $cantidad;
+
+                $detalles[] = [
+                    'idSolicitudProductos' => $idSolicitudProductos,
+                    'idProducto' => $idProducto,
+                    'cantidad' => $cantidad,
+                ];
+
+                $this->registrarSalida($idProducto, $saldo_inicial, $cantidad, $saldo, $fecha_solicitud);
+            }
+            
+            $this->SolicitudProductoDetalleModel->insertBatch($detalles);
+
+            return redirect()->to(site_url('solicitudproductos'))->with('success', '¡La solicitud de producto se guardó correctamente!');
+        } else {
             return redirect()->back()->withInput()->with('error', 'Hubo un problema al guardar la solicitud de producto.');
         }
-
-        // Registrar la salida en la tabla de consumos
-        $this->registrarSalida($producto['idProducto'], $producto['cantidad'], $fecha_solicitud);
     }
     
-    return redirect()->to(site_url('solicitud_productos'))->with('success', '¡La solicitud de producto se guardó correctamente!');
+   public function edit($id)
+{
+    $solicitudModel = new SolicitudProductosModel();
+    $productoModel = new ProductoModel();
+    
+    $solicitud = $solicitudModel->find($id);
+    if (!$solicitud) {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException("No se encontró la solicitud con ID: $id");
+    }
+
+    // Obtener productos para el select
+    $productos = $productoModel->findAll();
+    
+    // Obtener detalles de productos asociados a la solicitud
+    $detalleModel = new SolicitudProductoDetalleModel();
+    $productosDetalles = $detalleModel->where('idSolicitudProductos', $id)->findAll();
+
+    // Agregar log para verificar los datos
+    $this->logger->info('Datos de la solicitud:', $solicitud);
+    $this->logger->info('Detalles de productos:', $productosDetalles);
+
+    $data = [
+        'solicitud' => $solicitud,
+        'productos' => $productos,
+        'productosDetalles' => $productosDetalles
+    ];
+
+    return view('solicitud_productos/edit', $data);
 }
 
 
-    public function edit($id)
+
+    protected function registrarSalida($idProducto, $saldo_inicial, $cantidad, $saldo, $fecha)
     {
-        $solicitudModel = new SolicitudProductosModel();
-        $productoModel = new ProductoModel();
-        $consumoModel = new ConsumoModel();
-
-        $data['solicitud'] = $solicitudModel->find($id);
-        $data['productos'] = $productoModel->getProductosConDetalles();
-        $data['solicitud_productos'] = $solicitudModel->obtenerSolicitudesConDetalles();
-
-        return view('solicitud_productos/edit', $data);
-    }
-
-    public function update($id)
-    {
-        $request = $this->request;
-        $solicitudModel = new SolicitudProductosModel();
-
-        $data = [
-            'Fecha_solicitud' => $request->getPost('Fecha_solicitud'),
-            'Comida_a_preparar' => $request->getPost('Comida_a_preparar'),
-            'responsable_entrega' => $request->getPost('responsable_entrega'),
-            'responsable_recibir' => $request->getPost('responsable_recibir'),
-        ];
-
-        $solicitudModel->update($id, $data);
-
-        $this->db->table('solicitud_productos')
-            ->where('idSolicitudProductos', $id)
-            ->update($data);
-
-        return redirect()->to(site_url('solicitud_productos'))->with('success', '¡La solicitud de producto se actualizó correctamente!');
-    }
-
-    public function delete($id)
-    {
-        $solicitudModel = new SolicitudProductosModel();
-        $solicitudModel->delete($id);
-
-        return redirect()->to(site_url('solicitud_productos'))->with('success', '¡La solicitud de producto se eliminó correctamente!');
-    }
-
-    protected function registrarSalida($idProducto, $cantidad, $fecha)
-    {
-        $consumoModel = new ConsumoModel();
-
         $data = [
             'idProducto' => $idProducto,
-            'cantidad' => $cantidad,
+            'saldo_inicial' => $saldo_inicial,
+            'salidas' => $cantidad,
+            'saldo' => $saldo,
             'fecha' => $fecha,
             'tipo' => 'salida'
         ];
 
-        $consumoModel->insert($data);
+        if ($this->ConsumoModel->insert($data)) {
+            $this->logger->info('Salida registrada para el producto ID: ' . $idProducto);
+        } else {
+            $this->logger->error('Error al registrar la salida para el producto ID: ' . $idProducto);
+        }
+    }
+    
+    public function obtenerDetalles($idSolicitud)
+    {
+        $detalles = $this->SolicitudProductoDetalleModel->where('idSolicitudProductos', $idSolicitud)->findAll();
+    
+        // Obtén los nombres de los productos usando el modelo ProductoModel
+        $productos = [];
+        foreach ($detalles as $detalle) {
+            $producto = $this->ProductosModel->find($detalle['idProducto']);
+            if ($producto) {
+                $productos[] = [
+                    'nombre_producto' => $producto['nombre'],
+                    'cantidad' => $detalle['cantidad']
+                ];
+            }
+        }
+    
+        return $this->response->setJSON(['detalles' => $productos]);
+    }
+    
+    public function cargarModal($idSolicitud)
+    {
+        $detalles = $this->SolicitudProductoDetalleModel->getDetallesBySolicitud($idSolicitud);
+        
+        $data = [
+            'detalles' => $detalles
+        ];
+
+        return $this->response->setJSON($data);
     }
 }

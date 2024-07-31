@@ -13,8 +13,8 @@ class ConsumoModel extends Model
     public function obtenerUltimoConsumo($idProducto)
     {
         return $this->where('idProducto', $idProducto)
-                    ->orderBy('idConsumo', 'DESC')
-                    ->first();
+                    ->orderBy('fecha', 'DESC')
+                    ->first();  // Use 'first' to get the latest record
     }
 
     public function obtenerConsumosConDetalles()

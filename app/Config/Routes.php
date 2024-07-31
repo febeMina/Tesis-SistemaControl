@@ -145,6 +145,8 @@ $routes->group('solicitudproductos', function ($routes) {
     $routes->get('edit/(:num)', 'SolicitudProductos::edit/$1');   // Mostrar formulario de edición de solicitud
     $routes->post('update/(:num)', 'SolicitudProductos::update/$1'); // Actualizar solicitud de productos existente
     $routes->get('delete/(:num)', 'SolicitudProductos::delete/$1'); // Eliminar solicitud de productos existente
+    $routes->get('cargarModal/(:num)', 'SolicitudProductos::cargarModal/$1');
+
 });
 
 // Rutas para el controlador Tipos de producto ------------- 03/07/2024

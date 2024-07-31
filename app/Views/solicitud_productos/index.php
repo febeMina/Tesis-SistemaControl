@@ -23,39 +23,19 @@
                         </div>
                     <?php endif; ?>
 
-                    <form action="<?= site_url('solicitudproductos/index') ?>" method="get">
-                        <div class="row mb-3">
-                            <div class="col-md-4">
-                                <input type="text" name="producto_nombre" class="form-control" placeholder="Nombre del Producto" value="<?= isset($filters['producto_nombre']) ? esc($filters['producto_nombre']) : '' ?>">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="text" name="producto_descripcion" class="form-control" placeholder="Descripción del Producto" value="<?= isset($filters['producto_descripcion']) ? esc($filters['producto_descripcion']) : '' ?>">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="date" name="producto_fecha_vencimiento" class="form-control" placeholder="Fecha de Vencimiento" value="<?= isset($filters['producto_fecha_vencimiento']) ? esc($filters['producto_fecha_vencimiento']) : '' ?>">
-                            </div>
-                            <div class="col-md-12 d-flex justify-content-between align-items-center">
-                                <div>
-                                    <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
-                                    <a href="<?= site_url('solicitudproductos/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
-                                </div>
-                                <a href="<?= site_url('solicitudproductos/create') ?>" class="btn btn-success mt-3">Crear Nueva Solicitud</a>
-                            </div>
-                        </div>
-                    </form>
+                    <div class="mb-3">
+                        <a href="<?= site_url('solicitudproductos/create') ?>" class="btn btn-success">Crear Nueva Solicitud</a>
+                    </div>
 
                     <div class="table-responsive">
-                        <table class="table" style="color: #000; font-size: 0.9rem;">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>ID Solicitud</th>
-                                    <th>Fecha de Solicitud</th>
+                                    <th>ID</th>
+                                    <th>Fecha Solicitud</th>
                                     <th>Comida a Preparar</th>
-                                    <th>Producto</th>
-                                    <th>Fecha Vencimiento</th>
-                                    <th>Cantidad</th>
-                                    <th>Responsable de Entrega</th>
-                                    <th>Responsable de Recibir</th>
+                                    <th>Responsable Entrega</th>
+                                    <th>Responsable Recibir</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -64,34 +44,54 @@
                                     <tr>
                                         <td><?= esc($solicitud['idSolicitudProductos']) ?></td>
                                         <td><?= esc($solicitud['Fecha_solicitud']) ?></td>
-                                        <td><?= isset($solicitud['Comida_a_preparar']) ? esc($solicitud['Comida_a_preparar']) : 'N/A' ?></td>
-                                        <td><?= esc($solicitud['producto_nombre']) ?> (ID: <?= esc($solicitud['idProducto']) ?>)</td>
-                                        <td><?= esc($solicitud['fecha_vencimiento']) ?></td>
-                                        <td><?= esc($solicitud['cantidad']) ?></td>
+                                        <td><?= esc($solicitud['Comida_a_preparar']) ?></td>
                                         <td><?= esc($solicitud['responsable_entrega']) ?></td>
                                         <td><?= esc($solicitud['responsable_recibir']) ?></td>
                                         <td>
-                                            <div class="btn-group" role="group" aria-label="Acciones">
-                                                <a href="<?= site_url('solicitudproductos/edit/' . $solicitud['idSolicitudProductos']) ?>" class="btn btn-edit">
-                                                    <i class="mdi mdi-pencil"></i>
-                                                </a>
-                                                <a href="<?= site_url('solicitudproductos/delete/' . $solicitud['idSolicitudProductos']) ?>" class="btn btn-delete" onclick="return confirm('¿Está seguro de eliminar esta solicitud?');">
-                                                    <i class="mdi mdi-delete"></i>
-                                                </a>
-                                            </div>
+                                            <a href="<?= site_url('solicitudproductos/edit/' . esc($solicitud['idSolicitudProductos'])) ?>" class="btn btn-primary btn-sm btn-edit">
+                                                Editar
+                                            </a>
+                                            <a href="<?= site_url('solicitudproductos/delete/' . esc($solicitud['idSolicitudProductos'])) ?>" class="btn btn-danger btn-sm btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar esta solicitud?')">
+                                                Eliminar
+                                            </a>
+                                            <button type="button" class="btn btn-info btn-sm" data-id="<?= esc($solicitud['idSolicitudProductos']) ?>" data-toggle="modal" data-target="#modalDetalles">
+                                                Ver Detalles
+                                            </button>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
+
+                    <?= $pager->links() ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<?= $this->endSection() ?>
+<!-- Modal Detalles -->
+<div class="modal fade" id="modalDetalles" tabindex="-1" role="dialog" aria-labelledby="modalDetallesLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDetallesLabel">Detalles de la Solicitud</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modalDetallesBody">
+                    <!-- Detalles serán cargados aquí por JavaScript -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
     .card-header h3 {
@@ -116,3 +116,39 @@
         border-radius: 5px;
     }
 </style>
+
+<!-- Script para cargar los detalles en el modal -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    $('#modalDetalles').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var idSolicitud = button.data('id'); // Extract info from data-* attributes
+
+        var modal = $(this);
+        $.ajax({
+            url: '<?= site_url('solicitudproductos/cargarModal') ?>/' + idSolicitud,
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                if (data.detalles && data.detalles.length > 0) {
+                    var detallesHtml = '<table class="table table-bordered">';
+                    detallesHtml += '<thead><tr><th>Producto</th><th>Cantidad</th></tr></thead>';
+                    detallesHtml += '<tbody>';
+                    $.each(data.detalles, function (index, detalle) {
+                        detallesHtml += '<tr><td>' + (detalle.nombre_producto || 'N/A') + '</td><td>' + (detalle.cantidad || 'N/A') + '</td></tr>';
+                    });
+                    detallesHtml += '</tbody></table>';
+                    modal.find('#modalDetallesBody').html(detallesHtml);
+                } else {
+                    modal.find('#modalDetallesBody').html('<p>No se encontraron detalles.</p>');
+                }
+            },
+            error: function () {
+                modal.find('#modalDetallesBody').html('<p>Error al cargar los detalles.</p>');
+            }
+        });
+    });
+});
+</script>
+
+<?= $this->endSection() ?>

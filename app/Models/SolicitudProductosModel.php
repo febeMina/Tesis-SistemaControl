@@ -12,44 +12,36 @@ class SolicitudProductosModel extends Model
         'Fecha_solicitud',
         'Comida_a_preparar',
         'responsable_entrega',
-        'responsable_recibir',
-        'cantidad',
-        'idProducto'
+        'responsable_recibir'
     ];
 
     public function get_solicitud_con_productos($idSolicitud)
-    {
-        $builder = $this->db->table('solicitud_productos');
-        $builder->select('solicitud_productos.*, productos.idProducto, tipo_producto.nombre AS producto_nombre, tipo_producto.descripcion AS producto_descripcion');
-        $builder->join('productos', 'productos.idProducto = solicitud_productos.idProducto');
-        $builder->join('tipo_producto', 'tipo_producto.idtipoProducto = productos.idtipoProducto');
-        $builder->where('solicitud_productos.idSolicitudProductos', $idSolicitud);
-        
-        $result = $builder->get()->getResultArray();
-        
-        foreach ($result as &$item) {
-            $ultimoConsumo = $this->db->table('consumos')
-                ->where('idProducto', $item['idProducto'])
-                ->orderBy('fecha', 'desc')
-                ->limit(1)
-                ->get()
-                ->getRowArray();
+{
+    $builder = $this->db->table('solicitud_productos sp');
+    $builder->select('sp.*, spd.*, p.idProducto, tp.nombre AS producto_nombre, tp.descripcion AS producto_descripcion, p.fecha_vencimiento, IFNULL(c.saldo, 0) AS producto_saldo');
+    $builder->join('solicitud_productos_detalle spd', 'spd.idSolicitudProductos = sp.idSolicitudProductos', 'left');
+    $builder->join('productos p', 'p.idProducto = spd.idProducto', 'left');
+    $builder->join('tipo_producto tp', 'tp.idtipoProducto = p.idtipoProducto', 'left');
+    $builder->join('(SELECT idProducto, saldo FROM consumos WHERE fecha = (SELECT MAX(fecha) FROM consumos WHERE idProducto = consumos.idProducto)) c', 'c.idProducto = p.idProducto', 'left');
+    $builder->where('sp.idSolicitudProductos', $idSolicitud);
+    $query = $builder->get();
 
-            $item['producto_saldo'] = $ultimoConsumo ? $ultimoConsumo['saldo'] : 0;
-        }
-        
-        return $result;
-    }
+    return $query->getResultArray();
+}
 
-    public function obtenerSolicitudesConDetalles()
-    {
-        $builder = $this->db->table('solicitud_productos sp');
-        $builder->select('sp.idSolicitudProductos, sp.Fecha_solicitud, sp.Comida_a_preparar, sp.responsable_entrega, sp.responsable_recibir, sp.cantidad, p.idProducto, tp.nombre AS producto_nombre, tp.descripcion AS producto_descripcion, p.fecha_vencimiento, IFNULL(c.saldo, 0) AS producto_saldo');
-        $builder->join('productos p', 'sp.idProducto = p.idProducto', 'left');
-        $builder->join('tipo_producto tp', 'tp.idtipoProducto = p.idtipoProducto', 'left');
-        $builder->join('(SELECT idProducto, saldo FROM consumos WHERE fecha = (SELECT MAX(fecha) FROM consumos WHERE idProducto = consumos.idProducto)) c', 'c.idProducto = p.idProducto', 'left');
-        return $builder->get()->getResultArray();
-    }
+
+public function obtenerSolicitudesConDetalles()
+{
+    return $this->db->table('solicitud_productos sp')
+        ->select('sp.*, spd.*, p.idProducto, tp.nombre AS producto_nombre, tp.descripcion AS producto_descripcion, p.fecha_vencimiento, IFNULL(c.saldo, 0) AS producto_saldo')
+        ->join('solicitud_productos_detalle spd', 'spd.idSolicitudProductos = sp.idSolicitudProductos', 'left')
+        ->join('productos p', 'p.idProducto = spd.idProducto', 'left')
+        ->join('tipo_producto tp', 'tp.idtipoProducto = p.idtipoProducto', 'left')
+        ->join('(SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo', 'p.idProducto = ultimo_consumo.idProducto', 'left')
+        ->join('consumos c', 'p.idProducto = c.idProducto AND c.fecha = ultimo_consumo.max_fecha', 'left')
+        ->get()->getResult();
+}
+
 
     public function getSaldoActual($idProducto)
     {
@@ -60,10 +52,67 @@ class SolicitudProductosModel extends Model
     
     public function obtenerProductosConSaldo()
     {
-        $builder = $this->db->table('productos p');
-        $builder->select('p.idProducto, tp.nombre AS producto_nombre, tp.descripcion AS producto_descripcion, IFNULL(c.saldo, 0) AS saldo_actual');
+        $builder = $this->db->table('consumos');
+        $builder->select('consumos.idProducto, tp.nombre as producto_nombre, tp.descripcion as producto_descripcion, consumos.saldo, productos.fecha_vencimiento');
+        $builder->join('productos', 'productos.idProducto = consumos.idProducto');
+        $builder->join('tipo_producto tp', 'tp.idtipoProducto = productos.idtipoProducto'); // JOIN para obtener la descripción del producto
+        $query = $builder->get();
+        return $query->getResult();
+    }
+    
+
+    
+    public function insertarSolicitudConDetalles($data, $detalles)
+    {
+        $this->db->transStart();
+        
+        $this->insert($data);
+        $idSolicitudProductos = $this->getInsertID();
+        
+        $detalleModel = new \App\Models\SolicitudProductoDetalleModel();
+        $detalleModel->insertarDetalles($idSolicitudProductos, $detalles);
+        
+        $this->db->transComplete();
+        
+        return $this->db->transStatus();
+    }
+    public function getAllSolicitudes()
+{
+    return $this->findAll(); // Asegúrate de que esto devuelve objetos
+}
+
+public function getProductosConsumo()
+{
+    $builder = $this->db->table('productos p');
+    $builder->select('p.idProducto, tp.nombre AS producto_nombre, tp.descripcion AS producto_descripcion, p.fecha_vencimiento, c.saldo AS producto_saldo');
+    $builder->join('tipo_producto tp', 'tp.idtipoProducto = p.idtipoProducto', 'left');
+    $builder->join(
+        '(SELECT idProducto, MAX(fecha) as max_fecha FROM consumos GROUP BY idProducto) ultimo_consumo', 
+        'p.idProducto = ultimo_consumo.idProducto', 
+        'left'
+    );
+    $builder->join(
+        'consumos c', 
+        'p.idProducto = c.idProducto AND c.fecha = ultimo_consumo.max_fecha', 
+        'left'
+    );
+    $builder->where('c.saldo IS NOT NULL'); // Asegúrate de que hay un saldo asociado
+    $query = $builder->get();
+
+    return $query->getResultArray();
+}
+
+
+    
+    public function getDetalles($idSolicitudProductos)
+    {
+        $builder = $this->db->table('solicitud_productos_detalle spd');
+        $builder->select('spd.*, p.idProducto, tp.nombre AS producto_nombre, tp.descripcion AS producto_descripcion');
+        $builder->join('productos p', 'p.idProducto = spd.idProducto', 'left');
         $builder->join('tipo_producto tp', 'tp.idtipoProducto = p.idtipoProducto', 'left');
-        $builder->join('(SELECT idProducto, saldo FROM consumos WHERE fecha = (SELECT MAX(fecha) FROM consumos WHERE idProducto = consumos.idProducto)) c', 'c.idProducto = p.idProducto', 'left');
-        return $builder->get()->getResultArray();
+        $builder->where('spd.idSolicitudProductos', $idSolicitudProductos);
+        $query = $builder->get();
+        
+        return $query->getResultArray();
     }
 }
