@@ -69,6 +69,18 @@ $routes->get('permiso_magisterial/create', 'PermisoMagisterial::create');
 $routes->get('report', 'ReportController::index');
 
 
+
+
+
+
+// Rutas para el manejo de permisos personales
+$routes->get('permisos_personal', 'PermisosPersonal::index');
+$routes->get('permisos_personal/create', 'PermisosPersonal::create');
+$routes->post('permisos_personal/store', 'PermisosPersonal::store');
+
+
+
+
 // Rutas para los reportes de permisos magisteriales
 $routes->get('reportes/permisos_magisteriales_reporte', 'ReportesController::permisos_magisteriales_reporte');
 $routes->post('reportes/generate_report', 'PermisoMagisterialController::generate_report');

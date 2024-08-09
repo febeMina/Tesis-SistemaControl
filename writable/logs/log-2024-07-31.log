@@ -309,3 +309,86 @@ INFO - 2024-07-31 05:11:53 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-07-31 05:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-31 05:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-31 05:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-31 05:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-31 05:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-31 05:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-31 05:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-31 05:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-31 05:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-31 05:34:29 --> mysqli_sql_exception: Table 'sistema_control.maestro' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicit...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicit...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicit...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicit...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudPermisoModel.php(74): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(136): App\Models\SolicitudPermisoModel->findAllWithDetails()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-07-31 05:34:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestro' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`', [], false)
+ 2 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SolicitudPermisoModel.php(74): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PermisoMagisterial.php(136): App\Models\SolicitudPermisoModel->findAllWithDetails()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-31 05:34:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.maestro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`', [], false)
+ 4 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SolicitudPermisoModel.php(74): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\PermisoMagisterial.php(136): App\Models\SolicitudPermisoModel->findAllWithDetails()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-31 05:34:29 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.maestro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `solicitud_permiso`.*, `maestro`.`nombre_completo`, `tipo_permiso`.`nombre`
+FROM `solicitud_permiso`
+JOIN `maestro` ON `maestro`.`idDocente` = `solicitud_permiso`.`idDocente`
+JOIN `tipo_permiso` ON `tipo_permiso`.`idTipoPermiso` = `solicitud_permiso`.`idTipoPermiso`', [], false)
+ 5 SYSTEMPATH\Model.php(243): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(641): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SolicitudPermisoModel.php(74): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\PermisoMagisterial.php(136): App\Models\SolicitudPermisoModel->findAllWithDetails()
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

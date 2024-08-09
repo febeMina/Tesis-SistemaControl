@@ -1,0 +1,460 @@
+INFO - 2024-08-08 03:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 03:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 03:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 03:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 03:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 03:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-08 03:51:14 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`historial_permisos`, CONSTRAINT `historial_permisos_ibfk_1` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1120): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(165): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-08 03:51:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`historial_permisos`, CONSTRAINT `historial_permisos_ibfk_1` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `docente`
+WHERE `idDocente` IN :idDocente:', [...], false)
+ 2 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Maestros.php(165): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 03:51:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`historial_permisos`, CONSTRAINT `historial_permisos_ibfk_1` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `docente`
+WHERE `idDocente` IN (\'34\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `docente`
+WHERE `idDocente` IN (\'34\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `docente`
+WHERE `idDocente` IN :idDocente:', [...], false)
+ 4 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\Maestros.php(165): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 03:51:14 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`historial_permisos`, CONSTRAINT `historial_permisos_ibfk_1` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `docente`
+WHERE `idDocente` IN (\'34\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `docente`
+WHERE `idDocente` IN (\'34\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `docente`
+WHERE `idDocente` IN (\'34\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `docente`
+WHERE `idDocente` IN :idDocente:', [...], false)
+ 5 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\Maestros.php(165): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-08-08 04:04:01 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `hi...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `hi...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `hi...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `hi...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1120): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-08 04:04:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = :idDocente:', [...], false)
+ 2 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 04:04:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = :idDocente:', [...], false)
+ 4 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 04:04:02 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = :idDocente:', [...], false)
+ 5 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 04:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-08 04:07:07 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `hi...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `hi...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `hi...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `hi...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1120): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-08 04:07:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = :idDocente:', [...], false)
+ 2 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete(null, false)
+ 4 APPPATH\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 04:07:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = :idDocente:', [...], false)
+ 4 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete(null, false)
+ 6 APPPATH\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 04:07:07 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`detalle_saldos_tipopermiso`, CONSTRAINT `fk_idHistorialPermiso` FOREIGN KEY (`idHistorialPermiso`) REFERENCES `historial_permisos` (`idHistorialPermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `historial_permisos`
+WHERE `idDocente` = \'34\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `historial_permisos`
+WHERE `idDocente` = :idDocente:', [...], false)
+ 5 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Controllers\Maestros.php(166): CodeIgniter\BaseModel->delete()
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('34')
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 04:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-08 04:07:31 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `do...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `do...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `do...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `do...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1120): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(169): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->delete('30')
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-08 04:07:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `docente`
+WHERE `idDocente` IN :idDocente:', [...], false)
+ 2 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Maestros.php(169): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('30')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 04:07:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `docente`
+WHERE `idDocente` IN (\'30\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `docente`
+WHERE `idDocente` IN (\'30\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `docente`
+WHERE `idDocente` IN :idDocente:', [...], false)
+ 4 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\Maestros.php(169): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('30')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-08 04:07:32 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idDocente`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `docente`
+WHERE `idDocente` IN (\'30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `docente`
+WHERE `idDocente` IN (\'30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `docente`
+WHERE `idDocente` IN (\'30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `docente`
+WHERE `idDocente` IN :idDocente:', [...], false)
+ 5 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\Maestros.php(169): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->delete('30')
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 04:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-08 04:08:39 --> Datos del docente: {"nombre_completo":"Priscila Patricia Lopez","nip":"221","escalafon":"221","fecha_ingreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null}
+INFO - 2024-08-08 04:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-08 04:16:20 --> Datos del docente: {"nombre_completo":"Alexander Juarez","nip":"4211","escalafon":"4211","fecha_ingreso":"2022-02-01","estado":"Activo","tipo":"Docente","cargo":null}
+INFO - 2024-08-08 04:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-08 04:31:27 --> Datos del docente: {"nombre_completo":"Teresa Hernandez","nip":"1442","escalafon":"1442","fecha_ingreso":"2021-05-01","estado":"Activo","tipo":"Administrativo","cargo":"Secretaria"}
+INFO - 2024-08-08 04:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-08 04:32:29 --> Datos del docente: {"nombre_completo":"Gerardo Torres","nip":"88221","escalafon":"88221","fecha_ingreso":"2019-02-01","estado":"Activo","tipo":"Docente","cargo":null}
+INFO - 2024-08-08 04:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:33:30 --> Tipo de Solicitud: Horas
+INFO - 2024-08-08 04:33:30 --> Horas Solicitadas: 3
+INFO - 2024-08-08 04:33:30 --> Saldo Actual Horas: 150
+INFO - 2024-08-08 04:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:36:51 --> Tipo de Solicitud: Horas
+INFO - 2024-08-08 04:36:51 --> Horas Solicitadas: 3
+INFO - 2024-08-08 04:36:51 --> Saldo Actual Horas: 147
+INFO - 2024-08-08 04:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 04:38:22 --> Tipo de Solicitud: Dias
+INFO - 2024-08-08 04:38:22 --> Horas Solicitadas: 0
+INFO - 2024-08-08 04:38:22 --> Saldo Actual Horas: 144
+INFO - 2024-08-08 04:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 05:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-08 06:22:27 --> Error: Call to undefined function 15.00()
+in APPPATH\Views\permisos_personal\index.php on line 72.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 4 APPPATH\Controllers\PermisosPersonal.php(63): view('permisos_personal/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisosPersonal->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 06:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 06:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-08 07:08:20 --> ErrorException: Undefined variable $horasSolicitadas
+in APPPATH\Controllers\PermisosPersonal.php on line 49.
+ 1 APPPATH\Controllers\PermisosPersonal.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $horasSolicitadas', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisosPersonal.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisosPersonal->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 07:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-08 07:09:39 --> ErrorException: Undefined variable $horasSolicitadas
+in APPPATH\Controllers\PermisosPersonal.php on line 49.
+ 1 APPPATH\Controllers\PermisosPersonal.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $horasSolicitadas', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisosPersonal.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisosPersonal->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 07:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-08 07:10:26 --> ErrorException: Undefined variable $horasSolicitadas
+in APPPATH\Controllers\PermisosPersonal.php on line 49.
+ 1 APPPATH\Controllers\PermisosPersonal.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $horasSolicitadas', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisosPersonal.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisosPersonal->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 07:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-08 07:10:50 --> ErrorException: Undefined variable $horasSolicitadas
+in APPPATH\Controllers\PermisosPersonal.php on line 49.
+ 1 APPPATH\Controllers\PermisosPersonal.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $horasSolicitadas', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisosPersonal.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisosPersonal->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 07:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-08 07:15:05 --> ErrorException: Undefined variable $horasSolicitadas
+in APPPATH\Controllers\PermisosPersonal.php on line 52.
+ 1 APPPATH\Controllers\PermisosPersonal.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $horasSolicitadas', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisosPersonal.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisosPersonal->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-08 07:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 07:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 08:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 08:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 08:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 08:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 20:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 20:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 20:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 20:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 20:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-08 22:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -37,9 +37,8 @@ class SolicitudPermisoModel extends Model
 
     public function findAllWithDetails()
     {
-        // Ejemplo de consulta para obtener detalles de permisos
-        return $this->select('solicitud_permiso.*, maestro.nombre_completo, tipo_permiso.nombre')
-                    ->join('maestro', 'maestro.idDocente = solicitud_permiso.idDocente')
+        return $this->select('solicitud_permiso.*, docente.nombre_completo, tipo_permiso.nombre')
+                    ->join('docente', 'docente.idDocente = solicitud_permiso.idDocente')
                     ->join('tipo_permiso', 'tipo_permiso.idTipoPermiso = solicitud_permiso.idTipoPermiso')
                     ->findAll();
     }

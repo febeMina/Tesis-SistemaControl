@@ -6,11 +6,15 @@ use App\Models\DetalleSaldosTipoPermisoModel;
 use App\Models\MaestroModel;
 use App\Models\SaldosDocentesModel;
 use App\Models\TipoPermisoModel;
+use App\Models\HistorialPermisosModel;
+use App\Models\SolicitudPermisoModel;
 
 class PermisoMagisterial extends BaseController
 {
     public function create()
     {
+        helper('form');
+
         $modelMaestro = new MaestroModel();
         $data['maestros'] = $modelMaestro->findAll();
 
@@ -22,268 +26,280 @@ class PermisoMagisterial extends BaseController
 
     public function store()
     {
-        $horasOcupadas = $this->request->getVar('horas_ocupadas') ?: 0;
-        $rules = [
-            'id_maestro' => 'required',
-            'id_tipo_permiso' => 'required',
-            'fecha_inicio' => 'required|valid_date',
-            'fecha_fin' => 'required|valid_date',
-            'horas_ocupadas' => 'permit_empty|integer'
-        ];
+        $request = \Config\Services::request();
+        $logger = \Config\Services::logger();
     
-        // Validación extendida para permisos por horas
-        if ($horasOcupadas > 0) {
-            unset($rules['fecha_fin']); // Eliminar la validación de fecha_fin si es por horas
+        $idTipoPermiso = $request->getPost('id_tipo_permiso');
+        $horasOcupadas = $request->getPost('horas_ocupadas');
+        $idDocente = $request->getPost('id_docente');
+        $fechaInicio = $request->getPost('fecha_inicio');
+        $fechaFin = $request->getPost('fecha_fin');
+    
+        $logger->info('Datos recibidos: ID Tipo Permiso = ' . $idTipoPermiso . ', Horas Ocupadas = ' . $horasOcupadas . ', ID Docente = ' . $idDocente . ', Fecha Inicio = ' . $fechaInicio . ', Fecha Fin = ' . $fechaFin);
+    
+        // Validaciones
+        if (empty($idTipoPermiso) || !is_numeric($idTipoPermiso)) {
+            $logger->error('ID de tipo de permiso inválido: ID = ' . $idTipoPermiso);
+            return redirect()->back()->withInput()->with('error', 'ID de tipo de permiso inválido.');
         }
-        
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('validation', $this->validator);
+    
+        if ($horasOcupadas !== '' && !is_numeric($horasOcupadas)) {
+            $logger->error('Horas ocupadas inválidas: Horas ocupadas = ' . $horasOcupadas);
+            return redirect()->back()->withInput()->with('error', 'Horas ocupadas inválidas.');
         }
     
-        $idMaestro = $this->request->getVar('id_maestro');
-        $idTipoPermiso = $this->request->getVar('id_tipo_permiso');
-        $fechaInicio = $this->request->getVar('fecha_inicio');
-        $fechaFin = $this->request->getVar('fecha_fin');
-        $horasOcupadas = $this->request->getVar('horas_ocupadas') ?: 0;
+        if (!strtotime($fechaInicio) || !strtotime($fechaFin)) {
+            $logger->error('Fechas inválidas: Inicio = ' . $fechaInicio . ', Fin = ' . $fechaFin);
+            return redirect()->back()->withInput()->with('error', 'Fechas inválidas.');
+        }
     
-        $fechaInicioDate = new \DateTime($fechaInicio);
-        $fechaFinDate = new \DateTime($fechaFin);
-        $diasOcupados = $fechaInicioDate->diff($fechaFinDate)->days + 1;
+        $diasOcupados = $this->calcularDiasEntreFechas($fechaInicio, $fechaFin);
     
-        // Obtener el tipo de permiso y su cantidad de días
+        // Recuperar tipo de permiso
         $modelTipoPermiso = new TipoPermisoModel();
         $tipoPermiso = $modelTipoPermiso->find($idTipoPermiso);
     
         if (!$tipoPermiso) {
-            return redirect()->back()->withInput()->with('error', 'El tipo de permiso no es válido.');
-        }
-    
-        $cantidadDias = $tipoPermiso['cantidad_dias'];
-    
-        // Calcular los días y horas disponibles
-        $diasDisponibles = $cantidadDias - $diasOcupados;
-        $horasDisponibles = 5 - $horasOcupadas;
-    
-        // Si se solicitaron horas, el día no está completamente disponible
-        if ($horasOcupadas > 0) {
-            $diasDisponibles -= 1;
-            $diasOcupados = 0; // No se cuenta como día ocupado si solo hay horas parciales
-        }
-    
-        // Guardar en la base de datos
-        $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
-        $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso
-            ->where('idTipoPermiso', $idTipoPermiso)
-            ->where('anio', date('Y'))
-            ->first();
-    
-        if (!$detalleSaldosTipoPermiso) {
-            $detalleSaldosTipoPermiso = [
-                'anio' => date('Y'),
-                'idTipoPermiso' => $idTipoPermiso,
-                'saldo' => 0
-            ];
-            $modelDetalleSaldosTipoPermiso->insert($detalleSaldosTipoPermiso);
-            $detalleSaldosTipoPermiso['idDetallePermiso'] = $modelDetalleSaldosTipoPermiso->getInsertID();
-        }
-    
-        $modelSaldosDocentes = new SaldosDocentesModel();
-        $inserted = $modelSaldosDocentes->insert([
-            'idDocente' => $idMaestro,
-            'idDetallePermiso' => $detalleSaldosTipoPermiso['idDetallePermiso'],
-            'saldo_total_dias' => $diasOcupados,
-            'saldo_total_horas' => $horasOcupadas,
-            'fecha_inicio' => $fechaInicio,
-            'fecha_fin' => $fechaFin,
-            'fecha_creacion' => date('Y-m-d H:i:s')
-        ]);
-    
-        if (!$inserted) {
-            return redirect()->back()->withInput()->with('error', 'Error al insertar en la tabla saldos_docentes.');
-        }
-    
-        $detalleSaldosTipoPermiso['saldo'] += $diasOcupados;
-        $modelDetalleSaldosTipoPermiso->update($detalleSaldosTipoPermiso['idDetallePermiso'], $detalleSaldosTipoPermiso);
-    
-        return redirect()->to(site_url('permiso_magisterial/index'))->with('success', 'El permiso magisterial ha sido creado exitosamente.');
-    }
-    
-   
-
-            public function index()
-        {
-            $request = service('request');
-            $filters = [
-                'nip' => $request->getVar('nip'),
-                'nombre_completo' => $request->getVar('nombre_completo'),
-                'fecha_creacion' => $request->getVar('fecha_creacion')
-            ];
-        
-            $fecha_inicio = $request->getVar('fecha_inicio');
-            $fecha_fin = $request->getVar('fecha_fin');
-        
-            if (empty($fecha_fin)) {
-                $fecha_fin = date('Y-m-d');
-            }
-        
-            $modelSaldosDocentes = new SaldosDocentesModel();
-            $modelTipoPermiso = new TipoPermisoModel();
-            $modelMaestro = new MaestroModel();
-            $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
-        
-            $perPage = 10;
-        
-            $saldos_docentes = $modelSaldosDocentes->paginate($perPage, 'group1');
-        
-            $pager = $modelSaldosDocentes->pager;
-        
-            if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_creacion'])) {
-                $saldos_docentes = $this->filterSaldosDocentes($saldos_docentes, $filters);
-            }
-        
-            $tipos_permisos = $modelTipoPermiso->findAll();
-        
-            $data['saldos_docentes'] = [];
-        
-            foreach ($saldos_docentes as $saldo) {
-                $maestro = $modelMaestro->find($saldo['idDocente'] ?? null);
-        
-                $nombre_completo = $maestro['nombre_completo'] ?? '';
-                $nip = $maestro['nip'] ?? '';
-                $fecha_creacion = isset($saldo['fecha_creacion']) ? $saldo['fecha_creacion'] : '';
-        
-                $detalle_saldos_permiso = [];
-                foreach ($tipos_permisos as $tipo_permiso) {
-                    $detalle_saldo_permiso = $modelDetalleSaldosTipoPermiso
-                        ->where('idTipoPermiso', $tipo_permiso['idTipoPermiso'])
-                        ->where('anio', date('Y'))
-                        ->first();
-        
-                    $dias_ocupados = 0;
-                    $horas_ocupadas = 0;
-                    $dias_disponibles = $tipo_permiso['cantidad_dias'];
-                    $horas_disponibles = 0;
-        
-                    if ($detalle_saldo_permiso) {
-                        $saldo_docente = $modelSaldosDocentes
-                            ->where('idDocente', $maestro['idDocente'])
-                            ->where('idDetallePermiso', $detalle_saldo_permiso['idDetallePermiso'])
-                            ->first();
-        
-                        if ($saldo_docente) {
-                            $dias_ocupados = $saldo_docente['saldo_total_dias'];
-                            $horas_ocupadas = $saldo_docente['saldo_total_horas'];
-                            $dias_disponibles = $tipo_permiso['cantidad_dias'] - $dias_ocupados;
-                            $horas_disponibles = 5 - $horas_ocupadas;
-        
-                            if ($horas_ocupadas > 0 && $horas_ocupadas < 5) {
-                                $dias_disponibles -= 1;
-                            }
-                        }
-                    }
-        
-                    $detalle_saldos_permiso[] = [
-                        'idTipoPermiso' => $tipo_permiso['idTipoPermiso'],
-                        'nombre_tipo_permiso' => $tipo_permiso['nombre'],
-                        'cantidad_dias' => $tipo_permiso['cantidad_dias'],
-                        'dias_ocupados' => $dias_ocupados,
-                        'horas_ocupadas' => $horas_ocupadas,
-                        'dias_disponibles' => $dias_disponibles,
-                        'horas_disponibles' => $horas_disponibles,
-                        'fecha_inicio' => ($tipo_permiso['idTipoPermiso'] == $saldo['idDetallePermiso']) ? $saldo['fecha_inicio'] : null,
-                        'fecha_fin' => ($tipo_permiso['idTipoPermiso'] == $saldo['idDetallePermiso']) ? $saldo['fecha_fin'] : null,
-                    ];
-                }
-        
-                $data['saldos_docentes'][] = [
-                    'nombre_completo' => $nombre_completo,
-                    'nip' => $nip,
-                    'fecha_creacion' => $fecha_creacion,
-                    'detalle_saldos_permiso' => $detalle_saldos_permiso,
-                ];
-            }
-        
-            $data['tipos_permisos'] = $tipos_permisos;
-            $data['pager'] = $pager;
-            $data['fecha_inicio'] = $fecha_inicio;
-            $data['fecha_fin'] = $fecha_fin;
-            $data['validation'] = \Config\Services::validation();
-        
-            // Pasar los datos a la vista
-            return view('Permisos/index', $data);
-        }
-    
-   
-    
-
-    protected function filterSaldosDocentes($saldos_docentes, $filters)
-    {
-        $filtered = [];
-        foreach ($saldos_docentes as $saldo_docente) {
-            if (!empty($filters['nip']) && strpos($saldo_docente['nip'], $filters['nip']) === false) {
-                continue;
-            }
-            if (!empty($filters['nombre_completo']) && strpos($saldo_docente['nombre_completo'], $filters['nombre_completo']) === false) {
-                continue;
-            }
-            if (!empty($filters['fecha_creacion']) && strpos($saldo_docente['fecha_creacion'], $filters['fecha_creacion']) === false) {
-                continue;
-            }
-            $filtered[] = $saldo_docente;
-        }
-        return $filtered;
-    }
-    
-    public function generate_report()
-    {
-        // Lógica para generar el reporte y configurar los datos en la sesión flash
-        $idMaestro = $this->request->getVar('id_maestro');
-        $fechaInicio = $this->request->getVar('fecha_inicio');
-        $fechaFin = $this->request->getVar('fecha_fin');
-        $idTipoPermiso = $this->request->getVar('id_tipo_permiso');
-
-        $modelSaldosDocentes = new SaldosDocentesModel();
-        $modelMaestro = new MaestroModel();
-        $modelTipoPermiso = new TipoPermisoModel();
-
-        // Obtener detalles del maestro
-        $maestro = $modelMaestro->find($idMaestro);
-
-        if (!$maestro) {
-            return redirect()->back()->withInput()->with('error', 'Maestro no encontrado.');
-        }
-
-        // Obtener nombre completo del maestro
-        $nombreMaestro = $maestro['nombre_completo'];
-
-        // Obtener detalles del tipo de permiso
-        $tipoPermiso = $modelTipoPermiso->find($idTipoPermiso);
-
-        if (!$tipoPermiso) {
+            $logger->error('Tipo de permiso no encontrado: ID = ' . $idTipoPermiso);
             return redirect()->back()->withInput()->with('error', 'Tipo de permiso no encontrado.');
         }
-
-        // Obtener los registros de saldos docentes filtrados
-        $saldosDocentes = $modelSaldosDocentes
-            ->where('idDocente', $idMaestro)
-            ->where('idDetallePermiso', $idTipoPermiso)
-            ->where('fecha_inicio >=', $fechaInicio)
-            ->where('fecha_fin <=', $fechaFin)
-            ->findAll();
-
-                // Configurar los datos en la sesión flash
-            $session = session();
-            $session->setFlashdata('report_data', [
-                'nombre_maestro' => $nombreMaestro,
-                'tipo_permiso' => $tipoPermiso['nombre_tipo_permiso'],
+    
+        $cantidadDias = $tipoPermiso['cantidad_dias'] ?? 0;
+    
+        // Recuperar saldo disponible
+        $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
+        $detalleSaldosTipoPermiso = $modelDetalleSaldosTipoPermiso->where('idTipoPermiso', $idTipoPermiso)
+                                                                 ->where('anio', date('Y'))
+                                                                 ->first();
+    
+        if (!$detalleSaldosTipoPermiso) {
+            $logger->info('Saldo no encontrado. Se creará un nuevo registro.');
+            $saldoInicial = $cantidadDias; // Usamos la cantidad de días del tipo de permiso como saldo inicial
+            $idDetallePermiso = $modelDetalleSaldosTipoPermiso->insert([
+                'anio' => date('Y'),
+                'idTipoPermiso' => $idTipoPermiso,
+                'saldo' => $saldoInicial
+            ], true);
+    
+            // Verificar si se obtuvo el idDetallePermiso
+            if (!$idDetallePermiso) {
+                $logger->error('Error al crear registro en detalleSaldosTipoPermiso.');
+                return redirect()->back()->withInput()->with('error', 'Error al crear el registro de saldo.');
+            }
+    
+            $detalleSaldosTipoPermiso = [
+                'idDetallePermiso' => $idDetallePermiso,
+                'saldo' => $saldoInicial
+            ];
+        }
+    
+        $saldoDisponible = $cantidadDias - ($detalleSaldosTipoPermiso['saldo'] ?? 0);
+    
+        // Verificación del saldo disponible
+        if ($diasOcupados > $saldoDisponible) {
+            $logger->error('Saldo insuficiente: tipoPermiso = ' . $idTipoPermiso . ', saldoDisponible = ' . $saldoDisponible . ', diasOcupados = ' . $diasOcupados);
+            return redirect()->back()->withInput()->with('error', 'No hay suficientes días disponibles para este tipo de permiso.');
+        }
+    
+        // Iniciar transacción
+        $db = \Config\Database::connect();
+        $db->transBegin();
+    
+        try {
+            // Actualizamos el saldo
+            $nuevoSaldo = $saldoDisponible - $diasOcupados;
+            if (isset($detalleSaldosTipoPermiso['idDetallePermiso'])) {
+                $modelDetalleSaldosTipoPermiso->update($detalleSaldosTipoPermiso['idDetallePermiso'], ['saldo' => $nuevoSaldo]);
+            } else {
+                throw new \Exception('idDetallePermiso no encontrado en detalleSaldosTipoPermiso.');
+            }
+    
+            // Insertamos el nuevo permiso.
+            $modelHistorialPermisos = new HistorialPermisosModel();
+            $modelHistorialPermisos->insert([
+                'idDocente' => $idDocente,
+                'idTipoPermiso' => $idTipoPermiso,
                 'fecha_inicio' => $fechaInicio,
                 'fecha_fin' => $fechaFin,
-                'saldos_docentes' => $saldosDocentes
+                'dias_ocupados' => $diasOcupados,
+                'horas_ocupadas' => $horasOcupadas !== '' ? $horasOcupadas : 0,
+                'fecha_creacion' => date('Y-m-d H:i:s')
             ]);
-            $session->remove('report_data');
-            // Redirigir a la vista de reporte
-            return redirect()->to(site_url('reportes/permisos_magisteriales_reporte'));
-        }
+    
+            // Actualizar saldos_docentes.
+            $modelSaldosDocentes = new SaldosDocentesModel();
+            $existingSaldo = $modelSaldosDocentes->where('idDocente', $idDocente)->first();
             
+            if ($existingSaldo) {
+                $idSaldoDocente = $existingSaldo['idSaldoDocente'] ?? null;
+                if ($idSaldoDocente) {
+                    $nuevoSaldoDocente = $existingSaldo['saldo'] - $diasOcupados;
+                    $modelSaldosDocentes->update($idSaldoDocente, ['saldo' => $nuevoSaldoDocente]);
+                } else {
+                    throw new \Exception('ID de saldo de docente no encontrado.');
+                }
+            } else {
+                // Insertar un nuevo registro en caso de que no exista
+                $modelSaldosDocentes->insert([
+                    'idDocente' => $idDocente,
+                    'saldo' => $diasOcupados
+                ]);
+            }
+            // Confirmar transacción
+            $db->transCommit();
+            return redirect()->to('/permisos')->with('success', 'Permiso creado exitosamente.');
+        } catch (\Exception $e) {
+            $db->transRollback();
+            $logger->error('Error al crear el permiso: ' . $e->getMessage());
+            return redirect()->back()->withInput()->with('error', 'Error al crear el permiso.');
+        }
+    }    
+
+    private function calcularDiasEntreFechas($fechaInicio, $fechaFin)
+    {
+        $inicio = new \DateTime($fechaInicio);
+        $fin = new \DateTime($fechaFin);
+        $intervalo = $inicio->diff($fin);
+        return $intervalo->days + 1; // Sumamos 1 para incluir el último día
+    }
+
+    public function index()
+    {
+        $request = service('request');
+        $filters = [
+            'nip' => $request->getVar('nip'),
+            'nombre_completo' => $request->getVar('nombre_completo'),
+            'fecha_solicitud' => $request->getVar('fecha_solicitud')
+        ];
+    
+        $modelHistorialPermisos = new HistorialPermisosModel();
+        $modelTipoPermiso = new TipoPermisoModel();
+        $modelDocente = new MaestroModel();
+    
+        $perPage = 10;
+    
+        if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_solicitud'])) {
+            $historial_permisos = $this->filterHistorialPermisos($modelHistorialPermisos, $filters);
+        } else {
+            $historial_permisos = $modelHistorialPermisos->paginate($perPage, 'group1');
+        }
+    
+        $pager = $modelHistorialPermisos->pager;
+        $tipos_permisos = $modelTipoPermiso->findAll();
+    
+        $data['historial_permisos'] = [];
+        $data['tipos_permisos'] = $tipos_permisos;
+    
+        foreach ($historial_permisos as $permiso) {
+            $docente = $modelDocente->find($permiso['idDocente'] ?? null);
+    
+            if ($docente) {
+                $nombre_completo = $docente['nombre_completo'];
+                $nip = $docente['nip'];
+                $fecha_creacion = $permiso['fecha_creacion'];
+    
+                $data['historial_permisos'][] = [
+                    'idHistorialPermiso' => $permiso['idHistorialPermiso'],
+                    'idDocente' => $permiso['idDocente'],
+                    'nombre_completo' => $nombre_completo,
+                    'nip' => $nip,
+                    'fecha_inicio' => $permiso['fecha_inicio'],
+                    'fecha_fin' => $permiso['fecha_fin'],
+                    'dias_ocupados' => $permiso['dias_ocupados'],
+                    'horas_ocupadas' => $permiso['horas_ocupadas'],
+                    'fecha_creacion' => $fecha_creacion,
+                    'detalle_saldos_permiso' => $this->getDetalleSaldosPermiso($permiso['idHistorialPermiso']),
+                    'tipo_permiso' => $this->getTipoPermiso($permiso['idTipoPermiso'], $tipos_permisos)
+                ];
+            }
+        }
+        
+        $data['pager'] = $pager;
+    
+        return view('Permisos/index', $data);
+    }
+    
+
+    public function getDetalleSaldosPermiso($idHistorialPermiso)
+{
+    $modelHistorialPermisos = new HistorialPermisosModel();
+    return $modelHistorialPermisos->select('historial_permisos.fecha_inicio, historial_permisos.fecha_fin, historial_permisos.dias_ocupados, historial_permisos.horas_ocupadas, tipo_permisos.nombre AS nombreTipoPermiso, tipo_permisos.cantidad_dias')
+                                  ->join('tipo_permisos', 'historial_permisos.idTipoPermiso = tipo_permisos.idTipoPermiso')
+                                  ->where('idHistorialPermiso', $idHistorialPermiso)
+                                  ->findAll();
 }
-?>
+
+
+private function filterHistorialPermisos($modelHistorialPermisos, $filters)
+    {
+        $builder = $modelHistorialPermisos->builder();
+    
+        if (!empty($filters['nip'])) {
+            $builder->join('maestros', 'maestros.idMaestro = historial_permisos.idDocente')
+                    ->where('maestros.nip', $filters['nip']);
+        }
+    
+        if (!empty($filters['nombre_completo'])) {
+            $builder->join('maestros', 'maestros.idMaestro = historial_permisos.idDocente')
+                    ->where('maestros.nombre_completo LIKE', '%' . $filters['nombre_completo'] . '%');
+        }
+    
+        if (!empty($filters['fecha_solicitud'])) {
+            $builder->where('historial_permisos.fecha_creacion', $filters['fecha_solicitud']);
+        }
+    
+        return $builder->paginate(10, 'group1');
+    }
+   
+
+private function getTipoPermiso($idTipoPermiso, $tipos_permisos)
+{
+    foreach ($tipos_permisos as $tipo_permiso) {
+        if ($tipo_permiso['idTipoPermiso'] == $idTipoPermiso) {
+            return [
+                'nombre' => $tipo_permiso['nombre'],
+                'cantidad_dias' => $tipo_permiso['cantidad_dias']
+            ];
+        }
+    }
+    return [
+        'nombre' => 'Desconocido',
+        'cantidad_dias' => 0
+    ];
+}
+
+    public function details($id)
+    {
+        $modelHistorialPermisos = new HistorialPermisosModel();
+        $modelDocente = new MaestroModel();
+        $modelTipoPermiso = new TipoPermisoModel();
+
+        $permiso = $modelHistorialPermisos->find($id);
+
+        if (!$permiso) {
+            return redirect()->back()->with('error', 'Permiso no encontrado.');
+        }
+
+        $docente = $modelDocente->find($permiso['idDocente']);
+        $tipo_permiso = $modelTipoPermiso->find($permiso['idTipoPermiso']);
+
+        $data['permiso'] = $permiso;
+        $data['docente'] = $docente;
+        $data['tipo_permiso'] = $tipo_permiso;
+
+        return view('Permisos/details', $data);
+    }
+
+    public function delete($id)
+    {
+        $modelHistorialPermisos = new HistorialPermisosModel();
+        $permiso = $modelHistorialPermisos->find($id);
+
+        if ($permiso) {
+            $modelHistorialPermisos->delete($id);
+            return redirect()->to('/permiso_magisterial/index')->with('success', 'Permiso eliminado exitosamente.');
+        }
+
+        return redirect()->back()->with('error', 'No se pudo eliminar el permiso.');
+    }
+}

@@ -1,0 +1,252 @@
+INFO - 2024-08-02 04:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-02 04:19:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudPermisoModel.php(69): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(48): App\Models\SolicitudPermisoModel->createSolicitud(Array)
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-08-02 04:19:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:, :saldo_total_horas:, :fecha_inicio:, :fecha_fin:, :fecha_creacion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\SolicitudPermisoModel.php(69): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\PermisoMagisterial.php(48): App\Models\SolicitudPermisoModel->createSolicitud([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-02 04:19:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (\'29\', \'7\', 2, 0, \'2024-08-01\', \'2024-08-02\', \'2024-08-02 04:19:28\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (\'29\', \'7\', 2, 0, \'2024-08-01\', \'2024-08-02\', \'2024-08-02 04:19:28\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:, :saldo_total_horas:, :fecha_inicio:, :fecha_fin:, :fecha_creacion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\SolicitudPermisoModel.php(69): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\PermisoMagisterial.php(48): App\Models\SolicitudPermisoModel->createSolicitud([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-02 04:19:29 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (\'29\', \'7\', 2, 0, \'2024-08-01\', \'2024-08-02\', \'2024-08-02 04:19:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (\'29\', \'7\', 2, 0, \'2024-08-01\', \'2024-08-02\', \'2024-08-02 04:19:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (\'29\', \'7\', 2, 0, \'2024-08-01\', \'2024-08-02\', \'2024-08-02 04:19:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `saldos_docentes` (`idDocente`, `idDetallePermiso`, `saldo_total_dias`, `saldo_total_horas`, `fecha_inicio`, `fecha_fin`, `fecha_creacion`) VALUES (:idDocente:, :idDetallePermiso:, :saldo_total_dias:, :saldo_total_horas:, :fecha_inicio:, :fecha_fin:, :fecha_creacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\SolicitudPermisoModel.php(69): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\PermisoMagisterial.php(48): App\Models\SolicitudPermisoModel->createSolicitud([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-02 04:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-02 04:27:10 --> RuntimeException: El idDetallePermiso 7 no existe en la tabla detalle_saldos_tipopermiso.
+in APPPATH\Models\SolicitudPermisoModel.php on line 47.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(48): App\Models\SolicitudPermisoModel->createSolicitud([...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-02 04:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-02 04:27:44 --> RuntimeException: El idDetallePermiso 7 no existe en la tabla detalle_saldos_tipopermiso.
+in APPPATH\Models\SolicitudPermisoModel.php on line 47.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(48): App\Models\SolicitudPermisoModel->createSolicitud([...])
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-02 04:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-02 04:40:51 --> ErrorException: unlink(C:\laragon\www\prueba\SistemaControl\writable\debugbar/debugbar_1722482484.867932.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 80.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\laragon\\www\\prueba\\SistemaControl\\writable\\debugbar/debugbar_1722482484.867932.json): No such file or directory', 'C:\\laragon\\www\\prueba\\SistemaControl\\vendor\\codeigniter4\\framework\\system\\Debug\\Toolbar\\Collectors\\History.php', 80)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(80): unlink('C:\\laragon\\www\\prueba\\SistemaControl\\writable\\debugbar/debugbar_1722482484.867932.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(498): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1722573637.792668', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(475): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(154): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-02 04:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-02 04:45:55 --> Ingresando al método store() en PermisoMagisterial
+DEBUG - 2024-08-02 04:45:55 --> Datos recibidos: Array
+(
+    [idDocente] => 32
+    [idDetallePermiso] => 7
+    [fecha_inicio] => 2024-08-05
+    [fecha_fin] => 2024-08-06
+    [saldo_total_dias] => 0
+    [saldo_total_horas] => 0
+    [fecha_creacion] => 2024-08-02 04:45:55
+)
+
+ERROR - 2024-08-02 04:45:56 --> Error al crear la solicitud de permiso o saldo insuficiente
+INFO - 2024-08-02 04:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-02 04:50:48 --> Ingresando al método store() en PermisoMagisterial
+DEBUG - 2024-08-02 04:50:48 --> Datos recibidos: Array
+(
+    [idDocente] => 29
+    [idDetallePermiso] => 9
+    [fecha_inicio] => 2024-08-02
+    [fecha_fin] => 2024-08-03
+    [saldo_total_dias] => 0
+    [saldo_total_horas] => 0
+    [fecha_creacion] => 2024-08-02 04:50:48
+)
+
+ERROR - 2024-08-02 04:50:48 --> Detalle de permiso no encontrado: 9
+ERROR - 2024-08-02 04:50:48 --> Error al crear la solicitud de permiso o saldo insuficiente
+INFO - 2024-08-02 04:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 04:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-02 04:55:40 --> Ingresando al método store() en PermisoMagisterial
+DEBUG - 2024-08-02 04:55:40 --> Datos recibidos: Array
+(
+    [idDocente] => 31
+    [idDetallePermiso] => 7
+    [fecha_inicio] => 2024-08-02
+    [fecha_fin] => 2024-08-03
+    [saldo_total_dias] => 0
+    [saldo_total_horas] => 0
+    [fecha_creacion] => 2024-08-02 04:55:40
+)
+
+ERROR - 2024-08-02 04:55:41 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudPermisoModel.php(85): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(52): App\Models\SolicitudPermisoModel->createSolicitud(Array)
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-08-02 04:55:41 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`saldos_docentes`, CONSTRAINT `idDetallePermiso` FOREIGN KEY (`idDetallePermiso`) REFERENCES `detalle_saldos_tipopermiso` (`idDetallePermiso`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Models\SolicitudPermisoModel.php(89): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\PermisoMagisterial.php(52): App\Models\SolicitudPermisoModel->createSolicitud(Array)
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-08-02 04:55:41 --> Error al insertar solicitud: {"idDocente":"31","idDetallePermiso":"7","fecha_inicio":"2024-08-02","fecha_fin":"2024-08-03","saldo_total_dias":0,"saldo_total_horas":0,"fecha_creacion":"2024-08-02 04:55:40"}
+ERROR - 2024-08-02 04:55:41 --> Error al crear la solicitud de permiso o saldo insuficiente
+INFO - 2024-08-02 04:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 05:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 05:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 05:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-02 05:00:50 --> Ingresando al método store() en PermisoMagisterial
+DEBUG - 2024-08-02 05:00:50 --> Datos recibidos: Array
+(
+    [idDocente] => 29
+    [idDetallePermiso] => 9
+    [fecha_inicio] => 2024-08-02
+    [fecha_fin] => 2024-08-03
+    [saldo_total_dias] => 0
+    [saldo_total_horas] => 0
+    [fecha_creacion] => 2024-08-02 05:00:50
+)
+
+ERROR - 2024-08-02 05:00:51 --> Excepción en createSolicitud: Undefined array key "idTipoPermiso"
+ERROR - 2024-08-02 05:00:51 --> Error al crear la solicitud de permiso o saldo insuficiente
+INFO - 2024-08-02 05:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 15:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 15:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 15:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 15:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 15:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-02 17:51:35 --> ErrorException: Undefined variable $permisos
+in APPPATH\Views\permisos\index.php on line 20.
+ 1 APPPATH\Views\permisos\index.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $permisos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos\\index.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(143): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-02 17:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-02 17:55:12 --> ErrorException: Undefined variable $permisos
+in APPPATH\Views\permisos\index.php on line 20.
+ 1 APPPATH\Views\permisos\index.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $permisos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos\\index.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Permisos/index', [], true)
+ 5 APPPATH\Controllers\PermisoMagisterial.php(143): view('Permisos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-02 17:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 17:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 18:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 18:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 18:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 18:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-02 18:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

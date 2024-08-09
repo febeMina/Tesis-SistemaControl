@@ -1,0 +1,19 @@
+INFO - 2024-08-03 04:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-03 04:28:04 --> ErrorException: Undefined variable $fecha_inicio
+in APPPATH\Controllers\PermisoMagisterial.php on line 211.
+ 1 APPPATH\Controllers\PermisoMagisterial.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fecha_inicio', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 211)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-03 04:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-03 04:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

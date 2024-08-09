@@ -10,27 +10,24 @@ class SaldosDocentesModel extends Model
     protected $primaryKey = 'idSaldoDocentes';
     protected $allowedFields = [
         'idDocente', 
-        'idDetallePermiso', 
         'saldo_total_dias', 
-        'fecha_creacion', 
-        'saldo_total_horas', 
-        'fecha_inicio', 
-        'fecha_fin'
+        'saldo_total_horas',
+        'saldo'
     ];
 
     protected $useAutoIncrement = true;
-
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
-
     protected $useTimestamps = false;
-
     protected $validationRules = [
         'idDocente' => 'required',
-        'idDetallePermiso' => 'required',
         'saldo_total_dias' => 'required',
-        'fecha_creacion' => 'required|valid_date'
+        'saldo_total_horas' => 'required'
     ];
-
-    // Otras configuraciones...
+    
+    public function insertarSaldoDocente($data) {
+        $result = $this->db->table('saldos_docentes')->insert($data);
+        return $this->insert($data);
+    }
+    
 }
