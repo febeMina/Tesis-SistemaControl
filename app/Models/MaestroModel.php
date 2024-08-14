@@ -15,14 +15,24 @@ class MaestroModel extends Model
     protected $useSoftDeletes = false;
     protected $useTimestamps = false;
 
+    // Actualiza las reglas de validación para quitar la unicidad en nip y escalafon
     protected $validationRules = [
         'nombre_completo' => 'required',
-        'nip' => 'required',
-        'escalafon' => 'required',
+        'nip' => 'required', // Quitada la regla de unicidad
+        'escalafon' => 'required', // Quitada la regla de unicidad
         'fecha_ingreso' => 'required',
         'estado' => 'required',
         'tipo' => 'required',
-        'cargo' => 'permit_empty'
+        'cargo' => 'permit_empty',
+    ];
+
+    protected $validationMessages = [
+        'nip' => [
+            'required' => 'El NIP es obligatorio.',
+        ],
+        'escalafon' => [
+            'required' => 'El escalafón es obligatorio.',
+        ]
     ];
 
     public function __construct()
@@ -31,10 +41,11 @@ class MaestroModel extends Model
     }
 
     public function setInactive($id)
-    {
-        $data = ['estado' => 'Inactivo'];
-        return $this->update($id, $data);
-    }
+{
+    $data = ['estado' => 'Inactivo'];
+    return $this->update($id, $data);
+}
+
     
     public function filter($filters)
     {
@@ -62,17 +73,14 @@ class MaestroModel extends Model
         // Incluir siempre el estado en el filtro
         $builder->where('estado !=', 'Eliminado');
             
-        $query = $builder->get();
-        return $query->getResultArray();
-
         // Excluir los maestros inactivos si no se está filtrando por estado inactivo
         if (empty($filters['estado']) || $filters['estado'] !== 'Inactivo') {
             $builder->where('estado !=', 'Inactivo');
         }
     
-        // Retornar resultados
-        return $builder->get()->getResultArray();
-        
-        
+        $query = $builder->get();
+        return $query->getResultArray();
     }
+    
+    
 }

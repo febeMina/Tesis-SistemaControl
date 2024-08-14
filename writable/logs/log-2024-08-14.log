@@ -1,0 +1,524 @@
+DEBUG - 2024-08-14 01:06:07 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 01:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:06:45 --> Método update() llamado con ID: 46
+DEBUG - 2024-08-14 01:06:45 --> Docente actualizado exitosamente
+DEBUG - 2024-08-14 01:06:47 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:10:48 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 01:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:11:14 --> Método update() llamado con ID: 46
+ERROR - 2024-08-14 01:11:14 --> No se pudo actualizar el maestro con ID: 46
+INFO - 2024-08-14 01:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:22:00 --> Método update() llamado
+INFO - 2024-08-14 01:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:26:53 --> Método update() llamado
+DEBUG - 2024-08-14 01:28:24 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 01:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:28:54 --> Método store() llamado
+DEBUG - 2024-08-14 01:28:54 --> Datos del docente: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 01:28:55 --> Redirigiendo a la lista de maestros
+DEBUG - 2024-08-14 01:28:57 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 01:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:29:33 --> Método update() llamado
+DEBUG - 2024-08-14 01:36:08 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 01:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:36:27 --> Método update() llamado
+DEBUG - 2024-08-14 01:36:28 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+INFO - 2024-08-14 01:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:48:48 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:48:52 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 01:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 01:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:49:07 --> Método update() llamado
+DEBUG - 2024-08-14 01:49:07 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+INFO - 2024-08-14 01:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:52:35 --> Método update() llamado
+DEBUG - 2024-08-14 01:52:35 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+INFO - 2024-08-14 01:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 01:55:52 --> Método update() llamado
+DEBUG - 2024-08-14 01:55:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:16:21 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 02:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:16:26 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 02:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 02:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:16:40 --> Método update() llamado
+ERROR - 2024-08-14 02:16:40 --> Errores de validación: {"nip":"El NIP ya est\u00e1 registrado.","escalafon":"El Escalaf\u00f3n ya est\u00e1 registrado."}
+INFO - 2024-08-14 02:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:26:45 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 02:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:26:49 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 02:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 02:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:27:00 --> Método update() llamado
+DEBUG - 2024-08-14 02:27:00 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+INFO - 2024-08-14 02:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:32:30 --> Método update() llamado
+DEBUG - 2024-08-14 02:32:31 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+INFO - 2024-08-14 02:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 02:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:43:53 --> Método update() llamado
+DEBUG - 2024-08-14 02:43:53 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:46:57 --> Método update() llamado
+DEBUG - 2024-08-14 02:46:57 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+INFO - 2024-08-14 02:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:50:40 --> Método update() llamado
+DEBUG - 2024-08-14 02:50:40 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 02:50:40 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 02:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 02:55:08 --> Método update() llamado
+DEBUG - 2024-08-14 02:55:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 02:55:08 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:01:01 --> Método update() llamado
+DEBUG - 2024-08-14 03:01:01 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:01:01 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:06:52 --> Método update() llamado
+DEBUG - 2024-08-14 03:06:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:06:52 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:15:54 --> Método update() llamado
+DEBUG - 2024-08-14 03:15:56 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:15:56 --> No se realizaron cambios en la base de datos para el ID: 47
+DEBUG - 2024-08-14 03:20:51 --> Método update() llamado
+DEBUG - 2024-08-14 03:20:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:20:52 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:21:12 --> Método update() llamado
+DEBUG - 2024-08-14 03:21:13 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:21:13 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:25:08 --> Método update() llamado
+DEBUG - 2024-08-14 03:25:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:25:08 --> No se realizaron cambios en la base de datos para el ID: 47
+DEBUG - 2024-08-14 03:25:15 --> Método update() llamado
+DEBUG - 2024-08-14 03:25:15 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"910012","escalafon":"910012","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:25:24 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 03:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:26:00 --> Método update() llamado
+DEBUG - 2024-08-14 03:26:00 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:26:01 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:31:58 --> Método update() llamado
+DEBUG - 2024-08-14 03:31:59 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-08-14 03:31:59 --> No se realizaron cambios en la base de datos para el ID: 47
+DEBUG - 2024-08-14 03:32:08 --> Método update() llamado
+DEBUG - 2024-08-14 03:32:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:32:11 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:36:44 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 03:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:37:13 --> Método update() llamado
+DEBUG - 2024-08-14 03:37:13 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+ERROR - 2024-08-14 03:37:13 --> No se realizaron cambios en la base de datos para el ID: 47
+DEBUG - 2024-08-14 03:37:50 --> Método update() llamado
+DEBUG - 2024-08-14 03:37:50 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 03:37:52 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:41:47 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 03:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:42:04 --> Método update() llamado
+DEBUG - 2024-08-14 03:42:04 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+ERROR - 2024-08-14 03:42:04 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:46:14 --> Método update() llamado
+DEBUG - 2024-08-14 03:46:14 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+ERROR - 2024-08-14 03:46:14 --> No se realizaron cambios en la base de datos para el ID: 47
+INFO - 2024-08-14 03:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:49:06 --> Método update() llamado
+DEBUG - 2024-08-14 03:49:06 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 03:49:08 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 03:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:49:36 --> Método update() llamado
+DEBUG - 2024-08-14 03:49:36 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:49:39 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 03:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:50:30 --> Método store() llamado
+ERROR - 2024-08-14 03:50:30 --> Errores de validación: {"nip":"El NIP ya est\u00e1 registrado."}
+DEBUG - 2024-08-14 03:50:39 --> Método store() llamado
+DEBUG - 2024-08-14 03:50:40 --> Datos del docente: {"nombre_completo":"Trinidad Hernandez","nip":"01993","escalafon":"92923","fecha_ingreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null}
+DEBUG - 2024-08-14 03:50:41 --> Redirigiendo a la lista de maestros
+DEBUG - 2024-08-14 03:50:43 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:58:15 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 03:59:20 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 03:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:03:15 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:03:23 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:04:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:10:31 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:11:32 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:14:57 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:15:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:19:53 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:32:32 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:42:14 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:48:40 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:49:22 --> Filtros aplicados: {"nombre_completo":"","nip":"","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":"Docente"}
+INFO - 2024-08-14 04:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:49:30 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:49:39 --> Filtros aplicados: {"nombre_completo":"","nip":"223333","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":""}
+INFO - 2024-08-14 04:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:49:42 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:49:47 --> Filtros aplicados: {"nombre_completo":"Orlando","nip":"","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":""}
+INFO - 2024-08-14 04:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-14 04:49:50 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-14 04:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-14 04:56:45 --> mysqli_sql_exception: Duplicate entry '12322' for key 'datos_alumnos.NIE_UNIQUE' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(155): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Padres->update('18')
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-08-14 04:56:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '12322' for key 'datos_alumnos.NIE_UNIQUE'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Padres.php(155): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->update('18')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-14 04:56:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '12322' for key 'datos_alumnos.NIE_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Padres.php(155): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->update('18')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-14 04:56:48 --> [Caused by] mysqli_sql_exception: Duplicate entry '12322' for key 'datos_alumnos.NIE_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Padres.php(155): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->update('18')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-14 04:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 04:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-14 04:57:46 --> mysqli_sql_exception: Duplicate entry '0500505050' for key 'datos_responsable.DUI_UNIQUE' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `da...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `da...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `da...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `da...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Padres->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-08-14 04:57:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0500505050' for key 'datos_responsable.DUI_UNIQUE'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (:nombreCompleto:, :Genero:, :DUI:, :telefono:, :estado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Padres.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-14 04:57:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0500505050' for key 'datos_responsable.DUI_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (\'Juan lopez\', \'M\', \'0500505050\', \'78877221\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (\'Juan lopez\', \'M\', \'0500505050\', \'78877221\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (:nombreCompleto:, :Genero:, :DUI:, :telefono:, :estado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Padres.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->store()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-14 04:57:46 --> [Caused by] mysqli_sql_exception: Duplicate entry '0500505050' for key 'datos_responsable.DUI_UNIQUE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (\'Juan lopez\', \'M\', \'0500505050\', \'78877221\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (\'Juan lopez\', \'M\', \'0500505050\', \'78877221\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (\'Juan lopez\', \'M\', \'0500505050\', \'78877221\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_responsable` (`nombreCompleto`, `Genero`, `DUI`, `telefono`, `estado`) VALUES (:nombreCompleto:, :Genero:, :DUI:, :telefono:, :estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Padres.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->store()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-14 05:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-14 05:34:39 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`responsable_alumno`, CONSTRAINT `responsable_alumno_ibfk_1` FOREIGN KEY (`idDatosResponsable`) REFERENCES `datos_responsable` (`idDatosResponsable`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `da...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `da...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `da...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `da...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(453): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1117): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(229): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Padres->delete('21')
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-14 05:34:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`responsable_alumno`, CONSTRAINT `responsable_alumno_ibfk_1` FOREIGN KEY (`idDatosResponsable`) REFERENCES `datos_responsable` (`idDatosResponsable`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN :idDatosResponsable:', [...], false)
+ 2 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\Padres.php(229): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->delete('21')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-14 05:34:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`responsable_alumno`, CONSTRAINT `responsable_alumno_ibfk_1` FOREIGN KEY (`idDatosResponsable`) REFERENCES `datos_responsable` (`idDatosResponsable`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN (\'21\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN (\'21\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN :idDatosResponsable:', [...], false)
+ 4 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\Padres.php(229): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->delete('21')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-14 05:34:39 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`responsable_alumno`, CONSTRAINT `responsable_alumno_ibfk_1` FOREIGN KEY (`idDatosResponsable`) REFERENCES `datos_responsable` (`idDatosResponsable`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN (\'21\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN (\'21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN (\'21\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `datos_responsable`
+WHERE `idDatosResponsable` IN :idDatosResponsable:', [...], false)
+ 5 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1117): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\Padres.php(229): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->delete('21')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-14 05:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:36:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 05:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:43:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-14 06:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

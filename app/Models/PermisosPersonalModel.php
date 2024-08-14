@@ -81,6 +81,69 @@ class PermisosPersonalModel extends Model
         
         return $builder->get()->getResultArray();
     }
+    
+    public function getReportePermisos($fechaInicio = null, $fechaFin = null)
+{
+    $builder = $this->db->table('permisos_personal');
+    $builder->select('
+        permisos_personal.*, 
+        docente.nip, 
+        docente.nombre_completo, 
+        saldos_personal.saldoActualDias, 
+        saldos_personal.saldoActualHoras, 
+        tipo_permisos.nombre as tipoPermisoNombre, 
+        tipo_permisos.cantidad_dias,
+        permisos_personal.fechaInicio,
+        permisos_personal.fechaFin
+    ');
+    $builder->join('saldos_personal', 'saldos_personal.idSaldoPersonal = permisos_personal.idSaldoPersonal');
+    $builder->join('docente', 'docente.idDocente = saldos_personal.idDocente');
+    $builder->join('tipo_permisos', 'tipo_permisos.idTipoPermiso = saldos_personal.idTipoPermiso');
+    $builder->orderBy('permisos_personal.fechaCreacion', 'DESC'); // Ordenar por fecha de creación
+    
+    // Filtrar por fechaInicio si se proporciona
+    if ($fechaInicio) {
+        $builder->where('fechaInicio >=', $fechaInicio);
+    }
+
+    // Filtrar por fechaFin si se proporciona
+    if ($fechaFin) {
+        $builder->where('fechaFin <=', $fechaFin);
+    }
+
+    // Obtener los resultados
+    return $builder->get()->getResultArray();
+}
+
+
+    
+    public function getPermisosReporte( $fechaInicio = null, $fechaFin = null)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('permisos_personal.*, maestros.nombre_completo, tipo_permisos.nombre as tipoPermisoNombre, saldos_personal.saldoActualDias, saldos_personal.saldoActualHoras, saldos_personal.saldoHistorialDias, saldos_personal.saldoHistorialHoras');
+        $builder->join('maestros', 'maestros.idMaestro = permisos_personal.idMaestro');
+        $builder->join('tipo_permisos', 'tipo_permisos.idTipoPermiso = permisos_personal.idTipoPermiso');
+        $builder->join('saldos_personal', 'saldos_personal.idSaldoPersonal = permisos_personal.idSaldoPersonal');
+    
+        if ($nombreCompleto) {
+            $builder->like('maestros.nombre_completo', $nombreCompleto);
+        }
+        if ($nip) {
+            $builder->where('maestros.nip', $nip);
+        }
+        if ($fechaInicio) {
+            $builder->where('permisos_personal.fechaInicio >=', $fechaInicio);
+        }
+        if ($fechaFin) {
+            $builder->where('permisos_personal.fechaFin <=', $fechaFin);
+        }
+    
+        return $builder->get()->getResultArray();
+    }
+    
+
+    
+    
 
     public function getPermisosPorDocente($idDocente)
     {
@@ -121,5 +184,10 @@ class PermisosPersonalModel extends Model
         $this->update($idSaldoPersonal, ['saldoActualHoras' => $nuevoSaldo]);
     }
 }
+public function getTipoPermisos()
+{
+    return $this->db->table('tipo_permisos')->get()->getResultArray();
+}
+
 
 }

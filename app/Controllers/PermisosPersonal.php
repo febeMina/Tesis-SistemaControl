@@ -178,4 +178,63 @@ class PermisosPersonal extends BaseController
                                                ->with('nuevosSaldos', $result);
 }
 
+
+public function reporte()
+{
+    $perPage = 10;
+    $currentPage = $this->request->getVar('page') ? (int)$this->request->getVar('page') : 1;
+
+    // Obtener parámetros de filtrado
+    $fechaInicio = $this->request->getGet('fecha_inicio');
+    $fechaFin = $this->request->getGet('fecha_fin');
+
+    // Obtener permisos filtrados
+    $permisos = $this->permisosPersonalModel->getReportePermisos($fechaInicio, $fechaFin);
+
+    $data = [];
+    foreach ($permisos as $permiso) {
+        if (!isset($permiso['fechaInicio']) || !isset($permiso['fechaFin'])) {
+            log_message('error', 'La clave "fechaInicio" o "fechaFin" no está presente en el array de permisos.');
+            continue;
+        }
+
+        $tipoPermisoNombre = $permiso['tipoPermisoNombre'];
+        $diasSolicitados = $this->permisosPersonalModel->calcularDiasEntreFechas($permiso['fechaInicio'], $permiso['fechaFin']);
+        $horasSolicitadas = $permiso['horasSolicitadas'];
+
+        $data[] = [
+            'nip' => $permiso['nip'],
+            'nombre_completo' => $permiso['nombre_completo'],
+            'tipoPermisoNombre' => $tipoPermisoNombre,
+            'cantidad_dias' => $permiso['cantidad_dias'],
+            'fechaInicio' => $permiso['fechaInicio'],
+            'fechaFin' => $permiso['fechaFin'],
+            'horasSolicitadas' => $horasSolicitadas,
+            'saldoHistorialHoras' => $permiso['saldoHistorialHoras'], 
+            'saldoHistorialDias' => $permiso['saldoHistorialDias'],   
+            'saldoActualDias' => $permiso['saldoActualDias'],
+            'saldoActualHoras' => $permiso['saldoActualHoras'],
+            'fechaCreacion' => $permiso['fechaCreacion']
+        ];
+    }
+
+    // Calcula la paginación manualmente
+    $totalRows = count($data);
+    $dataPaginated = array_slice($data, ($currentPage - 1) * $perPage, $perPage);
+
+    // Crea las páginas
+    $pager = \Config\Services::pager();
+    $pagerLinks = $pager->makeLinks($currentPage, $perPage, $totalRows, 'bootstrap_pagination');
+
+    return view('reportes/permisos_reporte', [
+        'data' => $dataPaginated,
+        'pager' => $pagerLinks, // Asegúrate de que 'pager' reciba los links generados
+        'filters' => [
+            'fecha_inicio' => $fechaInicio,
+            'fecha_fin' => $fechaFin,
+        ],
+    ]);
+}
+
+
 }

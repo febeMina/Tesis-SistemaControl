@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
+class ComposerStaticInit96a2ef1bdabf3b4f379e9854a6d62f40
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -95,17 +95,13 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\API\\ResponseTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/API/ResponseTrait.php',
         'CodeIgniter\\Autoloader\\Autoloader' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/Autoloader.php',
         'CodeIgniter\\Autoloader\\FileLocator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/FileLocator.php',
-        'CodeIgniter\\Autoloader\\FileLocatorCached' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/FileLocatorCached.php',
-        'CodeIgniter\\Autoloader\\FileLocatorInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/FileLocatorInterface.php',
         'CodeIgniter\\BaseModel' => __DIR__ . '/..' . '/codeigniter4/framework/system/BaseModel.php',
-        'CodeIgniter\\Boot' => __DIR__ . '/..' . '/codeigniter4/framework/system/Boot.php',
         'CodeIgniter\\CLI\\BaseCommand' => __DIR__ . '/..' . '/codeigniter4/framework/system/CLI/BaseCommand.php',
         'CodeIgniter\\CLI\\CLI' => __DIR__ . '/..' . '/codeigniter4/framework/system/CLI/CLI.php',
         'CodeIgniter\\CLI\\Commands' => __DIR__ . '/..' . '/codeigniter4/framework/system/CLI/Commands.php',
         'CodeIgniter\\CLI\\Console' => __DIR__ . '/..' . '/codeigniter4/framework/system/CLI/Console.php',
         'CodeIgniter\\CLI\\Exceptions\\CLIException' => __DIR__ . '/..' . '/codeigniter4/framework/system/CLI/Exceptions/CLIException.php',
         'CodeIgniter\\CLI\\GeneratorTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/CLI/GeneratorTrait.php',
-        'CodeIgniter\\CLI\\InputOutput' => __DIR__ . '/..' . '/codeigniter4/framework/system/CLI/InputOutput.php',
         'CodeIgniter\\Cache\\CacheFactory' => __DIR__ . '/..' . '/codeigniter4/framework/system/Cache/CacheFactory.php',
         'CodeIgniter\\Cache\\CacheInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/Cache/CacheInterface.php',
         'CodeIgniter\\Cache\\Exceptions\\CacheException' => __DIR__ . '/..' . '/codeigniter4/framework/system/Cache/Exceptions/CacheException.php',
@@ -143,20 +139,15 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\Commands\\Generators\\ScaffoldGenerator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Generators/ScaffoldGenerator.php',
         'CodeIgniter\\Commands\\Generators\\SeederGenerator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Generators/SeederGenerator.php',
         'CodeIgniter\\Commands\\Generators\\SessionMigrationGenerator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Generators/SessionMigrationGenerator.php',
-        'CodeIgniter\\Commands\\Generators\\TestGenerator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Generators/TestGenerator.php',
         'CodeIgniter\\Commands\\Generators\\ValidationGenerator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Generators/ValidationGenerator.php',
         'CodeIgniter\\Commands\\Help' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Help.php',
         'CodeIgniter\\Commands\\Housekeeping\\ClearDebugbar' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Housekeeping/ClearDebugbar.php',
         'CodeIgniter\\Commands\\Housekeeping\\ClearLogs' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Housekeeping/ClearLogs.php',
         'CodeIgniter\\Commands\\ListCommands' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/ListCommands.php',
         'CodeIgniter\\Commands\\Server\\Serve' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Server/Serve.php',
-        'CodeIgniter\\Commands\\Translation\\LocalizationFinder' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Translation/LocalizationFinder.php',
-        'CodeIgniter\\Commands\\Utilities\\ConfigCheck' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/ConfigCheck.php',
         'CodeIgniter\\Commands\\Utilities\\Environment' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/Environment.php',
         'CodeIgniter\\Commands\\Utilities\\FilterCheck' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/FilterCheck.php',
         'CodeIgniter\\Commands\\Utilities\\Namespaces' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/Namespaces.php',
-        'CodeIgniter\\Commands\\Utilities\\Optimize' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/Optimize.php',
-        'CodeIgniter\\Commands\\Utilities\\PhpIniCheck' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/PhpIniCheck.php',
         'CodeIgniter\\Commands\\Utilities\\Publish' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/Publish.php',
         'CodeIgniter\\Commands\\Utilities\\Routes' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/Routes.php',
         'CodeIgniter\\Commands\\Utilities\\Routes\\AutoRouteCollector' => __DIR__ . '/..' . '/codeigniter4/framework/system/Commands/Utilities/Routes/AutoRouteCollector.php',
@@ -175,7 +166,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\Config\\DotEnv' => __DIR__ . '/..' . '/codeigniter4/framework/system/Config/DotEnv.php',
         'CodeIgniter\\Config\\Factories' => __DIR__ . '/..' . '/codeigniter4/framework/system/Config/Factories.php',
         'CodeIgniter\\Config\\Factory' => __DIR__ . '/..' . '/codeigniter4/framework/system/Config/Factory.php',
-        'CodeIgniter\\Config\\Filters' => __DIR__ . '/..' . '/codeigniter4/framework/system/Config/Filters.php',
         'CodeIgniter\\Config\\ForeignCharacters' => __DIR__ . '/..' . '/codeigniter4/framework/system/Config/ForeignCharacters.php',
         'CodeIgniter\\Config\\Publisher' => __DIR__ . '/..' . '/codeigniter4/framework/system/Config/Publisher.php',
         'CodeIgniter\\Config\\Routing' => __DIR__ . '/..' . '/codeigniter4/framework/system/Config/Routing.php',
@@ -187,21 +177,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\Cookie\\CookieInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/Cookie/CookieInterface.php',
         'CodeIgniter\\Cookie\\CookieStore' => __DIR__ . '/..' . '/codeigniter4/framework/system/Cookie/CookieStore.php',
         'CodeIgniter\\Cookie\\Exceptions\\CookieException' => __DIR__ . '/..' . '/codeigniter4/framework/system/Cookie/Exceptions/CookieException.php',
-        'CodeIgniter\\DataCaster\\Cast\\ArrayCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/ArrayCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\BaseCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/BaseCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\BooleanCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/BooleanCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\CSVCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/CSVCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\CastInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/CastInterface.php',
-        'CodeIgniter\\DataCaster\\Cast\\DatetimeCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/DatetimeCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\FloatCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/FloatCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\IntBoolCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/IntBoolCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\IntegerCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/IntegerCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\JsonCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/JsonCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\TimestampCast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/TimestampCast.php',
-        'CodeIgniter\\DataCaster\\Cast\\URICast' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Cast/URICast.php',
-        'CodeIgniter\\DataCaster\\DataCaster' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/DataCaster.php',
-        'CodeIgniter\\DataCaster\\Exceptions\\CastException' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataCaster/Exceptions/CastException.php',
-        'CodeIgniter\\DataConverter\\DataConverter' => __DIR__ . '/..' . '/codeigniter4/framework/system/DataConverter/DataConverter.php',
         'CodeIgniter\\Database\\BaseBuilder' => __DIR__ . '/..' . '/codeigniter4/framework/system/Database/BaseBuilder.php',
         'CodeIgniter\\Database\\BaseConnection' => __DIR__ . '/..' . '/codeigniter4/framework/system/Database/BaseConnection.php',
         'CodeIgniter\\Database\\BasePreparedQuery' => __DIR__ . '/..' . '/codeigniter4/framework/system/Database/BasePreparedQuery.php',
@@ -315,16 +290,12 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\Files\\File' => __DIR__ . '/..' . '/codeigniter4/framework/system/Files/File.php',
         'CodeIgniter\\Files\\FileCollection' => __DIR__ . '/..' . '/codeigniter4/framework/system/Files/FileCollection.php',
         'CodeIgniter\\Filters\\CSRF' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/CSRF.php',
-        'CodeIgniter\\Filters\\Cors' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/Cors.php',
         'CodeIgniter\\Filters\\DebugToolbar' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/DebugToolbar.php',
         'CodeIgniter\\Filters\\Exceptions\\FilterException' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/Exceptions/FilterException.php',
         'CodeIgniter\\Filters\\FilterInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/FilterInterface.php',
         'CodeIgniter\\Filters\\Filters' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/Filters.php',
-        'CodeIgniter\\Filters\\ForceHTTPS' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/ForceHTTPS.php',
         'CodeIgniter\\Filters\\Honeypot' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/Honeypot.php',
         'CodeIgniter\\Filters\\InvalidChars' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/InvalidChars.php',
-        'CodeIgniter\\Filters\\PageCache' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/PageCache.php',
-        'CodeIgniter\\Filters\\PerformanceMetrics' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/PerformanceMetrics.php',
         'CodeIgniter\\Filters\\SecureHeaders' => __DIR__ . '/..' . '/codeigniter4/framework/system/Filters/SecureHeaders.php',
         'CodeIgniter\\Format\\Exceptions\\FormatException' => __DIR__ . '/..' . '/codeigniter4/framework/system/Format/Exceptions/FormatException.php',
         'CodeIgniter\\Format\\Format' => __DIR__ . '/..' . '/codeigniter4/framework/system/Format/Format.php',
@@ -334,9 +305,7 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\HTTP\\CLIRequest' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/CLIRequest.php',
         'CodeIgniter\\HTTP\\CURLRequest' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/CURLRequest.php',
         'CodeIgniter\\HTTP\\ContentSecurityPolicy' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/ContentSecurityPolicy.php',
-        'CodeIgniter\\HTTP\\Cors' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Cors.php',
         'CodeIgniter\\HTTP\\DownloadResponse' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/DownloadResponse.php',
-        'CodeIgniter\\HTTP\\Exceptions\\BadRequestException' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Exceptions/BadRequestException.php',
         'CodeIgniter\\HTTP\\Exceptions\\HTTPException' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Exceptions/HTTPException.php',
         'CodeIgniter\\HTTP\\Exceptions\\RedirectException' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Exceptions/RedirectException.php',
         'CodeIgniter\\HTTP\\Files\\FileCollection' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Files/FileCollection.php',
@@ -347,7 +316,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\HTTP\\Message' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Message.php',
         'CodeIgniter\\HTTP\\MessageInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/MessageInterface.php',
         'CodeIgniter\\HTTP\\MessageTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/MessageTrait.php',
-        'CodeIgniter\\HTTP\\Method' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Method.php',
         'CodeIgniter\\HTTP\\Negotiate' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Negotiate.php',
         'CodeIgniter\\HTTP\\OutgoingRequest' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/OutgoingRequest.php',
         'CodeIgniter\\HTTP\\OutgoingRequestInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/OutgoingRequestInterface.php',
@@ -363,7 +331,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\HTTP\\SiteURIFactory' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/SiteURIFactory.php',
         'CodeIgniter\\HTTP\\URI' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/URI.php',
         'CodeIgniter\\HTTP\\UserAgent' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/UserAgent.php',
-        'CodeIgniter\\Helpers\\Array\\ArrayHelper' => __DIR__ . '/..' . '/codeigniter4/framework/system/Helpers/Array/ArrayHelper.php',
         'CodeIgniter\\Honeypot\\Exceptions\\HoneypotException' => __DIR__ . '/..' . '/codeigniter4/framework/system/Honeypot/Exceptions/HoneypotException.php',
         'CodeIgniter\\Honeypot\\Honeypot' => __DIR__ . '/..' . '/codeigniter4/framework/system/Honeypot/Honeypot.php',
         'CodeIgniter\\HotReloader\\DirectoryHasher' => __DIR__ . '/..' . '/codeigniter4/framework/system/HotReloader/DirectoryHasher.php',
@@ -411,7 +378,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\Router\\RouteCollectionInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/Router/RouteCollectionInterface.php',
         'CodeIgniter\\Router\\Router' => __DIR__ . '/..' . '/codeigniter4/framework/system/Router/Router.php',
         'CodeIgniter\\Router\\RouterInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/Router/RouterInterface.php',
-        'CodeIgniter\\Security\\CheckPhpIni' => __DIR__ . '/..' . '/codeigniter4/framework/system/Security/CheckPhpIni.php',
         'CodeIgniter\\Security\\Exceptions\\SecurityException' => __DIR__ . '/..' . '/codeigniter4/framework/system/Security/Exceptions/SecurityException.php',
         'CodeIgniter\\Security\\Security' => __DIR__ . '/..' . '/codeigniter4/framework/system/Security/Security.php',
         'CodeIgniter\\Security\\SecurityInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/Security/SecurityInterface.php',
@@ -442,7 +408,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\Test\\FeatureTestTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/FeatureTestTrait.php',
         'CodeIgniter\\Test\\FilterTestTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/FilterTestTrait.php',
         'CodeIgniter\\Test\\Filters\\CITestStreamFilter' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Filters/CITestStreamFilter.php',
-        'CodeIgniter\\Test\\IniTestTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/IniTestTrait.php',
         'CodeIgniter\\Test\\Interfaces\\FabricatorModel' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Interfaces/FabricatorModel.php',
         'CodeIgniter\\Test\\Mock\\MockAppConfig' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockAppConfig.php',
         'CodeIgniter\\Test\\Mock\\MockAutoload' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockAutoload.php',
@@ -456,7 +421,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'CodeIgniter\\Test\\Mock\\MockEvents' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockEvents.php',
         'CodeIgniter\\Test\\Mock\\MockFileLogger' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockFileLogger.php',
         'CodeIgniter\\Test\\Mock\\MockIncomingRequest' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockIncomingRequest.php',
-        'CodeIgniter\\Test\\Mock\\MockInputOutput' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockInputOutput.php',
         'CodeIgniter\\Test\\Mock\\MockLanguage' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockLanguage.php',
         'CodeIgniter\\Test\\Mock\\MockLogger' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockLogger.php',
         'CodeIgniter\\Test\\Mock\\MockQuery' => __DIR__ . '/..' . '/codeigniter4/framework/system/Test/Mock/MockQuery.php',
@@ -1433,7 +1397,6 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
         'PharIo\\Manifest\\ManifestLoader' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestLoader.php',
         'PharIo\\Manifest\\ManifestLoaderException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/ManifestLoaderException.php',
         'PharIo\\Manifest\\ManifestSerializer' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestSerializer.php',
-        'PharIo\\Manifest\\NoEmailAddressException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/NoEmailAddressException.php',
         'PharIo\\Manifest\\PhpElement' => __DIR__ . '/..' . '/phar-io/manifest/src/xml/PhpElement.php',
         'PharIo\\Manifest\\PhpExtensionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpExtensionRequirement.php',
         'PharIo\\Manifest\\PhpVersionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpVersionRequirement.php',
@@ -1964,10 +1927,10 @@ class ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitd2b43001f1fdf6c321cf5b64dba72714::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit96a2ef1bdabf3b4f379e9854a6d62f40::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit96a2ef1bdabf3b4f379e9854a6d62f40::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit96a2ef1bdabf3b4f379e9854a6d62f40::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit96a2ef1bdabf3b4f379e9854a6d62f40::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -43,7 +43,7 @@ class ErrorlogHandler extends BaseHandler
     /**
      * Constructor.
      *
-     * @param list<mixed> $config
+     * @param mixed[] $config
      */
     public function __construct(array $config = [])
     {

@@ -7,11 +7,32 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white">
-                    <h3 class="text-center">Nuevo Personal magisterial</h3>
+                    <h3 class="text-center">Nuevo Personal Magisterial</h3>
                 </div>
                 <div class="card-body">
+
                     <!-- Mensaje de éxito -->
-                    <div id="successMessage"></div>
+                    <?php if(session()->has('success')): ?>
+                        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                            <?= session('success') ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <!-- Mensaje de error -->
+                    <?php if(session()->has('error')): ?>
+                        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                            <?= session('error') ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <div id="errorMessage"></div>
+                    
                     <form id="createForm" action="<?= site_url('maestros/store') ?>" method="post">
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
@@ -44,13 +65,13 @@
                             </select>
                         </div>
                         <div class="form-group" id="rol-group" style="display: none;">
-                            <label for="rol" style="color: #000;"><i class="fas fa-briefcase"></i> Cargo</label>
-                            <select class="form-control" id="rol" name="rol">
-                                <option value="Director">Director</option>
-                                <option value="Subdirector">Subdirector</option>
-                                <option value="Secretaria">Secretaria</option>
-                                <option value="Contador">Contador</option>
-                                <option value="Otro">Otro</option>
+                            <label for="cargo" style="color: #000;"><i class="fas fa-briefcase"></i> Cargo</label>
+                            <select class="form-control" id="cargo" name="cargo">
+                                <?php foreach ($cargos as $key => $value): ?>
+                                    <option value="<?= esc($key); ?>">
+                                        <?= esc($value); ?>
+                                    </option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
 
@@ -76,7 +97,7 @@ $(document).ready(function() {
             $('#rol-group').show();
         } else {
             $('#rol-group').hide();
-            $('#rol').val(''); // Limpiar el valor de rol si se oculta
+            $('#cargo').val(''); // Limpiar el valor de cargo si se oculta
         }
     });
 
@@ -87,11 +108,9 @@ $(document).ready(function() {
             method: 'POST',
             data: $(this).serialize(),
             success: function(response) {
-                console.log(response); // Verificar la respuesta en la consola
-
                 if (response.success) {
                     var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                    alert += 'Maestro creado con éxito.';
+                    alert += response.message;
                     alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
                     alert += '<span aria-hidden="true">&times;</span>';
                     alert += '</button>';
@@ -102,11 +121,16 @@ $(document).ready(function() {
                         window.location.href = response.redirect;
                     }, 1500);
                 } else {
-                    alert('Hubo un error al crear el maestro.');
+                    var alert = '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">';
+                    $.each(response.error, function(key, value) {
+                        alert += value + '<br>';
+                    });
+                    alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                    alert += '<span aria-hidden="true">&times;</span>';
+                    alert += '</button>';
+                    alert += '</div>';
+                    $('#errorMessage').html(alert);
                 }
-            },
-            error: function() {
-                alert('Error de comunicación con el servidor. Inténtalo de nuevo.');
             }
         });
     });

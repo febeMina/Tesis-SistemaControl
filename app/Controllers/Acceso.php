@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Controllers;
+use App\Controllers\BaseController;
 
 use CodeIgniter\Controller;
 
-class Acceso extends Controller
+class Acceso extends BaseController
 {
     public function __construct(){
         helper('url');

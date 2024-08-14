@@ -63,7 +63,7 @@ class MigrateStatus extends BaseCommand
     /**
      * Namespaces to ignore when looking for migrations.
      *
-     * @var list<string>
+     * @var string[]
      */
     protected $ignoredNamespaces = [
         'CodeIgniter',
@@ -144,7 +144,7 @@ class MigrateStatus extends BaseCommand
             }
         }
 
-        if ($status === []) {
+        if (! $status) {
             // @codeCoverageIgnoreStart
             CLI::error(lang('Migrations.noneFound'), 'light_gray', 'red');
             CLI::newLine();

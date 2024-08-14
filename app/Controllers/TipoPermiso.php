@@ -21,7 +21,7 @@ class TipoPermiso extends BaseController
 
     public function index()
     {
-        $tipos_permisos = $this->tipoPermisoModel->findAll();
+        $tipos_permisos = $this->tipoPermisoModel->getAllTipoPermisos();
 
         $data = [
             'tipos_permisos' => $tipos_permisos,
@@ -40,14 +40,17 @@ class TipoPermiso extends BaseController
         $data = [
             'nombre' => $this->request->getPost('nombre'),
             'cantidad_dias' => $this->request->getPost('cantidad_dias'),
+            'estado' => 'Activo'  // Estado por defecto al crear
         ];
-
-        if ($this->tipoPermisoModel->insert($data)) {
+    
+        $success = $this->tipoPermisoModel->insert($data);
+    
+        if ($success) {
             $idTipoPermiso = $this->tipoPermisoModel->getInsertID();
-
+    
             // Obtener todos los docentes
             $docentes = $this->maestroModel->findAll();
-
+    
             // Insertar saldos iniciales para cada docente
             foreach ($docentes as $docente) {
                 $this->saldoPersonalModel->insert([
@@ -57,16 +60,22 @@ class TipoPermiso extends BaseController
                     'saldoActualHoras' => $data['cantidad_dias'] * 6,
                 ]);
             }
-
-            // Establecer mensaje flash de éxito
+    
+            // Guardar mensaje de éxito en Flashdata
             $this->session->setFlashdata('success', 'Tipo de permiso creado exitosamente.');
+    
+            // Redirigir al índice
+            return redirect()->to('/tipo_permiso');
         } else {
-            // Establecer mensaje flash de error
+            // Guardar mensaje de error en Flashdata
             $this->session->setFlashdata('error', 'Error al crear el tipo de permiso.');
+    
+            // Redirigir al índice
+            return redirect()->to('/tipo_permiso');
         }
-
-        return redirect()->to('/tipo_permiso');
     }
+    
+    
 
     public function edit($id = null)
     {
@@ -86,32 +95,36 @@ class TipoPermiso extends BaseController
     }
 
     public function update()
-    {
-        $id = $this->request->getPost('id');
+{
+    $id = $this->request->getPost('id');
 
-        if ($id === null) {
-            return $this->response->setJSON(['success' => false, 'message' => 'ID no encontrado.']);
-        }
-
-        $data = [
-            'nombre' => $this->request->getPost('nombre'),
-            'cantidad_dias' => $this->request->getPost('cantidad_dias'),
-        ];
-
-        $this->tipoPermisoModel->update($id, $data);
-
-        // Establecer mensaje flash
-        $this->session->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
-
-        // Respuesta JSON para AJAX
-        return $this->response->setJSON(['success' => true]);
+    if ($id === null) {
+        return $this->response->setJSON(['success' => false, 'message' => 'ID no encontrado.']);
     }
+
+    $data = [
+        'nombre' => $this->request->getPost('nombre'),
+        'cantidad_dias' => $this->request->getPost('cantidad_dias'),
+        'estado' => $this->request->getPost('estado') // Mantener el estado del formulario
+    ];
+
+    $this->tipoPermisoModel->update($id, $data);
+
+    $this->session->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
+
+    return $this->response->setJSON(['success' => true]);
+}
 
     public function delete($id = null)
     {
-        $this->tipoPermisoModel->delete($id);
+        if ($id !== null) {
+            $this->tipoPermisoModel->update($id, ['estado' => 'inactivo']);
 
-        $this->session->setFlashdata('success', 'Tipo de permiso eliminado exitosamente.');
+            $this->session->setFlashdata('success', 'Tipo de permiso desactivado exitosamente.');
+        } else {
+            $this->session->setFlashdata('error', 'No se encontró el ID del tipo de permiso.');
+        }
+
         return redirect()->to('/tipo_permiso');
     }
 }

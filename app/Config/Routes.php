@@ -36,7 +36,8 @@ $routes->get('maestros/create', 'Maestros::create');
 $routes->post('maestros/store', 'Maestros::store');
 $routes->get('maestros/edit/(:num)', 'Maestros::edit/$1');
 $routes->post('maestros/update/(:num)', 'Maestros::update/$1');
-$routes->get('maestros/delete/(:segment)', 'Maestros::delete/$1');
+$routes->match(['get', 'post'], 'maestros/delete', 'Maestros::delete');
+
 
 
 
@@ -78,6 +79,8 @@ $routes->get('permisos_personal', 'PermisosPersonal::index');
 $routes->get('permisos_personal/create', 'PermisosPersonal::create');
 $routes->post('permisos_personal/store', 'PermisosPersonal::store');
 
+$routes->get('/reporte', 'PermisosPersonal::reporte');
+$routes->get('reporte-pdf/generar-reporte', 'ReportePDF::generarReporte');
 
 
 

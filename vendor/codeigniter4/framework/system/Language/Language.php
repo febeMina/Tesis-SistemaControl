@@ -12,7 +12,7 @@
 namespace CodeIgniter\Language;
 
 use Config\Services;
-use IntlException;
+use InvalidArgumentException;
 use MessageFormatter;
 
 /**
@@ -174,7 +174,7 @@ class Language
      * Advanced message formatting.
      *
      * @param array|string $message
-     * @param list<string> $args
+     * @param string[]     $args
      *
      * @return array|string
      */
@@ -194,33 +194,9 @@ class Language
 
         $formatted = MessageFormatter::formatMessage($this->locale, $message, $args);
         if ($formatted === false) {
-            // Format again to get the error message.
-            try {
-                $fmt       = new MessageFormatter($this->locale, $message);
-                $formatted = $fmt->format($args);
-                $fmtError  = '"' . $fmt->getErrorMessage() . '" (' . $fmt->getErrorCode() . ')';
-            } catch (IntlException $e) {
-                $fmtError = '"' . $e->getMessage() . '" (' . $e->getCode() . ')';
-            }
-
-            $argsString = implode(
-                ', ',
-                array_map(static fn ($element) => '"' . $element . '"', $args)
+            throw new InvalidArgumentException(
+                lang('Language.invalidMessageFormat', [$message, implode(',', $args)])
             );
-            $argsUrlEncoded = implode(
-                ', ',
-                array_map(static fn ($element) => '"' . rawurlencode($element) . '"', $args)
-            );
-
-            log_message(
-                'error',
-                'Language.invalidMessageFormat: $message: "' . $message
-                . '", $args: ' . $argsString
-                . ' (urlencoded: ' . $argsUrlEncoded . '),'
-                . ' MessageFormatter Error: ' . $fmtError
-            );
-
-            return $message . "\n【Warning】Also, invalid string(s) was passed to the Language class. See log file for details.";
         }
 
         return $formatted;

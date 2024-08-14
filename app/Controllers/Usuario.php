@@ -3,28 +3,33 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\IncomingRequest;
+use App\Controllers\BaseController;
 
-class Usuario extends Controller
+class Usuario extends BaseController
 {
+
     public function __construct()
     {
+        
         helper('url');
         if (!session()->get('isLoggedIn')) {
             redirect()->to(base_url('public/login'))->send();
             exit;
-        } 
+        }
     }
 
-    public function index()
+        public function index()
     {
         $db = \Config\Database::connect();
         $builder = $db->table('usuarios');
         $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, rol.nombreRol, docente.nombre_completo');
         $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
-        $builder->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner');
+        $builder->join('docente', 'docente.idDocente = usuarios.idDocente', 'left'); // Cambiado a LEFT JOIN
         $usuarios = $builder->get()->getResult();
         return view('usuario/index', ['usuarios' => $usuarios]);
     }
+
 
     public function create()
     {

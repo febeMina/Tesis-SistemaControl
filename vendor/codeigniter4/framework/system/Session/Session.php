@@ -496,7 +496,7 @@ class Session implements SessionInterface
             return $value;
         }
 
-        if (! isset($_SESSION) || $_SESSION === []) {
+        if ($_SESSION === []) {
             return $key === null ? [] : null;
         }
 

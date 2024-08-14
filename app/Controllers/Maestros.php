@@ -31,10 +31,12 @@ class Maestros extends Controller
             'nip' => $request->getVar('nip'),
             'escalafon' => $request->getVar('escalafon'),
             'fecha_ingreso' => $request->getVar('fecha_ingreso'),
-            'estado' => $request->getVar('estado')
+            'estado' => $request->getVar('estado'),
+            'tipo' => $request->getVar('tipo')
         ];
 
         // Obtener los datos filtrados
+        log_message('debug', 'Filtros aplicados: ' . json_encode($filters));
         $maestrosData = $this->maestroModel->filter($filters);
 
         // Pasar los datos a la vista
@@ -42,13 +44,24 @@ class Maestros extends Controller
     }
 
     public function create()
-    {
-        // Muestra el formulario para crear un nuevo maestro
-        return view('maestros/create');
-    }
+{
+    // Definir los cargos disponibles
+    $cargos = [
+        'Director' => 'Director',
+        'Subdirector' => 'Subdirector',
+        'Secretaria' => 'Secretaria',
+        'Contador' => 'Contador',
+        'Otro' => 'Otro'
+    ];
+    
+    // Muestra el formulario para crear un nuevo maestro
+    return view('maestros/create', ['cargos' => $cargos]);
+}
+
 
     public function store()
     {
+        log_message('debug', 'Método store() llamado');
         $request = \Config\Services::request();
         
         $nombre_completo = $request->getPost('nombre_completo');
@@ -57,12 +70,43 @@ class Maestros extends Controller
         $fecha_ingreso = $request->getPost('fecha_ingreso');
         $estado = $request->getPost('estado');
         $tipo = $request->getPost('tipo');
-        $rol = $request->getPost('rol');
+        $cargo = $request->getPost('cargo');
     
-        // Validación: Asegurarse de que el campo rol esté lleno para tipo Administrativo
-        if ($tipo === 'Administrativo' && empty($rol)) {
-            // Redirigir de vuelta con los datos ingresados anteriormente y un mensaje de error
-            return redirect()->back()->withInput()->with('error', 'El campo cargo es obligatorio para el tipo Administrativo.');
+        // Validación: Asegurarse de que el campo cargo esté lleno para tipo Administrativo
+        if ($tipo === 'Administrativo' && empty($cargo)) {
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'El campo cargo es obligatorio para el tipo Administrativo.'
+            ]);
+        }
+    
+        // Validación de unicidad de NIP y Escalafón
+        $validation = \Config\Services::validation();
+        $validation->setRules([
+            'nip' => [
+                'label' => 'NIP',
+                'rules' => 'required|is_unique[docente.nip]',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'is_unique' => 'El {field} ya está registrado.'
+                ]
+            ],
+            'escalafon' => [
+                'label' => 'Escalafón',
+                'rules' => 'required|is_unique[docente.escalafon]',
+                'errors' => [
+                    'required' => 'El {field} es obligatorio.',
+                    'is_unique' => 'El {field} ya está registrado.'
+                ]
+            ]
+        ]);
+    
+        if (!$validation->withRequest($this->request)->run()) {
+            log_message('error', 'Errores de validación: ' . json_encode($validation->getErrors()));
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => $validation->getErrors()
+            ]);
         }
         
         $docenteData = [
@@ -72,7 +116,7 @@ class Maestros extends Controller
             'fecha_ingreso' => $fecha_ingreso,
             'estado' => $estado,
             'tipo' => $tipo,
-            'cargo' => ($tipo === 'Administrativo') ? $rol : null, // Guardar el cargo solo para administrativos
+            'cargo' => ($tipo === 'Administrativo') ? $cargo : null // Guardar el cargo solo para administrativos
         ];
         
         // Debugging: Verificar los datos recibidos
@@ -81,7 +125,7 @@ class Maestros extends Controller
         try {
             $this->maestroModel->insert($docenteData);
             $idDocente = $this->maestroModel->getInsertID();
-    
+        
             if ($idDocente) {
                 // Insertar saldo inicial de permisos
                 $tiposPermisos = $this->tipoPermisoModel->findAll();
@@ -95,74 +139,189 @@ class Maestros extends Controller
                         'saldoActualHoras' => $cantidadDias * 6
                     ]);
                 }
-    
-                // Redirigir a la lista de maestros con un mensaje de éxito
+                log_message('debug', 'Redirigiendo a la lista de maestros');
                 return $this->response->setJSON([
                     'success' => true,
+                    'message' => 'El maestro ha sido creado exitosamente.',
                     'redirect' => site_url('maestros/index')
                 ]);
             } else {
-                // Hubo un error al guardar el maestro
-                return $this->response->setJSON(['success' => false]);
+                log_message('error', 'La inserción en la tabla "docente" no devolvió un ID.');
+                return $this->response->setJSON(['success' => false, 'error' => 'No se pudo crear el maestro.']);
             }
         } catch (\Exception $e) {
-            // Manejar excepciones y errores
-            log_message('error', 'Error al crear el maestro: ' . $e->getMessage());
-            return $this->response->setJSON(['success' => false]);
+            log_message('error', 'Error al insertar el maestro: ' . $e->getMessage());
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'Hubo un problema al crear el maestro. Por favor, intente nuevamente.'
+            ]);
         }
     }
+    
+
 
     public function edit($id)
-    {
-        // Cargar los datos del maestro a editar desde la base de datos
-        $maestro = $this->maestroModel->find($id);
+{
+    // Cargar los datos del maestro a editar desde la base de datos
+    $maestro = $this->maestroModel->find($id);
+    
+    // Definir los cargos disponibles
+    $cargos = [
+        'Director' => 'Director',
+        'Subdirector' => 'Subdirector',
+        'Secretaria' => 'Secretaria',
+        'Contador' => 'Contador',
+        'Otro' => 'Otro'
+    ];
+    
+    // Pasar los datos a la vista
+    return view('maestros/edit', [
+        'maestro' => $maestro,
+        'cargos' => $cargos
+    ]);
+}
 
-        // Pasar los datos a la vista de edición
-        return view('maestros/edit', ['maestro' => $maestro]);
+
+public function update($id)
+{
+    log_message('debug', 'Método update() llamado');
+    $request = \Config\Services::request();
+
+    $nombre_completo = $request->getPost('nombre_completo');
+    $nip = $request->getPost('nip');
+    $escalafon = $request->getPost('escalafon');
+    $fecha_ingreso = $request->getPost('fecha_ingreso');
+    $estado = $request->getPost('estado');
+    $tipo = $request->getPost('tipo');
+    $cargo = $request->getPost('cargo');
+
+    // Validación de campos obligatorios para tipo Administrativo
+    if ($tipo === 'Administrativo' && empty($cargo)) {
+        return $this->response->setJSON([
+            'success' => false,
+            'error' => 'El campo cargo es obligatorio para el tipo Administrativo.'
+        ]);
     }
 
-    public function update($id)
-    {
-        // Capturar los datos del formulario de edición
-        $request = \Config\Services::request();
-        $nombre_completo = $request->getVar('nombre_completo');
-        $nip = $request->getVar('nip');
-        $escalafon = $request->getVar('escalafon');
-        $fecha_ingreso = $request->getVar('fecha_ingreso');
-        $estado = $request->getVar('estado');
-        $tipo = $request->getVar('tipo');
-        $cargo = ($tipo === 'Administrativo') ? $request->getVar('cargo') : null;
+    // Obtener el registro existente
+    $existingDocente = $this->maestroModel->find($id);
 
-        // Actualizar los datos en la base de datos
-        $data = [
-            'nombre_completo' => $nombre_completo,
-            'nip' => $nip,
-            'escalafon' => $escalafon,
-            'fecha_ingreso' => $fecha_ingreso,
-            'estado' => $estado,
-            'tipo' => $tipo,
-            'cargo' => $cargo,
+    if (!$existingDocente) {
+        log_message('error', 'No se encontró el maestro con el ID: ' . $id);
+        return $this->response->setJSON([
+            'success' => false,
+            'error' => 'No se encontró el maestro con el ID especificado.'
+        ]);
+    }
+
+    // Validación condicional para NIP y Escalafón
+    $validation = \Config\Services::validation();
+    $validationRules = [
+        'nombre_completo' => 'required',
+        'fecha_ingreso' => 'required',
+        'estado' => 'required',
+        'tipo' => 'required',
+        'cargo' => 'permit_empty'
+    ];
+
+    // Solo validar NIP si ha cambiado
+    if ($nip !== $existingDocente['nip']) {
+        $validationRules['nip'] = [
+            'rules' => 'required|is_unique[docente.nip]',
+            'errors' => [
+                'required' => 'El NIP es obligatorio.',
+                'is_unique' => 'El NIP ingresado ya existe.'
+            ]
         ];
+    }
 
-        $updated = $this->maestroModel->update($id, $data);
+    // Solo validar Escalafón si ha cambiado
+    if ($escalafon !== $existingDocente['escalafon']) {
+        $validationRules['escalafon'] = [
+            'rules' => 'required|is_unique[docente.escalafon]',
+            'errors' => [
+                'required' => 'El escalafón es obligatorio.',
+                'is_unique' => 'El escalafón ingresado ya existe.'
+            ]
+        ];
+    }
+
+    $validation->setRules($validationRules);
+
+    if (!$validation->withRequest($this->request)->run()) {
+        log_message('error', 'Errores de validación: ' . json_encode($validation->getErrors()));
+        return $this->response->setJSON([
+            'success' => false,
+            'error' => $validation->getErrors()
+        ]);
+    }
+
+    $docenteData = [
+        'nombre_completo' => $nombre_completo,
+        'nip' => $nip,
+        'escalafon' => $escalafon,
+        'fecha_ingreso' => $fecha_ingreso,
+        'estado' => $estado,
+        'tipo' => $tipo,
+        'cargo' => ($tipo === 'Administrativo') ? $cargo : null
+    ];
+
+    log_message('debug', 'Datos del docente para actualizar: ' . json_encode($docenteData));
+
+    try {
+        $updated = $this->maestroModel->update($id, $docenteData);
 
         if ($updated) {
-            return redirect()->to(site_url('maestros'))->with('success', 'Docente actualizado con éxito.');
+            return $this->response->setJSON([
+                'success' => true,
+                'message' => 'El maestro ha sido actualizado exitosamente.',
+                'redirect' => site_url('maestros/index')
+            ]);
         } else {
-            return redirect()->back()->withInput()->with('error', 'No se pudo actualizar el docente.');
+            log_message('error', 'No se realizaron cambios en la base de datos para el ID: ' . $id);
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'No se pudo actualizar el maestro. Verifique los datos e intente nuevamente.'
+            ]);
+        }
+    } catch (\Exception $e) {
+        log_message('error', 'Error al actualizar el maestro: ' . $e->getMessage());
+        return $this->response->setJSON([
+            'success' => false,
+            'error' => 'Hubo un problema al actualizar el maestro. Por favor, intente nuevamente.'
+        ]);
+    }
+}
+
+
+public function delete()
+{
+    $request = \Config\Services::request(); // Obtener la instancia del Request
+    $id = $request->getPost('id'); // Obtener el parámetro 'id'
+
+    if ($id) {
+        $maestrosModel = new MaestroModel();
+        $result = $maestrosModel->setInactive($id); // Usar el método setInactive del modelo
+        
+        if ($result) {
+            return $this->response->setJSON([
+                'success' => true,
+                'message' => 'Maestro marcado como inactivo con éxito.'
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'No se pudo marcar el maestro como inactivo.'
+            ]);
         }
     }
 
-    public function delete($id)
-    {
-        // Primero, elimina los registros relacionados en historial_permisos
-        $historialPermisosModel = new \App\Models\HistorialPermisosModel();
-        $historialPermisosModel->where('idDocente', $id)->delete();
-        
-        // Luego, elimina el maestro de la base de datos
-        $this->maestroModel->delete($id);
+    return $this->response->setJSON([
+        'success' => false,
+        'message' => 'ID de maestro no proporcionado.'
+    ]);
+}
+
+
     
-        // Redireccionar a la página principal o mostrar un mensaje de éxito
-        return redirect()->to(site_url('maestros'))->with('success', 'Docente eliminado con éxito.');
-    }
 }

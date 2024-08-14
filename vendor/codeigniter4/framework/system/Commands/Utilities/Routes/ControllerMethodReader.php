@@ -159,17 +159,19 @@ final class ControllerMethodReader
         string $classname,
         string $methodName
     ): array {
-        if ($classShortname !== $defaultController) {
-            return [];
+        $output = [];
+
+        if ($classShortname === $defaultController) {
+            $pattern                = '#' . preg_quote(lcfirst($defaultController), '#') . '\z#';
+            $routeWithoutController = rtrim(preg_replace($pattern, '', $uriByClass), '/');
+            $routeWithoutController = $routeWithoutController ?: '/';
+
+            $output[] = [
+                'route'   => $routeWithoutController,
+                'handler' => '\\' . $classname . '::' . $methodName,
+            ];
         }
 
-        $pattern                = '#' . preg_quote(lcfirst($defaultController), '#') . '\z#';
-        $routeWithoutController = rtrim(preg_replace($pattern, '', $uriByClass), '/');
-        $routeWithoutController = $routeWithoutController ?: '/';
-
-        return [[
-            'route'   => $routeWithoutController,
-            'handler' => '\\' . $classname . '::' . $methodName,
-        ]];
+        return $output;
     }
 }

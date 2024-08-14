@@ -248,7 +248,7 @@ class Connection extends BaseConnection
     /**
      * Returns an array of objects with field data
      *
-     * @return list<stdClass>
+     * @return stdClass[]
      *
      * @throws DatabaseException
      */
@@ -269,15 +269,12 @@ class Connection extends BaseConnection
         for ($i = 0, $c = count($query); $i < $c; $i++) {
             $retVal[$i] = new stdClass();
 
-            $retVal[$i]->name       = $query[$i]->name;
-            $retVal[$i]->type       = $query[$i]->type;
-            $retVal[$i]->max_length = null;
-            $retVal[$i]->nullable   = isset($query[$i]->notnull) && ! (bool) $query[$i]->notnull;
-            $retVal[$i]->default    = $query[$i]->dflt_value;
-            // "pk" (either zero for columns that are not part of the primary key,
-            // or the 1-based index of the column within the primary key).
-            // https://www.sqlite.org/pragma.html#pragma_table_info
-            $retVal[$i]->primary_key = ($query[$i]->pk === 0) ? 0 : 1;
+            $retVal[$i]->name        = $query[$i]->name;
+            $retVal[$i]->type        = $query[$i]->type;
+            $retVal[$i]->max_length  = null;
+            $retVal[$i]->default     = $query[$i]->dflt_value;
+            $retVal[$i]->primary_key = isset($query[$i]->pk) && (bool) $query[$i]->pk;
+            $retVal[$i]->nullable    = isset($query[$i]->notnull) && ! (bool) $query[$i]->notnull;
         }
 
         return $retVal;
@@ -286,7 +283,7 @@ class Connection extends BaseConnection
     /**
      * Returns an array of objects with index data
      *
-     * @return array<string, stdClass>
+     * @return stdClass[]
      *
      * @throws DatabaseException
      */
@@ -343,7 +340,7 @@ class Connection extends BaseConnection
     /**
      * Returns an array of objects with Foreign key data
      *
-     * @return array<string, stdClass>
+     * @return stdClass[]
      */
     protected function _foreignKeyData(string $table): array
     {

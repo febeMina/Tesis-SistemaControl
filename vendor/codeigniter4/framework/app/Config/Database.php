@@ -23,8 +23,6 @@ class Database extends Config
 
     /**
      * The default database connection.
-     *
-     * @var array<string, mixed>
      */
     public array $default = [
         'DSN'          => '',
@@ -50,8 +48,6 @@ class Database extends Config
     /**
      * This database connection is used when
      * running PHPUnit database tests.
-     *
-     * @var array<string, mixed>
      */
     public array $tests = [
         'DSN'         => '',

@@ -30,7 +30,6 @@
                                 <tr>
                                     <th>Usuario</th>
                                     <th>Rol</th>
-                                    <th>Nombre completo</th>
                                     <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -40,7 +39,6 @@
                                     <tr>
                                         <td><?= $user->usuario; ?></td>
                                         <td><?= $user->nombreRol; ?></td>
-                                        <td><?= $user->nombre_completo; ?></td>
                                         <td><?= $user->estado; ?></td>
                                         <td>
                                             <div class="btn-group">

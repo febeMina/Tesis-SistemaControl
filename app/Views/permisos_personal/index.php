@@ -53,12 +53,11 @@
                             <thead>
                                 <tr>
                                     <th>Empleado</th>
-                                    <th>Tipo de Permiso</th>
                                     <th>Fechas</th>
-                                    <th>Horas Solicitadas</th>
-                                    <th>Días Solicitados</th>
+                                    <th>Tipos de permisos</th>
+                                    <th>Días</th>
+                                    <th>Horas</th>
                                     <th>Saldo Actual</th>
-                                    <th>Fecha Creación</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -88,22 +87,21 @@
                                             <small>NIP: <?= esc($item['nip']) ?></small>
                                         </td>
                                         <td>
-                                            <?= esc($item['tipoPermisoNombre']) ?><br>
-                                            <small>(<?= esc($item['cantidad_dias'] ?? '0') ?> días)</small>
-                                        </td>
-                                        <td>
                                             <strong>Inicio:</strong> <?= esc($item['fechaInicio']) ?><br>
                                             <strong>Fin:</strong> <?= esc($item['fechaFin']) ?>
                                         </td>
-                                        <td><?= esc($horasSolicitadas) ?></td>
+                                        <td>
+                                            <?= esc($item['tipoPermisoNombre']) ?><br>
+                                            <small>(<?= esc($item['cantidad_dias'] ?? '0') ?> días)</small>
+                                        </td>
                                         <td><?= esc($diasSolicitados) ?></td>
+                                        <td><?= esc($horasSolicitadas) ?></td>
                                         <td>
                                             <ul class="list-unstyled mb-0">
                                                 <li><strong>Días:</strong> <?= esc($nuevoSaldoDias) ?></li>
                                                 <li><strong>Horas:</strong> <?= esc($nuevoSaldoHoras) ?></li>
                                             </ul>
                                         </td>
-                                        <td><?= esc($item['fechaCreacion']) ?></td> <!-- Corrección aquí -->
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

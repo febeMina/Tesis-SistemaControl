@@ -66,8 +66,8 @@ public function update($id)
 {
     // Capturar los datos del formulario de edición
     $request = \Config\Services::request();
-    $nombre_completo = $request->getVar('nombreRol');
-    
+
+    $nombreRol = $request->getVar('nombreRol');
     // Actualizar los datos en la base de datos
     $db = \Config\Database::connect();
     $builder = $db->table('rol');

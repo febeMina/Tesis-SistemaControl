@@ -11,9 +11,7 @@
 
 namespace CodeIgniter;
 
-use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\Exceptions\HTTPException;
-use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Validation\Exceptions\ValidationException;
@@ -32,14 +30,14 @@ class Controller
     /**
      * Helpers that will be automatically loaded on class instantiation.
      *
-     * @var list<string>
+     * @var array
      */
     protected $helpers = [];
 
     /**
      * Instance of the main Request object.
      *
-     * @var CLIRequest|IncomingRequest
+     * @var RequestInterface
      */
     protected $request;
 
@@ -187,7 +185,7 @@ class Controller
             }
 
             // If no error message is defined, use the error message in the Config\Validation file
-            if ($messages === []) {
+            if (! $messages) {
                 $errorName = $rules . '_errors';
                 $messages  = $validation->{$errorName} ?? [];
             }

@@ -11,21 +11,24 @@ class PadreModel extends Model
     protected $allowedFields = ['nombreCompleto', 'Genero', 'DUI', 'telefono', 'estado'];
 
     public function getFilteredPadres($filters)
-    {
-        $builder = $this->builder();
+{
+    $query = $this->where('estado', 'activo'); // Asegúrate de incluir solo padres activos
 
-        if (!empty($filters['nombre_completo'])) {
-            $builder->like('nombreCompleto', $filters['nombre_completo']);
-        }
-        if (!empty($filters['dui'])) {
-            $builder->like('DUI', $filters['dui']);
-        }
-        if (!empty($filters['genero'])) {
-            $builder->where('Genero', $filters['genero']);
-        }
-
-        return $builder->get()->getResultArray();
+    if (!empty($filters['nombre_completo'])) {
+        $query->like('nombreCompleto', $filters['nombre_completo']);
     }
+
+    if (!empty($filters['dui'])) {
+        $query->where('DUI', $filters['dui']);
+    }
+
+    if (!empty($filters['genero'])) {
+        $query->where('Genero', $filters['genero']);
+    }
+
+    return $query->findAll();
+}
+
 
     public function getAlumnosAsociados($padreId)
     {

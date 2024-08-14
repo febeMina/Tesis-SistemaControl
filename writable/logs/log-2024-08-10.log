@@ -1,0 +1,237 @@
+INFO - 2024-08-10 02:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 03:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:18:57 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:21:39 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:22:53 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:26:29 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:26:49 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:27:02 --> ErrorException: Undefined variable $tiposPermisos
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermisos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:28:42 --> ErrorException: Undefined variable $tipo_permisos
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo_permisos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:30:28 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 03:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 03:30:44 --> ErrorException: Undefined variable $tipoPermisoNombre
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipoPermisoNombre', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:11:08 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:11:15 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:12:23 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:12:42 --> ErrorException: Undefined variable $tipo_permisos
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo_permisos', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 04:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 04:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 04:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:22:18 --> ErrorException: Undefined variable $tipoPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipoPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(79): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:23:33 --> ErrorException: Undefined array key "permisos"
+in APPPATH\Views\permisos_personal\index.php on line 90.
+ 1 APPPATH\Views\permisos_personal\index.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permisos"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 90)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(79): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:30:11 --> ErrorException: Undefined array key "idPermiso"
+in APPPATH\Controllers\PermisosPersonal.php on line 67.
+ 1 APPPATH\Controllers\PermisosPersonal.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idPermiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisosPersonal.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:30:44 --> ErrorException: Undefined array key "idTipoPermiso"
+in APPPATH\Controllers\PermisosPersonal.php on line 67.
+ 1 APPPATH\Controllers\PermisosPersonal.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idTipoPermiso"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisosPersonal.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:49:59 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 04:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-10 04:50:28 --> ErrorException: Undefined variable $tiposPermiso
+in APPPATH\Views\permisos_personal\index.php on line 58.
+ 1 APPPATH\Views\permisos_personal\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposPermiso', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-10 04:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-10 04:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

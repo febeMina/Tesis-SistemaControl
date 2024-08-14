@@ -21,16 +21,6 @@
                             <small class="text-muted">Deje este campo en blanco para mantener la contraseña actual.</small>
                         </div>
                         <div class="form-group">
-                            <label for="idDocente" style="color: #000;"><i class="fas fa-user"></i> Docente</label>
-                            <select class="form-control" id="idDocente" name="idDocente" required>
-                                <?php foreach ($docentes as $docente) : ?>
-                                    <option value="<?= $docente->idDocente ?>" <?= ($docente->idDocente == $usuario->idDocente) ? 'selected' : '' ?>>
-                                        <?= $docente->nombre_completo ?>
-                                    </option>
-                                <?php endforeach; ?> 
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label for="idRol" style="color: #000;"><i class="fas fa-user"></i> Rol</label>
                             <select class="form-control" id="idRol" name="idRol" required>
                                 <?php foreach ($roles as $rol) : ?>

@@ -25,64 +25,102 @@ class Padres extends Controller
         $filters = [
             'nombre_completo' => $request->getVar('nombre_completo'),
             'dui' => $request->getVar('dui'),
-            'genero' => $request->getVar('genero')
+            'genero' => $request->getVar('genero'),
+            'estado' => 'activo' // Filtro para mostrar solo padres activos
         ];
-
+    
         $padres = $padreModel->getFilteredPadres($filters);
-
+    
         return view('padres/index', ['padres' => $padres, 'filters' => $filters]);
     }
+    
 
     public function create()
-    {
-        return view('padres/create');
+{
+    $data = [
+        'alumnos' => session()->getFlashdata('alumnos') ?? []
+    ];
+    return view('padres/create', $data);
+}
+
+
+public function store()
+{
+    $request = \Config\Services::request();
+    $padreModel = new PadreModel();
+    $alumnoModel = new AlumnoModel();
+    $responsableAlumnoModel = new ResponsableAlumnoModel();
+    
+    // Datos del padre
+    $dataPadre = [
+        'nombreCompleto' => $request->getVar('nombre_completo'),
+        'Genero' => $request->getVar('genero'),
+        'DUI' => $request->getVar('dui'),
+        'telefono' => $request->getVar('telefono'),
+        'estado' => $request->getVar('estado'),
+    ];
+
+    // Validar unicidad del DUI
+    if ($padreModel->where('DUI', $dataPadre['DUI'])->first()) {
+        $alumnos = [
+            'nombre_completo' => $request->getVar('alumno_nombre_completo'),
+            'genero' => $request->getVar('alumno_sexo'),
+            'nie' => $request->getVar('alumno_nie'),
+            'estado' => $request->getVar('alumno_estado')
+        ];
+        return redirect()->back()->with('error', 'El DUI ya está registrado.')->withInput()->with('alumnos', $alumnos);
     }
 
-    public function store()
-    {
-        $request = \Config\Services::request();
-    
-        // Datos del padre
-        $dataPadre = [
-            'nombreCompleto' => $request->getVar('nombre_completo'),
-            'Genero' => $request->getVar('genero'),
-            'DUI' => $request->getVar('dui'),
-            'telefono' => $request->getVar('telefono'),
-            'estado' => $request->getVar('estado'),
-        ];
-    
-        $padreModel = new PadreModel();
-        $padreId = $padreModel->insert($dataPadre);
-    
-        // Asociar alumnos
-        if (!empty($request->getVar('alumno_nombre_completo'))) {
-            $responsableAlumnoModel = new ResponsableAlumnoModel();
-            $alumnoModel = new AlumnoModel();
-    
-            $nombres = $request->getVar('alumno_nombre_completo');
-            $generos = $request->getVar('alumno_sexo');
-            $nies = $request->getVar('alumno_nie');
-            $estados = $request->getVar('alumno_estado');
-    
-            foreach ($nombres as $index => $nombre) {
-                $dataAlumno = [
-                    'nombreAlumno' => $nombre,
-                    'Genero_alumno' => $generos[$index],
-                    'NIE' => $nies[$index],
-                    'estado' => $estados[$index],
-                ];
-    
-                $alumnoId = $alumnoModel->insert($dataAlumno);
-    
-                $responsableAlumnoModel->save([
-                    'idDatosResponsable' => $padreId,
-                    'idAlumno' => $alumnoId,
-                ]);
-            }
+    // Validar unicidad del NIE de los alumnos
+    $errors = [];
+    $nies = $request->getVar('alumno_nie');
+    foreach ($nies as $index => $nie) {
+        if ($alumnoModel->where('NIE', $nie)->first()) {
+            $errors[] = "El NIE del alumno (número: $nie) ya está registrado.";
         }
-    
-        return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido creado exitosamente.');
     }
+
+    if (!empty($errors)) {
+        $alumnos = [
+            'nombre_completo' => $request->getVar('alumno_nombre_completo'),
+            'genero' => $request->getVar('alumno_sexo'),
+            'nie' => $request->getVar('alumno_nie'),
+            'estado' => $request->getVar('alumno_estado')
+        ];
+        return redirect()->back()->with('error', implode('<br>', $errors))->withInput()->with('alumnos', $alumnos);
+    }
+
+    // Si no hay errores, guardar el padre
+    $padreId = $padreModel->insert($dataPadre);
+
+    // Asociar alumnos
+    if (!empty($request->getVar('alumno_nombre_completo'))) {
+        $nombres = $request->getVar('alumno_nombre_completo');
+        $generos = $request->getVar('alumno_sexo');
+        $nies = $request->getVar('alumno_nie');
+        $estados = $request->getVar('alumno_estado');
+
+        foreach ($nombres as $index => $nombre) {
+            $dataAlumno = [
+                'nombreAlumno' => $nombre,
+                'Genero_alumno' => $generos[$index],
+                'NIE' => $nies[$index],
+                'estado' => $estados[$index],
+            ];
+
+            $alumnoId = $alumnoModel->insert($dataAlumno);
+
+            $responsableAlumnoModel->insert([
+                'idDatosResponsable' => $padreId,
+                'idAlumno' => $alumnoId,
+            ]);
+        }
+    }
+
+    return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido creado exitosamente.');
+}
+
+
     
 
     public function edit($id)
@@ -113,69 +151,98 @@ class Padres extends Controller
 
 
     public function update($id)
-{
-    $request = \Config\Services::request();
-    $padreModel = new PadreModel();
-    $alumnoModel = new AlumnoModel(); // Ajusta según el nombre de tu modelo
-
-    // Datos del padre
-    $dataPadre = [
-        'nombreCompleto' => $request->getVar('nombre_completo'),
-        'Genero' => $request->getVar('genero'),
-        'DUI' => $request->getVar('dui'),
-        'telefono' => $request->getVar('telefono'),
-        'estado' => $request->getVar('estado'),
-    ];
-
-    $padreModel->update($id, $dataPadre);
-
-    // Actualizar alumnos existentes
-    if (!empty($request->getVar('alumno_id'))) {
-        foreach ($request->getVar('alumno_id') as $index => $alumnoId) {
-            $dataAlumno = [
-                'nombreAlumno' => $request->getVar('alumno_nombre_completo')[$index],
-                'Genero_alumno' => $request->getVar('alumno_sexo')[$index],
-                'NIE' => $request->getVar('alumno_nie')[$index],
-                'estado' => $request->getVar('alumno_estado')[$index],
-            ];
-            $alumnoModel->update($alumnoId, $dataAlumno);
+    {
+        $request = \Config\Services::request();
+        $padreModel = new PadreModel();
+        $alumnoModel = new AlumnoModel();
+    
+        // Datos del padre
+        $dataPadre = [
+            'nombreCompleto' => $request->getVar('nombre_completo'),
+            'Genero' => $request->getVar('genero'),
+            'DUI' => $request->getVar('dui'),
+            'telefono' => $request->getVar('telefono'),
+            'estado' => $request->getVar('estado'),
+        ];
+    
+        // Validar unicidad del DUI si se está actualizando un DUI existente
+        if ($padreModel->where('DUI', $dataPadre['DUI'])->where('idDatosResponsable !=', $id)->first()) {
+            return redirect()->back()->with('error', 'El DUI ya está registrado.')->withInput();
         }
-    }
-
-    // Agregar nuevos alumnos solo si se proporcionan datos válidos
-    if (!empty($request->getVar('nuevo_alumno_nombre_completo'))) {
-        foreach ($request->getVar('nuevo_alumno_nombre_completo') as $index => $nuevoAlumnoNombre) {
-            if (!empty($nuevoAlumnoNombre) && !empty($request->getVar('nuevo_alumno_nie')[$index])) {
-                $dataNuevoAlumno = [
-                    'nombreAlumno' => $nuevoAlumnoNombre,
-                    'Genero_alumno' => $request->getVar('nuevo_alumno_sexo')[$index],
-                    'NIE' => $request->getVar('nuevo_alumno_nie')[$index],
-                    'estado' => $request->getVar('nuevo_alumno_estado')[$index],
+    
+        $padreModel->update($id, $dataPadre);
+    
+        // Actualizar alumnos existentes
+        if (!empty($request->getVar('alumno_id'))) {
+            foreach ($request->getVar('alumno_id') as $index => $alumnoId) {
+                $dataAlumno = [
+                    'nombreAlumno' => $request->getVar('alumno_nombre_completo')[$index],
+                    'Genero_alumno' => $request->getVar('alumno_sexo')[$index],
+                    'NIE' => $request->getVar('alumno_nie')[$index],
+                    'estado' => $request->getVar('alumno_estado')[$index],
                 ];
-                $nuevoAlumnoId = $alumnoModel->insert($dataNuevoAlumno);
-
-                // Asociar nuevo alumno al padre
-                $responsableAlumnoModel = new ResponsableAlumnoModel();
-                $responsableAlumnoModel->insert([
-                    'idDatosResponsable' => $id,
-                    'idAlumno' => $nuevoAlumnoId,
-                ]);
+                
+                // Validar unicidad del NIE si se está actualizando un NIE existente
+                if ($alumnoModel->where('NIE', $dataAlumno['NIE'])->where('idAlumno !=', $alumnoId)->first()) {
+                    return redirect()->back()->with('error', 'El NIE del alumno ya está registrado.')->withInput();
+                }
+    
+                $alumnoModel->update($alumnoId, $dataAlumno);
             }
         }
+    
+        // Agregar nuevos alumnos solo si se proporcionan datos válidos
+        if (!empty($request->getVar('nuevo_alumno_nombre_completo'))) {
+            foreach ($request->getVar('nuevo_alumno_nombre_completo') as $index => $nuevoAlumnoNombre) {
+                if (!empty($nuevoAlumnoNombre) && !empty($request->getVar('nuevo_alumno_nie')[$index])) {
+                    $dataNuevoAlumno = [
+                        'nombreAlumno' => $nuevoAlumnoNombre,
+                        'Genero_alumno' => $request->getVar('nuevo_alumno_sexo')[$index],
+                        'NIE' => $request->getVar('nuevo_alumno_nie')[$index],
+                        'estado' => $request->getVar('nuevo_alumno_estado')[$index],
+                    ];
+    
+                    // Validar unicidad del NIE para nuevos alumnos
+                    if ($alumnoModel->where('NIE', $dataNuevoAlumno['NIE'])->first()) {
+                        return redirect()->back()->with('error', 'El NIE del nuevo alumno ya está registrado.')->withInput();
+                    }
+    
+                    $nuevoAlumnoId = $alumnoModel->insert($dataNuevoAlumno);
+    
+                    // Asociar nuevo alumno al padre
+                    $responsableAlumnoModel = new ResponsableAlumnoModel();
+                    $responsableAlumnoModel->insert([
+                        'idDatosResponsable' => $id,
+                        'idAlumno' => $nuevoAlumnoId,
+                    ]);
+                }
+            }
+        }
+    
+        return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido actualizado exitosamente.');
     }
-
-    return redirect()->to(site_url('padres'))->with('success', 'El padre ha sido actualizado exitosamente.');
-}
+    
 
 
 
     public function delete($id)
-    {
-        $padreModel = new PadreModel();
-        $padreModel->delete($id);
+{
+    $padreModel = new PadreModel();
+    $alumnoModel = new AlumnoModel();
+    $responsableAlumnoModel = new ResponsableAlumnoModel();
 
-        return redirect()->to(site_url('padres'));
+    // Cambiar el estado del padre a "inactivo"
+    $padreModel->update($id, ['estado' => 'inactivo']);
+
+    // Cambiar el estado de los alumnos asociados a "inactivo"
+    $alumnos = $responsableAlumnoModel->getAlumnosAsociados($id);
+    foreach ($alumnos as $alumno) {
+        $alumnoModel->update($alumno['idAlumno'], ['estado' => 'inactivo']);
     }
+
+    return redirect()->to(site_url('padres'))->with('success', 'El padre y sus alumnos han sido marcados como inactivos.');
+}
+
 
     public function getAlumnosAjax($padreId)
     {

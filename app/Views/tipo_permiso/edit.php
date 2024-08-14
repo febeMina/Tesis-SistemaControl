@@ -26,6 +26,13 @@
                             <label for="cantidad_dias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>
                             <input type="number" class="form-control" id="cantidad_dias" name="cantidad_dias" value="<?= $tipo_permiso['cantidad_dias'] ?>" required>
                         </div>
+                        <div class="form-group">
+                            <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
+                            <select class="form-control" id="estado" name="estado" required>
+                                <option value="1" <?= $tipo_permiso['estado'] == 1 ? 'selected' : '' ?>>Activo</option>
+                                <option value="0" <?= $tipo_permiso['estado'] == 0 ? 'selected' : '' ?>>Inactivo</option>
+                            </select>
+                        </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Actualizar</button>
                         </div>
