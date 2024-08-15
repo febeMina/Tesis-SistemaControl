@@ -57,9 +57,10 @@ class Productos extends BaseController
 
     public function store()
 {
-    $n_unidades_Caja = $this->request->getPost('n_unidades_Caja');
-    $unidadesCaja = $n_unidades_Caja == 0 ? 0 : $this->request->getPost('unidades_caja');
-    $unidades_extras = $this->request->getPost('unidades_extras');
+     // Convertir las entradas a números enteros (o flotantes si es necesario)
+     $n_unidades_Caja = (int)$this->request->getPost('n_unidades_Caja');
+     $unidadesCaja = $n_unidades_Caja == 0 ? 0 : (int)$this->request->getPost('unidades_caja');
+     $unidades_extras = (int)$this->request->getPost('unidades_extras');
 
     // Calcular el total
     $total = ($n_unidades_Caja * $unidadesCaja) + $unidades_extras;

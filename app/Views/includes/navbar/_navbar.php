@@ -150,6 +150,7 @@
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
                 <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a>
+                <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Reporte de solicitud de productos</a>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de donaciones</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de inasistencias</a></li>

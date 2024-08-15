@@ -115,4 +115,32 @@ public function getProductosConsumo()
         
         return $query->getResultArray();
     }
+    
+    // Método para obtener el reporte de solicitudes de productos
+    public function getReporteSolicitudProductos($fechaInicio = null, $fechaFin = null)
+{
+    $builder = $this->builder();
+    
+    if ($fechaInicio && $fechaFin) {
+        $builder->where('Fecha_solicitud >=', $fechaInicio);
+        $builder->where('Fecha_solicitud <=', $fechaFin);
+    } elseif ($fechaInicio) {
+        $builder->where('Fecha_solicitud', $fechaInicio); // Si solo se especifica una fecha, filtra por esa fecha
+    }
+
+    return $builder->get()->getResultArray();
+}
+
+    
+    public function getDetallesSolicitud($idSolicitudProductos)
+{
+    $builder = $this->db->table('solicitud_productos_detalle spd');
+        $builder->select('spd.*, p.idProducto, tp.nombre AS producto_nombre, tp.descripcion AS producto_descripcion, p.fecha_vencimiento');
+        $builder->join('productos p', 'p.idProducto = spd.idProducto', 'left');
+        $builder->join('tipo_producto tp', 'tp.idtipoProducto = p.idtipoProducto', 'left');
+        $builder->where('spd.idSolicitudProductos', $idSolicitudProductos);
+    $query = $builder->get();
+    return $query->getResultArray();
+}
+
 }

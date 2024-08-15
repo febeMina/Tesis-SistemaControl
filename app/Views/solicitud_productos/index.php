@@ -2,15 +2,16 @@
 
 <?= $this->section('content') ?>
 
-<div class="container mt-3">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header" style="background-color: #090066; border-radius: 15px;">
                     <h3 class="text-center text-white">Listado de Solicitudes de Productos</h3>
                 </div>
-                <div class="card-body" style="background-color: #f0f0f0">
-
+                <div class="card-body" style="background-color: #f0f0f0;">
+                    
+                    <!-- Mensajes de sesión -->
                     <?php if (session()->get('success')): ?>
                         <div class="alert alert-success" role="alert">
                             <?= session()->get('success') ?>
@@ -23,12 +24,16 @@
                         </div>
                     <?php endif; ?>
 
+                    <!-- Botón para crear nueva solicitud -->
                     <div class="mb-3">
-                        <a href="<?= site_url('solicitudproductos/create') ?>" class="btn btn-success">Crear Nueva Solicitud</a>
+                        <a href="<?= site_url('solicitudproductos/create') ?>" class="btn btn-primary">
+                        <i class="mdi mdi-plus"> Agregar nueva solicitud</i>
+                        </a>
                     </div>
 
+                    <!-- Tabla de solicitudes -->
                     <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -48,15 +53,17 @@
                                         <td><?= esc($solicitud['responsable_entrega']) ?></td>
                                         <td><?= esc($solicitud['responsable_recibir']) ?></td>
                                         <td>
-                                            <a href="<?= site_url('solicitudproductos/edit/' . esc($solicitud['idSolicitudProductos'])) ?>" class="btn btn-primary btn-sm btn-edit">
-                                                Editar
-                                            </a>
-                                            <a href="<?= site_url('solicitudproductos/delete/' . esc($solicitud['idSolicitudProductos'])) ?>" class="btn btn-danger btn-sm btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar esta solicitud?')">
-                                                Eliminar
-                                            </a>
-                                            <button type="button" class="btn btn-info btn-sm" data-id="<?= esc($solicitud['idSolicitudProductos']) ?>" data-toggle="modal" data-target="#modalDetalles">
-                                                Ver Detalles
-                                            </button>
+                                            <div class="btn-group" role="group">
+                                                <a href="<?= site_url('solicitudproductos/edit/' . esc($solicitud['idSolicitudProductos'])) ?>" class="btn btn-edit">
+                                                    <i class="mdi mdi-pencil"></i>
+                                                </a>
+                                                <a href="<?= site_url('solicitudproductos/delete/' . esc($solicitud['idSolicitudProductos'])) ?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que deseas eliminar esta solicitud?')">
+                                                    <i class="mdi mdi-delete"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-info" data-id="<?= esc($solicitud['idSolicitudProductos']) ?>" data-toggle="modal" data-target="#modalDetalles">
+                                                    <i class="mdi mdi-eye"></i>
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -64,7 +71,10 @@
                         </table>
                     </div>
 
-                    <?= $pager->links() ?>
+                    <!-- Paginación centrada -->
+                    <div class="d-flex justify-content-center mt-4">
+                        <?= $pager->links() ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,54 +85,25 @@
 <div class="modal fade" id="modalDetalles" tabindex="-1" role="dialog" aria-labelledby="modalDetallesLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="background-color: #090066; color: white;">
                 <h5 class="modal-title" id="modalDetallesLabel">Detalles de la Solicitud</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div id="modalDetallesBody">
-                    <!-- Detalles serán cargados aquí por JavaScript -->
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <div class="modal-body" style="background-color: #f0f0f0;">
+                <div id="modalDetallesBody"></div>
             </div>
         </div>
     </div>
 </div>
 
-<style>
-    .card-header h3 {
-        color: #ffffff;
-    }
-    .card-body {
-        color: #000000;
-    }
-    .btn-primary {
-        color: #ffffff;
-    }
-    .btn-success {
-        color: #ffffff;
-    }
-    .btn-edit {
-        color: #090066;
-        border-radius: 5px;
-        margin-right: 5px;
-    }
-    .btn-delete {
-        color: red;
-        border-radius: 5px;
-    }
-</style>
-
 <!-- Script para cargar los detalles en el modal -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     $('#modalDetalles').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var idSolicitud = button.data('id'); // Extract info from data-* attributes
+        var button = $(event.relatedTarget);
+        var idSolicitud = button.data('id');
 
         var modal = $(this);
         $.ajax({
@@ -150,5 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+
+
 
 <?= $this->endSection() ?>

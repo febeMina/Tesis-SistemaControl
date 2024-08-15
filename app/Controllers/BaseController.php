@@ -52,6 +52,8 @@ abstract class BaseController extends Controller
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
+        // Asignar el request al controlador
+        $this->request = $request;
         // Load the session service
         $this->session = \Config\Services::session();
     }

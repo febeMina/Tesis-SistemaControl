@@ -38,7 +38,7 @@
                                     <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
                                     <a href="<?= site_url('consumo/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
                                 </div>
-                                <a href="<?= site_url('consumo/create') ?>" class="btn btn-success mt-3">Agregar Permiso</a>
+                                <a href="<?= site_url('consumo/create') ?>" class="btn btn-success mt-3">Agregar consumo</a>
                             </div>
                         </div>
                     </form>

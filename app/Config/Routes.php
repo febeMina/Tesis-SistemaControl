@@ -162,7 +162,14 @@ $routes->group('solicitudproductos', function ($routes) {
     $routes->get('delete/(:num)', 'SolicitudProductos::delete/$1'); // Eliminar solicitud de productos existente
     $routes->get('cargarModal/(:num)', 'SolicitudProductos::cargarModal/$1');
 
+    /// Ruta para el reporte de requisiciones de productos
+    $routes->get('reporteS', 'ReporteSolicitudProductos::index');
+    $routes->get('reporte-solicitud-productos', 'ReporteSolicitudProductos::index');
 });
+
+// Ruta para generar el reporte PDF
+$routes->get('reporte-pdf/generar-reporte-solicitud-productos', 'ReporteSolicitudProductos::generarReporte');
+
 
 // Rutas para el controlador Tipos de producto ------------- 03/07/2024
 $routes->get('tipo_producto', 'TipoProducto::index');
