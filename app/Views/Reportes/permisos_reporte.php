@@ -66,7 +66,7 @@
                                             $fechaInicio = new DateTime($permiso['fechaInicio']);
                                             $fechaFin = new DateTime($permiso['fechaFin']);
                                             $intervalo = $fechaInicio->diff($fechaFin);
-                                            $diasSolicitados = $intervalo->days + 1; // Sumamos 1 para incluir el primer día
+                                            $diasSolicitados = $intervalo->days; // Sumamos 1 para incluir el primer día
                                             $horasSolicitadas = $permiso['horasSolicitadas'] ?? '-';
                                             
                                             // Obtener saldo histórico de días y horas

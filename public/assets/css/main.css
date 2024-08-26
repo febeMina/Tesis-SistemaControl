@@ -121,3 +121,34 @@ body {
     background-color: #28a745; /* Color de fondo para el botón AddAlumno */
     border-color: #28a745; /* Color del borde para el botón AddAlumno */
 }
+
+/* Ajustes generales del submenú */
+.nav .sub-menu {
+    width: auto; /* Permitir que el submenú tenga el ancho necesario */
+    min-width: 200px; /* Establece un ancho mínimo si es necesario */
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+}
+
+/* Evitar que el texto se corte */
+.nav-link {
+    white-space: nowrap; /* Evita que el texto se corte y se muestre en una sola línea */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
+}
+
+/* Estilo de los submenús */
+.sub-menu .nav-link {
+    padding-left: 20px; /* Ajusta el padding si es necesario */
+    font-size: 14px; /* Ajusta el tamaño de la fuente para submenús */
+}
+
+/* Asegurar la responsividad */
+@media (max-width: 768px) {
+    .sidebar-offcanvas {
+        width: 100%; /* Asegurar que la barra lateral sea responsiva */
+    }
+
+    .sub-menu .nav-link {
+        font-size: 13px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    }
+}

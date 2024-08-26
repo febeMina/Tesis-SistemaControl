@@ -67,7 +67,7 @@
                                         $fechaInicio = new DateTime($item['fechaInicio']);
                                         $fechaFin = new DateTime($item['fechaFin']);
                                         $intervalo = $fechaInicio->diff($fechaFin);
-                                        $diasSolicitados = $intervalo->days + 1; // Sumamos 1 para incluir el primer día
+                                        $diasSolicitados = $intervalo->days; // Sumamos 1 para incluir el primer día
                                         $horasSolicitadas = $item['horasSolicitadas'] ?? '-';
                                         
                                         // Obtener saldo histórico de días y horas

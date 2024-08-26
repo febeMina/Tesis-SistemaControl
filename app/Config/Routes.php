@@ -201,3 +201,11 @@ $routes->post('productos/update/(:num)', 'Productos::update/$1');
 $routes->get('productos/delete/(:num)', 'Productos::delete/$1');
 // Bitácora
 $routes->get('bitacora', 'Bitacora::index');
+
+
+$routes->get('/registro-diario', 'RegistroDiarioController::index');
+$routes->get('/registro-diario/create', 'RegistroDiarioController::create');
+$routes->post('/registro-diario/store', 'RegistroDiarioController::store');
+$routes->get('/registro-diario/show/(:num)', 'RegistroDiarioController::show/$1');
+$routes->get('public/registro-diario/show/(:num)', 'RegistroDiario::show/$1');
+$routes->get('registro-diario/getDetails/(:num)', 'RegistroDiarioController::getDetails/$1');

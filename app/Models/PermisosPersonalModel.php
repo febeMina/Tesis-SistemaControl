@@ -21,7 +21,7 @@ class PermisosPersonalModel extends Model
         'diasSolicitados',
         'saldoHistorialHoras',
         'saldoHistorialDias',
-        'fechaCreacion' // Añadido
+        'fechaCreacion' 
     ];
 
     protected $useTimestamps = false;
@@ -142,8 +142,6 @@ class PermisosPersonalModel extends Model
     }
     
 
-    
-    
 
     public function getPermisosPorDocente($idDocente)
     {

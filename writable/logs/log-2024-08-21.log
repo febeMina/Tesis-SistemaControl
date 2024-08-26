@@ -1,0 +1,908 @@
+INFO - 2024-08-21 02:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 04:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 04:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 04:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 04:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 04:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 04:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 04:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 10:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 11:07:43 --> mysqli_sql_exception: Table 'sistema_control.grados' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->create()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-21 11:07:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.grados' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `grados`
+WHERE `estado` = :estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RegistroDiarioController.php(33): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 11:07:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.grados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `grados`
+WHERE `estado` = \'Activo\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `grados`
+WHERE `estado` = \'Activo\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `grados`
+WHERE `estado` = :estado:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\RegistroDiarioController.php(33): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 11:07:43 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.grados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `grados`
+WHERE `estado` = \'Activo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `grados`
+WHERE `estado` = \'Activo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `grados`
+WHERE `estado` = \'Activo\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `grados`
+WHERE `estado` = :estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(33): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 11:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 11:13:34 --> ErrorException: Undefined property: App\Controllers\RegistroDiarioController::$docenteModel
+in APPPATH\Controllers\RegistroDiarioController.php on line 29.
+ 1 APPPATH\Controllers\RegistroDiarioController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\RegistroDiarioController::$docenteModel', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\RegistroDiarioController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 11:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 11:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 20:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 20:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 20:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 20:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 20:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 20:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 20:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 21:06:53 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-08-21 21:06:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Operand should contain 1 column(s)
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:06:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:06:53 --> [Caused by] mysqli_sql_exception: Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 21:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 21:42:28 --> mysqli_sql_exception: Unknown column 'idDocente' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-08-21 21:42:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:42:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:42:28 --> [Caused by] mysqli_sql_exception: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 21:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:42:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 21:42:52 --> mysqli_sql_exception: Unknown column 'idDocente' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-08-21 21:42:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:42:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:42:52 --> [Caused by] mysqli_sql_exception: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 21:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 21:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 21:59:40 --> mysqli_sql_exception: Unknown column 'idDocente' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-08-21 21:59:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:59:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 21:59:40 --> [Caused by] mysqli_sql_exception: Unknown column 'idDocente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\RegistroDiarioController.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 22:03:56 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\RegistroDiarioController.php on line 63.
+ 1 APPPATH\Controllers\RegistroDiarioController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\RegistroDiarioController.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 22:10:50 --> ErrorException: Undefined array key "nombre_completo"
+in APPPATH\Views\registro_diario\index.php on line 43.
+ 1 APPPATH\Views\registro_diario\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_completo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\registro_diario\\index.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\registro_diario\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('registro_diario/index', [], true)
+ 5 APPPATH\Controllers\RegistroDiarioController.php(25): view('registro_diario/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 22:20:10 --> mysqli_sql_exception: Table 'sistema_control.docentes' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-21 22:20:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.docentes' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:20:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.docentes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:20:10 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.docentes' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docentes` ON `detalle_asistencia`.`idDocente` = `docentes`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docentes`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 22:20:57 --> mysqli_sql_exception: Unknown column 'registro_diario.grado' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-21 22:20:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'registro_diario.grado' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:20:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'registro_diario.grado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:20:57 --> [Caused by] mysqli_sql_exception: Unknown column 'registro_diario.grado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 22:21:57 --> mysqli_sql_exception: Unknown column 'detalle_asistencia.grado' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-21 22:21:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_asistencia.grado' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:21:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_asistencia.grado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:21:57 --> [Caused by] mysqli_sql_exception: Unknown column 'detalle_asistencia.grado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `detalle_asistencia`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 22:22:08 --> mysqli_sql_exception: Unknown column 'registro_diario.grado' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-21 22:22:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'registro_diario.grado' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:22:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'registro_diario.grado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:22:08 --> [Caused by] mysqli_sql_exception: Unknown column 'registro_diario.grado' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1697): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+FROM `registro_diario`
+JOIN `detalle_asistencia` ON `detalle_asistencia`.`idRegistroDiario` = `registro_diario`.`idRegistroDiario`
+JOIN `docente` ON `detalle_asistencia`.`idDocente` = `docente`.`idDocente`
+GROUP BY `registro_diario`.`idRegistroDiario`, `registro_diario`.`fecha`, `docente`.`nombre_completo`, `registro_diario`.`grado`, `registro_diario`.`familiasBeneficiadas`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(22): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 22:41:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "public/registro_diario/create.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('public/registro_diario/create.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/registro_diario/create', [], true)
+ 3 APPPATH\Controllers\RegistroDiarioController.php(37): view('public/registro_diario/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 22:49:20 --> mysqli_sql_exception: Table 'sistema_control.grados' doesn't exist in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `detalle...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `detalle...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `detalle...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `detalle...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\RegistroDiarioController.php(101): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->show('3')
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-08-21 22:49:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.grados' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = :idRegistroDiario:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RegistroDiarioController.php(101): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->show('3')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:49:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.grados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = :idRegistroDiario:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\RegistroDiarioController.php(101): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->show('3')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-21 22:49:20 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.grados' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `detalle_asistencia`.*, `grados`.`nombre` as `nombre_grado`
+FROM `detalle_asistencia`
+JOIN `grados` ON `detalle_asistencia`.`idGrado` = `grados`.`idGrado`
+WHERE `idRegistroDiario` = :idRegistroDiario:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\RegistroDiarioController.php(101): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RegistroDiarioController->show('3')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroDiarioController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-21 22:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 22:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 23:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 23:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 23:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 23:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 23:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
