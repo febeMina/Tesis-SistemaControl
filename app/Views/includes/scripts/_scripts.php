@@ -16,4 +16,5 @@
 <!-- endinject -->
 <!-- Custom js for this page -->
 <script src="<?= base_url('public/assets/js/dashboard.js') ?>"></script>
-<script src="<?= base_url('public/assets/js/main.js') ?>"></script>
+<script src="<?= base_url('public/assets/js/main.js') ?>"></script><!-- Agrega esto en la sección <head> de tu documento -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>

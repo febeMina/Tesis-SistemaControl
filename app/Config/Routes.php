@@ -209,3 +209,10 @@ $routes->post('/registro-diario/store', 'RegistroDiarioController::store');
 $routes->get('/registro-diario/show/(:num)', 'RegistroDiarioController::show/$1');
 $routes->get('public/registro-diario/show/(:num)', 'RegistroDiario::show/$1');
 $routes->get('registro-diario/getDetails/(:num)', 'RegistroDiarioController::getDetails/$1');
+
+$routes->get('tipo-documento', 'TipoDocumentoController::index');
+$routes->get('tipo-documento/create', 'TipoDocumentoController::create');
+$routes->post('tipo-documento/store', 'TipoDocumentoController::store');
+$routes->get('tipo-documento/edit/(:num)', 'TipoDocumentoController::edit/$1');
+$routes->post('tipo-documento/update/(:num)', 'TipoDocumentoController::update/$1');
+$routes->post('tipo-documento/delete/(:num)', 'TipoDocumentoController::delete/$1');

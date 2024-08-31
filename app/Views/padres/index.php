@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header" style="background-color: #090066; border-radius: 15px;">
-                    <h3 class="text-center">Padres Registrados</h3>
+                    <h3 class="text-center text-white">Asociados</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <!-- Mensaje de éxito -->
@@ -20,10 +20,17 @@
                     <form method="get" action="<?= site_url('padres') ?>" class="mb-3">
                         <div class="row">
                             <div class="col-md-4">
-                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre Completo" value="<?= isset($filters['nombre_completo']) ? $filters['nombre_completo'] : '' ?>">
+                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre Completo" value="<?= isset($filters['nombre_completo']) ? esc($filters['nombre_completo']) : '' ?>">
                             </div>
                             <div class="col-md-4">
-                                <input type="text" name="dui" class="form-control" placeholder="DUI" value="<?= isset($filters['dui']) ? $filters['dui'] : '' ?>">
+                                <select class="form-control" id="tipo_documento" name="tipo_documento">
+                                    <option value="">Seleccione...</option>
+                                    <?php foreach ($tiposDocumento as $tipo): ?>
+                                        <option value="<?= $tipo['idTipoDocumento'] ?>" <?= isset($filters['tipo_documento']) && $filters['tipo_documento'] == $tipo['idTipoDocumento'] ? 'selected' : '' ?>>
+                                            <?= esc($tipo['nombre']) ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
                             <div class="col-md-4">
                                 <select name="genero" class="form-control">
@@ -54,21 +61,25 @@
                             <thead>
                                 <tr>
                                     <th>Nombre Completo</th>
-                                    <th>DUI</th>
+                                    <th>Tipo de Documento</th>
+                                    <th>Número de Documento</th>
                                     <th>Teléfono</th>
                                     <th>Estado</th>
                                     <th>Género</th>
+                                    <th>Tipo de Asociado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($padres as $padre): ?>
                                     <tr>
-                                        <td><?= esc($padre['nombreCompleto']) ?></td>
-                                        <td><?= esc($padre['DUI']) ?></td>
+                                        <td><?= esc($padre['nombreCompleto']); ?></td>
+                                        <td><?= esc($padre['tipo_documento']); ?></td>
+                                        <td><?= esc($padre['numero_documento']); ?></td>
                                         <td><?= esc($padre['telefono']) ?></td>
                                         <td><?= esc($padre['estado']) ?></td>
                                         <td><?= esc($padre['Genero']) === 'M' ? 'Masculino' : 'Femenino' ?></td>
+                                        <td><?= esc($padre['tipo_asociado']) === 'INTERNO' ? 'Interno' : 'Externo' ?></td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Acciones">
                                                 <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">
@@ -87,6 +98,13 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <!-- Paginación -->
+                    <div class="pagination">
+                        <?= $pager ?> <!-- Mostrar el HTML de la paginación -->
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -99,8 +117,9 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color: #090066; color: white;">
                 <h5 class="modal-title" id="alumnosModalLabel">Alumnos Asociados al Padre</h5>
-                <!-- Botón de cerrar -->
-                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body" style="background-color: #f0f0f0;">
                 <div id="alumnosContainer"></div>
@@ -108,7 +127,6 @@
         </div>
     </div>
 </div>
-
 
 <script>
     function showAlumnosModal(padreId) {

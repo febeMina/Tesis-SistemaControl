@@ -83,9 +83,10 @@
                     <li class="nav-item"><a href="<?= site_url('usuario') ?>" class="nav-link">Usuarios</a></li>
                     <li class="nav-item"><a href="<?= site_url('roles') ?>" class="nav-link">Roles</a></li>
                     <li class="nav-item"><a href="<?= site_url('acceso') ?>" class="nav-link">Accesos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Padres</a></li>
+                    <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Asociados</a></li>
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
+                    <li class="nav-item"><a href="<?= site_url('tipo-documento') ?>" class="nav-link">Tipos de documentos</a></li>
                 </ul>
             </div>
         </li>
