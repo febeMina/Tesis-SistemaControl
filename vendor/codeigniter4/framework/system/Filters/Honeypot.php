@@ -28,7 +28,7 @@ class Honeypot implements FilterInterface
      * Checks if Honeypot field is empty, if not then the
      * requester is a bot
      *
-     * @param list<string>|null $arguments
+     * @param array|null $arguments
      *
      * @throws HoneypotException
      */
@@ -46,7 +46,7 @@ class Honeypot implements FilterInterface
     /**
      * Attach a honeypot to the current response.
      *
-     * @param list<string>|null $arguments
+     * @param array|null $arguments
      */
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {

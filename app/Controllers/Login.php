@@ -47,9 +47,8 @@ class Login extends Controller
     
                     // Obtener información del usuario
                     $userInfo = $userModel
-                        ->select('usuarios.idUsuarios, rol.nombreRol, docente.nombre_completo')
+                        ->select('rol.nombreRol')
                         ->join('rol', 'rol.idRol = usuarios.idRol', 'inner')
-                        ->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner')
                         ->where('usuario', $user)
                         ->first();
     
@@ -59,21 +58,21 @@ class Login extends Controller
                         'usuario' => $username['usuario'],
                         'id' => $userInfo['idUsuarios'],
                         'rol' => $userInfo['nombreRol'],
-                        'docente' => $userInfo['nombre_completo'],
                         'isLoggedIn' => true
                     ];
     
                     $session->set($userData);
                 } else {
-                    $response['message'] = 'Credenciales inválidas';
+                    $response['message'] = 'Usuario o contraseña incorrecta';
                 }
             } else {
-                $response['message'] = 'Credenciales inválidas';
+                $response['message'] = 'Usuario o contraseña incorrecta';
             }
         }
     
         return $this->response->setJSON($response);
     }
+    
 
     public function logout()
     {

@@ -23,6 +23,7 @@ $routes->get('report', 'Reportes::index');
 
 
 
+
 $routes->group('admin', function ($routes) {
     $routes->get('licencias', 'AdminLicencias::index');
     $routes->get('licencias/create', 'AdminLicencias::create');
@@ -39,9 +40,11 @@ $routes->get('maestros', 'Maestros::index');
 $routes->match(['get', 'post'], 'maestros/index', 'Maestros::index');
 $routes->get('maestros/create', 'Maestros::create');
 $routes->post('maestros/store', 'Maestros::store');
-$routes->get('maestros/edit/(:segment)', 'Maestros::edit/$1');
-$routes->post('maestros/update/(:segment)', 'Maestros::update/$1');
-$routes->get('maestros/delete/(:segment)', 'Maestros::delete/$1');
+$routes->get('maestros/edit/(:num)', 'Maestros::edit/$1');
+$routes->post('maestros/update/(:num)', 'Maestros::update/$1');
+$routes->match(['get', 'post'], 'maestros/delete', 'Maestros::delete');
+
+
 
 
 // Rutas para el controlador Padres
@@ -56,11 +59,13 @@ $routes->get('padres/getAlumnosAjax/(:num)', 'Padres::getAlumnosAjax/$1');
 
 // Rutas para el controlador Tipos de permisos
 
-$routes->get('tipo_permiso/create', 'TipoPermiso::create');
-$routes->post('tipo_permiso/store', 'TipoPermiso::store');
-$routes->get('tipo_permiso/edit/(:num)', 'TipoPermiso::edit/$1');
-$routes->post('tipo_permiso/update', 'TipoPermiso::update');
-$routes->get('tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
+$routes->get('/tipo_permiso', 'TipoPermiso::index');
+$routes->get('/tipo_permiso/create', 'TipoPermiso::create');
+$routes->post('/tipo_permiso/store', 'TipoPermiso::store');
+$routes->get('/tipo_permiso/edit/(:num)', 'TipoPermiso::edit/$1');
+$routes->post('/tipo_permiso/update', 'TipoPermiso::update');
+$routes->get('/tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
+
 
 
 // Rutas para el módulo de permisos magisteriales
@@ -70,11 +75,24 @@ $routes->post('permiso_magisterial/store', 'PermisoMagisterial::store');
 $routes->get('permiso_magisterial/create', 'PermisoMagisterial::create');
 $routes->get('report', 'ReportController::index');
 
-$routes->get('permiso_magisterial/generarReportePDF', 'PermisoMagisterial::generarReportePDF');
-$routes->get('permiso_magisterial/generarReporteExcel', 'PermisoMagisterial::generarReporteExcel');
 
 
 
+
+
+// Rutas para el manejo de permisos personales
+$routes->get('permisos_personal', 'PermisosPersonal::index');
+$routes->get('permisos_personal/create', 'PermisosPersonal::create');
+$routes->post('permisos_personal/store', 'PermisosPersonal::store');
+
+$routes->get('/reporte', 'PermisosPersonal::reporte');
+$routes->get('reporte-pdf/generar-reporte', 'ReportePDF::generarReporte');
+
+
+
+// Rutas para los reportes de permisos magisteriales
+$routes->get('reportes/permisos_magisteriales_reporte', 'ReportesController::permisos_magisteriales_reporte');
+$routes->post('reportes/generate_report', 'PermisoMagisterialController::generate_report');
 //LOGIN
 $routes->get('login', 'Login::index');
 $routes->post('login/signin', 'Login::signIn');
@@ -98,16 +116,11 @@ $routes->post('usuario/store', 'Usuario::store');
 $routes->get('usuario/edit/(:num)', 'Usuario::edit/$1');
 $routes->post('usuario/update/(:num)', 'Usuario::update/$1');
 $routes->get('usuario/delete/(:num)', 'Usuario::delete/$1');
+// En app/Config/Routes.php
+$routes->get('usuario/configuracion', 'Usuario::configuracion'); // Reemplaza 'configuracion' con el método que maneja la configuración del usuario
+
 
 $routes->get('bitacora', 'Bitacora::index');
-
-// Rutas para el controlador Tipos de producto
-$routes->get('tipo_producto', 'TipoProducto::index');
-$routes->get('tipo_producto/create', 'TipoProducto::create');
-$routes->post('tipo_producto/store', 'TipoProducto::store');
-$routes->get('tipo_producto/edit/(:num)', 'TipoProducto::edit/$1');
-$routes->post('tipo_producto/update/(:num)', 'TipoProducto::update/$1');
-$routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
 
 //Rutas donaciones
 $routes->post('donaciones/store', 'Donaciones::store');
@@ -131,3 +144,81 @@ $routes->post('unidadesmedida/update/(:num)', 'UnidadesMedida::update/$1');
 $routes->get('unidadesmedida/delete/(:num)', 'UnidadesMedida::delete/$1');
 
 
+//Consumo por productos
+$routes->group('consumo', function ($routes) {
+    $routes->get('/', 'Consumo::index');          // Listar consumos
+    $routes->get('create', 'Consumo::create');    // Mostrar formulario de creación
+    $routes->post('store', 'Consumo::store');     // Guardar nuevo consumo
+    $routes->get('edit/(:num)', 'Consumo::edit/$1');  // Mostrar formulario de edición
+    $routes->post('update/(:num)', 'Consumo::update/$1');    // Actualizar consumo existente
+    $routes->get('delete/(:num)', 'Consumo::delete/$1');  // Eliminar consumo existente
+    $routes->get('getSaldoInicial/(:num)', 'Consumo::getSaldoInicial/$1'); // Obtener saldo inicial
+});
+
+
+
+
+// Requisicion de productos
+$routes->group('solicitudproductos', function ($routes) {
+    $routes->get('/', 'SolicitudProductos::index');            // Listar solicitudes de productos
+    $routes->get('create', 'SolicitudProductos::create');      // Mostrar formulario de creación de solicitud
+    $routes->post('store', 'SolicitudProductos::store');       // Guardar nueva solicitud de productos
+    $routes->get('edit/(:num)', 'SolicitudProductos::edit/$1');   // Mostrar formulario de edición de solicitud
+    $routes->post('update/(:num)', 'SolicitudProductos::update/$1'); // Actualizar solicitud de productos existente
+    $routes->get('delete/(:num)', 'SolicitudProductos::delete/$1'); // Eliminar solicitud de productos existente
+    $routes->get('cargarModal/(:num)', 'SolicitudProductos::cargarModal/$1');
+
+    /// Ruta para el reporte de requisiciones de productos
+    $routes->get('reporteS', 'ReporteSolicitudProductos::index');
+    $routes->get('reporte-solicitud-productos', 'ReporteSolicitudProductos::index');
+});
+
+// Ruta para generar el reporte PDF
+$routes->get('reporte-pdf/generar-reporte-solicitud-productos', 'ReporteSolicitudProductos::generarReporte');
+
+
+// Rutas para el controlador Tipos de producto ------------- 03/07/2024
+$routes->get('tipo_producto', 'TipoProducto::index');
+$routes->get('tipo_producto/create', 'TipoProducto::create');
+$routes->post('tipo_producto/store', 'TipoProducto::store');
+$routes->get('tipo_producto/edit/(:num)', 'TipoProducto::edit/$1');
+$routes->post('tipo_producto/update/(:num)', 'TipoProducto::update/$1');
+$routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
+// Rutas para Unidades de Medida Individual ------------- 03/07/2024
+$routes->get('unidadesindividuales', 'UnidadesIndividuales::index');
+$routes->get('unidadesindividuales/create', 'UnidadesIndividuales::create');
+$routes->post('unidadesindividuales/store', 'UnidadesIndividuales::store');
+$routes->get('unidadesindividuales/edit/(:num)', 'UnidadesIndividuales::edit/$1');
+$routes->post('unidadesindividuales/update/(:num)', 'UnidadesIndividuales::update/$1');
+$routes->get('unidadesindividuales/delete/(:num)', 'UnidadesIndividuales::delete/$1');
+// Rutas para el controlador UnidadesPorCaja ------------- 03/07/2024
+$routes->get('unidadesporcaja', 'UnidadesPorCaja::index');
+$routes->get('unidadesporcaja/create', 'UnidadesPorCaja::create');
+$routes->post('unidadesporcaja/store', 'UnidadesPorCaja::store');
+$routes->get('unidadesporcaja/edit/(:num)', 'UnidadesPorCaja::edit/$1');
+$routes->post('unidadesporcaja/update/(:num)', 'UnidadesPorCaja::update/$1');
+$routes->get('unidadesporcaja/delete/(:num)', 'UnidadesPorCaja::delete/$1');
+// Rutas para el controlador Productos ------------- 03/07/2024
+$routes->get('productos', 'Productos::index');
+$routes->get('productos/create', 'Productos::create');
+$routes->post('productos/store', 'Productos::store');
+$routes->get('productos/edit/(:num)', 'Productos::edit/$1');
+$routes->post('productos/update/(:num)', 'Productos::update/$1');
+$routes->get('productos/delete/(:num)', 'Productos::delete/$1');
+// Bitácora
+$routes->get('bitacora', 'Bitacora::index');
+
+
+$routes->get('/registro-diario', 'RegistroDiarioController::index');
+$routes->get('/registro-diario/create', 'RegistroDiarioController::create');
+$routes->post('/registro-diario/store', 'RegistroDiarioController::store');
+$routes->get('/registro-diario/show/(:num)', 'RegistroDiarioController::show/$1');
+$routes->get('public/registro-diario/show/(:num)', 'RegistroDiario::show/$1');
+$routes->get('registro-diario/getDetails/(:num)', 'RegistroDiarioController::getDetails/$1');
+
+$routes->get('tipo-documento', 'TipoDocumentoController::index');
+$routes->get('tipo-documento/create', 'TipoDocumentoController::create');
+$routes->post('tipo-documento/store', 'TipoDocumentoController::store');
+$routes->get('tipo-documento/edit/(:num)', 'TipoDocumentoController::edit/$1');
+$routes->post('tipo-documento/update/(:num)', 'TipoDocumentoController::update/$1');
+$routes->post('tipo-documento/delete/(:num)', 'TipoDocumentoController::delete/$1');

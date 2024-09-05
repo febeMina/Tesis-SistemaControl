@@ -13,10 +13,8 @@ namespace CodeIgniter\Router;
 
 use Closure;
 use CodeIgniter\Exceptions\PageNotFoundException;
-use CodeIgniter\HTTP\Exceptions\BadRequestException;
 use CodeIgniter\HTTP\Exceptions\RedirectException;
 use CodeIgniter\HTTP\Request;
-use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Router\Exceptions\RouterException;
 use Config\App;
 use Config\Feature;
@@ -46,7 +44,7 @@ class Router implements RouterInterface
     /**
      * The name of the controller class.
      *
-     * @var (Closure(mixed...): (ResponseInterface|string|void))|string
+     * @var Closure|string
      */
     protected $controller;
 
@@ -115,29 +113,17 @@ class Router implements RouterInterface
      * The filter info from Route Collection
      * if the matched route should be filtered.
      *
-     * @var list<string>
+     * @var string[]
      */
     protected $filtersInfo = [];
 
     protected ?AutoRouterInterface $autoRouter = null;
 
     /**
-     * Permitted URI chars
-     *
-     * The default value is `''` (do not check) for backward compatibility.
-     */
-    protected string $permittedURIChars = '';
-
-    /**
      * Stores a reference to the RouteCollection object.
      */
     public function __construct(RouteCollectionInterface $routes, ?Request $request = null)
     {
-        $config = config(App::class);
-        if (isset($config->permittedURIChars)) {
-            $this->permittedURIChars = $config->permittedURIChars;
-        }
-
         $this->collection = $routes;
 
         // These are only for auto-routing
@@ -177,7 +163,7 @@ class Router implements RouterInterface
      *
      * @param string|null $uri URI path relative to baseURL
      *
-     * @return (Closure(mixed...): (ResponseInterface|string|void))|string Controller classname or Closure
+     * @return Closure|string Controller classname or Closure
      *
      * @throws PageNotFoundException
      * @throws RedirectException
@@ -191,8 +177,6 @@ class Router implements RouterInterface
 
         // Decode URL-encoded string
         $uri = urldecode($uri);
-
-        $this->checkDisallowedChars($uri);
 
         // Restart filterInfo
         $this->filterInfo  = null;
@@ -243,7 +227,7 @@ class Router implements RouterInterface
     /**
      * Returns the filter info for the matched route, if any.
      *
-     * @return list<string>
+     * @return string[]
      */
     public function getFilters(): array
     {
@@ -253,7 +237,7 @@ class Router implements RouterInterface
     /**
      * Returns the name of the matched controller.
      *
-     * @return (Closure(mixed...): (ResponseInterface|string|void))|string Controller classname or Closure
+     * @return Closure|string Controller classname or Closure
      */
     public function controllerName()
     {
@@ -448,7 +432,7 @@ class Router implements RouterInterface
                     }, is_array($handler) ? key($handler) : $handler);
 
                     throw new RedirectException(
-                        preg_replace('#\A' . $routeKey . '\z#u', $redirectTo, $uri),
+                        preg_replace('#^' . $routeKey . '$#u', $redirectTo, $uri),
                         $this->collection->getRedirectCode($routeKey)
                     );
                 }
@@ -502,7 +486,7 @@ class Router implements RouterInterface
                     }
 
                     // Using back-references
-                    $handler = preg_replace('#\A' . $routeKey . '\z#u', $handler, $uri);
+                    $handler = preg_replace('#^' . $routeKey . '$#u', $handler, $uri);
                 }
 
                 $this->setRequest(explode('/', $handler));
@@ -690,21 +674,5 @@ class Router implements RouterInterface
         $this->matchedRoute = [$route, $handler];
 
         $this->matchedRouteOptions = $this->collection->getRoutesOptions($route);
-    }
-
-    /**
-     * Checks disallowed characters
-     */
-    private function checkDisallowedChars(string $uri): void
-    {
-        foreach (explode('/', $uri) as $segment) {
-            if ($segment !== '' && $this->permittedURIChars !== ''
-                && preg_match('/\A[' . $this->permittedURIChars . ']+\z/iu', $segment) !== 1
-            ) {
-                throw new BadRequestException(
-                    'The URI you submitted has disallowed characters: "' . $segment . '"'
-                );
-            }
-        }
     }
 }

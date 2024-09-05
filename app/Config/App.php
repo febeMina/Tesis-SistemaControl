@@ -189,5 +189,5 @@ class App extends BaseConfig
     public $sessionMatchIP = false;
     public $sessionTimeToUpdate = 300;
     public $sessionRegenerateDestroy = false;
-    public $cookieSameSite = 'None';
+    public $cookieSameSite = 'Lax';
 }

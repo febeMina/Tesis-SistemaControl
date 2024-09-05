@@ -12,7 +12,6 @@
 namespace CodeIgniter\Router;
 
 use Closure;
-use CodeIgniter\HTTP\ResponseInterface;
 
 /**
  * Interface RouteCollectionInterface
@@ -29,9 +28,9 @@ interface RouteCollectionInterface
     /**
      * Adds a single route to the collection.
      *
-     * @param string                                                            $from    The route path (with placeholders or regex)
-     * @param array|(Closure(mixed...): (ResponseInterface|string|void))|string $to      The route handler
-     * @param array|null                                                        $options The route options
+     * @param string               $from    The route path (with placeholders or regex)
+     * @param array|Closure|string $to      The route handler
+     * @param array|null           $options The route options
      *
      * @return RouteCollectionInterface
      */
@@ -112,7 +111,7 @@ interface RouteCollectionInterface
      * Returns the 404 Override setting, which can be null, a closure
      * or the controller/string.
      *
-     * @return (Closure(string): (ResponseInterface|string|void))|string|null
+     * @return Closure|string|null
      */
     public function get404Override();
 

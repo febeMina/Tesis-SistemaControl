@@ -88,4 +88,7 @@ require_once SYSTEMPATH . 'Config/DotEnv.php';
 $env = new DotEnv(ROOTPATH);
 $env->load();
 
+// Always load the URL helper, it should be used in most of apps.
+helper('url');
+
 Services::routes()->loadRoutes();

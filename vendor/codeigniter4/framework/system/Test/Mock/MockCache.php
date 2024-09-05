@@ -29,7 +29,7 @@ class MockCache extends BaseHandler implements CacheInterface
     /**
      * Expiration times.
      *
-     * @var ?list<int>
+     * @var ?int[]
      */
     protected $expirations = [];
 
@@ -54,7 +54,7 @@ class MockCache extends BaseHandler implements CacheInterface
      *
      * @param string $key Cache item name
      *
-     * @return bool|null
+     * @return mixed
      */
     public function get(string $key)
     {
@@ -66,7 +66,7 @@ class MockCache extends BaseHandler implements CacheInterface
     /**
      * Get an item from the cache, or execute the given Closure and store the result.
      *
-     * @return bool|null
+     * @return mixed
      */
     public function remember(string $key, int $ttl, Closure $callback)
     {
@@ -203,7 +203,7 @@ class MockCache extends BaseHandler implements CacheInterface
      * The information returned and the structure of the data
      * varies depending on the handler.
      *
-     * @return list<string> Keys currently present in the store
+     * @return string[] Keys currently present in the store
      */
     public function getCacheInfo()
     {
@@ -266,8 +266,6 @@ class MockCache extends BaseHandler implements CacheInterface
      * Asserts that the cache has an item named $key.
      * The value is not checked since storing false or null
      * values is valid.
-     *
-     * @return void
      */
     public function assertHas(string $key)
     {
@@ -278,8 +276,6 @@ class MockCache extends BaseHandler implements CacheInterface
      * Asserts that the cache has an item named $key with a value matching $value.
      *
      * @param mixed $value
-     *
-     * @return void
      */
     public function assertHasValue(string $key, $value = null)
     {
@@ -296,8 +292,6 @@ class MockCache extends BaseHandler implements CacheInterface
 
     /**
      * Asserts that the cache does NOT have an item named $key.
-     *
-     * @return void
      */
     public function assertMissing(string $key)
     {

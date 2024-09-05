@@ -1,0 +1,280 @@
+INFO - 2024-08-27 00:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 00:21:49 --> ErrorException: Undefined array key "DUI"
+in APPPATH\Views\padres\index.php on line 68.
+ 1 APPPATH\Views\padres\index.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "DUI"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(34): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 00:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 00:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 00:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 00:28:54 --> ErrorException: Undefined array key "DUI"
+in APPPATH\Controllers\Padres.php on line 67.
+ 1 APPPATH\Controllers\Padres.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "DUI"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Padres.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 00:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 00:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 00:32:50 --> ErrorException: Undefined array key "DUI"
+in APPPATH\Views\padres\index.php on line 68.
+ 1 APPPATH\Views\padres\index.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "DUI"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(34): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 00:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 00:59:09 --> ErrorException: Undefined variable $tipos_documento
+in APPPATH\Views\padres\index.php on line 29.
+ 1 APPPATH\Views\padres\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipos_documento', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(36): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:00:46 --> ErrorException: Undefined variable $tipos_documento
+in APPPATH\Views\padres\index.php on line 29.
+ 1 APPPATH\Views\padres\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipos_documento', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(36): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:01:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:01:28 --> ErrorException: Undefined variable $tiposDocumento
+in APPPATH\Views\padres\index.php on line 29.
+ 1 APPPATH\Views\padres\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tiposDocumento', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(36): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:08:16 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\padres\index.php on line 31.
+ 1 APPPATH\Views\padres\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:11:18 --> ErrorException: Undefined array key "idDatosResponsable"
+in APPPATH\Views\padres\index.php on line 31.
+ 1 APPPATH\Views\padres\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDatosResponsable"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:22:02 --> ErrorException: Undefined array key "idDatosResponsable"
+in APPPATH\Views\padres\index.php on line 31.
+ 1 APPPATH\Views\padres\index.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idDatosResponsable"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 31)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:24:47 --> ErrorException: Undefined array key "tipo_documento_nombre"
+in APPPATH\Views\padres\index.php on line 67.
+ 1 APPPATH\Views\padres\index.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo_documento_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:25:16 --> Error: Call to undefined function set_select()
+in APPPATH\Views\padres\index.php on line 29.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 4 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:27:30 --> ErrorException: Undefined array key "tipo_documento_nombre"
+in APPPATH\Views\padres\index.php on line 77.
+ 1 APPPATH\Views\padres\index.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo_documento_nombre"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:29:16 --> ErrorException: Undefined array key "tipo_documento"
+in APPPATH\Views\padres\index.php on line 77.
+ 1 APPPATH\Views\padres\index.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo_documento"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 01:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 01:35:17 --> ErrorException: Undefined array key "tipo_documento"
+in APPPATH\Views\padres\index.php on line 77.
+ 1 APPPATH\Views\padres\index.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo_documento"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 22:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 22:30:34 --> ErrorException: Undefined array key "tipo_documento"
+in APPPATH\Views\padres\index.php on line 77.
+ 1 APPPATH\Views\padres\index.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo_documento"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(40): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 22:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-27 22:38:56 --> ErrorException: Undefined array key "DUI"
+in APPPATH\Views\padres\edit.php on line 29.
+ 1 APPPATH\Views\padres\edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "DUI"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\edit.php', 29)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\padres\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/edit', [], true)
+ 5 APPPATH\Controllers\Padres.php(154): view('padres/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->edit('15')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 22:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-27 22:39:06 --> mysqli_sql_exception: Column 'idTipoDocumento' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(34): App\Models\PadreModel->getFilteredPadres(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-08-27 22:39:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` = :estado:', [...], false)
+ 2 APPPATH\Models\PadreModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(34): App\Models\PadreModel->getFilteredPadres([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-27 22:39:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'1\'
+AND `estado` = \'activo\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'1\'
+AND `estado` = \'activo\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` = :estado:', [...], false)
+ 4 APPPATH\Models\PadreModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(34): App\Models\PadreModel->getFilteredPadres([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-08-27 22:39:07 --> [Caused by] mysqli_sql_exception: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'1\'
+AND `estado` = \'activo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'1\'
+AND `estado` = \'activo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'1\'
+AND `estado` = \'activo\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` = :estado:', [...], false)
+ 5 APPPATH\Models\PadreModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(34): App\Models\PadreModel->getFilteredPadres([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-08-27 22:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -12,8 +12,6 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "4.4.8",
-        "dompdf/dompdf": "^3.0",
-        "fpdf/fpdf": "^1.86",
         "phpoffice/phpspreadsheet": "^2.1",
         "setasign/fpdf": "^1.8",
         "tecnickcom/tcpdf": "^6.7"
@@ -36,7 +34,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php-64bit": "8.1"
+        }
     },
     "scripts": {
         "test": "phpunit"

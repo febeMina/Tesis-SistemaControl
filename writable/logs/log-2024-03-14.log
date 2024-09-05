@@ -15,7 +15,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-03-14 15:16:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nombre_completo' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -26,9 +26,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:16:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nombre_completo' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -39,10 +39,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:16:56 --> [Caused by] mysqli_sql_exception: Unknown column 'nombre_completo' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maestros` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -65,7 +65,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 15:49:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -73,9 +73,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:49:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -83,10 +83,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:49:11 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -338,7 +338,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 15:58:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -346,9 +346,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:58:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -356,10 +356,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:58:11 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -379,7 +379,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 15:58:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -387,9 +387,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:58:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -397,10 +397,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:58:34 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -420,7 +420,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 15:59:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -428,9 +428,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:59:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -438,10 +438,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 15:59:07 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -461,7 +461,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:24:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -469,9 +469,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:24:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -479,10 +479,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:24:27 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -502,7 +502,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:24:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -510,9 +510,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:24:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -520,10 +520,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:24:35 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -543,7 +543,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:25:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -551,9 +551,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:25:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -561,10 +561,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:25:24 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -593,7 +593,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:30:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -601,9 +601,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:30:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -611,10 +611,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:30:36 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -634,7 +634,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:32:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -642,9 +642,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:32:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -652,10 +652,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:32:14 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -675,7 +675,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:33:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -683,9 +683,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:33:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -693,10 +693,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:33:54 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -716,7 +716,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:35:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -724,9 +724,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:35:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -734,10 +734,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:35:17 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -757,7 +757,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:41:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -765,9 +765,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:41:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -775,10 +775,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:41:15 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -798,7 +798,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:46:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -806,9 +806,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:46:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -816,10 +816,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:46:37 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -839,7 +839,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:47:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -847,9 +847,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:47:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -857,10 +857,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:47:00 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -880,7 +880,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:50:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -888,9 +888,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:50:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -898,10 +898,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:50:21 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -921,7 +921,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 16:54:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -929,9 +929,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:54:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -939,10 +939,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 16:54:32 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-01-10\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -962,7 +962,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 17:30:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -970,9 +970,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 17:30:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -980,10 +980,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 17:30:40 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1003,7 +1003,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 17:42:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1011,9 +1011,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 17:42:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1021,10 +1021,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 17:42:51 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1044,7 +1044,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 17:47:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1052,9 +1052,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 17:47:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1062,10 +1062,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 17:47:11 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1085,7 +1085,7 @@ Stack trace:
 #9 {main}
 CRITICAL - 2024-03-14 20:09:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  2 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1093,9 +1093,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 20:09:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  4 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
@@ -1103,10 +1103,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-03-14 20:09:35 --> [Caused by] mysqli_sql_exception: Table 'prueba.docente' doesn't exist
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fecha_ingreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fecha_ingreso:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (\'Febe\', \'12345\', \'56789\', \'2022-10-01\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombre_completo`, `nip`, `escalafon`, `fechaIngreso`, `estado`) VALUES (:nombre_completo:, :nip:, :escalafon:, :fechaIngreso:, :estado:)', [...], false)
  5 APPPATH\Controllers\Maestros.php(47): CodeIgniter\Database\BaseBuilder->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Maestros->store()
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))

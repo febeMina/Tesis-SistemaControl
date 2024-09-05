@@ -1,8 +1,0 @@
-CRITICAL - 2024-07-18 03:04:52 --> ErrorException: require(fpdf.php): Failed to open stream: No such file or directory
-in APPPATH\Controllers\Donaciones.php on line 67.
- 1 APPPATH\Controllers\Donaciones.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(fpdf.php): Failed to open stream: No such file or directory', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Donaciones.php', 67)
- 2 APPPATH\Controllers\Donaciones.php(67): require()
- 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->GenerarReporte()
- 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
- 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

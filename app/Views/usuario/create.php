@@ -20,14 +20,6 @@
                             <input type="password" class="form-control" id="clave" name="clave" required>
                         </div>
                         <div class="form-group">
-                            <label for="idDocente" style="color: #000;"><i class="fas fa-user"></i> Docente</label>
-                            <select class="form-control" id="idDocente" name="idDocente" required>
-                                <?php foreach ($docentes as $docente) : ?>
-                                    <option value="<?= $docente->idDocente ?>"><?= $docente->nombre_completo ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label for="idRol" style="color: #000;"><i class="fas fa-user"></i> Rol</label>
                             <select class="form-control" id="idRol" name="idRol" required>
                                 <?php foreach ($roles as $rol) : ?>

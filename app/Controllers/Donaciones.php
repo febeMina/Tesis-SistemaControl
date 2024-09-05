@@ -3,15 +3,17 @@ namespace App\Controllers;
 //namespace App\third_party;
 
 use CodeIgniter\Controller;
-//use App\Libraries\LibReporte;
-//use App\ThirdParty\fpdf;
-use Fpdf\Fpdf;
-use Dompdf\Dompdf;
-
-
 
 class Donaciones extends Controller 
 {
+
+    protected $db;
+
+    public function __construct()
+    {
+        $this->db = \Config\Database::connect();
+    }
+    
     public function index()
     {
         $db = \Config\Database::connect();
@@ -26,7 +28,6 @@ class Donaciones extends Controller
 
     public function create()
     {
-        $db = \Config\Database::connect();
         $projectBuilder = $db->table('proyectos');
         $proyectos = $projectBuilder->select('idProyectos, nombreProyecto')->get()->getResult();
         

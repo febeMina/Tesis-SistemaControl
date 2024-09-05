@@ -83,9 +83,10 @@
                     <li class="nav-item"><a href="<?= site_url('usuario') ?>" class="nav-link">Usuarios</a></li>
                     <li class="nav-item"><a href="<?= site_url('roles') ?>" class="nav-link">Roles</a></li>
                     <li class="nav-item"><a href="<?= site_url('acceso') ?>" class="nav-link">Accesos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Padres</a></li>
+                    <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Asociados</a></li>
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
+                    <li class="nav-item"><a href="<?= site_url('tipo-documento') ?>" class="nav-link">Tipos de documentos</a></li>
                 </ul>
             </div>
         </li>
@@ -98,7 +99,7 @@
                 <span class="menu-title">Donaciones</span>
                 <i class="menu-arrow"></i>
             </a>
-              <div class="collapse" id="donaciones">
+            <div class="collapse" id="donaciones">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('proyectos') ?>" class="nav-link">Proyectos</a></li>
                     <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Listado de Donaciones</a></li>
@@ -108,7 +109,7 @@
 
 
         <li class="nav-item menu-items">
-            <a class="nav-link" href="<?= site_url('permiso_magisterial/index') ?>">
+            <a class="nav-link" href="<?= site_url('permisos_personal') ?>">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document"></i>
                 </span>
@@ -116,7 +117,7 @@
             </a>
         </li>
 
-        <!-- Menú para el apartado de Productos -->
+        <!-- Menú para el apartado de Alimentación -->
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#alimentacion" aria-expanded="false" aria-controls="alimentacion">
                 <span class="menu-icon">
@@ -127,8 +128,14 @@
             </a>
             <div class="collapse" id="alimentacion">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a href="<?= site_url('tipo_proyectos') ?>" class="nav-link">Tipo de producto</a></li>
-                    <li class="nav-item"><a href="<?= site_url('unidadesmedida') ?>" class="nav-link">Unidades de Medida</a></li>
+                    <li class="nav-item"><a href="<?= site_url('productos') ?>" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Consumo por productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Solicitud productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('registro-diario') ?>" class="nav-link">Familias beneficiadas</a></li>
+                    <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); background-color: 0f1015;">
+                    <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>
+                    <li class="nav-item"><a href="<?= site_url('unidadesporcaja') ?>" class="nav-link">Tipo de unidades</a></li>
+                    </div>
                 </ul>
             </div>
         </li>
@@ -151,6 +158,21 @@
                 </ul>
             </div>
         </li>
-         
+
+
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-icon">
+                    <i class="mdi mdi-file-document"></i>
+                </span>
+                <span class="menu-title">Bitácora 🔏</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a href="<?= site_url('bitacora') ?>" class="nav-link">Listado de Bitácora</a></li>
+                </ul>
+            </div>
+        </li>
     </ul>
 </nav>

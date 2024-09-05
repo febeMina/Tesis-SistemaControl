@@ -214,9 +214,9 @@ in APPPATH\Views\tipo_permiso\index.php on line 38.
  7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-04-14 05:11:05 --> ErrorException: Attempt to read property "cantidad_dias" on array
+CRITICAL - 2024-04-14 05:11:05 --> ErrorException: Attempt to read property "cantidadDias" on array
 in APPPATH\Views\tipo_permiso\index.php on line 39.
- 1 APPPATH\Views\tipo_permiso\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad_dias" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_permiso\\index.php', 39)
+ 1 APPPATH\Views\tipo_permiso\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidadDias" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_permiso\\index.php', 39)
  2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_permiso\\index.php')
  3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tipo_permiso/index', [], true)

@@ -3,42 +3,43 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\IncomingRequest;
+use App\Controllers\BaseController;
 
-class Usuario extends Controller
+class Usuario extends BaseController
 {
+
     public function __construct()
     {
+        
         helper('url');
         if (!session()->get('isLoggedIn')) {
             redirect()->to(base_url('public/login'))->send();
             exit;
-        } 
+        }
     }
 
-    public function index()
+        public function index()
     {
         $db = \Config\Database::connect();
         $builder = $db->table('usuarios');
-        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, rol.nombreRol, docente.nombre_completo');
+        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, rol.nombreRol');
         $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
-        $builder->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner');
         $usuarios = $builder->get()->getResult();
         return view('usuario/index', ['usuarios' => $usuarios]);
     }
+
 
     public function create()
     {
         $db = \Config\Database::connect();
 
-        // Obtener la lista de docentes
-        $docentesBuilder = $db->table('docente');
-        $docentes = $docentesBuilder->select('idDocente, nombre_completo')->get()->getResult();
-
+      
         // Obtener la lista de roles
         $rolesBuilder = $db->table('rol');
         $roles = $rolesBuilder->select('idRol, nombreRol')->get()->getResult();
 
-        return view('usuario/create', ['docentes' => $docentes, 'roles' => $roles]);
+        return view('usuario/create', ['roles' => $roles]);
     }
 
     public function store()
@@ -67,7 +68,6 @@ class Usuario extends Controller
         $data = [
             'usuario' => $this->request->getPost('usuario'),
             'clave' => password_hash($clave, PASSWORD_DEFAULT),
-            'idDocente' => $this->request->getPost('idDocente'),
             'idRol' => $this->request->getPost('idRol'),
             'estado' => $this->request->getPost('estado'),
             'usuarioCrea' => session()->get('usuario'), // Obtener el nombre de usuario de la sesión actual
@@ -91,24 +91,20 @@ class Usuario extends Controller
 
         // Obtener el usuario a editar
         $builder = $db->table('usuarios');
-        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, usuarios.idDocente, usuarios.idRol, rol.nombreRol, docente.nombre_completo');
+        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, usuarios.idRol, rol.nombreRol');
         $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
-        $builder->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner');
         $usuario = $builder->where('idUsuarios', $id)->get()->getRow();
 
         if (!$usuario) {
             return redirect()->to(base_url('public/usuario'))->with('error', 'El usuario no existe.');
         }
 
-        // Obtener la lista de docentes
-        $docentesBuilder = $db->table('docente');
-        $docentes = $docentesBuilder->select('idDocente, nombre_completo')->get()->getResult();
-
+       
         // Obtener la lista de roles
         $rolesBuilder = $db->table('rol');
         $roles = $rolesBuilder->select('idRol, nombreRol')->get()->getResult();
 
-        return view('usuario/edit', ['usuario' => $usuario, 'docentes' => $docentes, 'roles' => $roles]);
+        return view('usuario/edit', ['usuario' => $usuario,'roles' => $roles]);
     }
 
     public function update($id)
@@ -129,7 +125,6 @@ class Usuario extends Controller
         // Datos a actualizar
         $data = [
             'usuario' => $this->request->getPost('usuario'),
-            'idDocente' => $this->request->getPost('idDocente'),
             'idRol' => $this->request->getPost('idRol'),
             'estado' => $this->request->getPost('estado'),
             'usuarioModifica' => session()->get('usuario'), // Obtener el nombre de usuario de la sesión actual
@@ -166,4 +161,16 @@ class Usuario extends Controller
 
         return redirect()->to(base_url('public/usuario'))->with('success', 'Usuario eliminado correctamente.');
     }
+    
+    public function configuracion()
+    {
+        // Obtener el ID del usuario actualmente logueado
+        $userId = session()->get('idUsuarios'); // Asegúrate de usar el nombre correcto del campo
+    
+        // Redirigir al usuario a su propia página de edición
+        return redirect()->to(base_url("public/usuario/edit/{$userId}"));
+    }
+    
+    
+
 }

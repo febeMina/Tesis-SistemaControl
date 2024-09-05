@@ -29,7 +29,7 @@ if (! function_exists('form_open')) {
     function form_open(string $action = '', $attributes = [], array $hidden = []): string
     {
         // If no action is provided then set to the current url
-        if ($action === '') {
+        if (! $action) {
             $action = current_url(true);
         } // If an action is not a full URL then turn it into one
         elseif (strpos($action, '://') === false) {
@@ -456,8 +456,10 @@ if (! function_exists('form_label')) {
             $label .= ' for="' . $id . '"';
         }
 
-        foreach ($attributes as $key => $val) {
-            $label .= ' ' . $key . '="' . $val . '"';
+        if (is_array($attributes) && $attributes) {
+            foreach ($attributes as $key => $val) {
+                $label .= ' ' . $key . '="' . $val . '"';
+            }
         }
 
         return $label . '>' . $labelText . '</label>';
@@ -542,11 +544,11 @@ if (! function_exists('set_value')) {
      * Grabs a value from the POST array for the specified field so you can
      * re-populate an input field or textarea
      *
-     * @param string              $field      Field name
-     * @param list<string>|string $default    Default value
-     * @param bool                $htmlEscape Whether to escape HTML special characters or not
+     * @param string          $field      Field name
+     * @param string|string[] $default    Default value
+     * @param bool            $htmlEscape Whether to escape HTML special characters or not
      *
-     * @return list<string>|string
+     * @return string|string[]
      */
     function set_value(string $field, $default = '', bool $htmlEscape = true)
     {
@@ -654,7 +656,13 @@ if (! function_exists('set_radio')) {
 
         $postInput = $request->getPost($field);
 
-        $input = $oldInput ?? $postInput ?? $default;
+        if ($oldInput !== null) {
+            $input = $oldInput;
+        } elseif ($postInput !== null) {
+            $input = $postInput;
+        } else {
+            $input = $default;
+        }
 
         if (is_array($input)) {
             // Note: in_array('', array(0)) returns TRUE, do not use it

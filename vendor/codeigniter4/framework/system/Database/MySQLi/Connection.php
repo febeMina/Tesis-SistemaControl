@@ -355,9 +355,9 @@ class Connection extends BaseConnection
      * additional "ESCAPE x" parameter for specifying the escape character
      * in "LIKE" strings, and this handles those directly with a backslash.
      *
-     * @param list<string>|string $str Input string
+     * @param string|string[] $str Input string
      *
-     * @return list<string>|string
+     * @return string|string[]
      */
     public function escapeLikeStringDirect($str)
     {
@@ -411,7 +411,7 @@ class Connection extends BaseConnection
     /**
      * Returns an array of objects with field data
      *
-     * @return list<stdClass>
+     * @return stdClass[]
      *
      * @throws DatabaseException
      */
@@ -443,7 +443,7 @@ class Connection extends BaseConnection
     /**
      * Returns an array of objects with index data
      *
-     * @return array<string, stdClass>
+     * @return stdClass[]
      *
      * @throws DatabaseException
      * @throws LogicException
@@ -489,7 +489,7 @@ class Connection extends BaseConnection
     /**
      * Returns an array of objects with Foreign key data
      *
-     * @return array<string, stdClass>
+     * @return stdClass[]
      *
      * @throws DatabaseException
      */

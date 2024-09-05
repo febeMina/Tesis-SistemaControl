@@ -13,7 +13,15 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Setup
     // --------------------------------------------------------------------
-
+    public $solicitudPermiso = [
+        'idDocente' => 'required|integer',
+        'idDetallePermiso' => 'required|integer',
+        'fecha_inicio' => 'required|valid_date',
+        'fecha_fin' => 'permit_empty|valid_date',
+        'saldo_total_dias' => 'required|integer',
+        'saldo_total_horas' => 'permit_empty|integer',
+        'fecha_creacion' => 'required|valid_date'
+    ];
     /**
      * Stores the classes that contain the
      * rules that are available.

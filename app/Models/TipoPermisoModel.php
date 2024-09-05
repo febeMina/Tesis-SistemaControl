@@ -8,7 +8,7 @@ class TipoPermisoModel extends Model
 {
     protected $table = 'tipo_permisos';
     protected $primaryKey = 'idTipoPermiso';
-    protected $allowedFields = ['nombre', 'cantidad_dias'];
+    protected $allowedFields = ['nombre', 'cantidadDias', 'estado'];
 
     protected $useAutoIncrement = true;
 
@@ -19,8 +19,15 @@ class TipoPermisoModel extends Model
 
     protected $validationRules = [
         'nombre' => 'required',
-        'cantidad_dias' => 'required'
+        'cantidadDias' => 'required'
     ];
 
-    // Otras configuraciones...
+    public function getAllTipoPermisos()
+    {
+        $builder = $this->db->table('tipo_permisos');
+        $builder->select('idTipoPermiso, nombre, cantidadDias, estado');
+        $builder->where('estado', 'Activo');  // Filtrar solo los activos
+        $builder->orderBy('nombre');
+        return $builder->get()->getResultArray();
+    }
 }
