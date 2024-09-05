@@ -20,7 +20,7 @@
                         <input type="hidden" name="id" value="<?= $tipo_permiso['idTipoPermiso'] ?>">
                         <div class="form-group">
                             <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $tipo_permiso['nombre'] ?>" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $tipo_permiso['nombre'] ?>" disabled required>
                         </div>
                         <div class="form-group">
                             <label for="cantidad_dias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>

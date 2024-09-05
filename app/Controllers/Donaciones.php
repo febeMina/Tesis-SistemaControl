@@ -1,9 +1,16 @@
 <?php
 namespace App\Controllers;
+//namespace App\third_party;
 
 use CodeIgniter\Controller;
+//use App\Libraries\LibReporte;
+//use App\ThirdParty\fpdf;
+use Fpdf\Fpdf;
+use Dompdf\Dompdf;
 
-class Donaciones extends Controller
+
+
+class Donaciones extends Controller 
 {
     public function index()
     {
@@ -19,6 +26,7 @@ class Donaciones extends Controller
 
     public function create()
     {
+        $db = \Config\Database::connect();
         $projectBuilder = $db->table('proyectos');
         $proyectos = $projectBuilder->select('idProyectos, nombreProyecto')->get()->getResult();
         
@@ -57,6 +65,42 @@ class Donaciones extends Controller
 
     public function delete($id)
     {
-        
+       
     }
+
+    public function GenerarReporte()
+    {
+        $dompdf = new Dompdf();
+        //$dompdf->loadHTML('<h1>Hola Mundo</h1><br><p>Otro contenido</p>');
+        $db = \Config\Database::connect();
+        $builder = $db->table('donaciones');
+        $builder->select('donaciones.idDonaciones, donaciones.nombreDonante, donaciones.cantidad, donaciones.descripcion, donaciones.fechaDonacion, proyectos.nombreProyecto');
+        $builder->join('proyectos', 'proyectos.idProyectos = donaciones.idProyectos', 'inner');
+        $donaciones = $builder->get()->getResult();
+        $dompdf->loadHTML(
+                    view('reportes/donacionesReporte', ['donaciones' => $donaciones])
+        );
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+        $dompdf->stream();
+    }
+
+    public function GenerarTicket()
+    {
+        $dompdf = new Dompdf();
+        //$dompdf->loadHTML('<h1>Hola Mundo</h1><br><p>Otro contenido</p>');
+        $db = \Config\Database::connect();
+        $builder = $db->table('donaciones');
+        $builder->select('donaciones.idDonaciones, donaciones.nombreDonante, donaciones.cantidad, donaciones.descripcion, donaciones.fechaDonacion, proyectos.nombreProyecto');
+        $builder->join('proyectos', 'proyectos.idProyectos = donaciones.idProyectos', 'inner');
+        $donaciones = $builder->get()->getResult();
+        $dompdf->loadHTML(
+                    view('reportes/donacionesReporte', ['donaciones' => $donaciones])
+        );
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+        $dompdf->stream();
+    }
+
+
 }

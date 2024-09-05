@@ -15,11 +15,11 @@
                         <input type="hidden" name="id" value="<?= $usuario->idUsuarios ?>">
                         <div class="form-group">
                             <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre de Usuario</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $usuario->usuario ?>" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $usuario->usuario ?>" disabled required>
                         </div>
                         <div class="form-group">
                             <label for="idRol" style="color: #000;"><i class="fas fa-user"></i> Rol</label>
-                            <select class="form-control" id="idRol" name="idRol" required>
+                            <select class="form-control" id="idRolS" name="idRolS" required>
                                 <?php foreach ($roles as $rol) : ?>
                                     <option value="<?= $rol->idRol ?>" <?= ($rol->idRol == $usuario->idRol) ? 'selected' : '' ?>>
                                         <?= $rol->nombreRol ?>
@@ -55,7 +55,7 @@
                 success: function(response) {
                     console.log(response);
                     if (response.success) {
-                        window.location.href = "<?= site_url('tipo_permiso') ?>";
+                        window.location.href = "<?= site_url('acceso') ?>";
                     }
                 },
                 error: function(xhr, status, error) {

@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', function () {
-    return redirect()->to('/home');
+    return redirect()->to('home');
 });
 
 $routes->get('home', 'Home::index');
@@ -16,8 +16,12 @@ $routes->get('tipo_permiso', 'TipoPermiso::index');
 $routes->get('roles', 'Roles::index');
 $routes->get('acceso', 'Acceso::index');
 $routes->get('usuario', 'Usuario::index');
-$routes->get('donaciones', 'Donaciones::index');
 $routes->get('proyectos', 'Proyectos::index');
+$routes->get('graficos', 'Graficos::index');
+$routes->get('donaciones', 'Donaciones::index');
+$routes->get('report', 'Reportes::index');
+
+
 
 $routes->group('admin', function ($routes) {
     $routes->get('licencias', 'AdminLicencias::index');
@@ -27,6 +31,8 @@ $routes->group('admin', function ($routes) {
     $routes->post('licencias/update/(:num)', 'AdminLicencias::update/$1');
     $routes->post('licencias/delete/(:num)', 'AdminLicencias::delete/$1');
 });
+//RUTA GRAFICAS
+$routes->get('metas/home', 'Home::getMetas');
 
 // Rutas para el controlador Maestros
 $routes->get('maestros', 'Maestros::index');
@@ -105,9 +111,9 @@ $routes->get('tipo_producto/delete/(:num)', 'TipoProducto::delete/$1');
 
 //Rutas donaciones
 $routes->post('donaciones/store', 'Donaciones::store');
-$routes->get('donaciones/create', 'Donaciones::create');
-
-
+$routes->get('donaciones/create', 'Donaciones::create'); 
+$routes->get('donaciones/reporte', 'Donaciones::GenerarReporte');
+ 
 //Rutas proyectos
 $routes->post('proyectos/store', 'Proyectos::store');
 $routes->get('proyectos/create', 'Proyectos::create');

@@ -82,8 +82,7 @@
             </a>
               <div class="collapse" id="donaciones">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a href="<?= site_url('proyectos') ?>" class="nav-link">Proyectos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Listado de Donaciones</a></li>
+                    <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Registrar Donación</a></li>
                 </ul>
             </div>
         </li>

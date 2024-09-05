@@ -47,16 +47,17 @@ class Login extends Controller
     
                     // Obtener información del usuario
                     $userInfo = $userModel
-                        ->select('rol.nombreRol, docente.nombre_completo')
+                        ->select('usuarios.idUsuarios, rol.nombreRol, docente.nombre_completo')
                         ->join('rol', 'rol.idRol = usuarios.idRol', 'inner')
                         ->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner')
                         ->where('usuario', $user)
                         ->first();
     
-                    // Crear sesión de usuario
+                    // Crear sesión de usuario 
                     $session = session();
                     $userData = [
                         'usuario' => $username['usuario'],
+                        'id' => $userInfo['idUsuarios'],
                         'rol' => $userInfo['nombreRol'],
                         'docente' => $userInfo['nombre_completo'],
                         'isLoggedIn' => true

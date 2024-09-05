@@ -19,15 +19,25 @@
     <?php if (session()->get('rol')=="Administrador"): ?>
             <?=$this->include('includes/navbar/_navbar') ?>
      <?php endif; ?>
-    <?php if (session()->get('rol')=="Tesoreria"): ?>
-            <?=$this->include('includes/navbar/_navbar3') ?>
-    <?php endif; ?>
+
     <?php if (session()->get('rol')=="Cocina"): ?>
     <?=$this->include('includes/navbar/_navbar2') ?>
-
     <?php endif; ?>
-    
- <!-- VALIDACIÓN SEGUN ROL FIN -->
+
+    <?php if (session()->get('rol')=="Tesoreria"): ?>
+            <?=$this->include('includes/navbar/_navbar5') ?>
+    <?php endif; ?>
+
+    <?php if (session()->get('rol')=="Contador"): ?>
+            <?=$this->include('includes/navbar/_navbar4') ?>
+    <?php endif; ?>
+
+    <?php if (session()->get('rol')=="SubDireccion"): ?>
+            <?=$this->include('includes/navbar/_navbar5') ?>
+    <?php endif; ?>
+
+
+ <!-- FIN VALIDACIÓN SEGUN ROL FIN -->
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_navbar.html -->

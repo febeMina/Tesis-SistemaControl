@@ -15,6 +15,23 @@ class Home extends BaseController
     }
     public function index(): string
     {
-        return view('welcome_message');
+        $db = \Config\Database::connect();
+        $projectBuilder = $db->table('proyectos');
+        $proyectos = $projectBuilder->select('idProyectos', 'nombreProyecto','estado','meta','valorActual')->get()->getResult();
+        //$metas = $projectBuilder->select('meta')->get()->getResult();
+      
+       // return $this->response->setJSON($proyectos);
+        return view('welcome_message', ['proyectos' => $proyectos]);
     }
+
+    public function getMetas()
+    {
+        $db = \Config\Database::connect();
+        $projectBuilder = $db->table('proyectos');
+        //$proyectos = $projectBuilder->select('idProyectos', 'nombreProyecto','estado','meta','valorActual')->get()->getResult();
+        $metas = $projectBuilder->select(['nombreProyecto', 'meta', 'valorActual'])->where('anio', 2024)->get()->getResult();
+        $json_data = json_encode($metas);
+        return $this->response->setJSON($json_data);
+    }
+
 }

@@ -1,0 +1,32 @@
+CRITICAL - 2024-06-30 04:48:42 --> ErrorException: include(C:\laragon\www\Tesis-SistemaControl\vendor\composer/../tecnickcom/tcpdf/tcpdf.php): Failed to open stream: No such file or directory
+in VENDORPATH\composer\ClassLoader.php on line 571.
+ 1 VENDORPATH\composer\ClassLoader.php(571): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\laragon\\www\\Tesis-SistemaControl\\vendor\\composer/../tecnickcom/tcpdf/tcpdf.php): Failed to open stream: No such file or directory', 'C:\\laragon\\www\\Tesis-SistemaControl\\vendor\\composer\\ClassLoader.php', 571)
+ 2 VENDORPATH\composer\ClassLoader.php(571): include()
+ 3 VENDORPATH\composer\ClassLoader.php(428): Composer\Autoload\includeFile('C:\\laragon\\www\\Tesis-SistemaControl\\vendor\\composer/../tecnickcom/tcpdf/tcpdf.php')
+ 4 APPPATH\Controllers\PermisoMagisterial.php(348): Composer\Autoload\ClassLoader->loadClass('TCPDF')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->generarReportePDF()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 04:49:17 --> ErrorException: Undefined array key "tipo"
+in APPPATH\Views\maestros\index.php on line 86.
+ 1 APPPATH\Views\maestros\index.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\maestros\\index.php', 86)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\maestros\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('maestros/index', [], true)
+ 5 APPPATH\Controllers\Maestros.php(35): view('maestros/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-30 06:47:27 --> ErrorException: Undefined array key "Genero"
+in APPPATH\Views\padres\index.php on line 71.
+ 1 APPPATH\Views\padres\index.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Genero"', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\padres\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('padres/index', [], true)
+ 5 APPPATH\Controllers\Padres.php(33): view('padres/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -19,6 +19,7 @@ class Roles extends Controller
 
     public function index()
     {    
+       
         $model = new RolesModel();
         $data['roles'] = $model->findAll();
 
@@ -72,8 +73,7 @@ public function update($id)
     $db = \Config\Database::connect();
     $builder = $db->table('rol');
     $data = [
-        'nombreRol' => $nombreRol,
-       
+        'nombreRol' => $nombreRol
     ];
     $builder->where('idRol', $id);
     $builder->update($data);

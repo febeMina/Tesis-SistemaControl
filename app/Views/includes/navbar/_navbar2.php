@@ -72,28 +72,22 @@
         </li>
 
         <!-- Menú para el apartado de Productos -->
-        <li class="nav-item menu-items">
+        <  <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#alimentacion" aria-expanded="false" aria-controls="alimentacion">
                 <span class="menu-icon">
                     <i class="mdi mdi-food"></i>
                 </span>
                 <span class="menu-title">Alimentación</span>
-            </a>
-        </li>
-
-
-        <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <span class="menu-icon">
-                    <i class="mdi mdi-file-document"></i>
-                </span>
-                <span class="menu-title">Reportes</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="auth">
-                
+            <div class="collapse" id="alimentacion">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a href="<?= site_url('tipo_proyectos') ?>" class="nav-link">Requisición de productos</a></li>
+                   
+                </ul>
             </div>
         </li>
+
          
     </ul>
 </nav>

@@ -27,26 +27,14 @@
                                 <tr>
                                     <th>Nombre Rol</th>
                                     <th>Accesos</th>
-                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($roles as $rol) : ?>
                                     <tr>
-                                        <td><?= $rol['nombreRol']; ?></td>
+                                        <td><b><?= $rol['nombreRol']; ?></td>
                                         <td><?= $rol['descripcion']; ?></td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a href="<?= site_url('' . $rol['idRol']) ?>" class="btn btn-edit">
-                                                    <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
-                                                </a>
-                                                <!-- Agregar margen entre los botones -->
-                                                <a href="<?= site_url('' . $rol['idRol']) ?>" class="btn btn-delete">
-                                                    <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
-                                                </a>
-                                                <!-- Fin de la separación -->
-                                            </div>
-                                        </td>
+                                       
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

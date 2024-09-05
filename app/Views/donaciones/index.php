@@ -28,7 +28,7 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Responsable</th>
+                                    <th>Nombre Donante</th>
                                     <th>Cantidad</th>
                                     <th>Proyecto</th>
                                    <th>Fecha</th>

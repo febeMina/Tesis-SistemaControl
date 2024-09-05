@@ -24,30 +24,36 @@
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Responsable</label>
                             <input type="text" class="form-control" id="nombre_completo" name="nombre_responsable" required>
                         </div>
-                         <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Cantidad</label>
-                            <input type="number" class="form-control" id="cantidad" name="cantidad" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Cantidad en letras</label>
-                            <input type="text" class="form-control" id="cantidadLetras" name="cantidadLetras" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Concepto</label>
-                            <input type="text" class="form-control" id="concepto" name="concepto" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Fecha de Donación</label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" required>
-                        </div>
-                        <div class="form-group">
-                        <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Proyectos</label>
+                         <div class="form-row"> 
+                         <div class="form-group col-md-6">
+                         <label for="nombre_completo" style="color: #000;"><i class="fas fa-dollar-sign"></i> Cantidad ($)</label>
+                         <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+                         </div>
+                         <div class="form-group col-md-6">
+                         <label for="nombre_completo" style="color: #000;"><i class="fas fa-hands-holding-circle"></i> Proyectos a asignar</label>
                             <select class="form-control" id="idProyecto" name="idProyecto" required>
                                 <?php foreach ($proyectos as $proyecto) : ?>
                                     <option value="<?= $proyecto->idProyectos ?>"> <?= $proyecto->nombreProyecto ?></option>
                                 <?php endforeach; ?>
                              </select>
+                         </div>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre_completo" style="color: #000;"><i class="fa-solid fa-money-check-dollar"></i> Cantidad en letras</label>
+                            <input type="text" class="form-control" id="cantidadLetras" name="cantidadLetras" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre_completo" style="color: #000;"><i class="fa-solid fa-pen-to-square"></i> Concepto</label>
+                            <input type="text" class="form-control" id="concepto" name="concepto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre_completo" style="color: #000;"> <i class="fa-solid fa-calendar-days"></i> Fecha de Donación</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" min="<?php echo date("Y-m-d");?>" required>
+                        </div>
+                        <div class="form-group">
+                       
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>

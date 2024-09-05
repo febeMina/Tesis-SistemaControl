@@ -30,22 +30,24 @@
                                     <th>Descripción</th>
                                     <th>Meta Economica</th>
                                     <th>Estado</th>
+                                    <th>Año</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($proyectos as $proyect) : ?>
+                            <?php foreach ($proyectos as $proyect) : ?>
                                     <tr>
-                                        <td><?= $proyect->nombreProyecto; ?></td>
-                                        <td><?= $proyect->descripcion; ?></td>
-                                        <td><?= $proyect->estado; ?></td> 
-                                        <td><?= $proyect->meta; ?></td>
+                                    <td><?= $proyect['nombreProyecto']; ?></td>
+                                    <td><?= $proyect['descripcion']; ?></td>
+                                    <td><?= $proyect['meta']; ?></td>
+                                    <td><?= $proyect['estado']; ?></td>
+                                    <td><?= $proyect['anio']; ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="<?= site_url('proyecto/edit/' . $proyect->idProyectos ) ?>" class="btn btn-edit">
+                                                <a href="<?= site_url('proyectos/edit/' . $proyect['idProyectos'] ) ?>" class="btn btn-edit">
                                                     <i class="mdi mdi-pencil"></i> <!-- Icono de edición -->
                                                 </a>
-                                                <a href="<?= site_url('proyecto/delete/' . $proyect->idProyectos) ?>" class="btn btn-delete">
+                                                <a href="<?= site_url('proyectos/delete/' . $proyect['idProyectos'] ) ?>" class="btn btn-delete">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de eliminación -->
                                                 </a>
                                             </div>

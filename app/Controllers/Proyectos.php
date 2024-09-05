@@ -14,19 +14,18 @@ class Proyectos extends Controller
             exit;
         }
     }
-
+ 
     public function index()
     { 
-        $db = \Config\Database::connect();
-        $projectBuilder = $db->table('proyectos');
-        $proyectos = $projectBuilder->select('idProyectos', 'nombreProyecto', 'descripcion', 'estado', 'meta')->get()->getResult();
     
-        return view('proyectos/index', $proyectos);
+        $model = new ProyectosModel();
+        $data['proyectos'] = $model->findAll();
+
+        return view('proyectos/index', $data);
     }
 
     public function create()
     {
-
         
         return view('proyectos/create');
     }
@@ -35,12 +34,15 @@ class Proyectos extends Controller
     {
         $request = \Config\Services::request();
         $proyectModel = new ProyectosModel();
+        $anoActual = date('Y');
 
         $data = [
-            'nombreProyecto' => $request->getVar('nombreProyecto'),
+            'nombreProyecto' => $request->getVar('nombreP'),
             'descripcion' => $request->getVar('descripcion'),
             'estado' => $request->getVar('estado'), // Corregido aquí
-            'meta' => $request->getVar('meta')
+            'meta' => $request->getVar('metaP'),
+            'ano' => $anoActual
+
         ];
 
         $proyectModel->insert($data);
@@ -54,10 +56,10 @@ class Proyectos extends Controller
         $proyectModel = new ProyectoModel();
 
         $data = [
-            'nombreProyecto' => $request->getVar('nombreProyecto'),
+            'nombreProyecto' => $request->getVar('nombreP'),
             'descripción' => $request->getVar('descripcion'), // Corregido aquí
             'estado' => $request->getVar('estado'),
-            'meta' => $request->getVar('meta')
+            'meta' => $request->getVar('metaP')
         ];
 
         $proyectModel->update($id, $data);
@@ -67,16 +69,19 @@ class Proyectos extends Controller
 
     public function edit($id)
     {
-        $proyectModel = new ProyectoModel();
-        $proyecto = $proyectModel->find($id);
+        $db = \Config\Database::connect();
+        $builder = $db->table('proyectos');
+        $proyectos = $builder->getWhere(['idProyectos' => $id])->getRow();
 
-        return view('proyecto/edit', ['proyecto' => $proyecto]);
+        return view('proyectos/edit', ['proyectos' => $proyectos]);
     }
 
     public function delete($id)
     {
-        $proyectModel = new ProyectoModel();
-        $proyectModel->delete($id);
-        return redirect()->to(site_url('proyecto'));
+        $db = \Config\Database::connect();
+        $builder = $db->table('proyectos');
+        $builder->where('idProyectos', $id);
+        $builder->delete();
+        return redirect()->to(site_url('proyectos'));
     }
 }

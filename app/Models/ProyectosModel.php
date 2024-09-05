@@ -9,5 +9,5 @@ class ProyectosModel extends Model
 {
     protected $table = 'proyectos';
     protected $primaryKey = 'idProyectos';
-    protected $allowedFields = ['nombreProyecto', 'descripcion', 'estado', 'meta'];
+    protected $allowedFields = ['idProyectos', 'nombreProyecto', 'descripcion', 'estado', 'meta','anio', 'valorActual'];
 }

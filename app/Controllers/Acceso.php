@@ -29,7 +29,7 @@ class Acceso extends Controller
         $rolesBuilder = $db->table('rol');
         $roles = $rolesBuilder->select('idRol, nombreRol')->get()->getResult();
 
-        return view('accesos/index', ['usuario' => $usuario, 'roles' => $roles]);
+        return view('accesos/index', ['usuario' => $usuario, 'roles' => $roles]); 
 
 
     }
@@ -84,19 +84,20 @@ class Acceso extends Controller
         
     }
 
-    public function update($id)
+    public function update($id) 
     {
         $db = \Config\Database::connect();
         $builder = $db->table('usuarios');
 
         // Datos a actualizar
         $data = [
-            'idRol' => $this->request->getPost('idRol')
+            'idRol' => $this->request->getPost('idRolS')
         ];
           
         $builder->where('idUsuarios', $id);
         $builder->update($data);
-
+        //return view('accesos/index');
+        //NO REDIRECCIONA PERO SI HACE EL CAMBIO EN LA BASE DE DATOS
         return redirect()->to(base_url('public/acceso'))->with('success', 'Acceso actualizado correctamente.');
       
     }    

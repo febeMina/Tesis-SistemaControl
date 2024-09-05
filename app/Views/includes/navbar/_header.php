@@ -1,6 +1,6 @@
 <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: #1202B4 !important;">
     <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?=base_url('public/assets/images/logo-mini.svg')?>"
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?=base_url('public/assets/images/logo-min.PNG')?>"
                 alt="logo" /></a>
     </div>
     <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
@@ -9,17 +9,39 @@
         </button>
         <ul class="navbar-nav w-100">
             <li class="nav-item w-100">
-                <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
-                    <input type="text" class="form-control" style="background-color: #f0f0f0 !important;"
-                        placeholder="Search goal">
-                </form>
+            <?php
+                $fecha= date('j \d\e F \d\e Y');
+                $hora = date('H:i:s'); // Formato "d/m/Y H:i:s"
+                echo "Fecha: " . $fecha . " Hora: " . $hora;
+                ?>
             </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                     <div class="navbar-profile">
-                        <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/face15.jpg')?>" alt="">
+                       <!-- VALIDACIÓN FOTO DE PERFIL-->
+                            <?php if (session()->get('rol')=="Administrador"): ?>
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/admin.PNG')?>" alt=""> 
+                            <?php endif; ?>
+                            <?php if (session()->get('rol')=="Cocina"): ?>
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/cocina.PNG')?>" alt=""> 
+                            <?php endif; ?>
+
+                            <?php if (session()->get('rol')=="Tesoreria"): ?>
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/face14.jpg')?>" alt=""> 
+                            <?php endif; ?>
+
+                            <?php if (session()->get('rol')=="Contador"): ?>
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/face13.jpg')?>" alt=""> 
+                            <?php endif; ?>
+
+                            <?php if (session()->get('rol')=="SubDireccion"): ?>
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/face12.jpg')?>" alt=""> 
+                            <?php endif; ?>
+                       
+                         <!-- VALIDACIÓN FOTO DE PERFIL-->
+                       
                         <p class="mb-0 d-none d-sm-block navbar-profile-name">
                             <?=session()->get('usuario')?>
                         </p>
