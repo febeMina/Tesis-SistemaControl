@@ -1,11 +1,11 @@
-DEBUG - 2024-08-14 01:06:07 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:06:07 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 01:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:06:45 --> Método update() llamado con ID: 46
 DEBUG - 2024-08-14 01:06:45 --> Docente actualizado exitosamente
-DEBUG - 2024-08-14 01:06:47 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:06:47 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 01:10:48 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:10:48 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 01:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:11:14 --> Método update() llamado con ID: 46
@@ -14,185 +14,185 @@ INFO - 2024-08-14 01:21:45 --> Session: Class initialized using 'CodeIgniter\Ses
 DEBUG - 2024-08-14 01:22:00 --> Método update() llamado
 INFO - 2024-08-14 01:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:26:53 --> Método update() llamado
-DEBUG - 2024-08-14 01:28:24 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:28:24 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 01:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:28:54 --> Método store() llamado
-DEBUG - 2024-08-14 01:28:54 --> Datos del docente: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 01:28:54 --> Datos del docente: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 DEBUG - 2024-08-14 01:28:55 --> Redirigiendo a la lista de maestros
-DEBUG - 2024-08-14 01:28:57 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:28:57 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 01:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:29:33 --> Método update() llamado
-DEBUG - 2024-08-14 01:36:08 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:36:08 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 01:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:36:27 --> Método update() llamado
-DEBUG - 2024-08-14 01:36:28 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 01:36:28 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
 INFO - 2024-08-14 01:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 01:48:48 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:48:48 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 01:48:52 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:48:52 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 01:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 01:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:49:07 --> Método update() llamado
-DEBUG - 2024-08-14 01:49:07 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 01:49:07 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
 INFO - 2024-08-14 01:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:52:35 --> Método update() llamado
-DEBUG - 2024-08-14 01:52:35 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 01:52:35 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
 INFO - 2024-08-14 01:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 01:55:52 --> Método update() llamado
-DEBUG - 2024-08-14 01:55:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
-DEBUG - 2024-08-14 02:16:21 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 01:55:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:16:21 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 02:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 02:16:26 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 02:16:26 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 02:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 02:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 02:16:40 --> Método update() llamado
 ERROR - 2024-08-14 02:16:40 --> Errores de validación: {"nip":"El NIP ya est\u00e1 registrado.","escalafon":"El Escalaf\u00f3n ya est\u00e1 registrado."}
 INFO - 2024-08-14 02:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 02:26:45 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 02:26:45 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 02:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 02:26:49 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 02:26:49 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 02:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 02:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 02:27:00 --> Método update() llamado
-DEBUG - 2024-08-14 02:27:00 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:27:00 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 INFO - 2024-08-14 02:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 02:32:30 --> Método update() llamado
-DEBUG - 2024-08-14 02:32:31 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:32:31 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 INFO - 2024-08-14 02:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 02:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 02:43:53 --> Método update() llamado
-DEBUG - 2024-08-14 02:43:53 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:43:53 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 DEBUG - 2024-08-14 02:46:57 --> Método update() llamado
-DEBUG - 2024-08-14 02:46:57 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:46:57 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 INFO - 2024-08-14 02:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 02:50:40 --> Método update() llamado
-DEBUG - 2024-08-14 02:50:40 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:50:40 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 02:50:40 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 02:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 02:55:08 --> Método update() llamado
-DEBUG - 2024-08-14 02:55:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 02:55:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 02:55:08 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:01:01 --> Método update() llamado
-DEBUG - 2024-08-14 03:01:01 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:01:01 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:01:01 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:06:52 --> Método update() llamado
-DEBUG - 2024-08-14 03:06:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:06:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:06:52 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:15:54 --> Método update() llamado
-DEBUG - 2024-08-14 03:15:56 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:15:56 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:15:56 --> No se realizaron cambios en la base de datos para el ID: 47
 DEBUG - 2024-08-14 03:20:51 --> Método update() llamado
-DEBUG - 2024-08-14 03:20:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:20:52 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:20:52 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:21:12 --> Método update() llamado
-DEBUG - 2024-08-14 03:21:13 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:21:13 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:21:13 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:25:08 --> Método update() llamado
-DEBUG - 2024-08-14 03:25:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:25:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:25:08 --> No se realizaron cambios en la base de datos para el ID: 47
 DEBUG - 2024-08-14 03:25:15 --> Método update() llamado
-DEBUG - 2024-08-14 03:25:15 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"910012","escalafon":"910012","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
-DEBUG - 2024-08-14 03:25:24 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:25:15 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"910012","escalafon":"910012","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:25:24 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 03:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:26:00 --> Método update() llamado
-DEBUG - 2024-08-14 03:26:00 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:26:00 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:26:01 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:31:58 --> Método update() llamado
-DEBUG - 2024-08-14 03:31:59 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:31:59 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
 ERROR - 2024-08-14 03:31:59 --> No se realizaron cambios en la base de datos para el ID: 47
 DEBUG - 2024-08-14 03:32:08 --> Método update() llamado
-DEBUG - 2024-08-14 03:32:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fecha_ingreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
-DEBUG - 2024-08-14 03:32:11 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:32:08 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fechaIngreso":"2018-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:32:11 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 03:36:44 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:36:44 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 03:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:37:13 --> Método update() llamado
-DEBUG - 2024-08-14 03:37:13 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 03:37:13 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"91001","escalafon":"91001","fechaIngreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
 ERROR - 2024-08-14 03:37:13 --> No se realizaron cambios en la base de datos para el ID: 47
 DEBUG - 2024-08-14 03:37:50 --> Método update() llamado
-DEBUG - 2024-08-14 03:37:50 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
-DEBUG - 2024-08-14 03:37:52 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:37:50 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron Orellana","nip":"910012","escalafon":"910012","fechaIngreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 03:37:52 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 03:41:47 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:41:47 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 03:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:42:04 --> Método update() llamado
-DEBUG - 2024-08-14 03:42:04 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 03:42:04 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fechaIngreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
 ERROR - 2024-08-14 03:42:04 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:46:14 --> Método update() llamado
-DEBUG - 2024-08-14 03:46:14 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 03:46:14 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fechaIngreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
 ERROR - 2024-08-14 03:46:14 --> No se realizaron cambios en la base de datos para el ID: 47
 INFO - 2024-08-14 03:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:49:06 --> Método update() llamado
-DEBUG - 2024-08-14 03:49:06 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
-DEBUG - 2024-08-14 03:49:08 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:49:06 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"910012","escalafon":"910012","fechaIngreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+DEBUG - 2024-08-14 03:49:08 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 03:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:49:36 --> Método update() llamado
-DEBUG - 2024-08-14 03:49:36 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fecha_ingreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
-DEBUG - 2024-08-14 03:49:39 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:49:36 --> Datos del docente para actualizar: {"nombre_completo":"Juan Carlos Ceron","nip":"91001","escalafon":"91001","fechaIngreso":"2017-05-02","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+DEBUG - 2024-08-14 03:49:39 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 03:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2024-08-14 03:50:30 --> Método store() llamado
 ERROR - 2024-08-14 03:50:30 --> Errores de validación: {"nip":"El NIP ya est\u00e1 registrado."}
 DEBUG - 2024-08-14 03:50:39 --> Método store() llamado
-DEBUG - 2024-08-14 03:50:40 --> Datos del docente: {"nombre_completo":"Trinidad Hernandez","nip":"01993","escalafon":"92923","fecha_ingreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null}
+DEBUG - 2024-08-14 03:50:40 --> Datos del docente: {"nombre_completo":"Trinidad Hernandez","nip":"01993","escalafon":"92923","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null}
 DEBUG - 2024-08-14 03:50:41 --> Redirigiendo a la lista de maestros
-DEBUG - 2024-08-14 03:50:43 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:50:43 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 03:58:15 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:58:15 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 03:59:20 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 03:59:20 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 03:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:03:15 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:03:15 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:03:23 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:03:23 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:04:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:04:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:10:31 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:10:31 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:11:32 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:11:32 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:14:57 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:14:57 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:15:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:15:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:19:53 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:19:53 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 04:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 04:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 04:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 04:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:32:32 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:32:32 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:42:14 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:42:14 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:48:40 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:48:40 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:49:22 --> Filtros aplicados: {"nombre_completo":"","nip":"","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":"Docente"}
+DEBUG - 2024-08-14 04:49:22 --> Filtros aplicados: {"nombre_completo":"","nip":"","escalafon":null,"fechaIngreso":null,"estado":null,"tipo":"Docente"}
 INFO - 2024-08-14 04:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:49:30 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:49:30 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:49:39 --> Filtros aplicados: {"nombre_completo":"","nip":"223333","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":""}
+DEBUG - 2024-08-14 04:49:39 --> Filtros aplicados: {"nombre_completo":"","nip":"223333","escalafon":null,"fechaIngreso":null,"estado":null,"tipo":""}
 INFO - 2024-08-14 04:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:49:42 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:49:42 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:49:47 --> Filtros aplicados: {"nombre_completo":"Orlando","nip":"","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":""}
+DEBUG - 2024-08-14 04:49:47 --> Filtros aplicados: {"nombre_completo":"Orlando","nip":"","escalafon":null,"fechaIngreso":null,"estado":null,"tipo":""}
 INFO - 2024-08-14 04:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 04:49:50 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 04:49:50 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 04:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 04:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 04:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -217,7 +217,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-14 04:56:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '12322' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -228,9 +228,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-14 04:56:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '12322' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -241,10 +241,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-14 04:56:48 --> [Caused by] mysqli_sql_exception: Duplicate entry '12322' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Antoni Estrada\', \'Masculino\', \'12322\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -586,7 +586,7 @@ INFO - 2024-08-14 22:52:54 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-08-14 22:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 22:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 22:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-14 22:59:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-14 22:59:00 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-14 22:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 22:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-14 23:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

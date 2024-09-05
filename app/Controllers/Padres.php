@@ -79,14 +79,14 @@ public function store()
         $validationRules = [
             'nombre_completo' => 'required',
             'idTipoDocumento' => 'required',
-            'numero_documento' => 'required',
+            'numeroDocumento' => 'required',
             'telefono' => 'required',
             'genero' => 'required',
             'estado' => 'required',
-            'tipo_asociado' => 'required'
+            'tipoAsociado' => 'required'
         ];
 
-        if ($this->request->getPost('tipo_asociado') === 'INTERNO') {
+        if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
             $validationRules['alumno_nombre_completo.*'] = 'required';
             $validationRules['alumno_sexo.*'] = 'required';
             $validationRules['alumno_nie.*'] = 'required';
@@ -100,17 +100,17 @@ public function store()
         $data = [
             'nombreCompleto' => $this->request->getPost('nombre_completo'),
             'idTipoDocumento' => $this->request->getPost('idTipoDocumento'),
-            'numero_documento' => $this->request->getPost('numero_documento'),
+            'numeroDocumento' => $this->request->getPost('numeroDocumento'),
             'telefono' => $this->request->getPost('telefono'),
             'Genero' => $this->request->getPost('genero'),
             'estado' => $this->request->getPost('estado'),
-            'tipo_asociado' => $this->request->getPost('tipo_asociado')
+            'tipoAsociado' => $this->request->getPost('tipoAsociado')
         ];
 
         $padreModel = new PadreModel();
         $padreId = $padreModel->insert($data);
 
-        if ($this->request->getPost('tipo_asociado') === 'INTERNO') {
+        if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
             $alumnos = $this->request->getPost('alumno_nombre_completo');
             foreach ($alumnos as $index => $nombre) {
                 $alumnoData = [
@@ -160,14 +160,14 @@ public function store()
         $validationRules = [
             'nombre_completo' => 'required',
             'idTipoDocumento' => 'required',
-            'numero_documento' => 'required',
+            'numeroDocumento' => 'required',
             'telefono' => 'required',
             'genero' => 'required',
             'estado' => 'required',
-            'tipo_asociado' => 'required'
+            'tipoAsociado' => 'required'
         ];
     
-        if ($this->request->getPost('tipo_asociado') === 'INTERNO') {
+        if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
             $validationRules['alumno_nombre_completo.*'] = 'required';
             $validationRules['alumno_sexo.*'] = 'required';
             $validationRules['alumno_nie.*'] = 'required';
@@ -182,11 +182,11 @@ public function store()
         $data = [
             'nombreCompleto' => $this->request->getPost('nombre_completo'),
             'idTipoDocumento' => $this->request->getPost('idTipoDocumento'),
-            'numero_documento' => $this->request->getPost('numero_documento'),
+            'numeroDocumento' => $this->request->getPost('numeroDocumento'),
             'telefono' => $this->request->getPost('telefono'),
             'Genero' => $this->request->getPost('genero'),
             'estado' => $this->request->getPost('estado'),
-            'tipo_asociado' => $this->request->getPost('tipo_asociado')
+            'tipoAsociado' => $this->request->getPost('tipoAsociado')
         ];
     
         $padreModel = new PadreModel();
@@ -196,7 +196,7 @@ public function store()
         $responsableAlumnoModel = new ResponsableAlumnoModel();
         $responsableAlumnoModel->deleteAlumnosAsociados($id);
     
-        if ($this->request->getPost('tipo_asociado') === 'INTERNO') {
+        if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
             $alumnos = $this->request->getPost('alumno_nombre_completo');
             $alumnoIds = $this->request->getPost('alumno_id') ?? [];
             $alumnoNIEs = $this->request->getPost('alumno_nie') ?? [];
@@ -206,7 +206,7 @@ public function store()
             foreach ($alumnos as $index => $nombre) {
                 $alumnoData = [
                     'nombreAlumno' => $nombre,
-                    'Genero_alumno' => $this->request->getPost('alumno_sexo')[$index] ?? null,
+                    'generoAlumno' => $this->request->getPost('alumno_sexo')[$index] ?? null,
                     'NIE' => $alumnoNIEs[$index] ?? null,
                     'estado' => $this->request->getPost('alumno_estado')[$index] ?? null
                 ];

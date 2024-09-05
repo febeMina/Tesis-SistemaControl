@@ -30,7 +30,7 @@ DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
             [idProducto] => 2
             [idtipoProducto] => 3
             [codigo_lote] => hg009
-            [fecha_ingreso] => 2024-07-04
+            [fechaIngreso] => 2024-07-04
             [fecha_vencimiento] => 2024-11-21
             [n_unidades_Caja] => 1
             [idUnidadesPorCaja] => 1
@@ -47,7 +47,7 @@ DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
             [idProducto] => 3
             [idtipoProducto] => 2
             [codigo_lote] => Y3BBS
-            [fecha_ingreso] => 2024-07-04
+            [fechaIngreso] => 2024-07-04
             [fecha_vencimiento] => 2024-10-29
             [n_unidades_Caja] => 2
             [idUnidadesPorCaja] => 1
@@ -64,7 +64,7 @@ DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
             [idProducto] => 4
             [idtipoProducto] => 4
             [codigo_lote] => r432fdewr
-            [fecha_ingreso] => 2024-07-04
+            [fechaIngreso] => 2024-07-04
             [fecha_vencimiento] => 2024-10-30
             [n_unidades_Caja] => 1
             [idUnidadesPorCaja] => 1
@@ -81,7 +81,7 @@ DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
             [idProducto] => 5
             [idtipoProducto] => 3
             [codigo_lote] => Y3BBS
-            [fecha_ingreso] => 2024-07-04
+            [fechaIngreso] => 2024-07-04
             [fecha_vencimiento] => 2024-11-08
             [n_unidades_Caja] => 1
             [idUnidadesPorCaja] => 1
@@ -98,7 +98,7 @@ DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
             [idProducto] => 6
             [idtipoProducto] => 4
             [codigo_lote] => Y3BBS
-            [fecha_ingreso] => 2024-07-04
+            [fechaIngreso] => 2024-07-04
             [fecha_vencimiento] => 2024-11-25
             [n_unidades_Caja] => 3
             [idUnidadesPorCaja] => 1
@@ -115,7 +115,7 @@ DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
             [idProducto] => 7
             [idtipoProducto] => 3
             [codigo_lote] => 2243
-            [fecha_ingreso] => 2024-07-04
+            [fechaIngreso] => 2024-07-04
             [fecha_vencimiento] => 2024-11-13
             [n_unidades_Caja] => 1
             [idUnidadesPorCaja] => 1
@@ -132,7 +132,7 @@ DEBUG - 2024-07-19 19:18:31 --> Productos cargados: Array
             [idProducto] => 8
             [idtipoProducto] => 4
             [codigo_lote] => hg009
-            [fecha_ingreso] => 2024-07-04
+            [fechaIngreso] => 2024-07-04
             [fecha_vencimiento] => 2024-11-14
             [n_unidades_Caja] => 1
             [idUnidadesPorCaja] => 1

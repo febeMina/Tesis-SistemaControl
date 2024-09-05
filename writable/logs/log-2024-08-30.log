@@ -494,7 +494,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-30 23:48:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -505,9 +505,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-30 23:48:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -518,10 +518,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-30 23:48:51 --> [Caused by] mysqli_sql_exception: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -548,7 +548,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-30 23:49:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -559,9 +559,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-30 23:49:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -572,10 +572,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-30 23:49:21 --> [Caused by] mysqli_sql_exception: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -602,7 +602,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-30 23:49:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -613,9 +613,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-30 23:49:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -626,10 +626,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-30 23:49:29 --> [Caused by] mysqli_sql_exception: Duplicate entry '4131' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Rosmery Perez\', \'F\', \'4131\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)

@@ -17,7 +17,7 @@ class ExampleMigration extends Migration
             'class'      => ['type' => 'varchar', 'constraint' => 63],
             'icon'       => ['type' => 'varchar', 'constraint' => 31],
             'summary'    => ['type' => 'varchar', 'constraint' => 255],
-            'created_at' => ['type' => 'datetime', 'null' => true],
+            'createdAt' => ['type' => 'datetime', 'null' => true],
             'updated_at' => ['type' => 'datetime', 'null' => true],
             'deleted_at' => ['type' => 'datetime', 'null' => true],
         ]);
@@ -25,7 +25,7 @@ class ExampleMigration extends Migration
         $this->forge->addKey('name');
         $this->forge->addKey('uid');
         $this->forge->addKey(['deleted_at', 'id']);
-        $this->forge->addKey('created_at');
+        $this->forge->addKey('createdAt');
 
         $this->forge->createTable('factories');
     }

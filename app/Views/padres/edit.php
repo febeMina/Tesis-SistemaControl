@@ -34,8 +34,8 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="numero_documento" style="color: #000;"><i class="fas fa-id-card"></i> Documento</label>
-                            <input type="text" class="form-control" id="numero_documento" name="numero_documento" value="<?= esc($padre['numero_documento']) ?>" required>
+                            <label for="numeroDocumento" style="color: #000;"><i class="fas fa-id-card"></i> Documento</label>
+                            <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento" value="<?= esc($padre['numeroDocumento']) ?>" required>
                         </div>
                         
                         <div class="form-group">
@@ -60,14 +60,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="tipo_asociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de Asociado</label>
-                            <select class="form-control" id="tipo_asociado" name="tipo_asociado" required>
-                                <option value="EXTERNO" <?= $padre['tipo_asociado'] == 'EXTERNO' ? 'selected' : '' ?>>EXTERNO</option>
-                                <option value="INTERNO" <?= $padre['tipo_asociado'] == 'INTERNO' ? 'selected' : '' ?>>INTERNO</option>
+                            <label for="tipoAsociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de Asociado</label>
+                            <select class="form-control" id="tipoAsociado" name="tipoAsociado" required>
+                                <option value="EXTERNO" <?= $padre['tipoAsociado'] == 'EXTERNO' ? 'selected' : '' ?>>EXTERNO</option>
+                                <option value="INTERNO" <?= $padre['tipoAsociado'] == 'INTERNO' ? 'selected' : '' ?>>INTERNO</option>
                             </select>
                         </div>
                         
-                        <div id="alumnosContainer" style="<?= $padre['tipo_asociado'] == 'INTERNO' ? '' : 'display: none;' ?>">
+                        <div id="alumnosContainer" style="<?= $padre['tipoAsociado'] == 'INTERNO' ? '' : 'display: none;' ?>">
                             <div class="mt-4">
                                 <h4 class="text-center" style="color: #000;">Alumnos Asociados</h4>
                                 <div class="table-responsive">
@@ -90,8 +90,8 @@
                                                         </td>
                                                         <td>
                                                             <select class="form-control" name="alumno_sexo[]" required>
-                                                                <option value="M" <?= $alumno['Genero_alumno'] == 'M' ? 'selected' : '' ?>>Masculino</option>
-                                                                <option value="F" <?= $alumno['Genero_alumno'] == 'F' ? 'selected' : '' ?>>Femenino</option>
+                                                                <option value="M" <?= $alumno['generoAlumno'] == 'M' ? 'selected' : '' ?>>Masculino</option>
+                                                                <option value="F" <?= $alumno['generoAlumno'] == 'F' ? 'selected' : '' ?>>Femenino</option>
                                                             </select>
                                                         </td>
                                                         <td>
@@ -121,7 +121,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="padre_tipo_asociado" id="padre_tipo_asociado" value="<?= esc($padre['tipo_asociado']) ?>">
+                        <input type="hidden" name="padre_tipo_asociado" id="padre_tipo_asociado" value="<?= esc($padre['tipoAsociado']) ?>">
 
                         <div class="form-group mt-4">
                             <button type="submit" class="btn btn-primary">Actualizar</button>
@@ -136,7 +136,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var tipoAsociadoSelect = document.getElementById('tipo_asociado');
+        var tipoAsociadoSelect = document.getElementById('tipoAsociado');
         var alumnosContainer = document.getElementById('alumnosContainer');
         var padreTipoAsociadoInput = document.getElementById('padre_tipo_asociado');
 

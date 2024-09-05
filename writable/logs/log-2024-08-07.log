@@ -272,20 +272,20 @@ INFO - 2024-08-07 05:38:11 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-08-07 05:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-07 05:41:14 --> Datos del docente: {"nombre_completo":null,"nip":"12346767","escalafon":"56789000","fecha_ingreso":null,"estado":"Activo","tipo":"Docente","cargo":null}
+DEBUG - 2024-08-07 05:41:14 --> Datos del docente: {"nombre_completo":null,"nip":"12346767","escalafon":"56789000","fechaIngreso":null,"estado":"Activo","tipo":"Docente","cargo":null}
 INFO - 2024-08-07 05:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-07 05:43:48 --> Datos del docente: {"nombre_completo":"Orlando Canbara","nip":"12345","escalafon":"56789","fecha_ingreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null}
+DEBUG - 2024-08-07 05:43:48 --> Datos del docente: {"nombre_completo":"Orlando Canbara","nip":"12345","escalafon":"56789","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null}
 INFO - 2024-08-07 05:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-07 05:47:58 --> Datos del docente: {"nombre_completo":null,"nip":"728822","escalafon":"89898","fecha_ingreso":null,"estado":"Activo","tipo":"Docente","cargo":null}
+DEBUG - 2024-08-07 05:47:58 --> Datos del docente: {"nombre_completo":null,"nip":"728822","escalafon":"89898","fechaIngreso":null,"estado":"Activo","tipo":"Docente","cargo":null}
 INFO - 2024-08-07 05:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-07 05:49:40 --> Datos del docente: {"nombre_completo":"Orlando Canbara","nip":"0199","escalafon":"56789","fecha_ingreso":"2020-01-01","estado":"Activo","tipo":"Administrativo","cargo":null}
+DEBUG - 2024-08-07 05:49:40 --> Datos del docente: {"nombre_completo":"Orlando Canbara","nip":"0199","escalafon":"56789","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Administrativo","cargo":null}
 INFO - 2024-08-07 05:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 05:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -1313,7 +1313,7 @@ INFO - 2024-08-07 07:33:12 --> Datos recibidos: Array
 INFO - 2024-08-07 07:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 07:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 07:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-07 07:34:23 --> Datos del docente: {"nombre_completo":"Walter Solis","nip":"223445","escalafon":"43213","fecha_ingreso":"2022-01-02","estado":"Activo","tipo":"Docente","cargo":null}
+DEBUG - 2024-08-07 07:34:23 --> Datos del docente: {"nombre_completo":"Walter Solis","nip":"223445","escalafon":"43213","fechaIngreso":"2022-01-02","estado":"Activo","tipo":"Docente","cargo":null}
 INFO - 2024-08-07 07:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 07:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-07 07:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

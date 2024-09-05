@@ -45,7 +45,7 @@
                             <?php foreach ($tipos_permisos as $tipo_permiso) : ?>
                                 <tr>
                                     <td><?= $tipo_permiso['nombre']; ?></td>
-                                    <td><?= $tipo_permiso['cantidad_dias']; ?></td>
+                                    <td><?= $tipo_permiso['cantidadDias']; ?></td>
                                     <td><?= $tipo_permiso['estado'] == 'Activo' ? 'Activo' : 'Inactivo'; ?></td>
 
                                     <td>

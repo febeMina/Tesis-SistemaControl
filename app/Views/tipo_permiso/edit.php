@@ -23,8 +23,8 @@
                             <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $tipo_permiso['nombre'] ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="cantidad_dias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>
-                            <input type="number" class="form-control" id="cantidad_dias" name="cantidad_dias" value="<?= $tipo_permiso['cantidad_dias'] ?>" required>
+                            <label for="cantidadDias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>
+                            <input type="number" class="form-control" id="cantidadDias" name="cantidadDias" value="<?= $tipo_permiso['cantidadDias'] ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>

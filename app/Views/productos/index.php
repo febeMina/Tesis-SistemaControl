@@ -45,7 +45,7 @@
                                 <?php foreach ($productos as $producto) : ?>
                                     <tr>
                                         <td><?= $producto->nombre_tipo; ?></td>
-                                        <!--<td><?= $producto->fecha_ingreso; ?></td>-->
+                                        <!--<td><?= $producto->fechaIngreso; ?></td>-->
                                         <td><?= $producto->codigo_lote; ?></td>
                                         <td><?= $producto->fecha_vencimiento; ?></td>
                                         <td><?= $producto->n_unidades_Caja; ?></td>

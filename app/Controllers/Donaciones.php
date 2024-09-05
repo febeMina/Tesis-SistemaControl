@@ -6,6 +6,14 @@ use App\Models\DonacionesModel;
 
 class Donaciones extends Controller
 {
+
+    protected $db;
+
+    public function __construct()
+    {
+        $this->db = \Config\Database::connect();
+    }
+    
     public function index()
     {
         $db = \Config\Database::connect();
@@ -20,7 +28,7 @@ class Donaciones extends Controller
 
     public function create()
     {
-        $projectBuilder = $db->table('proyectos');
+        $projectBuilder = $this->db->table('proyectos');
         $proyectos = $projectBuilder->select('idProyectos, nombreProyecto')->get()->getResult();
         
         return view('donaciones/create', ['proyectos' => $proyectos]);  

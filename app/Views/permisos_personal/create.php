@@ -24,7 +24,7 @@
                             </label>
                             <select name="idDocente" id="idDocente" class="form-control">
                                 <?php foreach ($docentes as $docente): ?>
-                                    <option value="<?= $docente['idDocente'] ?>"><?= esc($docente['nombre_completo']) ?></option>
+                                    <option value="<?= $docente['idDocente'] ?>"><?= esc($docente['nombreCompleto']) ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>

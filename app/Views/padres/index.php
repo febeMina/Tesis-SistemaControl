@@ -75,11 +75,11 @@
                                     <tr>
                                         <td><?= esc($padre['nombreCompleto']); ?></td>
                                         <td><?= esc($padre['tipo_documento']); ?></td>
-                                        <td><?= esc($padre['numero_documento']); ?></td>
+                                        <td><?= esc($padre['numeroDocumento']); ?></td>
                                         <td><?= esc($padre['telefono']) ?></td>
                                         <td><?= esc($padre['estado']) ?></td>
                                         <td><?= esc($padre['Genero']) === 'M' ? 'Masculino' : 'Femenino' ?></td>
-                                        <td><?= esc($padre['tipo_asociado']) === 'INTERNO' ? 'Interno' : 'Externo' ?></td>
+                                        <td><?= esc($padre['tipoAsociado']) === 'INTERNO' ? 'Interno' : 'Externo' ?></td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Acciones">
                                                 <a href="<?= site_url('padres/edit/' . $padre['idDatosResponsable']) ?>" class="btn btn-edit">

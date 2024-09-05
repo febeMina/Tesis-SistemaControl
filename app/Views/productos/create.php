@@ -29,8 +29,8 @@
                         </div>
                         <div class="form-group row" style="color: #000;">
                             <div class="col-md-6">
-                                <label for="fecha_ingreso" class="form-label">Fecha Ingreso:</label>
-                                <input type="text" class="form-control" id="fecha_ingreso" name="fecha_ingreso" value="<?= date('Y-m-d') ?>" readonly>
+                                <label for="fechaIngreso" class="form-label">Fecha Ingreso:</label>
+                                <input type="text" class="form-control" id="fechaIngreso" name="fechaIngreso" value="<?= date('Y-m-d') ?>" readonly>
                             </div>
                             <div class="col-md-6">
                                 <label for="fecha_vencimiento" class="form-label">Fecha Vencimiento:</label>

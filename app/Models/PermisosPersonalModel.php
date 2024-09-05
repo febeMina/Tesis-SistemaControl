@@ -60,15 +60,16 @@ class PermisosPersonalModel extends Model
     public function getPermisosConSaldos($nombreCompleto = null, $nip = null, $fechaCreacion = null)
     {
         $builder = $this->db->table('permisos_personal');
-        $builder->select('permisos_personal.*, docente.nip, docente.nombre_completo, saldos_personal.saldoActualDias, saldos_personal.saldoActualHoras, tipo_permisos.nombre as tipoPermisoNombre, tipo_permisos.cantidad_dias');
+        $builder->select('permisos_personal.*, docente.nip, docente.nombreCompleto, saldos_personal.saldoActualDias, saldos_personal.saldoActualHoras, tipo_permisos.nombre as tipoPermisoNombre, tipo_permisos.cantidadDias');
         $builder->join('saldos_personal', 'saldos_personal.idSaldoPersonal = permisos_personal.idSaldoPersonal');
         $builder->join('docente', 'docente.idDocente = saldos_personal.idDocente');
         $builder->join('tipo_permisos', 'tipo_permisos.idTipoPermiso = saldos_personal.idTipoPermiso');
-        $builder->orderBy('permisos_personal.fechaCreacion', 'DESC'); // Ordenar por fecha de creación
+        $builder->orderBy('permisos_personal.idSaldoPersonal', 'ASC'); // Ordenar por fecha de creación
+        $builder->orderBy('permisos_personal.idPermisoPersonal', 'ASC'); // Ordenar por fecha de creación
         
             // Aplicar filtros
         if ($nombreCompleto) {
-            $builder->like('docente.nombre_completo', $nombreCompleto);
+            $builder->like('docente.nombreCompleto', $nombreCompleto);
         }
         if ($nip) {
             $builder->where('docente.nip', $nip);
@@ -88,18 +89,20 @@ class PermisosPersonalModel extends Model
     $builder->select('
         permisos_personal.*, 
         docente.nip, 
-        docente.nombre_completo, 
+        docente.nombreCompleto, 
         saldos_personal.saldoActualDias, 
         saldos_personal.saldoActualHoras, 
         tipo_permisos.nombre as tipoPermisoNombre, 
-        tipo_permisos.cantidad_dias,
+        tipo_permisos.cantidadDias,
         permisos_personal.fechaInicio,
         permisos_personal.fechaFin
     ');
     $builder->join('saldos_personal', 'saldos_personal.idSaldoPersonal = permisos_personal.idSaldoPersonal');
     $builder->join('docente', 'docente.idDocente = saldos_personal.idDocente');
     $builder->join('tipo_permisos', 'tipo_permisos.idTipoPermiso = saldos_personal.idTipoPermiso');
-    $builder->orderBy('permisos_personal.fechaCreacion', 'DESC'); // Ordenar por fecha de creación
+    // aplicar where que sea de tipo between para aplicar fechaInicio AND fechaFin
+    $builder->orderBy('permisos_personal.idSaldoPersonal', 'ASC'); // Ordenar por fecha de creación
+    $builder->orderBy('permisos_personal.idSaldoPersonal', 'ASC'); // Ordenar por fecha de creación
     
     // Filtrar por fechaInicio si se proporciona
     if ($fechaInicio) {
@@ -116,37 +119,12 @@ class PermisosPersonalModel extends Model
 }
 
 
-    
-    public function getPermisosReporte( $fechaInicio = null, $fechaFin = null)
-    {
-        $builder = $this->db->table($this->table);
-        $builder->select('permisos_personal.*, maestros.nombre_completo, tipo_permisos.nombre as tipoPermisoNombre, saldos_personal.saldoActualDias, saldos_personal.saldoActualHoras, saldos_personal.saldoHistorialDias, saldos_personal.saldoHistorialHoras');
-        $builder->join('maestros', 'maestros.idMaestro = permisos_personal.idMaestro');
-        $builder->join('tipo_permisos', 'tipo_permisos.idTipoPermiso = permisos_personal.idTipoPermiso');
-        $builder->join('saldos_personal', 'saldos_personal.idSaldoPersonal = permisos_personal.idSaldoPersonal');
-    
-        if ($nombreCompleto) {
-            $builder->like('maestros.nombre_completo', $nombreCompleto);
-        }
-        if ($nip) {
-            $builder->where('maestros.nip', $nip);
-        }
-        if ($fechaInicio) {
-            $builder->where('permisos_personal.fechaInicio >=', $fechaInicio);
-        }
-        if ($fechaFin) {
-            $builder->where('permisos_personal.fechaFin <=', $fechaFin);
-        }
-    
-        return $builder->get()->getResultArray();
-    }
-    
 
 
     public function getPermisosPorDocente($idDocente)
     {
         $builder = $this->db->table('permisos_personal p');
-        $builder->select('p.idPermisoPersonal, p.fechaInicio, p.fechaFin, p.horasSolicitadas, p.saldoHistorialDias, p.saldoHistorialHoras, s.saldoActualDias, s.saldoActualHoras, tp.nombre as tipoPermisoNombre, tp.cantidad_dias');
+        $builder->select('p.idPermisoPersonal, p.fechaInicio, p.fechaFin, p.horasSolicitadas, p.saldoHistorialDias, p.saldoHistorialHoras, s.saldoActualDias, s.saldoActualHoras, tp.nombre as tipoPermisoNombre, tp.cantidadDias');
         $builder->join('saldos_personal s', 'p.idSaldoPersonal = s.idSaldoPersonal');
         $builder->join('tipo_permisos tp', 'tp.idTipoPermiso = s.idTipoPermiso');
         $builder->where('s.idDocente', $idDocente);
@@ -166,26 +144,37 @@ class PermisosPersonalModel extends Model
         return $diferencia->days + 1;
     }
 
+   
+    protected $horasPorDia = 6;
+
     public function actualizarSaldoPersonal($idSaldoPersonal, $tipo, $cantidad)
-{
-    $saldo = $this->where('idSaldoPersonal', $idSaldoPersonal)->first();
+    {
+        $saldo = $this->db->table('saldos_personal')->where('idSaldoPersonal', $idSaldoPersonal)->get()->getRowArray();
 
-    if (!$saldo) {
-        throw new \Exception('Saldo no encontrado.');
-    }
+        if (!$saldo) {
+            throw new \Exception('Saldo no encontrado.');
+        }
 
-    if ($tipo === 'Dias') {
-        $nuevoSaldo = $saldo['saldoActualDias'] - $cantidad;
-        $this->update($idSaldoPersonal, ['saldoActualDias' => $nuevoSaldo]);
-    } elseif ($tipo === 'Horas') {
-        $nuevoSaldo = $saldo['saldoActualHoras'] - $cantidad;
-        $this->update($idSaldoPersonal, ['saldoActualHoras' => $nuevoSaldo]);
+        if ($tipo === 'Dias') {
+            $nuevoSaldo = $saldo['saldoActualDias'] - $cantidad;
+            $this->db->table('saldos_personal')->where('idSaldoPersonal', $idSaldoPersonal)->update(['saldoActualDias' => $nuevoSaldo]);
+        } elseif ($tipo === 'Horas') {
+            $nuevoSaldoHoras = $saldo['saldoActualHoras'] - $cantidad;
+
+            // Si las horas restantes se convierten en días completos
+            while ($nuevoSaldoHoras < 0) {
+                $nuevoSaldoHoras += $this->horasPorDia;
+                $nuevoSaldoDias = $saldo['saldoActualDias'] - 1;
+                $this->db->table('saldos_personal')->where('idSaldoPersonal', $idSaldoPersonal)->update(['saldoActualDias' => $nuevoSaldoDias]);
+            }
+
+            $this->db->table('saldos_personal')->where('idSaldoPersonal', $idSaldoPersonal)->update(['saldoActualHoras' => $nuevoSaldoHoras]);
+        }
     }
-}
+   
 public function getTipoPermisos()
 {
     return $this->db->table('tipo_permisos')->get()->getResultArray();
 }
-
 
 }

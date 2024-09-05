@@ -119,7 +119,7 @@ class ReportePDF extends BaseController
         // Generar cabecera de permisos y saldos dinámicamente
         foreach ($tipoPermisos as $index => $tipoPermiso) {
             $pdf->SetXY($x + ($index * $ancho * 2), 45);
-            $pdf->MultiCell($ancho, 4,  utf8_decode($tipoPermiso['nombre'] . ' (' . $tipoPermiso['cantidad_dias'] . ' DÍAS AL AÑO)'), 1, 'C');
+            $pdf->MultiCell($ancho, 4,  utf8_decode($tipoPermiso['nombre'] . ' (' . $tipoPermiso['cantidadDias'] . ' DÍAS AL AÑO)'), 1, 'C');
             $pdf->SetXY($x + ($index * $ancho * 2) + $ancho, 45);
             $pdf->MultiCell($ancho, 4, utf8_decode("SALDO"), 1, 'C');
         }
@@ -181,8 +181,30 @@ class ReportePDF extends BaseController
         $altura = 57;
         // foreach de la consulta con los registros
         foreach ($data as $permiso) {
+            $posicionesPermisos = array(
+                array("", "", ""), // Enfermedad 
+                array("", "", ""), // Enfermedad saldo 
+                array("", "", ""), // Motivo personal 
+                array("", "", ""), // Motivo personal saldo 
+                array("", "", ""), // Duelo 
+                array("", "", ""), // Duelo saldo 
+            ); 
+            /*
+                Enfermedad
+                [0][0] dia
+                [0][1] hora
+                [0][2] minuto
+                Enfermedad saldo
+                [1][0] dia
+                [1][1] hora
+                [1][2] minuto
+                Motivo personal [2]
+                motivo personal saldo [3]
+                duelo [4]
+                duelo saldo [5]
+            */
             $nip = esc($permiso['nip']);
-            $docente = esc($permiso['nombre_completo']);
+            $docente = esc($permiso['nombreCompleto']);
             $fechaInicio = $permiso['fechaInicio'];
             
             // Extraer día, mes y año de fechaInicio
@@ -190,6 +212,26 @@ class ReportePDF extends BaseController
             $diaInicio = $fechaInicioDate->format('d');
             $mesInicio = $fechaInicioDate->format('m'); // Mes en formato numérico
             $añoInicio = $fechaInicioDate->format('Y');
+            
+            // Aplicar las conversiones similar a la vista que acabamos de arreglar
+            switch ($permiso["tipoPermisoNombre"]) {
+                case 'ENFERMEDAD':
+                break;
+                
+                case 'DUELO':
+                    $posicionesPermisos[4][0] = "";
+                    $posicionesPermisos[4][1] = "";
+                    $posicionesPermisos[4][2] = "";
+                    // Saldo
+                    $posicionesPermisos[5][0] = $permiso["saldoActualDias"];
+                    $posicionesPermisos[5][1] = $permiso["saldoActualHoras"];
+                    $posicionesPermisos[5][2] = "";
+                break;
+                
+                default:
+                    // Motivos personales
+                break;
+            }
             
             $altura += 5;
             $pdf->SetXY(10, $altura);
@@ -206,46 +248,48 @@ class ReportePDF extends BaseController
                     
             
             $pdf->SetXY(107,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[0][0]), 1, 1, 'C'); 
             $pdf->SetXY(116,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[0][1]), 1, 1, 'C'); 
             $pdf->SetXY(125,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[0][2]), 1, 1, 'C'); 
             
             $pdf->SetXY(134,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[1][0]), 1, 1, 'C'); 
             $pdf->SetXY(143,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[1][1]), 1, 1, 'C'); 
             $pdf->SetXY(152,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[1][2]), 1, 1, 'C'); 
     
             $pdf->SetXY(161,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[2][0]), 1, 1, 'C'); 
             $pdf->SetXY(170,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[2][1]), 1, 1, 'C'); 
             $pdf->SetXY(179,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[2][2]), 1, 1, 'C'); 
             
             $pdf->SetXY(188,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[3][0]), 1, 1, 'C'); 
             $pdf->SetXY(197,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[3][1]), 1, 1, 'C'); 
             $pdf->SetXY(206,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[3][2]), 1, 1, 'C'); 
             
             $pdf->SetXY(215,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[4][0]), 1, 1, 'C'); 
             $pdf->SetXY(224,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[4][1]), 1, 1, 'C'); 
             $pdf->SetXY(233,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[4][2]), 1, 1, 'C'); 
             
             $pdf->SetXY(242,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[5][0]), 1, 1, 'C'); 
             $pdf->SetXY(251,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[5][1]), 1, 1, 'C'); 
             $pdf->SetXY(260,  $altura);
-            $pdf->Cell(9, 5, utf8_decode(""), 1, 1, 'C'); 
+            $pdf->Cell(9, 5, utf8_decode($posicionesPermisos[5][2]), 1, 1, 'C'); 
+            
+            unset($posicionesPermisos);
         }
         // Espacio
         //$pdf->Ln(10);
@@ -270,7 +314,7 @@ class ReportePDF extends BaseController
         $pdf->SetFont('Arial', '', 12);
         foreach ($data as $permiso) {
             $pdf->Cell(30, 10, $permiso['nip'], 1);
-            $pdf->Cell(50, 10, $permiso['nombre_completo'], 1);
+            $pdf->Cell(50, 10, $permiso['nombreCompleto'], 1);
             $pdf->Cell(30, 10, $permiso['fechaInicio'], 1);
             $pdf->Cell(30, 10, $permiso['fechaFin'], 1);
             foreach ($tipoPermisos as $tipoPermiso) {

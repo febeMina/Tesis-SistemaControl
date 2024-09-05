@@ -23,19 +23,19 @@ INFO - 2024-08-24 18:27:16 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-08-24 18:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-24 18:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-24 18:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-24 18:29:17 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-24 18:29:17 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-24 18:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-24 18:29:53 --> Filtros aplicados: {"nombre_completo":"Walter","nip":"","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":""}
+DEBUG - 2024-08-24 18:29:53 --> Filtros aplicados: {"nombre_completo":"Walter","nip":"","escalafon":null,"fechaIngreso":null,"estado":null,"tipo":""}
 INFO - 2024-08-24 18:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-24 18:29:59 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-24 18:29:59 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-24 18:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-24 18:30:04 --> Filtros aplicados: {"nombre_completo":"","nip":"12345","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":""}
+DEBUG - 2024-08-24 18:30:04 --> Filtros aplicados: {"nombre_completo":"","nip":"12345","escalafon":null,"fechaIngreso":null,"estado":null,"tipo":""}
 INFO - 2024-08-24 18:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-24 18:30:10 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":null}
+DEBUG - 2024-08-24 18:30:10 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
 INFO - 2024-08-24 18:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-24 18:30:15 --> Filtros aplicados: {"nombre_completo":"","nip":"","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":"Docente"}
+DEBUG - 2024-08-24 18:30:15 --> Filtros aplicados: {"nombre_completo":"","nip":"","escalafon":null,"fechaIngreso":null,"estado":null,"tipo":"Docente"}
 INFO - 2024-08-24 18:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-24 18:30:23 --> Filtros aplicados: {"nombre_completo":"","nip":"","escalafon":null,"fecha_ingreso":null,"estado":null,"tipo":"Administrativo"}
+DEBUG - 2024-08-24 18:30:23 --> Filtros aplicados: {"nombre_completo":"","nip":"","escalafon":null,"fechaIngreso":null,"estado":null,"tipo":"Administrativo"}
 INFO - 2024-08-24 18:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-24 18:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-24 18:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

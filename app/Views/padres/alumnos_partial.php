@@ -34,7 +34,7 @@
             <div class="alumno-item">
                 <div class="alumno-info">
                     <p><strong>Nombre Completo:</strong> <?= $alumno['nombreAlumno'] ?></p>
-                    <p><strong>Género:</strong> <?= $alumno['Genero_alumno'] === 'M' ? 'Masculino' : 'Femenino' ?></p>
+                    <p><strong>Género:</strong> <?= $alumno['generoAlumno'] === 'M' ? 'Masculino' : 'Femenino' ?></p>
                     <p><strong>NIE:</strong> <?= $alumno['NIE'] ?></p>
                     <p><strong>Estado:</strong> <?= $alumno['estado'] ?></p>
                 </div>

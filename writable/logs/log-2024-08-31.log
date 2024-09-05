@@ -255,7 +255,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-31 00:11:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1232' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -266,9 +266,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-31 00:11:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1232' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -279,10 +279,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-31 00:11:44 --> [Caused by] mysqli_sql_exception: Duplicate entry '1232' for key 'datos_alumnos.NIE_UNIQUE'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `Genero_alumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :Genero_alumno:, :NIE:, :estado:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (\'Irene Lopez Castillo\', \'F\', \'1232\', \'Activo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `datos_alumnos` (`nombreAlumno`, `generoAlumno`, `NIE`, `estado`) VALUES (:nombreAlumno:, :generoAlumno:, :NIE:, :estado:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -365,3 +365,12 @@ INFO - 2024-08-31 00:44:17 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-08-31 00:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-31 00:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-31 00:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 00:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 00:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 00:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-08-31 00:51:29 --> Filtros aplicados: {"nombre_completo":null,"nip":null,"escalafon":null,"fechaIngreso":null,"estado":null,"tipo":null}
+INFO - 2024-08-31 00:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 00:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 00:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 22:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 22:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

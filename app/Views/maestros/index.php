@@ -40,7 +40,7 @@
                     <form action="<?= site_url('maestros/index') ?>" method="get">
                         <div class="row mb-4">
                             <div class="col-md-4">
-                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre Completo">
+                                <input type="text" name="nombreCompleto" class="form-control" placeholder="Nombre Completo">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" name="nip" class="form-control" placeholder="NIP">
@@ -53,8 +53,19 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Filtrar</button>
-                        <a href="<?= site_url('maestros/index') ?>" class="btn btn-secondary ms-2">Limpiar</a>
+                        <div class="row mt-3">
+                            <div class="col-md-12 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Filtrar</button>
+                                    <a href="<?= site_url('maestros/index') ?>" class="btn btn-secondary ms-2">Limpiar</a>
+                                </div>
+                                <div>
+                                    <a href="<?= site_url('maestros/create') ?>" class="btn btn-primary">
+                                        <i class="mdi mdi-plus"> Agregar</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                     
                     <!-- Tabla de maestros -->
@@ -76,10 +87,10 @@
                                 <?php if (isset($maestros) && !empty($maestros)): ?>
                                     <?php foreach ($maestros as $maestro) : ?>
                                         <tr data-id="<?= esc($maestro['idDocente']) ?>">
-                                            <td><?= esc($maestro['nombre_completo']) ?></td>
+                                            <td><?= esc($maestro['nombreCompleto']) ?></td>
                                             <td><?= esc($maestro['nip']) ?></td>
                                             <td><?= esc($maestro['escalafon']) ?></td>
-                                            <td><?= esc($maestro['fecha_ingreso']) ?></td>
+                                            <td><?= esc($maestro['fechaIngreso']) ?></td>
                                             <td><?= esc($maestro['estado']) ?></td>
                                             <td><?= esc($maestro['tipo']) ?></td>
                                             <td><?= esc($maestro['cargo']) ?></td>

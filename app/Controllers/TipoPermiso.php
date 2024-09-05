@@ -39,7 +39,7 @@ class TipoPermiso extends BaseController
     {
         $data = [
             'nombre' => $this->request->getPost('nombre'),
-            'cantidad_dias' => $this->request->getPost('cantidad_dias'),
+            'cantidadDias' => $this->request->getPost('cantidadDias'),
             'estado' => 'Activo'  // Estado por defecto al crear
         ];
     
@@ -56,8 +56,8 @@ class TipoPermiso extends BaseController
                 $this->saldoPersonalModel->insert([
                     'idDocente' => $docente['idDocente'],
                     'idTipoPermiso' => $idTipoPermiso,
-                    'saldoActualDias' => $data['cantidad_dias'],
-                    'saldoActualHoras' => $data['cantidad_dias'] * 6,
+                    'saldoActualDias' => $data['cantidadDias'],
+                    'saldoActualHoras' => $data['cantidadDias'] * 6,
                 ]);
             }
     
@@ -104,7 +104,7 @@ class TipoPermiso extends BaseController
 
     $data = [
         'nombre' => $this->request->getPost('nombre'),
-        'cantidad_dias' => $this->request->getPost('cantidad_dias'),
+        'cantidadDias' => $this->request->getPost('cantidadDias'),
         'estado' => $this->request->getPost('estado') // Mantener el estado del formulario
     ];
 

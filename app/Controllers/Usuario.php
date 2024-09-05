@@ -23,9 +23,8 @@ class Usuario extends BaseController
     {
         $db = \Config\Database::connect();
         $builder = $db->table('usuarios');
-        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, rol.nombreRol, docente.nombre_completo');
+        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, rol.nombreRol');
         $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
-        $builder->join('docente', 'docente.idDocente = usuarios.idDocente', 'left'); // Cambiado a LEFT JOIN
         $usuarios = $builder->get()->getResult();
         return view('usuario/index', ['usuarios' => $usuarios]);
     }
@@ -35,15 +34,12 @@ class Usuario extends BaseController
     {
         $db = \Config\Database::connect();
 
-        // Obtener la lista de docentes
-        $docentesBuilder = $db->table('docente');
-        $docentes = $docentesBuilder->select('idDocente, nombre_completo')->get()->getResult();
-
+      
         // Obtener la lista de roles
         $rolesBuilder = $db->table('rol');
         $roles = $rolesBuilder->select('idRol, nombreRol')->get()->getResult();
 
-        return view('usuario/create', ['docentes' => $docentes, 'roles' => $roles]);
+        return view('usuario/create', ['roles' => $roles]);
     }
 
     public function store()
@@ -72,7 +68,6 @@ class Usuario extends BaseController
         $data = [
             'usuario' => $this->request->getPost('usuario'),
             'clave' => password_hash($clave, PASSWORD_DEFAULT),
-            'idDocente' => $this->request->getPost('idDocente'),
             'idRol' => $this->request->getPost('idRol'),
             'estado' => $this->request->getPost('estado'),
             'usuarioCrea' => session()->get('usuario'), // Obtener el nombre de usuario de la sesión actual
@@ -96,24 +91,20 @@ class Usuario extends BaseController
 
         // Obtener el usuario a editar
         $builder = $db->table('usuarios');
-        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, usuarios.idDocente, usuarios.idRol, rol.nombreRol, docente.nombre_completo');
+        $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, usuarios.idRol, rol.nombreRol');
         $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
-        $builder->join('docente', 'docente.idDocente = usuarios.idDocente', 'inner');
         $usuario = $builder->where('idUsuarios', $id)->get()->getRow();
 
         if (!$usuario) {
             return redirect()->to(base_url('public/usuario'))->with('error', 'El usuario no existe.');
         }
 
-        // Obtener la lista de docentes
-        $docentesBuilder = $db->table('docente');
-        $docentes = $docentesBuilder->select('idDocente, nombre_completo')->get()->getResult();
-
+       
         // Obtener la lista de roles
         $rolesBuilder = $db->table('rol');
         $roles = $rolesBuilder->select('idRol, nombreRol')->get()->getResult();
 
-        return view('usuario/edit', ['usuario' => $usuario, 'docentes' => $docentes, 'roles' => $roles]);
+        return view('usuario/edit', ['usuario' => $usuario,'roles' => $roles]);
     }
 
     public function update($id)
@@ -134,7 +125,6 @@ class Usuario extends BaseController
         // Datos a actualizar
         $data = [
             'usuario' => $this->request->getPost('usuario'),
-            'idDocente' => $this->request->getPost('idDocente'),
             'idRol' => $this->request->getPost('idRol'),
             'estado' => $this->request->getPost('estado'),
             'usuarioModifica' => session()->get('usuario'), // Obtener el nombre de usuario de la sesión actual

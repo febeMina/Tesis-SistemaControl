@@ -29,7 +29,7 @@ class PermisosPersonal extends BaseController
         $permisos = $this->permisosPersonalModel->getPermisosConSaldos();
 
         // Obtener parámetros de filtrado de la solicitud
-        $nombreCompleto = $this->request->getGet('nombre_completo');
+        $nombreCompleto = $this->request->getGet('nombreCompleto');
         $nip = $this->request->getGet('nip');
         $fechaCreacion = $this->request->getGet('fechaCreacion');
         
@@ -50,9 +50,9 @@ class PermisosPersonal extends BaseController
 
             $data[] = [
                 'nip' => $permiso['nip'],
-                'nombre_completo' => $permiso['nombre_completo'],
+                'nombreCompleto' => $permiso['nombreCompleto'],
                 'tipoPermisoNombre' => $tipoPermisoNombre,
-                'cantidad_dias' => $permiso['cantidad_dias'],
+                'cantidadDias' => $permiso['cantidadDias'],
                 'fechaInicio' => $permiso['fechaInicio'],
                 'fechaFin' => $permiso['fechaFin'],
                 'horasSolicitadas' => $horasSolicitadas,
@@ -86,107 +86,108 @@ class PermisosPersonal extends BaseController
     }
 
     public function store()
-{
-    $request = \Config\Services::request();
-    
-    $idDocente = $request->getPost('idDocente');
-    $idTipoPermiso = $request->getPost('idTipoPermiso');
-    $tipoSolicitud = $request->getPost('tipoSolicitud');
-    $horasSolicitadas = (int)($request->getPost('horasSolicitadas') ?? 0);
-    $fechaUnica = $request->getPost('fechaUnica');
-    $fechaInicio = $request->getPost('fechaInicio');
-    $fechaFin = $request->getPost('fechaFin');
-    
-    if (empty($idDocente) || empty($idTipoPermiso)) {
-        return redirect()->back()->with('error', 'Datos obligatorios no proporcionados.');
-    }
-    
-    // Obtener el saldo actual del docente para el tipo de permiso solicitado
-    $saldo = $this->saldoPersonalModel->getSaldoPersonalId($idDocente, $idTipoPermiso);
-    if (!$saldo) {
-        return redirect()->back()->with('error', 'Saldo no encontrado para el docente y tipo de permiso.');
-    }
-    
-    $saldoHistorialHoras = $saldo['saldoActualHoras'];
-    $saldoHistorialDias = $saldo['saldoActualDias'];
-    
-    // Definir las horas que constituyen un día completo de trabajo
-    $horasPorDia = 6;
-
-if ($tipoSolicitud === 'Horas') {
-    if ($horasSolicitadas < 1 || $horasSolicitadas > $horasPorDia) {
-        return redirect()->back()->with('error', 'Solo se permiten de 1 a ' . $horasPorDia . ' horas.');
-    }
-
-    if ($horasSolicitadas > $saldoHistorialHoras) {
-        return redirect()->back()->with('error', 'No hay suficiente saldo de horas.');
-    }
-
-    // Calcular el nuevo saldo de horas
-    $nuevoSaldoHoras = $saldoHistorialHoras - $horasSolicitadas;
-
-    // Calcular los días adicionales que deben ser restados si hay un ajuste de días
-    $diasDescontados = 0;
-
-    if ($nuevoSaldoHoras < 0) {
-        $horasFaltantes = abs($nuevoSaldoHoras);
-        $diasDescontados = ceil($horasFaltantes / $horasPorDia);
-        $nuevoSaldoDias = $saldoHistorialDias - $diasDescontados;
-        $nuevoSaldoHoras = $horasPorDia - ($horasFaltantes % $horasPorDia);
-    } else {
-        $nuevoSaldoDias = $saldoHistorialDias;
-    }
-    
-    // Redondeo adecuado
-    $nuevoSaldoDias = round($nuevoSaldoDias, 2);
-    $nuevoSaldoHoras = max(0, $nuevoSaldoHoras);
-
-    $insertData = [
-        'idSaldoPersonal' => $saldo['idSaldoPersonal'],
-        'fechaInicio' => $fechaUnica,
-        'fechaFin' => $fechaUnica,
-        'horasSolicitadas' => $horasSolicitadas,
-        'saldoHistorialHoras' => $saldoHistorialHoras,
-        'saldoHistorialDias' => $saldoHistorialDias,
-        'fechaCreacion' => date('Y-m-d')
-    ];
-
-    $this->permisosPersonalModel->insert($insertData);
-
-    $this->saldoPersonalModel->actualizarSaldoPersonal(
-        $saldo['idSaldoPersonal'], 
-        'Horas', 
-        $horasSolicitadas,
-        $diasDescontados
-    );
-} else {
-        $diasSolicitados = $this->permisosPersonalModel->calcularDiasEntreFechas($fechaInicio, $fechaFin);
-    
-        if ($diasSolicitados > $saldoHistorialDias) {
-            return redirect()->back()->with('error', 'No hay suficiente saldo de días.');
+    {
+        $request = \Config\Services::request();
+        
+        $idDocente = $request->getPost('idDocente');
+        $idTipoPermiso = $request->getPost('idTipoPermiso');
+        $tipoSolicitud = $request->getPost('tipoSolicitud');
+        $horasSolicitadas = (int)($request->getPost('horasSolicitadas') ?? 0);
+        $fechaUnica = $request->getPost('fechaUnica');
+        $fechaInicio = $request->getPost('fechaInicio');
+        $fechaFin = $request->getPost('fechaFin');
+        
+        if (empty($idDocente) || empty($idTipoPermiso)) {
+            return redirect()->back()->with('error', 'Datos obligatorios no proporcionados.');
         }
+        
+        // Obtener el saldo actual del docente para el tipo de permiso solicitado
+        $saldo = $this->saldoPersonalModel->getSaldoPersonalId($idDocente, $idTipoPermiso);
+        if (!$saldo) {
+            return redirect()->back()->with('error', 'Saldo no encontrado para el docente y tipo de permiso.');
+        }
+        
+        $saldoHistorialHoras = $saldo['saldoActualHoras'];
+        $saldoHistorialDias = $saldo['saldoActualDias'];
+        
+        // Definir las horas que constituyen un día completo de trabajo
+        $horasPorDia = 6;
     
-        // Insertar el permiso por días
-        $insertData = [
-            'idSaldoPersonal' => $saldo['idSaldoPersonal'],
-            'fechaInicio' => $fechaInicio,
-            'fechaFin' => $fechaFin,
-            'saldoHistorialHoras' => $saldoHistorialHoras,
-            'saldoHistorialDias' => $saldoHistorialDias
-        ];
+        if ($tipoSolicitud === 'Horas') {
+            if ($horasSolicitadas < 1 || $horasSolicitadas > $horasPorDia) {
+                return redirect()->back()->with('error', 'Solo se permiten de 1 a ' . $horasPorDia . ' horas.');
+            }
     
-        $this->permisosPersonalModel->insert($insertData);
+            if ($horasSolicitadas > $saldoHistorialHoras) {
+                return redirect()->back()->with('error', 'No hay suficiente saldo de horas.');
+            }
     
-        // Actualizar el saldo usando el método correcto
-        $this->saldoPersonalModel->actualizarSaldoPersonal(
-            $saldo['idSaldoPersonal'], 
-            'Dias', 
-            $diasSolicitados
-        );
+            // Calcula cuántos días completos representan las horas solicitadas
+            $diasCompletosDesdeHoras = floor($horasSolicitadas / $horasPorDia);
+            $horasRestantes = $horasSolicitadas % $horasPorDia;
+    
+            // Descontar días solo si hay suficientes horas para completar un día
+            $nuevoSaldoDias = $saldoHistorialDias - $diasCompletosDesdeHoras;
+            $nuevoSaldoHoras = $saldoHistorialHoras - $horasSolicitadas;
+    
+            if ($nuevoSaldoHoras < 0) {
+                // Si las horas son negativas, convierte en días
+                $nuevoSaldoDias -= 1;
+                $nuevoSaldoHoras += $horasPorDia;
+            }
+    
+            // Redondeo adecuado
+            $nuevoSaldoDias = round($nuevoSaldoDias, 2);
+            $nuevoSaldoHoras = max(0, $nuevoSaldoHoras);
+    
+            // Insertar el permiso por horas
+            $insertData = [
+                'idSaldoPersonal' => $saldo['idSaldoPersonal'],
+                'fechaInicio' => $fechaUnica,
+                'fechaFin' => $fechaUnica,
+                'horasSolicitadas' => $horasSolicitadas,
+                'saldoHistorialHoras' => $saldoHistorialHoras,
+                'saldoHistorialDias' => $saldoHistorialDias,
+                'fechaCreacion' => date('Y-m-d')
+            ];
+    
+            $this->permisosPersonalModel->insert($insertData);
+    
+            $this->saldoPersonalModel->actualizarSaldoPersonal(
+                $saldo['idSaldoPersonal'], 
+                'Horas', 
+                $horasSolicitadas,
+                $diasCompletosDesdeHoras
+            );
+        } else {
+            $diasSolicitados = $this->permisosPersonalModel->calcularDiasEntreFechas($fechaInicio, $fechaFin);
+        
+            if ($diasSolicitados > $saldoHistorialDias) {
+                return redirect()->back()->with('error', 'No hay suficiente saldo de días.');
+            }
+        
+            // Insertar el permiso por días
+            $insertData = [
+                'idSaldoPersonal' => $saldo['idSaldoPersonal'],
+                'fechaInicio' => $fechaInicio,
+                'fechaFin' => $fechaFin,
+                'saldoHistorialHoras' => $saldoHistorialHoras,
+                'saldoHistorialDias' => $saldoHistorialDias
+            ];
+        
+            $this->permisosPersonalModel->insert($insertData);
+        
+            // Actualizar el saldo usando el método correcto
+            $this->saldoPersonalModel->actualizarSaldoPersonal(
+                $saldo['idSaldoPersonal'], 
+                'Dias', 
+                $diasSolicitados
+            );
+        }
+        
+        return redirect()->to('/permisos_personal')->with('success', 'Permiso registrado exitosamente.');
     }
     
-    return redirect()->to('/permisos_personal')->with('success', 'Permiso registrado exitosamente.');
-}
 
 
 
@@ -215,9 +216,9 @@ public function reporte()
 
         $data[] = [
             'nip' => $permiso['nip'],
-            'nombre_completo' => $permiso['nombre_completo'],
+            'nombreCompleto' => $permiso['nombreCompleto'],
             'tipoPermisoNombre' => $tipoPermisoNombre,
-            'cantidad_dias' => $permiso['cantidad_dias'],
+            'cantidadDias' => $permiso['cantidadDias'],
             'fechaInicio' => $permiso['fechaInicio'],
             'fechaFin' => $permiso['fechaFin'],
             'horasSolicitadas' => $horasSolicitadas,
@@ -246,6 +247,4 @@ public function reporte()
         ],
     ]);
 }
-
-
 }

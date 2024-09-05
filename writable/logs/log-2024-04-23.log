@@ -192,9 +192,9 @@ in APPPATH\Views\permiso_magisterial\index.php on line 35.
  7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
-CRITICAL - 2024-04-23 04:20:56 --> ErrorException: Undefined array key "cantidad_dias"
+CRITICAL - 2024-04-23 04:20:56 --> ErrorException: Undefined array key "cantidadDias"
 in APPPATH\Controllers\PermisoMagisterial.php on line 96.
- 1 APPPATH\Controllers\PermisoMagisterial.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad_dias"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 96)
+ 1 APPPATH\Controllers\PermisoMagisterial.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidadDias"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\PermisoMagisterial.php', 96)
  2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\PermisoMagisterial->index()
  3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisoMagisterial))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)

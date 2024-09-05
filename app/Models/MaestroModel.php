@@ -8,7 +8,7 @@ class MaestroModel extends Model
 {
     protected $table = 'docente';
     protected $primaryKey = 'idDocente';
-    protected $allowedFields = ['nombre_completo', 'nip', 'escalafon', 'fecha_ingreso', 'estado', 'deleted', 'tipo', 'cargo'];
+    protected $allowedFields = ['nombreCompleto', 'nip', 'escalafon', 'fechaIngreso', 'estado', 'deleted', 'tipo', 'cargo'];
 
     protected $useAutoIncrement = true;
     protected $returnType = 'array';
@@ -17,10 +17,10 @@ class MaestroModel extends Model
 
     // Actualiza las reglas de validación para quitar la unicidad en nip y escalafon
     protected $validationRules = [
-        'nombre_completo' => 'required',
+        'nombreCompleto' => 'required',
         'nip' => 'required', // Quitada la regla de unicidad
         'escalafon' => 'required', // Quitada la regla de unicidad
-        'fecha_ingreso' => 'required',
+        'fechaIngreso' => 'required',
         'estado' => 'required',
         'tipo' => 'required',
         'cargo' => 'permit_empty',
@@ -52,8 +52,8 @@ class MaestroModel extends Model
         $builder = $this->builder();
     
         // Aplicar filtros si están presentes
-        if (!empty($filters['nombre_completo'])) {
-            $builder->like('nombre_completo', $filters['nombre_completo']);
+        if (!empty($filters['nombreCompleto'])) {
+            $builder->like('nombreCompleto', $filters['nombreCompleto']);
         }
         if (!empty($filters['nip'])) {
             $builder->like('nip', $filters['nip']);
@@ -61,8 +61,8 @@ class MaestroModel extends Model
         if (!empty($filters['escalafon'])) {
             $builder->like('escalafon', $filters['escalafon']);
         }
-        if (!empty($filters['fecha_ingreso'])) {
-            $builder->like('fecha_ingreso', $filters['fecha_ingreso']);
+        if (!empty($filters['fechaIngreso'])) {
+            $builder->like('fechaIngreso', $filters['fechaIngreso']);
         }
         if (!empty($filters['estado']) && $filters['estado'] !== 'Inactivo') {
             $builder->where('estado', $filters['estado']);

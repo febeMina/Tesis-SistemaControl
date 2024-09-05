@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     detalles.forEach(function (detalle) {
                         detallesHtml += '<tr>';
                         detallesHtml += '<td>' + detalle.nombre_grado + '</td>';
-                        detallesHtml += '<td>' + detalle.cantidad_niños + '</td>';
-                        detallesHtml += '<td>' + detalle.cantidad_niñas + '</td>';
+                        detallesHtml += '<td>' + detalle.cantidadNiños + '</td>';
+                        detallesHtml += '<td>' + detalle.cantidadNiñas + '</td>';
                         detallesHtml += '<td>' + detalle.Total + '</td>';
                         detallesHtml += '</tr>';
                     });

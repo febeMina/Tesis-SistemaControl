@@ -34,8 +34,8 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="numero_documento" style="color: #000;"><i class="fas fa-id-card"></i> Documento</label>
-                            <input type="text" class="form-control" id="numero_documento" name="numero_documento" value="<?= old('numero_documento') ?>" required>
+                            <label for="numeroDocumento" style="color: #000;"><i class="fas fa-id-card"></i> Documento</label>
+                            <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento" value="<?= old('numeroDocumento') ?>" required>
                         </div>
                         
                         <div class="form-group">
@@ -60,8 +60,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="tipo_asociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de Asociado</label>
-                            <select class="form-control" id="tipo_asociado" name="tipo_asociado" required>
+                            <label for="tipoAsociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de Asociado</label>
+                            <select class="form-control" id="tipoAsociado" name="tipoAsociado" required>
                                 <option value="EXTERNO">EXTERNO</option>
                                 <option value="INTERNO">INTERNO</option>
                             </select>
@@ -167,17 +167,17 @@
             });
         };
 
-        const documentoInput = document.getElementById('numero_documento');
+        const documentoInput = document.getElementById('numeroDocumento');
         const idTipoDocumento = document.getElementById('idTipoDocumento');
 
         idTipoDocumento.addEventListener('change', function() {
             const selectedOption = idTipoDocumento.options[idTipoDocumento.selectedIndex];
             const mascara = selectedOption.getAttribute('data-mascara');
-            inputMask('#numero_documento', mascara);
+            inputMask('#numeroDocumento', mascara);
         });
 
         // Mostrar/ocultar campos según selección de tipo de asociado
-        const tipoAsociado = document.querySelector('select[name="tipo_asociado"]');
+        const tipoAsociado = document.querySelector('select[name="tipoAsociado"]');
     const alumnosFields = document.querySelectorAll('.alumnos-fields'); // Cambia por el selector que agrupa los campos de alumnos.
 
     function toggleAlumnoFields() {

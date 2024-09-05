@@ -69,11 +69,11 @@
                                                         <?php foreach ($permiso['detalle_saldos_permiso'] as $detalle): ?>
                                                             <?php
                                                             // Calcula los días disponibles y horas disponibles
-                                                            $dias_disponibles = ($detalle['cantidad_dias'] ?? 0) - ($detalle['dias_ocupados'] ?? 0);
+                                                            $dias_disponibles = ($detalle['cantidadDias'] ?? 0) - ($detalle['dias_ocupados'] ?? 0);
                                                             $horas_disponibles = ($detalle['cantidad_horas'] ?? 0) - ($detalle['horas_ocupadas'] ?? 0);
                                                             ?>
                                                             <tr>
-                                                                <td><?= esc($detalle['nombreTipoPermiso'] ?? 'Desconocido') ?> (<?= esc($detalle['cantidad_dias'] ?? 'Desconocido') ?> días)</td>
+                                                                <td><?= esc($detalle['nombreTipoPermiso'] ?? 'Desconocido') ?> (<?= esc($detalle['cantidadDias'] ?? 'Desconocido') ?> días)</td>
                                                                 <td><?= esc($detalle['fecha_inicio'] ?? 'Desconocida') ?></td>
                                                                 <td><?= esc($detalle['fecha_fin'] ?? 'Desconocida') ?></td>
                                                                 <td><?= esc($detalle['dias_ocupados'] ?? 0) ?></td>

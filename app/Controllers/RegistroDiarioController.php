@@ -47,8 +47,8 @@ class RegistroDiarioController extends BaseController
         $fecha = $this->request->getPost('fecha');
         $grados = $this->request->getPost('idGrado'); // Array de IDs de grados
         $docentes = $this->request->getPost('idDocente'); // Array de IDs de docentes
-        $cantidadNinos = $this->request->getPost('cantidad_niños');
-        $cantidadNinas = $this->request->getPost('cantidad_niñas');
+        $cantidadNinos = $this->request->getPost('cantidadNiños');
+        $cantidadNinas = $this->request->getPost('cantidadNiñas');
     
         // Verificar si $grados o $docentes son null
         if ($grados === null || $docentes === null) {
@@ -66,7 +66,7 @@ class RegistroDiarioController extends BaseController
         $dataRegistro = [
             'fecha' => $fecha,
             'familiasBeneficiadas' => $totalFamiliasBeneficiadas,
-            'created_at' => date('Y-m-d H:i:s'),
+            'createdAt' => date('Y-m-d H:i:s'),
         ];
         $registroDiarioModel->insert($dataRegistro);
     
@@ -82,8 +82,8 @@ class RegistroDiarioController extends BaseController
                 'idRegistroDiario' => $registroDiarioId,
                 'idGrado' => $gradoId,
                 'idDocente' => $docentes[$index],
-                'cantidad_niños' => $cantidadNinosGrado,
-                'cantidad_niñas' => $cantidadNinasGrado,
+                'cantidadNiños' => $cantidadNinosGrado,
+                'cantidadNiñas' => $cantidadNinasGrado,
                 'Total' => $cantidadNinosGrado + $cantidadNinasGrado,
             ];
             $detalleAsistenciaModel->insert($dataDetalle);

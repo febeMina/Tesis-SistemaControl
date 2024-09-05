@@ -142,7 +142,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-21 21:06:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Operand should contain 1 column(s)
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -153,9 +153,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:06:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Operand should contain 1 column(s)
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -166,10 +166,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:06:53 --> [Caused by] mysqli_sql_exception: Operand should contain 1 column(s)
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:06:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -196,7 +196,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-21 21:42:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -207,9 +207,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:42:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -220,10 +220,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:42:28 --> [Caused by] mysqli_sql_exception: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -251,7 +251,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-21 21:42:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -262,9 +262,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:42:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -275,10 +275,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:42:52 --> [Caused by] mysqli_sql_exception: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'1\',\'1\',\'1\',\'1\',\'1\'), NULL, \'2024-08-21 21:42:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -308,7 +308,7 @@ Stack trace:
 #12 {main}
 CRITICAL - 2024-08-21 21:59:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\BaseConnection.php on line 647.
- 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -319,9 +319,9 @@ in SYSTEMPATH\Database\BaseConnection.php on line 647.
  9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:59:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
- 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
- 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
@@ -332,10 +332,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
 11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 CRITICAL - 2024-08-21 21:59:40 --> [Caused by] mysqli_sql_exception: Unknown column 'idDocente' in 'field list'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `created_at`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :created_at:)', [...], false)
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (\'2024-08-22\', (\'44\',\'42\',\'45\',\'48\',\'46\'), NULL, \'2024-08-21 21:59:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `registro_diario` (`fecha`, `idDocente`, `familiasBeneficiadas`, `createdAt`) VALUES (:fecha:, :idDocente:, :familiasBeneficiadas:, :createdAt:)', [...], false)
  5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
  6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
  7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)

@@ -24,7 +24,7 @@
                     <td><?= $saldos_docente['nombre_completo'] ?></td>
                     <td><?= $saldos_docente['nip'] ?></td>
                     <td><?= $detalle['nombre_tipo_permiso'] ?></td>
-                    <td><?= $detalle['cantidad_dias'] ?></td>
+                    <td><?= $detalle['cantidadDias'] ?></td>
                     <td><?= $detalle['dias_ocupados'] ?></td>
                     <td><?= $detalle['horas_ocupadas'] ?></td>
                     <td><?= $detalle['dias_disponibles'] ?></td>

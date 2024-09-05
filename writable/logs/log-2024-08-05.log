@@ -80,21 +80,21 @@ INFO - 2024-08-05 05:22:18 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -128,21 +128,21 @@ INFO - 2024-08-05 05:25:27 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -169,21 +169,21 @@ INFO - 2024-08-05 05:33:19 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -217,21 +217,21 @@ INFO - 2024-08-05 05:35:17 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -269,21 +269,21 @@ INFO - 2024-08-05 05:37:34 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -321,21 +321,21 @@ INFO - 2024-08-05 05:40:38 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -362,21 +362,21 @@ INFO - 2024-08-05 05:41:20 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -410,21 +410,21 @@ INFO - 2024-08-05 05:41:31 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -513,21 +513,21 @@ INFO - 2024-08-05 05:57:37 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -627,21 +627,21 @@ INFO - 2024-08-05 05:58:59 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -741,21 +741,21 @@ INFO - 2024-08-05 06:00:54 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -844,21 +844,21 @@ INFO - 2024-08-05 06:04:51 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )
@@ -947,21 +947,21 @@ INFO - 2024-08-05 06:06:19 --> Tipos Permisos: Array
         (
             [idTipoPermiso] => 7
             [nombre] => ENFERMEDAD
-            [cantidad_dias] => 15
+            [cantidadDias] => 15
         )
 
     [1] => Array
         (
             [idTipoPermiso] => 9
             [nombre] => MOTIVOS PERSONALES
-            [cantidad_dias] => 25
+            [cantidadDias] => 25
         )
 
     [2] => Array
         (
             [idTipoPermiso] => 13
             [nombre] => DUELO
-            [cantidad_dias] => 10
+            [cantidadDias] => 10
         )
 
 )

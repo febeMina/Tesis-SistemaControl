@@ -37,7 +37,7 @@ DEBUG - 2024-07-09 04:56:11 --> Datos de maestro insertados: Array
     [nombre_completo] => Lorena Jaime Lopez
     [nip] => 728822
     [escalafon] => 89898
-    [fecha_ingreso] => 2020-01-01
+    [fechaIngreso] => 2020-01-01
     [estado] => Activo
     [tipo] => Administrativo
     [cargo] => Contador
@@ -59,7 +59,7 @@ DEBUG - 2024-07-09 05:01:12 --> Datos de maestro insertados: Array
     [nombre_completo] => Juan lopez
     [nip] => 0199
     [escalafon] => 2993
-    [fecha_ingreso] => 2020-01-01
+    [fechaIngreso] => 2020-01-01
     [estado] => Activo
     [tipo] => Administrativo
     [cargo] => Contador
@@ -87,7 +87,7 @@ DEBUG - 2024-07-09 05:08:27 --> Datos de maestro insertados: Array
     [nombre_completo] => Priscila Perez
     [nip] => 728822
     [escalafon] => 9292
-    [fecha_ingreso] => 2024-01-01
+    [fechaIngreso] => 2024-01-01
     [estado] => Activo
     [tipo] => Docente
     [cargo] => Director
@@ -106,7 +106,7 @@ DEBUG - 2024-07-09 05:18:42 --> Datos de maestro insertados: Array
     [nombre_completo] => Patricia Hernandez
     [nip] => 929292
     [escalafon] => 11221
-    [fecha_ingreso] => 2022-01-01
+    [fechaIngreso] => 2022-01-01
     [estado] => Activo
     [tipo] => Docente
     [cargo] => 
@@ -128,7 +128,7 @@ DEBUG - 2024-07-09 05:22:28 --> Datos de maestro insertados: Array
     [nombre_completo] => Yolanda Estrada
     [nip] => 01991
     [escalafon] => 112
-    [fecha_ingreso] => 2024-01-01
+    [fechaIngreso] => 2024-01-01
     [estado] => Activo
     [tipo] => Docente
     [cargo] => 

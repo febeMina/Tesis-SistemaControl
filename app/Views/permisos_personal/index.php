@@ -31,7 +31,7 @@
                     <form action="<?= site_url('/permisos_personal') ?>" method="get" class="mb-4">
                         <div class="row g-3">
                             <div class="col-md-4">
-                                <input type="text" name="nombre_completo" class="form-control" placeholder="Nombre del empleado" value="<?= esc($filters['nombre_completo'] ?? '') ?>">
+                                <input type="text" name="nombreCompleto" class="form-control" placeholder="Nombre del empleado" value="<?= esc($filters['nombreCompleto'] ?? '') ?>">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" name="nip" class="form-control" placeholder="NIP" value="<?= esc($filters['nip'] ?? '') ?>">
@@ -63,27 +63,29 @@
                             <tbody>
                                 <?php foreach ($data as $item): ?>
                                     <?php
+                                        $horasDias = 6;
                                         // Calculando el número de días solicitados
                                         $fechaInicio = new DateTime($item['fechaInicio']);
                                         $fechaFin = new DateTime($item['fechaFin']);
                                         $intervalo = $fechaInicio->diff($fechaFin);
-                                        $diasSolicitados = $intervalo->days; // Sumamos 1 para incluir el primer día
-                                        $horasSolicitadas = $item['horasSolicitadas'] ?? '-';
-                                        
+                                        $diasSolicitados = $intervalo->days + 1; // Sumamos 1 para incluir el primer día
+                                        $horasSolicitadas = $item['horasSolicitadas'] ?? $diasSolicitados * $horasDias;
+                                        $conversionDias = $item['horasSolicitadas'] ?? $horasDias;
+                                        $diasSolicitados = ($conversionDias / $horasDias) * $diasSolicitados;
                                         // Obtener saldo histórico de días y horas
                                         $saldoHistorialDias = $item['saldoHistorialDias'] ?? 0;
                                         $saldoHistorialHoras = $item['saldoHistorialHoras'] ?? 0;
 
                                         // Calculando el nuevo saldo
                                         $nuevoSaldoDias = $saldoHistorialDias - $diasSolicitados;
-                                        $nuevoSaldoHoras = $saldoHistorialHoras - ($horasSolicitadas === '-' ? 0 : $horasSolicitadas);
+                                        $nuevoSaldoHoras = $saldoHistorialHoras - $horasSolicitadas;
 
                                         // Formatear saldo histórico en días para eliminar decimales
                                         $saldoHistorialDias = number_format($saldoHistorialDias, 0, '', '');
                                     ?>
                                     <tr>
                                         <td>
-                                            <strong><?= esc($item['nombre_completo']) ?></strong><br>
+                                            <strong><?= esc($item['nombreCompleto']) ?></strong><br>
                                             <small>NIP: <?= esc($item['nip']) ?></small>
                                         </td>
                                         <td>
@@ -92,7 +94,7 @@
                                         </td>
                                         <td>
                                             <?= esc($item['tipoPermisoNombre']) ?><br>
-                                            <small>(<?= esc($item['cantidad_dias'] ?? '0') ?> días)</small>
+                                            <small>(<?= esc($item['cantidadDias'] ?? '0') ?> días)</small>
                                         </td>
                                         <td><?= esc($diasSolicitados) ?></td>
                                         <td><?= esc($horasSolicitadas) ?></td>

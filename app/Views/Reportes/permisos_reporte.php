@@ -91,7 +91,7 @@
                                             </td>
                                             <td>
                                                 <?= esc($permiso['tipoPermisoNombre']) ?><br>
-                                                <small>(<?= esc($permiso['cantidad_dias'] ?? '0') ?> días)</small>
+                                                <small>(<?= esc($permiso['cantidadDias'] ?? '0') ?> días)</small>
                                             </td>
                                             <td><?= esc($diasSolicitados) ?></td>
                                             <td><?= esc($horasSolicitadas) ?></td>

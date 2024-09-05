@@ -37,7 +37,7 @@ class SolicitudPermisoModel extends Model
 
     public function findAllWithDetails()
     {
-        return $this->select('solicitud_permiso.*, docente.nombre_completo, tipo_permiso.nombre')
+        return $this->select('solicitud_permiso.*, docente.nombreCompleto, tipo_permiso.nombre')
                     ->join('docente', 'docente.idDocente = solicitud_permiso.idDocente')
                     ->join('tipo_permiso', 'tipo_permiso.idTipoPermiso = solicitud_permiso.idTipoPermiso')
                     ->findAll();

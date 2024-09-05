@@ -68,7 +68,7 @@ class Productos extends BaseController
     $productoID = $this->productoModel->saveProducto([
         'idtipoProducto' => $this->request->getPost('idtipoProducto'),
         'codigo_lote' => $this->request->getPost('codigo_lote'),
-        'fecha_ingreso' => $this->request->getPost('fecha_ingreso'),
+        'fechaIngreso' => $this->request->getPost('fechaIngreso'),
         'fecha_vencimiento' => $this->request->getPost('fecha_vencimiento'),
         'n_unidades_Caja' => $n_unidades_Caja,
         'idUnidadesPorCaja' => $this->request->getPost('idUnidadesPorCaja'),
@@ -128,7 +128,7 @@ class Productos extends BaseController
     $this->productoModel->updateProducto($id, [
         'idtipoProducto' => $this->request->getPost('idtipoProducto'),
         'codigo_lote' => $this->request->getPost('codigo_lote'),
-        'fecha_ingreso' => $this->request->getPost('fecha_ingreso'),
+        'fechaIngreso' => $this->request->getPost('fechaIngreso'),
         'fecha_vencimiento' => $this->request->getPost('fecha_vencimiento'),
         'n_unidades_Caja' => $n_unidades_Caja,
         'idUnidadesPorCaja' => $this->request->getPost('idUnidadesPorCaja'),

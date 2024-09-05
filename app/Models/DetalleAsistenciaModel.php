@@ -11,8 +11,8 @@ class DetalleAsistenciaModel extends Model
 
     protected $allowedFields = [
         'idGrado',
-        'cantidad_niños',
-        'cantidad_niñas',
+        'cantidadNiños',
+        'cantidadNiñas',
         'Total',
         'Detalle',
         'idRegistroDiario',

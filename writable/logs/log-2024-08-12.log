@@ -526,7 +526,7 @@ INFO - 2024-08-12 23:08:07 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-08-12 23:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-12 23:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-12 23:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2024-08-12 23:13:14 --> Datos del docente: {"nombre_completo":"Wilber Torres","nip":"0019112","escalafon":"0019112","fecha_ingreso":"2019-03-01","estado":"Activo","tipo":"Administrativo","cargo":"Contador"}
+DEBUG - 2024-08-12 23:13:14 --> Datos del docente: {"nombre_completo":"Wilber Torres","nip":"0019112","escalafon":"0019112","fechaIngreso":"2019-03-01","estado":"Activo","tipo":"Administrativo","cargo":"Contador"}
 INFO - 2024-08-12 23:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-12 23:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-12 23:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -27,10 +27,10 @@ class Maestros extends Controller
 
         // Obtener los datos de filtro del formulario
         $filters = [
-            'nombre_completo' => $request->getVar('nombre_completo'),
+            'nombreCompleto' => $request->getVar('nombreCompleto'),
             'nip' => $request->getVar('nip'),
             'escalafon' => $request->getVar('escalafon'),
-            'fecha_ingreso' => $request->getVar('fecha_ingreso'),
+            'fechaIngreso' => $request->getVar('fechaIngreso'),
             'estado' => $request->getVar('estado'),
             'tipo' => $request->getVar('tipo')
         ];
@@ -64,10 +64,10 @@ class Maestros extends Controller
         log_message('debug', 'Método store() llamado');
         $request = \Config\Services::request();
         
-        $nombre_completo = $request->getPost('nombre_completo');
+        $nombreCompleto = $request->getPost('nombreCompleto');
         $nip = $request->getPost('nip');
         $escalafon = $request->getPost('escalafon');
-        $fecha_ingreso = $request->getPost('fecha_ingreso');
+        $fechaIngreso = $request->getPost('fechaIngreso');
         $estado = $request->getPost('estado');
         $tipo = $request->getPost('tipo');
         $cargo = $request->getPost('cargo');
@@ -110,10 +110,10 @@ class Maestros extends Controller
         }
         
         $docenteData = [
-            'nombre_completo' => $nombre_completo,
+            'nombreCompleto' => $nombreCompleto,
             'nip' => $nip,
             'escalafon' => $escalafon,
-            'fecha_ingreso' => $fecha_ingreso,
+            'fechaIngreso' => $fechaIngreso,
             'estado' => $estado,
             'tipo' => $tipo,
             'cargo' => ($tipo === 'Administrativo') ? $cargo : null // Guardar el cargo solo para administrativos
@@ -131,7 +131,7 @@ class Maestros extends Controller
                 $tiposPermisos = $this->tipoPermisoModel->findAll();
     
                 foreach ($tiposPermisos as $tipoPermiso) {
-                    $cantidadDias = isset($tipoPermiso['cantidad_dias']) ? $tipoPermiso['cantidad_dias'] : 0;
+                    $cantidadDias = isset($tipoPermiso['cantidadDias']) ? $tipoPermiso['cantidadDias'] : 0;
                     $this->saldoPersonalModel->insert([
                         'idDocente' => $idDocente,
                         'idTipoPermiso' => $tipoPermiso['idTipoPermiso'],
@@ -139,7 +139,7 @@ class Maestros extends Controller
                         'saldoActualHoras' => $cantidadDias * 6
                     ]);
                 }
-                log_message('debug', 'Redirigiendo a la lista de maestros');
+                
                 return $this->response->setJSON([
                     'success' => true,
                     'message' => 'El maestro ha sido creado exitosamente.',
@@ -187,10 +187,10 @@ public function update($id)
     log_message('debug', 'Método update() llamado');
     $request = \Config\Services::request();
 
-    $nombre_completo = $request->getPost('nombre_completo');
+    $nombreCompleto = $request->getPost('nombreCompleto');
     $nip = $request->getPost('nip');
     $escalafon = $request->getPost('escalafon');
-    $fecha_ingreso = $request->getPost('fecha_ingreso');
+    $fechaIngreso = $request->getPost('fechaIngreso');
     $estado = $request->getPost('estado');
     $tipo = $request->getPost('tipo');
     $cargo = $request->getPost('cargo');
@@ -217,8 +217,8 @@ public function update($id)
     // Validación condicional para NIP y Escalafón
     $validation = \Config\Services::validation();
     $validationRules = [
-        'nombre_completo' => 'required',
-        'fecha_ingreso' => 'required',
+        'nombreCompleto' => 'required',
+        'fechaIngreso' => 'required',
         'estado' => 'required',
         'tipo' => 'required',
         'cargo' => 'permit_empty'
@@ -257,10 +257,10 @@ public function update($id)
     }
 
     $docenteData = [
-        'nombre_completo' => $nombre_completo,
+        'nombreCompleto' => $nombreCompleto,
         'nip' => $nip,
         'escalafon' => $escalafon,
-        'fecha_ingreso' => $fecha_ingreso,
+        'fechaIngreso' => $fechaIngreso,
         'estado' => $estado,
         'tipo' => $tipo,
         'cargo' => ($tipo === 'Administrativo') ? $cargo : null

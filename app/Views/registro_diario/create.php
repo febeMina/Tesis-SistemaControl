@@ -42,19 +42,19 @@
                                                 <label for="idDocente-<?= esc($grado['idGrado']) ?>" class="form-label">Docente:</label>
                                                 <select name="idDocente[]" class="form-select" required>
                                                     <?php foreach ($docentes as $docente): ?>
-                                                        <option value="<?= esc($docente['idDocente']) ?>"><?= esc($docente['nombre_completo']) ?></option>
+                                                        <option value="<?= esc($docente['idDocente']) ?>"><?= esc($docente['nombreCompleto']) ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
 
                                             <div class="mb-2">
-                                                <label for="cantidad_niños-<?= esc($grado['idGrado']) ?>" class="form-label">Cantidad de Niños:</label>
-                                                <input type="number" name="cantidad_niños[]" class="form-control cantidad-ninos" min="0" required>
+                                                <label for="cantidadNiños-<?= esc($grado['idGrado']) ?>" class="form-label">Cantidad de Niños:</label>
+                                                <input type="number" name="cantidadNiños[]" class="form-control cantidad-ninos" min="0" required>
                                             </div>
 
                                             <div class="mb-2">
-                                                <label for="cantidad_niñas-<?= esc($grado['idGrado']) ?>" class="form-label">Cantidad de Niñas:</label>
-                                                <input type="number" name="cantidad_niñas[]" class="form-control cantidad-ninas" min="0" required>
+                                                <label for="cantidadNiñas-<?= esc($grado['idGrado']) ?>" class="form-label">Cantidad de Niñas:</label>
+                                                <input type="number" name="cantidadNiñas[]" class="form-control cantidad-ninas" min="0" required>
                                             </div>
 
                                             <!-- El campo total ha sido eliminado del formulario -->

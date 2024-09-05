@@ -31,7 +31,7 @@
                             <label for="id_tipo_permiso">Tipo de Permiso:</label>
                             <select name="id_tipo_permiso" id="id_tipo_permiso" class="form-control">
                                 <?php foreach ($tipos_permisos as $tipo): ?>
-                                    <option value="<?= $tipo['idTipoPermiso'] ?>" data-cantidad-dias="<?= $tipo['cantidad_dias'] ?>">
+                                    <option value="<?= $tipo['idTipoPermiso'] ?>" data-cantidad-dias="<?= $tipo['cantidadDias'] ?>">
                                         <?= $tipo['nombre'] ?>
                                     </option>
                                 <?php endforeach; ?>

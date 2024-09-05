@@ -64,7 +64,7 @@ class PermisoMagisterial extends BaseController
             return redirect()->back()->withInput()->with('error', 'Tipo de permiso no encontrado.');
         }
     
-        $cantidadDias = $tipoPermiso['cantidad_dias'] ?? 0;
+        $cantidadDias = $tipoPermiso['cantidadDias'] ?? 0;
     
         // Recuperar saldo disponible
         $modelDetalleSaldosTipoPermiso = new DetalleSaldosTipoPermisoModel();
@@ -168,7 +168,7 @@ class PermisoMagisterial extends BaseController
         $request = service('request');
         $filters = [
             'nip' => $request->getVar('nip'),
-            'nombre_completo' => $request->getVar('nombre_completo'),
+            'nombreCompleto' => $request->getVar('nombreCompleto'),
             'fecha_solicitud' => $request->getVar('fecha_solicitud')
         ];
     
@@ -178,7 +178,7 @@ class PermisoMagisterial extends BaseController
     
         $perPage = 10;
     
-        if (!empty($filters['nip']) || !empty($filters['nombre_completo']) || !empty($filters['fecha_solicitud'])) {
+        if (!empty($filters['nip']) || !empty($filters['nombreCompleto']) || !empty($filters['fecha_solicitud'])) {
             $historial_permisos = $this->filterHistorialPermisos($modelHistorialPermisos, $filters);
         } else {
             $historial_permisos = $modelHistorialPermisos->paginate($perPage, 'group1');
@@ -194,14 +194,14 @@ class PermisoMagisterial extends BaseController
             $docente = $modelDocente->find($permiso['idDocente'] ?? null);
     
             if ($docente) {
-                $nombre_completo = $docente['nombre_completo'];
+                $nombreCompleto = $docente['nombreCompleto'];
                 $nip = $docente['nip'];
                 $fecha_creacion = $permiso['fecha_creacion'];
     
                 $data['historial_permisos'][] = [
                     'idHistorialPermiso' => $permiso['idHistorialPermiso'],
                     'idDocente' => $permiso['idDocente'],
-                    'nombre_completo' => $nombre_completo,
+                    'nombreCompleto' => $nombreCompleto,
                     'nip' => $nip,
                     'fecha_inicio' => $permiso['fecha_inicio'],
                     'fecha_fin' => $permiso['fecha_fin'],
@@ -223,7 +223,7 @@ class PermisoMagisterial extends BaseController
     public function getDetalleSaldosPermiso($idHistorialPermiso)
 {
     $modelHistorialPermisos = new HistorialPermisosModel();
-    return $modelHistorialPermisos->select('historial_permisos.fecha_inicio, historial_permisos.fecha_fin, historial_permisos.dias_ocupados, historial_permisos.horas_ocupadas, tipo_permisos.nombre AS nombreTipoPermiso, tipo_permisos.cantidad_dias')
+    return $modelHistorialPermisos->select('historial_permisos.fecha_inicio, historial_permisos.fecha_fin, historial_permisos.dias_ocupados, historial_permisos.horas_ocupadas, tipo_permisos.nombre AS nombreTipoPermiso, tipo_permisos.cantidadDias')
                                   ->join('tipo_permisos', 'historial_permisos.idTipoPermiso = tipo_permisos.idTipoPermiso')
                                   ->where('idHistorialPermiso', $idHistorialPermiso)
                                   ->findAll();
@@ -239,9 +239,9 @@ private function filterHistorialPermisos($modelHistorialPermisos, $filters)
                     ->where('maestros.nip', $filters['nip']);
         }
     
-        if (!empty($filters['nombre_completo'])) {
+        if (!empty($filters['nombreCompleto'])) {
             $builder->join('maestros', 'maestros.idMaestro = historial_permisos.idDocente')
-                    ->where('maestros.nombre_completo LIKE', '%' . $filters['nombre_completo'] . '%');
+                    ->where('maestros.nombreCompleto LIKE', '%' . $filters['nombreCompleto'] . '%');
         }
     
         if (!empty($filters['fecha_solicitud'])) {
@@ -258,13 +258,13 @@ private function getTipoPermiso($idTipoPermiso, $tipos_permisos)
         if ($tipo_permiso['idTipoPermiso'] == $idTipoPermiso) {
             return [
                 'nombre' => $tipo_permiso['nombre'],
-                'cantidad_dias' => $tipo_permiso['cantidad_dias']
+                'cantidadDias' => $tipo_permiso['cantidadDias']
             ];
         }
     }
     return [
         'nombre' => 'Desconocido',
-        'cantidad_dias' => 0
+        'cantidadDias' => 0
     ];
 }
 
