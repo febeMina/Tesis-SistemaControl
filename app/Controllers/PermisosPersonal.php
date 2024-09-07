@@ -66,7 +66,7 @@ class PermisosPersonal extends BaseController
         }
 
         $currentPage = $this->request->getVar('page') ? $this->request->getVar('page') : 1;
-        $perPage = 10;
+        $perPage = 5;
         $totalRows = count($data);
 
         $dataPaginated = array_slice($data, ($currentPage - 1) * $perPage, $perPage);

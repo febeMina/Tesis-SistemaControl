@@ -22,7 +22,7 @@
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <!-- Botón para crear nuevo tipo de documento -->
-                    <a href="<?= site_url('public/tipo-documento/create') ?>" class="btn btn-primary">
+                    <a href="<?= site_url('/tipo-documento/create') ?>" class="btn btn-primary">
                             <i class="mdi mdi-plus"></i> Agregar
                         </a>
                     

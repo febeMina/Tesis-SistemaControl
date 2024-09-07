@@ -25,6 +25,7 @@
                         <div class="form-group">
                             <label for="idTipoDocumento" style="color: #000;"><i class="fas fa-id-card"></i> Tipo de Documento</label>
                             <select class="form-control" id="idTipoDocumento" name="idTipoDocumento" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($tipos_documento as $tipo): ?>
                                     <option value="<?= $tipo['idTipoDocumento']; ?>" data-mascara="<?= $tipo['mascara']; ?>" <?= $padre['idTipoDocumento'] == $tipo['idTipoDocumento'] ? 'selected' : '' ?>>
                                         <?= $tipo['nombre']; ?>
@@ -46,6 +47,7 @@
                         <div class="form-group">
                             <label for="genero" style="color: #000;">Género</label>
                             <select class="form-control" id="genero" name="genero" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="M" <?= $padre['Genero'] == 'M' ? 'selected' : '' ?>>Masculino</option>
                                 <option value="F" <?= $padre['Genero'] == 'F' ? 'selected' : '' ?>>Femenino</option>
                             </select>
@@ -62,6 +64,7 @@
                         <div class="form-group">
                             <label for="tipoAsociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de Asociado</label>
                             <select class="form-control" id="tipoAsociado" name="tipoAsociado" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="EXTERNO" <?= $padre['tipoAsociado'] == 'EXTERNO' ? 'selected' : '' ?>>EXTERNO</option>
                                 <option value="INTERNO" <?= $padre['tipoAsociado'] == 'INTERNO' ? 'selected' : '' ?>>INTERNO</option>
                             </select>
@@ -90,6 +93,7 @@
                                                         </td>
                                                         <td>
                                                             <select class="form-control" name="alumno_sexo[]" required>
+                                                            <option value="" disabled selected>Selecciona</option>
                                                                 <option value="M" <?= $alumno['generoAlumno'] == 'M' ? 'selected' : '' ?>>Masculino</option>
                                                                 <option value="F" <?= $alumno['generoAlumno'] == 'F' ? 'selected' : '' ?>>Femenino</option>
                                                             </select>
@@ -166,6 +170,7 @@
                 </td>
                 <td>
                     <select class="form-control" name="alumno_sexo[]" required>
+                        <option value="" disabled selected>Selecciona</option>
                         <option value="M">Masculino</option>
                         <option value="F">Femenino</option>
                     </select>

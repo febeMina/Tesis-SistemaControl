@@ -74,58 +74,73 @@ class Padres extends BaseController
 
 
 public function store()
-    {
-        $validationRules = [
-            'nombre_completo' => 'required',
-            'idTipoDocumento' => 'required',
-            'numeroDocumento' => 'required',
-            'telefono' => 'required',
-            'genero' => 'required',
-            'estado' => 'required',
-            'tipoAsociado' => 'required'
-        ];
+{
+    // Validación
+    $validationRules = [
+        'nombre_completo' => 'required',
+        'idTipoDocumento' => 'required',
+        'numeroDocumento' => 'required',
+        'telefono' => 'required',
+        'genero' => 'required',
+        'estado' => 'required',
+        'tipoAsociado' => 'required'
+    ];
 
-        if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
-            $validationRules['alumno_nombre_completo.*'] = 'required';
-            $validationRules['alumno_sexo.*'] = 'required';
-            $validationRules['alumno_nie.*'] = 'required';
-            $validationRules['alumno_estado.*'] = 'required';
-        }
-
-        if (!$this->validate($validationRules)) {
-            return redirect()->back()->withInput()->with('error', 'Por favor corrige los errores en el formulario.');
-        }
-
-        $data = [
-            'nombreCompleto' => $this->request->getPost('nombre_completo'),
-            'idTipoDocumento' => $this->request->getPost('idTipoDocumento'),
-            'numeroDocumento' => $this->request->getPost('numeroDocumento'),
-            'telefono' => $this->request->getPost('telefono'),
-            'Genero' => $this->request->getPost('genero'),
-            'estado' => $this->request->getPost('estado'),
-            'tipoAsociado' => $this->request->getPost('tipoAsociado')
-        ];
-
-        $padreModel = new PadreModel();
-        $padreId = $padreModel->insert($data);
-
-        if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
-            $alumnos = $this->request->getPost('alumno_nombre_completo');
-            foreach ($alumnos as $index => $nombre) {
-                $alumnoData = [
-                    'nombre_completo' => $nombre,
-                    'genero' => $this->request->getPost('alumno_sexo')[$index],
-                    'nie' => $this->request->getPost('alumno_nie')[$index],
-                    'estado' => $this->request->getPost('alumno_estado')[$index],
-                    'padre_id' => $padreId
-                ];
-                $alumnoModel = new AlumnoModel();
-                $alumnoModel->insert($alumnoData);
-            }
-        }
-
-        return redirect()->to('/padres')->with('success', 'Padre agregado con éxito.');
+    if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
+        $validationRules['alumno_nombre_completo.*'] = 'required';
+        $validationRules['alumno_sexo.*'] = 'required';
+        $validationRules['alumno_nie.*'] = 'required';
+        $validationRules['alumno_estado.*'] = 'required';
     }
+
+    if (!$this->validate($validationRules)) {
+        return redirect()->back()->withInput()->with('error', 'Por favor corrige los errores en el formulario.');
+    }
+
+    $data = [
+        'nombreCompleto' => $this->request->getPost('nombre_completo'),
+        'idTipoDocumento' => $this->request->getPost('idTipoDocumento'),
+        'numeroDocumento' => $this->request->getPost('numeroDocumento'),
+        'telefono' => $this->request->getPost('telefono'),
+        'Genero' => $this->request->getPost('genero'),
+        'estado' => $this->request->getPost('estado'),
+        'tipoAsociado' => $this->request->getPost('tipoAsociado')
+    ];
+
+    $padreModel = new PadreModel();
+    $padreId = $padreModel->insert($data);
+
+    if ($this->request->getPost('tipoAsociado') === 'INTERNO') {
+        $alumnos = $this->request->getPost('alumno_nombre_completo');
+        $alumnoModel = new AlumnoModel();
+        $responsableAlumnoModel = new ResponsableAlumnoModel();
+
+        foreach ($alumnos as $index => $nombre) {
+            $alumnoData = [
+                'nombreAlumno' => $nombre,
+                'generoAlumno' => $this->request->getPost('alumno_sexo')[$index],
+                'NIE' => $this->request->getPost('alumno_nie')[$index],
+                'estado' => $this->request->getPost('alumno_estado')[$index],
+                'padre_id' => $padreId
+            ];
+
+            // Depuración
+            log_message('debug', 'Datos del alumno: ' . print_r($alumnoData, true));
+
+            // Insertar alumno
+            $alumnoId = $alumnoModel->insert($alumnoData);
+
+            // Insertar relación responsable-alumno
+            $responsableAlumnoModel->insert([
+                'idDatosResponsable' => $padreId,
+                'idAlumno' => $alumnoId
+            ]);
+        }
+    }
+
+    return redirect()->to('/padres')->with('success', 'Padre agregado con éxito.');
+}
+
 
 
 
