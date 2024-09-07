@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\TipoDocumentoModel;
 use CodeIgniter\Controller;
 
-class TipoDocumentoController extends Controller
+class TipoDocumentoController extends BaseController
 {
     protected $tipoDocumentoModel;
 

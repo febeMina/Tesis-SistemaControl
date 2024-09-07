@@ -8,7 +8,7 @@ use App\Models\AlumnoModel; // Asegúrate de tener este modelo creado y configur
 use App\Models\ResponsableAlumnoModel;
 use App\Models\TipoDocumentoModel;
 
-class Padres extends Controller
+class Padres extends BaseController
 {
     public function __construct()
     {
@@ -21,6 +21,7 @@ class Padres extends Controller
 
     public function index()
 {
+    $pager = \Config\Services::pager();
     $padreModel = new PadreModel();
     $tipoDocumentoModel = new TipoDocumentoModel();
     $request = \Config\Services::request();
@@ -28,7 +29,7 @@ class Padres extends Controller
     // Configuración de la paginación
     $pager = \Config\Services::pager();
     $currentPage = $request->getVar('page') ?? 1;
-    $perPage = 10; // Número de elementos por página
+    $perPage = 5; // Número de elementos por página
 
     // Obtener los filtros de la solicitud
     $filters = [
@@ -44,19 +45,17 @@ class Padres extends Controller
     // Obtener los datos paginados
     $padres = $padreModel->getFilteredPadres($filters, $perPage, ($currentPage - 1) * $perPage);
 
-    // Configuración de la paginación
-    $pagerLinks = $pager->makeLinks($currentPage, $perPage, $totalRows);
 
     // Obtener los tipos de documento
     $tiposDocumento = $tipoDocumentoModel->findAll();
-
-    $pagerLinks = $pager->makeLinks($currentPage, $perPage, $totalRows);
+;
         return view('padres/index', [
             'padres' => $padres,
             'filters' => $filters,
             'tiposDocumento' => $tiposDocumento,
-            'pager' => $pagerLinks
+            'pager' => $pager->makeLinks($currentPage,  $perPage, $totalRows, 'bootstrap_pagination')
         ]);
+        
 
 }
 

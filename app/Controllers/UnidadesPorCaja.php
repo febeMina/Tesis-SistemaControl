@@ -6,7 +6,7 @@ use App\Models\UnidadesIndividualesModel;
 use App\Models\UnidadesPorCajaModel;
 use CodeIgniter\Controller;
 
-class UnidadesPorCaja extends Controller
+class UnidadesPorCaja extends BaseController
 {
     public function index()
     {

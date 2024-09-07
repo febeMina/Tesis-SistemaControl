@@ -1,0 +1,172 @@
+INFO - 2024-09-05 13:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-05 13:13:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '1234', 'sistema_control', 3306, '', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\Login.php(41): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Login->signIn()
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Login.php(41): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Login->signIn()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-05 13:13:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `usuario` = :usuario:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(41): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->signIn()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-05 13:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 13:14:59 --> ErrorException: Undefined array key "idUsuarios"
+in APPPATH\Controllers\Login.php on line 59.
+ 1 APPPATH\Controllers\Login.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuarios"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-05 13:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 13:33:54 --> ErrorException: Undefined array key "idUsuarios"
+in APPPATH\Controllers\Login.php on line 60.
+ 1 APPPATH\Controllers\Login.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuarios"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-05 13:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 13:34:23 --> ErrorException: Undefined array key "idUsuarios"
+in APPPATH\Controllers\Login.php on line 60.
+ 1 APPPATH\Controllers\Login.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuarios"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Login.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-05 13:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 13:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-05 13:49:07 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\Donaciones.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-05 13:49:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-05 13:49:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-05 13:49:07 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-05 13:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:25:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 14:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-05 21:29:48 --> Error: Class "App\ThirdParty\Controllers" not found
+in APPPATH\Controllers\Reportes.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(309): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Reportes.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Reportes')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Reportes')
+ 5 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Reportes', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-05 21:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 21:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 22:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 22:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 22:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 22:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 22:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-05 22:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

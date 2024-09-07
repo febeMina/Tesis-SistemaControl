@@ -39,6 +39,7 @@
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Actualizar</button>
+                            <a href="<?= base_url('public/usuario') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
                 </div>

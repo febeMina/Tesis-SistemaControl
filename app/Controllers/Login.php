@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 
-class Login extends Controller
+class Login extends BaseController
 {
     public function __construct()
     {
@@ -24,6 +24,7 @@ class Login extends Controller
     }
     public function signIn()
     {
+    
         $userModel = new UserModel();
         $jsonUser = $this->request->getJSON();
         $response = [
@@ -47,7 +48,7 @@ class Login extends Controller
     
                     // Obtener información del usuario
                     $userInfo = $userModel
-                        ->select('rol.nombreRol')
+                        ->select('usuarios.idUsuarios, rol.nombreRol')
                         ->join('rol', 'rol.idRol = usuarios.idRol', 'inner')
                         ->where('usuario', $user)
                         ->first();

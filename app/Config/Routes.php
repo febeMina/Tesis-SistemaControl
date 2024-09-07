@@ -80,6 +80,7 @@ $routes->get('report', 'ReportController::index');
 
 
 
+
 // Rutas para el manejo de permisos personales
 $routes->get('permisos_personal', 'PermisosPersonal::index');
 $routes->get('permisos_personal/create', 'PermisosPersonal::create');
@@ -87,6 +88,7 @@ $routes->post('permisos_personal/store', 'PermisosPersonal::store');
 
 $routes->get('/reporte', 'PermisosPersonal::reporte');
 $routes->get('reporte-pdf/generar-reporte', 'ReportePDF::generarReporte');
+$routes->get('permisos_personal/getSaldoActual/(:num)/(:num)', 'PermisosPersonal::getSaldoActual/$1/$2');
 
 
 

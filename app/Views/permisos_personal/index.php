@@ -28,7 +28,7 @@
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Formulario de filtro -->
-                    <form action="<?= site_url('/permisos_personal') ?>" method="get" class="mb-4">
+                    <form action="<?= site_url('/reporte_permisos/generarReporte') ?>" method="get" class="mb-4">
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <input type="text" name="nombreCompleto" class="form-control" placeholder="Nombre del empleado" value="<?= esc($filters['nombreCompleto'] ?? '') ?>">
@@ -36,19 +36,19 @@
                             <div class="col-md-4">
                                 <input type="text" name="nip" class="form-control" placeholder="NIP" value="<?= esc($filters['nip'] ?? '') ?>">
                             </div>
-                            <div class="col-md-4">
-                                <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Solicitud" value="<?= esc($filters['fechaCreacion'] ?? '') ?>">
-                            </div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <button type="submit" class="btn btn-primary">Filtrar</button>
                             <a href="<?= site_url('/permisos_personal') ?>" class="btn btn-secondary ms-2">Limpiar</a>
-                            <a href="<?= site_url('permisos_personal/create') ?>" class="btn btn-success">Agregar Permiso</a>
+                            <a href="<?= site_url('permisos_personal/create') ?>" class="btn btn-primary">
+                                <i class="mdi mdi-plus"></i> Agregar
+                            </a>
                         </div>
                     </form>
 
+
                     <!-- Tabla de permisos -->
-                    <div class="table-responsive">
+                    <div class="table-responsive mt-3">
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
@@ -69,19 +69,23 @@
                                         $fechaFin = new DateTime($item['fechaFin']);
                                         $intervalo = $fechaInicio->diff($fechaFin);
                                         $diasSolicitados = $intervalo->days + 1; // Sumamos 1 para incluir el primer día
-                                        $horasSolicitadas = $item['horasSolicitadas'] ?? $diasSolicitados * $horasDias;
+                                        $diasHoras = $item['horasSolicitadas'] ?? $diasSolicitados * $horasDias;
+                                        $horasSolicitadas = $item['horasSolicitadas'] ?? "-";
                                         $conversionDias = $item['horasSolicitadas'] ?? $horasDias;
                                         $diasSolicitados = ($conversionDias / $horasDias) * $diasSolicitados;
+                                        
+                                        
                                         // Obtener saldo histórico de días y horas
                                         $saldoHistorialDias = $item['saldoHistorialDias'] ?? 0;
                                         $saldoHistorialHoras = $item['saldoHistorialHoras'] ?? 0;
 
                                         // Calculando el nuevo saldo
                                         $nuevoSaldoDias = $saldoHistorialDias - $diasSolicitados;
-                                        $nuevoSaldoHoras = $saldoHistorialHoras - $horasSolicitadas;
+                                        $nuevoSaldoHoras = $saldoHistorialHoras - $diasHoras;
 
                                         // Formatear saldo histórico en días para eliminar decimales
-                                        $saldoHistorialDias = number_format($saldoHistorialDias, 0, '', '');
+                                        $saldoHistorialDias = number_format($saldoHistorialDias, 2, '.', '');
+
                                     ?>
                                     <tr>
                                         <td>
@@ -96,11 +100,11 @@
                                             <?= esc($item['tipoPermisoNombre']) ?><br>
                                             <small>(<?= esc($item['cantidadDias'] ?? '0') ?> días)</small>
                                         </td>
-                                        <td><?= esc($diasSolicitados) ?></td>
+                                        <td><?= esc(number_format($diasSolicitados, 0, '.', '')) ?></td>
                                         <td><?= esc($horasSolicitadas) ?></td>
                                         <td>
                                             <ul class="list-unstyled mb-0">
-                                                <li><strong>Días:</strong> <?= esc($nuevoSaldoDias) ?></li>
+                                                <li><strong>Días:</strong> <?= esc(number_format($nuevoSaldoDias, 2, '.', '')) ?></li>
                                                 <li><strong>Horas:</strong> <?= esc($nuevoSaldoHoras) ?></li>
                                             </ul>
                                         </td>

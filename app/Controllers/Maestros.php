@@ -24,7 +24,10 @@ class Maestros extends Controller
     public function index()
     {
         $request = service('request');
-
+        $pager = \Config\Services::pager(); // Inicializar el servicio de paginación
+        $currentPage = $request->getVar('page') ?? 1;
+        $perPage = 5; // Número de elementos por página
+    
         // Obtener los datos de filtro del formulario
         $filters = [
             'nombreCompleto' => $request->getVar('nombreCompleto'),
@@ -34,15 +37,24 @@ class Maestros extends Controller
             'estado' => $request->getVar('estado'),
             'tipo' => $request->getVar('tipo')
         ];
-
-        // Obtener los datos filtrados
-        log_message('debug', 'Filtros aplicados: ' . json_encode($filters));
-        $maestrosData = $this->maestroModel->filter($filters);
-
+    
+        // Obtener el número total de filas después de aplicar los filtros
+        $totalRows = $this->maestroModel->countFiltered($filters);
+    
+        // Obtener los datos filtrados y paginados
+        $maestrosData = $this->maestroModel->filter($filters, $perPage, ($currentPage - 1) * $perPage);
+    
+        // Configurar paginación
+        $pagination = $pager->makeLinks($currentPage, $perPage, $totalRows, 'bootstrap_pagination');
+    
         // Pasar los datos a la vista
-        return view('maestros/index', ['maestros' => $maestrosData]);
+        return view('maestros/index', [
+            'maestros' => $maestrosData,
+            'pager' => $pagination,
+            'filters' => $filters
+        ]);
     }
-
+    
     public function create()
 {
     // Definir los cargos disponibles

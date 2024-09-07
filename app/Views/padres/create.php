@@ -143,11 +143,13 @@
                                     </table>
                                 </div>
                                 <button type="button" class="btn btn-primary" id="addAlumno">Agregar Alumno</button>
+                            
                             </div>
                         </div>
                         
                         <div class="mt-4 text-center">
-                            <button type="submit" class="btn btn-success">Guardar</button>
+                        <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
+                            <a href="<?= base_url('public/padres') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
                 </div>

@@ -7,7 +7,7 @@ use App\Models\ProductoModel;
 use CodeIgniter\Controller;
 use CodeIgniter\API\ResponseTrait;
 
-class Consumo extends Controller
+class Consumo extends BaseController
 {
     use ResponseTrait;
 

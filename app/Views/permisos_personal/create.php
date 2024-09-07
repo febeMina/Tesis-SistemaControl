@@ -37,9 +37,18 @@
                                 <?php foreach ($tiposPermisos as $tipoPermiso): ?>
                                     <option value="<?= $tipoPermiso['idTipoPermiso'] ?>">
                                         <?= esc($tipoPermiso['nombre']) ?>
+                                            <small>(<?= esc($tipoPermiso['cantidadDias'] ?? '0') ?> días)</small>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
+                        </div>
+
+                        <!-- Mostrar el saldo actual según el tipo de permiso -->
+                        <div class="form-group">
+                            <label for="saldoActual" style="color: #000;">
+                                <i class="fas fa-balance-scale"></i> Saldo Actual:
+                            </label>
+                            <input type="text" id="saldoActual" class="form-control" value="Días: <?= esc($saldoActual['saldoActualDias']) ?>, Horas: <?= esc($saldoActual['saldoActualHoras']) ?>" disabled>
                         </div>
 
                         <div class="form-group">
@@ -78,7 +87,6 @@
                             <input type="number" name="horasSolicitadas" id="horasSolicitadas" class="form-control" min="1" max="6">
                         </div>
 
-
                         <button type="submit" class="btn btn-primary">Guardar Permiso</button>
                     </form>
                 </div>
@@ -88,7 +96,7 @@
 </div>
 
 <script>
-    document.getElementById('tipoSolicitud').addEventListener('change', function() {
+document.getElementById('tipoSolicitud').addEventListener('change', function() {
     var tipoSolicitud = this.value;
     var diasDiv = document.getElementById('diasDiv');
     var horasDiv = document.getElementById('horasDiv');
@@ -102,9 +110,46 @@
     }
 });
 
-// Trigger
-document.getElementById('tipoSolicitud').dispatchEvent(new Event('change'));
+// Función para actualizar el saldoActual dependiendo del tipo de permiso seleccionado
+document.getElementById('idTipoPermiso').addEventListener('change', function() {
+    var idDocente = document.getElementById('idDocente').value;
+    var idTipoPermiso = this.value;
 
+    // Asegúrate de que ambas variables están definidas antes de hacer la solicitud
+    if (idDocente && idTipoPermiso) {
+        // Hacer una petición AJAX para obtener el saldo actual
+        fetch(`<?= site_url('permisos_personal/getSaldoActual') ?>/${idDocente}/${idTipoPermiso}`)
+
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Verificar los datos recibidos
+                // Actualiza el saldo en el campo correspondiente
+                document.getElementById('saldoActual').value = `Días: ${data.saldoActualDias}, Horas: ${data.saldoActualHoras}`;
+            })
+            .catch(error => console.error('Error al obtener el saldo actual:', error));
+    }
+});
+
+// También actualiza el saldo cuando cambie el docente
+document.getElementById('idDocente').addEventListener('change', function() {
+    var idDocente = this.value;
+    var idTipoPermiso = document.getElementById('idTipoPermiso').value;
+
+    if (idDocente && idTipoPermiso) {
+        // Hacer una petición AJAX para obtener el saldo actual
+        fetch(`<?= site_url('permisos_personal/getSaldoActual') ?>/${idDocente}/${idTipoPermiso}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Verificar los datos recibidos
+                // Actualiza el saldo en el campo correspondiente
+                document.getElementById('saldoActual').value = `Días: ${data.saldoActualDias}, Horas: ${data.saldoActualHoras}`;
+            })
+            .catch(error => console.error('Error al obtener el saldo actual:', error));
+    }
+});
+
+// Trigger para cargar el saldo inicial al cargar la página si ya hay un permiso seleccionado
+document.getElementById('idTipoPermiso').dispatchEvent(new Event('change'));
 </script>
 
 <?= $this->endSection() ?>

@@ -98,7 +98,7 @@ class InstalledVersions
     {
         foreach (self::getInstalled() as $installed) {
             if (isset($installed['versions'][$packageName])) {
-                return $includeDevRequirements || !isset($installed['versions'][$packageName]['dev_requirement']) || $installed['versions'][$packageName]['dev_requirement'] === false;
+                return $includeDevRequirements || empty($installed['versions'][$packageName]['dev_requirement']);
             }
         }
 
@@ -119,7 +119,7 @@ class InstalledVersions
      */
     public static function satisfies(VersionParser $parser, $packageName, $constraint)
     {
-        $constraint = $parser->parseConstraints((string) $constraint);
+        $constraint = $parser->parseConstraints($constraint);
         $provided = $parser->parseConstraints(self::getVersionRanges($packageName));
 
         return $provided->matches($constraint);

@@ -7,17 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Tests\\Support\\' => array($baseDir . '/tests/_support'),
-    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
-    'PhpOffice\\PhpSpreadsheet\\' => array($vendorDir . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet'),
-    'Matrix\\' => array($vendorDir . '/markbaker/matrix/classes/src'),
     'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),
-    'Fpdf\\' => array($vendorDir . '/fpdf/fpdf/src/Fpdf'),
-    'FontLib\\' => array($vendorDir . '/dompdf/php-font-lib/src/FontLib'),
     'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),
-    'Dompdf\\' => array($vendorDir . '/dompdf/dompdf/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'CodeIgniter\\' => array($vendorDir . '/codeigniter4/framework/system'),

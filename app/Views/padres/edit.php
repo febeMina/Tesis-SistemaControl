@@ -123,7 +123,7 @@
 
                         <input type="hidden" name="padre_tipo_asociado" id="padre_tipo_asociado" value="<?= esc($padre['tipoAsociado']) ?>">
 
-                        <div class="form-group mt-4">
+                        <div class="form-group mt-4 text-center">
                             <button type="submit" class="btn btn-primary">Actualizar</button>
                             <a href="<?= site_url('padres') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>

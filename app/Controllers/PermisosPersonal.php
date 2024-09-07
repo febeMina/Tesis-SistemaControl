@@ -78,12 +78,27 @@ class PermisosPersonal extends BaseController
     }
 
     public function create()
-    {
-        $data['docentes'] = $this->maestroModel->findAll();
-        $data['tiposPermisos'] = $this->tipoPermisoModel->findAll();
+{
+    $data['docentes'] = $this->maestroModel->findAll();
+    $data['tiposPermisos'] = $this->tipoPermisoModel->findAll();
 
-        return view('permisos_personal/create', $data);
+    // Inicializar el saldo actual como null
+    $data['saldoActual'] = [
+        'saldoActualDias' => null,
+        'saldoActualHoras' => null
+    ];
+
+    // Solo para la vista inicial, no necesitas manejar la solicitud POST aquí
+    return view('permisos_personal/create', $data);
+}
+    
+public function getSaldoActual($idDocente, $idTipoPermiso)
+    {
+        $saldo = $this->saldoPersonalModel->getSaldoPersonalId($idDocente, $idTipoPermiso);
+        return $this->response->setJSON($saldo);
     }
+
+
 
     public function store()
     {
@@ -247,4 +262,6 @@ public function reporte()
         ],
     ]);
 }
+
+
 }

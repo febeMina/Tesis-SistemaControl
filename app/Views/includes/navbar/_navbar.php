@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #090066 !important;">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: #090066 !important;">
-    <a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('public/assets/images/log.PNG') ?>" alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-min.PNG') ?>" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('public/assets/images/logo.svg') ?>" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-mini.svg') ?>" alt="logo" /></a>
     </div>
     <ul class="nav">
         
@@ -41,18 +41,18 @@
                             </div>
                         </div>
                         <div class="preview-item-content">
-                            <p class="preview-subject ellipsis mb-1 text-small">Cambiar Contraseña</p>
+                            <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a href="https://calendar.google.com/calendar/u/0/r" class="dropdown-item preview-item">
+                    <a href="#" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
                                 <i class="mdi mdi-calendar-today text-success"></i>
                             </div>
                         </div>
                         <div class="preview-item-content">
-                            <p class="preview-subject ellipsis mb-1 text-small">Calendario</p>
+                            <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
                         </div>
                     </a>
                 </div>
@@ -151,9 +151,10 @@
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a href="<?= site_url('report') ?>" class="nav-link">Reporte de permisos</a>
+                <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a>
+                <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Reporte de solicitud de productos</a>
                     </li>
-                    <li class="nav-item"><a href="<?= site_url('donaciones/reporte') ?>" class="nav-link">Reporte de donaciones</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Reporte de donaciones</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de inasistencias</a></li>
                 </ul>
             </div>

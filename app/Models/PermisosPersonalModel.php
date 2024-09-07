@@ -104,17 +104,18 @@ class PermisosPersonalModel extends Model
     $builder->orderBy('permisos_personal.idSaldoPersonal', 'ASC'); // Ordenar por fecha de creación
     $builder->orderBy('permisos_personal.idSaldoPersonal', 'ASC'); // Ordenar por fecha de creación
     
-    // Filtrar por fechaInicio si se proporciona
-    if ($fechaInicio) {
-        $builder->where('fechaInicio >=', $fechaInicio);
+    // Aplicar el filtro de fechas si ambas fechas están proporcionadas
+    if ($fechaInicio && $fechaFin) {
+        $builder->where('permisos_personal.fechaInicio <=', $fechaFin);
+        $builder->where('permisos_personal.fechaFin >=', $fechaInicio);
+    } elseif ($fechaInicio) {
+        // Si solo se proporciona fechaInicio, obtenemos permisos que terminan después o en esta fecha
+        $builder->where('permisos_personal.fechaFin >=', $fechaInicio);
+    } elseif ($fechaFin) {
+        // Si solo se proporciona fechaFin, obtenemos permisos que comienzan antes o en esta fecha
+        $builder->where('permisos_personal.fechaInicio <=', $fechaFin);
     }
 
-    // Filtrar por fechaFin si se proporciona
-    if ($fechaFin) {
-        $builder->where('fechaFin <=', $fechaFin);
-    }
-
-    // Obtener los resultados
     return $builder->get()->getResultArray();
 }
 
@@ -176,5 +177,16 @@ public function getTipoPermisos()
 {
     return $this->db->table('tipo_permisos')->get()->getResultArray();
 }
+public function getSaldoPersonalId($idDocente, $idTipoPermiso)
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('saldoActualDias, saldoActualHoras');
+        $builder->where('idDocente', $idDocente);
+        $builder->where('idTipoPermiso', $idTipoPermiso);
+
+        $result = $builder->get()->getRowArray();
+        return $result ? $result : ['saldoActualDias' => 0, 'saldoActualHoras' => 0];
+    }
+
 
 }
