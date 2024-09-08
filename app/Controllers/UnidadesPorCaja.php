@@ -6,7 +6,7 @@ use App\Models\UnidadesIndividualesModel;
 use App\Models\UnidadesPorCajaModel;
 use CodeIgniter\Controller;
 
-class UnidadesPorCaja extends BaseController
+class UnidadesPorCaja extends Controller
 {
     public function index()
     {
@@ -14,8 +14,8 @@ class UnidadesPorCaja extends BaseController
         $unidadesPorCajaModel = new UnidadesPorCajaModel();
         
         $data = [
-            'unidades_medida_individual' => $unidadesIndividualesModel->findAll(),
-            'unidades_medida_general' => $unidadesPorCajaModel->findAll()
+            'udm_caja' => $unidadesPorCajaModel->findAll(),
+            'udm_individual' => $unidadesIndividualesModel->findAll()
         ];
         
         return view('unidades_medida_i/index', $data);  // Asegúrate de que la vista index esté en unidades_medida_i
@@ -31,14 +31,13 @@ class UnidadesPorCaja extends BaseController
         $unidadesPorCajaModel = new UnidadesPorCajaModel();
 
         $data = [
-            'tipo_unidad' => $this->request->getPost('tipo_unidad'),
-            'unidades' => $this->request->getPost('unidades'),
-            'estado' => $this->request->getPost('estado')
+            'nombreCaja' => $this->request->getPost('nombreCaja'),
+            'estado' => 'Activo'
         ];
 
         $unidadesPorCajaModel->save($data);
         
-        return redirect()->to(site_url('unidadesporcaja'))->with('success', 'Unidad de Medida General creada exitosamente');
+        return redirect()->to(site_url('unidadesporcaja'))->with('success', 'Unidad de  medida: Por caja creada con éxito');
     }
 
     public function edit($id)
@@ -54,14 +53,12 @@ class UnidadesPorCaja extends BaseController
     $unidadesPorCajaModel = new UnidadesPorCajaModel();
 
     $data = [
-        'tipo_unidad' => $this->request->getPost('tipo_unidad'),
-        'unidades' => $this->request->getPost('unidades'), // Corregir la clave para capturar el valor correcto
-        'estado' => $this->request->getPost('estado')
+        'nombreCaja' => $this->request->getPost('nombreCaja')
     ];
 
     $unidadesPorCajaModel->update($id, $data);
     
-    return redirect()->to(site_url('unidadesporcaja'))->with('success', 'Unidad de Medida General actualizada exitosamente');
+    return redirect()->to(site_url('unidadesporcaja'))->with('success', 'Unidad medida: Por caja actualizada con éxito');
 }
 
     public function delete($id)
@@ -69,6 +66,6 @@ class UnidadesPorCaja extends BaseController
         $unidadesPorCajaModel = new UnidadesPorCajaModel();
         $unidadesPorCajaModel->delete($id);
         
-        return redirect()->to(site_url('unidadesporcaja'))->with('success', 'Unidad de Medida General eliminada exitosamente');
+        return redirect()->to(site_url('unidadesporcaja'))->with('success', 'Unidad de medida: Por caja eliminada con éxito');
     }
 }

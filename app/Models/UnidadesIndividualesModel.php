@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class UnidadesIndividualesModel extends Model
 {
-    protected $table = 'unidad_individual';
-    protected $primaryKey = 'idUnidades_individuales';
-    protected $allowedFields = ['unidadades_individuales', 'estado'];
+    protected $table = 'udm_individual';
+    protected $primaryKey = 'idUdmIndividual';
+    protected $allowedFields = ['nombreIndividual', 'estado'];
 }

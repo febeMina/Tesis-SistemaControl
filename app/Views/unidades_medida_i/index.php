@@ -7,7 +7,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de tipo de Unidades</h4>
+                    <h4 class="header-title text-center">Unidades de medida: Por caja</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Botón para agregar una nueva unidad de medida general -->
@@ -21,30 +21,40 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Tipo de unidad</th>
-                                    <th>N° de unidades</th>
+                                    <th>N°</th>
+                                    <th>Descripción</th>
                                     <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($unidades_medida_general as $unidad) : ?>
+                                <?php 
+                                    $n = 0;
+                                    foreach ($udm_caja as $unidad) : 
+                                        $n++;
+                                ?>
                                     <tr>
-                                        <td><?= $unidad['tipo_unidad'] ?></td>
-                                        <td><?= $unidad['unidades'] ?></td>
+                                        <td><?= $n ?></td>
+                                        <td><?= $unidad['nombreCaja'] ?></td>
                                         <td><?= $unidad['estado'] ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="<?= site_url('unidadesporcaja/edit/' . $unidad['idUnidadesPorCaja']) ?>" class="btn btn-edit">
+                                                <a href="<?= site_url('unidadesporcaja/edit/' . $unidad['idUdmCaja']) ?>" class="btn btn-edit">
                                                     <i class="mdi mdi-pencil"></i> <!-- Icono de edición -->
                                                 </a>
-                                                <a href="<?= site_url('unidadesporcaja/delete/' . $unidad['idUnidadesPorCaja']) ?>" class="btn btn-delete">
+                                                <a href="<?= site_url('unidadesporcaja/delete/' . $unidad['idUdmCaja']) ?>" class="btn btn-delete">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de eliminación -->
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
-                                <?php endforeach; ?>
+                                <?php 
+                                    endforeach; 
+
+                                    if($n == 0) {
+                                        echo '<tr><td colspan="4" class="text-center">No se encontraron registros...</td></tr>';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -55,7 +65,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Unidades de Medida Individual</h4>
+                    <h4 class="header-title text-center">Unidades de medida: Individual</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Botón para agregar una nueva unidad de medida individual -->
@@ -69,28 +79,39 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Nombre</th>
+                                    <th>N°</th>
+                                    <th>Descripción</th>
                                     <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($unidades_medida_individual as $unidad) : ?>
+                                <?php 
+                                    $n = 0;
+                                    foreach ($udm_individual as $unidad) :
+                                        $n++;
+                                ?>
                                     <tr>
-                                        <td><?= $unidad['unidadades_individuales'] ?></td>
+                                        <td><?= $n; ?></td>
+                                        <td><?= $unidad['nombreIndividual'] ?></td>
                                         <td><?= $unidad['estado'] ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="<?= site_url('unidadesindividuales/edit/' . $unidad['idUnidades_individuales']) ?>" class="btn btn-edit">
+                                                <a href="<?= site_url('unidadesindividuales/edit/' . $unidad['idUdmIndividual']) ?>" class="btn btn-edit">
                                                     <i class="mdi mdi-pencil"></i> <!-- Icono de edición -->
                                                 </a>
-                                                <a href="<?= site_url('unidadesindividuales/delete/' . $unidad['idUnidades_individuales']) ?>" class="btn btn-delete">
+                                                <a href="<?= site_url('unidadesindividuales/delete/' . $unidad['idUdmIndividual']) ?>" class="btn btn-delete">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de eliminación -->
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
-                                <?php endforeach; ?>
+                                <?php 
+                                    endforeach; 
+                                    if($n == 0) {
+                                        echo '<tr><td colspan="4" class="text-center">No se encontraron registros...</td></tr>';
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>

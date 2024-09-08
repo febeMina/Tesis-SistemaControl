@@ -2,92 +2,55 @@
 
 <?= $this->section('content') ?>
 
-<div class="container">
+<div class="container mt-3">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="text-center">Nuevo Consumo por Producto</h3>
+            <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);">
+                <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0;">
+                    <h4 class="header-title text-center">Nueva requisición de producto</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
-                <form method="post" action="<?= site_url('consumo/store') ?>">
-                        <div class="form-group">
-                            <label for="fecha" style="color: #000;">Fecha:</label>
-                            <input type="date" name="fecha" id="fecha" class="form-control" required>
+                    <form action="<?= site_url('consumo/store') ?>" method="post">
+                        <?= csrf_field() ?>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="fechaRequisicion" style="color: #000;">Fecha de la requisición</label>
+                                    <input type="date" class="form-control" id="fechaRequisicion" name="fechaRequisicion" required>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="idProducto" style="color: #000;">Producto - Descripción - Fecha vencimiento:</label>
-                            <select name="idProducto" id="idProducto" class="form-control" required>
-                                <?php foreach ($productos as $producto): ?>
-                                    <option value="<?= $producto['idProducto'] ?>" data-descripcion="<?= esc($producto['descripcion']) ?>" data-vencimiento="<?= esc($producto['fecha_vencimiento']) ?>">
-                                        <?= esc($producto['nombre']) ?> - <?= esc($producto['descripcion']) ?> (<?= esc($producto['fecha_vencimiento']) ?>)
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="comidaPreparar" style="color: #000;">Comida a preparar</label>
+                                    <input type="text" class="form-control" id="comidaPreparar" name="comidaPreparar" required>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="saldo_inicial" style="color: #000;">Saldo inicial:</label>
-                            <input type="number" name="saldo_inicial" id="saldo_inicial" class="form-control">
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="responsableEntrega" style="color: #000;">Responsable de entrega</label>
+                                    <input type="text" class="form-control" id="responsableEntrega" name="responsableEntrega" required>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="salidas" style="color: #000;">Salidas:</label>
-                            <input type="number" name="salidas" id="salidas" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="saldo" style="color: #000;">Saldo:</label>
-                            <input type="number" name="saldo" id="saldo" class="form-control" readonly>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="responsableRecibe" style="color: #000;">Responsable de recepción</label>
+                                    <input type="text" class="form-control" id="responsableRecibe" name="responsableRecibe" required>
+                                </div>
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar</button>
+                        <a href="<?= previous_url() ?>" class="btn btn-secondary">Cancelar</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Cargar jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Tu script JavaScript -->
-<script>
-$(document).ready(function() {
-    function updateSaldo() {
-        var saldo_inicial = parseInt($('#saldo_inicial').val()) || 0;
-        var salidas = parseInt($('#salidas').val()) || 0;
-        var saldo = saldo_inicial - salidas;
-        $('#saldo').val(saldo);
-    }
-
-    $('#saldo_inicial, #salidas').on('input', function() {
-        updateSaldo();
-    });
-
-    $('#idProducto').change(function() {
-        var idProducto = $(this).val();
-
-        // Limpiar campos al cambiar de producto
-        $('#saldo_inicial').val('');
-        $('#salidas').val('');
-        $('#saldo').val('');
-
-        // Obtener saldo inicial del producto seleccionado
-        $.ajax({
-            url: '<?= site_url('consumo/getSaldoInicial/') ?>' + idProducto,
-            method: 'GET',
-            success: function(response) {
-                $('#saldo_inicial').val(response.saldo_inicial);
-                updateSaldo();
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            }
-        });
-    });
-});
-</script>
 
 <?= $this->endSection() ?>
