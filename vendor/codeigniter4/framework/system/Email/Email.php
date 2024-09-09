@@ -296,7 +296,7 @@ class Email
     /**
      * Raw debug messages
      *
-     * @var string[]
+     * @var list<string>
      */
     private array $debugMessageRaw = [];
 
@@ -705,10 +705,20 @@ class Email
     public function setAttachmentCID($filename)
     {
         foreach ($this->attachments as $i => $attachment) {
+            // For file path.
             if ($attachment['name'][0] === $filename) {
                 $this->attachments[$i]['multipart'] = 'related';
 
                 $this->attachments[$i]['cid'] = uniqid(basename($attachment['name'][0]) . '@', true);
+
+                return $this->attachments[$i]['cid'];
+            }
+
+            // For buffer string.
+            if ($attachment['name'][1] === $filename) {
+                $this->attachments[$i]['multipart'] = 'related';
+
+                $this->attachments[$i]['cid'] = uniqid(basename($attachment['name'][1]) . '@', true);
 
                 return $this->attachments[$i]['cid'];
             }
@@ -1655,7 +1665,9 @@ class Email
     /**
      * Strip line-breaks via callback
      *
-     * @param string $matches
+     * @used-by unwrapSpecials()
+     *
+     * @param list<string> $matches
      *
      * @return string
      */

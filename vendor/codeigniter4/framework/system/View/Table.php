@@ -25,7 +25,7 @@ class Table
     /**
      * Data for table rows
      *
-     * @var array
+     * @var list<array>|list<list<array>>
      */
     public $rows = [];
 
@@ -258,7 +258,7 @@ class Table
      *
      * Ensures a standard associative array format for all cell data
      *
-     * @return array
+     * @return array<string, array>|list<array>
      */
     protected function _prepArgs(array $args)
     {
@@ -365,7 +365,7 @@ class Table
 
             foreach ($this->rows as $row) {
                 // We use modulus to alternate the row colors
-                $name = fmod($i++, 2) ? '' : 'alt_';
+                $name = fmod($i++, 2) !== 0.0 ? '' : 'alt_';
 
                 $out .= $this->template['row_' . $name . 'start'] . $this->newline;
 
@@ -381,7 +381,7 @@ class Table
                     $cell = $cell['data'] ?? '';
                     $out .= $temp;
 
-                    if ($cell === '' || $cell === null) {
+                    if ($cell === '') {
                         $out .= $this->emptyCells;
                     } elseif (isset($this->function)) {
                         $out .= ($this->function)($cell);

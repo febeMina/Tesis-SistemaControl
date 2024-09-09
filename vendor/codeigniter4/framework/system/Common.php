@@ -64,7 +64,7 @@ if (! function_exists('cache')) {
      *    cache()->save('foo', 'bar');
      *    $foo = cache('bar');
      *
-     * @return array|bool|CacheInterface|float|int|object|string|null
+     * @return         array|bool|CacheInterface|float|int|object|string|null
      * @phpstan-return ($key is null ? CacheInterface : array|bool|float|int|object|string|null)
      */
     function cache(?string $key = null)
@@ -207,7 +207,7 @@ if (! function_exists('config')) {
      *
      * @param class-string<ConfigTemplate>|string $name
      *
-     * @return ConfigTemplate|null
+     * @return         ConfigTemplate|null
      * @phpstan-return ($name is class-string<ConfigTemplate> ? ConfigTemplate : object|null)
      */
     function config(string $name, bool $getShared = true)
@@ -236,8 +236,8 @@ if (! function_exists('cookies')) {
     /**
      * Fetches the global `CookieStore` instance held by `Response`.
      *
-     * @param Cookie[] $cookies   If `getGlobal` is false, this is passed to CookieStore's constructor
-     * @param bool     $getGlobal If false, creates a new instance of CookieStore
+     * @param list<Cookie> $cookies   If `getGlobal` is false, this is passed to CookieStore's constructor
+     * @param bool         $getGlobal If false, creates a new instance of CookieStore
      */
     function cookies(array $cookies = [], bool $getGlobal = true): CookieStore
     {
@@ -414,11 +414,11 @@ if (! function_exists('esc')) {
      * If $data is an array, then it loops over it, escaping each
      * 'value' of the key/value pairs.
      *
-     * @param array|string $data
+     * @param         array|string                         $data
      * @phpstan-param 'html'|'js'|'css'|'url'|'attr'|'raw' $context
-     * @param string|null $encoding Current encoding for escaping.
-     *                              If not UTF-8, we convert strings from this encoding
-     *                              pre-escaping and back to this encoding post-escaping.
+     * @param         string|null                          $encoding Current encoding for escaping.
+     *                                                               If not UTF-8, we convert strings from this encoding
+     *                                                               pre-escaping and back to this encoding post-escaping.
      *
      * @return array|string
      *
@@ -426,6 +426,15 @@ if (! function_exists('esc')) {
      */
     function esc($data, string $context = 'html', ?string $encoding = null)
     {
+        $context = strtolower($context);
+
+        // Provide a way to NOT escape data since
+        // this could be called automatically by
+        // the View library.
+        if ($context === 'raw') {
+            return $data;
+        }
+
         if (is_array($data)) {
             foreach ($data as &$value) {
                 $value = esc($value, $context);
@@ -433,15 +442,6 @@ if (! function_exists('esc')) {
         }
 
         if (is_string($data)) {
-            $context = strtolower($context);
-
-            // Provide a way to NOT escape data since
-            // this could be called automatically by
-            // the View library.
-            if ($context === 'raw') {
-                return $data;
-            }
-
             if (! in_array($context, ['html', 'js', 'css', 'url', 'attr'], true)) {
                 throw new InvalidArgumentException('Invalid escape context provided.');
             }
@@ -805,7 +805,7 @@ if (! function_exists('model')) {
      *
      * @param class-string<ModelTemplate>|string $name
      *
-     * @return ModelTemplate|null
+     * @return         ModelTemplate|null
      * @phpstan-return ($name is class-string<ModelTemplate> ? ModelTemplate : object|null)
      */
     function model(string $name, bool $getShared = true, ?ConnectionInterface &$conn = null)
@@ -819,8 +819,8 @@ if (! function_exists('old')) {
      * Provides access to "old input" that was set in the session
      * during a redirect()->withInput().
      *
-     * @param string|null  $default
-     * @param false|string $escape
+     * @param         string|null                                $default
+     * @param         false|string                               $escape
      * @phpstan-param false|'attr'|'css'|'html'|'js'|'raw'|'url' $escape
      *
      * @return array|string|null
@@ -974,7 +974,7 @@ if (! function_exists('session')) {
      *    session()->set('foo', 'bar');
      *    $foo = session('bar');
      *
-     * @return array|bool|float|int|object|Session|string|null
+     * @return         array|bool|float|int|object|Session|string|null
      * @phpstan-return ($val is null ? Session : array|bool|float|int|object|string|null)
      */
     function session(?string $val = null)
@@ -1128,7 +1128,7 @@ if (! function_exists('timer')) {
      * @param non-empty-string|null    $name
      * @param (callable(): mixed)|null $callable
      *
-     * @return mixed|Timer
+     * @return         mixed|Timer
      * @phpstan-return ($name is null ? Timer : ($callable is (callable(): mixed) ? mixed : Timer))
      */
     function timer(?string $name = null, ?callable $callable = null)
