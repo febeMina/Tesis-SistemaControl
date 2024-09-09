@@ -2,219 +2,338 @@
 
 namespace App\Controllers;
 
-use App\Models\ConsumoModel;
+use App\Models\ProductosRequisicionModel;
+use App\Models\ProductosRequisicionDetalleModel;
+use App\Models\ProductoLoteModel;
 use App\Models\ProductoModel;
+use App\Models\UnidadesIndividualesModel;
+use App\Models\ProductosMovimientosModel;
+use App\Models\UnidadesPorCajaModel;
+use App\Models\ProductoMovimientoModel;
 use CodeIgniter\Controller;
-use CodeIgniter\API\ResponseTrait;
 
 class Consumo extends Controller
 {
-    use ResponseTrait;
-
-    public function create()
-    {
-        $productoModel = new ProductoModel();
-        $productos = $productoModel->getProductosParaConsumo();
-
-        // Agregar la descripción del producto al array de productos
-        foreach ($productos as &$producto) {
-            $descripcion = $productoModel->obtenerDescripcionProducto($producto['idtipoProducto']);
-            $producto['descripcion'] = $descripcion;
-        }
-
-        return view('Consumo/create', ['productos' => $productos]);
-    }
-
-    public function store()
-    {
-        $model = new ConsumoModel();
-        $productoModel = new ProductoModel();
-        $request = \Config\Services::request();
-    
-        // Validación de datos
-        $validation = \Config\Services::validation();
-        $validation->setRules([
-            'fecha' => 'required|valid_date',
-            'idProducto' => 'required|integer',
-            'saldo_inicial' => 'permit_empty|integer',
-            'salidas' => 'permit_empty|integer',
-        ]);
-    
-        if (!$validation->withRequest($this->request)->run()) {
-            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
-        }
-    
-        // Obtener los datos del formulario
-        $fecha = $request->getPost('fecha');
-        $idProducto = $request->getPost('idProducto');
-        $saldo_inicial = (int) $request->getPost('saldo_inicial') ?: 0;
-        $salidas = (int) $request->getPost('salidas') ?: 0;
-    
-        // Obtener el último consumo del producto
-        $ultimoConsumo = $model->obtenerUltimoConsumo($idProducto);
-        $saldo_actual = $ultimoConsumo ? $ultimoConsumo['saldo'] : 0;
-    
-        // Calcular el saldo final
-        $saldo_final = $saldo_inicial - $salidas;
-    
-        // Preparar los datos para guardar
-        $data = [
-            'fecha' => $fecha,
-            'idProducto' => $idProducto,
-            'saldo_inicial' => $saldo_inicial,
-            'salidas' => $salidas,
-            'saldo' => $saldo_final,
-        ];
-    
-        // Guardar los datos en la base de datos
-        if (!$model->insert($data)) {
-            // Si no se pudo guardar, mostrar mensaje de error
-            return redirect()->back()->withInput()->with('error', 'Hubo un problema al guardar el consumo por producto.');
-        }
-    
-        // Redirigir con mensaje de éxito
-        return redirect()->to(site_url('consumo'))->with('success', '¡El consumo por producto se guardó correctamente!');
-    }
-
     public function index()
     {
-        $consumoModel = new ConsumoModel();
-        $productosModel = new ProductoModel();
-
-        // Filtros
-        $filters = [
-            'producto_nombre' => $this->request->getGet('producto_nombre'),
-            'producto_descripcion' => $this->request->getGet('producto_descripcion'),
-            'producto_fecha_vencimiento' => $this->request->getGet('producto_fecha_vencimiento'),
-        ];
-
-        // Obtener los consumos con los detalles del producto
-        $consumos = $consumoModel->filtrarConsumosConDetalles($filters);
+        $productoRequisicionModel = new ProductosRequisicionModel();
 
         $data = [
-            'consumos' => $consumos,
-            'filters' => $filters,
+            'consumoSalida' => $productoRequisicionModel->findAll()
         ];
 
         return view('Consumo/index', $data);
     }
-    
-    public function edit($id)
-{
-    $productoModel = new ProductoModel();
-    $consumoModel = new ConsumoModel();
 
-    // Obtener el consumo por su ID
-    $consumo = $consumoModel->find($id);
-
-    // Si no se encuentra el consumo, redirigir con mensaje de error
-    if (!$consumo) {
-        return redirect()->to(site_url('consumo'))->with('error', 'El consumo por producto no existe.');
-    }
-
-    // Obtener todos los productos para mostrar en el select
-    $productos = $productoModel->getProductosParaConsumo();
-
-    // Agregar la descripción del producto al array de productos
-    foreach ($productos as &$producto) {
-        $descripcion = $productoModel->obtenerDescripcionProducto($producto['idtipoProducto']);
-        $producto['descripcion'] = $descripcion;
-    }
-
-    // Preparar los datos para pasar a la vista
-    $data = [
-        'productos' => $productos,
-        'consumo' => $consumo, // Pasar el consumo para prellenar el formulario
-    ];
-
-    return view('Consumo/edit', $data);
-}
-
-public function update($id)
-{
-    $model = new ConsumoModel();
-    $productoModel = new ProductoModel();
-    $request = \Config\Services::request();
-
-    // Validación de datos
-    $validation = \Config\Services::validation();
-    $validation->setRules([
-        'fecha' => 'required|valid_date',
-        'idProducto' => 'required|integer',
-        'saldo_inicial' => 'permit_empty|integer',
-        'salidas' => 'permit_empty|integer',
-    ]);
-
-    if (!$validation->withRequest($this->request)->run()) {
-        return redirect()->back()->withInput()->with('errors', $validation->getErrors());
-    }
-
-    // Obtener los datos del formulario
-    $fecha = $request->getPost('fecha');
-    $idProducto = $request->getPost('idProducto');
-    $saldo_inicial = (int) $request->getPost('saldo_inicial') ?: 0;
-    $salidas = (int) $request->getPost('salidas') ?: 0;
-
-    // Obtener el consumo por su ID
-    $consumo = $model->find($id);
-
-    // Si no se encuentra el consumo, redirigir con mensaje de error
-    if (!$consumo) {
-        return redirect()->to(site_url('consumo'))->with('error', 'El consumo por producto no existe.');
-    }
-
-    // Calcular el saldo final
-    $saldo_final = $saldo_inicial - $salidas;
-
-    // Preparar los datos para actualizar
-    $data = [
-        'fecha' => $fecha,
-        'idProducto' => $idProducto,
-        'saldo_inicial' => $saldo_inicial,
-        'salidas' => $salidas,
-        'saldo' => $saldo_final,
-    ];
-    log_message('debug', 'Datos del formulario para actualizar: ' . print_r($data, true));
-    // Actualizar los datos en la base de datos
-    if (!$model->update($id, $data)) {
-    // Agregar logging del error específico
-    log_message('error', 'Error al actualizar el consumo por producto: ' . $model->errors());
-        // Si no se pudo actualizar, mostrar mensaje de error
-        return redirect()->back()->withInput()->with('error', 'Hubo un problema al actualizar el consumo por producto.');
-    }
-
-    // Redirigir con mensaje de éxito
-    return redirect()->to(site_url('consumo'))->with('success', '¡El consumo por producto se actualizó correctamente!');
-}
-
-public function delete($id)
-{
-    $model = new ConsumoModel();
-    $consumo = $model->find($id);
-
-    // Verificar si el consumo existe
-    if (!$consumo) {
-        return redirect()->to(site_url('consumo'))->with('error', 'El consumo por producto no existe.');
-    }
-
-    // Eliminar el consumo
-    if (!$model->delete($id)) {
-        return redirect()->to(site_url('consumo'))->with('error', 'Hubo un problema al eliminar el consumo por producto.');
-    }
-
-    // Redirigir con mensaje de éxito
-    return redirect()->to(site_url('consumo'))->with('success', '¡El consumo por producto se eliminó correctamente!');
-}
-
-
-    public function getSaldoInicial($idProducto)
+    public function create()
     {
-        log_message('debug', 'getSaldoInicial called with idProducto: ' . $idProducto);
-        $consumoModel = new ConsumoModel();
-        $ultimoConsumo = $consumoModel->obtenerUltimoConsumo($idProducto);
+        return view('Consumo/create');
+    }
 
-        $saldo_inicial = $ultimoConsumo ? $ultimoConsumo['saldo'] : 0;
+    public function store()
+    {
+        $productoRequisicionModel = new ProductosRequisicionModel();
 
-        return $this->response->setJSON(['saldo_inicial' => $saldo_inicial]);
+        $data = [
+            'fechaRequisicion' => $this->request->getPost('fechaRequisicion'),
+            'comidaPreparar' => $this->request->getPost('comidaPreparar'),
+            'responsableEntrega' => $this->request->getPost('responsableEntrega'),
+            'responsableRecibe' => $this->request->getPost('responsableRecibe'),
+            'estado' => 'Pendiente'
+        ];
+
+        if (!$this->validate([
+            'fechaRequisicion' => 'required|valid_date',
+            'comidaPreparar' => 'required|string',
+            'responsableEntrega' => 'required|string',
+            'responsableRecibe' => 'required|string'
+        ])) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        $productoRequisicionModel->insert($data);
+        $idProductoRequisicion = $productoRequisicionModel->insertID();
+
+        return redirect()->to(site_url('consumo/edit/' . $idProductoRequisicion));
+    }
+    
+       public function edit($id)
+    {
+            $productoRequisicionModel = new ProductosRequisicionModel();
+            $productoLoteModel = new ProductoLoteModel();
+            $productoRequisicionDetalleModel = new ProductosRequisicionDetalleModel();
+            $productoModel = new ProductoModel();
+            $udmCajaModel = new UnidadesPorCajaModel();
+            $udmIndividualModel = new UnidadesIndividualesModel();
+
+            $productoRequisicion = $productoRequisicionModel->find($id);
+            $productos = $productoModel->findAll();
+            $udmCaja = $udmCajaModel->findAll();
+            $udmIndividual = $udmIndividualModel->findAll();
+
+            $detalles = $productoRequisicionDetalleModel
+                ->select('
+                    productos_requisicion_detalle.*, 
+                    productos_lotes.idProductoLote, 
+                    productos_lotes.idProducto, 
+                    productos.descripcionProducto,
+                    productos_lotes.codigoLote, 
+                    productos_lotes.fechaIngreso, 
+                    productos_lotes.fechaVencimiento, 
+                    productos_lotes.idUdmCaja, 
+                    productos_lotes.existenciaCaja, 
+                    productos_lotes.idUdmIndividual, 
+                    productos_lotes.existenciaIndividual, 
+                    udm_caja.nombreCaja as udmCaja, 
+                    udm_individual.nombreIndividual as udmIndividual 
+                ')
+                ->join('productos_lotes', 'productos_lotes.idProductoLote = productos_requisicion_detalle.idProductoLote', 'left')
+                ->join('productos', 'productos.idProducto = productos_lotes.idProducto', 'left')
+                ->join('udm_caja', 'productos_lotes.idUdmCaja = udm_caja.idUdmCaja', 'left')
+                ->join('udm_individual', 'productos_lotes.idUdmIndividual = udm_individual.idUdmIndividual', 'left')
+                ->where('productos_requisicion_detalle.idProductoRequisicion', $id)->findAll();
+
+            // Obtener productos con lotes que tienen existenciaTotal mayor a 0
+            $productosConExistencia = $productoLoteModel
+                ->select('productos_lotes.idProductoLote, productos.descripcionProducto, productos_lotes.codigoLote, productos_lotes.existenciaTotal, productos_lotes.fechaVencimiento')
+                ->join('productos', 'productos.idProducto = productos_lotes.idProducto')
+                ->where('productos_lotes.existenciaTotal >', 0)
+                ->orderBy('productos.idProducto')
+                ->findAll();
+
+            return view('consumo/edit', [
+                'productoRequisicion' => $productoRequisicion,
+                'productos' => $productos,
+                'udmCaja' => $udmCaja,
+                'udmIndividual' => $udmIndividual,
+                'detalles' => $detalles,
+                'productosConExistencia' => $productosConExistencia
+            ]);
+    }
+
+       public function viewEdit($id)
+    {
+            $productoRequisicionModel = new ProductosRequisicionModel();
+            $productoLoteModel = new ProductoLoteModel();
+            $productoRequisicionDetalleModel = new ProductosRequisicionDetalleModel();
+            $productoModel = new ProductoModel();
+            $udmCajaModel = new UnidadesPorCajaModel();
+            $udmIndividualModel = new UnidadesIndividualesModel();
+
+            $productoRequisicion = $productoRequisicionModel->find($id);
+            $productos = $productoModel->findAll();
+            $udmCaja = $udmCajaModel->findAll();
+            $udmIndividual = $udmIndividualModel->findAll();
+
+            $detalles = $productoRequisicionDetalleModel
+                ->select('
+                    productos_requisicion_detalle.*, 
+                    productos_lotes.idProductoLote, 
+                    productos_lotes.idProducto, 
+                    productos.descripcionProducto,
+                    productos_lotes.codigoLote, 
+                    productos_lotes.fechaIngreso, 
+                    productos_lotes.fechaVencimiento, 
+                    productos_lotes.idUdmCaja, 
+                    productos_lotes.existenciaCaja, 
+                    productos_lotes.idUdmIndividual, 
+                    productos_lotes.existenciaIndividual, 
+                    udm_caja.nombreCaja as udmCaja, 
+                    udm_individual.nombreIndividual as udmIndividual 
+                ')
+                ->join('productos_lotes', 'productos_lotes.idProductoLote = productos_requisicion_detalle.idProductoLote', 'left')
+                ->join('productos', 'productos.idProducto = productos_lotes.idProducto', 'left')
+                ->join('udm_caja', 'productos_lotes.idUdmCaja = udm_caja.idUdmCaja', 'left')
+                ->join('udm_individual', 'productos_lotes.idUdmIndividual = udm_individual.idUdmIndividual', 'left')
+                ->where('productos_requisicion_detalle.idProductoRequisicion', $id)->findAll();
+
+            // Obtener productos con lotes que tienen existenciaTotal mayor a 0
+            $productosConExistencia = $productoLoteModel
+                ->select('productos_lotes.idProductoLote, productos.descripcionProducto, productos_lotes.codigoLote, productos_lotes.existenciaTotal')
+                ->join('productos', 'productos.idProducto = productos_lotes.idProducto')
+                ->where('productos_lotes.existenciaTotal >', 0)
+                ->orderBy('productos.idProducto')
+                ->findAll();
+
+            return view('consumo/viewEdit', [
+                'productoRequisicion' => $productoRequisicion,
+                'productos' => $productos,
+                'udmCaja' => $udmCaja,
+                'udmIndividual' => $udmIndividual,
+                'detalles' => $detalles,
+                'productosConExistencia' => $productosConExistencia
+            ]);
+    }
+
+    public function update($id)
+    {
+        $productoRequisicionModel = new ProductosRequisicionModel();
+        
+        $data = [
+            'fechaRequisicion' => $this->request->getPost('fechaRequisicion'),
+            'comidaPreparar' => $this->request->getPost('comidaPreparar'),
+            'responsableEntrega' => $this->request->getPost('responsableEntrega'),
+            'responsableRecibe' => $this->request->getPost('responsableRecibe')
+        ];
+
+        $productoRequisicionModel->update($id, $data);
+
+        return redirect()->to(site_url('consumo/edit/' . $id))->with('success', 'Información de la requisición de salida actualizada con éxito.');
+    }
+
+    public function storeLote()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $productoRequisicionDetalleModel = new ProductosRequisicionDetalleModel();
+            $productoLoteModel = new ProductoLoteModel();
+
+            $idProductoRequisicion = $this->request->getPost('idProductoRequisicion');
+            $idProductoLote = $this->request->getPost('idProducto');
+            $existenciaTotal = $this->request->getPost('existenciaTotal');
+
+            // Obtener la existencia actual del lote
+            $productoLote = $productoLoteModel->find($idProductoLote);
+            $existenciaTotalLote = $productoLote['existenciaTotal'];
+
+            // Verificar si la existencia solicitada es válida
+            if ($existenciaTotal > $existenciaTotalLote) {
+                // Guardar el error en la sesión flash
+                return redirect()->back()->with('error', 'La cantidad solicitada excede la existencia del lote.');
+            }
+
+            // Verificar si ya existe un registro para este producto_lote en la requisición
+            $detalleExistente = $productoRequisicionDetalleModel
+                ->where('idProductoRequisicion', $idProductoRequisicion)
+                ->where('idProductoLote', $idProductoLote)
+                ->first();
+
+            if ($detalleExistente) {
+                // Si ya existe, sumamos la cantidad nueva a la existente
+                $nuevaCantidad = $detalleExistente['existenciaTotal'] + $existenciaTotal;
+
+                // Validar que la nueva cantidad no exceda la existencia del lote
+                if ($nuevaCantidad > $existenciaTotalLote) {
+                    return redirect()->back()->with('error', 'La cantidad total solicitada excede la existencia del lote.');
+                }
+
+                // Actualizar el registro existente con la nueva cantidad
+                $productoRequisicionDetalleModel->update($detalleExistente['idProductoRequisicionDetalle'], [
+                    'existenciaTotal' => $nuevaCantidad
+                ]);
+
+                return redirect()->to(site_url('consumo/edit/' . $idProductoRequisicion))
+                                 ->with('success', 'Lote para consumo actualizado con éxito.');
+            } else {
+                // Si no existe, insertar un nuevo registro
+                $data = [
+                    'idProductoRequisicion' => $idProductoRequisicion,
+                    'idProductoLote' => $idProductoLote,
+                    'existenciaTotal' => $existenciaTotal
+                ];
+
+                $productoRequisicionDetalleModel->insert($data);
+
+                return redirect()->to(site_url('consumo/edit/' . $idProductoRequisicion))
+                                 ->with('success', 'Lote para consumo agregado con éxito.');
+            }
+        }
+
+        return redirect()->to(site_url('consumo'));
+    }
+
+
+    public function delete($id)
+    {
+        $productoRequisicionDetalleModel = new ProductosRequisicionDetalleModel();
+
+        $detalle = $productoRequisicionDetalleModel->find($id);
+        $idProductoRequisicion = $detalle['idProductoRequisicion'];
+        if($detalle) {
+            try {
+                $productoRequisicionDetalleModel->delete($id);
+
+                return redirect()->to('consumo/edit/' . $idProductoRequisicion)->with('success', 'Detalle de consumo eliminado con éxito.');
+            } catch (DatabaseException $e) {
+                return redirect()->to('consumo/edit/' . $idProductoRequisicion)->with('error', 'No se puede eliminar el detalle del consumo porque ya se generaron movimientos.');
+            }
+        } else {
+            return redirect()->to(site_url('consumo/edit/' . $idProductoRequisicion))->with('error', 'No se encontró el detalle del ingreso.');
+        }
+    }
+
+    public function finalizar()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $idProductoRequisicion = $this->request->getPost('idProductoRequisicion');
+
+            $productoRequisicionModel = new ProductosRequisicionModel();
+            $productoRequisicionDetalleModel = new ProductosRequisicionDetalleModel();
+            $productoLoteModel = new ProductoLoteModel();
+            $productoMovimientoModel = new ProductosMovimientosModel();
+
+            // Obtener los detalles de la requisición
+            $detalles = $productoRequisicionDetalleModel
+                ->where('idProductoRequisicion', $idProductoRequisicion)
+                ->findAll();
+
+            $n = 0;
+            foreach ($detalles as $detalle) {
+                $n++;
+                $idProductoLote = $detalle['idProductoLote'];
+                $existenciaTotalDetalle = $detalle['existenciaTotal'];
+
+                // Obtener el lote actual
+                $productoLote = $productoLoteModel->find($idProductoLote);
+                $existenciaTotalLoteAntes = $productoLote['existenciaTotal'];
+
+                // Actualizar la existencia del lote
+                $nuevaExistenciaTotal = $existenciaTotalLoteAntes - $existenciaTotalDetalle;
+
+                $productoLoteModel->update($idProductoLote, [
+                    'existenciaTotal' => $nuevaExistenciaTotal
+                ]);
+
+                // Insertar el movimiento en productos_movimientos
+                $dataMovimiento = [
+                    'idProductoLote' => $idProductoLote,
+                    'tipoMovimiento' => 'Salida',
+                    'descripcionMovimiento' => 'Salida registrada por requisición de consumo N°' . $idProductoRequisicion,
+                    'fechaMovimiento' => date('Y-m-d H:i:s'),
+                    'existenciaTotalAntes' => $existenciaTotalLoteAntes,
+                    'existenciaTotalMovimiento' => $existenciaTotalDetalle,
+                    'existenciaTotalDespues' => $nuevaExistenciaTotal
+                ];
+
+                $productoMovimientoModel->insert($dataMovimiento);
+            }
+
+            if($n == 0) {
+                return redirect()->to(site_url('consumo/edit/'. $idProductoRequisicion))
+                    ->with('error', 'No puede finalizar la requisición sin agregar productos.');
+            } else {
+                // Actualizar el estado de la requisición a 'Finalizado'
+                $productoRequisicionModel->update($idProductoRequisicion, [
+                    'estado' => 'Finalizado'
+                ]);
+
+                // Redirigir con un mensaje de éxito
+                return redirect()->to(site_url('consumo'))
+                                 ->with('success', 'Requisición de consumo finalizada con éxito.');
+            }
+        }
+
+        return redirect()->to(site_url('consumo'));
+    }
+
+    public function anular($idProductoRequisicion)
+    {
+        $productoRequisicionModel = new ProductosRequisicionModel();
+
+        // Actualizar el estado de productos_ingresos a "Anulado"
+        $productoRequisicionModel->update($idProductoRequisicion, [
+            'estado' => 'Anulado'
+        ]);
+        // Redireccionar con un mensaje de éxito
+        return redirect()->to(site_url('consumo'))->with('success', 'Requisición de consumo anulada con éxito.');
     }
 }

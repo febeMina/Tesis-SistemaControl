@@ -70,15 +70,15 @@ class Proyectos extends Controller
 
     public function edit($id)
     {
-        $proyectModel = new ProyectoModel();
-        $proyecto = $proyectModel->find($id);
+        $proyectModel = new ProyectosModel();
+        $proyectos = $proyectModel->find($id);
 
         return view('proyectos/edit', ['proyectos' => $proyectos]);
     }
 
     public function delete($id)
     {
-        $proyectModel = new ProyectoModel();
+        $proyectModel = new ProyectosModel();
         $proyectModel->delete($id);
         return redirect()->to(site_url('proyecto'));
     }

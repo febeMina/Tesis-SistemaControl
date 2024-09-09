@@ -28,6 +28,7 @@
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
+                            <a href="<?= base_url('public/tipo_permiso') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
                 </div>

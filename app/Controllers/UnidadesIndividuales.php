@@ -12,13 +12,13 @@ class UnidadesIndividuales extends Controller
     {
         $unidadesIndividualesModel = new UnidadesIndividualesModel();
         $unidadesPorCajaModel = new UnidadesPorCajaModel();
-
+        
         $data = [
-            'unidades_medida_individual' => $unidadesIndividualesModel->findAll(),
-            'unidades_medida_general' => $unidadesPorCajaModel->findAll()
+            'udm_caja' => $unidadesPorCajaModel->findAll(),
+            'udm_individual' => $unidadesIndividualesModel->findAll()
         ];
-
-        return view('unidades_medida_i/index', $data);
+        
+        return view('unidades_medida_i/index', $data);  // Asegúrate de que la vista index esté en unidades_medida_i
     }
 
     public function __construct()
@@ -33,27 +33,24 @@ class UnidadesIndividuales extends Controller
 
     public function store()
     {
-        $request = \Config\Services::request();
         $unidadModel = new UnidadesIndividualesModel();
 
         $data = [
-            'unidadades_individuales' => $request->getVar('unidadades_individuales'),
-            'estado' => $request->getVar('estado')
+            'nombreIndividual' => $this->request->getPost('nombreIndividual'),
+            'estado' => 'Activo'
         ];
 
-        $unidadModel->insert($data);
+        $unidadModel->save($data);
 
         return redirect()->to(site_url('unidadesindividuales'));
     }
 
     public function update($id)
     {
-        $request = \Config\Services::request();
         $unidadModel = new UnidadesIndividualesModel();
 
         $data = [
-            'unidadades_individuales' => $request->getVar('unidadades_individuales'),
-            'estado' => $request->getVar('estado')
+            'nombreIndividual' => $this->request->getPost('nombreIndividual')
         ];
 
         $unidadModel->update($id, $data);

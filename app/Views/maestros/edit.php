@@ -77,6 +77,7 @@
                         </div>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary">Actualizar Maestro</button>
+                            <a href="<?= base_url('public/maestros') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
                 </div>

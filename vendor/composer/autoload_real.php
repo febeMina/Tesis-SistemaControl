@@ -24,27 +24,37 @@ class ComposerAutoloaderInit8a94cb5a1e20a58d8d4b02ef2c8819f4
 
         require __DIR__ . '/platform_check.php';
 
+        spl_autoload_register(array('ComposerAutoloaderInit96a2ef1bdabf3b4f379e9854a6d62f40', 'loadClassLoader'), true, true);
+        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
+        spl_autoload_unregister(array('ComposerAutoloaderInit96a2ef1bdabf3b4f379e9854a6d62f40', 'loadClassLoader'));
         spl_autoload_register(array('ComposerAutoloaderInit8a94cb5a1e20a58d8d4b02ef2c8819f4', 'loadClassLoader'), true, true);
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInit8a94cb5a1e20a58d8d4b02ef2c8819f4', 'loadClassLoader'));
 
         require __DIR__ . '/autoload_static.php';
-        call_user_func(\Composer\Autoload\ComposerStaticInit8a94cb5a1e20a58d8d4b02ef2c8819f4::getInitializer($loader));
+        call_user_func(\Composer\Autoload\ComposerStaticInit96a2ef1bdabf3b4f379e9854a6d62f40::getInitializer($loader));
 
         $loader->register(true);
 
-        $filesToLoad = \Composer\Autoload\ComposerStaticInit8a94cb5a1e20a58d8d4b02ef2c8819f4::$files;
-        $requireFile = \Closure::bind(static function ($fileIdentifier, $file) {
-            if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
-                $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
-
-                require $file;
-            }
-        }, null, null);
-        foreach ($filesToLoad as $fileIdentifier => $file) {
-            $requireFile($fileIdentifier, $file);
+        $includeFiles = \Composer\Autoload\ComposerStaticInit96a2ef1bdabf3b4f379e9854a6d62f40::$files;
+        foreach ($includeFiles as $fileIdentifier => $file) {
+            composerRequire96a2ef1bdabf3b4f379e9854a6d62f40($fileIdentifier, $file);
         }
 
         return $loader;
+    }
+}
+
+/**
+ * @param string $fileIdentifier
+ * @param string $file
+ * @return void
+ */
+function composerRequire96a2ef1bdabf3b4f379e9854a6d62f40($fileIdentifier, $file)
+{
+    if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
+        $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
+
+        require $file;
     }
 }

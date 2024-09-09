@@ -7,23 +7,17 @@
         <div class="col-md-8">
             <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0;">
-                    <h3 class="text-center">Agregar Unidades de Medida Individual</h3>
+                    <h3 class="text-center">Agregar unidad de medida: Individual</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <form action="<?= site_url('unidadesindividuales/store') ?>" method="post">
                         <?= csrf_field() ?>
                         <div class="form-group">
-                            <label for="unidadades_individuales" style="color: #000;">Nombre</label>
-                            <input type="text" class="form-control" id="unidadades_individuales" name="unidadades_individuales" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="estado" style="color: #000;">Estado</label>
-                            <select class="form-control" id="estado" name="estado" required>
-                                <option value="Activo">Activo</option>
-                                <option value="Inactivo">Inactivo</option>
-                            </select>
+                            <label for="nombreIndividual" style="color: #000;">Nombre de la unidad de medida individual</label>
+                            <input type="text" class="form-control" id="nombreIndividual" name="nombreIndividual" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Agregar</button>
+                        <a href="<?= previous_url() ?>" class="btn btn-secondary">Cancelar</a>
                     </form>
                 </div>
             </div>

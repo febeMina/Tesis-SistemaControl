@@ -47,40 +47,80 @@ class MaestroModel extends Model
 }
 
     
-    public function filter($filters)
-    {
-        $builder = $this->builder();
+public function filter($filters, $limit, $offset)
+{
+    $builder = $this->builder();
     
-        // Aplicar filtros si están presentes
-        if (!empty($filters['nombreCompleto'])) {
-            $builder->like('nombreCompleto', $filters['nombreCompleto']);
-        }
-        if (!empty($filters['nip'])) {
-            $builder->like('nip', $filters['nip']);
-        }
-        if (!empty($filters['escalafon'])) {
-            $builder->like('escalafon', $filters['escalafon']);
-        }
-        if (!empty($filters['fechaIngreso'])) {
-            $builder->like('fechaIngreso', $filters['fechaIngreso']);
-        }
-        if (!empty($filters['estado']) && $filters['estado'] !== 'Inactivo') {
-            $builder->where('estado', $filters['estado']);
-        }
-        if (!empty($filters['tipo'])) {
-            $builder->where('tipo', $filters['tipo']);
-        }
-        // Incluir siempre el estado en el filtro
-        $builder->where('estado !=', 'Eliminado');
-            
-        // Excluir los maestros inactivos si no se está filtrando por estado inactivo
-        if (empty($filters['estado']) || $filters['estado'] !== 'Inactivo') {
-            $builder->where('estado !=', 'Inactivo');
-        }
-    
-        $query = $builder->get();
-        return $query->getResultArray();
+    // Aplicar filtros
+    if (!empty($filters['nombreCompleto'])) {
+        $builder->like('nombreCompleto', $filters['nombreCompleto']);
     }
+    if (!empty($filters['nip'])) {
+        $builder->like('nip', $filters['nip']);
+    }
+    if (!empty($filters['escalafon'])) {
+        $builder->like('escalafon', $filters['escalafon']);
+    }
+    if (!empty($filters['fechaIngreso'])) {
+        $builder->like('fechaIngreso', $filters['fechaIngreso']);
+    }
+    if (!empty($filters['estado']) && $filters['estado'] !== 'Inactivo') {
+        $builder->where('estado', $filters['estado']);
+    }
+    if (!empty($filters['tipo'])) {
+        $builder->where('tipo', $filters['tipo']);
+    }
+    
+    // Incluir siempre el estado en el filtro
+    $builder->where('estado !=', 'Eliminado');
+    
+    // Excluir los maestros inactivos si no se está filtrando por estado inactivo
+    if (empty($filters['estado']) || $filters['estado'] !== 'Inactivo') {
+        $builder->where('estado !=', 'Inactivo');
+    }
+
+    $builder->limit($limit, $offset); // Aplicar la paginación
+    $query = $builder->get();
+    
+    return $query->getResultArray();
+}
+
+    
+    public function countFiltered($filters)
+{
+    $builder = $this->builder();
+    
+    // Aplicar filtros
+    if (!empty($filters['nombreCompleto'])) {
+        $builder->like('nombreCompleto', $filters['nombreCompleto']);
+    }
+    if (!empty($filters['nip'])) {
+        $builder->like('nip', $filters['nip']);
+    }
+    if (!empty($filters['escalafon'])) {
+        $builder->like('escalafon', $filters['escalafon']);
+    }
+    if (!empty($filters['fechaIngreso'])) {
+        $builder->like('fechaIngreso', $filters['fechaIngreso']);
+    }
+    if (!empty($filters['estado']) && $filters['estado'] !== 'Inactivo') {
+        $builder->where('estado', $filters['estado']);
+    }
+    if (!empty($filters['tipo'])) {
+        $builder->where('tipo', $filters['tipo']);
+    }
+    
+    // Incluir siempre el estado en el filtro
+    $builder->where('estado !=', 'Eliminado');
+    
+    // Excluir los maestros inactivos si no se está filtrando por estado inactivo
+    if (empty($filters['estado']) || $filters['estado'] !== 'Inactivo') {
+        $builder->where('estado !=', 'Inactivo');
+    }
+    
+    return $builder->countAllResults();
+}
+
     
     
 }

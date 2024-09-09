@@ -53,18 +53,12 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col-md-12 d-flex justify-content-between align-items-center">
-                                <div>
-                                    <button type="submit" class="btn btn-primary">Filtrar</button>
-                                    <a href="<?= site_url('maestros/index') ?>" class="btn btn-secondary ms-2">Limpiar</a>
-                                </div>
-                                <div>
-                                    <a href="<?= site_url('maestros/create') ?>" class="btn btn-primary">
-                                        <i class="mdi mdi-plus"> Agregar</i>
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                            <a href="<?= site_url('maestros/index') ?>" class="btn btn-secondary ms-2">Limpiar</a>
+                            <a href="<?= site_url('maestros/create') ?>" class="btn btn-primary">
+                                <i class="mdi mdi-plus"></i> Agregar
+                            </a>
                         </div>
                     </form>
                     
@@ -114,6 +108,10 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <?= $pager ?>
+                    </div>
+
                 </div>
             </div>
         </div>

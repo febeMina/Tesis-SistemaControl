@@ -40,7 +40,7 @@
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <button type="submit" class="btn btn-primary">Filtrar</button>
                             <a href="<?= site_url('/reporte') ?>" class="btn btn-secondary ms-2">Limpiar</a>
-                            <a href="<?= site_url('reporte-pdf/generar-reporte') ?>" class="btn btn-success">Generar Reporte</a>
+                            <a href="<?= site_url('reporte-pdf/generar-reporte?fecha_inicio=' . esc($filters['fecha_inicio'] ?? '') . '&fecha_fin=' . esc($filters['fecha_fin'] ?? '')) ?>" class="btn btn-success">Generar Reporte</a>
                         </div>
                     </form>
 
@@ -60,49 +60,53 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($data as $permiso): ?>
-                                        <?php
-                                            // Calculando el número de días solicitados
-                                            $fechaInicio = new DateTime($permiso['fechaInicio']);
-                                            $fechaFin = new DateTime($permiso['fechaFin']);
-                                            $intervalo = $fechaInicio->diff($fechaFin);
-                                            $diasSolicitados = $intervalo->days; // Sumamos 1 para incluir el primer día
-                                            $horasSolicitadas = $permiso['horasSolicitadas'] ?? '-';
-                                            
-                                            // Obtener saldo histórico de días y horas
-                                            $saldoHistorialDias = $permiso['saldoHistorialDias'] ?? 0;
-                                            $saldoHistorialHoras = $permiso['saldoHistorialHoras'] ?? 0;
+                                <?php foreach ($data as $item): ?>
+                                    <?php
+                                        $horasDias = 6;
+                                        // Calculando el número de días solicitados
+                                        $fechaInicio = new DateTime($item['fechaInicio']);
+                                        $fechaFin = new DateTime($item['fechaFin']);
+                                        $intervalo = $fechaInicio->diff($fechaFin);
+                                        $diasSolicitados = $intervalo->days + 1; // Sumamos 1 para incluir el primer día
+                                        $diasHoras = $item['horasSolicitadas'] ?? $diasSolicitados * $horasDias;
+                                        $horasSolicitadas = $item['horasSolicitadas'] ?? "-";
+                                        $conversionDias = $item['horasSolicitadas'] ?? $horasDias;
+                                        $diasSolicitados = ($conversionDias / $horasDias) * $diasSolicitados;
+                                        // Obtener saldo histórico de días y horas
+                                        $saldoHistorialDias = $item['saldoHistorialDias'] ?? 0;
+                                        $saldoHistorialHoras = $item['saldoHistorialHoras'] ?? 0;
 
-                                            // Calculando el nuevo saldo
-                                            $nuevoSaldoDias = $saldoHistorialDias - $diasSolicitados;
-                                            $nuevoSaldoHoras = $saldoHistorialHoras - ($horasSolicitadas === '-' ? 0 : $horasSolicitadas);
+                                        // Calculando el nuevo saldo
+                                        $nuevoSaldoDias = $saldoHistorialDias - $diasSolicitados;
+                                        $nuevoSaldoHoras = $saldoHistorialHoras - $diasHoras;
 
-                                            // Formatear saldo histórico en días para eliminar decimales
-                                            $saldoHistorialDias = number_format($saldoHistorialDias, 0, '', '');
-                                        ?>
-                                        <tr>
-                                            <td>
-                                                <strong><?= esc($permiso['nombre_completo']) ?></strong><br>
-                                                <small>NIP: <?= esc($permiso['nip']) ?></small>
-                                            </td>
-                                            <td>
-                                                <strong>Inicio:</strong> <?= esc($permiso['fechaInicio']) ?><br>
-                                                <strong>Fin:</strong> <?= esc($permiso['fechaFin']) ?>
-                                            </td>
-                                            <td>
-                                                <?= esc($permiso['tipoPermisoNombre']) ?><br>
-                                                <small>(<?= esc($permiso['cantidadDias'] ?? '0') ?> días)</small>
-                                            </td>
-                                            <td><?= esc($diasSolicitados) ?></td>
-                                            <td><?= esc($horasSolicitadas) ?></td>
-                                            <td>
-                                                <ul class="list-unstyled mb-0">
-                                                    <li><strong>Días:</strong> <?= esc($nuevoSaldoDias) ?></li>
-                                                    <li><strong>Horas:</strong> <?= esc($nuevoSaldoHoras) ?></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
+                                        // Formatear saldo histórico en días para eliminar decimales
+                                        $saldoHistorialDias = number_format($saldoHistorialDias, 2, '.', '');
+
+                                    ?>
+                                    <tr>
+                                        <td>
+                                            <strong><?= esc($item['nombreCompleto']) ?></strong><br>
+                                            <small>NIP: <?= esc($item['nip']) ?></small>
+                                        </td>
+                                        <td>
+                                            <strong>Inicio:</strong> <?= esc($item['fechaInicio']) ?><br>
+                                            <strong>Fin:</strong> <?= esc($item['fechaFin']) ?>
+                                        </td>
+                                        <td>
+                                            <?= esc($item['tipoPermisoNombre']) ?><br>
+                                            <small>(<?= esc($item['cantidadDias'] ?? '0') ?> días)</small>
+                                        </td>
+                                        <td><?= esc(number_format($diasSolicitados, 0, '.', '')) ?></td>
+                                        <td><?= esc($horasSolicitadas) ?></td>
+                                        <td>
+                                            <ul class="list-unstyled mb-0">
+                                                <li><strong>Días:</strong> <?= esc(number_format($nuevoSaldoDias, 2, '.', '')) ?></li>
+                                                <li><strong>Horas:</strong> <?= esc($nuevoSaldoHoras) ?></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

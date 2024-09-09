@@ -39,19 +39,13 @@
                                     <option value="F" <?= isset($filters['genero']) && $filters['genero'] == 'F' ? 'selected' : '' ?>>Femenino</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-12 d-flex justify-content-between align-items-center">
-                                <div>
-                                    <button type="submit" class="btn btn-primary">Filtrar</button>
-                                    <a href="<?= site_url('padres') ?>" class="btn btn-secondary ms-2">Limpiar</a>
-                                </div>
-                                <div>
-                                    <a href="<?= site_url('padres/create') ?>" class="btn btn-primary">
-                                        <i class="mdi mdi-plus"> Agregar</i>
-                                    </a>
-                                </div>
-                            </div>
+                        </div>    
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                            <a href="<?= site_url('padres') ?>" class="btn btn-secondary ms-2">Limpiar</a>
+                            <a href="<?= site_url('padres/create') ?>" class="btn btn-primary">
+                                <i class="mdi mdi-plus"></i> Agregar
+                            </a>
                         </div>
                     </form>
 
@@ -100,7 +94,7 @@
                     </div>
 
                     <!-- Paginación -->
-                    <div class="pagination">
+                    <div class="d-flex justify-content-center mt-4">
                         <?= $pager ?> <!-- Mostrar el HTML de la paginación -->
                     </div>
 

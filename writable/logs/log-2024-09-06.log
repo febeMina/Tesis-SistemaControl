@@ -1,0 +1,1002 @@
+INFO - 2024-09-06 14:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 14:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 15:08:55 --> Error: Class "App\ThirdParty\Controllers" not found
+in APPPATH\Controllers\Reportes.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(309): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\Reportes.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Reportes')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Reportes')
+ 5 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Reportes', true)
+ 6 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 15:18:36 --> ErrorException: Undefined array key "nombre_completo"
+in APPPATH\Views\Reportes\permisos_reporte.php on line 85.
+ 1 APPPATH\Views\Reportes\permisos_reporte.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_completo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Reportes\\permisos_reporte.php', 85)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Reportes\\permisos_reporte.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('reportes/permisos_reporte', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(246): view('reportes/permisos_reporte', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->reporte()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:19:55 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:19:55 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:21:18 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:21:18 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:24:58 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:24:58 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:24:58 --> ErrorException: Undefined array key "nuevoSaldoDias"
+in APPPATH\Controllers\ReportePDF.php on line 223.
+ 1 APPPATH\Controllers\ReportePDF.php(223): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nuevoSaldoDias"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 223)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:25:31 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:25:31 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:28:32 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:28:32 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:28:32 --> ErrorException: Undefined array key "nuevoSaldoDias"
+in APPPATH\Controllers\ReportePDF.php on line 219.
+ 1 APPPATH\Controllers\ReportePDF.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nuevoSaldoDias"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:29:04 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:29:04 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:29:04 --> ErrorException: Undefined array key "diasSolicitados"
+in APPPATH\Controllers\ReportePDF.php on line 219.
+ 1 APPPATH\Controllers\ReportePDF.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "diasSolicitados"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:29:57 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:29:57 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:29:57 --> ErrorException: Undefined array key ""
+in APPPATH\Controllers\ReportePDF.php on line 219.
+ 1 APPPATH\Controllers\ReportePDF.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:30:19 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:30:19 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:30:19 --> ErrorException: Undefined array key "nuevoSaldoDias"
+in APPPATH\Controllers\ReportePDF.php on line 223.
+ 1 APPPATH\Controllers\ReportePDF.php(223): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nuevoSaldoDias"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 223)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:32:02 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:32:02 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:34:00 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:34:00 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:34:00 --> ErrorException: Undefined array key "diasSolicitados"
+in APPPATH\Controllers\ReportePDF.php on line 219.
+ 1 APPPATH\Controllers\ReportePDF.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "diasSolicitados"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:37:15 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:37:15 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:37:15 --> ErrorException: Undefined array key "diasSolicitados"
+in APPPATH\Controllers\ReportePDF.php on line 219.
+ 1 APPPATH\Controllers\ReportePDF.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "diasSolicitados"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:43:04 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:43:04 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:43:04 --> ErrorException: Undefined array key "diasDiv"
+in APPPATH\Controllers\ReportePDF.php on line 219.
+ 1 APPPATH\Controllers\ReportePDF.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "diasDiv"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:46:20 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:46:20 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-06 15:46:21 --> ErrorException: Undefined array key ""
+in APPPATH\Controllers\ReportePDF.php on line 219.
+ 1 APPPATH\Controllers\ReportePDF.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 219)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:46:34 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:46:34 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 15:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 15:50:07 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 31.
+ 1 APPPATH\Controllers\ReportePDF.php(31): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:50:07 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:50:07 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 294.
+ 1 APPPATH\Controllers\ReportePDF.php(294): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:50:07 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 294.
+ 1 APPPATH\Controllers\ReportePDF.php(294): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:50:07 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 280.
+ 1 APPPATH\Controllers\ReportePDF.php(280): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:50:07 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 294.
+ 1 APPPATH\Controllers\ReportePDF.php(294): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 15:50:07 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 294.
+ 1 APPPATH\Controllers\ReportePDF.php(294): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 15:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 16:29:37 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 32.
+ 1 APPPATH\Controllers\ReportePDF.php(32): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 16:29:37 --> [DEPRECATED] DateTime::__construct(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 33.
+ 1 APPPATH\Controllers\ReportePDF.php(33): DateTime->__construct(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 16:29:37 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 281.
+ 1 APPPATH\Controllers\ReportePDF.php(281): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 16:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 16:34:41 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 287.
+ 1 APPPATH\Controllers\ReportePDF.php(287): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 16:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 16:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 17:25:42 --> ErrorException: Undefined array key "intervalo"
+in APPPATH\Controllers\ReportePDF.php on line 236.
+ 1 APPPATH\Controllers\ReportePDF.php(236): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "intervalo"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 236)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 17:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 17:26:21 --> ErrorException: Undefined array key "diasSolicitados"
+in APPPATH\Controllers\ReportePDF.php on line 236.
+ 1 APPPATH\Controllers\ReportePDF.php(236): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "diasSolicitados"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 236)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 17:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 17:33:37 --> Error: Call to a member function diff() on string
+in APPPATH\Controllers\ReportePDF.php on line 224.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 17:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 17:45:03 --> ErrorException: Undefined variable $item
+in APPPATH\Views\Reportes\permisos_reporte.php on line 67.
+ 1 APPPATH\Views\Reportes\permisos_reporte.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Reportes\\permisos_reporte.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\Reportes\\permisos_reporte.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('reportes/permisos_reporte', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(246): view('reportes/permisos_reporte', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->reporte()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 17:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 17:52:27 --> ErrorException: Undefined array key ""
+in APPPATH\Controllers\ReportePDF.php on line 236.
+ 1 APPPATH\Controllers\ReportePDF.php(236): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 236)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 17:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 17:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 20:07:57 --> ErrorException: Undefined array key "nuevoSaldoDias"
+in APPPATH\Controllers\ReportePDF.php on line 240.
+ 1 APPPATH\Controllers\ReportePDF.php(240): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nuevoSaldoDias"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 240)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 20:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 20:08:41 --> ErrorException: Undefined array key "nuevoSaldoDias"
+in APPPATH\Controllers\ReportePDF.php on line 240.
+ 1 APPPATH\Controllers\ReportePDF.php(240): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nuevoSaldoDias"', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Controllers\\ReportePDF.php', 240)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 20:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 20:25:09 --> TypeError: number_format(): Argument #1 ($num) must be of type float, DateInterval given
+in APPPATH\Controllers\ReportePDF.php on line 252.
+ 1 APPPATH\Controllers\ReportePDF.php(252): number_format(Object(DateInterval), 0, '.', '')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 20:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 20:25:26 --> TypeError: utf8_decode(): Argument #1 ($string) must be of type string, DateInterval given
+in APPPATH\Controllers\ReportePDF.php on line 315.
+ 1 APPPATH\Controllers\ReportePDF.php(315): utf8_decode(Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 20:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 20:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:39:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 21:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 22:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 22:32:02 --> ErrorException: Undefined variable $saldoHistorialHoras
+in APPPATH\Views\permisos_personal\index.php on line 84.
+ 1 APPPATH\Views\permisos_personal\index.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldoHistorialHoras', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 22:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 22:35:26 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+in APPPATH\Views\permisos_personal\index.php on line 116.
+ 1 APPPATH\Views\permisos_personal\index.php(116): number_format('-', 0, '.', '')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 22:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 22:37:54 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+in APPPATH\Views\permisos_personal\index.php on line 119.
+ 1 APPPATH\Views\permisos_personal\index.php(119): number_format('-', 0, '.', '')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 22:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 22:38:37 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+in APPPATH\Views\permisos_personal\index.php on line 116.
+ 1 APPPATH\Views\permisos_personal\index.php(116): number_format('-', 0, '.', '')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 22:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 22:38:44 --> ErrorException: Undefined variable $saldoHistorialHoras
+in APPPATH\Views\permisos_personal\index.php on line 84.
+ 1 APPPATH\Views\permisos_personal\index.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldoHistorialHoras', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 22:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 22:38:51 --> ErrorException: Undefined variable $saldoHistorialHoras
+in APPPATH\Views\permisos_personal\index.php on line 84.
+ 1 APPPATH\Views\permisos_personal\index.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldoHistorialHoras', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 22:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 22:39:06 --> ErrorException: Undefined variable $saldoHistorialHoras
+in APPPATH\Views\permisos_personal\index.php on line 84.
+ 1 APPPATH\Views\permisos_personal\index.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $saldoHistorialHoras', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 22:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-06 23:10:44 --> TypeError: number_format(): Argument #1 ($num) must be of type float, string given
+in APPPATH\Views\permisos_personal\index.php on line 105.
+ 1 APPPATH\Views\permisos_personal\index.php(105): number_format('-', 0, '.', '')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\permisos_personal\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('permisos_personal/index', [], true)
+ 5 APPPATH\Controllers\PermisosPersonal.php(76): view('permisos_personal/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PermisosPersonal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermisosPersonal))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:26:32 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 304.
+ 1 APPPATH\Controllers\ReportePDF.php(304): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:26:32 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 290.
+ 1 APPPATH\Controllers\ReportePDF.php(290): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:26:32 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 290.
+ 1 APPPATH\Controllers\ReportePDF.php(290): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:26:32 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 318.
+ 1 APPPATH\Controllers\ReportePDF.php(318): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:27:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:27:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:27:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:27:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:31:04 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:31:04 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:31:04 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:31:04 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:32:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 305.
+ 1 APPPATH\Controllers\ReportePDF.php(305): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:32:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 291.
+ 1 APPPATH\Controllers\ReportePDF.php(291): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:32:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 291.
+ 1 APPPATH\Controllers\ReportePDF.php(291): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:32:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 319.
+ 1 APPPATH\Controllers\ReportePDF.php(319): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:38:29 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 306.
+ 1 APPPATH\Controllers\ReportePDF.php(306): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:38:29 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 292.
+ 1 APPPATH\Controllers\ReportePDF.php(292): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:38:29 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 292.
+ 1 APPPATH\Controllers\ReportePDF.php(292): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:38:29 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 320.
+ 1 APPPATH\Controllers\ReportePDF.php(320): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:41:13 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 306.
+ 1 APPPATH\Controllers\ReportePDF.php(306): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:41:13 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 292.
+ 1 APPPATH\Controllers\ReportePDF.php(292): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:41:13 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 292.
+ 1 APPPATH\Controllers\ReportePDF.php(292): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:41:13 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 320.
+ 1 APPPATH\Controllers\ReportePDF.php(320): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:43:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:43:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:43:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:43:47 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:45:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:45:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:45:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:45:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:45:51 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:46:59 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:46:59 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:46:59 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:46:59 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:47:53 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:47:53 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:47:53 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:47:53 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:48:36 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:48:36 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:48:36 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:48:36 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:50:23 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:50:23 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:50:23 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:50:23 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-06 23:50:28 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 303.
+ 1 APPPATH\Controllers\ReportePDF.php(303): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:50:28 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:50:28 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 289.
+ 1 APPPATH\Controllers\ReportePDF.php(289): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+WARNING - 2024-09-06 23:50:28 --> [DEPRECATED] utf8_decode(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\ReportePDF.php on line 317.
+ 1 APPPATH\Controllers\ReportePDF.php(317): utf8_decode(null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReportePDF->generarReporte()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportePDF))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-06 23:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-06 23:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

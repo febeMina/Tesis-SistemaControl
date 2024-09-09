@@ -22,14 +22,14 @@
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <!-- Botón para crear nuevo tipo de documento -->
-                    <a href="<?= base_url('public/tipo-documento/create') ?>" class="btn btn-primary mb-3">
-                        <i class="mdi mdi-plus"></i> Nuevo Tipo de Documento
-                    </a>
+                    <a href="<?= site_url('/tipo-documento/create') ?>" class="btn btn-primary">
+                            <i class="mdi mdi-plus"></i> Agregar
+                        </a>
                     
                     <!-- Tabla de tipos de documento -->
                     <div class="table-responsive">
                         <table class="table" style="color: #000;">
-                            <thead class="thead-light">
+                            <thead >
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Máscara</th>

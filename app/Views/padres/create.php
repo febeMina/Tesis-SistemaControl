@@ -25,6 +25,7 @@
                         <div class="form-group">
                             <label for="idTipoDocumento" style="color: #000;"><i class="fas fa-id-card"></i> Tipo de Documento</label>
                             <select class="form-control" id="idTipoDocumento" name="idTipoDocumento" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($tipos_documento as $tipo): ?>
                                     <option value="<?= $tipo['idTipoDocumento']; ?>" data-mascara="<?= $tipo['mascara']; ?>">
                                         <?= $tipo['nombre']; ?>
@@ -46,6 +47,7 @@
                         <div class="form-group">
                             <label for="genero" style="color: #000;">Género</label>
                             <select class="form-control" id="genero" name="genero" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="M" <?= old('genero') == 'M' ? 'selected' : '' ?>>Masculino</option>
                                 <option value="F" <?= old('genero') == 'F' ? 'selected' : '' ?>>Femenino</option>
                             </select>
@@ -62,6 +64,7 @@
                         <div class="form-group">
                             <label for="tipoAsociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de Asociado</label>
                             <select class="form-control" id="tipoAsociado" name="tipoAsociado" required>
+                                <option value="" disabled selected>Selecciona</option>
                                 <option value="EXTERNO">EXTERNO</option>
                                 <option value="INTERNO">INTERNO</option>
                             </select>
@@ -71,7 +74,7 @@
                             <div class="mt-4">
                                 <h4 class="text-center" style="color: #000;">Alumnos Asociados</h4>
                                 <div class="table-responsive">
-                                    <table class="table">
+                                <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>Nombre Completo</th>
@@ -88,6 +91,7 @@
                                                         <td><input type="text" class="form-control" name="alumno_nombre_completo[]" value="<?= esc($nombre) ?>" required></td>
                                                         <td>
                                                             <select class="form-control" name="alumno_sexo[]" required>
+                                                            <option value="" disabled selected>Selecciona</option>
                                                                 <option value="M" <?= session()->getFlashdata('alumnos')['genero'][$index] == 'M' ? 'selected' : '' ?>>Masculino</option>
                                                                 <option value="F" <?= session()->getFlashdata('alumnos')['genero'][$index] == 'F' ? 'selected' : '' ?>>Femenino</option>
                                                             </select>
@@ -116,6 +120,7 @@
                                                     <td><input type="text" class="form-control" name="alumno_nombre_completo[]"></td>
                                                     <td>
                                                         <select class="form-control" name="alumno_sexo[]">
+                                                        <option value="" disabled selected>Selecciona</option>
                                                             <option value="M">Masculino</option>
                                                             <option value="F">Femenino</option>
                                                         </select>
@@ -147,7 +152,8 @@
                         </div>
                         
                         <div class="mt-4 text-center">
-                            <button type="submit" class="btn btn-success">Guardar</button>
+                            <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
+                            <a href="<?= base_url('public/padres') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
                 </div>
@@ -158,6 +164,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        
         // Inicializar Inputmask
         const inputMask = (selector, mask) => {
             $(selector).inputmask(mask, {
@@ -175,27 +182,27 @@
             const mascara = selectedOption.getAttribute('data-mascara');
             inputMask('#numeroDocumento', mascara);
         });
-
+        
         // Mostrar/ocultar campos según selección de tipo de asociado
-        const tipoAsociado = document.querySelector('select[name="tipoAsociado"]');
-    const alumnosFields = document.querySelectorAll('.alumnos-fields'); // Cambia por el selector que agrupa los campos de alumnos.
+        const tipoAsociado = document.querySelector('#tipoAsociado');
+        const alumnosContainer = document.querySelector('#alumnosContainer');
 
-    function toggleAlumnoFields() {
-        if (tipoAsociado.value === 'INTERNO') {
-            alumnosFields.forEach(field => {
-                field.style.display = ''; // Mostrar los campos
-                field.querySelector('input').setAttribute('required', 'required'); // Añadir atributo required
-            });
-        } else {
-            alumnosFields.forEach(field => {
-                field.style.display = 'none'; // Ocultar los campos
-                field.querySelector('input').removeAttribute('required'); // Quitar atributo required
-            });
+        function toggleAlumnoFields() {
+            if (tipoAsociado.value === 'INTERNO') {
+                alumnosContainer.style.display = 'block';
+                document.querySelectorAll('#alumnosContainer input').forEach(function(input) {
+                    input.setAttribute('required', 'required');
+                });
+            } else {
+                alumnosContainer.style.display = 'none';
+                document.querySelectorAll('#alumnosContainer input').forEach(function(input) {
+                    input.removeAttribute('required');
+                });
+            }
         }
-    }
 
-    tipoAsociado.addEventListener('change', toggleAlumnoFields);
-    toggleAlumnoFields(); // Llamar para asegurar que los campos estén en el estado correcto al cargar la página
+        tipoAsociado.addEventListener('change', toggleAlumnoFields);
+        toggleAlumnoFields(); // Inicializar
 
         // Clonar fila para agregar alumno
         const addAlumnoButton = document.getElementById('addAlumno');
@@ -204,11 +211,8 @@
         addAlumnoButton.addEventListener('click', function () {
             const firstRow = alumnosTableBody.querySelector('tr');
             const cloneRow = firstRow.cloneNode(true);
-
-            // Limpiar los valores de los inputs en la nueva fila
             const inputs = cloneRow.querySelectorAll('input, select');
             inputs.forEach(input => input.value = '');
-
             alumnosTableBody.appendChild(cloneRow);
         });
 
@@ -221,10 +225,10 @@
                 alert('Debe haber al menos un alumno.');
             }
         };
-
-        // Inicializar Inputmask según el tipo de documento seleccionado inicialmente
-        idTipoDocumento.dispatchEvent(new Event('change'));
     });
+    
+     // Inicializar Inputmask según el tipo de documento seleccionado inicialmente
+     idTipoDocumento.dispatchEvent(new Event('change'));
 </script>
 
 <?= $this->endSection() ?>

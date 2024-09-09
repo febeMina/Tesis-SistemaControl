@@ -8,9 +8,7 @@ class ProductoModel extends Model
 {
     protected $table = 'productos';
     protected $primaryKey = 'idProducto';
-    protected $allowedFields = [
-        'idtipoProducto', 'codigo_lote', 'fechaIngreso', 'fecha_vencimiento', 'n_unidades_Caja', 'idUnidadesPorCaja', 'idUnidades_individuales', 'unidades_extras', 'total', 'idMovimiento', 'idPrioridad', 'idDetalleSolicitados', 'estado'
-    ];
+    protected $allowedFields = ['descripcionProducto', 'estado'];
 
     
     public function getTiposProducto()

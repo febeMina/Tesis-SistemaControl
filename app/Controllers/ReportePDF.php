@@ -17,11 +17,18 @@ class ReportePDF extends BaseController
     public function generarReporte()
     {
         
-        // Obtener las fechas del filtro
-        $fechaInicio = $this->request->getVar('fecha_inicio');
-        $fechaFin = $this->request->getVar('fecha_fin');
-        
-    
+      // Obtener las fechas filtradas
+    $fechaInicio = $this->request->getVar('fecha_inicio');
+    $fechaFin = $this->request->getVar('fecha_fin');
+
+    // Asegurarte de que las fechas no están vacías antes de consultar la base de datos
+    if (!empty($fechaInicio) && !empty($fechaFin)) {
+        // Obtener los datos filtrados por las fechas
+        $data = $this->permisosPersonalModel->getReportePermisos($fechaInicio, $fechaFin);
+    } else {
+        // Obtener todos los datos si no se filtró por fechas
+        $data = $this->permisosPersonalModel->findAll();
+    }
 
         // Obtener los datos del reporte con filtros
         $data = $this->permisosPersonalModel->getReportePermisos($fechaInicio, $fechaFin);
@@ -213,23 +220,52 @@ class ReportePDF extends BaseController
             $mesInicio = $fechaInicioDate->format('m'); // Mes en formato numérico
             $añoInicio = $fechaInicioDate->format('Y');
             
+            $horasDias = 6;
+            $fechaInicio = new \DateTime($permiso['fechaInicio']);
+            $fechaFin = new \DateTime($permiso['fechaFin']);
+            $intervalo = $fechaInicio->diff($fechaFin);
+            $diasSolicitados = $intervalo->days + 1;
+            $horasSolicitadas = $permiso['horasSolicitadas'] ?? $diasSolicitados * $horasDias;
+            $conversionDias = $permiso['horasSolicitadas'] ?? $horasDias;
+            $diasSolicitados = ($conversionDias / $horasDias) * $diasSolicitados;
+            
+            // Obtener el saldo histórico
+            $saldoHistorialDias = $permiso['saldoHistorialDias'] ?? 0;
+            $saldoHistorialHoras = $permiso['saldoHistorialHoras'] ?? 0;
+            
+            // Calcular los nuevos saldos
+            $nuevoSaldoDias = $saldoHistorialDias - $diasSolicitados;
+            $nuevoSaldoHoras = $saldoHistorialHoras - $horasSolicitadas;
             // Aplicar las conversiones similar a la vista que acabamos de arreglar
             switch ($permiso["tipoPermisoNombre"]) {
                 case 'ENFERMEDAD':
+                    $posicionesPermisos[0][0] = number_format($diasSolicitados, 0, '.', '');
+                    $posicionesPermisos[0][1] = $permiso["horasSolicitadas"];
+                    $posicionesPermisos[0][2] = "";
+                    // Saldo
+                    $posicionesPermisos[1][0] = number_format($nuevoSaldoDias, 2, '.', '');  // Mostrar con 2 decimales
+                    $posicionesPermisos[1][1] = number_format($nuevoSaldoHoras, 0, '.', '');  // Mostrar con 2 decimales
+                    $posicionesPermisos[1][2] = "";
                 break;
                 
                 case 'DUELO':
-                    $posicionesPermisos[4][0] = "";
-                    $posicionesPermisos[4][1] = "";
+                    $posicionesPermisos[4][0] = number_format($diasSolicitados, 0, '.', '');
+                    $posicionesPermisos[4][1] = $permiso["horasSolicitadas"];
                     $posicionesPermisos[4][2] = "";
                     // Saldo
-                    $posicionesPermisos[5][0] = $permiso["saldoActualDias"];
-                    $posicionesPermisos[5][1] = $permiso["saldoActualHoras"];
+                    $posicionesPermisos[5][0] = number_format($nuevoSaldoDias, 2, '.', '');  // Mostrar con 2 decimales
+                    $posicionesPermisos[5][1] = number_format($nuevoSaldoHoras, 0, '.', '');  // Mostrar con 2 decimales
                     $posicionesPermisos[5][2] = "";
                 break;
                 
                 default:
-                    // Motivos personales
+                    $posicionesPermisos[2][0] = number_format($diasSolicitados, 0, '.', '');
+                    $posicionesPermisos[2][1] = $permiso["horasSolicitadas"];
+                    $posicionesPermisos[2][2] = "";
+                    // Saldo
+                    $posicionesPermisos[3][0] = number_format($nuevoSaldoDias, 2, '.', '');
+                    $posicionesPermisos[3][1] = number_format($nuevoSaldoHoras, 0, '.', '');
+                    $posicionesPermisos[3][2] = "";
                 break;
             }
             
@@ -294,41 +330,8 @@ class ReportePDF extends BaseController
         // Espacio
         //$pdf->Ln(10);
 
-        // Cabecera de la tabla
-        /*
-        $pdf->SetFont('Arial', 'B', 12);
-        $pdf->Cell(30, 10, 'NIP', 1);
-        $pdf->Cell(50, 10, 'Nombre del Personal', 1);
-        $pdf->Cell(30, 10, 'Fecha Inicio', 1);
-        $pdf->Cell(30, 10, 'Fecha Fin', 1);
-        foreach ($tipoPermisos as $tipoPermiso) {
-            $pdf->Cell(20, 10, $tipoPermiso['nombre'].' Dias', 1);
-            $pdf->Cell(20, 10, $tipoPermiso['nombre'].' Horas', 1);
-        }
-        $pdf->Cell(40, 10, 'Saldo', 1);
-        $pdf->Ln();
-        */
-
-        // Datos de la tabla
-        /*
-        $pdf->SetFont('Arial', '', 12);
-        foreach ($data as $permiso) {
-            $pdf->Cell(30, 10, $permiso['nip'], 1);
-            $pdf->Cell(50, 10, $permiso['nombreCompleto'], 1);
-            $pdf->Cell(30, 10, $permiso['fechaInicio'], 1);
-            $pdf->Cell(30, 10, $permiso['fechaFin'], 1);
-            foreach ($tipoPermisos as $tipoPermiso) {
-                $tipoPermisoId = $tipoPermiso['idTipoPermiso'];
-                $dias = isset($permiso['tipoPermiso'][$tipoPermisoId]['dias']) ? $permiso['tipoPermiso'][$tipoPermisoId]['dias'] : '';
-                $horas = isset($permiso['tipoPermiso'][$tipoPermisoId]['horas']) ? $permiso['tipoPermiso'][$tipoPermisoId]['horas'] : '';
-                $pdf->Cell(20, 10, $dias, 1);
-                $pdf->Cell(20, 10, $horas, 1);
-            }
-            $saldo = $permiso['saldoActualDias'] . ' días, ' . $permiso['saldoActualHoras'] . ' horas';
-            $pdf->Cell(40, 10, $saldo, 1);
-            $pdf->Ln();
-        }
-        */
+       
+        
         // Generar el PDF
         $pdf->Output('D', 'reporte_permisos.pdf');
     }

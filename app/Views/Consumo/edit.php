@@ -2,93 +2,155 @@
 
 <?= $this->section('content') ?>
 
-<div class="container">
+<div class="container mt-3">
+    <a href="<?= site_url('consumo') ?>" class="btn btn-secondary">
+        <i class="mdi mdi-arrow-left"></i> Requisiciones de productos
+    </a>
+    <hr>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
+        <div class="col-md-10">
+            <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0;">
-                    <h3 class="text-center">Editar Consumo</h3>
+                    <h4 class="header-title text-center">Continuar - N° de requisición: <?= $productoRequisicion['idProductoRequisicion'] ?></h4>
                 </div>
-                <div class="card-body">
-                <form action="<?= site_url('consumo/update/' . $consumo['idConsumo']) ?>" method="post">
-                        <div class="form-group">
-                            <label for="fecha" style="color: #000;">Fecha:</label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" value="<?= esc($consumo['fecha']) ?>" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="idProducto" style="color: #000;">Producto:</label>
-                            <select class="form-control" id="idProducto" name="idProducto" required>
-                                <?php foreach ($productos as $producto): ?>
-                                    <option value="<?= $producto['idProducto'] ?>" <?= $producto['idProducto'] == $consumo['idProducto'] ? 'selected' : '' ?>>
-                                        <?= $producto['nombre'] ?> - <?= $producto['fecha_vencimiento'] ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="saldo_inicial" style="color: #000;">Saldo inicial:</label>
-                            <input type="number" class="form-control" id="saldo_inicial" name="saldo_inicial" value="<?= esc($consumo['saldo_inicial']) ?>" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="salidas" style="color: #000;">Salidas:</label>
-                            <input type="number" class="form-control" id="salidas" name="salidas" value="<?= esc($consumo['salidas']) ?>" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="saldo" style="color: #000;">Saldo:</label>
-                            <input type="number" class="form-control" id="saldo" name="saldo" value="<?= esc($consumo['saldo']) ?>" readonly>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Actualizar</button>
-                        </div>
-                    </form>
+                <div class="card-body" style="background-color: #f0f0f0">
+                    <!-- Información de la solicitud -->
+                    <div class="mb-4">
+                        <h5 style="color: black;">Información de la requisición</h5>
+                        <form action="<?= site_url('consumo/update/' . $productoRequisicion['idProductoRequisicion']) ?>" method="post">
+                            <?= csrf_field() ?>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="fechaRequisicion" style="color: #000;">Fecha de la requisición</label>
+                                        <input type="date" class="form-control" id="fechaRequisicion" name="fechaRequisicion" value="<?= $productoRequisicion['fechaRequisicion'] ?>" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="comidaPreparar" style="color: #000;">Comida a preparar</label>
+                                        <input type="text" class="form-control" id="comidaPreparar" name="comidaPreparar" value="<?= $productoRequisicion['comidaPreparar'] ?>" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="responsableEntrega" style="color: #000;">Responsable de entrega</label>
+                                        <input type="text" class="form-control" id="responsableEntrega" name="responsableEntrega" value="<?= $productoRequisicion['responsableEntrega'] ?>" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="responsableRecibe" style="color: #000;">Responsable de recepción</label>
+                                        <input type="text" class="form-control" id="responsableRecibe" name="responsableRecibe" value="<?= $productoRequisicion['responsableRecibe'] ?>" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary mt-4">Actualizar Requisición</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Formulario para agregar detalles de lote -->
+                    <div class="mb-4">
+                        <h5 style="color: black;">Agregar lote de producto para consumo</h5>
+                        <form id="formLotes" action="<?= site_url('consumo/detalle') ?>" method="post">
+                            <?= csrf_field() ?>
+                            <input type="hidden" id="idProductoRequisicion" name="idProductoRequisicion" value="<?= $productoRequisicion['idProductoRequisicion'] ?>">
+                            <div class="row">
+                                <div class="col-md-8 mb-4">
+                                    <div class="form-group">
+                                        <label for="idProducto" style="color: #000;">Producto</label>
+                                        <select class="form-control" id="idProducto" name="idProducto" required>
+                                            <option value="">Seleccionar el producto</option>
+                                            <?php foreach($productosConExistencia as $producto): ?>
+                                                <option value="<?= $producto['idProductoLote'] ?>">
+                                                    <?= $producto['descripcionProducto'] ?> - <?= $producto['codigoLote']  ?> - <?= $producto['fechaVencimiento'] ?> - [<?= $producto['existenciaTotal'] ?> u]
+                                                </option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-group">
+                                        <label for="existenciaTotal" style="color: #000;">Total unidades para consumo</label>
+                                        <input type="number" class="form-control" id="existenciaTotal" name="existenciaTotal" min="0.00" step="0.01" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 mb-4">
+                                    <?php if (session()->has('error')): ?>
+                                        <div class="alert alert-danger">
+                                            <?= session('error') ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <?php if (session()->has('success')): ?>
+                                        <div class="alert alert-success">
+                                            <?= session('success') ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="col-md-4 mb-4 text-right">
+                                    <button type="submit" class="btn btn-primary">Agregar Lote</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Tabla de detalles -->
+                    <div class="mb-4">
+                        <h5 style="color: black;">Lotes de productos que se les dará salida</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Código de lote</th>
+                                    <th>Fechas</th>
+                                    <th>Unidades de caja</th>
+                                    <th>Unidades por caja</th>
+                                    <th>Total salida<br>(unidades)</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="detallesTableBody">
+                                <?php
+                                    $n = 0;
+                                    foreach ($detalles as $detalle) : 
+                                        $n++;
+                                ?>
+                                    <tr>
+                                        <td><?= $n ?></td>
+                                        <td><?= $detalle['descripcionProducto'] ?><br>Lote: <?= $detalle['codigoLote'] ?></td>
+                                        <td>Ingreso: <?= date("d/m/Y", strtotime($detalle['fechaIngreso'])) ?><br>Vencimiento: <?= date("d/m/Y", strtotime($detalle['fechaVencimiento'])) ?></td>
+                                        <td class="text-right"><?= $detalle['existenciaCaja'] ?><br><?= $detalle['udmCaja'] ?></td>
+                                        <td class="text-right"><?= $detalle['existenciaIndividual'] ?><br><?= $detalle['udmIndividual'] ?></td>
+                                        <td class="text-right"><?= $detalle['existenciaTotal'] ?> u</td>
+                                        <td>
+                                            <a href="<?= site_url('consumo/delete/' . $detalle['idProductoRequisicionDetalle']) ?>" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>
+                                        </td>
+                                    </tr>
+                                <?php 
+                                    endforeach; 
+                                    if($n == 0) {
+                                        echo '<tr><td colspan="7" class="text-center">No se encontraron registros...</td></tr>';
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mb-4 text-right">
+                        <form id="formFinalizar" action="<?= site_url('consumo/finalizar') ?>" method="post">
+                            <input type="hidden" name="idProductoRequisicion" value="<?= $productoRequisicion['idProductoRequisicion'] ?>">
+                            <button type="submit" class="btn btn-primary">Finalizar requisición</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Cargar jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Tu script JavaScript -->
-<script>
-$(document).ready(function() {
-    function updateSaldo() {
-        var saldo_inicial = parseInt($('#saldo_inicial').val()) || 0;
-        var salidas = parseInt($('#salidas').val()) || 0;
-        var saldo = saldo_inicial - salidas;
-        $('#saldo').val(saldo);
-    }
-
-    // Llamar a updateSaldo al cargar la página
-    updateSaldo();
-
-    $('#saldo_inicial, #salidas').on('input', function() {
-        updateSaldo();
-    });
-
-    $('#idProducto').change(function() {
-        var idProducto = $(this).val();
-
-        // Limpiar campos al cambiar de producto
-        $('#saldo_inicial').val('');
-        $('#salidas').val('');
-        $('#saldo').val('');
-
-        // Obtener saldo inicial del producto seleccionado
-        $.ajax({
-            url: '<?= site_url('consumo/getSaldoInicial/') ?>' + idProducto,
-            method: 'GET',
-            success: function(response) {
-                $('#saldo_inicial').val(response.saldo_inicial);
-                updateSaldo();
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            }
-        });
-    });
-});
-</script>
-
 <?= $this->endSection() ?>

@@ -3,10 +3,12 @@
 namespace App\Controllers;
 
 use App\Models\ProductoModel;
+use App\Models\ProductosMovimientosModel;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use CodeIgniter\Database\Exceptions\DatabaseException;
 
 class Productos extends BaseController
 {
@@ -29,6 +31,7 @@ class Productos extends BaseController
     public function index()
     {
         helper('url');
+        /*
         $productos = $this->productoModel
             ->select('productos.*, tipo_producto.nombre as nombre_tipo, unidades_por_caja.tipo_unidad as tipo_unidad_caja, unidades_por_caja.unidades as unidades_caja, unidad_individual.unidadades_individuales as tipo_unidad_individual, nivel_prioridad.Nombre as nombre_prioridad, detalle_solicitud.Detalle as detalle')
             ->join('tipo_producto', 'tipo_producto.idtipoProducto = productos.idtipoProducto', 'left')
@@ -38,125 +41,132 @@ class Productos extends BaseController
             ->join('detalle_solicitud', 'detalle_solicitud.idDetalleSolicitados = productos.idDetalleSolicitados', 'left')
             ->get()
             ->getResult();
+        */
+        $productos = $this->productoModel
+            ->select('productos.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia')
+            ->join('productos_lotes', 'productos.idProducto = productos_lotes.idProducto', 'left')
+            ->groupBy('productos.idProducto')
+            ->orderBy('fechaVencimientoProxima', 'ASC')
+            ->get()
+            ->getResult();
 
         return view('productos/index', ['productos' => $productos]);
     }
 
     public function create()
     {
-        $data = [
-            'tiposProducto' => $this->productoModel->getTiposProducto(),
-            'unidadIndividual' => $this->productoModel->getUnidadIndividual(),
-            'unidadesPorCaja' => $this->productoModel->getUnidadesPorCaja(),
-            'prioridades' => $this->productoModel->getPrioridades(),
-            'detallesSolicitados' => $this->productoModel->getDetallesSolicitados()
-        ];
-
-        return view('productos/create', $data);
+        return view('productos/create');
     }
 
     public function store()
-{
-     // Convertir las entradas a números enteros (o flotantes si es necesario)
-     $n_unidades_Caja = (int)$this->request->getPost('n_unidades_Caja');
-     $unidadesCaja = $n_unidades_Caja == 0 ? 0 : (int)$this->request->getPost('unidades_caja');
-     $unidades_extras = (int)$this->request->getPost('unidades_extras');
+    {
+        $data = [
+            'descripcionProducto' => $this->request->getPost('descripcionProducto'),
+            'estado' => 'Activo'
+        ];
 
-    // Calcular el total
-    $total = ($n_unidades_Caja * $unidadesCaja) + $unidades_extras;
+        $this->productoModel->save($data);
 
-    $productoID = $this->productoModel->saveProducto([
-        'idtipoProducto' => $this->request->getPost('idtipoProducto'),
-        'codigo_lote' => $this->request->getPost('codigo_lote'),
-        'fechaIngreso' => $this->request->getPost('fechaIngreso'),
-        'fecha_vencimiento' => $this->request->getPost('fecha_vencimiento'),
-        'n_unidades_Caja' => $n_unidades_Caja,
-        'idUnidadesPorCaja' => $this->request->getPost('idUnidadesPorCaja'),
-        'idUnidades_individuales' => $this->request->getPost('idUnidades_individuales'),
-        'unidades_extras' => $unidades_extras,
-        'total' => $total, // Guardar el total calculado
-        'idPrioridad' => $this->request->getPost('idPrioridad'),
-        'idDetalleSolicitados' => $this->request->getPost('idDetalleSolicitados'),
-        'estado' => $this->request->getPost('estado'),
-    ]);
-
-    return redirect()->to(site_url('productos'))->with('success', 'Producto agregado exitosamente.');
-}
-
+        return redirect()->to(site_url('productos'))->with('success', 'Producto agregado con éxito.');
+    }
 
     public function edit($id)
     {
         $producto = $this->productoModel->find($id);
     
         if (!$producto) {
-            return redirect()->to(site_url('productos'))->with('error', 'No se pudo encontrar el producto para editar.');
+            return redirect()->to(site_url('productos'))->with('error', 'No se encontró el producto.');
         }
     
-        // Convertir el array a un objeto
-        $producto = (object) $producto;
-    
-        // Asegurar que 'n_unidades_Caja' esté definido en el objeto $producto
-        $producto->n_unidades_Caja = $producto->n_unidades_Caja ?? 0; // Definir un valor predeterminado si es NULL
-    
         $data = [
-            'producto' => $producto,
-            'tiposProducto' => $this->productoModel->getTiposProducto(),
-            'unidadIndividual' => $this->productoModel->getUnidadIndividual(),
-            'unidadesPorCaja' => $this->productoModel->getUnidadesPorCaja(),
-            'prioridades' => $this->productoModel->getPrioridades(),
-            'detallesSolicitados' => $this->productoModel->getDetallesSolicitados()
+            'producto' => $producto
         ];
     
         return view('productos/edit', $data);
     }
 
     public function update($id)
-{
-    $producto = $this->productoModel->find($id);
+    {
+        $producto = $this->productoModel->find($id);
 
-    if (!$producto) {
-        return redirect()->to(site_url('productos'))->with('error', 'No se pudo encontrar el producto para actualizar.');
+        if (!$producto) {
+            return redirect()->to(site_url('productos'))->with('error', 'No se encontró el producto.');
+        }
+
+        $data = [
+            'descripcionProducto' => $this->request->getPost('descripcionProducto')
+        ];
+
+        $this->productoModel->update($id, $data);
+
+        return redirect()->to(site_url('productos'))->with('success', 'Producto actualizado con éxito.');
     }
-
-    $n_unidades_Caja = $this->request->getPost('n_unidades_Caja');
-    $unidadesCaja = $n_unidades_Caja == 0 ? 0 : $this->request->getPost('unidades_caja');
-    $unidades_extras = $this->request->getPost('unidades_extras');
-
-    // Calcular el total
-    $total = ($n_unidades_Caja * $unidadesCaja) + $unidades_extras;
-
-    $this->productoModel->updateProducto($id, [
-        'idtipoProducto' => $this->request->getPost('idtipoProducto'),
-        'codigo_lote' => $this->request->getPost('codigo_lote'),
-        'fechaIngreso' => $this->request->getPost('fechaIngreso'),
-        'fecha_vencimiento' => $this->request->getPost('fecha_vencimiento'),
-        'n_unidades_Caja' => $n_unidades_Caja,
-        'idUnidadesPorCaja' => $this->request->getPost('idUnidadesPorCaja'),
-        'idUnidades_individuales' => $this->request->getPost('idUnidades_individuales'),
-        'unidades_extras' => $unidades_extras,
-        'total' => $total, // Guardar el total calculado
-        'idPrioridad' => $this->request->getPost('idPrioridad'),
-        'idDetalleSolicitados' => $this->request->getPost('idDetalleSolicitados'),
-        'estado' => $this->request->getPost('estado'),
-    ]);
-
-    return redirect()->to(site_url('productos'))->with('success', 'Producto actualizado exitosamente.');
-}
 
     public function delete($id)
     {
         // Obtener el producto antes de eliminarlo
         $producto = $this->productoModel->find($id);
-        if ($producto) {
-            // Eliminar en la tabla movimiento primero
-            $this->productoModel->eliminarMovimiento($id);
-    
-            // Luego eliminar en la tabla productos
-            $this->productoModel->delete($id);
-    
-            return redirect()->to(site_url('productos'))->with('success', 'Producto eliminado exitosamente.');
+        if($producto) {
+            try {
+                $this->productoModel->delete($id);
+
+                return redirect()->to('/productos')->with('success', 'Producto eliminado con éxito.');
+            } catch (DatabaseException $e) {
+                return redirect()->to('/productos')->with('error', 'No se puede eliminar el producto porque tiene lotes y movimientos asociados.');
+            }
         } else {
-            return redirect()->to(site_url('productos'))->with('error', 'No se pudo encontrar el producto para eliminar.');
+            return redirect()->to(site_url('productos'))->with('error', 'No se encontró el producto.');
         }
+    }
+
+    public function estado($id)
+    {
+        $producto = $this->productoModel->find($id);
+
+        if ($producto) {
+            if ($producto['estado'] == 'Activo') {
+                $this->productoModel->update($id, ['estado' => 'Inactivo']);
+                $mensaje = 'El producto ha sido cambiado a Inactivo.';
+            } else {
+                $this->productoModel->update($id, ['estado' => 'Activo']);
+                $mensaje = 'El producto ha sido cambiado a Activo.';
+            }
+
+            return redirect()->to('/productos')->with('success', $mensaje);
+        } else {
+            return redirect()->to('/productos')->with('error', 'No se encontró el producto.');
+        }
+    }
+
+    public function historialMovimientos($id) {
+        $productosMovimientos = new ProductosMovimientosModel();
+        $movimientosProducto = $productosMovimientos
+            ->select('
+                productos_lotes.codigoLote,
+                productos.descripcionProducto, 
+                productos_movimientos.tipoMovimiento,
+                productos_movimientos.descripcionMovimiento, 
+                productos_movimientos.fechaMovimiento, 
+                productos_movimientos.existenciaTotalAntes, 
+                productos_movimientos.existenciaTotalMovimiento, 
+                productos_movimientos.existenciaTotalDespues
+            ')
+            ->join('productos_lotes', 'productos_movimientos.idProductoLote = productos_lotes.idProductoLote', 'left')
+            ->join('productos', 'productos_lotes.idProducto = productos.idProducto', 'left')
+            ->where('productos.idProducto', $id)
+            ->orderBy('productos_lotes.idProductoLote', 'ASC')
+            ->orderBy('productos_movimientos.idProductoMovimiento', 'ASC')
+            ->get()
+            ->getResult();
+
+        $productoModel = new ProductoModel();
+        $producto = $productoModel->select('descripcionProducto')->where('idProducto', $id)->get()->getRow(); 
+
+        $descripcionProducto = $producto ? $producto->descripcionProducto : 'Producto no encontrado';
+
+        return view('productos/movimientosProducto', [
+            'movimientosProducto' => $movimientosProducto,
+            'descripcionProducto' => $descripcionProducto
+        ]);
     }
 }

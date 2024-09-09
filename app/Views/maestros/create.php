@@ -61,13 +61,16 @@
                         <div class="form-group">
                             <label for="tipo" style="color: #000;"><i class="fas fa-user-tie"></i> Tipo</label>
                             <select class="form-control" id="tipo" name="tipo" required>
+                                <option value="" disabled selected>Selecciona</option>
                                 <option value="Docente">Docente</option>
                                 <option value="Administrativo">Administrativo</option>
                             </select>
+
                         </div>
                         <div class="form-group" id="rol-group" style="display: none;">
                             <label for="cargo" style="color: #000;"><i class="fas fa-briefcase"></i> Cargo</label>
                             <select class="form-control" id="cargo" name="cargo">
+                            <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($cargos as $key => $value): ?>
                                     <option value="<?= esc($key); ?>">
                                         <?= esc($value); ?>
@@ -78,6 +81,7 @@
 
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
+                            <a href="<?= base_url('public/maestros') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
                 </div>
