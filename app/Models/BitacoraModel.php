@@ -8,5 +8,5 @@ class BitacoraModel extends Model
 {
     protected $table = 'bitacora';
     protected $primaryKey = 'idBitacora';
-    protected $allowedFields = ['usuario', 'accion', 'descripcion', 'fecha', 'hora'];
+    protected $allowedFields = ['Usuario', 'Accion', 'nombreTabla', 'fecha', 'campo', 'valorAnterior', 'valorNuevo'];
 }

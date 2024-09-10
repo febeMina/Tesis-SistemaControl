@@ -11,7 +11,7 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "codeigniter4/framework": "4.4.8",
+        "codeigniter4/framework": "^4.4",
         "phpoffice/phpspreadsheet": "^2.1",
         "setasign/fpdf": "^1.8",
         "tecnickcom/tcpdf": "^6.7"

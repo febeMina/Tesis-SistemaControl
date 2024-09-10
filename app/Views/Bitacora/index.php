@@ -22,19 +22,23 @@
                                 <tr>
                                     <th>Usuario</th>
                                     <th>Acción</th>
-                                    <th>Descripción</th>
+                                    <th>Tabla</th>
                                     <th>Fecha</th>
-                                    <th>Hora</th>
+                                    <th>Campo</th>
+                                    <th>Valor Anterior</th>
+                                    <th>Valor Nuevo</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($bitacora as $entry) : ?>
                                     <tr>
-                                        <td><?= $entry['usuario']; ?></td>
-                                        <td><?= $entry['accion']; ?></td>
-                                        <td><?= $entry['descripcion']; ?></td>
+                                        <td><?= $entry['Usuario']; ?></td>
+                                        <td><?= $entry['Accion']; ?></td>
+                                        <td><?= $entry['nombreTabla']; ?></td>
                                         <td><?= $entry['fecha']; ?></td>
-                                        <td><?= $entry['hora']; ?></td>
+                                        <td><?= $entry['campo']; ?></td>
+                                        <td><?= $entry['valorAnterior']; ?></td>
+                                        <td><?= $entry['valorNuevo']; ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

@@ -1,0 +1,665 @@
+INFO - 2024-09-09 17:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 17:03:47 --> mysqli_sql_exception: Unknown column 'productos_lotes.idProducto' in 'on clause' in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\app\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Productos->index()
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#8 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-09 17:03:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 17:03:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 17:03:47 --> [Caused by] mysqli_sql_exception: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Productos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 17:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 17:11:48 --> mysqli_sql_exception: Table 'sistema_control.tipo_producto' doesn't exist in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\SistemaControl\app\Controllers\TipoProducto.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\TipoProducto->index()
+#8 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoProducto))
+#9 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-09 17:11:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.tipo_producto' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tipo_producto`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\TipoProducto.php(13): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TipoProducto->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoProducto))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 17:11:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.tipo_producto' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tipo_producto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tipo_producto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tipo_producto`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\TipoProducto.php(13): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TipoProducto->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoProducto))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 17:11:48 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.tipo_producto' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tipo_producto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tipo_producto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tipo_producto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tipo_producto`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\TipoProducto.php(13): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TipoProducto->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoProducto))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 17:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-09 17:17:50 --> ErrorException: Undefined array key "usuario"
+in APPPATH\Views\Bitacora\index.php on line 33.
+ 1 APPPATH\Views\Bitacora\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "usuario"', 'C:\\laragon\\www\\SistemaControl\\app\\Views\\Bitacora\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SistemaControl\\app\\Views\\Bitacora\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('bitacora/index', [], true)
+ 5 APPPATH\Controllers\Bitacora.php(19): view('bitacora/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bitacora->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bitacora))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 17:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-09 17:19:19 --> ErrorException: Undefined array key "usuario"
+in APPPATH\Views\Bitacora\index.php on line 33.
+ 1 APPPATH\Views\Bitacora\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "usuario"', 'C:\\laragon\\www\\SistemaControl\\app\\Views\\Bitacora\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\SistemaControl\\app\\Views\\Bitacora\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('bitacora/index', [], true)
+ 5 APPPATH\Controllers\Bitacora.php(19): view('bitacora/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Bitacora->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bitacora))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 17:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 17:21:01 --> mysqli_sql_exception: Unknown column 'productos_lotes.idProducto' in 'on clause' in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\app\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Productos->index()
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#8 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-09 17:21:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 17:21:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 17:21:01 --> [Caused by] mysqli_sql_exception: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Productos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 17:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 17:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 18:15:07 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\SistemaControl\app\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-09 18:15:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:15:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:15:07 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 18:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 18:15:12 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\SistemaControl\app\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-09 18:15:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:15:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:15:12 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 18:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 18:24:28 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\SistemaControl\app\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-09 18:24:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:24:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:24:28 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 18:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 18:26:23 --> mysqli_sql_exception: Table 'sistema_control.solicitud_productos' doesn't exist in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\SistemaControl\app\Models\SolicitudProductosModel.php(131): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\app\Controllers\ReporteSolicitudProductos.php(23): App\Models\SolicitudProductosModel->getReporteSolicitudProductos()
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\ReporteSolicitudProductos->index()
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReporteSolicitudProductos))
+#8 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-09 18:26:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.solicitud_productos' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `solicitud_productos`', [], false)
+ 2 APPPATH\Models\SolicitudProductosModel.php(131): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ReporteSolicitudProductos.php(23): App\Models\SolicitudProductosModel->getReporteSolicitudProductos()
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ReporteSolicitudProductos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReporteSolicitudProductos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:26:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'sistema_control.solicitud_productos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `solicitud_productos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `solicitud_productos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `solicitud_productos`', [], false)
+ 4 APPPATH\Models\SolicitudProductosModel.php(131): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\ReporteSolicitudProductos.php(23): App\Models\SolicitudProductosModel->getReporteSolicitudProductos()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ReporteSolicitudProductos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReporteSolicitudProductos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:26:24 --> [Caused by] mysqli_sql_exception: Table 'sistema_control.solicitud_productos' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `solicitud_productos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `solicitud_productos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `solicitud_productos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `solicitud_productos`', [], false)
+ 5 APPPATH\Models\SolicitudProductosModel.php(131): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\ReporteSolicitudProductos.php(23): App\Models\SolicitudProductosModel->getReporteSolicitudProductos()
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\ReporteSolicitudProductos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReporteSolicitudProductos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 18:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 18:27:17 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\SistemaControl\app\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-09 18:27:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:27:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:27:17 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 18:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-09 18:27:55 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\SistemaControl\app\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-09 18:27:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:27:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-09 18:27:55 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `donaciones`.`nombreDonante`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-09 18:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 18:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-09 20:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -5,13 +5,17 @@ namespace App\Controllers;
 use App\Models\TipoDocumentoModel;
 use CodeIgniter\Controller;
 
-class TipoDocumentoController extends BaseController
+class TipoDocumentoController extends Controller
 {
     protected $tipoDocumentoModel;
 
     public function __construct()
     {
         $this->tipoDocumentoModel = new TipoDocumentoModel();
+        // Asegúrate de que el usuario esté logueado
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/login')->with('error', 'Debes iniciar sesión.');
+        }
     }
 
     public function index()
@@ -31,6 +35,8 @@ class TipoDocumentoController extends BaseController
         $data = [
             'nombre' => $this->request->getPost('nombre'),
             'mascara' => $this->request->getPost('mascara'),
+            'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
+            'usuarioModifica' => session()->get('usuario'), // Inicialmente el mismo usuario
         ];
 
         if ($this->tipoDocumentoModel->createTipoDocumento($data)) {
@@ -52,6 +58,7 @@ class TipoDocumentoController extends BaseController
         $data = [
             'nombre' => $this->request->getPost('nombre'),
             'mascara' => $this->request->getPost('mascara'),
+            'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
         ];
 
         if ($this->tipoDocumentoModel->updateTipoDocumento($id, $data)) {
