@@ -8,7 +8,7 @@ class TipoDocumentoModel extends Model
 {
     protected $table = 'tipo_documento';
     protected $primaryKey = 'idTipoDocumento';
-    protected $allowedFields = ['nombre', 'mascara'];
+    protected $allowedFields = ['nombre', 'mascara', 'usuarioCrea', 'usuarioModifica'];
 
     // Método para obtener todos los tipos de documentos
     public function getTiposDocumento()

@@ -8,7 +8,7 @@ class TipoPermisoModel extends Model
 {
     protected $table = 'tipo_permisos';
     protected $primaryKey = 'idTipoPermiso';
-    protected $allowedFields = ['nombre', 'cantidadDias', 'estado'];
+    protected $allowedFields = ['nombre', 'cantidadDias', 'estado', 'usuarioCrea', 'usuarioModifica'];
 
     protected $useAutoIncrement = true;
 

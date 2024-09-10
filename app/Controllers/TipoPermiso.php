@@ -17,6 +17,11 @@ class TipoPermiso extends BaseController
         $this->tipoPermisoModel = new TipoPermisoModel();
         $this->maestroModel = new MaestroModel();
         $this->saldoPersonalModel = new SaldoPersonalModel();
+
+        // Verificación de sesión
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/login')->with('error', 'Debes iniciar sesión.');
+        }
     }
 
     public function index()
@@ -37,10 +42,15 @@ class TipoPermiso extends BaseController
 
     public function store()
     {
+        // Capturamos el nombre del usuario desde la sesión
+        $usuarioActual = session()->get('usuario');
+
         $data = [
             'nombre' => $this->request->getPost('nombre'),
             'cantidadDias' => $this->request->getPost('cantidadDias'),
-            'estado' => 'Activo'  // Estado por defecto al crear
+            'estado' => 'Activo',  // Estado por defecto al crear
+            'usuarioCrea' => $usuarioActual,  // Captura el usuario que crea
+            'usuarioModifica' => $usuarioActual,  // Inicialmente el mismo usuario
         ];
     
         $success = $this->tipoPermisoModel->insert($data);
@@ -74,8 +84,6 @@ class TipoPermiso extends BaseController
             return redirect()->to('/tipo_permiso');
         }
     }
-    
-    
 
     public function edit($id = null)
     {
@@ -95,25 +103,29 @@ class TipoPermiso extends BaseController
     }
 
     public function update()
-{
-    $id = $this->request->getPost('id');
+    {
+        $id = $this->request->getPost('id');
 
-    if ($id === null) {
-        return $this->response->setJSON(['success' => false, 'message' => 'ID no encontrado.']);
+        if ($id === null) {
+            return $this->response->setJSON(['success' => false, 'message' => 'ID no encontrado.']);
+        }
+
+        // Capturamos el nombre del usuario que modifica desde la sesión
+        $usuarioActual = session()->get('usuario');
+
+        $data = [
+            'nombre' => $this->request->getPost('nombre'),
+            'cantidadDias' => $this->request->getPost('cantidadDias'),
+            'estado' => $this->request->getPost('estado'), // Mantener el estado del formulario
+            'usuarioModifica' => $usuarioActual,  // Captura el usuario que modifica
+        ];
+
+        $this->tipoPermisoModel->update($id, $data);
+
+        $this->session->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
+
+        return $this->response->setJSON(['success' => true]);
     }
-
-    $data = [
-        'nombre' => $this->request->getPost('nombre'),
-        'cantidadDias' => $this->request->getPost('cantidadDias'),
-        'estado' => $this->request->getPost('estado') // Mantener el estado del formulario
-    ];
-
-    $this->tipoPermisoModel->update($id, $data);
-
-    $this->session->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
-
-    return $this->response->setJSON(['success' => true]);
-}
 
     public function delete($id = null)
     {

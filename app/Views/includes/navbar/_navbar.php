@@ -4,7 +4,7 @@
         <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-min.PNG') ?>" alt="logo" /></a>
     </div>
     <ul class="nav">
-        
+
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </li>
-        
+
         <li class="nav-item nav-category">
             <span class="nav-link">Menu</span>
         </li>
@@ -92,7 +92,7 @@
         </li>
         <!-- Menú para el donaciones -->
         <li class="nav-item menu-items">
-        <a class="nav-link" data-toggle="collapse" href="#donaciones" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#donaciones" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
                     <i class="mdi mdi-currency-usd"></i>
                 </span>
@@ -133,47 +133,45 @@
                     <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Solicitud productos</a></li>
                     <li class="nav-item"><a href="<?= site_url('registro-diario') ?>" class="nav-link">Familias beneficiadas</a></li>
                     <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); background-color: 0f1015;">
-                    <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>
-                    <li class="nav-item"><a href="<?= site_url('unidadesporcaja') ?>" class="nav-link">Tipo de unidades</a></li>
+                        <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>
+                        <li class="nav-item"><a href="<?= site_url('unidadesporcaja') ?>" class="nav-link">Tipo de unidades</a></li>
                     </div>
                 </ul>
             </div>
         </li>
 
-
         <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" data-toggle="collapse" href="#reportes" aria-expanded="false" aria-controls="reportes">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document"></i>
                 </span>
                 <span class="menu-title">Reportes</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="auth">
+            <div class="collapse" id="reportes">
                 <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a>
-                <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Reporte de solicitud de productos</a>
-                    </li>
+                    <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Reporte de solicitud de productos</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de donaciones</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de inasistencias</a></li>
                 </ul>
             </div>
         </li>
 
-
         <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" data-toggle="collapse" href="#bitacora" aria-expanded="false" aria-controls="bitacora">
                 <span class="menu-icon">
                     <i class="mdi mdi-file-document"></i>
                 </span>
                 <span class="menu-title">Bitácora 🔏</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="auth">
+            <div class="collapse" id="bitacora">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('bitacora') ?>" class="nav-link">Listado de Bitácora</a></li>
                 </ul>
             </div>
         </li>
+
     </ul>
 </nav>
