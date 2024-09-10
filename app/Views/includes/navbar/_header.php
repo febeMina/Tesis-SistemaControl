@@ -1,7 +1,7 @@
 <nav class="navbar p-0 fixed-top d-flex flex-row" style="background-color: #1202B4 !important;">
     <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?=base_url('public/assets/images/logo-min.PNG')?>"
-                alt="logo" /></a>
+    <a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('public/assets/images/log.PNG') ?>" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-min.PNG') ?>" alt="logo" /></a>
     </div>
     <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
