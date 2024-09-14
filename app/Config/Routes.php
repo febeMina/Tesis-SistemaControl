@@ -128,13 +128,17 @@ $routes->get('bitacora', 'Bitacora::index');
 $routes->post('donaciones/store', 'Donaciones::store');
 $routes->get('donaciones/create', 'Donaciones::create'); 
 $routes->get('donaciones/reporte', 'Donaciones::GenerarReporte');
+$routes->get('donaciones/tiket/(:num)', 'Donaciones::GenerarTicket/$1');
+
+$routes->get('donaciones/tipoDonador', 'Donaciones::obtener_donadores_por_tipo'); 
+
  
 //Rutas proyectos
 $routes->post('proyectos/store', 'Proyectos::store');
 $routes->get('proyectos/create', 'Proyectos::create');
 $routes->get('proyectos/edit/(:num)', 'Proyectos::edit/$1');
 $routes->get('proyectos/delete/(:num)', 'Proyectos::delete/$1');
-$routes->post('proyectos/update', 'Proyectos::update/$1');
+$routes->post('proyectos/update/(:num)', 'Proyectos::update/$1');
 
 
 // Rutas para el controlador Unidades de Medida

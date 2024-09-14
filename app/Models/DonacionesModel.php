@@ -8,7 +8,7 @@ class DonacionesModel extends Model
 {
     protected $table = 'donaciones';
     protected $primaryKey = 'idDonaciones';
-    protected $allowedFields = ['nombreDonante','cantidad','cantidadLetras', 'descripcion', 'fechaDonacion', 'estado', 'idProyectos'];
+    protected $allowedFields = ['cantidad','cantidadLetras', 'fechaDonacion','descripcion', 'estado', 'idProyectos', 'idDatosResponsable'];
 
    
 }

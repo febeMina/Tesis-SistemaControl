@@ -38,7 +38,7 @@
                             
                             <?php foreach ($donaciones as $donacion) : ?>
                                     <tr>
-                                        <td><?= $donacion->nombreDonante; ?></td>
+                                        <td><?= $donacion->nombreCompleto; ?></td>
                                         <td><?= $donacion->cantidad; ?></td>
                                         <td><?= $donacion->nombreProyecto; ?></td>
                                         <td><?= $donacion->fechaDonacion; ?></td>
@@ -50,6 +50,10 @@
                                                 <!-- Agregar margen entre los botones -->
                                                 <a href="<?= site_url('donaciones/delete/' . $donacion->idDonaciones) ?>" class="btn btn-delete">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
+                                                </a>
+
+                                                <a href="<?= site_url('donaciones/tiket/' . $donacion->idDonaciones) ?> " class="btn btn-info">
+                                                    <i class="fas fa-print"></i> <!-- Icono de Material Design Icons -->
                                                 </a>
                                                 <!-- Fin de la separación -->
                                             </div>

@@ -8,8 +8,9 @@
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
                     <h3 class="text-center">Editar Proyecto</h3>
                 </div>
-                <div class="card-body" style="background-color: #f0f0f0;">
-                    <?= form_open('proyecto/update/' . $proyectos['idProyectos']) ?>
+                <div class="card-body" style="background-color: #f0f0f0;"> 
+                   
+                    <form action="<?= site_url('proyectos/update/' . $proyectos['idProyectos']) ?>" method="post">
                     <div class="form-group">
                         <label for="nombre" style="color: #000;">Nombre</label>
                         <input type="text" class="form-control" id="nombrep" name="nombrep" value="<?= $proyectos['nombreProyecto'] ?>" required>
@@ -32,8 +33,24 @@
                         <label for="meta" style="color: #000;">Meta</label>
                         <input type="text" class="form-control" id="meta" name="meta" value="<?= $proyectos['meta'] ?>" required>
                     </div>
+                    <div class="form-group">
+                    <label for="meta" style="color: #000;">Año</label>
+                            <?php
+                            // Aquí va el código PHP para generar el dropdown
+                            $currentYear = date("Y");
+                            $startYear = $currentYear - 10;
+                            $endYear = $currentYear;
+                            
+                            echo '<select  class="form-control" name="year" id="year">';
+                            for ($year = $startYear; $year <= $endYear; $year++) {
+                                echo '<option value="' . $year . '">' . $year . '</option>';
+                            }
+                            echo '</select>';
+                            ?>
+                    </div>
                     <button type="submit" class="btn btn-primary">Guardar</button>
-                    <?= form_close() ?>
+                    <a href="<?= previous_url() ?>" class="btn btn-secondary">Cancelar</a>
+                    </form>
                 </div>
             </div>
         </div>

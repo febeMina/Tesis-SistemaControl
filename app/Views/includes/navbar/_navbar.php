@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #090066 !important;">
-    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: #090066 !important;">
-        <a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('public/assets/images/log.PNG') ?>" alt="logo" /></a>
+<div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: #090066 !important;">
+    <a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('public/assets/images/log.PNG') ?>" alt="logo" /></a>
         <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-min.PNG') ?>" alt="logo" /></a>
     </div>
     <ul class="nav">

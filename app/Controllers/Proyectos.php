@@ -20,7 +20,7 @@ class Proyectos extends Controller
     { 
     
         $model = new ProyectosModel();
-        $data['proyectos'] = $model->findAll();
+        $data['proyectos'] = $model->where('estado !=', 'Eliminado')->findAll();
 
         return view('proyectos/index', $data);
     }
@@ -36,14 +36,16 @@ class Proyectos extends Controller
         $request = \Config\Services::request();
         $proyectModel = new ProyectosModel();
         $anoActual = date('Y');
+        $valorA = 0;
 
         $data = [
             'nombreProyecto' => $request->getVar('nombreP'),
             'descripcion' => $request->getVar('descripcion'),
             'estado' => $request->getVar('estado'), // Corregido aquí
             'meta' => $request->getVar('metaP'),
-            'ano' => $anoActual
-
+            'anio' => $anoActual,
+            'valorActual' => $valorA
+            
         ];
 
         $proyectModel->insert($data);
@@ -57,10 +59,12 @@ class Proyectos extends Controller
         $proyectModel = new ProyectosModel();
 
         $data = [
-            'nombreProyecto' => $request->getVar('nombreP'),
+            'nombreProyecto' => $request->getVar('nombrep'),
             'descripción' => $request->getVar('descripcion'), // Corregido aquí
             'estado' => $request->getVar('estado'),
-            'meta' => $request->getVar('metaP')
+            'meta' => $request->getVar('meta'),
+            'anio' => $request->getVar('year')
+             
         ];
 
         $proyectModel->update($id, $data);
@@ -78,8 +82,10 @@ class Proyectos extends Controller
 
     public function delete($id)
     {
+        $request = \Config\Services::request();
         $proyectModel = new ProyectosModel();
-        $proyectModel->delete($id);
-        return redirect()->to(site_url('proyecto'));
+        $proyectModel->update($id, ['estado' => 'Eliminado']);
+
+        return redirect()->to(site_url('proyectos'));
     }
 }

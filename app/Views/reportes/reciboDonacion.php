@@ -61,19 +61,39 @@
      <main>
      <div class="receipt">
         <h1>Recibo de Donación</h1>
+        <h3>Copia Centro Escolar</h3>
         <div class="details">
-            <p><strong>Nombre del Donante:</strong> Juan Pérez</p>
-            <p><strong>Concepto:</strong> Donación para el proyecto de educación</p>
-            <p><strong>Cantidad en Letras:</strong> Mil Doscientos</p>
-            <p><strong>Cantidad:</strong> $1,200.00</p>
-            <p><strong>Proyecto al que se Asignarán Fondos:</strong> Educación en comunidades rurales</p>
+        <?php foreach ($donaciones as $donacion) : ?>
+            <p><strong>Nombre del Donante:</strong> <?= $donacion->nombreCompleto; ?> </p>
+            <p><strong>Concepto:</strong> <?= $donacion->descripcion; ?></p>
+            <p><strong>Cantidad en Letras:</strong><?= $donacion->cantidadLetras; ?></p>
+            <p><strong>Cantidad:</strong> <?= $donacion->cantidad; ?></p>
+            <p><strong>Proyecto al que se Asignarán Fondos:</strong> <?= $donacion->nombreProyecto; ?></p>
+            <?php endforeach ?>
         </div>
         <div class="footer">
             <p>Gracias por su generosa donación.</p>
-            <p>Fecha: 3 de septiembre de 2024</p>
+            <p>Fecha: <?= date('l, j F Y'); ?> </p>
         </div>
     </div>
-           
+
+    <div class="receipt">
+        <h1>Recibo de Donación</h1>
+        <h3>Copia Donante</h3>
+        <div class="details">
+        <?php foreach ($donaciones as $donacion) : ?>
+            <p><strong>Nombre del Donante:</strong> <?= $donacion->nombreCompleto; ?> </p>
+            <p><strong>Concepto:</strong> <?= $donacion->descripcion; ?></p>
+            <p><strong>Cantidad en Letras:</strong><?= $donacion->cantidadLetras; ?></p>
+            <p><strong>Cantidad:</strong> <?= $donacion->cantidad; ?></p>
+            <p><strong>Proyecto al que se Asignarán Fondos:</strong> <?= $donacion->nombreProyecto; ?></p>
+            <?php endforeach ?>
+        </div>
+        <div class="footer">
+            <p>Gracias por su generosa donación.</p>
+            <p>Fecha: <?= date('l, j F Y'); ?> </p>
+        </div>
+    </div>    
 
 
         </main>
