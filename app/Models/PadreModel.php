@@ -42,20 +42,19 @@ class PadreModel extends Model
             $builder->like('nombreCompleto', $filters['nombre_completo']);
         }
         if (!empty($filters['tipo_documento'])) {
-            $builder->where('datos_responsable.idTipoDocumento', $filters['tipo_documento']); // Calificar la columna
+            $builder->where('datos_responsable.idTipoDocumento', $filters['tipo_documento']);
         }
         if (!empty($filters['genero'])) {
             $builder->where('genero', $filters['genero']);
         }
     
-        // Eliminar el filtro de estado para que muestre ambos, activos e inactivos
-        // Solo aplicar filtro si está explícitamente especificado en los filtros
+        // Calificar estado
         if (isset($filters['estado']) && $filters['estado'] !== '') {
-            $builder->where('estado', $filters['estado']);
+            $builder->where('datos_responsable.estado', $filters['estado']);
         }
     
         // Excluir registros con estado 'Eliminado'
-        $builder->where('estado !=', 'Eliminado');
+        $builder->where('datos_responsable.estado !=', 'Eliminado');
     
         // Si se especifican límites para la paginación
         if ($limit !== null) {
@@ -65,33 +64,34 @@ class PadreModel extends Model
         return $builder->get()->getResultArray();
     }
     
+    
 
     public function countFilteredPadres($filters)
-    {
-        $builder = $this->db->table($this->table);
-    
-        // Aplicar los mismos filtros que en el método de obtención de datos
-        if (!empty($filters['nombre_completo'])) {
-            $builder->like('nombreCompleto', $filters['nombre_completo']);
-        }
-        if (!empty($filters['tipo_documento'])) {
-            $builder->where('datos_responsable.idTipoDocumento', $filters['tipo_documento']); // Calificar la columna
-        }
-        if (!empty($filters['genero'])) {
-            $builder->where('genero', $filters['genero']);
-        }
-    
-        // Eliminar el filtro de estado para que cuente ambos, activos e inactivos
-        if (isset($filters['estado']) && $filters['estado'] !== '') {
-            $builder->where('estado', $filters['estado']);
-        }
-    
-        // Excluir registros con estado 'Eliminado'
-        $builder->where('estado !=', 'Eliminado');
-    
-        return $builder->countAllResults();
+{
+    $builder = $this->db->table($this->table);
+
+    // Aplicar los mismos filtros que en el método de obtención de datos
+    if (!empty($filters['nombre_completo'])) {
+        $builder->like('nombreCompleto', $filters['nombre_completo']);
     }
-    
+    if (!empty($filters['tipo_documento'])) {
+        $builder->where('datos_responsable.idTipoDocumento', $filters['tipo_documento']);
+    }
+    if (!empty($filters['genero'])) {
+        $builder->where('genero', $filters['genero']);
+    }
+
+    // Calificar estado
+    if (isset($filters['estado']) && $filters['estado'] !== '') {
+        $builder->where('datos_responsable.estado', $filters['estado']);
+    }
+
+    // Excluir registros con estado 'Eliminado'
+    $builder->where('datos_responsable.estado !=', 'Eliminado');
+
+    return $builder->countAllResults();
+}
+
 
     // Método para marcar un registro como eliminado en lugar de eliminarlo físicamente
     public function setDeleted($id)

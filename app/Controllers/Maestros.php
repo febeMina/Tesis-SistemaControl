@@ -78,8 +78,8 @@ class Maestros extends Controller
         'Otro' => 'Otro'
     ];
 
-    // Obtener los grados disponibles
-    $grados = $this->gradoModel->findAll();
+    // Obtener los grados activos
+    $grados = $this->gradoModel->where('estado', 'Activo')->findAll();
 
     // Verificar si se ha enviado el formulario
     if ($this->request->getMethod() === 'post') {
@@ -160,7 +160,7 @@ class Maestros extends Controller
     // Cargar vista con datos
     return view('maestros/create', [
         'cargos' => $cargos,
-        'grados' => $grados
+        'grados' => $grados // Solo grados activos
     ]);
 }
 
