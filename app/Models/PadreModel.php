@@ -9,7 +9,7 @@ class PadreModel extends Model
     protected $table = 'datos_responsable';
     protected $primaryKey = 'idDatosResponsable';
     protected $allowedFields = [
-        'nombreCompleto', 'Genero', 'telefono', 'estado', 
+        'nombreCompleto', 'genero', 'telefono', 'estado', 
         'idTipoDocumento', 'numeroDocumento', 'tipoAsociado'
     ];
 
@@ -29,59 +29,74 @@ class PadreModel extends Model
     }
 
     // Método para filtrar responsables por estado y otros filtros
-    public function getFilteredPadres($filters = [], $limit = 10, $offset = 0)
+    public function getFilteredPadres($filters, $limit = null, $offset = null)
     {
         $builder = $this->db->table($this->table);
+    
+        // Selección de columnas
         $builder->select('datos_responsable.*, tipo_documento.nombre as tipo_documento');
         $builder->join('tipo_documento', 'tipo_documento.idTipoDocumento = datos_responsable.idTipoDocumento', 'left');
-        
-        // Excluir registros con estado "inactivo"
-        $builder->where('datos_responsable.estado !=', 'inactivo');
-        
+    
+        // Aplicar filtros si existen
         if (!empty($filters['nombre_completo'])) {
             $builder->like('nombreCompleto', $filters['nombre_completo']);
         }
-    
         if (!empty($filters['tipo_documento'])) {
-            $builder->where('datos_responsable.idTipoDocumento', $filters['tipo_documento']);
+            $builder->where('datos_responsable.idTipoDocumento', $filters['tipo_documento']); // Calificar la columna
         }
-    
         if (!empty($filters['genero'])) {
-            $builder->where('datos_responsable.Genero', $filters['genero']);
+            $builder->where('genero', $filters['genero']);
         }
     
-        if (isset($filters['estado'])) {
-            $builder->where('datos_responsable.estado', $filters['estado']);
-        }
-        
-        // Aplicar limit y offset para la paginación
-        $builder->limit($limit, $offset);
-        
-        return $builder->get()->getResultArray();
-    }
-
-    // Método para contar todos los registros para la paginación
-    public function countFilteredPadres($filters = [])
-    {
-        $builder = $this->db->table($this->table);
-        $builder->where('estado !=', 'inactivo');
-        
-        if (!empty($filters['nombre_completo'])) {
-            $builder->like('nombreCompleto', $filters['nombre_completo']);
-        }
-    
-        if (!empty($filters['tipo_documento'])) {
-            $builder->where('idTipoDocumento', $filters['tipo_documento']);
-        }
-    
-        if (!empty($filters['genero'])) {
-            $builder->where('Genero', $filters['genero']);
-        }
-    
-        if (isset($filters['estado'])) {
+        // Eliminar el filtro de estado para que muestre ambos, activos e inactivos
+        // Solo aplicar filtro si está explícitamente especificado en los filtros
+        if (isset($filters['estado']) && $filters['estado'] !== '') {
             $builder->where('estado', $filters['estado']);
         }
-        
+    
+        // Excluir registros con estado 'Eliminado'
+        $builder->where('estado !=', 'Eliminado');
+    
+        // Si se especifican límites para la paginación
+        if ($limit !== null) {
+            $builder->limit($limit, $offset);
+        }
+    
+        return $builder->get()->getResultArray();
+    }
+    
+
+    public function countFilteredPadres($filters)
+    {
+        $builder = $this->db->table($this->table);
+    
+        // Aplicar los mismos filtros que en el método de obtención de datos
+        if (!empty($filters['nombre_completo'])) {
+            $builder->like('nombreCompleto', $filters['nombre_completo']);
+        }
+        if (!empty($filters['tipo_documento'])) {
+            $builder->where('datos_responsable.idTipoDocumento', $filters['tipo_documento']); // Calificar la columna
+        }
+        if (!empty($filters['genero'])) {
+            $builder->where('genero', $filters['genero']);
+        }
+    
+        // Eliminar el filtro de estado para que cuente ambos, activos e inactivos
+        if (isset($filters['estado']) && $filters['estado'] !== '') {
+            $builder->where('estado', $filters['estado']);
+        }
+    
+        // Excluir registros con estado 'Eliminado'
+        $builder->where('estado !=', 'Eliminado');
+    
         return $builder->countAllResults();
+    }
+    
+
+    // Método para marcar un registro como eliminado en lugar de eliminarlo físicamente
+    public function setDeleted($id)
+    {
+        $data = ['estado' => 'Eliminado'];
+        return $this->update($id, $data);
     }
 }

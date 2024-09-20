@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\PadreModel;
 use App\Models\TipoDocumentoModel;
 use CodeIgniter\Controller;
 
@@ -20,7 +21,8 @@ class TipoDocumentoController extends Controller
 
     public function index()
     {
-        $data['tiposDocumento'] = $this->tipoDocumentoModel->getTiposDocumento();
+         // Recuperar solo los documentos que no estén eliminados
+    $data['tiposDocumento'] = $this->tipoDocumentoModel->where('estado !=', 'Eliminado')->findAll();
 
         return view('tipo_documento/index', $data);
     }
@@ -31,20 +33,23 @@ class TipoDocumentoController extends Controller
     }
 
     public function store()
-    {
-        $data = [
-            'nombre' => $this->request->getPost('nombre'),
-            'mascara' => $this->request->getPost('mascara'),
-            'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
-            'usuarioModifica' => session()->get('usuario'), // Inicialmente el mismo usuario
-        ];
+{
+    $data = [
+        'nombre' => $this->request->getPost('nombre'),
+        'idTipoDocumento' => $this->request->getPost('idTipoDocumento'),
+        'mascara' => $this->request->getPost('mascara'),
+        'estado' => 'Activo',  // Estado inicial al crear
+        'usuarioCrea' => session()->get('usuario'),
+        'usuarioModifica' => session()->get('usuario'),
+    ];
 
-        if ($this->tipoDocumentoModel->createTipoDocumento($data)) {
-            return redirect()->to('/tipo-documento')->with('success', 'Tipo de documento creado exitosamente.');
-        } else {
-            return redirect()->back()->with('error', 'Hubo un problema al crear el tipo de documento.');
-        }
+    if ($this->tipoDocumentoModel->createTipoDocumento($data)) {
+        return redirect()->to('/tipo-documento')->with('success', 'Tipo de documento creado exitosamente.');
+    } else {
+        return redirect()->back()->with('error', 'Hubo un problema al crear el tipo de documento.');
     }
+}
+
 
     public function edit($id)
     {
@@ -54,26 +59,46 @@ class TipoDocumentoController extends Controller
     }
 
     public function update($id)
-    {
-        $data = [
-            'nombre' => $this->request->getPost('nombre'),
-            'mascara' => $this->request->getPost('mascara'),
-            'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
-        ];
+{
+    $data = [
+        'nombre' => $this->request->getPost('nombre'),
+        'mascara' => $this->request->getPost('mascara'),
+        'estado' => $this->request->getPost('estado'), // Asegúrate de capturar el valor del estado
+        'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
+    ];
 
-        if ($this->tipoDocumentoModel->updateTipoDocumento($id, $data)) {
-            return redirect()->to('/tipo-documento')->with('success', 'Tipo de documento actualizado exitosamente.');
+    if ($this->tipoDocumentoModel->updateTipoDocumento($id, $data)) {
+        return redirect()->to('/tipo-documento');
+    } else {
+        return redirect()->back()->with('error', 'Hubo un problema al actualizar el tipo de documento.');
+    }
+}
+
+
+    public function delete($id = null)
+    {
+        if ($id) {
+            $model = new TipoDocumentoModel();
+            
+            // Verifica si hay dependencias en datos_responsable
+            $responsableModel = new PadreModel();
+            $dependencias = $responsableModel->where('idTipoDocumento', $id)->findAll();
+    
+            if (!empty($dependencias)) {
+                return $this->response->setJSON(['success' => false, 'message' => 'No se puede eliminar el tipo de documento, hay dependencias.']);
+            }
+    
+            // Marcar el tipo de documento como "Eliminado" en lugar de borrarlo físicamente
+            if ($model->deleteTipoDocumento($id)) {
+                return $this->response->setJSON(['success' => true, 'message' => 'Tipo de documento marcado como eliminado con éxito.']);
+            } else {
+                return $this->response->setJSON(['success' => false, 'message' => 'Error al eliminar el tipo de documento.']);
+            }
         } else {
-            return redirect()->back()->with('error', 'Hubo un problema al actualizar el tipo de documento.');
+            return $this->response->setJSON(['success' => false, 'message' => 'ID no válido.']);
         }
     }
+    
 
-    public function delete($id)
-    {
-        if ($this->tipoDocumentoModel->deleteTipoDocumento($id)) {
-            return redirect()->to('/tipo-documento')->with('success', 'Tipo de documento eliminado exitosamente.');
-        } else {
-            return redirect()->back()->with('error', 'Hubo un problema al eliminar el tipo de documento.');
-        }
-    }
+
 }

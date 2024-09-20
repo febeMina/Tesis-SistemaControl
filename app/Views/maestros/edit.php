@@ -10,73 +10,89 @@
                     <h3 class="text-center">Editar Maestro</h3>
                 </div>
                 <div class="card-body">
-                    <!-- Mensaje de éxito -->
-                    <div id="successMessage">
-                        <?php if (session()->getFlashdata('success')): ?>
-                            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
-                                <?= session()->getFlashdata('success') ?>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    
-                    <!-- Mensaje de error -->
-                    <div id="errorMessage">
-                        <?php if (session()->getFlashdata('error')): ?>
-                            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
-                                <?= session()->getFlashdata('error') ?>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        <?php endif; ?>
-                    </div>
 
-                    <form id="updateForm" action="<?= site_url('maestros/update/' . $maestro['idDocente']) ?>" method="post">
+                    <!-- Mensaje de éxito -->
+                    <?php if (session()->getFlashdata('message')): ?>
+                        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                            <?= session()->getFlashdata('message') ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Mensaje de error -->
+                    <?php if (session()->getFlashdata('error')): ?>
+                        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                            <?= session()->getFlashdata('error') ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php endif; ?>
+
+                    <form id="updateForm" action="<?= site_url('maestros/update/' . $docente['idDocente']) ?>" method="post">
                         <?= csrf_field() ?>
                         <div class="form-group">
                             <label for="nombreCompleto" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
-                            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" value="<?= esc($maestro['nombreCompleto']) ?>" required>
+                            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" value="<?= esc($docente['nombreCompleto']) ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="nip" style="color: #000;"><i class="fas fa-key"></i> NIP</label>
-                            <input type="text" class="form-control" id="nip" name="nip" value="<?= esc($maestro['nip']) ?>" required>
+                            <input type="text" class="form-control" id="nip" name="nip" value="<?= esc($docente['nip']) ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="escalafon" style="color: #000;"><i class="fas fa-user-tie"></i> Escalafón</label>
-                            <input type="text" class="form-control" id="escalafon" name="escalafon" value="<?= esc($maestro['escalafon']) ?>" required>
+                            <input type="text" class="form-control" id="escalafon" name="escalafon" value="<?= esc($docente['escalafon']) ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="fechaIngreso" style="color: #000;"><i class="fas fa-calendar"></i> Fecha de Ingreso</label>
-                            <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" value="<?= esc($maestro['fechaIngreso']) ?>" required>
+                            <label for="fechaIngreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de Ingreso</label>
+                            <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" value="<?= esc($docente['fechaIngreso']) ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="estado" style="color: #000;"><i class="fas fa-toggle-on"></i> Estado</label>
+                            <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
-                                <option value="Activo" <?= ($maestro['estado'] === 'Activo') ? 'selected' : '' ?>>Activo</option>
-                                <option value="Inactivo" <?= ($maestro['estado'] === 'Inactivo') ? 'selected' : '' ?>>Inactivo</option>
-                                <option value="Eliminado" <?= ($maestro['estado'] === 'Eliminado') ? 'selected' : '' ?>>Eliminado</option>
+                                <option value="Activo" <?= $docente['estado'] == 'Activo' ? 'selected' : '' ?>>Activo</option>
+                                <option value="Inactivo" <?= $docente['estado'] == 'Inactivo' ? 'selected' : '' ?>>Inactivo</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="tipo" style="color: #000;"><i class="fas fa-users"></i> Tipo</label>
+                            <label for="tipo" style="color: #000;"><i class="fas fa-user-tie"></i> Tipo</label>
                             <select class="form-control" id="tipo" name="tipo" required>
-                                <option value="Docente" <?= ($maestro['tipo'] === 'Docente') ? 'selected' : '' ?>>Docente</option>
-                                <option value="Administrativo" <?= ($maestro['tipo'] === 'Administrativo') ? 'selected' : '' ?>>Administrativo</option>
+                                <option value="" disabled>Selecciona</option>
+                                <option value="Docente" <?= $docente['tipo'] == 'Docente' ? 'selected' : '' ?>>Docente</option>
+                                <option value="Administrativo" <?= $docente['tipo'] == 'Administrativo' ? 'selected' : '' ?>>Administrativo</option>
                             </select>
                         </div>
-                        <div class="form-group" id="rol-group">
+
+                        <div class="form-group" id="rol-group" style="<?= $docente['tipo'] == 'Administrativo' ? 'display: block;' : 'display: none;' ?>">
                             <label for="cargo" style="color: #000;"><i class="fas fa-briefcase"></i> Cargo</label>
                             <select class="form-control" id="cargo" name="cargo">
+                                <option value="" disabled>Selecciona</option>
                                 <?php foreach ($cargos as $key => $value): ?>
-                                    <option value="<?= esc($key) ?>" <?= ($maestro['cargo'] === $key) ? 'selected' : '' ?>><?= esc($value) ?></option>
+                                    <option value="<?= esc($key); ?>" <?= $key == $docente['cargo'] ? 'selected' : '' ?>>
+                                        <?= esc($value); ?>
+                                    </option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="form-group text-center">
-                            <button type="submit" class="btn btn-primary">Actualizar Maestro</button>
+
+                        <div class="form-group" id="grado-group" style="<?= $docente['tipo'] == 'Docente' ? 'display: block;' : 'display: none;' ?>">
+                            <label for="grado" style="color: #000;"><i class="fas fa-graduation-cap"></i> Grado</label>
+                            <select class="form-control" id="grado" name="idGrado">
+                                <option value="" disabled>Selecciona</option>
+                                <?php foreach ($grados as $grado): ?>
+                                    <?php if ($grado['estado'] === 'Activo'): ?>
+                                        <option value="<?= $grado['idGrado'] ?>" <?= $grado['idGrado'] == $docente['idGrado'] ? 'selected' : '' ?>>
+                                            <?= esc($grado['nombre']) ?>
+                                        </option>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" style="background-color: #090066;">Actualizar</button>
                             <a href="<?= base_url('public/maestros') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
@@ -89,21 +105,34 @@
 <!-- Cargar jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Script JavaScript -->
+<!-- Tu script JavaScript -->
 <script>
 $(document).ready(function() {
-    // Mostrar u ocultar el campo "Cargo" basado en el tipo seleccionado
     $('#tipo').change(function() {
         var tipo = $(this).val();
         if (tipo === 'Administrativo') {
             $('#rol-group').show();
+            $('#grado-group').hide();
+            $('#grado').val('');
+        } else if (tipo === 'Docente') {
+            $('#rol-group').hide();
+            $('#cargo').val('');
+            $('#grado-group').show();
         } else {
             $('#rol-group').hide();
-            $('#cargo').val(''); // Limpiar el valor de cargo si se oculta
+            $('#grado-group').hide();
+            $('#cargo').val('');
+            $('#grado').val('');
         }
     });
 
-    // Envío del formulario mediante AJAX
+    // Preseleccionar el grado si el tipo es Docente
+    if ($('#tipo').val() === 'Docente') {
+        $('#grado-group').show();
+    } else {
+        $('#grado-group').hide();
+    }
+
     $('#updateForm').submit(function(event) {
         event.preventDefault();
         $.ajax({
@@ -120,7 +149,7 @@ $(document).ready(function() {
                     alert += '</button>';
                     alert += '</div>';
                     $('#successMessage').html(alert);
-                    
+
                     setTimeout(function() {
                         window.location.href = response.redirect;
                     }, 1500);
@@ -141,14 +170,6 @@ $(document).ready(function() {
             }
         });
     });
-
-    // Inicializar el estado del campo "Cargo" basado en el tipo actual
-    var tipo = $('#tipo').val();
-    if (tipo === 'Administrativo') {
-        $('#rol-group').show();
-    } else {
-        $('#rol-group').hide();
-    }
 });
 </script>
 

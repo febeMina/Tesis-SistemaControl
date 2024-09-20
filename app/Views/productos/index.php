@@ -87,14 +87,14 @@
                                                 ?>
                                                         <!-- Cambiar estado -->
                                                         <a href="<?= site_url('productos/estado/' . $producto->idProducto) ?>" class="btn btn-delete">
-                                                            <i class="mdi mdi-sync"></i> <!-- Icono de Material Design Icons -->
+                                                            <i class="mdi mdi-sync"></i>Inactivar <!-- Icono de Material Design Icons -->
                                                         </a>
                                                 <?php 
                                                     } else {
                                                 ?>
                                                         <!-- Cambiar estado -->
                                                         <a href="<?= site_url('productos/estado/' . $producto->idProducto) ?>" class="btn btn-success">
-                                                            <i class="mdi mdi-sync"></i> <!-- Icono de Material Design Icons -->
+                                                            <i class="mdi mdi-sync"></i>Activar <!-- Icono de Material Design Icons -->
                                                         </a>
                                                 <?php 
                                                     }

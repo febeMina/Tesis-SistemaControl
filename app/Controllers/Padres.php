@@ -20,45 +20,42 @@ class Padres extends BaseController
     }
 
     public function index()
-{
-    $pager = \Config\Services::pager();
-    $padreModel = new PadreModel();
-    $tipoDocumentoModel = new TipoDocumentoModel();
-    $request = \Config\Services::request();
+    {
+        $pager = \Config\Services::pager();
+        $padreModel = new PadreModel();
+        $tipoDocumentoModel = new TipoDocumentoModel();
+        $request = \Config\Services::request();
 
-    // Configuración de la paginación
-    $pager = \Config\Services::pager();
-    $currentPage = $request->getVar('page') ?? 1;
-    $perPage = 5; // Número de elementos por página
+        // Paginación
+        $currentPage = $request->getVar('page') ?? 1;
+        $perPage = 5;
+        $offset = ($currentPage - 1) * $perPage;
 
-    // Obtener los filtros de la solicitud
-    $filters = [
-        'nombre_completo' => $request->getVar('nombre_completo'),
-        'tipo_documento' => $request->getVar('tipo_documento'),
-        'genero' => $request->getVar('genero'),
-        'estado' => $request->getVar('estado')
-    ];
+        // Obtener filtros de la solicitud
+        $filters = [
+            'nombre_completo' => $request->getVar('nombre_completo'),
+            'tipo_documento' => $request->getVar('tipo_documento'),
+            'genero' => $request->getVar('genero'),
+            'estado' => $request->getVar('estado') !== null ? $request->getVar('estado') : '', // Agregar filtro de estado si es necesario
+        ];
 
-    // Obtener el número total de filas
-    $totalRows = $padreModel->countFilteredPadres($filters);
+        // Total de filas con filtros aplicados
+        $totalRows = $padreModel->countFilteredPadres($filters);
 
-    // Obtener los datos paginados
-    $padres = $padreModel->getFilteredPadres($filters, $perPage, ($currentPage - 1) * $perPage);
+        // Obtener datos paginados
+        $padres = $padreModel->getFilteredPadres($filters, $perPage, $offset);
 
+        // Obtener los tipos de documento
+        $tiposDocumento = $tipoDocumentoModel->findAll();
 
-    // Obtener los tipos de documento
-    $tiposDocumento = $tipoDocumentoModel->findAll();
-;
+        // Retornar vista con datos paginados
         return view('padres/index', [
             'padres' => $padres,
             'filters' => $filters,
             'tiposDocumento' => $tiposDocumento,
-            'pager' => $pager->makeLinks($currentPage,  $perPage, $totalRows, 'bootstrap_pagination')
+            'pager' => $pager->makeLinks($currentPage, $perPage, $totalRows, 'bootstrap_pagination')
         ]);
-        
-
-}
-
+    }
     
 
     public function create()
@@ -102,7 +99,7 @@ public function store()
         'idTipoDocumento' => $this->request->getPost('idTipoDocumento'),
         'numeroDocumento' => $this->request->getPost('numeroDocumento'),
         'telefono' => $this->request->getPost('telefono'),
-        'Genero' => $this->request->getPost('genero'),
+        'genero' => $this->request->getPost('genero'),
         'estado' => $this->request->getPost('estado'),
         'tipoAsociado' => $this->request->getPost('tipoAsociado')
     ];
@@ -140,9 +137,6 @@ public function store()
 
     return redirect()->to('/padres')->with('success', 'Padre agregado con éxito.');
 }
-
-
-
 
 
     public function edit($id)
@@ -198,7 +192,7 @@ public function store()
             'idTipoDocumento' => $this->request->getPost('idTipoDocumento'),
             'numeroDocumento' => $this->request->getPost('numeroDocumento'),
             'telefono' => $this->request->getPost('telefono'),
-            'Genero' => $this->request->getPost('genero'),
+            'genero' => $this->request->getPost('genero'),
             'estado' => $this->request->getPost('estado'),
             'tipoAsociado' => $this->request->getPost('tipoAsociado')
         ];
@@ -252,28 +246,28 @@ public function store()
 
     
     public function delete($id)
-    {
-        $padreModel = new PadreModel();
-        $alumnoModel = new AlumnoModel();
-        $responsableAlumnoModel = new ResponsableAlumnoModel();
-    
-        // Cambiar el estado del padre a "inactivo"
-        $padreModel->update($id, ['estado' => 'inactivo']);
-    
-        // Obtener los responsables de alumnos asociados al padre
-        $responsables = $responsableAlumnoModel->where('idDatosResponsable', $id)->findAll();
-    
-        foreach ($responsables as $responsable) {
-            // Cambiar el estado de los alumnos asociados a "inactivo"
-            $alumnoModel->update($responsable['idAlumno'], ['estado' => 'inactivo']);
-        }
-    
-        // También puedes eliminar los registros de responsable_alumno si es necesario
-        $responsableAlumnoModel->where('idDatosResponsable', $id)->delete();
-    
-        return redirect()->to(site_url('padres'))->with('success', 'El padre y sus alumnos han sido marcados como inactivos.');
+{
+    $padreModel = new PadreModel();
+    $alumnoModel = new AlumnoModel();
+    $responsableAlumnoModel = new ResponsableAlumnoModel();
+
+    // Cambiar el estado del padre a "Eliminado" en lugar de "inactivo"
+    $padreModel->update($id, ['estado' => 'Eliminado']);
+
+    // Obtener los responsables de alumnos asociados al padre
+    $responsables = $responsableAlumnoModel->where('idDatosResponsable', $id)->findAll();
+
+    foreach ($responsables as $responsable) {
+        // Cambiar el estado de los alumnos asociados a "Eliminado" en lugar de "inactivo"
+        $alumnoModel->update($responsable['idAlumno'], ['estado' => 'Eliminado']);
     }
-    
+
+    // También puedes eliminar los registros de responsable_alumno si es necesario
+    $responsableAlumnoModel->where('idDatosResponsable', $id)->delete();
+
+    return redirect()->to(site_url('padres'))->with('success', 'El asociado y sus alumnos han sido marcados como eliminados.');
+}
+
 
     public function getAlumnosAjax($padreId)
     {

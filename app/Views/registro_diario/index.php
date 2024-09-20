@@ -35,17 +35,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($registros as $registro): ?>
-                                    <tr>
-                                        <td><?= esc($registro['fecha']) ?></td>
-                                        <td><?= esc($registro['familiasBeneficiadas']) ?></td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-sm" data-id="<?= esc($registro['idRegistroDiario']) ?>" data-toggle="modal" data-target="#modalDetalles">
-                                                Ver Detalles
-                                            </button>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
+                            <?php foreach ($registros as $registro): ?>
+                                <tr>
+                                    <td><?= esc($registro->fecha) ?></td>
+                                    <td><?= esc($registro->familiasBeneficiadas) ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-sm" data-id="<?= esc($registro->idRegistroDiario) ?>" data-toggle="modal" data-target="#modalDetalles">
+                                            Ver Detalles
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                             </tbody>
                         </table>
 
@@ -86,45 +86,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     $('#modalDetalles').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget);
-        var idRegistro = button.data('id');
-
-        var modal = $(this);
+        var idRegistroDiario = button.data('id');
+        
         $.ajax({
-            url: '<?= site_url('registro-diario/getDetails') ?>/' + idRegistro,
+            url: '<?= base_url('registro-diario/show/') ?>' + idRegistroDiario,
             method: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                if (data.error) {
-                    modal.find('#modalDetallesBody').html('<p>' + data.error + '</p>');
-                } else {
-                    var registro = data.registro;
-                    var detalles = data.detalles;
-                    var totalFamiliasBeneficiadas = data.totalFamiliasBeneficiadas;
-        
-                    var detallesHtml = '<p><strong style="color: #6c757d;">Fecha:</strong> <span style="color: #000;">' + registro.fecha + '</span></p>'; // Color gris para la etiqueta, negro para el valor
-                    detallesHtml += '<p><strong style="color: #6c757d;">Familias Beneficiadas:</strong> <span style="color: #000;">' + totalFamiliasBeneficiadas + '</span></p>'; // Color gris para la etiqueta, negro para el valor
-                    detallesHtml += '<h4 style="color: #000;">Detalles de Asistencia</h4>';
-                    detallesHtml += '<table class="table">';
-                    detallesHtml += '<thead><tr><th>Grado</th><th>Niños</th><th>Niñas</th><th>Total</th></tr></thead>';
-                    detallesHtml += '<tbody>';
-                    detalles.forEach(function (detalle) {
-                        detallesHtml += '<tr>';
-                        detallesHtml += '<td>' + detalle.nombre_grado + '</td>';
-                        detallesHtml += '<td>' + detalle.cantidadNiños + '</td>';
-                        detallesHtml += '<td>' + detalle.cantidadNiñas + '</td>';
-                        detallesHtml += '<td>' + detalle.Total + '</td>';
-                        detallesHtml += '</tr>';
-                    });
-                    detallesHtml += '</tbody></table>';
-        
-                    modal.find('#modalDetallesBody').html(detallesHtml);
-                }
+            success: function (response) {
+                $('#modalDetallesBody').html(response);
             },
             error: function () {
-                modal.find('#modalDetallesBody').html('<p>Hubo un error al cargar los detalles.</p>');
+                $('#modalDetallesBody').html('<p>Error al cargar los detalles.</p>');
             }
         });
-
     });
 });
 </script>

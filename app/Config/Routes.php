@@ -43,6 +43,8 @@ $routes->post('maestros/store', 'Maestros::store');
 $routes->get('maestros/edit/(:num)', 'Maestros::edit/$1');
 $routes->post('maestros/update/(:num)', 'Maestros::update/$1');
 $routes->match(['get', 'post'], 'maestros/delete', 'Maestros::delete');
+$routes->get('maestros/delete/(:num)', 'Maestros::delete/$1');
+$routes->get('maestros/inicializarSaldosPermisos', 'Maestros::inicializarSaldosPermisos');
 
 
 
@@ -64,7 +66,8 @@ $routes->get('/tipo_permiso/create', 'TipoPermiso::create');
 $routes->post('/tipo_permiso/store', 'TipoPermiso::store');
 $routes->get('/tipo_permiso/edit/(:num)', 'TipoPermiso::edit/$1');
 $routes->post('/tipo_permiso/update', 'TipoPermiso::update');
-$routes->get('/tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
+$routes->post('/tipo_permiso/delete/(:num)', 'TipoPermiso::delete/$1');
+$routes->get('tipo_permiso/estado/(:num)', 'TipoPermiso::estado/$1');
 
 
 
@@ -217,10 +220,15 @@ $routes->get('bitacora', 'Bitacora::index');
 
 $routes->get('/registro-diario', 'RegistroDiarioController::index');
 $routes->get('/registro-diario/create', 'RegistroDiarioController::create');
-$routes->post('/registro-diario/store', 'RegistroDiarioController::store');
+$routes->post('registro-diario/store', 'RegistroDiarioController::store');
+
 $routes->get('/registro-diario/show/(:num)', 'RegistroDiarioController::show/$1');
 $routes->get('public/registro-diario/show/(:num)', 'RegistroDiario::show/$1');
 $routes->get('registro-diario/getDetails/(:num)', 'RegistroDiarioController::getDetails/$1');
+$routes->get('registro-diario/getRequisicionByFecha/(:any)', 'RegistroDiarioController::getRequisicionByFecha/$1');
+
+
+
 
 $routes->get('tipo-documento', 'TipoDocumentoController::index');
 $routes->get('tipo-documento/create', 'TipoDocumentoController::create');
@@ -298,3 +306,12 @@ $routes->get('productos_lotes/edit/(:num)', 'ProductosLotes::edit/$1');
 $routes->post('productos_lotes/update/(:num)', 'ProductosLotes::update/$1');
 $routes->get('productos_lotes/delete/(:num)', 'ProductosLotes::delete/$1');
 $routes->get('productos_lotes/movimientos/(:num)', 'ProductosLotes::historialMovimientos/$1');
+
+
+$routes->get('grado', 'GradoController::index');
+$routes->get('grado/create', 'GradoController::create');
+$routes->post('grado/store', 'GradoController::store');
+$routes->get('grado/edit/(:num)', 'GradoController::edit/$1');
+$routes->post('grado/update/(:num)', 'GradoController::update/$1');
+
+$routes->post('grado/delete/(:num)', 'GradoController::delete/$1');

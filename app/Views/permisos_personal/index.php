@@ -85,9 +85,10 @@
 
                                         // Formatear saldo histórico en días para eliminar decimales
                                         $saldoHistorialDias = number_format($saldoHistorialDias, 2, '.', '');
-
+                                         // Determinar si el saldo es menor o igual a 0
+                                         $rowClass = ($nuevoSaldoDias <= 0 || $nuevoSaldoHoras <= 0) ? 'table-danger' : '';
                                     ?>
-                                    <tr>
+                                    <tr class="<?= $rowClass ?>">
                                         <td>
                                             <strong><?= esc($item['nombreCompleto']) ?></strong><br>
                                             <small>NIP: <?= esc($item['nip']) ?></small>

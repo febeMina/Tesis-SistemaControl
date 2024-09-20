@@ -20,6 +20,14 @@
                             <input type="text" class="form-control" id="mascara" name="mascara" value="<?= esc($tipoDocumento['mascara']) ?>" required oninput="validateMascara(this)">
                             <small class="form-text text-muted">Ejemplo de máscara: ####-####-#### (para un formato de 4-4-4 dígitos).</small>
                         </div>
+                        <td>
+                        <select class="form-control" name="estado" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="Activo" <?= $tipoDocumento['estado'] == 'Activo' ? 'selected' : '' ?>>Activo</option>
+                            <option value="Inactivo" <?= $tipoDocumento['estado'] == 'Inactivo' ? 'selected' : '' ?>>Inactivo</option>
+                        </select>
+
+                                                        </td>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Actualizar</button>
                             <a href="<?= base_url('public/tipo-documento') ?>" class="btn btn-secondary">Cancelar</a>

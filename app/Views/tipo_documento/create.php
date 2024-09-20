@@ -21,6 +21,14 @@
                                    oninput="validateMascara(this)">
                             <small class="form-text text-muted">Ejemplo de máscara: ####-####-#### (para un formato de 4-4-4 dígitos).</small>
                         </div>
+                        <div class="form-group">
+                            <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
+                            <select class="form-control" id="estado" name="estado" required>
+                                <option value="" disabled selected>Selecciona</option>
+                                <option value="Activo" <?= old('estado') == 'Activo' ? 'selected' : '' ?>>Activo</option>
+                                <option value="Inactivo" <?= old('estado') == 'Inactivo' ? 'selected' : '' ?>>Inactivo</option>
+                            </select>
+                        </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Guardar</button>
                             <a href="<?= base_url('public/tipo-documento') ?>" class="btn btn-secondary">Cancelar</a>

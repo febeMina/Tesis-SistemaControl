@@ -4,19 +4,19 @@
 
 <div class="container mt-3">
     <a href="<?= site_url('solicitudproductos') ?>" class="btn btn-secondary">
-        <i class="mdi mdi-arrow-left"></i> Solicitudes de productos
+        <i class="mdi mdi-arrow-left"></i> Ingreso de productos
     </a>
     <hr>
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0;">
-                    <h4 class="header-title text-center">Continuar - N° de solicitud: <?= $productoIngreso['idProductoIngreso'] ?></h4>
+                    <h4 class="header-title text-center">Continuar - N° de ingreso: <?= $productoIngreso['idProductoIngreso'] ?></h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Información de la solicitud -->
                     <div class="mb-4">
-                        <h5 style="color: black;">Información de la solicitud</h5>
+                        <h5 style="color: black;">Información de ingreso</h5>
                         <form action="<?= site_url('solicitudproductos/update/' . $productoIngreso['idProductoIngreso']) ?>" method="post">
                             <?= csrf_field() ?>
                             <div class="row">
@@ -41,7 +41,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
-                                    <button type="submit" class="btn btn-primary mt-4">Actualizar Solicitud</button>
+                                    <button type="submit" class="btn btn-primary mt-4">Actualizar ingreso</button>
                                 </div>
                             </div>
                         </form>
@@ -152,10 +152,11 @@
                     <!-- Tabla de detalles -->
                     <div class="mb-4">
                         <h5 style="color: black;">Lotes de productos que ingresarán</h5>
+                        <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>Nº</th>
                                     <th>Código de lote</th>
                                     <th>Fechas</th>
                                     <th>Unidades de caja</th>
@@ -189,11 +190,12 @@
                                 ?>
                             </tbody>
                         </table>
+                        </div>
                     </div>
                     <div class="mb-4 text-right">
                         <form id="formFinalizar" action="<?= site_url('solicitudproductos/finalizar') ?>" method="post">
                             <input type="hidden" name="idProductoIngreso" value="<?= $productoIngreso['idProductoIngreso'] ?>">
-                            <button type="submit" class="btn btn-primary">Finalizar solicitud</button>
+                            <button type="submit" class="btn btn-primary">Finalizar</button>
                         </form>
                     </div>
                 </div>

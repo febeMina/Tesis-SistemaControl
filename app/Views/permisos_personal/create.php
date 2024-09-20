@@ -23,6 +23,7 @@
                                 <i class="fas fa-chalkboard-teacher"></i> Seleccionar Docente:
                             </label>
                             <select name="idDocente" id="idDocente" class="form-control">
+                                <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($docentes as $docente): ?>
                                     <option value="<?= $docente['idDocente'] ?>"><?= esc($docente['nombreCompleto']) ?></option>
                                 <?php endforeach; ?>
@@ -34,6 +35,7 @@
                                 <i class="fas fa-calendar-check"></i> Seleccionar Tipo de Permiso:
                             </label>
                             <select name="idTipoPermiso" id="idTipoPermiso" class="form-control">
+                            <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($tiposPermisos as $tipoPermiso): ?>
                                     <option value="<?= $tipoPermiso['idTipoPermiso'] ?>">
                                         <?= esc($tipoPermiso['nombre']) ?>
@@ -56,6 +58,7 @@
                                 <i class="fas fa-calendar-alt"></i> Tipo de Solicitud:
                             </label>
                             <select name="tipoSolicitud" id="tipoSolicitud" class="form-control">
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="Dias">Días</option>
                                 <option value="Horas">Horas</option>
                             </select>

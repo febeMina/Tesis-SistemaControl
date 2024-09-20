@@ -48,8 +48,8 @@
                             <label for="genero" style="color: #000;">Género</label>
                             <select class="form-control" id="genero" name="genero" required>
                             <option value="" disabled selected>Selecciona</option>
-                                <option value="M" <?= $padre['Genero'] == 'M' ? 'selected' : '' ?>>Masculino</option>
-                                <option value="F" <?= $padre['Genero'] == 'F' ? 'selected' : '' ?>>Femenino</option>
+                                <option value="M" <?= $padre['genero'] == 'M' ? 'selected' : '' ?>>Masculino</option>
+                                <option value="F" <?= $padre['genero'] == 'F' ? 'selected' : '' ?>>Femenino</option>
                             </select>
                         </div>
                         
@@ -108,6 +108,7 @@
                                                         </td>
                                                         <td>
                                                             <select class="form-control" name="alumno_estado[]" required>
+                                                            <option value="" disabled selected>Selecciona</option>
                                                                 <option value="Activo" <?= $alumno['estado'] == 'Activo' ? 'selected' : '' ?>>Activo</option>
                                                                 <option value="Inactivo" <?= $alumno['estado'] == 'Inactivo' ? 'selected' : '' ?>>Inactivo</option>
                                                             </select>
@@ -139,35 +140,57 @@
 </div>
 
 <script>
+    
+    function removeRow(button) {
+        button.closest('tr').remove();
+    }
+    
     document.addEventListener('DOMContentLoaded', function () {
         var tipoAsociadoSelect = document.getElementById('tipoAsociado');
         var alumnosContainer = document.getElementById('alumnosContainer');
-        var padreTipoAsociadoInput = document.getElementById('padre_tipo_asociado');
+        var tipoDocumentoSelect = document.getElementById('idTipoDocumento');
+        var nieInputs = document.querySelectorAll('input[name="alumno_nie[]"]'); // Selecciona todos los inputs de NIE
+       
+        // Función para aplicar la máscara según el atributo data-mascara del tipo de documento
+        function aplicarMascara() {
+            var selectedOption = tipoDocumentoSelect.selectedOptions[0];
+            var mascara = selectedOption.getAttribute('data-mascara');
+
+            nieInputs.forEach(function (nieInput) {
+                // Limpiar cualquier máscara previa
+                nieInput.removeAttribute('data-mask');
+
+                if (mascara) {
+                    nieInput.setAttribute('data-mask', mascara); // Aplicar la máscara basada en data-mascara
+                }
+
+                // Aplicar la máscara si es necesario (puedes usar una librería como jQuery Mask)
+                if (typeof $.fn.mask !== 'undefined') {
+                    $(nieInput).mask(nieInput.getAttribute('data-mask'));
+                }
+            });
+        }
 
         // Set initial state based on existing value
-        if (padreTipoAsociadoInput.value === 'INTERNO') {
-            alumnosContainer.style.display = 'block';
-        } else {
-            alumnosContainer.style.display = 'none';
+        if (document.getElementById('padre_tipo_asociado').value === 'INTERNO') {
+            alumnosContainer.style.display = '';
         }
 
         tipoAsociadoSelect.addEventListener('change', function () {
             if (this.value === 'INTERNO') {
-                alumnosContainer.style.display = 'block';
+                alumnosContainer.style.display = '';
             } else {
                 alumnosContainer.style.display = 'none';
             }
         });
 
-        document.getElementById('addAlumnoBtn').addEventListener('click', function () {
-            var tableBody = document.getElementById('alumnosTableBody');
-            var rowCount = tableBody.rows.length;
-            var row = tableBody.insertRow(rowCount);
+        var alumnosTableBody = document.getElementById('alumnosTableBody');
+        var addAlumnoBtn = document.getElementById('addAlumnoBtn');
 
-            row.innerHTML = `
-                <td>
-                    <input type="text" class="form-control" name="alumno_nombre_completo[]" required>
-                </td>
+        addAlumnoBtn.addEventListener('click', function () {
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td><input type="text" class="form-control" name="alumno_nombre_completo[]" required></td>
                 <td>
                     <select class="form-control" name="alumno_sexo[]" required>
                         <option value="" disabled selected>Selecciona</option>
@@ -185,21 +208,26 @@
                 </td>
                 <td>
                     <select class="form-control" name="alumno_estado[]" required>
+                         <option value="" disabled selected>Selecciona</option>
                         <option value="Activo">Activo</option>
                         <option value="Inactivo">Inactivo</option>
                     </select>
                 </td>
-                <td>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">Eliminar</button>
-                </td>
+                 <td><button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">Eliminar</button></td>
             `;
-        });
-    });
+            alumnosTableBody.appendChild(newRow);
 
-    function removeRow(button) {
-        var row = button.closest('tr');
-        row.parentNode.removeChild(row);
-    }
+            // Actualizar inputs de NIE
+            nieInputs = document.querySelectorAll('input[name="alumno_nie[]"]'); // Selecciona todos los inputs de NIE actualizados
+            aplicarMascara(); // Aplica la máscara cuando se agrega una nueva fila
+        });
+
+        tipoDocumentoSelect.addEventListener('change', aplicarMascara); // Escuchar el cambio de tipo de documento
+
+        
+
+        aplicarMascara(); // Aplicar máscara al cargar la página
+    });
 </script>
 
 <?= $this->endSection() ?>

@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
 <div class="container mt-4">
-    <!-- Mensaje de éxito, error o advertencia -->
+    <!-- Mensajes de éxito, error o advertencia -->
     <?php if (session()->has('success')): ?>
         <div class="alert alert-success">
             <?= session('success') ?>
@@ -27,46 +27,44 @@
                     <h4 class="header-title text-center">Reporte de Solicitudes de Productos</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
-                    <!-- Formulario de filtro -->
+                    <!-- Formulario de filtro por fecha de requisición -->
                     <form action="<?= site_url('solicitudproductos/reporteS') ?>" method="get" class="mb-4">
                         <div class="row g-3">
                             <div class="col-md-4">
-                                <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Solicitud" value="<?= esc($filters['fecha_solicitud'] ?? '') ?>">
+                                <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Requisición" value="<?= esc($filters['fecha_solicitud'] ?? '') ?>">
                             </div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <button type="submit" class="btn btn-primary">Filtrar</button>
                             <a href="<?= site_url('solicitudproductos/reporteS') ?>" class="btn btn-secondary ms-2">Limpiar</a>
-                            <!-- Botón para generar el PDF -->
+                            <!-- Botón para generar el PDF si hay una fecha seleccionada -->
                             <?php if (!empty($filters['fecha_solicitud'])): ?>
                                 <a href="<?= site_url('reporte-pdf/generar-reporte-solicitud-productos') ?>?fecha_solicitud=<?= esc($filters['fecha_solicitud']) ?>" class="btn btn-success">Generar Reporte PDF</a>
-
                             <?php endif; ?>
                         </div>
                     </form>
 
-                    <!-- Mostrar tabla solo si la fecha está presente -->
+                    <!-- Mostrar tabla solo si se selecciona una fecha -->
                     <?php if (!empty($filters['fecha_solicitud'])): ?>
-                        <!-- Tabla de solicitudes -->
                         <div class="table-responsive">
                             <table class="table" style="color: #000;">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Fecha Solicitud</th>
+                                        <th>Fecha de Requisición</th>
                                         <th>Comida a Preparar</th>
-                                        <th>Responsable Entrega</th>
-                                        <th>Responsable Recibir</th>
+                                        <th>Responsable de Entrega</th>
+                                        <th>Responsable de Recepción</th>
+                                        <th>Estado</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($solicitudes as $solicitud): ?>
                                         <tr>
-                                            <td><?= esc($solicitud['idSolicitudProductos']) ?></td>
-                                            <td><?= esc($solicitud['Fecha_solicitud']) ?></td>
-                                            <td><?= esc($solicitud['Comida_a_preparar']) ?></td>
-                                            <td><?= esc($solicitud['responsable_entrega']) ?></td>
-                                            <td><?= esc($solicitud['responsable_recibir']) ?></td>
+                                            <td><?= date('d/m/Y', strtotime(esc($solicitud['fechaRequisicion']))) ?></td>
+                                            <td><?= esc($solicitud['comidaPreparar']) ?></td>
+                                            <td><?= esc($solicitud['responsableEntrega']) ?></td>
+                                            <td><?= esc($solicitud['responsableRecibe']) ?></td>
+                                            <td><?= esc($solicitud['estado']) ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -79,7 +77,7 @@
                         <?php endif; ?>
                     <?php else: ?>
                         <div class="alert alert-info">
-                            Por favor, seleccione una fecha de solicitud para mostrar los resultados.
+                            Por favor, seleccione una fecha de requisición para mostrar los resultados.
                         </div>
                     <?php endif; ?>
                 </div>

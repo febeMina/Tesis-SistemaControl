@@ -87,6 +87,7 @@
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo-documento') ?>" class="nav-link">Tipos de documentos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('grado') ?>" class="nav-link">Grados</a></li>
                 </ul>
             </div>
         </li>
@@ -129,8 +130,8 @@
             <div class="collapse" id="alimentacion">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('productos') ?>" class="nav-link">Productos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Consumo por productos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Solicitud productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Solicitud productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Ingreso productos</a></li>
                     <li class="nav-item"><a href="<?= site_url('registro-diario') ?>" class="nav-link">Familias beneficiadas</a></li>
                     <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); background-color: 0f1015;">
                         <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>

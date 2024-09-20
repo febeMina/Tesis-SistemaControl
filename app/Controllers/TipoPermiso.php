@@ -103,40 +103,81 @@ class TipoPermiso extends BaseController
     }
 
     public function update()
-    {
-        $id = $this->request->getPost('id');
+{
+    $id = $this->request->getPost('id');
 
-        if ($id === null) {
-            return $this->response->setJSON(['success' => false, 'message' => 'ID no encontrado.']);
-        }
-
-        // Capturamos el nombre del usuario que modifica desde la sesión
-        $usuarioActual = session()->get('usuario');
-
-        $data = [
-            'nombre' => $this->request->getPost('nombre'),
-            'cantidadDias' => $this->request->getPost('cantidadDias'),
-            'estado' => $this->request->getPost('estado'), // Mantener el estado del formulario
-            'usuarioModifica' => $usuarioActual,  // Captura el usuario que modifica
-        ];
-
-        $this->tipoPermisoModel->update($id, $data);
-
-        $this->session->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
-
-        return $this->response->setJSON(['success' => true]);
+    if ($id === null) {
+        return $this->response->setJSON(['success' => false, 'message' => 'ID no encontrado.']);
     }
 
-    public function delete($id = null)
-    {
-        if ($id !== null) {
-            $this->tipoPermisoModel->update($id, ['estado' => 'inactivo']);
+    // Capturamos el nombre del usuario que modifica desde la sesión
+    $usuarioActual = session()->get('usuario');
 
-            $this->session->setFlashdata('success', 'Tipo de permiso desactivado exitosamente.');
+    // Captura los datos del formulario
+    $data = [
+        'cantidadDias' => $this->request->getPost('cantidadDias'),
+        'estado' => $this->request->getPost('estado'),
+    ];
+
+    // Si el nombre no está deshabilitado en el formulario de edición
+    if ($this->request->getPost('nombre') !== null) {
+        $data['nombre'] = $this->request->getPost('nombre');
+    }
+
+    $this->tipoPermisoModel->update($id, $data);
+
+    $this->session->setFlashdata('success', 'Tipo de permiso actualizado exitosamente.');
+
+    return $this->response->setJSON(['success' => true]);
+}
+
+    
+    public function estado($id)
+{
+    $tipo_permiso = $this->tipoPermisoModel->find($id);
+
+    if ($tipo_permiso) {
+        if ($tipo_permiso['estado'] == 'Activo') {
+            $this->tipoPermisoModel->update($id, ['estado' => 'Inactivo']);
+            error_log("Estado cambiado a Inactivo para ID: $id");
+            $mensaje = 'El tipo de permiso ha sido cambiado a Inactivo.';
         } else {
-            $this->session->setFlashdata('error', 'No se encontró el ID del tipo de permiso.');
+            $this->tipoPermisoModel->update($id, ['estado' => 'Activo']);
+            error_log("Estado cambiado a Activo para ID: $id");
+            $mensaje = 'El tipo de permiso ha sido cambiado a Activo.';
         }
 
-        return redirect()->to('/tipo_permiso');
+        return redirect()->to('/tipo_permiso')->with('success', $mensaje);
+    } else {
+        return redirect()->to('/tipo_permiso')->with('error', 'No se encontró el tipo de permiso.');
     }
+}
+
+
+    public function delete()
+{
+    $id = $this->request->getPost('id');
+    $tipoPermisoModel = new TipoPermisoModel();
+    $permiso = $tipoPermisoModel->find($id);
+
+    if ($permiso) {
+        // Cambiar el estado del tipo de permiso a "Eliminado" en lugar de eliminarlo
+        $tipoPermisoModel->update($id, ['estado' => 'Eliminado']);
+        
+        // Responder con éxito
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Tipo de permiso eliminado exitosamente.'
+        ]);
+    } else {
+        // Responder con error
+        return $this->response->setJSON([
+            'success' => false,
+            'message' => 'No se encontró el tipo de permiso.'
+        ]);
+    }
+}
+
+
+    
 }
