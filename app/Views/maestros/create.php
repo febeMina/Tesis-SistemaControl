@@ -7,22 +7,22 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
-                    <h3 class="text-center">Nuevo Personal Magisterial</h3>
+                    <h3 class="text-center">Nuevo personal magisterial</h3>
                 </div>
                 <div class="card-body">
                     
                     <!-- Mensaje de éxito -->
                     <?php if (session()->getFlashdata('success')) : ?>
-    <div class="alert alert-success">
-        <?= session()->getFlashdata('success'); ?>
-    </div>
-<?php endif; ?>
-
-<?php if (session()->getFlashdata('error')) : ?>
-    <div class="alert alert-danger">
-        <?= session()->getFlashdata('error'); ?>
-    </div>
-<?php endif; ?>
+                        <div class="alert alert-success">
+                            <?= session()->getFlashdata('success'); ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <?php if (session()->getFlashdata('error')) : ?>
+                        <div class="alert alert-danger">
+                            <?= session()->getFlashdata('error'); ?>
+                        </div>
+                    <?php endif; ?>
                     
                     
                     <div id="errorMessage"></div>
@@ -30,7 +30,7 @@
                     <form id="createForm" action="<?= site_url('maestros/store') ?>" method="post">
                         <?= csrf_field() ?>
                         <div class="form-group">
-                            <label for="nombreCompleto" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
+                            <label for="nombreCompleto" style="color: #000;"><i class="fas fa-user"></i> Nombre completo</label>
                             <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required>
                         </div>
                         <div class="form-group">
@@ -42,12 +42,13 @@
                             <input type="text" class="form-control" id="escalafon" name="escalafon" required>
                         </div>
                         <div class="form-group">
-                            <label for="fechaIngreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de Ingreso</label>
+                            <label for="fechaIngreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de ingreso</label>
                             <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" required>
                         </div>
                         <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="Activo">Activo</option>
                                 <option value="Inactivo">Inactivo</option>
                             </select>
@@ -77,7 +78,7 @@
                         <div class="form-group" id="gradosContainer" style="display:none;">
                             <label for="idGrados" style="color: #000;">Grado(s)</label>
                             <select name="idGrado" class="form-control">
-                                <option value="">Selecciona un grado</option>
+                            <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($grados as $grado): ?>
                                     <option value="<?= $grado['idGrado']; ?>"><?= $grado['nombre']; ?></option>
                                 <?php endforeach; ?>
@@ -135,7 +136,7 @@ $(document).ready(function() {
             }
         },
         error: function(xhr, status, error) {
-            $('#errorMessage').html('<div class="alert alert-danger">Ocurrió un error: ' + error + '</div>');
+            $('#errorMessage').html('<div class="alert alert-danger">Ocurrió un error ');
         }
     });
 });

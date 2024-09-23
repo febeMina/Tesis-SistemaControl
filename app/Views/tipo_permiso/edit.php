@@ -13,7 +13,7 @@
             <?php endif; ?>
             <div class="card shadow" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0;">
-                    <h3 class="text-center">Editar Tipo de Permiso</h3>
+                    <h3 class="text-center">Editar tipo de permiso</h3>
                 </div>
                 <div class="card-body">
                     <form id="updateForm" action="<?= site_url('tipo_permiso/update') ?>" method="post">
@@ -23,7 +23,7 @@
                             <input type="text" class="form-control" id="nombre" name="nombre" value="<?= esc($tipo_permiso['nombre']) ?>" disabled required>
                         </div>
                         <div class="form-group">
-                            <label for="cantidadDias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>
+                            <label for="cantidadDias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de días</label>
                             <input type="number" class="form-control" id="cantidadDias" name="cantidadDias" value="<?= esc($tipo_permiso['cantidadDias']) ?>" required>
                         </div>
                         <div class="form-group">

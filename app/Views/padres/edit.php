@@ -18,12 +18,12 @@
                     <form action="<?= site_url('padres/update/'.$padre['idDatosResponsable']) ?>" method="post">
                         <?= csrf_field() ?>
                         <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;">Nombre Completo</label>
+                            <label for="nombre_completo" style="color: #000;">Nombre completo</label>
                             <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" value="<?= esc($padre['nombreCompleto']) ?>" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="idTipoDocumento" style="color: #000;"><i class="fas fa-id-card"></i> Tipo de Documento</label>
+                            <label for="idTipoDocumento" style="color: #000;"><i class="fas fa-id-card"></i> Tipo de documento</label>
                             <select class="form-control" id="idTipoDocumento" name="idTipoDocumento" required>
                             <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($tipos_documento as $tipo): ?>
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="tipoAsociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de Asociado</label>
+                            <label for="tipoAsociado" style="color: #000;"><i class="fas fa-users"></i> Tipo de asociado</label>
                             <select class="form-control" id="tipoAsociado" name="tipoAsociado" required>
                             <option value="" disabled selected>Selecciona</option>
                                 <option value="EXTERNO" <?= $padre['tipoAsociado'] == 'EXTERNO' ? 'selected' : '' ?>>EXTERNO</option>
@@ -72,12 +72,12 @@
                         
                         <div id="alumnosContainer" style="<?= $padre['tipoAsociado'] == 'INTERNO' ? '' : 'display: none;' ?>">
                             <div class="mt-4">
-                                <h4 class="text-center" style="color: #000;">Alumnos Asociados</h4>
+                                <h4 class="text-center" style="color: #000;">Alumnos asociados</h4>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>Nombre Completo</th>
+                                                <th>Nombre completo</th>
                                                 <th>Género</th>
                                                 <th>NIE</th>
                                                 <th>Estado</th>
@@ -121,7 +121,7 @@
                                             <?php endif; ?>
                                         </tbody>
                                     </table>
-                                    <button type="button" class="btn btn-success" id="addAlumnoBtn">Agregar Alumno</button>
+                                    <button type="button" class="btn btn-success" id="addAlumnoBtn">Agregar alumno</button>
                                 </div>
                             </div>
                         </div>

@@ -33,7 +33,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de Tipos de Permiso</h4>
+                    <h4 class="header-title text-center">Listado de tipos de permiso</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Botones de acción -->
@@ -49,7 +49,7 @@
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Cantidad de Días</th>
+                                    <th>Cantidad de días</th>
                                     <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -86,7 +86,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Confirmar Eliminación</h5>
+                <h5 class="modal-title" id="deleteModalLabel">Confirmar eliminación</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

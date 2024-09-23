@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white">
-                    <h3 class="text-center">Nuevo Usuario</h3>
+                    <h3 class="text-center">Nuevo usuario</h3>
                 </div>
                 <div class="card-body">
                     <form id="createForm" action="<?= site_url('usuario/store') ?>" method="post">

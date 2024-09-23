@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de Proyectos Institucionales</h4>
+                    <h4 class="header-title text-center">Listado de proyectos institucionales</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Mensaje de éxito -->
@@ -18,7 +18,7 @@
                     <!-- Botón para agregar un nuevo tipo de producto -->
                     <div class="mb-3">
                         <a href="<?= site_url('proyectos/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar Proyecto
+                            <i class="mdi mdi-plus"></i> Agregar proyecto
                         </a>
                     </div>
                     <!-- Tabla de tipos de producto -->
@@ -26,9 +26,9 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Nombre de Proyecto</th>
+                                    <th>Nombre de proyecto</th>
                                     <th>Descripción</th>
-                                    <th>Meta Economica</th>
+                                    <th>Meta economica</th>
                                     <th>Estado</th>
                                     <th>Año</th>
                                     <th>Acciones</th>

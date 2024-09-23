@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de Tipos de Producto</h4>
+                    <h4 class="header-title text-center">Listado de tipos de producto</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Mensaje de éxito -->
@@ -18,7 +18,7 @@
                     <!-- Botón para agregar un nuevo tipo de producto -->
                     <div class="mb-3">
                         <a href="<?= site_url('tipo_producto/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar Tipo de Producto
+                            <i class="mdi mdi-plus"></i> Agregar tipo de producto
                         </a>
                     </div>
                     <!-- Tabla de tipos de producto -->

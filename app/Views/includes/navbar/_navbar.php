@@ -84,10 +84,10 @@
                     <li class="nav-item"><a href="<?= site_url('roles') ?>" class="nav-link">Roles</a></li>
                     <li class="nav-item"><a href="<?= site_url('acceso') ?>" class="nav-link">Accesos</a></li>
                     <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Asociados</a></li>
+                    <li class="nav-item"><a href="<?= site_url('grado') ?>" class="nav-link">Grados</a></li>
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo-documento') ?>" class="nav-link">Tipos de documentos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('grado') ?>" class="nav-link">Grados</a></li>
                 </ul>
             </div>
         </li>
@@ -154,7 +154,7 @@
                     <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a></li>
                     <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Reporte de solicitud de productos</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de donaciones</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Reporte de inasistencias</a></li>
+                    <li class="nav-item"><a href="<?= site_url('reportes/familias') ?>" class="nav-link">Reporte de familias beneficiadas</a></li>
                 </ul>
             </div>
         </li>

@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
-                    <h3 class="text-center">Editar Usuario</h3>
+                    <h3 class="text-center">Editar usuario</h3>
                 </div>
                 <div class="card-body">
                     <form id="updateForm" action="<?= site_url('usuario/update/' . $usuario->idUsuarios) ?>" method="post">

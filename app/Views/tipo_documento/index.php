@@ -18,7 +18,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header" style="background-color: #090066; border-radius: 15px;">
-                    <h3 class="text-center text-white">Tipos de Documento</h3>
+                <h4 class="header-title text-center">Tipos de documento</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <!-- Botón para crear nuevo tipo de documento -->
@@ -68,7 +68,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Confirmar Eliminación</h5>
+                <h5 class="modal-title" id="deleteModalLabel">Confirmar eliminación</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

@@ -132,10 +132,10 @@ $routes->post('donaciones/store', 'Donaciones::store');
 $routes->get('donaciones/create', 'Donaciones::create'); 
 $routes->get('donaciones/reporte', 'Donaciones::GenerarReporte');
 $routes->get('donaciones/tiket/(:num)', 'Donaciones::GenerarTicket/$1');
-
+$routes->get('donaciones/edit/(:num)', 'Donaciones::edit/$1');
 $routes->get('donaciones/tipoDonador', 'Donaciones::obtener_donadores_por_tipo'); 
 
- 
+
 //Rutas proyectos
 $routes->post('proyectos/store', 'Proyectos::store');
 $routes->get('proyectos/create', 'Proyectos::create');
@@ -227,6 +227,8 @@ $routes->get('public/registro-diario/show/(:num)', 'RegistroDiario::show/$1');
 $routes->get('registro-diario/getDetails/(:num)', 'RegistroDiarioController::getDetails/$1');
 $routes->get('registro-diario/getRequisicionByFecha/(:any)', 'RegistroDiarioController::getRequisicionByFecha/$1');
 
+$routes->get('/reportes/familias', 'RegistroDiarioController::reporteFamilias');
+$routes->get('reporte_familias/generarReporte', 'ReporteFamilias::generarReporte');
 
 
 

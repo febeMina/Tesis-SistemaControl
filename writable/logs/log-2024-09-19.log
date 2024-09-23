@@ -1440,3 +1440,74 @@ INFO - 2024-09-19 23:52:50 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-09-19 23:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-19 23:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-19 23:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 23:58:42 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-19 23:58:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:58:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:58:42 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

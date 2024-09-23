@@ -24,7 +24,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Permisos del Personal</h4>
+                    <h4 class="header-title text-center">Permisos del personal</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Formulario de filtro -->
@@ -57,7 +57,7 @@
                                     <th>Tipos de permisos</th>
                                     <th>Días</th>
                                     <th>Horas</th>
-                                    <th>Saldo Actual</th>
+                                    <th>Saldo actual</th>
                                 </tr>
                             </thead>
                             <tbody>

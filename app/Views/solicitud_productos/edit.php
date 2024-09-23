@@ -143,7 +143,7 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <button type="submit" class="btn btn-primary">Agregar Lote</button>
+                                    <button type="submit" class="btn btn-primary">Agregar lote</button>
                                 </div>
                             </div>
                         </form>

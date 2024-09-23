@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white">
-                    <h3 class="text-center">Nueva Donación</h3>
+                    <h3 class="text-center">Nueva donación</h3>
                 </div>
                 <div class="card-body">
                     
@@ -40,7 +40,7 @@
                     
                     <!-- Datos de la personas  AQUI VAMOS-->
                       <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Responsable</label>
+                            <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre responsable</label>
                             <select class="form-control" id="NombreDonante" name="NombreDonante" required>
                             <option value="">Seleccione...</option>
                             <?php foreach ($responsables as $responsable) : ?>
@@ -77,7 +77,7 @@
                             <input type="text" class="form-control" id="concepto" name="concepto" required>
                         </div>
                         <div class="form-group">
-                            <label for="nombre_completo" style="color: #000;"> <i class="fa-solid fa-calendar-days"></i> Fecha de Donación</label>
+                            <label for="nombre_completo" style="color: #000;"> <i class="fa-solid fa-calendar-days"></i> Fecha de donación</label>
                             <input type="date" class="form-control" id="fecha" name="fecha" min="<?php echo date("Y-m-d");?>" required>
                         </div>
                         <div class="form-group">

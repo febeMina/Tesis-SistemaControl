@@ -3,36 +3,30 @@
 <?= $this->section('content') ?>
 
 <div class="container mt-4">
-    <h2>Registrar Diario</h2>
-    <form action="<?= site_url('registro-diario/store') ?>" method="post">
-        <div class="form-group">
-            <label for="fecha">Fecha:</label>
-            <input type="date" class="form-control" id="fecha" name="fecha" required>
-        </div>
-        <table class="table table-striped mt-3">
-            <thead>
+    <h2>Detalles del registro diariooo - <?= esc($registro->fecha) ?></h2>
+    <h5>Familias beneficiadas: <?= esc($registro->familiasBeneficiadas) ?></h5>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Grado</th>
+                <th>Docente</th>
+                <th>Cantidad de niños</th>
+                <th>Cantidad de niñas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($detalles as $detalle): ?>
                 <tr>
-                    <th>Grado</th>
-                    <th>Docente</th>
-                    <th>Cantidad Niños</th>
-                    <th>Cantidad Niñas</th>
+                    <td><?= esc($detalle->nombre_grado ?? 'No disponible') ?></td>
+                    <td><?= esc($detalle->nombre_docente) ?></td>
+                    <td><?= esc($detalle['cantidadNinos']) ?></td>
+                    <td><?= esc($detalle['cantidadNinas']) ?></td>
                 </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($grados as $grado): ?>
-                    <tr>
-                        <td><?= esc($grado['nombre']) ?></td>
-                        <td><?= esc($grado['docenteNombre']) ?></td>
-                        <td><input type="number" name="cantidadNiños[]" class="form-control" min="0"></td>
-                        <td><input type="number" name="cantidadNiñas[]" class="form-control" min="0"></td>
-                        <input type="hidden" name="idGrado[]" value="<?= esc($grado['idGrado']) ?>">
-                        <input type="hidden" name="idDocente[]" value="<?= esc($grado['idDocente']) ?>">
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <a href="<?= base_url('public/registro-diario') ?>" class="btn btn-primary">Regresar</a>
 </div>
 
 <?= $this->endSection() ?>

@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h3 class="text-center">Editar Unidad de Medida</h3>
+                    <h3 class="text-center">Editar unidad de medida</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <?= form_open('unidadesmedida/update/' . $unidad['idUnidadesMedida']) ?>

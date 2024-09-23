@@ -32,7 +32,7 @@ class Maestros extends Controller
         $request = service('request');
         $pager = \Config\Services::pager(); // Inicializar el servicio de paginación
         $currentPage = $request->getVar('page') ?? 1;
-        $perPage = 8; // Número de elementos por página
+        $perPage = 5; // Número de elementos por página
         
         // Obtener los datos de filtro del formulario
         $filters = [

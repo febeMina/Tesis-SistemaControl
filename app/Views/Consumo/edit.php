@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <button type="submit" class="btn btn-primary mt-4">Actualizar Requisición</button>
+                                <button type="submit" class="btn btn-primary mt-4">Actualizar requisición</button>
                             </div>
                         </form>
                     </div>
@@ -67,7 +67,7 @@
                                             <option value="">Seleccionar el producto</option>
                                             <?php foreach($productosConExistencia as $producto): ?>
                                                 <option value="<?= $producto['idProductoLote'] ?>">
-                                                    <?= $producto['descripcionProducto'] ?> - <?= $producto['codigoLote']  ?> - <?= $producto['fechaVencimiento'] ?> - [<?= $producto['existenciaTotal'] ?> u]
+                                                    <?= $producto['descripcionProducto'] ?> --- <?= $producto['codigoLote']  ?> --- <?= $producto['fechaVencimiento'] ?> --- [<?= $producto['existenciaTotal'] ?> u]
                                                 </option>
                                             <?php endforeach; ?>
                                         </select>
@@ -95,7 +95,7 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="col-md-4 mb-4 text-right">
-                                    <button type="submit" class="btn btn-primary">Agregar Lote</button>
+                                    <button type="submit" class="btn btn-primary">Agregar lote</button>
                                 </div>
                             </div>
                         </form>

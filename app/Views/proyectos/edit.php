@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h3 class="text-center">Editar Proyecto</h3>
+                    <h3 class="text-center">Editar proyecto</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;"> 
                    
@@ -17,8 +17,8 @@
                     </div>
                   
                     <div class="form-group">
-                        <label for="descripción" style="color: #000;">Descripción</label>
-                        <textarea class="form-control" id="descripción" name="descripción" rows="3"><?= $proyectos['descripcion'] ?></textarea>
+                        <label for="descripcion" style="color: #000;">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3"><?= $proyectos['descripcion'] ?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="estado" style="color: #000;">Estado</label>

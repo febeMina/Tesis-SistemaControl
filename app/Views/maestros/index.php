@@ -33,7 +33,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Personal Magisterial</h4>
+                    <h4 class="header-title text-center">Personal magisterial</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Formulario de filtros -->
@@ -75,10 +75,10 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Nombre Completo</th>
+                                    <th>Nombre completo</th>
                                     <th>NIP</th>
                                     <th>Escalafón</th>
-                                    <th>Fecha de Ingreso</th>
+                                    <th>Fecha de ingreso</th>
                                     <th>Estado</th>
                                     <th>Tipo</th>
                                     <th>Cargo</th>
@@ -141,7 +141,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Confirmar Eliminación</h5>
+        <h5 class="modal-title" id="deleteModalLabel">Confirmar eliminación</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

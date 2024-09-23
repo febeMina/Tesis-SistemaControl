@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header" style="background-color: #090066; border-radius: 15px;">
-                    <h3 class="text-center text-white">Asociados</h3>
+                <h4 class="header-title text-center">Asociados</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <!-- Mensaje de éxito -->
@@ -70,13 +70,13 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Nombre Completo</th>
-                                    <th>Tipo de Documento</th>
-                                    <th>Número de Documento</th>
+                                    <th>Nombre completo</th>
+                                    <th>Tipo de documento</th>
+                                    <th>Número de documento</th>
                                     <th>Teléfono</th>
                                     <th>Estado</th>
                                     <th>Género</th>
-                                    <th>Tipo de Asociado</th>
+                                    <th>Tipo de asociado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>

@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de Tipo accesos</h4>
+                    <h4 class="header-title text-center">Listado de tipo accesos</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Mensaje de éxito -->

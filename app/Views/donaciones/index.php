@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de Donaciones</h4>
+                    <h4 class="header-title text-center">Listado de donaciones</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Mensaje de éxito -->
@@ -20,7 +20,7 @@
                     <!-- Botón para agregar un nuevo tipo de permiso -->
                     <div class="mb-3">
                         <a href="<?= site_url('donaciones/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Nueva Donación <!-- Icono de Material Design Icons -->
+                            <i class="mdi mdi-plus"></i> Nueva donación <!-- Icono de Material Design Icons -->
                         </a>
                     </div>
                     <!-- Tabla de tipos de permiso -->
@@ -28,7 +28,7 @@
                         <table class="table" style="color: #000;">
                             <thead>
                                 <tr>
-                                    <th>Nombre Donante</th>
+                                    <th>Nombre donante</th>
                                     <th>Cantidad</th>
                                     <th>Proyecto</th>
                                    <th>Fecha</th>

@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
-                    <h3 class="text-center">Editar Maestro</h3>
+                    <h3 class="text-center">Editar maestro</h3>
                 </div>
                 <div class="card-body">
 
@@ -34,7 +34,7 @@
                     <form id="updateForm" action="<?= site_url('maestros/update/' . $docente['idDocente']) ?>" method="post">
                         <?= csrf_field() ?>
                         <div class="form-group">
-                            <label for="nombreCompleto" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
+                            <label for="nombreCompleto" style="color: #000;"><i class="fas fa-user"></i> Nombre completo</label>
                             <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" value="<?= esc($docente['nombreCompleto']) ?>" required>
                         </div>
                         <div class="form-group">
@@ -46,7 +46,7 @@
                             <input type="text" class="form-control" id="escalafon" name="escalafon" value="<?= esc($docente['escalafon']) ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="fechaIngreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de Ingreso</label>
+                            <label for="fechaIngreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de ingreso</label>
                             <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" value="<?= esc($docente['fechaIngreso']) ?>" required>
                         </div>
                         <div class="form-group">

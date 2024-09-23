@@ -87,6 +87,8 @@ class MaestroModel extends Model
 
         return $this->db->transStatus();
     }
+    
+    
 
     public function setInactive($id)
     {

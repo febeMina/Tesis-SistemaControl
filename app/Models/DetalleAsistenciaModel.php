@@ -10,22 +10,15 @@ class DetalleAsistenciaModel extends Model
     protected $primaryKey = 'idDetalleAsistencia';
 
     protected $allowedFields = [
-        'idGrado',
-        'cantidadNiños',
-        'cantidadNiñas',
-        'Total',
-        'Detalle',
+        'cantidadNinos',
+        'cantidadNinas',
+        'total',
+        'detalle',
         'idRegistroDiario',
-        'idDocente'
+        'idDocente',
+        'idProductoRequisicion'
     ];
 
-    // Método para obtener asistencia por grado
-    public function getAsistenciaPorGrado($idGrado)
-    {
-        return $this->where('idGrado', $idGrado)->findAll();
-    }
-
-    // Método para obtener detalles de asistencia junto con los docentes
     public function getDetallesConDocentes()
     {
         $builder = $this->builder();
