@@ -3,6 +3,23 @@
 <?= $this->section('content') ?>
 
 <div class="container mt-4">
+    <!-- Mensajes de éxito, error o advertencia -->
+    <?php if (session()->has('success')): ?>
+        <div class="alert alert-success">
+            <?= session('success') ?>
+        </div>
+    <?php endif; ?>
+    <?php if (session()->has('error')): ?>
+        <div class="alert alert-danger">
+            <?= session('error') ?>
+        </div>
+    <?php endif; ?>
+    <?php if (session()->has('inactive')): ?>
+        <div class="alert alert-warning">
+            <?= session('inactive') ?>
+        </div>
+    <?php endif; ?>
+
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -11,28 +28,59 @@
                 </div>
                 
                 <div class="card-body" style="background-color: #FFFFFF; padding: 20px;">
-                <button class="btn btn-primary" onclick="location.href='<?= base_url('public/reporte_familias/generarReporte') ?>'">Generar Reporte</button>
+                    <!-- Formulario de filtro por fecha -->
+                    <form method="get" action="<?= base_url('public/reporte_familias/filtrar') ?>" class="mb-4">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="fecha_inicio">Fecha de Inicio</label>
+                                <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" required>
+                            </div>
+                            <div class="col-md-5">
+                                <label for="fecha_fin">Fecha de Fin</label>
+                                <input type="date" id="fecha_fin" name="fecha_fin" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                            <a href="<?= site_url('reportes/familias') ?>" class="btn btn-secondary ms-2">Limpiar</a>
+                        </div>
+                    </form>
 
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Familias Beneficiadas</th>
-                                <th>Detalles</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($registros as $registro): ?>
+                    <!-- Mostrar tabla solo si hay registros y se han filtrado -->
+                    <?php if (isset($registros) && !empty($registros)): ?>
+                        <table class="table">
+                            <thead>
                                 <tr>
-                                    <td><?= esc($registro->fecha) ?></td>
-                                    <td><?= esc($registro->familiasBeneficiadas) ?></td>
-                                    <td>
-                                        <button class="btn btn-info" onclick="mostrarDetalles(<?= esc($registro->idRegistroDiario) ?>)">Ver Detalles</button>
-                                    </td>
+                                    <th>Fecha</th>
+                                    <th>Familias Beneficiadas</th>
+                                    <th>Detalles</th>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($registros as $registro): ?>
+                                    <tr>
+                                        <td><?= esc($registro->fecha) ?></td>
+                                        <td><?= esc($registro->familiasBeneficiadas) ?></td>
+                                        <td>
+                                            <button class="btn btn-info" onclick="mostrarDetalles(<?= esc($registro->idRegistroDiario) ?>)">Ver Detalles</button>
+                                            <button class="btn btn-primary" onclick="location.href='<?= base_url('public/reporte_familias/generarReporte') ?>?idRegistroDiario=<?= esc($registro->idRegistroDiario) ?>'"> <i class="fas fa-print"></i></button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    <?php else: ?>
+                        <!-- Mensaje que indica que no hay registros si no hay resultados -->
+                        <div class="alert alert-warning" role="alert">
+                            Por favor, selecciona las fechas y presiona "Filtrar" para ver los registros.
+                        </div>
+                    <?php endif; ?>
+
+                   <!-- Enlaces de paginación -->
+                    <div class="d-flex justify-content-center">
+                        <?= $pager->links('group1', 'bootstrap_pagination') ?>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -56,6 +104,7 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
+        
     </div>
 </div>
 

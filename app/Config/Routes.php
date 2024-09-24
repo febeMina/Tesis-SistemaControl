@@ -222,6 +222,9 @@ $routes->get('/registro-diario', 'RegistroDiarioController::index');
 $routes->get('/registro-diario/create', 'RegistroDiarioController::create');
 $routes->post('registro-diario/store', 'RegistroDiarioController::store');
 
+$routes->get('reporte_familias/filtrar', 'RegistroDiarioController::filtrar');
+
+
 $routes->get('/registro-diario/show/(:num)', 'RegistroDiarioController::show/$1');
 $routes->get('public/registro-diario/show/(:num)', 'RegistroDiario::show/$1');
 $routes->get('registro-diario/getDetails/(:num)', 'RegistroDiarioController::getDetails/$1');

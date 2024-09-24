@@ -45,13 +45,16 @@ class Usuario extends BaseController
     public function store()
     {
         $rules = [
-            'usuario' => 'required',
+            'usuario' => 'required|is_unique[usuarios.usuario]',
             'clave' => 'required',
             // Agrega aquí más reglas de validación según tus necesidades
         ];
 
         if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => $this->validator->listErrors(),
+            ]);
         }
 
         $db = \Config\Database::connect();
@@ -110,7 +113,7 @@ class Usuario extends BaseController
     public function update($id)
     {
         $rules = [
-            'usuario' => 'required',
+            'usuario' => "required|is_unique[usuarios.usuario,idUsuarios,{$id}]",
             'clave' => 'permit_empty',
             // Agrega aquí más reglas de validación según tus necesidades
         ];

@@ -12,8 +12,10 @@ class RegistroDiarioController extends BaseController
 {
     public function index()
     {
+    
         $registroDiarioModel = new RegistroDiarioModel();
         $detalleAsistenciaModel = new DetalleAsistenciaModel();
+
 
         $data['registros'] = $registroDiarioModel
             ->select('registro_diario.idRegistroDiario, registro_diario.fecha, 
@@ -174,16 +176,57 @@ public function reporteFamilias()
 {
     $registroDiarioModel = new RegistroDiarioModel();
     $detalleAsistenciaModel = new DetalleAsistenciaModel();
+    
+    // Obtiene el número de página actual (default a 1 si no se proporciona)
+    $page = $this->request->getVar('page') ?? 1;
 
+    // Realiza la consulta y usa paginación
     $data['registros'] = $registroDiarioModel
         ->select('registro_diario.idRegistroDiario, registro_diario.fecha, 
                   COALESCE(SUM(detalle_asistencia.total), 0) as familiasBeneficiadas')
         ->join('detalle_asistencia', 'detalle_asistencia.idRegistroDiario = registro_diario.idRegistroDiario', 'left')
         ->groupBy('registro_diario.idRegistroDiario, registro_diario.fecha')
-        ->findAll(); // Puedes usar findAll() si no necesitas paginación
+        ->paginate(10, 'group1', $page); // Cambia el número según tus necesidades
+
+    // Paginación
+    $pager = \Config\Services::pager();
+    $data['pager'] = $pager;
+
+    // Ahora usamos countAll() en el mismo contexto de la consulta paginada
+    $data['total'] = $registroDiarioModel
+        ->select('registro_diario.idRegistroDiario')
+        ->join('detalle_asistencia', 'detalle_asistencia.idRegistroDiario = registro_diario.idRegistroDiario', 'left')
+        ->groupBy('registro_diario.idRegistroDiario, registro_diario.fecha')
+        ->countAllResults();
 
     return view('Reportes/reporte_familias', $data);
 }
+
+public function filtrar()
+{
+    // Obtener las fechas de inicio y fin del request
+    $fechaInicio = $this->request->getGet('fecha_inicio');
+    $fechaFin = $this->request->getGet('fecha_fin');
+
+    // Crear una instancia del modelo
+    $registroDiarioModel = new RegistroDiarioModel();
+
+    // Obtener registros filtrados por fecha
+    $registros = $registroDiarioModel->obtenerRegistrosPorFecha($fechaInicio, $fechaFin);
+
+    return view('Reportes/reporte_familias', [
+        'registros' => $registros,
+    ]);
+}
+public function obtenerRegistrosPorFecha($fechaInicio, $fechaFin)
+{
+    $registroDiarioModel = new RegistroDiarioModel(); // Crea una instancia del modelo
+
+    return $registroDiarioModel->where('fecha >=', $fechaInicio) // Usa la instancia del modelo para llamar a where
+                                ->where('fecha <=', $fechaFin)
+                                ->findAll();
+}
+
 
 
 

@@ -67,6 +67,7 @@
                                         // Calculando el número de días solicitados
                                         $fechaInicio = new DateTime($item['fechaInicio']);
                                         $fechaFin = new DateTime($item['fechaFin']);
+                                        
                                         $intervalo = $fechaInicio->diff($fechaFin);
                                         $diasSolicitados = $intervalo->days + 1; // Sumamos 1 para incluir el primer día
                                         $diasHoras = $item['horasSolicitadas'] ?? $diasSolicitados * $horasDias;
@@ -94,8 +95,9 @@
                                             <small>NIP: <?= esc($item['nip']) ?></small>
                                         </td>
                                         <td>
-                                            <strong>Inicio:</strong> <?= esc($item['fechaInicio']) ?><br>
-                                            <strong>Fin:</strong> <?= esc($item['fechaFin']) ?>
+                                        <strong>Inicio:</strong> <?= ($item['fechaInicio'] == "" ? "-" : date("d/m/Y", strtotime($item['fechaInicio']))) ?><br>
+                                        <strong>Fin:</strong> <?= ($item['fechaFin'] == "" ? "-" : date("d/m/Y", strtotime($item['fechaFin']))) ?>
+
                                         </td>
                                         <td>
                                             <?= esc($item['tipoPermisoNombre']) ?><br>

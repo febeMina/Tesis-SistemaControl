@@ -46,7 +46,9 @@
                             <?php endforeach; ?>
                         </tbody>
                     </table>
-                    <?= $pager->links() ?>
+                    <div class="d-flex justify-content-center">
+                        <?= $pager->links('group1', 'bootstrap_pagination') ?>
+                    </div>
                 </div>
             </div>
         </div>

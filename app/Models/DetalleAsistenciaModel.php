@@ -21,9 +21,33 @@ class DetalleAsistenciaModel extends Model
 
     public function getDetallesConDocentes()
     {
+    
         $builder = $this->builder();
-        $builder->select('detalle_asistencia.*, docentes.nombre AS nombre_docente');
-        $builder->join('docentes', 'detalle_asistencia.idDocente = docentes.idDocente', 'left');
+        $builder->select('detalle_asistencia.*, docente.nombreCompleto AS nombre_docente');
+        $builder->join('docente', 'detalle_asistencia.idDocente = docente.idDocente', 'left');
         return $builder->get()->getResult();
+        
     }
+    
+    
+    public function getDetallesConDocentesYGrados()
+{
+
+    $builder = $this->builder();
+    $builder->select('detalle_asistencia.*, docente.nombreCompleto AS nombre_docente, grado.nombre AS nombre_grado');
+    $builder->join('docente', 'detalle_asistencia.idDocente = docente.idDocente', 'left');
+    $builder->join('grado', 'docente.idGrado = grado.idGrado', 'left'); // JOIN con la tabla grado
+    $result = $builder->get()->getResultObject();
+    
+    // Verifica si hay datos
+    if (empty($result)) {
+        // Manejo de errores o retorno de un array vacío
+        return [];
+    }
+    
+    return $result; // Devolver objetos en lugar de arrays
+}
+
+    
+
 }

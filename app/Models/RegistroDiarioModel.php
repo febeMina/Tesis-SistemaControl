@@ -11,4 +11,13 @@ class RegistroDiarioModel extends Model
     protected $allowedFields = ['fecha', 'familiasBeneficiadas', 'createdAt'];
     protected $returnType = 'object';
     
+    public function obtenerRegistrosPorFecha($fechaInicio, $fechaFin)
+{
+    return $this->db->table('registro_diario')
+        ->where('fecha >=', $fechaInicio)
+        ->where('fecha <=', $fechaFin)
+        ->get()
+        ->getResult();
+}
+
 }

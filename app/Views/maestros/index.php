@@ -94,7 +94,7 @@
                                                 <td><?= esc($maestro['nombreCompleto']) ?></td>
                                                 <td><?= esc($maestro['nip']) ?></td>
                                                 <td><?= esc($maestro['escalafon']) ?></td>
-                                                <td><?= esc($maestro['fechaIngreso']) ?></td>
+                                                <td><?= ($maestro['fechaIngreso'] == "" ? "-" : date("d/m/Y", strtotime($maestro['fechaIngreso']))) ?></td>
                                                 <td><?= esc($maestro['estado']) ?></td>
                                                 <td><?= esc($maestro['tipo']) ?></td>
                                                 <td><?= esc($maestro['cargo']) ?></td>
