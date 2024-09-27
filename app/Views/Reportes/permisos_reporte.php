@@ -24,23 +24,25 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Reporte de Permisos del Personal</h4>
+                    <h4 class="header-title text-center">Reporte de permisos del personal</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Formulario de filtro -->
                     <form action="<?= site_url('/reporte') ?>" method="get" class="mb-4">
                         <div class="row g-3">
                             <div class="col-md-4">
+                            <label for="fecha_inicio"><strong style="color: black;">Fecha inicio</strong></label>
                                 <input type="date" name="fecha_inicio" class="form-control" placeholder="Fecha de Inicio" value="<?= esc($filters['fecha_inicio'] ?? '') ?>">
                             </div>
                             <div class="col-md-4">
+                            <label for="fecha_inicio"><strong style="color: black;">Fecha fin</strong></label>
                                 <input type="date" name="fecha_fin" class="form-control" placeholder="Fecha de Fin" value="<?= esc($filters['fecha_fin'] ?? '') ?>">
                             </div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <button type="submit" class="btn btn-primary">Filtrar</button>
                             <a href="<?= site_url('/reporte') ?>" class="btn btn-secondary ms-2">Limpiar</a>
-                            <a href="<?= site_url('reporte-pdf/generar-reporte?fecha_inicio=' . esc($filters['fecha_inicio'] ?? '') . '&fecha_fin=' . esc($filters['fecha_fin'] ?? '')) ?>" class="btn btn-success">Generar Reporte</a>
+                            <a href="<?= site_url('reporte-pdf/generar-reporte?fecha_inicio=' . esc($filters['fecha_inicio'] ?? '') . '&fecha_fin=' . esc($filters['fecha_fin'] ?? '')) ?>" class="btn btn-primary">Generar PDF</a>
                         </div>
                     </form>
 
@@ -112,13 +114,13 @@
                         </div>
 
                         <!-- Enlaces de paginación -->
-                        <?php if ($pager): ?>
-                            <?= $pager ?>
-                        <?php endif; ?>
-
+                        <div class="d-flex justify-content-center">
+                        <?= $pager ?>
+                    </div>
+                    </div>
                     <?php else: ?>
                         <div class="alert alert-info">
-                            Por favor, seleccione las fechas de inicio y fin para mostrar los resultados.
+                            Por favor, seleccione una fecha de permisos para mostrar los resultados.
                         </div>
                     <?php endif; ?>
                 </div>

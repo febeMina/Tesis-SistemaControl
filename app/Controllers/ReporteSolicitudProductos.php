@@ -53,7 +53,7 @@ class ReporteSolicitudProductos extends BaseController
             $pdf->Cell(0, 10, utf8_decode('REQUISICIÓN DE ALIMENTOS'), 0, 1, 'C');
             $pdf->Ln(10);
             $pdf->SetFont('Arial', 'B', 10);
-            $pdf->Cell(0, 10, utf8_decode('FECHA: ' . $solicitud['fechaRequisicion']), 0, 1);
+            $pdf->Cell(0, 10, utf8_decode('FECHA: ' . date('d/m/Y', strtotime($solicitud['fechaRequisicion']))), 0, 1);
             $pdf->Cell(0, 10, utf8_decode('COMIDA A PREPARAR: ' . $solicitud['comidaPreparar']), 0, 1);
             $pdf->Ln(5);
 
@@ -67,13 +67,16 @@ class ReporteSolicitudProductos extends BaseController
             // Verificar si la clave 'idProductoRequisicion' existe en el array
             if (isset($solicitud['idProductoRequisicion'])) {
                 $detalles = $this->productoRequisicionDetalleModel
-                    ->where('idProductoRequisicion', $solicitud['idProductoRequisicion'])
+                    ->select('productos.descripcionProducto, productos_lotes.fechaVencimiento, productos_requisicion_detalle.existenciaTotal')
+                    ->join('productos_lotes', 'productos_lotes.idProductoLote = productos_requisicion_detalle.idProductoLote', 'left')
+                    ->join('productos', 'productos.idProducto = productos_lotes.idProducto', 'left')
+                    ->where('productos_requisicion_detalle.idProductoRequisicion', $solicitud['idProductoRequisicion'])
                     ->findAll();
                 
                 foreach ($detalles as $detalle) {
-                    $pdf->Cell(80, 10, utf8_decode($detalle['producto_nombre']), 1);
-                    $pdf->Cell(50, 10, utf8_decode($detalle['fecha_vencimiento']), 1);
-                    $pdf->Cell(40, 10, utf8_decode($detalle['cantidad']), 1);
+                    $pdf->Cell(80, 10, utf8_decode($detalle['descripcionProducto']), 1);
+                    $pdf->Cell(50, 10, utf8_decode(date('d/m/Y', strtotime($detalle['fechaVencimiento']))), 1);
+                    $pdf->Cell(40, 10, utf8_decode($detalle['existenciaTotal']), 1);
                     $pdf->Ln();
                 }
             } else {
@@ -83,7 +86,7 @@ class ReporteSolicitudProductos extends BaseController
             }
 
             // Espacios para firma
-            $pdf->Ln(60);
+            $pdf->Ln(80);
 
             // Firma de Recibido y Entregado en la misma fila
             $pdf->SetFont('Arial', '', 10);

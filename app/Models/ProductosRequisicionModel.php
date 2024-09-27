@@ -14,7 +14,7 @@ class ProductosRequisicionModel extends Model
 public function getRequisicionByFecha($fecha)
 {
     try {
-        $result = $this->select('fechaRequisicion, comidaPreparar , responsableEntrega, responsableRecibe, estado')
+        $result = $this->select('idProductoRequisicion, fechaRequisicion, comidaPreparar , responsableEntrega, responsableRecibe, estado')
                        ->where('fechaRequisicion', $fecha)
                        ->findAll();
         return $result;

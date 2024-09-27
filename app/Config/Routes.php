@@ -234,12 +234,12 @@ $routes->group('solicitudproductos', function ($routes) {
     /// Ruta para el reporte de requisiciones de productos
     $routes->get('reporteS', 'ReporteSolicitudProductos::index');
     $routes->get('reporte-solicitud-productos', 'ReporteSolicitudProductos::index');
+    $routes->get('reporte-pdf/generar-reporte-solicitud-productos', 'ReporteSolicitudProductos::generarReporte');
+
 });
  
 
 
-// Ruta para generar el reporte PDF
-$routes->get('reporte-pdf/generar-reporte-solicitud-productos', 'ReporteSolicitudProductos::generarReporte');
 
 
 // Rutas para el controlador Tipos de producto ------------- 03/07/2024
@@ -279,15 +279,12 @@ $routes->get('bitacora', 'Bitacora::index');
 $routes->get('/registro-diario', 'RegistroDiarioController::index');
 $routes->get('/registro-diario/create', 'RegistroDiarioController::create');
 $routes->post('registro-diario/store', 'RegistroDiarioController::store');
-
-$routes->get('reporte_familias/filtrar', 'RegistroDiarioController::filtrar');
-
-
 $routes->get('/registro-diario/show/(:num)', 'RegistroDiarioController::show/$1');
 $routes->get('public/registro-diario/show/(:num)', 'RegistroDiario::show/$1');
 $routes->get('registro-diario/getDetails/(:num)', 'RegistroDiarioController::getDetails/$1');
 $routes->get('registro-diario/getRequisicionByFecha/(:any)', 'RegistroDiarioController::getRequisicionByFecha/$1');
-
+// Nueva ruta para generar el reporte en PDF
+$routes->get('reporte_familias/filtrar', 'RegistroDiarioController::filtrar');
 $routes->get('/reportes/familias', 'RegistroDiarioController::reporteFamilias');
 $routes->get('reporte_familias/generarReporte', 'ReporteFamilias::generarReporte');
 
@@ -360,6 +357,13 @@ $routes->post('productos/update/(:num)', 'Productos::update/$1');
 $routes->get('productos/delete/(:num)', 'Productos::delete/$1');
 $routes->get('productos/estado/(:num)', 'Productos::estado/$1');
 $routes->get('productos/movimientos/(:num)', 'Productos::historialMovimientos/$1');
+// Nueva ruta para generar el reporte en PDF
+$routes->get('reportes/inventario_general', 'Productos::inventarioGeneral');
+$routes->get('reportes/inventario_general', 'ReporteInventarioGeneral::index');
+$routes->get('reportes/generar_inventario', 'ReporteInventarioGeneral::generarReporte');
+
+
+
 
 // Ruta para el controlador ProductosLotes
 $routes->get('productos_lotes/(:num)', 'ProductosLotes::index/$1');
@@ -369,12 +373,15 @@ $routes->get('productos_lotes/edit/(:num)', 'ProductosLotes::edit/$1');
 $routes->post('productos_lotes/update/(:num)', 'ProductosLotes::update/$1');
 $routes->get('productos_lotes/delete/(:num)', 'ProductosLotes::delete/$1');
 $routes->get('productos_lotes/movimientos/(:num)', 'ProductosLotes::historialMovimientos/$1');
+$routes->get('productos_lotes/reportes', 'ProductosLotes::reportesLotes');
+$routes->get('productos_lotes/getLotes/(:num)', 'ProductosLotes::getLotes/$1');
 
+// Nueva ruta para generar el reporte en PDF
+$routes->get('productos_lotes/generarReporte/(:num)', 'ReportelotesProductos::generarReporte/$1');
 
 $routes->get('grado', 'GradoController::index');
 $routes->get('grado/create', 'GradoController::create');
 $routes->post('grado/store', 'GradoController::store');
 $routes->get('grado/edit/(:num)', 'GradoController::edit/$1');
 $routes->post('grado/update/(:num)', 'GradoController::update/$1');
-
 $routes->post('grado/delete/(:num)', 'GradoController::delete/$1');

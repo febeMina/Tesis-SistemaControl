@@ -1,38 +1,54 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #090066 !important;">
-<div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: #090066 !important;">
-    <a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('public/assets/images/log.PNG') ?>" alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?= base_url('public/assets/images/logo-min.PNG') ?>" alt="logo" /></a>
+<nav class="sidebar sidebar-offcanvas" id="sidebar" style="background-color: #090066;">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top" style="background-color: #090066;">
+        <a class="sidebar-brand brand-logo" href="<?= site_url('/') ?>">
+            <img src="<?= base_url('public/assets/images/log.PNG') ?>" alt="logo" />
+        </a>
+        <a class="sidebar-brand brand-logo-mini" href="<?= site_url('/') ?>">
+            <img src="<?= base_url('public/assets/images/logo-min.PNG') ?>" alt="logo" />
+        </a>
     </div>
     <ul class="nav">
-
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="<?= base_url('public/assets/images/faces/admin.png') ?>" alt="">
+                        <img class="img-xs rounded-circle" src="<?= base_url('public/assets/images/faces/admin.png') ?>" alt="">
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
-                        <h5 class="mb-0 font-weight-normal">
-                            <?= session()->get('usuario') ?>
-                        </h5>
-                        <span>
-                            <?= session()->get('rol') ?>
-                        </span>
+                        <h5 class="mb-0 font-weight-normal"><?= session()->get('usuario') ?></h5>
+                        <span><?= session()->get('rol') ?></span>
                     </div>
                 </div>
                 <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
                 <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+<<<<<<< Updated upstream
                    
+=======
+                    <a href="#" class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                            <div class="preview-icon bg-dark rounded-circle">
+                                <i class="mdi mdi-settings text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="preview-item-content">
+                            <p class="preview-subject ellipsis mb-1 text-small">Configuración de cuenta</p>
+                        </div>
+                    </a>
+>>>>>>> Stashed changes
                     <div class="dropdown-divider"></div>
                     <a href="<?= site_url('usuario/editclave/' . session()->get('id') ) ?>" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
-                                <i class="mdi mdi-onepassword  text-info"></i>
+                                <i class="mdi mdi-onepassword text-info"></i>
                             </div>
                         </div>
                         <div class="preview-item-content">
+<<<<<<< Updated upstream
                             <p class="preview-subject ellipsis mb-1 text-small">Cambiar Contraseña</p>
+=======
+                            <p class="preview-subject ellipsis mb-1 text-small">Cambiar contraseña</p>
+>>>>>>> Stashed changes
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
@@ -44,7 +60,7 @@
                             </div>
                         </div>
                         <div class="preview-item-content">
-                            <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                            <p class="preview-subject ellipsis mb-1 text-small">Lista de tareas</p>
                         </div>
                     </a>
                 </div>
@@ -54,6 +70,7 @@
         <li class="nav-item nav-category">
             <span class="nav-link">Menu</span>
         </li>
+        
         <li class="nav-item menu-items">
             <a class="nav-link" href="<?= site_url('/') ?>">
                 <span class="menu-icon">
@@ -62,12 +79,13 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
+
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
                     <i class="mdi mdi-account"></i>
                 </span>
-                <span class="menu-title">Administracion</span>
+                <span class="menu-title">Administración</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -78,14 +96,14 @@
                     <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Asociados</a></li>
                     <li class="nav-item"><a href="<?= site_url('grado') ?>" class="nav-link">Grados</a></li>
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
-                    <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
+                    <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de licencias</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo-documento') ?>" class="nav-link">Tipos de documentos</a></li>
                 </ul>
             </div>
         </li>
-        <!-- Menú para el donaciones -->
+
         <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#donaciones" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link" data-toggle="collapse" href="#donaciones" aria-expanded="false" aria-controls="donaciones">
                 <span class="menu-icon">
                     <i class="mdi mdi-currency-usd"></i>
                 </span>
@@ -95,11 +113,10 @@
             <div class="collapse" id="donaciones">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('proyectos') ?>" class="nav-link">Proyectos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Listado de Donaciones</a></li>
+                    <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Listado de donaciones</a></li>
                 </ul>
             </div>
         </li>
-
 
         <li class="nav-item menu-items">
             <a class="nav-link" href="<?= site_url('permisos_personal') ?>">
@@ -110,7 +127,6 @@
             </a>
         </li>
 
-        <!-- Menú para el apartado de Alimentación -->
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#alimentacion" aria-expanded="false" aria-controls="alimentacion">
                 <span class="menu-icon">
@@ -126,7 +142,6 @@
                     <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Solicitud productos</a></li>
                     <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Ingreso productos</a></li>
                     <li class="nav-item"><a href="<?= site_url('registro-diario') ?>" class="nav-link">Familias beneficiadas</a></li>
-                
                 </ul>
             </div>
         </li>
@@ -141,10 +156,12 @@
             </a>
             <div class="collapse" id="reportes">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Reporte de solicitud de productos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Reporte de donaciones</a></li>
-                    <li class="nav-item"><a href="<?= site_url('reportes/familias') ?>" class="nav-link">Reporte de familias beneficiadas</a></li>
+                <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Donaciones</a></li>
+                    <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Permisos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Solicitud productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('reportes/inventario_general') ?>" class="nav-link">Inventario</a></li>
+                    <li class="nav-item"><a href="<?= site_url('productos_lotes/reportes') ?>" class="nav-link">Productos lotes</a></li>
+                    <li class="nav-item"><a href="<?= site_url('reportes/familias') ?>" class="nav-link">Familias beneficiadas</a></li>
                 </ul>
             </div>
         </li>
@@ -159,10 +176,41 @@
             </a>
             <div class="collapse" id="bitacora">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a href="<?= site_url('bitacora') ?>" class="nav-link">Listado de Bitácora</a></li>
+                    <li class="nav-item"><a href="<?= site_url('bitacora') ?>" class="nav-link">Bitácora</a></li>
                 </ul>
             </div>
         </li>
-
     </ul>
 </nav>
+
+<!-- Script para manejar la barra lateral en dispositivos móviles -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebarToggleBtn = document.querySelector('.sidebar-toggler');
+        const sidebar = document.getElementById('sidebar');
+
+        sidebarToggleBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+    });
+</script>
+
+<style>
+    @media (max-width: 768px) {
+        .sidebar {
+            position: fixed;
+            width: 250px; /* Ajusta según sea necesario */
+            top: 0;
+            left: -250px; /* Oculta el menú fuera de la vista */
+            transition: left 0.3s ease; /* Animación suave */
+        }
+
+        .sidebar.active {
+            left: 0; /* Muestra el menú */
+        }
+
+        .sidebar-toggler {
+            display: block; /* Asegúrate de que el botón esté visible */
+        }
+    }
+</style>

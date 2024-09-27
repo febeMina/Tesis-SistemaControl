@@ -24,19 +24,19 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #4CAF50; border-radius: 10px;">
-                    <h4 class="header-title text-center">Reporte de Familias Beneficiadas</h4>
+                    <h4 class="header-title text-center">Reporte de familias beneficiadas</h4>
                 </div>
                 
-                <div class="card-body" style="background-color: #FFFFFF; padding: 20px;">
+                <div class="card-body" style="background-color: #f0f0f0; padding: 20px;">
                     <!-- Formulario de filtro por fecha -->
                     <form method="get" action="<?= base_url('public/reporte_familias/filtrar') ?>" class="mb-4">
                         <div class="row">
                             <div class="col-md-5">
-                                <label for="fecha_inicio">Fecha de Inicio</label>
+                            <label for="fecha_inicio"><strong style="color: black;">Fecha inicio</strong></label>
                                 <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" required>
                             </div>
                             <div class="col-md-5">
-                                <label for="fecha_fin">Fecha de Fin</label>
+                            <label for="fecha_inicio"><strong style="color: black;">Fecha fin</strong></label>
                                 <input type="date" id="fecha_fin" name="fecha_fin" class="form-control" required>
                             </div>
                         </div>
@@ -46,42 +46,43 @@
                         </div>
                     </form>
 
-                    <!-- Mostrar tabla solo si hay registros y se han filtrado -->
-                    <?php if (isset($registros) && !empty($registros)): ?>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Fecha</th>
-                                    <th>Familias Beneficiadas</th>
-                                    <th>Detalles</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($registros as $registro): ?>
+                    <!-- Tabla de resultados -->
+                        <?php if (isset($registros) && !empty($registros)): ?>
+                            <table class="table">
+                                <thead>
                                     <tr>
-                                        <td><?= esc($registro->fecha) ?></td>
-                                        <td><?= esc($registro->familiasBeneficiadas) ?></td>
-                                        <td>
-                                            <button class="btn btn-info" onclick="mostrarDetalles(<?= esc($registro->idRegistroDiario) ?>)">Ver Detalles</button>
-                                            <button class="btn btn-primary" onclick="location.href='<?= base_url('public/reporte_familias/generarReporte') ?>?idRegistroDiario=<?= esc($registro->idRegistroDiario) ?>'"> <i class="fas fa-print"></i></button>
-                                        </td>
+                                        <th>Fecha</th>
+                                        <th>Familias beneficiadas</th>
+                                        <th>Detalles</th>
                                     </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    <?php else: ?>
-                        <!-- Mensaje que indica que no hay registros si no hay resultados -->
-                        <div class="alert alert-warning" role="alert">
-                            Por favor, selecciona las fechas y presiona "Filtrar" para ver los registros.
-                        </div>
-                    <?php endif; ?>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($registros as $registro): ?>
+                                        <tr>
+                                            <td><?= date('d/m/Y', strtotime($registro->fecha)) ?></td>
+                                            <td><?= esc($registro->familiasBeneficiadas) ?></td>
+                                            <td>
+                                                <button class="btn btn-info" onclick="mostrarDetalles(<?= esc($registro->idRegistroDiario) ?>)">Ver detalles</button>
+                                                <button class="btn btn-info" onclick="location.href='<?= base_url('public/reporte_familias/generarReporte') ?>?idRegistroDiario=<?= esc($registro->idRegistroDiario) ?>'">
+                                                    <i class="fas fa-print"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                    
+                            <!-- Paginación -->
+                            <div class="d-flex justify-content-center">
+                                <?= $pager->links('group1', 'bootstrap_pagination') ?>
+                            </div>
+                        <?php else: ?>
+                            <div class="alert alert-info">
+                                Por favor, seleccione una fecha de requisición para mostrar los resultados.
+                            </div>
+                        <?php endif; ?>
 
-                   <!-- Enlaces de paginación -->
-                    <div class="d-flex justify-content-center">
-                        <?= $pager->links('group1', 'bootstrap_pagination') ?>
-                    </div>
 
-                </div>
             </div>
         </div>
     </div>
@@ -92,7 +93,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="detallesModalLabel">Detalles del Registro Diario</h5>
+                <h5 class="modal-title" id="detallesModalLabel">Detalles del registro diario</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -130,8 +131,8 @@ function mostrarDetalles(idRegistroDiario) {
                         <tr>
                             <th>Grado</th>
                             <th>Docente</th>
-                            <th>Cantidad de Niños</th>
-                            <th>Cantidad de Niñas</th>
+                            <th>Cantidad de niños</th>
+                            <th>Cantidad de niñas</th>
                             <th>Total</th>
                         </tr>
                     </thead>

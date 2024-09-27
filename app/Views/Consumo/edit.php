@@ -107,7 +107,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>Nº</th>
                                     <th>Código de lote</th>
                                     <th>Fechas</th>
                                     <th>Unidades de caja</th>

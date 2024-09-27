@@ -169,4 +169,20 @@ class Productos extends BaseController
             'descripcionProducto' => $descripcionProducto
         ]);
     }
+    
+    public function inventarioGeneral()
+{
+
+    $productos = $this->productoModel
+    
+        ->select('productos.descripcionProducto, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia')
+        ->join('productos_lotes', 'productos.idProducto = productos_lotes.idProducto', 'left')
+        ->groupBy('productos.idProducto')
+        ->orderBy('fechaVencimientoProxima', 'ASC')
+        ->get()
+        ->getResult();
+
+    return view('Reportes/inventario_general', ['productos' => $productos]);
+}
+
 }

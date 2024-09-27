@@ -75,3 +75,34 @@
          
     </ul>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebarToggleBtn = document.querySelector('.sidebar-toggler');
+        const sidebar = document.getElementById('sidebar');
+
+        sidebarToggleBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+        });
+    });
+</script>
+
+<style>
+    @media (max-width: 768px) {
+        .sidebar {
+            position: fixed;
+            width: 250px; /* Ajusta según sea necesario */
+            top: 0;
+            left: -250px; /* Oculta el menú fuera de la vista */
+            transition: left 0.3s ease; /* Animación suave */
+        }
+
+        .sidebar.active {
+            left: 0; /* Muestra el menú */
+        }
+
+        .sidebar-toggler {
+            display: block; /* Asegúrate de que el botón esté visible */
+        }
+    }
+</style>

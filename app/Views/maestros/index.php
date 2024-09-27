@@ -38,21 +38,21 @@
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Formulario de filtros -->
                     <form action="<?= site_url('maestros/index') ?>" method="get">
-                        <div class="row mb-4">
-                            <div class="col-md-4">
+                        <div class="row mb-3">
+                            <div class="col-md-3">
                                 <input type="text" name="nombreCompleto" class="form-control" placeholder="Nombre Completo">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <input type="text" name="nip" class="form-control" placeholder="NIP">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <select name="estado" class="form-control">
                                     <option value="">Estado</option>
                                     <option value="Activo">Activo</option>
                                     <option value="Inactivo">Inactivo</option>
                                 </select>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <select name="tipo" class="form-control">
                                     <option value="">Tipo</option>
                                     <option value="Docente">Docente</option>
@@ -63,7 +63,7 @@
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <button type="submit" class="btn btn-primary">Filtrar</button>
                             <a href="<?= site_url('maestros/index') ?>" class="btn btn-secondary ms-2">Limpiar</a>
-                            <a href="<?= site_url('maestros/inicializarSaldosPermisos'); ?>" class="btn btn-primary">Inicializar Saldos de Permisos</a>
+                            <a href="<?= site_url('maestros/inicializarSaldosPermisos'); ?>" class="btn btn-primary">Inicializar saldos de permisos</a>
                             <a href="<?= site_url('maestros/create') ?>" class="btn btn-primary">
                                 <i class="mdi mdi-plus"></i> Agregar
                             </a>

@@ -15,6 +15,10 @@ use Psr\Log\LoggerInterface;
 class ProductosLotes extends BaseController
 {
     protected $productoLoteModel;
+    public function __construct()
+    {
+        $this->productoLoteModel = new ProductoLoteModel(); // Instancia tu modelo
+    }
 
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
@@ -30,10 +34,16 @@ class ProductosLotes extends BaseController
         }
     }
 
-    public function index($id)
+    public function index($id = null)
     {
         helper('url');
-
+    
+        // Verifica si se proporcionó un ID
+        if ($id === null) {
+            // Aquí puedes redirigir a una página o mostrar un mensaje
+            return redirect()->to(site_url('productos'))->with('error', 'ID del producto no especificado.');
+        }
+    
         $productosLotes = $this->productoLoteModel
             ->select('
                 productos_lotes.idProductoLote,
@@ -56,17 +66,18 @@ class ProductosLotes extends BaseController
             ->orderBy('productos_lotes.fechaVencimiento', 'ASC')
             ->get()
             ->getResult();
-
-            $productoModel = new ProductoModel();
-            $producto = $productoModel->select('descripcionProducto')->where('idProducto', $id)->get()->getRow(); 
-
-            $descripcionProducto = $producto ? $producto->descripcionProducto : 'Producto no encontrado';
-
-            return view('productos/productosLotes', [
-                'productosLotes' => $productosLotes, 
-                'descripcionProducto' => $descripcionProducto
-            ]);
+    
+        $productoModel = new ProductoModel();
+        $producto = $productoModel->select('descripcionProducto')->where('idProducto', $id)->get()->getRow(); 
+    
+        $descripcionProducto = $producto ? $producto->descripcionProducto : 'Producto no encontrado';
+    
+        return view('productos/productosLotes', [
+            'productosLotes' => $productosLotes, 
+            'descripcionProducto' => $descripcionProducto
+        ]);
     }
+    
 
     public function create()
     {
@@ -225,4 +236,39 @@ class ProductosLotes extends BaseController
             'codigoLote' => $codigoLote
         ]);
     }
+    
+    
+    public function reportesLotes()
+    {
+            $productoModel = new ProductoModel();
+    
+            return view('Reportes/productos_lotes', [
+                'productos' => $productoModel->findAll()
+            ]);
+    }
+    
+    
+    public function getLotes($id)
+{
+    // Obtener los lotes del producto seleccionado
+    $productosLotes = $this->productoLoteModel
+        ->select('
+            productos_lotes.codigoLote,
+            productos_lotes.fechaIngreso,
+            productos_lotes.fechaVencimiento,
+            productos_lotes.existenciaCaja,
+            udm_caja.nombreCaja as udmCaja,
+            productos_lotes.existenciaIndividual,
+            udm_individual.nombreIndividual as udmIndividual,
+            productos_lotes.existenciaTotal
+        ')
+        ->join('udm_caja', 'productos_lotes.idUdmCaja = udm_caja.idUdmCaja', 'left')
+        ->join('udm_individual', 'productos_lotes.idUdmIndividual = udm_individual.idUdmIndividual', 'left')
+        ->where('productos_lotes.idProducto', $id)
+        ->findAll();
+
+        // Retornar los lotes en formato JSON
+    return $this->response->setJSON($productosLotes);
+}
+
 }

@@ -24,13 +24,14 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Reporte de Solicitudes de Productos</h4>
+                    <h4 class="header-title text-center">Reporte de solicitudes de productos</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Formulario de filtro por fecha de requisición -->
                     <form action="<?= site_url('solicitudproductos/reporteS') ?>" method="get" class="mb-4">
                         <div class="row g-3">
                             <div class="col-md-4">
+                            <label for="fecha_inicio"><strong style="color: black;">Fecha solicitud</strong></label>
                                 <input type="date" name="fecha_solicitud" class="form-control" placeholder="Fecha de Requisición" value="<?= esc($filters['fecha_solicitud'] ?? '') ?>">
                             </div>
                         </div>
@@ -39,7 +40,7 @@
                             <a href="<?= site_url('solicitudproductos/reporteS') ?>" class="btn btn-secondary ms-2">Limpiar</a>
                             <!-- Botón para generar el PDF si hay una fecha seleccionada -->
                             <?php if (!empty($filters['fecha_solicitud'])): ?>
-                                <a href="<?= site_url('reporte-pdf/generar-reporte-solicitud-productos') ?>?fecha_solicitud=<?= esc($filters['fecha_solicitud']) ?>" class="btn btn-success">Generar Reporte PDF</a>
+                                <a href="<?= site_url('reporte-pdf/generar-reporte-solicitud-productos') ?>?fecha_solicitud=<?= esc($filters['fecha_solicitud']) ?>" class="btn btn-primary">Generar PDF</a>
                             <?php endif; ?>
                         </div>
                     </form>
@@ -50,10 +51,10 @@
                             <table class="table" style="color: #000;">
                                 <thead>
                                     <tr>
-                                        <th>Fecha de Requisición</th>
-                                        <th>Comida a Preparar</th>
-                                        <th>Responsable de Entrega</th>
-                                        <th>Responsable de Recepción</th>
+                                        <th>Fecha de requisición</th>
+                                        <th>Comida a preparar</th>
+                                        <th>Responsable de entrega</th>
+                                        <th>Responsable de recepción</th>
                                         <th>Estado</th>
                                     </tr>
                                 </thead>
@@ -72,9 +73,10 @@
                         </div>
 
                         <!-- Enlaces de paginación -->
-                        <?php if ($pager): ?>
-                            <?= $pager->links() ?>
-                        <?php endif; ?>
+                        <div class="d-flex justify-content-center">
+                        <?= $pager->links('group1', 'bootstrap_pagination') ?>
+                    </div>
+                    </div>
                     <?php else: ?>
                         <div class="alert alert-info">
                             Por favor, seleccione una fecha de requisición para mostrar los resultados.

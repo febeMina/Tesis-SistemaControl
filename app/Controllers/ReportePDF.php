@@ -126,9 +126,13 @@ class ReportePDF extends BaseController
         // Generar cabecera de permisos y saldos dinámicamente
         foreach ($tipoPermisos as $index => $tipoPermiso) {
             $pdf->SetXY($x + ($index * $ancho * 2), 45);
-            $pdf->MultiCell($ancho, 4,  utf8_decode($tipoPermiso['nombre'] . ' (' . $tipoPermiso['cantidadDias'] . ' DÍAS AL AÑO)'), 1, 'C');
+            $pdf->MultiCell($ancho, 4,  utf8_decode($tipoPermiso['nombre'] . ' (' . $tipoPermiso['cantidadDias'] . ' DÍAS AL AÑO)'), 0, 'C');
+            $pdf->SetXY($x + ($index * $ancho * 2), 45);
+            $pdf->Cell($ancho, 12, '', 1, 1, 'C'); 
             $pdf->SetXY($x + ($index * $ancho * 2) + $ancho, 45);
-            $pdf->MultiCell($ancho, 4, utf8_decode("SALDO"), 1, 'C');
+            $pdf->MultiCell($ancho, 4, utf8_decode("SALDO"), 0, 'C');
+            $pdf->SetXY($x + ($index * $ancho * 2) + $ancho, 45);
+            $pdf->Cell($ancho, 12, '', 1, 1, 'C'); 
         }
         
         $pdf->SetXY(10, 57);
@@ -328,14 +332,44 @@ class ReportePDF extends BaseController
             unset($posicionesPermisos);
         }
         // Espacio
-        //$pdf->Ln(10);
-        $pdf->SetXY(10, 170);
-        $pdf->Cell(65, 5, utf8_decode("IMPORTANTE: ANEXAR AL LISTADO DE PAGO DETALLANDO FECHAS Y SALDOS"), 0, 1, 'L');
-        $pdf->SetXY(10, 180);
-        $pdf->Cell(75, 5, utf8_decode("LUGAR Y FECHA:"), 0, 1, 'L');
-        $pdf->SetXY(10, 190);
-        $pdf->Cell(75, 5, utf8_decode("F:"), 0, 1, 'L');
-        
+       // Pie de página
+       $pdf->SetXY(10, 160);
+       $pdf->Cell(65, 5, utf8_decode("IMPORTANTE: ANEXAR AL LISTADO DE PAGO DETALLANDO FECHAS Y SALDOS"), 0, 1, 'L');
+
+     // Lugar y fecha con San Salvador y la fecha del sistema
+     $meses = array(
+        1 => 'enero',
+        2 => 'febrero',
+        3 => 'marzo',
+        4 => 'abril',
+        5 => 'mayo',
+        6 => 'junio',
+        7 => 'julio',
+        8 => 'agosto',
+        9 => 'septiembre',
+        10 => 'octubre',
+        11 => 'noviembre',
+        12 => 'diciembre'
+    );
+      // Obtener el mes actual en número
+$mesActual = date('n'); // Devuelve el mes sin ceros iniciales
+
+// Obtener la fecha del sistema en el formato deseado
+$fechaSistema = date('j') . ' ' . $meses[$mesActual] . ' del ' . date('Y');
+
+// Lugar y fecha con San Salvador y la fecha del sistema
+$pdf->SetXY(10, 170);
+$pdf->Cell(190, 5, utf8_decode("LUGAR Y FECHA: San Salvador, " . $fechaSistema . "  TERMINOLOGÍA: D: DÍA M: MES A: AÑO H: HORA M: MINUTOS"), 0, 1, 'L');
+       // Firmas
+       // Líneas para las firmas en la misma línea
+$pdf->SetXY(10, 180);
+$pdf->Cell(95, 5, utf8_decode("F: ___________________________"), 0, 0, 'C'); // Firma centrada
+$pdf->Cell(95, 5, utf8_decode("F: ___________________________"), 0, 0, 'R'); // Firma a la derecha
+
+// Textos debajo de las líneas de firma
+$pdf->SetXY(10, 185);
+$pdf->Cell(95, 5, utf8_decode("DIRECTOR(A)"), 0, 0, 'C'); // Texto centrado
+$pdf->Cell(95, 5, utf8_decode("SUBDIRECTOR(A)"), 0, 0, 'R'); // Texto a la derecha
         
         // Generar el PDF
         $pdf->Output('D', 'reporte_permisos.pdf');

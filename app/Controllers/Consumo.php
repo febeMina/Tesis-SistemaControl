@@ -114,7 +114,7 @@ class Consumo extends Controller
                 ->select('productos_lotes.idProductoLote, productos.descripcionProducto, productos_lotes.codigoLote, productos_lotes.existenciaTotal, productos_lotes.fechaVencimiento')
                 ->join('productos', 'productos.idProducto = productos_lotes.idProducto')
                 ->where('productos_lotes.existenciaTotal >', 0)
-                ->orderBy('productos.idProducto')
+                ->orderBy('productos_lotes.fechaVencimiento')
                 ->findAll();
 
             return view('consumo/edit', [

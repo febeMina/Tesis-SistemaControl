@@ -151,4 +151,41 @@ body {
     .sub-menu .nav-link {
         font-size: 13px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
     }
+    
+    /* Asegura que las palabras largas se dividan en varias líneas si es necesario */
+.sidebar .nav-link {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Asegura que el ancho del menú se ajuste para pantallas pequeñas */
+.sidebar {
+    width: 100%; /* Ajusta al 100% en pantallas pequeñas */
+}
+
+/* Flexbox para alinear correctamente los elementos del menú */
+.sidebar .menu-items {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mejor ajuste para submenús en pantallas pequeñas */
+.sidebar .nav-item .sub-menu {
+    margin-left: 15px;
+    font-size: 0.9rem;
+}
+
+/* Ajuste adicional para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 250px; /* Ajustar el ancho en pantallas pequeñas */
+        overflow-x: hidden;
+    }
+
+    .sidebar .menu-title {
+        font-size: 0.9rem; /* Tamaño de texto más pequeño para opciones largas */
+    }
+}
+
 }
