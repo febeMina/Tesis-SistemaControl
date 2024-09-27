@@ -29,7 +29,13 @@ class Home extends BaseController
         $db = \Config\Database::connect();
         $projectBuilder = $db->table('proyectos');
         //$proyectos = $projectBuilder->select('idProyectos', 'nombreProyecto','estado','meta','valorActual')->get()->getResult();
-        $metas = $projectBuilder->select(['nombreProyecto', 'meta', 'valorActual'])->where('anio', 2024)->get()->getResult();
+        $projectBuilder->select(['nombreProyecto', 'meta', 'valorActual']);
+        $projectBuilder->where('estado!=', 'Eliminado');
+        $projectBuilder->where('estado!=', 'Inactivo');
+        $projectBuilder->where('estado!=', 'Finalizado');
+        $metas =  $projectBuilder->get()->getResult();
+        
+       
         $json_data = json_encode($metas);
         return $this->response->setJSON($json_data);
     }

@@ -25,7 +25,7 @@
     <?php endif; ?>
 
     <?php if (session()->get('rol')=="Tesoreria"): ?>
-            <?=$this->include('includes/navbar/_navbar5') ?>
+            <?=$this->include('includes/navbar/_navbar3') ?>
     <?php endif; ?>
 
     <?php if (session()->get('rol')=="Contador"): ?>

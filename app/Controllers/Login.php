@@ -5,8 +5,12 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 
+
 class Login extends BaseController
 {
+
+   
+ 
     public function __construct()
     {
         helper('url');
@@ -22,26 +26,48 @@ class Login extends BaseController
     {
         return view('login/form');
     }
+
     public function signIn()
     {
-    
-        $userModel = new UserModel();
+        $maxIntento = 3;
+     
+        $userModel = new UserModel(); 
         $jsonUser = $this->request->getJSON();
         $response = [
             'status' => false,
             'message' => '',
             'data' => []
         ];
-    
+        
+     
         $user = $jsonUser->username;
         $password = $jsonUser->password;
     
         if (empty($user) || empty($password)) {
             $response['message'] = 'Por favor ingresa el usuario y la contraseña';
+
         } else {
+
             $username = $userModel->where('usuario', $user)->first();
+             
+            if (empty($username)) {
+                $response['message'] = 'El usuario no existe.';
+                return $this->response->setJSON($response);
+            }
+                // Check if user is inactive
+                if ($username['estado'] === 'Inactivo') {
+                    $response['message'] = 'El usuario está inactivo. Por favor, contacta al administrador.';
+                    return $this->response->setJSON($response);
+                }
+                
+                if ($username['estado'] === 'Eliminado') {
+                    $response['message'] = 'El usuario ha sido eliminado.';
+                    return $this->response->setJSON($response);
+                } 
+           
             if ($username !== null && isset($username['clave']) && isset($username['usuario'])) {
                 // Verificar la contraseña encriptada
+
                 if (password_verify($password, $username['clave'])) {
                     $response['status'] = true;
                     $response['message'] = 'Sesión iniciada correctamente';
@@ -63,17 +89,77 @@ class Login extends BaseController
                     ];
     
                     $session->set($userData);
+                    $session->remove('loginAttempts'); // Reset attempts on success
+
                 } else {
-                    $response['message'] = 'Usuario o contraseña incorrecta';
+                    
+                                        // Increment attempt count
+                            $session = session();
+                            $attempts = $session->get('loginAttempts') ?? 0;
+                            $attempts++;
+                            $session->set('loginAttempts', $attempts);
+
+                            $response['message'] = 'Usuario o contraseña incorrecta. Intento ' . $attempts;
+
+                            if ($attempts >= $maxIntento) {
+                                // Optionally, you can block the user here
+                                // $userModel->setEstadoInactivo($username['idUsuarios']);
+                                $userModel->CambioEstadoInactivo($username['idUsuarios']);
+                                
+                                $response['message'] = 'Usuario Bloqueado';
+                                return $this->response->setJSON($response);
+                            }
+
                 }
             } else {
-                $response['message'] = 'Usuario o contraseña incorrecta';
+                     
+                 // Increment attempt count
+                
+                      // Increment attempt count
+                        $session = session();
+                        $attempts = $session->get('loginAttempts') ?? 0;
+                        $attempts++;
+                        $session->set('loginAttempts', $attempts);
+
+                        $response['message'] = 'Usuario o contraseña incorrecta. Intento ' . $attempts;
+
+                        if ($attempts >= $maxIntento) {
+                            $response['message'] = 'Usuario fue bloqueado';
+                            return $this->response->setJSON($response);
+                        }
+               
             }
         }
     
         return $this->response->setJSON($response);
     }
     
+    public function beforeRequest()
+    {
+        $session = session();
+
+         // Comprobar si la sesión está configurada y si existe la última actividad
+        if ($session->has('lastActivity')) {
+            
+              $lastActivity = $session->get('lastActivity');
+           
+           $currentTime = time();
+    
+         //Comprueba si la última actividad fue hace más de 5 minutos
+            
+            if (($currentTime - $lastActivity) > 100) { // 300 seconds = 5 minutes
+                        
+                    $session->destroy();
+                    return $this->response->setJSON(['status' => false,'message' => 'Sesión cerrada por inactividad']);
+                                                      }
+                                                    }
+                    // Update last activity time
+                    $session->set('lastActivity', time());
+    }
+    
+    
+   
+
 
     public function logout()
     {
@@ -83,4 +169,12 @@ class Login extends BaseController
             'message' => 'Sesion cerrada correctamente'
         ]);
     }
+
+    public function someAction()
+    {
+        
+        $this->beforeRequest();
+      
+    }
+
 }

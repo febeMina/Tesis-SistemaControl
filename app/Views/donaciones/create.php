@@ -23,13 +23,14 @@
                       
                      <div class="form-row"> 
                               <div class="form-group col-md-9">
-                              <label for="nombre_completo" style="color: #000;"><i class="fas fa-hands-holding-circle"></i> Tipo de Donante</label>
-                            <select class="form-control" id="TipoDonante" name="TipoDonante"  required>
-                                        <option value="">Seleccione...</option>
-                                        <option value="INTERNO">INTERNO</option>
-                                        <option value="EXTERNO">EXTERNO</option>
-                             </select>
-                                </div>
+                               <!-- Tipo de Donante -->
+                                            
+                                                <label style="color: #000;"><i class="fas fa-hands-holding-circle"></i> Tipo de Donante</label>
+                                                <div>
+                                                    <label style="color: #000;"> <input type="radio" name="TipoDonante" value="INTERNO" required>  INTERNO </label>
+                                                    <label style="color: #000;"><input type="radio" name="TipoDonante" value="EXTERNO" required>  EXTERNO </label>
+                                                </div>
+                                    </div>
                                 <div class="form-group col-md-3">
                                 <a href="<?= site_url('padres/create') ?>" class="btn btn-edit">
                                  <i class="fa-square-plus"></i> + Donante <!-- Icono de Material Design Icons -->
@@ -39,13 +40,14 @@
                     
                     
                     <!-- Datos de la personas  AQUI VAMOS-->
-                      <div class="form-group">
+                    
+                          <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fas fa-user"></i> Nombre Responsable</label>
                             <select class="form-control" id="NombreDonante" name="NombreDonante" required>
                             <option value="">Seleccione...</option>
                             <?php foreach ($responsables as $responsable) : ?>
                                    
-                                   <option value="<?= $responsable->idDatosResponsable ?>"> <?= $responsable->nombreCompleto ?></option>
+                                   <option value="<?= $responsable->idDatosResponsable ?>" class="<?= $responsable->tipoAsociado ?>"> <?= $responsable->nombreCompleto ?></option>
                                 
                                    <?php endforeach; ?>
                              </select>
@@ -55,7 +57,7 @@
                          <div class="form-row"> 
                          <div class="form-group col-md-6">
                          <label for="nombre_completo" style="color: #000;"><i class="fas fa-dollar-sign"></i> Cantidad ($)</label>
-                         <input type="number" class="form-control" id="cantidad" name="cantidad" oninput="actualizarTexto()" required>
+                         <input type="number" class="form-control" id="cantidad" name="cantidad" oninput="validarInput(event)"   required>
                          </div>
                          <div class="form-group col-md-6">
                          <label for="nombre_completo" style="color: #000;"><i class="fas fa-hands-holding-circle"></i> Proyectos a asignar</label>
@@ -65,7 +67,7 @@
                                 <?php endforeach; ?>
                              </select>
                          </div>
-                           
+                            
                         </div>
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fa-solid fa-money-check-dollar"></i> Cantidad en letras</label>
@@ -74,7 +76,7 @@
 
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"><i class="fa-solid fa-pen-to-square"></i> Concepto</label>
-                            <input type="text" class="form-control" id="concepto" name="concepto" required>
+                            <input type="text" class="form-control" id="descripcion" name="descripcion" required>
                         </div>
                         <div class="form-group">
                             <label for="nombre_completo" style="color: #000;"> <i class="fa-solid fa-calendar-days"></i> Fecha de Donación</label>
@@ -97,81 +99,83 @@
 <!-- Cargar jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
+<!-- numeros positivos -->
+
 <script>
-
-        function cargarDonadoresPorTipo() {
-
-        const tipoDonante = document.querySelector('#TipoDonante').value;
-
-        fetch('donaciones/tipoDonador')
-        .then(response => response.json())
-        .then(data => {
-            // Aquí puedes trabajar con los datos recibidos (por ejemplo, mostrarlos en la consola)
-            console.log(data);
-        
-        })
-        .catch(error => {
-            console.error('Error al obtener datos:', error);
-        });
-
-        }
-
-</script>
-<!-- numeros a letras -->
-<script>
-    // Función para convertir número a letras
-        function numeroALetras(numero) {
-            const unidad = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve'];
-            const decenas = ['diez', 'veinte', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
-            const centenas = ['cien', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
-
-            numero = parseInt(numero);
-            if (isNaN(numero)) {
-                return '';
-            }
-
-            if (numero < 0 || numero > 999) {
-                return 'Número fuera de rango';
-            }
-
-            let resultado = '';
+  function validarInput(event) {
+            const input = event.target.value;
+            // Verificar si es un número y no es negativo
+            if (input < 0 || input.includes('e') || isNaN(input)) {
+                alert("Por favor, introduce un número positivo sin la letra 'e'.");
+                event.target.value = ''; // Limpiar el input si es inválido
+            } else {
+                // Si es válido, llamar a la función para convertir a letras
+                const numeroEnLetras = numeroALetras(input);
             
-            if (numero >= 100) {
-                let c = Math.floor(numero / 100) * 100;
-                resultado += centenas[c / 100 - 1];
-                numero -= c;
-                if (numero > 0) {
-                    resultado += ' ';
-                }
+                const numero = document.getElementById('cantidad').value;
+                const letras = numeroALetras(numero);
+                document.getElementById('cantidadLetras').value = letras;
             }
-
-            if (numero >= 10) {
-                let d = Math.floor(numero / 10) * 10;
-                resultado += decenas[d / 10 - 1];
-                numero -= d;
-                if (numero > 0) {
-                    resultado += ' ';
-                }
-            }
-
-            if (numero > 0) {
-                resultado += unidad[numero];
-            }
-
-            return resultado;
         }
 
-        // Función para actualizar el campo de texto
-        function actualizarTexto() {
-            const numero = document.getElementById('cantidad').value;
-            const letras = numeroALetras(numero);
-            document.getElementById('cantidadLetras').value = letras;
+        function numeroALetras(numero) {
+            // Función simple para convertir números a letras (solo para números enteros)
+            const unidades = [
+                '', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 
+                'seis', 'siete', 'ocho', 'nueve', 'diez', 
+                'once', 'doce', 'trece', 'catorce', 'quince', 
+                'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve'
+            ];
+            const decenas = [
+                '', '', 'veinte', 'treinta', 'cuarenta', 'cincuenta', 
+                'sesenta', 'setenta', 'ochenta', 'noventa'
+            ];
+            const centenas = [
+                '', 'ciento', 'doscientos', 'trescientos', 
+                'cuatrocientos', 'quinientos', 'seiscientos', 
+                'setecientos', 'ochocientos', 'novecientos'
+            ];
+            
+            let letras = '';
+            const num = parseInt(numero);
+
+            if (num < 20) {
+                letras = unidades[num];
+            } else if (num < 100) {
+                letras = decenas[Math.floor(num / 10)] + (num % 10 !== 0 ? ' y ' + unidades[num % 10] : '');
+            } else if (num < 1000) {
+                letras = centenas[Math.floor(num / 100)] + (num % 100 !== 0 ? ' ' + numeroALetras(num % 100) : '');
+            } else {
+                letras = 'Número demasiado grande';
+            }
+
+            return letras;
         }
+
+       
 </script>
+
+<!-- Filtrado de tipo de datos -->
+<script>
+    document.querySelectorAll('input[name="TipoDonante"]').forEach((radio) => {
+        radio.addEventListener('change', function() {
+            let selectedType = this.value;
+            let options = document.querySelectorAll('#NombreDonante option');
+            options.forEach(option => {
+                if (option.value) {
+                    option.style.display = option.classList.contains(selectedType) ? 'block' : 'none';
+                }
+            });
+            // Reset selection
+            document.getElementById('NombreDonante').value = '';
+        });
+    });
+</script>
+
 
 <!-- Tu script JavaScript -->
 <script>
-
     // Esperar a que se cargue el documento
     $(document).ready(function() {
         // Escuchar el evento submit del formulario
@@ -179,30 +183,43 @@
             // Evitar que el formulario se envíe automáticamente
             event.preventDefault();
 
-            // Enviar la solicitud AJAX para guardar el maestro
+            // Guardar la referencia al formulario
+            var form = $(this);
+
+            // Enviar la solicitud AJAX para  guardar el usuario
+            // JavaScript
             $.ajax({
-                url: $(this).attr('action'),
+                url: form.attr('action'),
                 method: 'POST',
-                data: $(this).serialize(),
+                data: form.serialize(),
                 success: function(response) {
                     console.log(response); // Verificar la respuesta en la consola del navegador
-                    if (response.success) {
+                    if (response && typeof response.success !== 'undefined' && response.success) {
                         // Mostrar el alert de confirmación
-                        var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                        alert += 'La donación ha sido registrada exitosamente.';
-                        alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-                        alert += '<span aria-hidden="true">&times;</span>';
-                        alert += '</button>';
-                        alert += '</div>';
-                        $(alert).insertBefore($('#createForm'));
+                        var successAlert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
+                        successAlert += 'El usuario ha sido creado exitosamente.';
+                        successAlert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                        successAlert += '<span aria-hidden="true">&times;</span>';
+                        successAlert += '</button>';
+                        successAlert += '</div>';
+                        $(successAlert).insertBefore(form);
+
+                        // Redirigir al índice de usuarios después de 1 segundo
+                        setTimeout(function() {
+                            window.location.href = "<?= base_url('public/donaciones') ?>";
+                        }, 1000);
+                    } else {
+                        // Mostrar el mensaje de error si existe
+                        console.error('Error: ' + (response && response.error ? response.error : 'undefined'));
                     }
+                },
+                error: function(xhr, status, error) {
+                    console.error(error); // Imprimir cualquier error en la consola
                 }
             });
+
         });
     });
-
-
-    
 </script>
 
 

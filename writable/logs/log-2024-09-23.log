@@ -1,0 +1,615 @@
+INFO - 2024-09-23 15:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 15:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 15:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 15:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 15:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 15:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 15:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 15:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 16:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 16:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 16:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:16:39 --> ErrorException: Undefined variable $usuario
+in APPPATH\Views\usuario\edit.php on line 13.
+ 1 APPPATH\Views\usuario\edit.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\usuario\\edit.php', 13)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\usuario\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('usuario/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('usuario/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:21:34 --> ErrorException: Attempt to read property "idDatosResponsable" on array
+in APPPATH\Views\donaciones\edit.php on line 44.
+ 1 APPPATH\Views\donaciones\edit.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDatosResponsable" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:48:55 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:49:41 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 16:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:49:50 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:51:39 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 16:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:52:29 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:55:10 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 16:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 16:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 16:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 16:56:06 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:08:39 --> ErrorException: Attempt to read property "idDatosResponsable" on array
+in APPPATH\Views\donaciones\edit.php on line 44.
+ 1 APPPATH\Views\donaciones\edit.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDatosResponsable" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:11:15 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:15:58 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:16:59 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:18:02 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(118): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:18:37 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(118): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('4')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:29:33 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(118): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:38:57 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:39:04 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:39:09 --> ErrorException: Attempt to read property "cantidad" on array
+in APPPATH\Views\donaciones\edit.php on line 52.
+ 1 APPPATH\Views\donaciones\edit.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 52)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:39:50 --> ErrorException: Attempt to read property "idProyectos" on array
+in APPPATH\Views\donaciones\edit.php on line 58.
+ 1 APPPATH\Views\donaciones\edit.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idProyectos" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:45:29 --> ErrorException: Attempt to read property "idProyectos" on array
+in APPPATH\Views\donaciones\edit.php on line 58.
+ 1 APPPATH\Views\donaciones\edit.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idProyectos" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:46:09 --> ErrorException: Attempt to read property "idProyectos" on array
+in APPPATH\Views\donaciones\edit.php on line 58.
+ 1 APPPATH\Views\donaciones\edit.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idProyectos" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:46:26 --> ErrorException: Attempt to read property "idProyectos" on array
+in APPPATH\Views\donaciones\edit.php on line 58.
+ 1 APPPATH\Views\donaciones\edit.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idProyectos" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 58)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('4')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:49:40 --> ErrorException: Attempt to read property "descripcion" on array
+in APPPATH\Views\donaciones\edit.php on line 67.
+ 1 APPPATH\Views\donaciones\edit.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "descripcion" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('4')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 17:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:49:45 --> ErrorException: Attempt to read property "descripcion" on array
+in APPPATH\Views\donaciones\edit.php on line 67.
+ 1 APPPATH\Views\donaciones\edit.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "descripcion" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 17:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 17:59:30 --> ErrorException: Attempt to read property "descripcion" on array
+in APPPATH\Views\donaciones\edit.php on line 67.
+ 1 APPPATH\Views\donaciones\edit.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "descripcion" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:00:10 --> ErrorException: Attempt to read property "descripcion" on array
+in APPPATH\Views\donaciones\edit.php on line 67.
+ 1 APPPATH\Views\donaciones\edit.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "descripcion" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:03:55 --> ErrorException: Undefined variable $responsables
+in APPPATH\Views\donaciones\edit.php on line 41.
+ 1 APPPATH\Views\donaciones\edit.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responsables', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:15:53 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(116): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:24:01 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(125): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:25:27 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(126): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:26:21 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:28:31 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:35:03 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(119): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:35:23 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(119): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:35:49 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(119): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:47:26 --> ErrorException: Attempt to read property "idDonaciones" on array
+in APPPATH\Views\donaciones\edit.php on line 21.
+ 1 APPPATH\Views\donaciones\edit.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idDonaciones" on array', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:55:10 --> ErrorException: Undefined property: stdClass::$cantidadLetras
+in APPPATH\Views\donaciones\edit.php on line 68.
+ 1 APPPATH\Views\donaciones\edit.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cantidadLetras', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:56:16 --> ErrorException: Undefined property: stdClass::$descripcion
+in APPPATH\Views\donaciones\edit.php on line 77.
+ 1 APPPATH\Views\donaciones\edit.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$descripcion', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 77)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 18:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 18:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 18:59:50 --> ErrorException: Undefined variable $donaciones
+in APPPATH\Views\donaciones\edit.php on line 42.
+ 1 APPPATH\Views\donaciones\edit.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $donaciones', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 19:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 19:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 19:00:44 --> ErrorException: Undefined variable $donaciones
+in APPPATH\Views\donaciones\edit.php on line 59.
+ 1 APPPATH\Views\donaciones\edit.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $donaciones', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 19:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 21:13:09 --> ErrorException: Undefined variable $usuario
+in APPPATH\Views\donaciones\edit.php on line 83.
+ 1 APPPATH\Views\donaciones\edit.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php', 83)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\Tesis-SistemaControl\\app\\Views\\donaciones\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('donaciones/edit', [], true)
+ 5 APPPATH\Controllers\Donaciones.php(117): view('donaciones/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 21:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 21:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:31:43 --> ErrorException: Undefined property: App\Controllers\Login::$userModel
+in APPPATH\Controllers\Login.php on line 46.
+ 1 APPPATH\Controllers\Login.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$userModel', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Login.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 23:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:36:18 --> ErrorException: Undefined property: App\Controllers\Login::$userModel
+in APPPATH\Controllers\Login.php on line 46.
+ 1 APPPATH\Controllers\Login.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$userModel', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Login.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-23 23:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-23 23:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-23 23:36:36 --> ErrorException: Undefined property: App\Controllers\Login::$userModel
+in APPPATH\Controllers\Login.php on line 46.
+ 1 APPPATH\Controllers\Login.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$userModel', 'C:\\laragon\\www\\Tesis-SistemaControl\\app\\Controllers\\Login.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Login->signIn()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

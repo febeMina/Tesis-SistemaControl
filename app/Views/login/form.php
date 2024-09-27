@@ -20,7 +20,9 @@
                     <div class="form-group">
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control form-control-lg" name="password" id="password" placeholder="Contraseña" required>
+                        
                     </div>
+                    
                     <div class="mt-3">
                         <button id="loginBtn" type="button" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">INICIAR SESIÓN</button>
                     </div>

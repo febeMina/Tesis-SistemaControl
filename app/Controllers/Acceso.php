@@ -24,6 +24,8 @@ class Acceso extends BaseController
         $builder = $db->table('usuarios');
         $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, usuarios.idRol, rol.nombreRol');
         $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
+        $builder->where('usuarios.usuario !=', 'admin'); // Filtrar usuarios diferentes a "admin"
+        $builder->where('usuarios.estado !=', 'Eliminado');
         $usuario = $builder->get()->getResult();
 
         // Obtener la lista de roles

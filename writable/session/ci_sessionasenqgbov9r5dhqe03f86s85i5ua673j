@@ -1,0 +1,11 @@
+__ci_last_regenerate|i:1727422344;_ci_previous_url|s:62:"http://localhost/Tesis-SistemaControl/public/donaciones/edit/3";usuario|s:4:"febe";id|s:1:"1";rol|s:13:"Administrador";isLoggedIn|b:1;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:8:{s:11:"TipoDonante";s:7:"INTERNO";s:13:"NombreDonante";s:2:"16";s:8:"cantidad";s:2:"35";s:10:"idProyecto";s:1:"1";s:14:"cantidadLetras";s:13:"treinta cinco";s:11:"descripcion";s:5:"safsg";s:5:"fecha";s:10:"2024-09-25";s:6:"estado";s:6:"Activo";}}__ci_vars|a:3:{s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";s:5:"error";s:3:"old";}_ci_validation_errors|a:3:{s:13:"fechaDonacion";s:36:"The fechaDonacion field is required.";s:11:"idProyectos";s:34:"The idProyectos field is required.";s:18:"idDatosResponsable";s:41:"The idDatosResponsable field is required.";}error|s:350:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>The fechaDonacion field is required.</li>
+					<li>The idProyectos field is required.</li>
+					<li>The idDatosResponsable field is required.</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";

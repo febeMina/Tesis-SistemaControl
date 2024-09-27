@@ -11,4 +11,16 @@ class UserModel extends Model
     protected $allowedFields = [ 'usuario', 'clave', 'estado', 'idRol']; // Campos permitidos para la asignación masiva
 
     // Puedes agregar métodos para manejar la autenticación aquí
+    public function CambioEstadoInactivo($id)
+    {
+        $data = [
+            'estado' => 'Inactivo',
+        ];
+
+        return $this->db->table('usuarios')
+                        ->where('idUsuarios', $id)
+                        ->update($data);
+    }
+
+   
 }

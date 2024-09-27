@@ -1,0 +1,86 @@
+INFO - 2024-09-22 22:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-22 22:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-22 22:05:12 --> mysqli_sql_exception: Unknown column 'productos_lotes.idProducto' in 'on clause' in C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `product...', 0)
+#1 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product...')
+#2 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product...')
+#3 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `product...', Array, false)
+#4 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Tesis-SistemaControl\app\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Productos->index()
+#7 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#8 C:\laragon\www\Tesis-SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Tesis-SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-22 22:05:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 2 SYSTEMPATH\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-22 22:05:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 4 SYSTEMPATH\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-22 22:05:12 --> [Caused by] mysqli_sql_exception: Unknown column 'productos_lotes.idProducto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `productos`.*, MIN(productos_lotes.fechaVencimiento) as fechaVencimientoProxima, SUM(productos_lotes.existenciaTotal) as totalExistencia
+FROM `productos`
+LEFT JOIN `productos_lotes` ON `productos`.`idProducto` = `productos_lotes`.`idProducto`
+GROUP BY `productos`.`idProducto`
+ORDER BY `fechaVencimientoProxima` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(877): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Productos.php(50): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Productos->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

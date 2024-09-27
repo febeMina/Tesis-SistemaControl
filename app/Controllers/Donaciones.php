@@ -26,7 +26,7 @@ class Donaciones extends Controller
         $builder->select('donaciones.idDonaciones, datos_responsable.nombreCompleto, donaciones.cantidad, donaciones.descripcion, donaciones.fechaDonacion, proyectos.nombreProyecto' );
         $builder->join('proyectos', 'proyectos.idProyectos = donaciones.idProyectos', 'inner');
         $builder->join('datos_responsable', 'datos_responsable.idDatosResponsable = donaciones.idDatosResponsable', 'inner');
-        $donaciones = $builder->get()->getResult();
+        $donaciones = $builder->where('donaciones.estado !=', 'Eliminado')->get()->getResult();
         return view('donaciones/index', ['donaciones' => $donaciones]);
     
         //return view('donaciones/index');
@@ -36,11 +36,15 @@ class Donaciones extends Controller
     {
         $db = \Config\Database::connect();
         $projectBuilder = $db->table('proyectos');
-        $proyectos = $projectBuilder->select('idProyectos, nombreProyecto')->where('estado !=', 'Eliminado')->get()->getResult();
-        
+       $projectBuilder->select('idProyectos, nombreProyecto');
+       $projectBuilder->where('estado !=', 'Eliminado')->Where('estado !=', 'Inactivo');
+       $proyectos = $projectBuilder->get()->getResult();
+       
         $responsableBuilder = $db->table('datos_responsable');
-        $responsables = $responsableBuilder->select('idDatosResponsable, nombreCompleto, tipoAsociado')->get()->getResult();
-
+         $responsableBuilder->select('idDatosResponsable, nombreCompleto, estado, tipoAsociado');
+         $responsableBuilder->where('estado =', 'Activo'); // estado de persona 
+         $responsables = $responsableBuilder->get()->getResult();
+        
         return view('donaciones/create', ['proyectos' => $proyectos,'responsables' => $responsables]);
     }
     
@@ -72,24 +76,107 @@ class Donaciones extends Controller
 
         $donacionModel->insert($data);
 
-        return redirect()->to(site_url('donaciones'));
+        $db = \Config\Database::connect();
+        $projectBuilder = $db->table('proyectos');
+        $projectBuilder->select('valorActual')->where('idProyectos', $request->getVar('idProyecto'));
+        $vActual = $projectBuilder->get()->getRow()->valorActual;
+
+    
+        $nuevoValor = $vActual + ($request->getVar('cantidad'));
+
+        $data = [
+            'valorActual' => $nuevoValor
+        ];
+
+        $projectBuilder->where('idProyectos', $request->getVar('idProyecto'))->update($data);
+    
+        return $this->response->setJSON([
+            'success' => true,
+            'message' => 'Donación ingresada correctamente'
+        ]);
     }
 
     public function edit($id)
     {
+    
+        $db = \Config\Database::connect();
+        $builder = $db->table('donaciones');
+       // $builder->select('donaciones.idDonaciones, datos_responsable.nombreCompleto, donaciones.cantidad, donaciones.descripcion, donaciones.fechaDonacion, proyectos.nombreProyecto' );
+        //$builder->join('proyectos', 'proyectos.idProyectos = donaciones.idProyectos', 'inner');
+        //$builder->join('datos_responsable', 'datos_responsable.idDatosResponsable = donaciones.idDatosResponsable', 'inner');
+        $donacion = $builder->select('idDonaciones, cantidad, cantidadLetras, fechaDonacion, estado, descripcion, idProyectos, idDatosResponsable ')->where('idDonaciones', $id)->get()->getRow();
+
+        //$usuario = $builder->where('idUsuarios', $id)->get()->getRow();
        
+
+        if (!$donacion) {
+            return redirect()->to(base_url('public/donaciones'))->with('error', 'El registro de Donación no existe.');
+        }
+        
+        $projectBuilder = $db->table('proyectos');
+        $proyectos = $projectBuilder->select('idProyectos, nombreProyecto')->where('estado !=', 'Eliminado')->get()->getResult();
+
+        $responsablesBuilder = $db->table('datos_responsable');
+        $responsables = $responsablesBuilder->select('idDatosResponsable, nombreCompleto, tipoAsociado')->where('estado =', 'Activo')->get()->getResult();
+         
+       
+
+        return view('donaciones/edit', ['donacion' => $donacion, 'responsables' => $responsables, 'proyectos' => $proyectos]);
     }
+    
 
     public function update($id)
     {
+        $rules = [
+            'cantidad'  => 'required',
+            'cantidadLetras' => 'required',
+            'fecha'  => 'required',
+            'descripcion'  => 'required',
+            'idProyecto'  => 'required',
+            'estado'  => 'required',
+            'NombreDonante'  => 'required'
+            // Agrega aquí más reglas de validación según tus necesidades
+        ];
+           
+          
+        if (!$this->validate($rules)) {
+            return $this->response->setJSON([
+                  'success' => false,
+                   'error' => $this->validator->listErrors()
+                    ]);
+        }
+
+        $request = \Config\Services::request();
+        $donacionModel = new DonacionesModel();
+
+        $data = [
+            'cantidad' => $request->getVar('cantidad'),
+            'cantidadLetras' => $request->getVar('cantidadLetras'), // Corregido aquí
+            'fechaDonacion' => $request->getVar('fecha'),
+            'descripcion' => $request->getVar('descripcion'),
+            'estado' => $request->getVar('estado'),
+            'idProyectos' => $request->getVar('idProyecto'),
+            'idDatosResponsable' => $request->getVar('NombreDonante')
+        ];
+     
+             $donacionModel->update($id, $data);
+        
+
+             return $this->response->setJSON([
+                'success' => true,
+                'message' => 'Donación ingresada correctamente'
+            ]);
+
+    
        
+
     }
 
     public function delete($id)
     {
         $request = \Config\Services::request();
         $donacionModel = new DonacionesModel();
-        $donacionModel->update($id, ['estado' => 'inactivo']);
+        $donacionModel->update($id, ['estado' => 'Eliminado']);
 
     }
 
@@ -125,7 +212,8 @@ class Donaciones extends Controller
         );
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
-        $dompdf->stream();
+        // Asignamos nombre al fichero a descargar
+        $dompdf->stream(time()."Recibo.pdf");
     }
 
 

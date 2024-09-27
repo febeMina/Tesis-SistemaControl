@@ -18,13 +18,18 @@ class Filters extends BaseConfig
      * @var array<string, class-string|list<class-string>> [filter_name => classname]
      *                                                     or [filter_name => [classname1, classname2, ...]]
      */
-    public array $aliases = [
+    public array $aliases = [ 
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'sessionAdmin' => \App\Filters\sessionAdmin::class
+        'sessionAdmin' => \App\Filters\sessionAdmin::class,
+        'Administrador' => \App\Filters\AdministradorFilters::class,
+        'Cocina' => \App\Filters\CocinaFilters::class,
+        'Tesorero' => \App\Filters\TesoreroFilters::class,
+        'Contador' => \App\Filters\ContadorFilters::class,
+        'SubDireccion' => \App\Filters\SubDireccionFilters::class,
     ];
 
     /**

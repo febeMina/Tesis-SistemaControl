@@ -25,6 +25,8 @@ class Usuario extends BaseController
         $builder = $db->table('usuarios');
         $builder->select('usuarios.idUsuarios, usuarios.estado, usuarios.usuario, rol.nombreRol');
         $builder->join('rol', 'rol.idRol = usuarios.idRol', 'inner');
+        $builder->where('usuarios.usuario !=', 'admin'); // Filtrar usuarios diferentes a "admin"
+        $builder->where('usuarios.estado !=', 'Eliminado');
         $usuarios = $builder->get()->getResult();
         return view('usuario/index', ['usuarios' => $usuarios]);
     }
@@ -45,15 +47,17 @@ class Usuario extends BaseController
     public function store()
     {
         $rules = [
-            'usuario' => 'required',
+            'usuario' => 'required|is_unique[usuarios.usuario]',
             'clave' => 'required',
             // Agrega aquí más reglas de validación según tus necesidades
         ];
-
         if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
-        }
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => $this->validator->listErrors(),
+            ]);   
 
+                  }
         $db = \Config\Database::connect();
         $builder = $db->table('usuarios');
 
@@ -157,7 +161,7 @@ class Usuario extends BaseController
         // Eliminar el usuario
         $builder = $db->table('usuarios');
         $builder->where('idUsuarios', $id);
-        $builder->delete();
+        $builder->update(['estado' => 'Eliminado']);
 
         return redirect()->to(base_url('public/usuario'))->with('success', 'Usuario eliminado correctamente.');
     }
@@ -171,6 +175,60 @@ class Usuario extends BaseController
         return redirect()->to(base_url("public/usuario/edit/{$userId}"));
     }
     
+
+    public function cambioClave($id)
+    {
+   
+        $rules = [
+            'clave' => 'permit_empty',
+            // Agrega aquí más reglas de validación según tus necesidades
+        ];
+
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
+        }
+
+        $db = \Config\Database::connect();
+        $builder = $db->table('usuarios');
+
+        // Datos a actualizar
+        $data = [
+            'usuario' => $this->request->getPost('usuario'),
+            'usuarioModifica' => session()->get('usuario'), // Obtener el nombre de usuario de la sesión actual
+            'fechaModifica' => date('Y-m-d H:i:s') // Obtener la fecha y hora actual
+        ];
+
+        // Obtener la clave
+        $clave = (string) $this->request->getPost('clave');
+        if (!empty($clave)) {
+            $data['clave'] = password_hash($clave, PASSWORD_DEFAULT);
+        }
+
+        $builder->where('idUsuarios', $id);
+        $builder->update($data);
+
+        return redirect()->to(base_url('public/usuario'))->with('success', 'Usuario actualizado correctamente.');
+     
+    }
+  
+    public function editClave($id)
+    {
+        $db = \Config\Database::connect();
+
+        // Obtener el usuario a editar
+        $builder = $db->table('usuarios');
+        $builder->select('usuarios.idUsuarios,usuarios.clave, usuarios.estado, usuarios.usuario');
+        $usuario = $builder->where('idUsuarios', $id)->get()->getRow();
+
+        if (!$usuario) {
+            return redirect()->to(base_url('public/usuario'))->with('error', 'El usuario no existe.');
+        }
+
+        // Obtener la lista de roles
+
+        return view('configuraciones/cambioContrasena', ['usuario' => $usuario]);
+    }
+
     
 
 }

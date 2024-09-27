@@ -10,6 +10,13 @@
                     <h3 class="text-center">Nuevo Usuario</h3>
                 </div>
                 <div class="card-body">
+                    <!-- Mostrar errores -->
+                    <?php if (session()->getFlashdata('error')): ?>
+                        <div class="alert alert-danger">
+                            <?= session()->getFlashdata('error') ?>
+                        </div>
+                    <?php endif; ?>
+                    
                     <form id="createForm" action="<?= site_url('usuario/store') ?>" method="post">
                         <div class="form-group">
                             <label for="usuario" style="color: #000;"><i class="fas fa-user"></i> Usuario</label>

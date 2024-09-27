@@ -72,8 +72,19 @@
             <?php endforeach ?>
         </div>
         <div class="footer">
-            <p>Gracias por su generosa donación.</p>
-            <p>Fecha: <?= date('l, j F Y'); ?> </p>
+        <p>Gracias por su generosa donación.</p>
+        <?=
+            date_default_timezone_set('UTC');
+               // Configurar el idioma en Linux (UTF-8)
+               setlocale(LC_TIME, 'es_ES.UTF-8');
+            
+               // O en Windows
+               // setlocale(LC_TIME, 'spanish');
+               
+               $fechaActual = time(); // Obtener la fecha actual en formato Unix
+               $fechaEnEspañol = strftime("%d de %B de %Y", $fechaActual);
+               ?>
+            <p>Fecha: <?= $fechaEnEspañol ?> </p>
         </div>
     </div>
 

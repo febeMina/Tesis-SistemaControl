@@ -23,6 +23,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                     <div class="navbar-profile">
+
                        <!-- VALIDACIÓN FOTO DE PERFIL-->
                             <?php if (session()->get('rol')=="Administrador"): ?>
                                 <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/admin.PNG')?>" alt=""> 
@@ -32,15 +33,15 @@
                             <?php endif; ?>
 
                             <?php if (session()->get('rol')=="Tesoreria"): ?>
-                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/face14.jpg')?>" alt=""> 
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/tesorero.PNG')?>" alt=""> 
                             <?php endif; ?>
 
                             <?php if (session()->get('rol')=="Contador"): ?>
-                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/face13.jpg')?>" alt=""> 
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/contador.PNG')?>" alt=""> 
                             <?php endif; ?>
 
                             <?php if (session()->get('rol')=="SubDireccion"): ?>
-                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/face12.jpg')?>" alt=""> 
+                                <img class="img-xs rounded-circle" src="<?=base_url('public/assets/images/faces/suddirecion.PNG')?>" alt=""> 
                             <?php endif; ?>
                        
                          <!-- VALIDACIÓN FOTO DE PERFIL-->
@@ -55,18 +56,9 @@
                     aria-labelledby="profileDropdown">
                     <h6 class="p-3 mb-0">Perfil</h6>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-dark rounded-circle">
-                                <i class="mdi mdi-settings text-success"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content">
-                            <p class="preview-subject mb-1">Ajustes</p>
-                        </div>
-                    </a>
+                  
                     <div class="dropdown-divider"></div>
-                    <a id="cerraSesion" href="#" class="dropdown-item preview-item">
+                    <a id="cerraSesion" href="<?= site_url('usuario/edit/' . session()->get('id'))?>" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
                             <div class="preview-icon bg-dark rounded-circle">
                                 <i class="mdi mdi-logout text-danger"></i>
@@ -77,7 +69,7 @@
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <p class="p-3 mb-0 text-center">Configuraciones Avanzadas</p>
+                    
                 </div>
             </li>
         </ul>

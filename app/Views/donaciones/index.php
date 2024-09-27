@@ -25,7 +25,7 @@
                     </div>
                     <!-- Tabla de tipos de permiso -->
                     <div class="table-responsive">
-                        <table class="table" style="color: #000;">
+                        <table class="table" id="tb_dona" style="color: #000;"  >
                             <thead>
                                 <tr>
                                     <th>Nombre Donante</th>
@@ -41,16 +41,23 @@
                                         <td><?= $donacion->nombreCompleto; ?></td>
                                         <td><?= $donacion->cantidad; ?></td>
                                         <td><?= $donacion->nombreProyecto; ?></td>
-                                        <td><?= $donacion->fechaDonacion; ?></td>
+                                        <td><?= date("d/m/Y", strtotime($donacion->fechaDonacion)); ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="<?= site_url('donaciones/edit/' . $donacion->idDonaciones) ?>" class="btn btn-edit">
+                                                
+                                               
+
+                                                <?php if (session()->get('rol')=="Administrador"): ?>
+                                                    <a href="<?= site_url('donaciones/edit/' . $donacion->idDonaciones) ?>" class="btn btn-edit">
                                                     <i class="mdi mdi-pencil"></i> <!-- Icono de Material Design Icons -->
-                                                </a>
-                                                <!-- Agregar margen entre los botones -->
-                                                <a href="<?= site_url('donaciones/delete/' . $donacion->idDonaciones) ?>" class="btn btn-delete">
+                                                     </a>  
+
+                                                    <a href="<?= site_url('donaciones/delete/' . $donacion->idDonaciones) ?>" class="btn btn-delete">
                                                     <i class="mdi mdi-delete"></i> <!-- Icono de Material Design Icons -->
-                                                </a>
+                                                    </a>
+                                                <?php endif; ?>
+                                                <!-- Agregar margen entre los botones -->
+                                               
 
                                                 <a href="<?= site_url('donaciones/tiket/' . $donacion->idDonaciones) ?> " class="btn btn-info">
                                                     <i class="fas fa-print"></i> <!-- Icono de Material Design Icons -->
@@ -68,5 +75,10 @@
         </div>
     </div>
 </div>
+
+
+
+
+
 
 <?= $this->endSection() ?>
