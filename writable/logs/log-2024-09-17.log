@@ -181,3 +181,334 @@ ORDER BY `fechaVencimientoProxima` ASC', [], false)
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
 INFO - 2024-09-17 21:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 15:43:40 --> Datos del alumno: Array
+(
+    [nombreAlumno] => Nicol Rodriguez
+    [generoAlumno] => F
+    [NIE] => 866560
+    [estado] => Activo
+    [padre_id] => 45
+)
+
+INFO - 2024-09-17 15:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 15:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 16:52:38 --> Método store() llamado
+DEBUG - 2024-09-17 16:52:39 --> Datos del docente: {"nombreCompleto":"Katherine Rodriguez","nip":"2421","escalafon":"3423","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"9"}
+INFO - 2024-09-17 16:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 16:56:09 --> Método store() llamado
+DEBUG - 2024-09-17 16:56:09 --> Datos del docente: {"nombreCompleto":"Alejandro Rodriguez","nip":"743322","escalafon":"32467","fechaIngreso":"2020-10-10","estado":"Activo","tipo":"Administrativo","cargo":"Otro","idGrado":null}
+ERROR - 2024-09-17 16:56:09 --> mysqli_sql_exception: Column 'idGrado' cannot be null in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(229): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-17 16:56:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 16:56:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Alejandro Rodriguez\', \'743322\', \'32467\', \'2020-10-10\', \'Activo\', \'Administrativo\', \'Otro\', NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Alejandro Rodriguez\', \'743322\', \'32467\', \'2020-10-10\', \'Activo\', \'Administrativo\', \'Otro\', NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 16:56:09 --> [Caused by] mysqli_sql_exception: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Alejandro Rodriguez\', \'743322\', \'32467\', \'2020-10-10\', \'Activo\', \'Administrativo\', \'Otro\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Alejandro Rodriguez\', \'743322\', \'32467\', \'2020-10-10\', \'Activo\', \'Administrativo\', \'Otro\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Alejandro Rodriguez\', \'743322\', \'32467\', \'2020-10-10\', \'Activo\', \'Administrativo\', \'Otro\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-17 16:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 16:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 16:59:52 --> Método store() llamado
+DEBUG - 2024-09-17 16:59:52 --> Datos del docente: {"nombreCompleto":"Kelly Lopez","nip":"976679","escalafon":"956700","fechaIngreso":"2022-01-01","estado":"Activo","tipo":"Administrativo","cargo":"Secretaria","idGrado":null}
+ERROR - 2024-09-17 16:59:52 --> mysqli_sql_exception: Column 'idGrado' cannot be null in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(229): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-17 16:59:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 16:59:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 16:59:52 --> [Caused by] mysqli_sql_exception: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-09-17 17:00:55 --> Método store() llamado
+DEBUG - 2024-09-17 17:00:56 --> Datos del docente: {"nombreCompleto":"Kelly Lopez","nip":"976679","escalafon":"956700","fechaIngreso":"2022-01-01","estado":"Activo","tipo":"Administrativo","cargo":"Secretaria","idGrado":null}
+ERROR - 2024-09-17 17:00:56 --> mysqli_sql_exception: Column 'idGrado' cannot be null in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(229): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-17 17:00:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 17:00:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 17:00:56 --> [Caused by] mysqli_sql_exception: Column 'idGrado' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (\'Kelly Lopez\', \'976679\', \'956700\', \'2022-01-01\', \'Activo\', \'Administrativo\', \'Secretaria\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`, `idGrado`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:, :idGrado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Maestros.php(229): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-17 17:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:06:50 --> Método store() llamado
+DEBUG - 2024-09-17 17:06:51 --> Datos del docente: {"nombreCompleto":"Sofia Lopez","nip":"4265","escalafon":"2464","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+ERROR - 2024-09-17 17:06:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`docente`, CONSTRAINT `fk_docente_grado1` FOREIGN KEY (`idGrado`) REFERENCES `grado` (`idGrado`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `do...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `do...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `do...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `do...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\Maestros.php(227): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Maestros->store()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-17 17:06:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`docente`, CONSTRAINT `fk_docente_grado1` FOREIGN KEY (`idGrado`) REFERENCES `grado` (`idGrado`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Maestros.php(227): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 17:06:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`docente`, CONSTRAINT `fk_docente_grado1` FOREIGN KEY (`idGrado`) REFERENCES `grado` (`idGrado`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (\'Sofia Lopez\', \'4265\', \'2464\', \'2020-01-01\', \'Activo\', \'Administrativo\', \'Subdirector\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (\'Sofia Lopez\', \'4265\', \'2464\', \'2020-01-01\', \'Activo\', \'Administrativo\', \'Subdirector\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Maestros.php(227): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-17 17:06:51 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sistema_control`.`docente`, CONSTRAINT `fk_docente_grado1` FOREIGN KEY (`idGrado`) REFERENCES `grado` (`idGrado`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (\'Sofia Lopez\', \'4265\', \'2464\', \'2020-01-01\', \'Activo\', \'Administrativo\', \'Subdirector\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (\'Sofia Lopez\', \'4265\', \'2464\', \'2020-01-01\', \'Activo\', \'Administrativo\', \'Subdirector\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (\'Sofia Lopez\', \'4265\', \'2464\', \'2020-01-01\', \'Activo\', \'Administrativo\', \'Subdirector\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `docente` (`nombreCompleto`, `nip`, `escalafon`, `fechaIngreso`, `estado`, `tipo`, `cargo`) VALUES (:nombreCompleto:, :nip:, :escalafon:, :fechaIngreso:, :estado:, :tipo:, :cargo:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Maestros.php(227): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Maestros->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maestros))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+DEBUG - 2024-09-17 17:14:16 --> Método store() llamado
+DEBUG - 2024-09-17 17:14:16 --> Datos del docente: {"nombreCompleto":"Sofia Lopez","nip":"4265","escalafon":"2464","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Administrativo","cargo":"Subdirector"}
+INFO - 2024-09-17 17:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:19:41 --> Método store() llamado
+DEBUG - 2024-09-17 17:19:41 --> Datos del docente: {"nombreCompleto":"Cristian Rodriguez","nip":"344","escalafon":"43435","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"5"}
+INFO - 2024-09-17 17:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:21:59 --> Método store() llamado
+DEBUG - 2024-09-17 17:22:00 --> Datos del docente: {"nombreCompleto":"Misael Rodriguez","nip":"987667","escalafon":"4567","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"1"}
+INFO - 2024-09-17 17:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:22:21 --> Método store() llamado
+ERROR - 2024-09-17 17:22:21 --> Errores de validación: {"nip":"The nip field must contain a unique value.","escalafon":"The escalafon field must contain a unique value."}
+DEBUG - 2024-09-17 17:22:39 --> Método store() llamado
+DEBUG - 2024-09-17 17:22:39 --> Datos del docente: {"nombreCompleto":"Misael Rodriguez","nip":"9876678","escalafon":"45678","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"1"}
+INFO - 2024-09-17 17:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:23:03 --> Método store() llamado
+DEBUG - 2024-09-17 17:23:03 --> Datos del docente: {"nombreCompleto":"Misael Rodriguez","nip":"9876679","escalafon":"45679","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"1"}
+INFO - 2024-09-17 17:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:24:58 --> Datos del docente a actualizar: {"nombreCompleto":"Misael Rodriguez","nip":"98766790","escalafon":"456790","fechaIngreso":"2021-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"2"}
+INFO - 2024-09-17 17:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:30:16 --> Datos del docente a actualizar: {"nombreCompleto":"Misael Rodriguez","nip":"98766790","escalafon":"456790","fechaIngreso":"2021-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"7"}
+INFO - 2024-09-17 17:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:31:21 --> Método store() llamado
+DEBUG - 2024-09-17 17:31:21 --> Datos del docente: {"nombreCompleto":"Flor Hernandez","nip":"37823","escalafon":"42642","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Administrativo","cargo":"Otro"}
+INFO - 2024-09-17 17:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:35:49 --> Datos del docente a actualizar: {"nombreCompleto":"Willian Lopez","nip":"0286678","escalafon":"098378","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"1"}
+DEBUG - 2024-09-17 17:44:07 --> Datos del docente a actualizar: {"nombreCompleto":"Willian Lopez","nip":"0286678","escalafon":"098378","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"1"}
+INFO - 2024-09-17 17:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-17 17:44:37 --> Datos del docente a actualizar: {"nombreCompleto":"Misael Rodriguez","nip":"987667","escalafon":"4567","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"6"}
+INFO - 2024-09-17 17:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-17 17:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

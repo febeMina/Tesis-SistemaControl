@@ -76,6 +76,7 @@
                     <li class="nav-item"><a href="<?= site_url('roles') ?>" class="nav-link">Roles</a></li>
                     <li class="nav-item"><a href="<?= site_url('acceso') ?>" class="nav-link">Accesos</a></li>
                     <li class="nav-item"><a href="<?= site_url('padres') ?>" class="nav-link">Asociados</a></li>
+                    <li class="nav-item"><a href="<?= site_url('grado') ?>" class="nav-link">Grados</a></li>
                     <li class="nav-item"><a href="<?= site_url('maestros') ?>" class="nav-link">Sector magisterial</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo_permiso') ?>" class="nav-link">Tipos de Licencias</a></li>
                     <li class="nav-item"><a href="<?= site_url('tipo-documento') ?>" class="nav-link">Tipos de documentos</a></li>
@@ -121,13 +122,11 @@
             <div class="collapse" id="alimentacion">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a href="<?= site_url('productos') ?>" class="nav-link">Productos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Consumo por productos</a></li>
-                    <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Solicitud productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('unidadesporcaja') ?>" class="nav-link">Tipo de unidades</a></li>
+                    <li class="nav-item"><a href="<?= site_url('consumo') ?>" class="nav-link">Solicitud productos</a></li>
+                    <li class="nav-item"><a href="<?= site_url('solicitudproductos') ?>" class="nav-link">Ingreso productos</a></li>
                     <li class="nav-item"><a href="<?= site_url('registro-diario') ?>" class="nav-link">Familias beneficiadas</a></li>
-                    <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); background-color: 0f1015;">
-                        <li class="nav-item"><a href="<?= site_url('tipo_producto') ?>" class="nav-link">Tipo de producto</a></li>
-                        <li class="nav-item"><a href="<?= site_url('unidadesporcaja') ?>" class="nav-link">Tipo de unidades</a></li>
-                    </div>
+                
                 </ul>
             </div>
         </li>
@@ -145,7 +144,7 @@
                     <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Reporte de permisos</a></li>
                     <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Reporte de solicitud de productos</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Reporte de donaciones</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Reporte de inasistencias</a></li>
+                    <li class="nav-item"><a href="<?= site_url('reportes/familias') ?>" class="nav-link">Reporte de familias beneficiadas</a></li>
                 </ul>
             </div>
         </li>

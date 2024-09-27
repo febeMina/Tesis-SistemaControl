@@ -7,14 +7,14 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
-                    <h3 class="text-center">Cambiar Tipo de Acceso</h3>
+                    <h3 class="text-center">Cambiar tipo de acceso</h3>
                 </div>
                 <div class="card-body"> 
                     <form id="updateForm" action="<?= site_url('acceso/update/' . $usuario->idUsuarios) ?>" method="post">
                         <!-- Agrega un campo oculto para almacenar el ID del tipo de permiso -->
                         <input type="hidden" name="id" value="<?= $usuario->idUsuarios ?>">
                         <div class="form-group">
-                            <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre de Usuario</label>
+                            <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre de usuario</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $usuario->usuario ?>" disabled required>
                         </div>
                         <div class="form-group">

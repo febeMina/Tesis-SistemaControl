@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
-                    <h3 class="text-center">Nuevo Tipo de Permiso</h3>
+                    <h3 class="text-center">Nuevo tipo de permiso</h3>
                 </div>
                 <div class="card-body">
                     <form action="<?= site_url('tipo_permiso/store') ?>" method="post">
@@ -16,12 +16,13 @@
                             <input type="text" class="form-control" id="nombre" name="nombre" required>
                         </div>
                         <div class="form-group">
-                            <label for="cantidadDias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>
+                            <label for="cantidadDias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de días</label>
                             <input type="number" class="form-control" id="cantidadDias" name="cantidadDias" required>
                         </div>
                         <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="1">Activo</option>
                                 <option value="0">Inactivo</option>
                             </select>

@@ -8,35 +8,37 @@ class TipoDocumentoModel extends Model
 {
     protected $table = 'tipo_documento';
     protected $primaryKey = 'idTipoDocumento';
-    protected $allowedFields = ['nombre', 'mascara', 'usuarioCrea', 'usuarioModifica'];
+    protected $allowedFields = ['nombre', 'mascara', 'estado', 'usuarioCrea', 'usuarioModifica'];
 
-    // Método para obtener todos los tipos de documentos
+    // Obtener todos los tipos de documentos (excepto los eliminados)
     public function getTiposDocumento()
     {
-        return $this->findAll();
+        return $this->where('estado !=', 'Eliminado')->findAll();
     }
 
-    // Método para obtener un tipo de documento por su ID
+    // Obtener un tipo de documento por su ID
     public function getTipoDocumentoById($id)
     {
         return $this->where('idTipoDocumento', $id)->first();
     }
 
-    // Método para crear un nuevo tipo de documento
+    // Crear un nuevo tipo de documento
     public function createTipoDocumento($data)
     {
         return $this->insert($data);
     }
 
-    // Método para actualizar un tipo de documento
+    // Actualizar un tipo de documento
     public function updateTipoDocumento($id, $data)
     {
-        return $this->update($id, $data);
+        return $this->update($id, $data); // Llama al método update de CodeIgniter
     }
+    
 
-    // Método para eliminar un tipo de documento
+    // Marcar un tipo de documento como eliminado (eliminación lógica)
     public function deleteTipoDocumento($id)
     {
-        return $this->delete($id);
+        $data = ['estado' => 'Eliminado'];
+        return $this->update($id, $data);
     }
 }

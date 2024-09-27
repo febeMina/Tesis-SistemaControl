@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 <div class="container mt-3">
-    <h4 class="header-title text-center">Reporte de Permisos Magisteriales</h4>
+    <h4 class="header-title text-center">Reporte de permisos magisteriales</h4>
 
     <!-- Formulario para seleccionar el rango de fechas -->
     <form action="<?= site_url('usuario') ?>" method="get">
@@ -14,7 +14,7 @@
                 <input type="date" name="fecha_fin" class="form-control" placeholder="Fecha de fin" required>
             </div>
             <div class="col-md-3">
-                <button type="submit" class="btn btn-primary">Generar Reporte</button>
+                <button type="submit" class="btn btn-primary">Generar reporte</button>
             </div>
         </div>
     </form>

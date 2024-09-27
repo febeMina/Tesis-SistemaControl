@@ -7,14 +7,14 @@
         <div class="col-md-8">
             <div class="card" style="border-radius: 15px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0;">
-                    <h4 class="header-title text-center">Agregar Producto</h4>
+                    <h4 class="header-title text-center">Agregar producto</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <form action="<?= site_url('productos/store') ?>" method="post">
                         <?= csrf_field() ?>
                         <div class="form-group row" style="color: #000;">
                             <div class="col-md-6">
-                                <label for="idtipoProducto" class="form-label">Tipo de Producto</label>
+                                <label for="idtipoProducto" class="form-label">Tipo de producto</label>
                                 <select class="form-control" id="idtipoProducto" name="idtipoProducto" required>
                                     <option value="">Seleccionar tipo de producto</option>
                                     <?php foreach ($tiposProducto as $tipo) : ?>
@@ -23,27 +23,27 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <label for="codigo_lote">Codigo Lote</label>
+                                <label for="codigo_lote">Codigo lote</label>
                                 <input type="text" name="codigo_lote" class="form-control" id="codigo_lote" required>
                             </div>
                         </div>
                         <div class="form-group row" style="color: #000;">
                             <div class="col-md-6">
-                                <label for="fechaIngreso" class="form-label">Fecha Ingreso:</label>
+                                <label for="fechaIngreso" class="form-label">Fecha ingreso:</label>
                                 <input type="text" class="form-control" id="fechaIngreso" name="fechaIngreso" value="<?= date('Y-m-d') ?>" readonly>
                             </div>
                             <div class="col-md-6">
-                                <label for="fecha_vencimiento" class="form-label">Fecha Vencimiento:</label>
+                                <label for="fecha_vencimiento" class="form-label">Fecha vencimiento:</label>
                                 <input type="date" class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" required>
                             </div>
                         </div>
                         <div class="form-group row" style="color: #000;">
                             <div class="col-md-4">
-                                <label for="n_unidades_Caja" class="form-label">N° Unidades de Caja</label>
+                                <label for="n_unidades_Caja" class="form-label">N° Unidades de caja</label>
                                 <input type="number" class="form-control" id="n_unidades_Caja" name="n_unidades_Caja" required min="0" oninput="validarNumero(this)">
                             </div>
                             <div class="col-md-4">
-                                <label for="idUnidadesPorCaja" class="form-label">Unidad de Medida por Caja</label>
+                                <label for="idUnidadesPorCaja" class="form-label">Unidad de medida por caja</label>
                                 <select class="form-control" id="idUnidadesPorCaja" name="idUnidadesPorCaja" required onchange="calcularUnidadesCaja()">
                                     <option value="">Seleccionar unidad de medida</option>
                                     <?php foreach ($unidadesPorCaja as $unidad) : ?>
@@ -61,7 +61,7 @@
                                 <small id="unidades_extras_help" class="form-text text-muted">*Solo debe agregar una cantidad si desea ingresar unidades extras.</small>
                             </div>
                             <div class="col-md-8">
-                                <label for="unidades_extras" class="form-label">+ N° Unidades por caja Extras</label>
+                                <label for="unidades_extras" class="form-label">+ N° unidades por caja extras</label>
                                 <input type="number" class="form-control" id="unidades_extras" name="unidades_extras" min="0" oninput="validarNumero(this)">
                             </div>
                         </div>

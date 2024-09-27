@@ -329,13 +329,17 @@ class ReportePDF extends BaseController
         }
         // Espacio
         //$pdf->Ln(10);
-
-       
+        $pdf->SetXY(10, 170);
+        $pdf->Cell(65, 5, utf8_decode("IMPORTANTE: ANEXAR AL LISTADO DE PAGO DETALLANDO FECHAS Y SALDOS"), 0, 1, 'L');
+        $pdf->SetXY(10, 180);
+        $pdf->Cell(75, 5, utf8_decode("LUGAR Y FECHA:"), 0, 1, 'L');
+        $pdf->SetXY(10, 190);
+        $pdf->Cell(75, 5, utf8_decode("F:"), 0, 1, 'L');
+        
         
         // Generar el PDF
         $pdf->Output('D', 'reporte_permisos.pdf');
     }
-
     private function obtenerMesEnEspanol($mesIngles) {
         $meses = array(
             'January' => 'Enero',

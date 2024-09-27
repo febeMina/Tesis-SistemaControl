@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Permiso Magisterial</h4>
+                    <h4 class="header-title text-center">Permiso magisterial</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <?php if (session()->getFlashdata('success')) : ?>
@@ -31,7 +31,7 @@
                                     <button type="submit" class="btn btn-primary mt-3">Filtrar</button>
                                     <a href="<?= site_url('permiso_magisterial/index') ?>" class="btn btn-secondary mt-3 ms-2">Limpiar</a>
                                 </div>
-                                <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-success mt-3">Agregar Permiso</a>
+                                <a href="<?= site_url('permiso_magisterial/create') ?>" class="btn btn-success mt-3">Agregar permiso</a>
                             </div>
                         </div>
                     </form>
@@ -40,9 +40,9 @@
                             <thead>
                                 <tr>
                                     <th>NIP</th>
-                                    <th>Nombre del Maestro</th>
-                                    <th>Fecha de Solicitud</th>
-                                    <th>Detalles de Permisos</th>
+                                    <th>Nombre del personal</th>
+                                    <th>Fecha de solicitud</th>
+                                    <th>Detalles de permisos</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,13 +56,13 @@
                                                 <table class="table table-bordered table-sm">
                                                     <thead>
                                                         <tr>
-                                                            <th>Tipo Permiso</th>
-                                                            <th>Fecha Inicio</th>
-                                                            <th>Fecha Fin</th>
-                                                            <th>Días Ocupados</th>
-                                                            <th>Días Disponibles</th>
-                                                            <th>Horas Ocupadas</th>
-                                                            <th>Horas Disponibles</th>
+                                                            <th>Tipo permiso</th>
+                                                            <th>Fecha inicio</th>
+                                                            <th>Fecha fin</th>
+                                                            <th>Días ocupados</th>
+                                                            <th>Días disponibles</th>
+                                                            <th>Horas ocupadas</th>
+                                                            <th>Horas disponibles</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

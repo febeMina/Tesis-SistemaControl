@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white">
-                    <h3 class="text-center">Crear Permiso Personal</h3>
+                    <h3 class="text-center">Crear permiso personal</h3>
                 </div>
 
                 <div class="card-body">
@@ -20,9 +20,10 @@
 
                         <div class="form-group">
                             <label for="idDocente" style="color: #000;">
-                                <i class="fas fa-chalkboard-teacher"></i> Seleccionar Docente:
+                                <i class="fas fa-chalkboard-teacher"></i> Seleccionar personal:
                             </label>
                             <select name="idDocente" id="idDocente" class="form-control">
+                                <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($docentes as $docente): ?>
                                     <option value="<?= $docente['idDocente'] ?>"><?= esc($docente['nombreCompleto']) ?></option>
                                 <?php endforeach; ?>
@@ -31,9 +32,10 @@
 
                         <div class="form-group">
                             <label for="idTipoPermiso" style="color: #000;">
-                                <i class="fas fa-calendar-check"></i> Seleccionar Tipo de Permiso:
+                                <i class="fas fa-calendar-check"></i> Seleccionar tipo de permiso:
                             </label>
                             <select name="idTipoPermiso" id="idTipoPermiso" class="form-control">
+                            <option value="" disabled selected>Selecciona</option>
                                 <?php foreach ($tiposPermisos as $tipoPermiso): ?>
                                     <option value="<?= $tipoPermiso['idTipoPermiso'] ?>">
                                         <?= esc($tipoPermiso['nombre']) ?>
@@ -46,16 +48,17 @@
                         <!-- Mostrar el saldo actual según el tipo de permiso -->
                         <div class="form-group">
                             <label for="saldoActual" style="color: #000;">
-                                <i class="fas fa-balance-scale"></i> Saldo Actual:
+                                <i class="fas fa-balance-scale"></i> Saldo actual:
                             </label>
                             <input type="text" id="saldoActual" class="form-control" value="Días: <?= esc($saldoActual['saldoActualDias']) ?>, Horas: <?= esc($saldoActual['saldoActualHoras']) ?>" disabled>
                         </div>
 
                         <div class="form-group">
                             <label for="tipoSolicitud" style="color: #000;">
-                                <i class="fas fa-calendar-alt"></i> Tipo de Solicitud:
+                                <i class="fas fa-calendar-alt"></i> Tipo de solicitud:
                             </label>
                             <select name="tipoSolicitud" id="tipoSolicitud" class="form-control">
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="Dias">Días</option>
                                 <option value="Horas">Horas</option>
                             </select>
@@ -64,12 +67,12 @@
                         <!-- Campos de Días -->
                         <div id="diasDiv" class="form-group" style="display: none;">
                             <label for="fechaInicio" style="color: #000;">
-                                <i class="fas fa-calendar-day"></i> Fecha de Inicio:
+                                <i class="fas fa-calendar-day"></i> Fecha de inicio:
                             </label>
                             <input type="date" name="fechaInicio" id="fechaInicio" class="form-control">
                             
                             <label for="fechaFin" style="color: #000;">
-                                <i class="fas fa-calendar-day"></i> Fecha de Fin:
+                                <i class="fas fa-calendar-day"></i> Fecha de fin:
                             </label>
                             <input type="date" name="fechaFin" id="fechaFin" class="form-control">
                         </div>
@@ -77,17 +80,17 @@
                         <!-- Campos de Horas -->
                         <div id="horasDiv" class="form-group" style="display: none;">
                             <label for="fechaUnica" style="color: #000;">
-                                <i class="fas fa-calendar-day"></i> Fecha del Permiso:
+                                <i class="fas fa-calendar-day"></i> Fecha del permiso:
                             </label>
                             <input type="date" name="fechaUnica" id="fechaUnica" class="form-control">
                         
                             <label for="horasSolicitadas" style="color: #000;">
-                                <i class="fas fa-hourglass-start"></i> Horas Solicitadas:
+                                <i class="fas fa-hourglass-start"></i> Horas solicitadas:
                             </label>
                             <input type="number" name="horasSolicitadas" id="horasSolicitadas" class="form-control" min="1" max="6">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Guardar Permiso</button>
+                        <button type="submit" class="btn btn-primary">Guardar permiso</button>
                     </form>
                 </div>
             </div>
@@ -144,7 +147,7 @@ document.getElementById('idDocente').addEventListener('change', function() {
                 // Actualiza el saldo en el campo correspondiente
                 document.getElementById('saldoActual').value = `Días: ${data.saldoActualDias}, Horas: ${data.saldoActualHoras}`;
             })
-            .catch(error => console.error('Error al obtener el saldo actual:', error));
+            .catch(error => console.error('Error al obtener el saldo actual'));
     }
 });
 

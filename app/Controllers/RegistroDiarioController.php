@@ -6,18 +6,20 @@ use App\Models\MaestroModel;
 use App\Models\GradoModel;
 use App\Models\RegistroDiarioModel;
 use App\Models\DetalleAsistenciaModel;
+use App\Models\ProductosRequisicionModel;
 
 class RegistroDiarioController extends BaseController
 {
     public function index()
     {
+    
         $registroDiarioModel = new RegistroDiarioModel();
         $detalleAsistenciaModel = new DetalleAsistenciaModel();
 
-        // Obtener los registros con información relacionada
+
         $data['registros'] = $registroDiarioModel
             ->select('registro_diario.idRegistroDiario, registro_diario.fecha, 
-                      COALESCE(SUM(detalle_asistencia.Total), 0) as familiasBeneficiadas')
+                      COALESCE(SUM(detalle_asistencia.total), 0) as familiasBeneficiadas')
             ->join('detalle_asistencia', 'detalle_asistencia.idRegistroDiario = registro_diario.idRegistroDiario', 'left')
             ->groupBy('registro_diario.idRegistroDiario, registro_diario.fecha')
             ->paginate(10);
@@ -31,118 +33,201 @@ class RegistroDiarioController extends BaseController
     {
         $maestroModel = new MaestroModel();
         $gradoModel = new GradoModel();
-    
-        $data['docentes'] = $maestroModel->where('estado', 1)->where('tipo', 'Docente')->findAll();
-        $data['grados'] = $gradoModel->getGradosActivos(); // Obtén grados activos
-    
+        $productosRequisicionModel = new ProductosRequisicionModel(); 
+        
+        $data['docentes'] = $maestroModel->where('estado', 'Activo')->where('tipo', 'Docente')->findAll();
+        $data['grados'] = $gradoModel->getGradosConDocentes();
+
         return view('registro_diario/create', $data);
     }
-    
+
     public function store()
     {
-        $registroDiarioModel = new RegistroDiarioModel();
-        $detalleAsistenciaModel = new DetalleAsistenciaModel();
-    
-        // Obtener datos del POST
+        // Obtener los datos del formulario
         $fecha = $this->request->getPost('fecha');
-        $grados = $this->request->getPost('idGrado'); // Array de IDs de grados
-        $docentes = $this->request->getPost('idDocente'); // Array de IDs de docentes
-        $cantidadNinos = $this->request->getPost('cantidadNiños');
-        $cantidadNinas = $this->request->getPost('cantidadNiñas');
-    
-        // Verificar si $grados o $docentes son null
-        if ($grados === null || $docentes === null) {
-            throw new \RuntimeException('No se recibieron datos de grados o docentes.');
-        }
-    
-        // Calcular el total de familias beneficiadas
-        $totalFamiliasBeneficiadas = 0;
-        foreach ($cantidadNinos as $index => $cantidadNinosGrado) {
-            $cantidadNinasGrado = $cantidadNinas[$index];
-            $totalFamiliasBeneficiadas += $cantidadNinosGrado + $cantidadNinasGrado;
-        }
-    
+        
         // Insertar en la tabla registro_diario
-        $dataRegistro = [
+        $registroDiarioModel = new RegistroDiarioModel();
+        $registroDiarioId = $registroDiarioModel->insert([
             'fecha' => $fecha,
-            'familiasBeneficiadas' => $totalFamiliasBeneficiadas,
-            'createdAt' => date('Y-m-d H:i:s'),
-        ];
-        $registroDiarioModel->insert($dataRegistro);
+        ]);
     
-        // Obtener el ID del registro recién insertado
-        $registroDiarioId = $registroDiarioModel->getInsertID();
+        // Obtener los arrays del formulario
+        $idDocentes = $this->request->getPost('idDocente');
+        $cantidadNinos = $this->request->getPost('cantidadNinos');
+        $cantidadNinas = $this->request->getPost('cantidadNinas');
+        $idProductoRequisicion = $this->request->getPost('idProductoRequisicion'); // single value
     
-        // Insertar en detalle_asistencia
-        foreach ($grados as $index => $gradoId) {
-            $cantidadNinosGrado = $cantidadNinos[$index];
-            $cantidadNinasGrado = $cantidadNinas[$index];
+        // Guardar los detalles de asistencia
+        $detalleAsistenciaModel = new DetalleAsistenciaModel();
+        $totalNinos = 0;
+        $totalNinas = 0;
     
-            $dataDetalle = [
-                'idRegistroDiario' => $registroDiarioId,
-                'idGrado' => $gradoId,
-                'idDocente' => $docentes[$index],
-                'cantidadNiños' => $cantidadNinosGrado,
-                'cantidadNiñas' => $cantidadNinasGrado,
-                'Total' => $cantidadNinosGrado + $cantidadNinasGrado,
-            ];
-            $detalleAsistenciaModel->insert($dataDetalle);
+        // Recorrer los arrays y guardar cada detalle de asistencia
+        foreach ($idDocentes as $index => $idDocente) {
+            // Convertir a enteros
+            $cantidadNinosGrado = (int) ($cantidadNinos[$index] ?? 0);
+            $cantidadNinasGrado = (int) ($cantidadNinas[$index] ?? 0);
+    
+            // Solo guardar si al menos uno de los campos de cantidad tiene un valor mayor que cero
+            if ($cantidadNinosGrado > 0 || $cantidadNinasGrado > 0) {
+                // Insertar el detalle de asistencia
+                $detalleAsistenciaModel->insert([
+                    'idRegistroDiario' => $registroDiarioId,
+                    'idDocente' => $idDocente,
+                    'idProductoRequisicion' => $idProductoRequisicion, // Uso único para todos
+                    'cantidadNinos' => $cantidadNinosGrado,
+                    'cantidadNinas' => $cantidadNinasGrado,
+                    'total' => $cantidadNinosGrado + $cantidadNinasGrado,
+                ]);
+    
+                // Acumular los totales
+                $totalNinos += $cantidadNinosGrado;
+                $totalNinas += $cantidadNinasGrado;
+            }
         }
     
-        return redirect()->to('/registro-diario')->with('success', 'Registro diario creado exitosamente.');
+        // Actualizar el total de familias beneficiadas solo si se han registrado asistencias
+        if ($totalNinos > 0 || $totalNinas > 0) {
+            $registroDiarioModel->update($registroDiarioId, [
+                'familiasBeneficiadas' => $totalNinos + $totalNinas,
+            ]);
+        }
+    
+        return redirect()->to('registro-diario')->with('success', 'Registro creado correctamente.');
+    }
+    
+
+    public function obtenerGradoPorDocente($idDocente)
+    {
+        $docenteModel = new MaestroModel();
+        $docente = $docenteModel->select('idGrado')
+                                ->where('idDocente', $idDocente)
+                                ->first();
+        
+        return $docente['idGrado'] ?? null; // Retorna el idGrado o null si no se encuentra
     }
     
     public function show($idRegistroDiario)
-    {
-        $registroDiarioModel = new RegistroDiarioModel();
-        $detalleAsistenciaModel = new DetalleAsistenciaModel();
-        
-        // Obtener el registro del diario
-        $data['registro'] = $registroDiarioModel->find($idRegistroDiario);
-        
-        if (!$data['registro']) {
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("No se encontró el registro con ID: $idRegistroDiario");
-        }
-        
-        // Obtener los detalles de asistencia relacionados
-        $data['detalles'] = $detalleAsistenciaModel->select('detalle_asistencia.*, grado.nombre as nombre_grado')
-                                               ->join('grado', 'detalle_asistencia.idGrado = grado.idGrado')
-                                               ->where('idRegistroDiario', $idRegistroDiario)
-                                               ->findAll();
-        
-        // Calcular el total de familias beneficiadas
-        $data['totalFamiliasBeneficiadas'] = array_sum(array_column($data['detalles'], 'Total'));
-        
-        return view('registro_diario/show', $data);
+{
+    $registroDiarioModel = new RegistroDiarioModel();
+    $detalleAsistenciaModel = new DetalleAsistenciaModel();
+
+    $registro = $registroDiarioModel->select('idRegistroDiario, fecha, familiasBeneficiadas')->find($idRegistroDiario);
+    
+    if (!$registro) {
+        return $this->response->setStatusCode(404)->setJSON(['error' => 'Registro no encontrado']);
     }
+
+    $detalles = $detalleAsistenciaModel
+        ->select('detalle_asistencia.*, grado.nombre as nombre_grado, docente.nombreCompleto as nombre_docente')
+        ->join('docente', 'detalle_asistencia.idDocente = docente.idDocente')
+        ->join('grado', 'docente.idGrado = grado.idGrado')
+        ->where('idRegistroDiario', $idRegistroDiario)
+        ->findAll();
+
+    return $this->response->setJSON([
+        'fecha' => $registro->fecha,
+        'familiasBeneficiadas' => $registro->familiasBeneficiadas,
+        'detalles' => $detalles
+    ]);
+}
+
     
+    public function getRequisicionByFecha($fecha)
+{
+    $model = new ProductosRequisicionModel();
+    $result = $model->where('fechaRequisicion', $fecha)->first(); // Cambié de findAll() a first() para obtener solo una requisición
+
+    return $this->response->setJSON($result); // Retorna solo un objeto si existe, null si no.
+}
+
     
-    public function getDetails($idRegistroDiario)
-    {
-        $registroDiarioModel = new RegistroDiarioModel();
-        $detalleAsistenciaModel = new DetalleAsistenciaModel();
+    public function getRequisicionYDocentes()
+{
+    $fecha = $this->request->getPost('fecha');
     
-        // Obtener el registro del diario
-        $registro = $registroDiarioModel->find($idRegistroDiario);
-    
-        if (!$registro) {
-            return $this->response->setJSON(['error' => 'Registro no encontrado']);
-        }
-    
-        // Obtener los detalles de asistencia relacionados
-        $detalles = $detalleAsistenciaModel->select('detalle_asistencia.*, grado.nombre as nombre_grado')
-                                           ->join('grado', 'detalle_asistencia.idGrado = grado.idGrado')
-                                           ->where('idRegistroDiario', $idRegistroDiario)
-                                           ->findAll();
-    
-        // Calcular el total de familias beneficiadas
-        $totalFamiliasBeneficiadas = array_sum(array_column($detalles, 'Total'));
-    
+    // Obtener la requisición por fecha
+    $requisicionModel = new ProductosRequisicionModel();
+    $requisicion = $requisicionModel->where('fechaRequisicion', $fecha)->first();
+
+    // Verificar si existe la requisición
+    if (!$requisicion) {
         return $this->response->setJSON([
-            'registro' => $registro,
-            'detalles' => $detalles,
-            'totalFamiliasBeneficiadas' => $totalFamiliasBeneficiadas
+            'requisicion' => null,
+            'docentes' => []
         ]);
     }
     
+    // Obtener los docentes y sus grados
+    $docenteModel = new MaestroModel();
+    $docentes = $docenteModel->select('docente.idDocente, docente.nombreCompleto, grado.nombre AS nombreGrado')
+                             ->join('grado', 'grado.idGrado = docente.idGrado')
+                             ->where('docente.estado', 'Activo')
+                             ->findAll();
+    
+    return $this->response->setJSON([
+        'requisicion' => $requisicion,
+        'docentes' => $docentes
+    ]);
+}
+
+public function reporteFamilias()
+{
+    $registroDiarioModel = new RegistroDiarioModel();
+    $detalleAsistenciaModel = new DetalleAsistenciaModel();
+    
+    // Obtiene el número de página actual (default a 1 si no se proporciona)
+    $page = $this->request->getVar('page') ?? 1;
+
+    // Realiza la consulta y usa paginación
+    $data['registros'] = $registroDiarioModel
+        ->select('registro_diario.idRegistroDiario, registro_diario.fecha, 
+                  COALESCE(SUM(detalle_asistencia.total), 0) as familiasBeneficiadas')
+        ->join('detalle_asistencia', 'detalle_asistencia.idRegistroDiario = registro_diario.idRegistroDiario', 'left')
+        ->groupBy('registro_diario.idRegistroDiario, registro_diario.fecha')
+        ->paginate(10, 'group1', $page); // Cambia el número según tus necesidades
+
+    // Paginación
+    $pager = \Config\Services::pager();
+    $data['pager'] = $pager;
+
+    // Ahora usamos countAll() en el mismo contexto de la consulta paginada
+    $data['total'] = $registroDiarioModel
+        ->select('registro_diario.idRegistroDiario')
+        ->join('detalle_asistencia', 'detalle_asistencia.idRegistroDiario = registro_diario.idRegistroDiario', 'left')
+        ->groupBy('registro_diario.idRegistroDiario, registro_diario.fecha')
+        ->countAllResults();
+
+    return view('Reportes/reporte_familias', $data);
+}
+
+public function filtrar()
+{
+    // Obtener las fechas de inicio y fin del request
+    $fechaInicio = $this->request->getGet('fecha_inicio');
+    $fechaFin = $this->request->getGet('fecha_fin');
+
+    // Crear una instancia del modelo
+    $registroDiarioModel = new RegistroDiarioModel();
+
+    // Obtener registros filtrados por fecha
+    $registros = $registroDiarioModel->obtenerRegistrosPorFecha($fechaInicio, $fechaFin);
+
+    return view('Reportes/reporte_familias', [
+        'registros' => $registros,
+    ]);
+}
+public function obtenerRegistrosPorFecha($fechaInicio, $fechaFin)
+{
+    $registroDiarioModel = new RegistroDiarioModel(); // Crea una instancia del modelo
+
+    return $registroDiarioModel->where('fecha >=', $fechaInicio) // Usa la instancia del modelo para llamar a where
+                                ->where('fecha <=', $fechaFin)
+                                ->findAll();
+}
+
+
+
+
 }

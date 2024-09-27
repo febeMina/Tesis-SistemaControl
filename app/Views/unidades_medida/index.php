@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Listado de Unidades de Medida</h4>
+                    <h4 class="header-title text-center">Listado de unidades de medida</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Mensaje de éxito -->
@@ -18,7 +18,7 @@
                     <!-- Botón para agregar una nueva unidad de medida -->
                     <div class="mb-3">
                         <a href="<?= site_url('unidadesmedida/create') ?>" class="btn btn-primary">
-                            <i class="mdi mdi-plus"></i> Agregar Unidad de Medida
+                            <i class="mdi mdi-plus"></i> Agregar unidad de medida
                         </a>
                     </div>
                     <!-- Tabla de unidades de medida -->

@@ -16,3 +16,1516 @@ INFO - 2024-09-19 17:33:12 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-09-19 17:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-19 17:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-19 17:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 00:53:45 --> mysqli_sql_exception: Column 'idTipoDocumento' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres(Array, 5, 0)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-19 00:53:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` = :estado:
+AND `estado` != :estado.1:
+ LIMIT 5', [...], false)
+ 2 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 00:53:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` = \'activo\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` = \'activo\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` = :estado:
+AND `estado` != :estado.1:
+ LIMIT 5', [...], false)
+ 4 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 00:53:45 --> [Caused by] mysqli_sql_exception: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` = \'activo\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` = \'activo\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` = \'activo\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` = :estado:
+AND `estado` != :estado.1:
+ LIMIT 5', [...], false)
+ 5 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 00:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 00:53:59 --> mysqli_sql_exception: Column 'idTipoDocumento' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres(Array, 5, 0)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-19 00:53:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` != :estado:
+ LIMIT 5', [...], false)
+ 2 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 00:53:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` != :estado:
+ LIMIT 5', [...], false)
+ 4 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 00:53:59 --> [Caused by] mysqli_sql_exception: Column 'idTipoDocumento' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = \'2\'
+AND `estado` != \'Eliminado\'
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `idTipoDocumento` = :idTipoDocumento:
+AND `estado` != :estado:
+ LIMIT 5', [...], false)
+ 5 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 00:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 00:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-19 01:08:23 --> ErrorException: Attempt to read property "estado" on array
+in APPPATH\Views\tipo_permiso\index.php on line 51.
+ 1 APPPATH\Views\tipo_permiso\index.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "estado" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_permiso\\index.php', 51)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_permiso\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tipo_permiso/index', [], true)
+ 5 APPPATH\Controllers\TipoPermiso.php(35): view('tipo_permiso/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 01:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-19 01:08:38 --> ErrorException: Attempt to read property "estado" on array
+in APPPATH\Views\tipo_permiso\index.php on line 51.
+ 1 APPPATH\Views\tipo_permiso\index.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "estado" on array', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_permiso\\index.php', 51)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_permiso\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tipo_permiso/index', [], true)
+ 5 APPPATH\Controllers\TipoPermiso.php(35): view('tipo_permiso/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 01:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 01:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 09:31:08 --> mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_pe...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_pe...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_pe...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_pe...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\TipoPermiso.php(114): CodeIgniter\Model->update('9', Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-19 09:31:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\TipoPermiso.php(114): CodeIgniter\Model->update('9', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:31:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\TipoPermiso.php(114): CodeIgniter\Model->update('9', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:31:08 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TipoPermiso.php(114): CodeIgniter\Model->update('9', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 09:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 09:33:20 --> mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_pe...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_pe...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_pe...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_pe...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-19 09:33:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:33:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:33:20 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'27\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 09:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 09:33:45 --> mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_pe...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_pe...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_pe...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_pe...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-19 09:33:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:33:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:33:45 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES\', `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 09:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 09:35:09 --> mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_pe...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_pe...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_pe...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_pe...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-19 09:35:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:35:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES.\', `cantidadDias` = \'25\', `estado` = \'Activo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES.\', `cantidadDias` = \'25\', `estado` = \'Activo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:35:09 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES.\', `cantidadDias` = \'25\', `estado` = \'Activo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES.\', `cantidadDias` = \'25\', `estado` = \'Activo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `nombre` = \'MOTIVOS PERSONALES.\', `cantidadDias` = \'25\', `estado` = \'Activo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `nombre` = :nombre:, `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TipoPermiso.php(126): CodeIgniter\Model->update('9', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 09:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 09:53:05 --> mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_pe...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_pe...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_pe...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_pe...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(990): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(812): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\laragon\www\prueba\SistemaControl\app\Controllers\TipoPermiso.php(128): CodeIgniter\Model->update('9', Array)
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-09-19 09:53:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\TipoPermiso.php(128): CodeIgniter\Model->update('9', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:53:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\TipoPermiso.php(128): CodeIgniter\Model->update('9', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 09:53:05 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarioModifica' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tipo_permisos` SET `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tipo_permisos` SET `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tipo_permisos` SET `cantidadDias` = \'25\', `estado` = \'Inactivo\', `usuarioModifica` = \'febe\'
+WHERE `tipo_permisos`.`idTipoPermiso` IN (\'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tipo_permisos` SET `cantidadDias` = :cantidadDias:, `estado` = :estado:, `usuarioModifica` = :usuarioModifica:
+WHERE `tipo_permisos`.`idTipoPermiso` IN :tipo_permisos.idTipoPermiso:', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(990): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(812): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\TipoPermiso.php(128): CodeIgniter\Model->update('9', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoPermiso->update()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoPermiso))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 09:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 09:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 10:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 11:43:41 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`datos_responsable`, CONSTRAINT `fk_datos_responsable_tipo_documento1` FOREIGN KEY (`idTipoDocumento`) REFERENCES `tipo_documento` (`idTipoDocumento`)) in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `ti...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ti...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ti...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ti...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(1120): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\laragon\www\prueba\SistemaControl\app\Controllers\TipoDocumentoController.php(81): CodeIgniter\BaseModel->delete(Array)
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->delete('2')
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-09-19 11:43:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`datos_responsable`, CONSTRAINT `fk_datos_responsable_tipo_documento1` FOREIGN KEY (`idTipoDocumento`) REFERENCES `tipo_documento` (`idTipoDocumento`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN :idTipoDocumento:', [...], false)
+ 2 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\TipoDocumentoController.php(81): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->delete('2')
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 11:43:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`datos_responsable`, CONSTRAINT `fk_datos_responsable_tipo_documento1` FOREIGN KEY (`idTipoDocumento`) REFERENCES `tipo_documento` (`idTipoDocumento`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN :idTipoDocumento:', [...], false)
+ 4 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\TipoDocumentoController.php(81): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->delete('2')
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 11:43:41 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`sistema_control`.`datos_responsable`, CONSTRAINT `fk_datos_responsable_tipo_documento1` FOREIGN KEY (`idTipoDocumento`) REFERENCES `tipo_documento` (`idTipoDocumento`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2787): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tipo_documento`
+WHERE `idTipoDocumento` IN :idTipoDocumento:', [...], false)
+ 5 SYSTEMPATH\Model.php(454): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1120): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\TipoDocumentoController.php(81): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->delete('2')
+ 9 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 11:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 11:47:10 --> mysqli_sql_exception: Unknown column 'usuarioCrea' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ti...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ti...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ti...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ti...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\BaseModel.php(805): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Model.php(749): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\laragon\www\prueba\SistemaControl\app\Models\TipoDocumentoModel.php(28): CodeIgniter\Model->insert(Array)
+#8 C:\laragon\www\prueba\SistemaControl\app\Controllers\TipoDocumentoController.php(46): App\Models\TipoDocumentoModel->createTipoDocumento(Array)
+#9 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->store()
+#10 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+#11 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-09-19 11:47:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioCrea' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (:nombre:, :mascara:, :estado:, :usuarioCrea:, :usuarioModifica:)', [...], false)
+ 2 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\TipoDocumentoModel.php(28): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\TipoDocumentoController.php(46): App\Models\TipoDocumentoModel->createTipoDocumento([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 11:47:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuarioCrea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (\'Prueba\', \'########-#\', \'Activo\', \'febe\', \'febe\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (\'Prueba\', \'########-#\', \'Activo\', \'febe\', \'febe\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (:nombre:, :mascara:, :estado:, :usuarioCrea:, :usuarioModifica:)', [...], false)
+ 4 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\TipoDocumentoModel.php(28): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\TipoDocumentoController.php(46): App\Models\TipoDocumentoModel->createTipoDocumento([...])
+ 9 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->store()
+10 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 11:47:10 --> [Caused by] mysqli_sql_exception: Unknown column 'usuarioCrea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (\'Prueba\', \'########-#\', \'Activo\', \'febe\', \'febe\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (\'Prueba\', \'########-#\', \'Activo\', \'febe\', \'febe\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (\'Prueba\', \'########-#\', \'Activo\', \'febe\', \'febe\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tipo_documento` (`nombre`, `mascara`, `estado`, `usuarioCrea`, `usuarioModifica`) VALUES (:nombre:, :mascara:, :estado:, :usuarioCrea:, :usuarioModifica:)', [...], false)
+ 5 SYSTEMPATH\Model.php(327): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(805): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(749): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\TipoDocumentoModel.php(28): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\TipoDocumentoController.php(46): App\Models\TipoDocumentoModel->createTipoDocumento([...])
+10 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->store()
+11 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 11:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-19 11:54:01 --> ErrorException: Undefined variable $alumno
+in APPPATH\Views\tipo_documento\edit.php on line 26.
+ 1 APPPATH\Views\tipo_documento\edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alumno', 'C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_documento\\edit.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\prueba\\SistemaControl\\app\\Views\\tipo_documento\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('tipo_documento/edit', [], true)
+ 5 APPPATH\Controllers\TipoDocumentoController.php(58): view('tipo_documento/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\TipoDocumentoController->edit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipoDocumentoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 11:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 11:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:26:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 15:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 17:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 19:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 21:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:54:09 --> Iniciando proceso de eliminación para el grado con ID: 9
+INFO - 2024-09-19 22:54:09 --> Solicitud AJAX válida, eliminando el grado con ID: 9
+INFO - 2024-09-19 22:54:09 --> Grado eliminado correctamente.
+INFO - 2024-09-19 22:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:55:17 --> Iniciando proceso de eliminación para el grado con ID: 10
+INFO - 2024-09-19 22:55:17 --> Solicitud AJAX válida, eliminando el grado con ID: 10
+INFO - 2024-09-19 22:55:17 --> Grado eliminado correctamente.
+INFO - 2024-09-19 22:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-19 22:59:37 --> Datos del docente a actualizar: {"nombreCompleto":"feeyry","nip":"wreys","escalafon":"wr","fechaIngreso":"2020-01-01","estado":"Inactivo","tipo":"Administrativo","cargo":"Otro","idGrado":null}
+INFO - 2024-09-19 22:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 22:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 23:31:27 --> mysqli_sql_exception: Column 'estado' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres(Array, 5, 0)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-19 23:31:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 2 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:31:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 4 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:31:27 --> [Caused by] mysqli_sql_exception: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 5 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 23:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 23:31:56 --> mysqli_sql_exception: Column 'estado' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres(Array, 5, 0)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-19 23:31:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 2 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:31:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 4 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:31:56 --> [Caused by] mysqli_sql_exception: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 5 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 23:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 23:32:00 --> mysqli_sql_exception: Column 'estado' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres(Array, 5, 0)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-19 23:32:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 2 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:32:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 4 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:32:00 --> [Caused by] mysqli_sql_exception: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 5 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 23:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 23:32:14 --> mysqli_sql_exception: Column 'estado' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres(Array, 5, 0)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-19 23:32:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 2 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:32:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 4 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:32:14 --> [Caused by] mysqli_sql_exception: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 5 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 23:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 23:36:30 --> mysqli_sql_exception: Column 'estado' in where clause is ambiguous in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_r...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_r...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_r...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_r...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\app\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres(Array, 5, 0)
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Padres->index()
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+#8 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-09-19 23:36:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 2 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:36:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 4 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:36:30 --> [Caused by] mysqli_sql_exception: Column 'estado' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != \'Eliminado\'
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `datos_responsable`.*, `tipo_documento`.`nombre` as `tipo_documento`
+FROM `datos_responsable`
+LEFT JOIN `tipo_documento` ON `tipo_documento`.`idTipoDocumento` = `datos_responsable`.`idTipoDocumento`
+WHERE `estado` != :estado:
+ LIMIT 5', [...], false)
+ 5 APPPATH\Models\PadreModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Padres.php(46): App\Models\PadreModel->getFilteredPadres([...], 5, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Padres->index()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Padres))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+INFO - 2024-09-19 23:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-19 23:42:38 --> Datos del docente a actualizar: {"nombreCompleto":"kjhnff","nip":"wgteer","escalafon":"43wr4","fechaIngreso":"2020-01-01","estado":"Activo","tipo":"Docente","cargo":null,"idGrado":"7"}
+INFO - 2024-09-19 23:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-09-19 23:49:55 --> Datos del alumno: Array
+(
+    [nombreAlumno] => jhklj
+    [generoAlumno] => F
+    [NIE] => 87898
+    [estado] => Activo
+    [padre_id] => 50
+)
+
+INFO - 2024-09-19 23:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-19 23:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-09-19 23:58:42 --> mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list' in C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donacio...', 0)
+#1 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donacio...')
+#2 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donacio...')
+#3 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donacio...', Array, false)
+#4 C:\laragon\www\prueba\SistemaControl\app\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+#6 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+#7 C:\laragon\www\prueba\SistemaControl\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\prueba\SistemaControl\public\index.php(81): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-09-19 23:58:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', [], false)
+ 2 APPPATH\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:58:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', [], false)
+ 4 APPPATH\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-19 23:58:42 --> [Caused by] mysqli_sql_exception: Unknown column 'donaciones.descripcion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `donaciones`.`idDonaciones`, `datos_responsable`.`nombreCompleto`, `donaciones`.`cantidad`, `donaciones`.`descripcion`, `donaciones`.`fechaDonacion`, `proyectos`.`nombreProyecto`
+FROM `donaciones`
+INNER JOIN `proyectos` ON `proyectos`.`idProyectos` = `donaciones`.`idProyectos`
+INNER JOIN `datos_responsable` ON `datos_responsable`.`idDatosResponsable` = `donaciones`.`idDatosResponsable`', [], false)
+ 5 APPPATH\Controllers\Donaciones.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Donaciones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Donaciones))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(81): CodeIgniter\CodeIgniter->run()

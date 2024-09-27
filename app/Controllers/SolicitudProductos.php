@@ -166,7 +166,7 @@ class SolicitudProductos extends Controller
 
         $productoIngresoModel->update($id, $data);
 
-        return redirect()->to(site_url('solicitudproductos/edit/' . $id))->with('success', 'Información de la solicitud de ingreso actualizada con éxito.');
+        return redirect()->to(site_url('solicitudproductos/edit/' . $id))->with('success', 'Información de ingreso actualizada con éxito.');
     }
 
     public function storeLote()
@@ -211,7 +211,7 @@ class SolicitudProductos extends Controller
 
         $productoIngresoDetalleModel->insert($dataDetalle);
 
-        return redirect()->to(site_url('solicitudproductos/edit/' . $this->request->getPost('idProductoIngreso')))->with('success', 'Lote de producto ingresado a la solicitud con éxito.');
+        return redirect()->to(site_url('solicitudproductos/edit/' . $this->request->getPost('idProductoIngreso')))->with('success', 'Lote de producto ingresado con éxito.');
     }
 
     public function delete($id)
@@ -263,7 +263,7 @@ class SolicitudProductos extends Controller
             $dataMovimiento = [
                 'idProductoLote' => $idProductoLote,
                 'tipoMovimiento' => 'Entrada',
-                'descripcionMovimiento' => 'Existencia ingresada desde solicitud de ingreso n°: ' . $idProductoIngreso,
+                'descripcionMovimiento' => 'Existencia ingresada desde n° ingreso: ' . $idProductoIngreso,
                 'fechaMovimiento' => date('Y-m-d H:i:s'),
                 'existenciaTotalAntes' => 0, // Asumiendo que antes era 0, puedes ajustar si necesitas obtener el valor real
                 'existenciaTotalMovimiento' => $existenciaTotalIngreso,
@@ -273,7 +273,7 @@ class SolicitudProductos extends Controller
         }
 
         if($n == 0) {
-            return redirect()->to(site_url('solicitudproductos/edit/' . $idProductoIngreso))->with('error', 'No puede finalizar la solicitud sin agregar productos.');
+            return redirect()->to(site_url('solicitudproductos/edit/' . $idProductoIngreso))->with('error', 'No puede finalizar el ingreso sin agregar productos.');
         } else {
             // Actualizar estado de productos_ingresos a "Finalizado"
             $productoIngresoModel->update($idProductoIngreso, [
@@ -281,7 +281,7 @@ class SolicitudProductos extends Controller
             ]);
 
             // Redireccionar con mensaje de éxito
-            return redirect()->to(site_url('solicitudproductos'))->with('success', 'Solicitud de ingreso finalizada con éxito.');
+            return redirect()->to(site_url('solicitudproductos'))->with('success', 'Ingreso finalizado con éxito.');
         }
 
     }
@@ -309,6 +309,8 @@ class SolicitudProductos extends Controller
             'estado' => 'Anulado'
         ]);
         // Redireccionar con un mensaje de éxito
-        return redirect()->to(site_url('solicitudproductos'))->with('success', 'Solicitud de ingreso anulada con éxito.');
+        return redirect()->to(site_url('solicitudproductos'))->with('success', 'Ingreso anulada con éxito.');
     }
+    
+    
 }

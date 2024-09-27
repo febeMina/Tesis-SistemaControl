@@ -7,36 +7,30 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
-                    <h3 class="text-center">Nuevo Personal Magisterial</h3>
+                    <h3 class="text-center">Nuevo personal magisterial</h3>
                 </div>
                 <div class="card-body">
-
+                    
                     <!-- Mensaje de éxito -->
-                    <?php if(session()->has('success')): ?>
-                        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
-                            <?= session('success') ?>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                    <?php if (session()->getFlashdata('success')) : ?>
+                        <div class="alert alert-success">
+                            <?= session()->getFlashdata('success'); ?>
                         </div>
                     <?php endif; ?>
                     
-                    <!-- Mensaje de error -->
-                    <?php if(session()->has('error')): ?>
-                        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
-                            <?= session('error') ?>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                    <?php if (session()->getFlashdata('error')) : ?>
+                        <div class="alert alert-danger">
+                            <?= session()->getFlashdata('error'); ?>
                         </div>
                     <?php endif; ?>
+                    
                     
                     <div id="errorMessage"></div>
                     
                     <form id="createForm" action="<?= site_url('maestros/store') ?>" method="post">
                         <?= csrf_field() ?>
                         <div class="form-group">
-                            <label for="nombreCompleto" style="color: #000;"><i class="fas fa-user"></i> Nombre Completo</label>
+                            <label for="nombreCompleto" style="color: #000;"><i class="fas fa-user"></i> Nombre completo</label>
                             <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required>
                         </div>
                         <div class="form-group">
@@ -48,12 +42,13 @@
                             <input type="text" class="form-control" id="escalafon" name="escalafon" required>
                         </div>
                         <div class="form-group">
-                            <label for="fechaIngreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de Ingreso</label>
+                            <label for="fechaIngreso" style="color: #000;"><i class="far fa-calendar-alt"></i> Fecha de ingreso</label>
                             <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" required>
                         </div>
                         <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecciona</option>
                                 <option value="Activo">Activo</option>
                                 <option value="Inactivo">Inactivo</option>
                             </select>
@@ -65,16 +60,27 @@
                                 <option value="Docente">Docente</option>
                                 <option value="Administrativo">Administrativo</option>
                             </select>
-
                         </div>
+                        
                         <div class="form-group" id="rol-group" style="display: none;">
                             <label for="cargo" style="color: #000;"><i class="fas fa-briefcase"></i> Cargo</label>
                             <select class="form-control" id="cargo" name="cargo">
-                            <option value="" disabled selected>Selecciona</option>
+                                <option value="" disabled selected>Selecciona</option>
+                                
                                 <?php foreach ($cargos as $key => $value): ?>
                                     <option value="<?= esc($key); ?>">
                                         <?= esc($value); ?>
                                     </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="gradosContainer" style="display:none;">
+                            <label for="idGrados" style="color: #000;">Grado(s)</label>
+                            <select name="idGrado" class="form-control">
+                            <option value="" disabled selected>Selecciona</option>
+                                <?php foreach ($grados as $grado): ?>
+                                    <option value="<?= $grado['idGrado']; ?>"><?= $grado['nombre']; ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -100,50 +106,42 @@ $(document).ready(function() {
         var tipo = $(this).val();
         if (tipo === 'Administrativo') {
             $('#rol-group').show();
+            $('#gradosContainer').hide();
+            $('#idGrados').val('');
+        } else if (tipo === 'Docente') {
+            $('#rol-group').hide();
+            $('#gradosContainer').show();
         } else {
             $('#rol-group').hide();
-            $('#cargo').val(''); // Limpiar el valor de cargo si se oculta
+            $('#gradosContainer').hide();
+            $('#cargo').val('');
+            $('#idGrados').val('');
         }
     });
 
     $('#createForm').submit(function(event) {
-        event.preventDefault();
-        $.ajax({
-            url: $(this).attr('action'),
-            method: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json', // Asegúrate de que la respuesta sea en formato JSON
-            success: function(response) {
-                if (response.success) {
-                    var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                    alert += response.message;
-                    alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-                    alert += '<span aria-hidden="true">&times;</span>';
-                    alert += '</button>';
-                    alert += '</div>';
-                    $('#errorMessage').html(alert);
-                    
-                    setTimeout(function() {
-                        window.location.href = response.redirect;
-                    }, 1500);
-                } else {
-                    var alert = '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">';
-                    $.each(response.error, function(key, value) {
-                        alert += value + '<br>';
-                    });
-                    alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-                    alert += '<span aria-hidden="true">&times;</span>';
-                    alert += '</button>';
-                    alert += '</div>';
-                    $('#errorMessage').html(alert);
-                }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error(textStatus, errorThrown); // Para depurar errores
+    event.preventDefault();
+    $.ajax({
+        url: $(this).attr('action'),
+        type: $(this).attr('method'),
+        data: $(this).serialize(),
+        dataType: 'json',
+        success: function(response) {
+            if (response.success) {
+                window.location.href = '<?= base_url('public/maestros') ?>'; // Redirige a la ruta correcta
+ // Redirige en caso de éxito
+            } else {
+                // Mostrar mensaje de error
+                $('#errorMessage').html('<div class="alert alert-danger">' + response.error + '</div>');
             }
-        });
+        },
+        error: function(xhr, status, error) {
+            $('#errorMessage').html('<div class="alert alert-danger">Ocurrió un error ');
+        }
     });
 });
+});
+
 </script>
 
 <?= $this->endSection() ?>

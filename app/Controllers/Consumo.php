@@ -17,9 +17,25 @@ class Consumo extends Controller
     public function index()
     {
         $productoRequisicionModel = new ProductosRequisicionModel();
+        $fecha = $this->request->getGet('fecha');
+        $comidaPreparar = $this->request->getGet('comidaPreparar');
 
+        // Filtrar los consumos por fecha y comida a preparar
+        $query = $productoRequisicionModel;
+
+        if ($fecha) {
+            $query = $query->where('fechaRequisicion', $fecha);
+        }
+
+        if ($comidaPreparar) {
+            $query = $query->like('comidaPreparar', $comidaPreparar);
+        }
+        
         $data = [
-            'consumoSalida' => $productoRequisicionModel->findAll()
+            'consumoSalida' => $productoRequisicionModel->findAll(),
+            'consumos' => $query->findAll(),
+            'fecha' => $fecha,
+            'comidaPreparar' => $comidaPreparar
         ];
 
         return view('Consumo/index', $data);
@@ -335,5 +351,44 @@ class Consumo extends Controller
         ]);
         // Redireccionar con un mensaje de éxito
         return redirect()->to(site_url('consumo'))->with('success', 'Requisición de consumo anulada con éxito.');
+    }
+    
+    public function generateReport()
+    {
+        $productoRequisicionModel = new ProductosRequisicionModel();
+        $productoRequisicionDetalleModel = new ProductosRequisicionDetalleModel();
+
+        $fecha = $this->request->getPost('fecha');
+        $comidaPreparar = $this->request->getPost('comidaPreparar');
+
+        $query = $productoRequisicionModel;
+
+        if ($fecha) {
+            $query = $query->where('fechaRequisicion', $fecha);
+        }
+
+        if ($comidaPreparar) {
+            $query = $query->like('comidaPreparar', $comidaPreparar);
+        }
+
+        $consumos = $query->findAll();
+
+        $reporteData = [];
+
+        foreach ($consumos as $consumo) {
+            $detalles = $productoRequisicionDetalleModel
+                ->where('idProductoRequisicion', $consumo['idProductoRequisicion'])
+                ->findAll();
+
+            $reporteData[] = [
+                'fecha' => $consumo['fechaRequisicion'],
+                'comidaPreparar' => $consumo['comidaPreparar'],
+                'detalles' => $detalles
+            ];
+        }
+
+        // Aquí puedes generar el archivo de reporte (PDF, Excel, etc.)
+        // Como ejemplo, solo redirigimos con la información obtenida
+        return view('Consumo/reporte', ['reporteData' => $reporteData]);
     }
 }

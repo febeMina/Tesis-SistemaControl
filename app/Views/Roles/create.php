@@ -8,12 +8,12 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
             <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0; background-color: #090066 !important;">
-                <h3 class="text-center">Nuevo Rol</h3>
+                <h3 class="text-center">Nuevo rol</h3>
             </div>
                 <div class="card-body">
                     <form action="<?= site_url('roles/store') ?>" method="post">
                         <div class="form-group">
-                            <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre Rol:</label>
+                            <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre rol:</label>
                             <input type="text" class="form-control" id="nombreR" name="nombreR" required>
                         </div>
                         <div class="text-center">
@@ -48,7 +48,7 @@
                     if (response.success) {
                         // Mostrar el alert de confirmación
                         var alert = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">';
-                        alert += 'El Rol ha sido creado exitosamente.';
+                        alert += 'El rol ha sido creado exitosamente.';
                         alert += '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
                         alert += '<span aria-hidden="true">&times;</span>';
                         alert += '</button>';

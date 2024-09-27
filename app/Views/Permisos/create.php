@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white">
-                    <h3 class="text-center">Crear Permiso Magisterial</h3>
+                    <h3 class="text-center">Crear permiso magisterial</h3>
                 </div>
 
                 <div class="card-body">
@@ -28,7 +28,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="id_tipo_permiso">Tipo de Permiso:</label>
+                            <label for="id_tipo_permiso">Tipo de permiso:</label>
                             <select name="id_tipo_permiso" id="id_tipo_permiso" class="form-control">
                                 <?php foreach ($tipos_permisos as $tipo): ?>
                                     <option value="<?= $tipo['idTipoPermiso'] ?>" data-cantidad-dias="<?= $tipo['cantidadDias'] ?>">
@@ -39,26 +39,26 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="cantidad_dias_disponibles">Días Disponibles:</label>
+                            <label for="cantidad_dias_disponibles">Días disponibles:</label>
                             <input type="text" id="cantidad_dias_disponibles" class="form-control" readonly>
                         </div>
 
                         <div class="form-group">
-                            <label for="fecha_inicio">Fecha Inicio:</label>
+                            <label for="fecha_inicio">Fecha inicio:</label>
                             <input type="date" name="fecha_inicio" id="fecha_inicio" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="fecha_fin">Fecha Fin:</label>
+                            <label for="fecha_fin">Fecha fin:</label>
                             <input type="date" name="fecha_fin" id="fecha_fin" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="horas_ocupadas">Horas Ocupadas:</label>
+                            <label for="horas_ocupadas">Horas ocupadas:</label>
                             <input type="number" name="horas_ocupadas" id="horas_ocupadas" class="form-control" step="0.01">
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block">Crear Permiso</button>
+                        <button type="submit" class="btn btn-primary btn-block">Crear permiso</button>
                     </form>
 
                 </div>

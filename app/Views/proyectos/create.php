@@ -6,12 +6,12 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h3 class="text-center">Agregar Nuevo Proyecto</h3>
+                    <h3 class="text-center">Agregar nuevo proyecto</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                 <form action="<?= site_url('proyectos/store') ?>" method="post">
                     <div class="form-group">
-                        <label for="nombre" style="color: #000;">Nombre de Proyecto</label>
+                        <label for="nombre" style="color: #000;">Nombre de proyecto</label>
                         <input type="text" class="form-control" id="nombreP" name="nombreP" required>
                     </div>
         
@@ -30,7 +30,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="abreviatura" style="color: #000;">Meta Financiera</label>
+                        <label for="abreviatura" style="color: #000;">Meta financiera</label>
                         <input type="tex" class="form-control" id="metaP" name="metaP" required>
                     </div>
 

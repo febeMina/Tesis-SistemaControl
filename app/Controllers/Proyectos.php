@@ -60,7 +60,7 @@ class Proyectos extends Controller
 
         $data = [
             'nombreProyecto' => $request->getVar('nombrep'),
-            'descripción' => $request->getVar('descripcion'), // Corregido aquí
+            'descripcion' => $request->getVar('descripcion'), // Corregido aquí
             'estado' => $request->getVar('estado'),
             'meta' => $request->getVar('meta'),
             'anio' => $request->getVar('year')

@@ -24,7 +24,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-white" style="background-color: #090066; border-radius: 15px;">
-                    <h4 class="header-title text-center">Permisos del Personal</h4>
+                    <h4 class="header-title text-center">Permisos del personal</h4>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0">
                     <!-- Formulario de filtro -->
@@ -57,7 +57,7 @@
                                     <th>Tipos de permisos</th>
                                     <th>Días</th>
                                     <th>Horas</th>
-                                    <th>Saldo Actual</th>
+                                    <th>Saldo actual</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -67,6 +67,7 @@
                                         // Calculando el número de días solicitados
                                         $fechaInicio = new DateTime($item['fechaInicio']);
                                         $fechaFin = new DateTime($item['fechaFin']);
+                                        
                                         $intervalo = $fechaInicio->diff($fechaFin);
                                         $diasSolicitados = $intervalo->days + 1; // Sumamos 1 para incluir el primer día
                                         $diasHoras = $item['horasSolicitadas'] ?? $diasSolicitados * $horasDias;
@@ -85,16 +86,18 @@
 
                                         // Formatear saldo histórico en días para eliminar decimales
                                         $saldoHistorialDias = number_format($saldoHistorialDias, 2, '.', '');
-
+                                         // Determinar si el saldo es menor o igual a 0
+                                         $rowClass = ($nuevoSaldoDias <= 0 || $nuevoSaldoHoras <= 0) ? 'table-danger' : '';
                                     ?>
-                                    <tr>
+                                    <tr class="<?= $rowClass ?>">
                                         <td>
                                             <strong><?= esc($item['nombreCompleto']) ?></strong><br>
                                             <small>NIP: <?= esc($item['nip']) ?></small>
                                         </td>
                                         <td>
-                                            <strong>Inicio:</strong> <?= esc($item['fechaInicio']) ?><br>
-                                            <strong>Fin:</strong> <?= esc($item['fechaFin']) ?>
+                                        <strong>Inicio:</strong> <?= ($item['fechaInicio'] == "" ? "-" : date("d/m/Y", strtotime($item['fechaInicio']))) ?><br>
+                                        <strong>Fin:</strong> <?= ($item['fechaFin'] == "" ? "-" : date("d/m/Y", strtotime($item['fechaFin']))) ?>
+
                                         </td>
                                         <td>
                                             <?= esc($item['tipoPermisoNombre']) ?><br>

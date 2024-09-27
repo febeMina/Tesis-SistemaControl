@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header" style="background-color: #090066; border-radius: 15px;">
-                    <h3 class="text-center text-white">Solicitudes de productos: Ingreso de lotes</h3>
+                    <h3 class="text-center text-white">Ingreso de productos: Ingreso de lotes</h3>
                 </div>
                 <div class="card-body" style="background-color: #f0f0f0;">
                     <!-- Botón para crear nueva solicitud -->
@@ -62,7 +62,7 @@
                                                         <a href="<?= site_url('solicitudproductos/edit/' . $solicitud['idProductoIngreso'])?>" class="btn btn-edit">
                                                             <i class="mdi mdi-sync"></i> Continuar
                                                         </a>
-                                                        <a href="<?= site_url('solicitudproductos/anular/' . $solicitud['idProductoIngreso'])?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que desea anular esta solicitud?')">
+                                                        <a href="<?= site_url('solicitudproductos/anular/' . $solicitud['idProductoIngreso'])?>" class="btn btn-delete" onclick="return confirm('¿Estás seguro de que desea anular este ingreso?')">
                                                             <i class="mdi mdi-cancel"></i> Anular
                                                         </a>
                                                 <?php 

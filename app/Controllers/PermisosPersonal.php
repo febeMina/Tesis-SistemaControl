@@ -66,7 +66,7 @@ class PermisosPersonal extends BaseController
         }
 
         $currentPage = $this->request->getVar('page') ? $this->request->getVar('page') : 1;
-        $perPage = 5;
+        $perPage = 8;
         $totalRows = count($data);
 
         $dataPaginated = array_slice($data, ($currentPage - 1) * $perPage, $perPage);
@@ -79,8 +79,9 @@ class PermisosPersonal extends BaseController
 
     public function create()
 {
-    $data['docentes'] = $this->maestroModel->findAll();
-    $data['tiposPermisos'] = $this->tipoPermisoModel->findAll();
+    $data['docentes'] = $this->maestroModel->where('estado', 'Activo')->where('tipo', 'Docente')->findAll();
+    $data['tiposPermisos'] = $this->tipoPermisoModel->where('estado', 'Activo')->findAll();
+
 
     // Inicializar el saldo actual como null
     $data['saldoActual'] = [

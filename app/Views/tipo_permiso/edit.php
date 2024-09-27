@@ -13,29 +13,29 @@
             <?php endif; ?>
             <div class="card shadow" style="background-color: #f8f9fa; border-radius: 15px;">
                 <div class="card-header bg-primary text-white" style="border-radius: 15px 15px 0 0;">
-                    <h3 class="text-center">Editar Tipo de Permiso</h3>
+                    <h3 class="text-center">Editar tipo de permiso</h3>
                 </div>
                 <div class="card-body">
                     <form id="updateForm" action="<?= site_url('tipo_permiso/update') ?>" method="post">
                         <input type="hidden" name="id" value="<?= $tipo_permiso['idTipoPermiso'] ?>">
                         <div class="form-group">
                             <label for="nombre" style="color: #000;"><i class="fas fa-user"></i> Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= $tipo_permiso['nombre'] ?>" disabled required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" value="<?= esc($tipo_permiso['nombre']) ?>" disabled required>
                         </div>
                         <div class="form-group">
-                            <label for="cantidadDias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de Días</label>
-                            <input type="number" class="form-control" id="cantidadDias" name="cantidadDias" value="<?= $tipo_permiso['cantidadDias'] ?>" required>
+                            <label for="cantidadDias" style="color: #000;"><i class="fas fa-key"></i> Cantidad de días</label>
+                            <input type="number" class="form-control" id="cantidadDias" name="cantidadDias" value="<?= esc($tipo_permiso['cantidadDias']) ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="estado" style="color: #000;"><i class="fas fa-check-circle"></i> Estado</label>
                             <select class="form-control" id="estado" name="estado" required>
-                                <option value="1" <?= $tipo_permiso['estado'] == 1 ? 'selected' : '' ?>>Activo</option>
-                                <option value="0" <?= $tipo_permiso['estado'] == 0 ? 'selected' : '' ?>>Inactivo</option>
+                                <option value="Activo" <?= $tipo_permiso['estado'] == 'Activo' ? 'selected' : '' ?>>Activo</option>
+                                <option value="Inactivo" <?= $tipo_permiso['estado'] == 'Inactivo' ? 'selected' : '' ?>>Inactivo</option>
                             </select>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" style="background-color: #090066;">Actualizar</button>
-                            <a href="<?= base_url('public/tipo_permiso') ?>" class="btn btn-secondary">Cancelar</a>
+                            <a href="<?= site_url('tipo_permiso') ?>" class="btn btn-secondary">Cancelar</a>
                         </div>
                     </form>
                 </div>

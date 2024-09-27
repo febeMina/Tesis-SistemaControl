@@ -17,54 +17,60 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-white" style="background-color: #090066; border-radius: 10px;">
-                    <h4 class="header-title text-center">Agregar Registro Diario</h4>
+                <div class="card-header text-white" style="background-color: #4CAF50; border-radius: 10px;">
+                    <h4 class="header-title text-center">Agregar registro diario</h4>
                 </div>
-                <div class="card-body" style="background-color: #f0f0f0; padding: 15px;">
-                    <form action="<?= base_url('public/registro-diario/store') ?>" method="post">
-                        <div class="mb-3">
-                            <label for="fecha" class="form-label" style="color: #000;">Fecha:</label>
-                            <input type="date" name="fecha" class="form-control" required>
-                        </div>
+                <div class="card-body" style="background-color: #FFFFFF; padding: 20px;">
+                    <form id="registro-form" action="<?= base_url('public/registro-diario/store') ?>" method="post">
+
+                        <?= csrf_field() ?>
                         
-                        <h4 style="color: #000;">Detalles de Asistencia por Grado</h4>
-                        <div id="detalles-asistencia" class="row">
-                            <?php foreach ($grados as $index => $grado): ?>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card h-100 grado-asistencia" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                                        <div class="card-header">
-                                            <h5 class="mb-0"><?= esc($grado['nombre']) ?></h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <input type="hidden" name="idGrado[]" value="<?= esc($grado['idGrado']) ?>">
-
-                                            <div class="mb-2">
-                                                <label for="idDocente-<?= esc($grado['idGrado']) ?>" class="form-label">Docente:</label>
-                                                <select name="idDocente[]" class="form-select" required>
-                                                    <?php foreach ($docentes as $docente): ?>
-                                                        <option value="<?= esc($docente['idDocente']) ?>"><?= esc($docente['nombreCompleto']) ?></option>
-                                                    <?php endforeach; ?>
-                                                </select>
-                                            </div>
-
-                                            <div class="mb-2">
-                                                <label for="cantidadNiños-<?= esc($grado['idGrado']) ?>" class="form-label">Cantidad de Niños:</label>
-                                                <input type="number" name="cantidadNiños[]" class="form-control cantidad-ninos" min="0" required>
-                                            </div>
-
-                                            <div class="mb-2">
-                                                <label for="cantidadNiñas-<?= esc($grado['idGrado']) ?>" class="form-label">Cantidad de Niñas:</label>
-                                                <input type="number" name="cantidadNiñas[]" class="form-control cantidad-ninas" min="0" required>
-                                            </div>
-
-                                            <!-- El campo total ha sido eliminado del formulario -->
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
+                        <!-- Campo de fecha para seleccionar la fecha de requisición -->
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label" style="color: #000;">Fecha de requisición:</label>
+                            <input type="date" name="fecha" id="fecha" class="form-control" value="<?= old('fecha') ?>" required>
                         </div>
 
-                        <button type="submit" class="btn btn-success">Guardar</button>
+                        <!-- Detalles de la requisición -->
+                        <div id="requisicion-detalles" class="mb-3" style="color: #000;">
+                            <!-- Los detalles se llenarán dinámicamente con JavaScript -->
+                        </div>
+
+                        <!-- Detalles de asistencia por grado en tabla -->
+                        <h4 style="color: #000;">Detalles de asistencia por grado</h4>
+                        <table class="table" style="color: #000;">
+                            <thead>
+                                <tr>
+                                    <th>Grado</th>
+                                    <th>Docente</th>
+                                    <th>Cantidad de niños</th>
+                                    <th>Cantidad de niñas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($grados as $grado): ?>
+                                    <tr>
+                                        <td><?= esc($grado->nombre) ?></td>
+                                        <td>
+                                            <input type="hidden" name="idGrado[]" value="<?= esc($grado->idGrado) ?>">
+                                            <select name="idDocente[]" class="form-select" required>
+                                                <?php foreach ($docentes as $docente): ?>
+                                                    <option value="<?= esc($docente['idDocente']) ?>" <?= isset($grado->idDocente) && $grado->idDocente == $docente['idDocente'] ? 'selected' : '' ?>>
+                                                        <?= esc($docente['nombreCompleto']) ?>
+                                                    </option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                        </td>
+                                        <td><input type="number" name="cantidadNinos[]" class="form-control" min="0"></td>
+                                        <td><input type="number" name="cantidadNinas[]" class="form-control" min="0"></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+
+                        <div class="mt-3 text-center">
+                            <button type="submit" form="registro-form" class="btn btn-success">Guardar registro</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -72,24 +78,45 @@
     </div>
 </div>
 
-<?= $this->endSection() ?>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const grados = document.querySelectorAll('.grado-asistencia');
+    const fechaInput = document.getElementById('fecha');
+    const requisicionDetalles = document.getElementById('requisicion-detalles');
 
-    grados.forEach(grado => {
-        const inputNinos = grado.querySelector('.cantidad-ninos');
-        const inputNinas = grado.querySelector('.cantidad-ninas');
+    fechaInput.addEventListener('change', function() {
+        const fecha = fechaInput.value;
 
-        const updateTotal = () => {
-            const ninos = parseInt(inputNinos.value) || 0;
-            const ninas = parseInt(inputNinas.value) || 0;
-            // Calcular el total en el cliente, pero no mostrarlo
-        };
+        if (fecha) {
+            fetch(`<?= base_url('public/registro-diario/getRequisicionByFecha') ?>/${fecha}`)
+                .then(response => response.json())
+                .then(data => {
+                    let html = '';
 
-        inputNinos.addEventListener('input', updateTotal);
-        inputNinas.addEventListener('input', updateTotal);
+                    if (data && data.comidaPreparar) {
+                        // Si hay requisición, muestra la comida a preparar y el ID oculto.
+                        html = `
+                            <div class="requisicion-item">
+                                <p><strong>Fecha de Requisición:</strong> ${data.fechaRequisicion}</p>
+                                <p><strong>Comida a Preparar:</strong> ${data.comidaPreparar}</p>
+                                <input type="hidden" name="idProductoRequisicion" value="${data.idProductoRequisicion}">
+                            </div>
+                        `;
+                    } else {
+                        // Si no hay requisición para esa fecha.
+                        html = '<p>No hay requisiciones para la fecha seleccionada.</p>';
+                    }
+
+                    requisicionDetalles.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    requisicionDetalles.innerHTML = '<p>Error al procesar los datos recibidos.</p>';
+                });
+        } else {
+            requisicionDetalles.innerHTML = '';
+        }
     });
 });
 </script>
+
+<?= $this->endSection() ?>
