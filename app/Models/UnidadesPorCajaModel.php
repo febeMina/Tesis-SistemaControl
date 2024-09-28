@@ -8,5 +8,5 @@ class UnidadesPorCajaModel extends Model
 {
     protected $table = 'udm_caja';
     protected $primaryKey = 'idUdmCaja';
-    protected $allowedFields = ['nombreCaja', 'estado'];
+    protected $allowedFields = ['nombreCaja', 'estado', 'usuarioCrea', 'usuarioModifica'];
 }

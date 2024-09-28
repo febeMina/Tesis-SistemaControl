@@ -37,13 +37,13 @@ class ProductosLotes extends BaseController
     public function index($id = null)
     {
         helper('url');
-    
+
         // Verifica si se proporcionó un ID
         if ($id === null) {
             // Aquí puedes redirigir a una página o mostrar un mensaje
             return redirect()->to(site_url('productos'))->with('error', 'ID del producto no especificado.');
         }
-    
+
         $productosLotes = $this->productoLoteModel
             ->select('
                 productos_lotes.idProductoLote,
@@ -61,23 +61,23 @@ class ProductosLotes extends BaseController
             ->join('udm_caja', 'productos_lotes.idUdmCaja = udm_caja.idUdmCaja', 'left')
             ->join('udm_individual', 'productos_lotes.idUdmIndividual = udm_individual.idUdmIndividual', 'left')
             ->where('productos_lotes.idProducto', $id)
-            ->where('productos.estado', 'Activo') 
+            ->where('productos.estado', 'Activo')
             ->orderBy('productos_lotes.idProductoLote', 'ASC')
             ->orderBy('productos_lotes.fechaVencimiento', 'ASC')
             ->get()
             ->getResult();
-    
+
         $productoModel = new ProductoModel();
-        $producto = $productoModel->select('descripcionProducto')->where('idProducto', $id)->get()->getRow(); 
-    
+        $producto = $productoModel->select('descripcionProducto')->where('idProducto', $id)->get()->getRow();
+
         $descripcionProducto = $producto ? $producto->descripcionProducto : 'Producto no encontrado';
-    
+
         return view('productos/productosLotes', [
-            'productosLotes' => $productosLotes, 
+            'productosLotes' => $productosLotes,
             'descripcionProducto' => $descripcionProducto
         ]);
     }
-    
+
 
     public function create()
     {
@@ -93,41 +93,42 @@ class ProductosLotes extends BaseController
     }
 
     public function store()
-{
-    $productoMovimientosModel = new ProductosMovimientosModel();
+    {
+        $productoMovimientosModel = new ProductosMovimientosModel();
 
-    $dataLote = [
-        'idProducto'          => $this->request->getPost('idProducto'),     
-        'codigoLote'          => $this->request->getPost('codigoLote'),      
-        'fechaIngreso'        => $this->request->getPost('fechaIngreso'),    
-        'fechaVencimiento'    => $this->request->getPost('fechaVencimiento'),  
-        'idUdmCaja'           => $this->request->getPost('idUdmCaja'),         
-        'existenciaCaja'      => $this->request->getPost('existenciaCaja'),     
-        'idUdmIndividual'     => $this->request->getPost('idUdmIndividual'),     
-        'existenciaIndividual'=> $this->request->getPost('existenciaIndividual'),
-        'existenciaTotal'     => $this->request->getPost('existenciaTotal'),    
-    ];
-
-    if ($this->productoLoteModel->insert($dataLote)) {
-        $idProductoLote = $this->productoLoteModel->insertID();
-
-        $dataMovimiento = [
-            'idProductoLote'           => $idProductoLote,
-            'tipoMovimiento'           => 'Entrada',
-            'descripcionMovimiento'    => 'Existencia ingresada desde lote inicial',
-            'fechaMovimiento'          => date('Y-m-d'),  
-            'existenciaTotalAntes'     => 0,              
-            'existenciaTotalMovimiento'=> $dataLote['existenciaTotal'],
-            'existenciaTotalDespues'   => $dataLote['existenciaTotal']
+        $dataLote = [
+            'idProducto'          => $this->request->getPost('idProducto'),
+            'codigoLote'          => $this->request->getPost('codigoLote'),
+            'fechaIngreso'        => $this->request->getPost('fechaIngreso'),
+            'fechaVencimiento'    => $this->request->getPost('fechaVencimiento'),
+            'idUdmCaja'           => $this->request->getPost('idUdmCaja'),
+            'existenciaCaja'      => $this->request->getPost('existenciaCaja'),
+            'idUdmIndividual'     => $this->request->getPost('idUdmIndividual'),
+            'existenciaIndividual' => $this->request->getPost('existenciaIndividual'),
+            'existenciaTotal'     => $this->request->getPost('existenciaTotal'),
+            'usuarioCrea'         => session()->get('usuario'), // Captura el usuario actual 
         ];
 
-        $productoMovimientosModel->insert($dataMovimiento);
+        if ($this->productoLoteModel->insert($dataLote)) {
+            $idProductoLote = $this->productoLoteModel->insertID();
 
-        return redirect()->to(site_url('productos'))->with('success', 'Lote inicial creado con éxito.');
-    } else {
-        return redirect()->back()->withInput()->with('error', 'Error al crear el lote del producto.');
+            $dataMovimiento = [
+                'idProductoLote'           => $idProductoLote,
+                'tipoMovimiento'           => 'Entrada',
+                'descripcionMovimiento'    => 'Existencia ingresada desde lote inicial',
+                'fechaMovimiento'          => date('Y-m-d'),
+                'existenciaTotalAntes'     => 0,
+                'existenciaTotalMovimiento' => $dataLote['existenciaTotal'],
+                'existenciaTotalDespues'   => $dataLote['existenciaTotal']
+            ];
+
+            $productoMovimientosModel->insert($dataMovimiento);
+
+            return redirect()->to(site_url('productos'))->with('success', 'Lote inicial creado con éxito.');
+        } else {
+            return redirect()->back()->withInput()->with('error', 'Error al crear el lote del producto.');
+        }
     }
-}
 
     public function edit($id)
     {
@@ -159,7 +160,11 @@ class ProductosLotes extends BaseController
     // Función para actualizar los datos del lote
     public function update($id)
     {
-        $data = $this->request->getPost();
+        // Obtener los datos del lote antes de la modificación para registrar cambios en existencias
+        $productoMovimientosModel = new ProductosMovimientosModel();
+        $loteAnterior = $this->productoLoteModel->find($id);
+
+        // Validar la entrada
         if (!$this->validate([
             'idProducto' => 'required',
             'codigoLote' => 'required',
@@ -169,16 +174,48 @@ class ProductosLotes extends BaseController
             'existenciaCaja' => 'required|decimal',
             'idUdmIndividual' => 'required',
             'existenciaIndividual' => 'required|decimal',
-            'existenciaTotal' => 'required|decimal'
+            'existenciaTotal' => 'required|decimal',
         ])) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
 
-        // Actualizar los datos del lote
-        $this->productoLoteModel->update($id, $data);
+        // Preparar los datos para la actualización
+        $dataLote = [
+            'idProducto' => $this->request->getPost('idProducto'),
+            'codigoLote' => $this->request->getPost('codigoLote'),
+            'fechaIngreso' => $this->request->getPost('fechaIngreso'),
+            'fechaVencimiento' => $this->request->getPost('fechaVencimiento'),
+            'idUdmCaja' => $this->request->getPost('idUdmCaja'),
+            'existenciaCaja' => $this->request->getPost('existenciaCaja'),
+            'idUdmIndividual' => $this->request->getPost('idUdmIndividual'),
+            'existenciaIndividual' => $this->request->getPost('existenciaIndividual'),
+            'existenciaTotal' => $this->request->getPost('existenciaTotal'),
+            'usuarioModifica' => session()->get('usuario'), // Capturar el usuario actual
+        ];
 
-        return redirect()->to(site_url('productos_lotes/' . $data['idProducto']))->with('success', 'Información del lote actualizada con éxito.');
+        // Actualizar los datos del lote
+        if ($this->productoLoteModel->update($id, $dataLote)) {
+
+            // Registrar el movimiento de actualización en la tabla productos_movimientos
+            $dataMovimiento = [
+                'idProductoLote'           => $id,
+                'tipoMovimiento'           => 'Modificación',
+                'descripcionMovimiento'    => 'Modificación de lote',
+                'fechaMovimiento'          => date('Y-m-d'),
+                'existenciaTotalAntes'     => $loteAnterior['existenciaTotal'], // Existencia antes de la modificación
+                'existenciaTotalMovimiento' => $dataLote['existenciaTotal'] - $loteAnterior['existenciaTotal'], // Diferencia de existencias
+                'existenciaTotalDespues'   => $dataLote['existenciaTotal'], // Nueva existencia total
+            ];
+
+            // Insertar el movimiento
+            $productoMovimientosModel->insert($dataMovimiento);
+
+            return redirect()->to(site_url('productos_lotes/' . $dataLote['idProducto']))->with('success', 'Información del lote actualizada con éxito.');
+        } else {
+            return redirect()->back()->withInput()->with('error', 'Error al actualizar el lote del producto.');
+        }
     }
+
 
     public function delete($id)
     {
@@ -188,17 +225,18 @@ class ProductosLotes extends BaseController
         if ($producto) {
             // Eliminar en la tabla movimiento primero
             $this->productoModel->eliminarMovimiento($id);
-    
+
             // Luego eliminar en la tabla productos
             $this->productoModel->delete($id);
-    
+
             return redirect()->to(site_url('productos'))->with('success', 'Producto eliminado exitosamente.');
         } else {
             return redirect()->to(site_url('productos'))->with('error', 'No se pudo encontrar el producto para eliminar.');
         }
     }
 
-    public function historialMovimientos($id) {
+    public function historialMovimientos($id)
+    {
         $productosMovimientos = new ProductosMovimientosModel();
         $movimientosLotes = $productosMovimientos
             ->select('
@@ -223,9 +261,9 @@ class ProductosLotes extends BaseController
         $producto = $productosLote
             ->select('productos_lotes.codigoLote, productos.descripcionProducto')
             ->join('productos', 'productos_lotes.idProducto = productos.idProducto', 'left')
-            ->where('productos_lotes.idProductoLote', $id) 
+            ->where('productos_lotes.idProductoLote', $id)
             ->get()
-            ->getRow(); 
+            ->getRow();
 
         $descripcionProducto = $producto ? $producto->descripcionProducto : 'Producto no encontrado';
         $codigoLote = $producto ? $producto->codigoLote : 'Lote no encontrado';
@@ -236,23 +274,23 @@ class ProductosLotes extends BaseController
             'codigoLote' => $codigoLote
         ]);
     }
-    
-    
+
+
     public function reportesLotes()
     {
-            $productoModel = new ProductoModel();
-    
-            return view('Reportes/productos_lotes', [
-                'productos' => $productoModel->findAll()
-            ]);
+        $productoModel = new ProductoModel();
+
+        return view('Reportes/productos_lotes', [
+            'productos' => $productoModel->findAll()
+        ]);
     }
-    
-    
+
+
     public function getLotes($id)
-{
-    // Obtener los lotes del producto seleccionado
-    $productosLotes = $this->productoLoteModel
-        ->select('
+    {
+        // Obtener los lotes del producto seleccionado
+        $productosLotes = $this->productoLoteModel
+            ->select('
             productos_lotes.codigoLote,
             productos_lotes.fechaIngreso,
             productos_lotes.fechaVencimiento,
@@ -262,13 +300,12 @@ class ProductosLotes extends BaseController
             udm_individual.nombreIndividual as udmIndividual,
             productos_lotes.existenciaTotal
         ')
-        ->join('udm_caja', 'productos_lotes.idUdmCaja = udm_caja.idUdmCaja', 'left')
-        ->join('udm_individual', 'productos_lotes.idUdmIndividual = udm_individual.idUdmIndividual', 'left')
-        ->where('productos_lotes.idProducto', $id)
-        ->findAll();
+            ->join('udm_caja', 'productos_lotes.idUdmCaja = udm_caja.idUdmCaja', 'left')
+            ->join('udm_individual', 'productos_lotes.idUdmIndividual = udm_individual.idUdmIndividual', 'left')
+            ->where('productos_lotes.idProducto', $id)
+            ->findAll();
 
         // Retornar los lotes en formato JSON
-    return $this->response->setJSON($productosLotes);
-}
-
+        return $this->response->setJSON($productosLotes);
+    }
 }

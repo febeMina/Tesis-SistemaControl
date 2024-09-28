@@ -32,8 +32,8 @@
                             <tbody>
                                 <?php foreach ($bitacora as $entry) : ?>
                                     <tr>
-                                        <td><?= $entry['Usuario']; ?></td>
-                                        <td><?= $entry['Accion']; ?></td>
+                                        <td><?= $entry['usuario']; ?></td>
+                                        <td><?= $entry['accion']; ?></td>
                                         <td><?= $entry['nombreTabla']; ?></td>
                                         <td><?= $entry['fecha']; ?></td>
                                         <td><?= $entry['campo']; ?></td>

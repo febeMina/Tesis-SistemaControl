@@ -8,7 +8,7 @@ class MaestroModel extends Model
 {
     protected $table = 'docente';
     protected $primaryKey = 'idDocente';
-    protected $allowedFields = ['nombreCompleto', 'nip', 'escalafon', 'fechaIngreso', 'estado', 'deleted', 'tipo', 'cargo', 'idGrado'];
+    protected $allowedFields = ['nombreCompleto', 'nip', 'escalafon', 'fechaIngreso', 'estado', 'deleted', 'tipo', 'cargo', 'idGrado', 'usuarioCrea', 'usuarioModifica'];
 
     protected $useAutoIncrement = true;
     protected $returnType = 'array';

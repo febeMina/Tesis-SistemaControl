@@ -73,8 +73,6 @@ class Usuario extends BaseController
             'estado' => $this->request->getPost('estado'),
             'usuarioCrea' => session()->get('usuario'), // Obtener el nombre de usuario de la sesión actual
             'fechaCrea' => date('Y-m-d H:i:s'), // Obtener la fecha y hora actual
-            'usuarioModifica' => session()->get('usuario'), // Inicialmente el mismo usuario que crea
-            'fechaModifica' => date('Y-m-d H:i:s') // Inicialmente la misma fecha y hora que crea
         ];
  
         $builder->insert($data);

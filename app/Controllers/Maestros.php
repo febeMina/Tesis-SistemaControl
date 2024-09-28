@@ -216,7 +216,8 @@ public function store()
         'fechaIngreso' => $fechaIngreso,
         'estado' => $estado,
         'tipo' => $tipo,
-        'cargo' => ($tipo === 'Administrativo') ? $cargo : null
+        'cargo' => ($tipo === 'Administrativo') ? $cargo : null,
+        'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
     ];
 
     // Solo añadir el idGrado si el tipo es Docente
@@ -328,7 +329,8 @@ public function update($id)
         'estado' => $estado,
         'tipo' => $tipo,
         'cargo' => ($tipo === 'Administrativo') ? $cargo : null,
-        'idGrado' => ($tipo === 'Docente') ? $grado : null // Asignar idGrado solo para 'Docente'
+        'idGrado' => ($tipo === 'Docente') ? $grado : null, // Asignar idGrado solo para 'Docente'
+        'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
     ];
 
     // Debugging: Verificar los datos recibidos
