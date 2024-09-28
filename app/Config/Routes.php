@@ -219,10 +219,25 @@ $routes->group('consumo', ['filter' => 'Cocina'], function ($routes) {
 });
 
 
+//Consumo por productos
+$routes->group('consumo', ['filter' => 'Cocina'], function ($routes) {
+    $routes->get('/', 'Consumo::index');          // Listar consumos
+    $routes->get('create', 'Consumo::create');    // Mostrar formulario de creación
+    $routes->post('store', 'Consumo::store');     // Guardar nuevo consumo
+    $routes->get('edit/(:num)', 'Consumo::edit/$1');  // Mostrar formulario de edición
+    $routes->post('update/(:num)', 'Consumo::update/$1');    // Actualizar consumo existente
+    $routes->get('delete/(:num)', 'Consumo::delete/$1');  // Eliminar consumo existente
+    $routes->get('getSaldoInicial/(:num)', 'Consumo::getSaldoInicial/$1'); // Obtener saldo inicial
+    $routes->get('ver/(:num)', 'Consumo::viewEdit/$1');   // Mostrar formulario de edición de solicitud
+    $routes->get('anular/(:num)', 'Consumo::anular/$1');   // Mostrar formulario de edición de solicitud
+    $routes->post('detalle', 'Consumo::storeLote');
+    $routes->post('finalizar', 'Consumo::finalizar');
+});
+
 
 
 // Requisicion de productos
-$routes->group('solicitudproductos', function ($routes) {
+$routes->group('solicitudproductos',  ['filter' => 'Administrador'], function ($routes) {
     $routes->get('/', 'SolicitudProductos::index');            // Listar solicitudes de productos
     $routes->get('create', 'SolicitudProductos::create');      // Mostrar formulario de creación de solicitud
     $routes->post('store', 'SolicitudProductos::store');       // Guardar nueva solicitud de productos
@@ -273,8 +288,10 @@ $routes->get('productos/delete/(:num)', 'Productos::delete/$1');
 
 
 // Bitácora
-$routes->get('bitacora', 'Bitacora::index');
-
+$routes->group('bitacora',  ['filter' => 'Administrador'], function ($routes) {
+$routes->get('/', 'Bitacora::index');
+});
+ 
 
 $routes->get('/registro-diario', 'RegistroDiarioController::index');
 $routes->get('/registro-diario/create', 'RegistroDiarioController::create');
@@ -316,21 +333,6 @@ $routes->group('solicitudproductos', function ($routes) {
     $routes->get('reporte-solicitud-productos', 'ReporteSolicitudProductos::index');
 });
 
-
-//Consumo por productos
-$routes->group('consumo', function ($routes) {
-    $routes->get('/', 'Consumo::index');          // Listar consumos
-    $routes->get('create', 'Consumo::create');    // Mostrar formulario de creación
-    $routes->post('store', 'Consumo::store');     // Guardar nuevo consumo
-    $routes->get('edit/(:num)', 'Consumo::edit/$1');  // Mostrar formulario de edición
-    $routes->post('update/(:num)', 'Consumo::update/$1');    // Actualizar consumo existente
-    $routes->get('delete/(:num)', 'Consumo::delete/$1');  // Eliminar consumo existente
-    $routes->get('getSaldoInicial/(:num)', 'Consumo::getSaldoInicial/$1'); // Obtener saldo inicial
-    $routes->get('ver/(:num)', 'Consumo::viewEdit/$1');   // Mostrar formulario de edición de solicitud
-    $routes->get('anular/(:num)', 'Consumo::anular/$1');   // Mostrar formulario de edición de solicitud
-    $routes->post('detalle', 'Consumo::storeLote');
-    $routes->post('finalizar', 'Consumo::finalizar');
-});
 
 // Rutas para Unidades de Medida Individual ------------- 03/07/2024
 $routes->get('unidadesindividuales', 'UnidadesIndividuales::index');

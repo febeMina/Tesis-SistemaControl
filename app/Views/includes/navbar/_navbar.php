@@ -22,20 +22,7 @@
                 </div>
                 <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
                 <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
-<<<<<<< Updated upstream
                    
-=======
-                    <a href="#" class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-dark rounded-circle">
-                                <i class="mdi mdi-settings text-primary"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content">
-                            <p class="preview-subject ellipsis mb-1 text-small">Configuración de cuenta</p>
-                        </div>
-                    </a>
->>>>>>> Stashed changes
                     <div class="dropdown-divider"></div>
                     <a href="<?= site_url('usuario/editclave/' . session()->get('id') ) ?>" class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
@@ -44,25 +31,12 @@
                             </div>
                         </div>
                         <div class="preview-item-content">
-<<<<<<< Updated upstream
                             <p class="preview-subject ellipsis mb-1 text-small">Cambiar Contraseña</p>
-=======
-                            <p class="preview-subject ellipsis mb-1 text-small">Cambiar contraseña</p>
->>>>>>> Stashed changes
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
                     
-                    <a href="https://calendar.google.com/calendar/" class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-dark rounded-circle">
-                                <i class="mdi mdi-calendar-today text-success"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content">
-                            <p class="preview-subject ellipsis mb-1 text-small">Lista de tareas</p>
-                        </div>
-                    </a>
+                    
                 </div>
             </div>
         </li>
@@ -154,9 +128,9 @@
                 <span class="menu-title">Reportes</span>
                 <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="reportes">
+            <div class="collapse" id="reportes"> 
                 <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a href="<?= site_url('donaciones') ?>" class="nav-link">Donaciones</a></li>
+                <li class="nav-item"><a href="<?= site_url('donaciones/reporte') ?>" class="nav-link">Donaciones</a></li>
                     <li class="nav-item"><a href="<?= site_url('reporte') ?>" class="nav-link">Permisos</a></li>
                     <li class="nav-item"><a href="<?= site_url('solicitudproductos/reporteS') ?>" class="nav-link">Solicitud productos</a></li>
                     <li class="nav-item"><a href="<?= site_url('reportes/inventario_general') ?>" class="nav-link">Inventario</a></li>

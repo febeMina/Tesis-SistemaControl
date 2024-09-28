@@ -183,18 +183,20 @@ class Donaciones extends Controller
     public function GenerarReporte()
     {
         $dompdf = new Dompdf();
+        $fechaHoraActual = date('Ymd_His');
         //$dompdf->loadHTML('<h1>Hola Mundo</h1><br><p>Otro contenido</p>');
         $db = \Config\Database::connect();
         $builder = $db->table('donaciones');
-        $builder->select('donaciones.idDonaciones, donaciones.nombreDonante, donaciones.cantidad, donaciones.descripcion, donaciones.fechaDonacion, proyectos.nombreProyecto');
+        $builder->select('donaciones.idDonaciones, datos_responsable.nombreCompleto, donaciones.cantidad, donaciones.descripcion, donaciones.fechaDonacion, proyectos.nombreProyecto' );
         $builder->join('proyectos', 'proyectos.idProyectos = donaciones.idProyectos', 'inner');
-        $donaciones = $builder->get()->getResult();
+        $builder->join('datos_responsable', 'datos_responsable.idDatosResponsable = donaciones.idDatosResponsable', 'inner');
+        $donaciones = $builder->where('donaciones.estado !=', 'Eliminado')->get()->getResult();
         $dompdf->loadHTML(
                     view('reportes/donacionesReporte', ['donaciones' => $donaciones])
         );
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
-        $dompdf->stream();
+        $dompdf->stream('ReporteDonaciones' . $fechaHoraActual . '.pdf');
     }
 
     public function GenerarTicket($id)

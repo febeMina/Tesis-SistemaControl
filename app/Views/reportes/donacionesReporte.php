@@ -115,7 +115,7 @@
                 </thead>
                 <tbody><?php foreach ($donaciones as $donacion) : ?>
                 <tr>
-                    <td><?= $donacion->nombreDonante; ?></td>
+                    <td><?= $donacion->nombreCompleto; ?></td>
                     <td><?= $donacion->cantidad; ?></td>
                     <td><?= $donacion->nombreProyecto; ?></td>
                     <td><?= $donacion->fechaDonacion ?></td>

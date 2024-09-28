@@ -61,13 +61,13 @@
      <main>
      <div class="receipt">
         <h1>Recibo de Donación</h1>
-        <h3>Copia Centro Escolar</h3>
+        <h4 class="centered-text" style="font-size: 14px; color: #888;">Copia Centro Escolar</h4>
         <div class="details">
         <?php foreach ($donaciones as $donacion) : ?>
             <p><strong>Nombre del Donante:</strong> <?= $donacion->nombreCompleto; ?> </p>
             <p><strong>Concepto:</strong> <?= $donacion->descripcion; ?></p>
+            <p><strong>Cantidad:</strong> $ <?= $donacion->cantidad; ?></p>
             <p><strong>Cantidad en Letras:</strong><?= $donacion->cantidadLetras; ?></p>
-            <p><strong>Cantidad:</strong> <?= $donacion->cantidad; ?></p>
             <p><strong>Proyecto al que se Asignarán Fondos:</strong> <?= $donacion->nombreProyecto; ?></p>
             <?php endforeach ?>
         </div>
@@ -90,19 +90,21 @@
 
     <div class="receipt">
         <h1>Recibo de Donación</h1>
-        <h3>Copia Donante</h3>
+        <h4 class="centered-text" style="font-size: 14px; color: #888;">Copia Donante</h4>
         <div class="details">
         <?php foreach ($donaciones as $donacion) : ?>
             <p><strong>Nombre del Donante:</strong> <?= $donacion->nombreCompleto; ?> </p>
             <p><strong>Concepto:</strong> <?= $donacion->descripcion; ?></p>
+            <p><strong>Cantidad:</strong> $ <?= $donacion->cantidad; ?></p>
             <p><strong>Cantidad en Letras:</strong><?= $donacion->cantidadLetras; ?></p>
-            <p><strong>Cantidad:</strong> <?= $donacion->cantidad; ?></p>
             <p><strong>Proyecto al que se Asignarán Fondos:</strong> <?= $donacion->nombreProyecto; ?></p>
             <?php endforeach ?>
         </div>
         <div class="footer">
             <p>Gracias por su generosa donación.</p>
-            <p>Fecha: <?= date('l, j F Y'); ?> </p>
+            
+            <p>Fecha: <?= setlocale(LC_ALL, 'es_ES'); // Configura el idioma en español
+               $fecha_actual = strftime('%A %d de %B del %Y'); //  ?> </p>
         </div>
     </div>    
 
