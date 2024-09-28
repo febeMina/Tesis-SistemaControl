@@ -8,5 +8,5 @@ class UnidadesIndividualesModel extends Model
 {
     protected $table = 'udm_individual';
     protected $primaryKey = 'idUdmIndividual';
-    protected $allowedFields = ['nombreIndividual', 'estado'];
+    protected $allowedFields = ['nombreIndividual', 'estado', 'usuarioCrea', 'usuarioModifica'];
 }

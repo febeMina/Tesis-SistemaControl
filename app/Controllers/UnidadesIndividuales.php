@@ -37,7 +37,8 @@ class UnidadesIndividuales extends Controller
 
         $data = [
             'nombreIndividual' => $this->request->getPost('nombreIndividual'),
-            'estado' => 'Activo'
+            'estado' => 'Activo',
+            'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
         ];
 
         $unidadModel->save($data);
@@ -50,7 +51,8 @@ class UnidadesIndividuales extends Controller
         $unidadModel = new UnidadesIndividualesModel();
 
         $data = [
-            'nombreIndividual' => $this->request->getPost('nombreIndividual')
+            'nombreIndividual' => $this->request->getPost('nombreIndividual'),
+            'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
         ];
 
         $unidadModel->update($id, $data);

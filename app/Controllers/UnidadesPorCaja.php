@@ -32,7 +32,8 @@ class UnidadesPorCaja extends Controller
 
         $data = [
             'nombreCaja' => $this->request->getPost('nombreCaja'),
-            'estado' => 'Activo'
+            'estado' => 'Activo',
+            'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
         ];
 
         $unidadesPorCajaModel->save($data);
@@ -53,7 +54,8 @@ class UnidadesPorCaja extends Controller
     $unidadesPorCajaModel = new UnidadesPorCajaModel();
 
     $data = [
-        'nombreCaja' => $this->request->getPost('nombreCaja')
+        'nombreCaja' => $this->request->getPost('nombreCaja'),
+        'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
     ];
 
     $unidadesPorCajaModel->update($id, $data);

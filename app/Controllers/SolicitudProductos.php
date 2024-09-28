@@ -47,7 +47,8 @@ class SolicitudProductos extends Controller
             'fechaIngreso' => $this->request->getPost('fechaIngreso'),
             'responsableEntrega' => $this->request->getPost('responsableEntrega'),
             'responsableRecibe' => $this->request->getPost('responsableRecibe'),
-            'estado' => 'Pendiente'
+            'estado' => 'Pendiente',
+            'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
         ];
 
         if (!$this->validate([

@@ -44,7 +44,8 @@ class Proyectos extends Controller
             'estado' => $request->getVar('estado'), // Corregido aquí
             'meta' => $request->getVar('metaP'),
             'anio' => $anoActual,
-            'valorActual' => $valorA
+            'valorActual' => $valorA,
+            'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
             
         ];
 
@@ -63,8 +64,8 @@ class Proyectos extends Controller
             'descripcion' => $request->getVar('descripcion'), // Corregido aquí
             'estado' => $request->getVar('estado'),
             'meta' => $request->getVar('meta'),
-            'anio' => $request->getVar('year')
-             
+            'anio' => $request->getVar('year'),
+            'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
         ];
 
         $proyectModel->update($id, $data);

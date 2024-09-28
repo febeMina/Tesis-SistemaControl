@@ -101,7 +101,8 @@ public function store()
         'telefono' => $this->request->getPost('telefono'),
         'genero' => $this->request->getPost('genero'),
         'estado' => $this->request->getPost('estado'),
-        'tipoAsociado' => $this->request->getPost('tipoAsociado')
+        'tipoAsociado' => $this->request->getPost('tipoAsociado'),
+        'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
     ];
 
     $padreModel = new PadreModel();
@@ -118,7 +119,8 @@ public function store()
                 'generoAlumno' => $this->request->getPost('alumno_sexo')[$index],
                 'NIE' => $this->request->getPost('alumno_nie')[$index],
                 'estado' => $this->request->getPost('alumno_estado')[$index],
-                'padre_id' => $padreId
+                'padre_id' => $padreId,
+                'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
             ];
 
             // Depuración
@@ -194,7 +196,8 @@ public function store()
             'telefono' => $this->request->getPost('telefono'),
             'genero' => $this->request->getPost('genero'),
             'estado' => $this->request->getPost('estado'),
-            'tipoAsociado' => $this->request->getPost('tipoAsociado')
+            'tipoAsociado' => $this->request->getPost('tipoAsociado'),
+            'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
         ];
     
         $padreModel = new PadreModel();
@@ -216,7 +219,8 @@ public function store()
                     'nombreAlumno' => $nombre,
                     'generoAlumno' => $this->request->getPost('alumno_sexo')[$index] ?? null,
                     'NIE' => $alumnoNIEs[$index] ?? null,
-                    'estado' => $this->request->getPost('alumno_estado')[$index] ?? null
+                    'estado' => $this->request->getPost('alumno_estado')[$index] ?? null,
+                    'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
                 ];
     
                 $alumnoId = $alumnoIds[$index] ?? null;

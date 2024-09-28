@@ -62,7 +62,8 @@ class Productos extends BaseController
     {
         $data = [
             'descripcionProducto' => $this->request->getPost('descripcionProducto'),
-            'estado' => 'Activo'
+            'estado' => 'Activo',
+            'usuarioCrea' => session()->get('usuario'), // Captura el usuario actual
         ];
 
         $this->productoModel->save($data);
@@ -94,7 +95,8 @@ class Productos extends BaseController
         }
 
         $data = [
-            'descripcionProducto' => $this->request->getPost('descripcionProducto')
+            'descripcionProducto' => $this->request->getPost('descripcionProducto'),
+            'usuarioModifica' => session()->get('usuario'), // Captura el usuario que modifica
         ];
 
         $this->productoModel->update($id, $data);

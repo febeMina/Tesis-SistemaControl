@@ -8,5 +8,5 @@ class ProductosIngresosModel extends Model
 {
     protected $table = 'productos_ingresos';
     protected $primaryKey = 'idProductoIngreso';
-    protected $allowedFields = ['fechaIngreso', 'responsableEntrega', 'responsableRecibe', 'estado'];
+    protected $allowedFields = ['fechaIngreso', 'responsableEntrega', 'responsableRecibe', 'estado', 'usuarioCrea'];
 }

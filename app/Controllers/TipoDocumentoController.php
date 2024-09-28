@@ -40,7 +40,6 @@ class TipoDocumentoController extends Controller
         'mascara' => $this->request->getPost('mascara'),
         'estado' => 'Activo',  // Estado inicial al crear
         'usuarioCrea' => session()->get('usuario'),
-        'usuarioModifica' => session()->get('usuario'),
     ];
 
     if ($this->tipoDocumentoModel->createTipoDocumento($data)) {

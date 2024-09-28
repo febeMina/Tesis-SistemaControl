@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76
+class ComposerStaticInitdcad8336c2205797337be152aba6f760
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -376,6 +376,7 @@ class ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76
         'CodeIgniter\\HTTP\\CURLRequest' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/CURLRequest.php',
         'CodeIgniter\\HTTP\\ContentSecurityPolicy' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/ContentSecurityPolicy.php',
         'CodeIgniter\\HTTP\\DownloadResponse' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/DownloadResponse.php',
+        'CodeIgniter\\HTTP\\Exceptions\\BadRequestException' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Exceptions/BadRequestException.php',
         'CodeIgniter\\HTTP\\Exceptions\\HTTPException' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Exceptions/HTTPException.php',
         'CodeIgniter\\HTTP\\Exceptions\\RedirectException' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Exceptions/RedirectException.php',
         'CodeIgniter\\HTTP\\Files\\FileCollection' => __DIR__ . '/..' . '/codeigniter4/framework/system/HTTP/Files/FileCollection.php',
@@ -1628,6 +1629,7 @@ class ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76
         'PharIo\\Manifest\\ManifestLoader' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestLoader.php',
         'PharIo\\Manifest\\ManifestLoaderException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/ManifestLoaderException.php',
         'PharIo\\Manifest\\ManifestSerializer' => __DIR__ . '/..' . '/phar-io/manifest/src/ManifestSerializer.php',
+        'PharIo\\Manifest\\NoEmailAddressException' => __DIR__ . '/..' . '/phar-io/manifest/src/exceptions/NoEmailAddressException.php',
         'PharIo\\Manifest\\PhpElement' => __DIR__ . '/..' . '/phar-io/manifest/src/xml/PhpElement.php',
         'PharIo\\Manifest\\PhpExtensionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpExtensionRequirement.php',
         'PharIo\\Manifest\\PhpVersionRequirement' => __DIR__ . '/..' . '/phar-io/manifest/src/values/PhpVersionRequirement.php',
@@ -2785,10 +2787,10 @@ class ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInited81ae1a8ecbdd60ec333509dae7ca76::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdcad8336c2205797337be152aba6f760::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdcad8336c2205797337be152aba6f760::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitdcad8336c2205797337be152aba6f760::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitdcad8336c2205797337be152aba6f760::$classMap;
 
         }, null, ClassLoader::class);
     }

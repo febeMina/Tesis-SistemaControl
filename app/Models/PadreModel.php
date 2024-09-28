@@ -10,7 +10,7 @@ class PadreModel extends Model
     protected $primaryKey = 'idDatosResponsable';
     protected $allowedFields = [
         'nombreCompleto', 'genero', 'telefono', 'estado', 
-        'idTipoDocumento', 'numeroDocumento', 'tipoAsociado'
+        'idTipoDocumento', 'numeroDocumento', 'tipoAsociado', 'usuarioCrea', 'usuarioModifica'
     ];
 
     // Método para obtener datos de responsable junto con su tipo de documento
